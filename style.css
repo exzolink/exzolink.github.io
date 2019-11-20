@@ -148,7 +148,7 @@ body {
 	display: block;
 	width: 100%;
 	text-align: center;
-	background: radial-gradient(at top, #D8B57B 60%, #424242 40%);
+	background: radial-gradient(at top, #D8B57B 60%, #454545 40%);
 	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
   	margin-bottom: 165px;
@@ -185,7 +185,7 @@ body {
 	font-weight: 400;
 	text-transform: uppercase;
 	text-align: center;
-	color: #454545;
+	color: #505050;
 	width: 100%;
 	margin-bottom: 15px;
 	transition: color .2s linear;
@@ -199,6 +199,7 @@ body {
 	text-align: center;
 	margin: 0 auto;
 	max-width: 46px;
+	backgroud-color: #505050;
 	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
   	transition: background-color .2s linear;
@@ -241,8 +242,11 @@ body {
 	position: absolute;
 	background-color: #b69b67;
 	margin-top: 6px;
-
 	}
+
+.text-under-lamp {
+	font-size: 40px;
+}
 }
 
 @media screen and (max-width: 1024px) {
