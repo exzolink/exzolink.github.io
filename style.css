@@ -228,7 +228,7 @@ body {
 	text-align: middle;
 	color: #b69b67;
 	position: relative;
-    font-size: 40px;
+    font-size: 50px;
     width: 100%;
 	}
 }
@@ -238,7 +238,7 @@ body {
 	content: "";
 	height: 1px;
 	width: 100%;
-	max-width: 268px;
+	max-width: 335px;
 	position: absolute;
 	background-color: #b69b67;
 	margin-top: 6px;
