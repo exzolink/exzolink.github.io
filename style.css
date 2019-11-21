@@ -149,7 +149,7 @@ body {
 	display: block;
 	width: 100%;
 	text-align: center;
-	background: radial-gradient(at top, #D8B57B 60%, #454545 40%);
+	background: linear-gradient(90deg, #373737, #424242, #D8B57B, #424242, #373737);
 	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
   	margin-bottom: 165px;
