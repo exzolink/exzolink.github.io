@@ -20,10 +20,10 @@ a {
 }
 
 .container {
-    font-family: 'Fira Sans', sans-serif;
+    	font-family: 'Fira Sans', sans-serif;
 	display: flex;
 	justify-content: center;
-    margin: 0 160px;
+    	margin: 0 160px;
 	height: 100%;
 }
 
