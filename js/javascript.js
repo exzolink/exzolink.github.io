@@ -13,7 +13,7 @@ $('.nl-item3').on('click', function() {
 });
 
 $('.nl-item2').on('click', function() {
-  $('html,body').animate({scrollTop:$('.portfolio').offset().top+"px"},{duration:500});
+  $('html,body').animate({scrollTop:$('.title-portfolio').offset().top+"px"},{duration:500});
 });
 
 $('.nl-item4').on('click', function() {
