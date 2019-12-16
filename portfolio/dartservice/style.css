@@ -248,7 +248,7 @@ body, h1, h2, h3, h4, h5, h6, p {
 	background: url("img/play_arrow.png") no-repeat center;
 	box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
 	background-color: #061e37;
-	transition: background-color .2s linear;
+	transition: background-color .2s ease;
 }
 
 .video:hover:after {
