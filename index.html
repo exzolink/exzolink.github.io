@@ -7,73 +7,154 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<title>exzolink's Portfolio</title>
 		<link rel="stylesheet" type="text/css" href="slick/slick.css">
+		<link href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500&display=swap&subset=cyrillic-ext" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
-		<script src="https://kit.fontawesome.com/a365e4a8ae.js" crossorigin="anonymous"></script>
+		<script defer src="js/all.min.js"></script>
 		<link href="style.css" rel="stylesheet">
+		<link id="aos-css-file" href="aos.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="slick/slick.css">
 	</head>
 	<body>
 		<div class="container">
-			<aside class=sidebar>
-				<div class="test">
+			<aside id="styleTag" data-aos="fade-right" data-aos-duration="800" data-aos-once="true" class=sidebar>
+				<div class="sidebar-fixed">
 					<div class="sidebar-inner">
 						<img src="img/sidebar-logo.jpg" alt="" class="sidebar-logo">
 						<h1 class="sidebar-title">Maxim Gromenkov</h1>
 						<p class="sidebar-ph">Frontend-разработчик</p>
 					</div>
 					<div class="sidebar-social">
-						<span class="tooltiper" data-tooltip="Страница в VK">
-							<a href="" class="vk-icon icons no-margin-left"><i class="fab fa-vk fa-lg"></i></a></span>
-							<span class="tooltiper" data-tooltip="Telegram">
-								<a href="" class="tg-icon icons"><i class="fab fa-telegram-plane fa-lg"></i></a></span>
-								<span class="tooltiper" data-tooltip="Freelansim">
-								<a href="" class="frel-icon icons"><img src="img/frel.png" width="20px" height="20px" alt="Ф"></a></span>
-								<span class="tooltiper" data-tooltip="Weblancer">
-								<a href="" class="web-icon icons"><img src="img/web.png" width="20px" height="20px" alt="W"></a></span>
-							</div>
-							<div class="sidebar-about">
-								<h2 class="about-title">About Me</h2>
-								<p class="about-ph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum animi voluptatibus nulla neque sunt, doloremque ipsum. Nostrum, earum inventore laudantium, adipisci eum aut fugit id animi. Sapiente et voluptatem, itaque.</p>
-								<div class="msg-btn">Написать мне</div>
-							</div>
-						</div>
-					</aside>
-					<div class="subcontainer">
-						<div class="header">
-							<a href="" class="header-logo"><img src="img/logo.png" alt="Gromenkov" class="header-logo"></a>
-							<nav class="nav">
-								<a class="nav-link nl-item1">Главная</a>
-								<a class="nav-link nl-item2">Навыки</a>
-								<a class="nav-link nl-item3">Портфолио</a>
-								<a class="nav-link nl-item4">Связаться</a>
-							</nav>
-							<span class="tooltiper" data-tooltip="Сменить тему"><div href="" class="theme-toggle"><img src="../img/lamp.png" alt="" class="lamp"></div></span>
-						</div>
-						<div class="welcome">
-							<div class="welcome-bg">
-							</div>
-							<div class="welcome-title">
-								<div class="box">
-								<h2 class="glitch margin-right" data-text="Верстка">Верстка</h2>
-								<h2 class="glitch" data-text="&">&</h2>
-								<h2 class="glitch margin-left" data-text="FrontEnd">FrontEnd</h2>
-								</div>
-							<h3 class="welcome-ph"><span class="welcome-ph-dot">.</span>Портфолио</h3>
-							</div>	
-						</div>
-						<div class="skills">
-						</div>
-						<div class="portfolio">
-						</div>
-						<div class="contact">
-						</div>
-						<footer class="footer">
-						</footer>
+						<a href="" tooltip="vk.com" class="vk-icon icons no-margin-left"><i class="fab fa-vk fa-lg"></i></a>
+						<a href="" tooltip="Telegram" class="tg-icon icons"><i class="fab fa-telegram-plane fa-lg"></i></a>
+						<a href="" tooltip="Фрилансим" class="frel-icon icons"><img src="img/frel.png" style="width: 20px; height: 20px;" alt="Ф"></a>
+						<a href="" tooltip="Weblancer" class="web-icon icons"><img src="img/web.png" style="width: 20px; height: 20px;" alt="W"></a>
+					</div>
+					<div class="sidebar-about">
+						<h2 class="about-title">Обо мне</h2>
+						<p class="about-ph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum animi voluptatibus nulla neque sunt, doloremque ipsum. Nostrum, earum inventore laudantium, adipisci eum aut fugit id animi. Sapiente et voluptatem, itaque.</p>
+						<div class="msg-btn">Написать мне</div>
 					</div>
 				</div>
-				<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
-				<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-				<script type="text/javascript" src="js/javascript.js"></script>
-			</body>
-		</html>
+			</aside>
+			<div class="subcontainer">
+				<div data-aos="fade-up" data-aos-duration="800" class="header">
+					<a href="" class="header-logo"><img src="img/logo.svg" alt="Gromenkov" class="header-logo"></a>
+					<nav class="nav">
+						<a class="nav-link nl-item1">Главная</a>
+						<a class="nav-link nl-item2">Портфолио</a>
+						<a class="nav-link nl-item3">Навыки</a>
+						<a class="nav-link nl-item4">Связаться</a>
+					</nav>
+					<div href="" tooltip="Тема" class="theme-toggle"><img src="img/lamp.png" alt="" class="lamp"></div></span>
+				</div>
+				<div data-aos="fade-up" data-aos-duration="800" class="welcome">
+					<div class="welcome-bg">
+					</div>
+					<div class="welcome-title">
+						<div class="welcome-title-glitch">
+							<h1 class="welcome-glitch margin-right" data-text="Верстка">Верстка</h2>
+							<h2 class="welcome-glitch" data-text="&">&</h2>
+							<h1 class="welcome-glitch margin-left" data-text="FrontEnd">FrontEnd</h2>
+						</div>
+						<h3 class="welcome-ph"><span class="welcome-ph-dot">.</span>Портфолио</h3>
+					</div>
+				</div>
+				<div data-aos="fade-up" data-aos-duration="800" data-aos-anchor="#header" class="portfolio">
+					<h3 class="text-skills title-portfolio">Мое портфолио<i class="fas fa-briefcase fa-1x icon-margin-left"></i></h3>
+					<div class="portfolio-cards-container">
+					<div class="portfolio-card">
+						<div data-aos="zoom-in" data-aos-anchor-placement="top-bottom" class="portfolio-img-block"><a href=""><img src="img/example-min.png" alt="" class="portfolio-img"></a></div>
+						<div class="portfolio-text">
+							<div class="portfolio-title">Website 1</div>
+							<div class="portfolio-par">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit obcaecati.</div>
+							<a href="" class="portfolio-btn">Перейти</a>
+						</div>
+					</div>
+					<div class="portfolio-card mirror">
+						<div data-aos="zoom-in" data-aos-anchor-placement="top-bottom" class="portfolio-img-block"><a href=""><img src="img/example-min.png" alt="" class="portfolio-img"></a></div>
+						<div class="portfolio-text portfolio-margin-right mirror">
+							<div class="portfolio-title">Website 1</div>
+							<div class="portfolio-par">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit obcaecati.</div>
+							<a href="" class="portfolio-btn portfolio-margin-left">Перейти</a>
+						</div>
+					</div>
+					<div class="portfolio-card no-margin-bottom">
+						<div data-aos="zoom-in" data-aos-anchor-placement="top-bottom" class="portfolio-img-block"><a href=""><img src="img/example-min.png" alt="" class="portfolio-img"></a></div>
+						<div class="portfolio-text">
+							<div class="portfolio-title">Website 1</div>
+							<div class="portfolio-par">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit obcaecati.</div>
+							<a href="" class="portfolio-btn">Перейти</a>
+						</div>
+					</div>
+				</div>
+			</div>
+				<div data-aos="fade-up" data-aos-duration="800" data-aos-anchor="#header" class="skills">
+					<h3 class="text-skills">Мои навыки<i class="fas fa-code fa-1x icon-margin-left"></i></h3>
+					<div class="prof-skills">
+						<div class="progress-block">
+							<p tooltip="senior" class="progress-text">HTML5</p>
+							<div class="progress-bar">
+								<span class="bar">
+									<span class="progress"></span>
+								</span>
+							</div>
+						</div>
+						<div class="progress-block">
+							<p tooltip="senior" class="progress-text">CSS3</p>
+							<div class="progress-bar">
+								<span class="bar">
+									<span class="progress pg-css"></span>
+								</span>
+							</div>
+						</div>
+						<div class="progress-block">
+							<p tooltip="middle" class="progress-text">JavaScript</p>
+							<div class="progress-bar">
+								<span class="bar">
+									<span class="progress pg-js"></span>
+								</span>
+							</div>
+						</div>
+						<div class="progress-block">
+							<p tooltip="middle+" class="progress-text">JQuery</p>
+							<div class="progress-bar">
+								<span class="bar">
+									<span class="progress pg-jq"></span>
+								</span>
+							</div>
+						</div>
+						<div class="progress-block">
+							<p tooltip="junior" class="progress-text">Vue.js</p>
+							<div class="progress-bar">
+								<span class="bar">
+									<span class="progress pg-vue"></span>
+								</span>
+							</div>
+						</div>
+					</div>
+					<h3 class="text-skills">Языки<i class="fas fa-globe fa-1x icon-margin-left"></i></h3>
+					<div class="lang-skills">
+						<div class="diagrams">
+							<div class="diag-rus"></div>
+							<div class="diag-eng"></div>
+						</div>
+					</div>
+				</div>
+				<div data-aos="fade-up" data-aos-duration="800" data-aos-anchor="#header" class="contact">
+				</div>
+				<footer data-aos="fade-up" data-aos-duration="800" data-aos-anchor="#header" class="footer">
+				</footer>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="js/javascript.js"></script>
+		<script id="aos-css-file" type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			function removeAos() {
+			styleTag.removeAttribute('data-aos'); }
+			setTimeout(removeAos, 800);
+		AOS.init();
+		</script>
+	</body>
+</html>
