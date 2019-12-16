@@ -10,6 +10,28 @@ body, h1, h2, h3, h4, h5, h6, p {
 	font-smoothing: antialiased;
 }
 
+.back-button-global {
+	position: fixed;
+	top: 40vh;
+	left: 3vw;
+	max-width: 64px;
+	width: 100%;
+}
+
+@keyframes mg-switch {
+	0% {
+		margin-left: 0px;
+	}
+
+	100%{
+		margin-left: 10px;
+	}
+}
+
+.back-button-global:hover {
+	animation: mg-switch .2s forwards;
+	cursor: pointer;
+}
 
 .container1 {
 	max-width: 1440px;
@@ -935,12 +957,12 @@ body, h1, h2, h3, h4, h5, h6, p {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin: 0 80px;
+	margin: 50px 80px;
+	margin-bottom: 0;
 }
 
 .footer-ul {
 	display: flex;
-	margin-top: 48px;
 	color: #fff;
 	opacity: .5;
 	padding: 0;
