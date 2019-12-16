@@ -156,7 +156,9 @@
 			function removeAos() {
 			styleTag.removeAttribute('data-aos'); }
 			setTimeout(removeAos, 800);
-		AOS.init();
+		AOS.init({
+			disable: 'mobile'
+			});
 		</script>
 	</body>
 </html>
