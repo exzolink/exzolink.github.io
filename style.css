@@ -717,6 +717,8 @@ a {
 }
 
 .portfolio-text {
+	max-width: 395px;
+	width: 100%;
 	margin-left: 45px;
 	margin-right: 45px;
 }
