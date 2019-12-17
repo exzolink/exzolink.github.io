@@ -280,7 +280,7 @@ a {
 .welcome-bg {
 	width: inherit;
 	position: relative;
-	opacity: .08;
+	opacity: .07;
 	height: 600px;
 	background: url('../img/welcome-bg.jpg') no-repeat center;
 	-webkit-background-size: cover;
