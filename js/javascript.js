@@ -6,24 +6,21 @@ function removeAos() {
 styleTag.removeAttribute('data-aos'); }
 setTimeout(removeAos, 800);
 
-$('.nl-item1').on('click', function() {
-  $('html,body').animate({scrollTop:$('.container').offset().top+"px"},{duration:500});
-});
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const offset = document.querySelector('.nav').offsetHeight;
+      const element = document.querySelector(this.getAttribute('href'));
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
 
-$('.nl-item3').on('click', function() {
-  $('html,body').animate({scrollTop:$('.skills').offset().top+"px"},{duration:500});
-});
-
-$('.nl-item2').on('click', function() {
-  $('html,body').animate({scrollTop:$('.title-portfolio').offset().top+"px"},{duration:500});
-});
-
-$('.nl-item4').on('click', function() {
-  $('html,body').animate({scrollTop:$('.contact').offset().top+"px"},{duration:500});
-});
-
-$('.msg-btn').on('click', function() {
-  $('html,body').animate({scrollTop:$('.contact').offset().top+"px"},{duration:500});
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      }); 
+    });
 });
 
 var dataset_en = [
@@ -119,3 +116,6 @@ dataset_ru.reduce(function (prev, curr) {
     }, angle, true));
   })(curr, prev);
 }, 0);
+
+
+

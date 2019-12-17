@@ -17,7 +17,7 @@
 		<meta name="yandex-verification" content="a7db040fe435ce1b" />
 	</head>
 	<body>
-		<div class="container">
+		<main class="container">
 			<aside id="styleTag" data-aos="fade-right" data-aos-duration="800" data-aos-once="true" class=sidebar>
 				<div class="sidebar-fixed">
 					<div class="sidebar-inner">
@@ -39,31 +39,31 @@
 				</div>
 			</aside>
 			<div class="subcontainer">
-				<div data-aos="fade-up" data-aos-duration="800" class="header">
+				<header id="header-anchor" data-aos="fade-up" data-aos-duration="800" class="header">
 					<a href="" class="header-logo"><img src="img/logo.svg" alt="Gromenkov" class="header-logo"></a>
 					<nav class="nav">
-						<a class="nav-link nl-item1">Главная</a>
-						<a class="nav-link nl-item2">Портфолио</a>
-						<a class="nav-link nl-item3">Навыки</a>
-						<a class="nav-link nl-item4">Связаться</a>
+						<a href="#header-anchor" class="nav-link nl-item1">Главная</a>
+						<a href="#portfolio-anchor" class="nav-link nl-item2">Портфолио</a>
+						<a href="#skills-anchor" class="nav-link nl-item3">Навыки</a>
+						<a href="#contact-anchor" class="nav-link nl-item4">Связаться</a>
 					</nav>
-					<div href="" tooltip="Тема" class="theme-toggle"><img src="img/lamp.png" alt="" class="lamp"></div></span>
-				</div>
-				<div data-aos="fade-up" data-aos-duration="800" class="welcome">
+					<div href="" tooltip="Тема" class="theme-toggle"><img src="img/lamp.png" alt="" class="lamp"></div>
+				</header>
+				<section data-aos="fade-up" data-aos-duration="800" class="welcome">
 					<div class="welcome-bg">
 					</div>
 					<div class="welcome-title">
 						<div class="welcome-title-glitch">
-							<h1 class="welcome-glitch margin-right" data-text="Верстка">Верстка</h2>
+							<h1 class="welcome-glitch margin-right" data-text="Верстка">Верстка</h1>
 							<h2 class="welcome-glitch" data-text="&">&</h2>
-							<h1 class="welcome-glitch margin-left" data-text="FrontEnd">FrontEnd</h2>
+							<h1 class="welcome-glitch margin-left" data-text="FrontEnd">FrontEnd</h1>
 						</div>
 						<h3 class="welcome-ph"><span class="welcome-ph-dot">.</span>Портфолио</h3>
 					</div>
-				</div>
-				<div data-aos="fade-up" data-aos-duration="800" data-aos-anchor="#header" class="portfolio">
+				</section>
+				<section data-aos="fade-up" data-aos-duration="800" data-aos-anchor="#header" class="portfolio">
 					<h3 class="text-skills title-portfolio">Мое портфолио<i class="fas fa-briefcase fa-1x icon-margin-left"></i></h3>
-					<div class="portfolio-cards-container">
+					<div id="portfolio-anchor" class="portfolio-cards-container">
 						<div class="portfolio-card">
 							<div data-aos="zoom-in" data-aos-anchor-placement="top-bottom" class="portfolio-img-block"><a href="https://exzolink.github.io/portfolio/dartservice/"><img src="img/example-min.png" alt="" class="portfolio-img"></a></div>
 							<div class="portfolio-text">
@@ -89,9 +89,9 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div data-aos="fade-up" data-aos-duration="800" data-aos-anchor="#header" class="skills">
-					<h3 class="text-skills">Мои навыки<i class="fas fa-code fa-1x icon-margin-left"></i></h3>
+				</section>
+				<section data-aos="fade-up" data-aos-duration="800" data-aos-anchor="#header" class="skills">
+					<h3 id="skills-anchor" class="text-skills">Мои навыки<i class="fas fa-code fa-1x icon-margin-left"></i></h3>
 					<div class="prof-skills">
 						<div class="progress-block">
 							<p tooltip="senior" class="progress-text">HTML5</p>
@@ -141,13 +141,13 @@
 							<div class="diag-eng"></div>
 						</div>
 					</div>
-				</div>
-				<div data-aos="fade-up" data-aos-duration="800" data-aos-anchor="#header" class="contact">
-				</div>
+				</section>
+				<section id="contact-anchor" data-aos="fade-up" data-aos-duration="800" data-aos-anchor="#header" class="contact">
+				</section>
 				<footer data-aos="fade-up" data-aos-duration="800" data-aos-anchor="#header" class="footer">
 				</footer>
 			</div>
-		</div>
+		</main>
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
 		<script type="text/javascript" src="js/javascript.js"></script>
