@@ -2,7 +2,9 @@
 var link = jQuery('.sidebar-title');             
 if (h > 11 && h <  19) var new_text = link.text().replace('Maxim Gromenkov' , 'Добрый день');
 link.text(new_text);*/
-
+function removeAos() {
+styleTag.removeAttribute('data-aos'); }
+setTimeout(removeAos, 800);
 
 $('.nl-item1').on('click', function() {
   $('html,body').animate({scrollTop:$('.container').offset().top+"px"},{duration:500});
@@ -24,12 +26,7 @@ $('.msg-btn').on('click', function() {
   $('html,body').animate({scrollTop:$('.contact').offset().top+"px"},{duration:500});
 });
 
-
-
-
-
-
-var dataset = [
+var dataset_en = [
   {
     value: 25,
     color: '#f0f0f0'
@@ -40,7 +37,7 @@ var dataset = [
 ];
 
 var maxValue = 25;
-var container = $('.diag-eng');
+var container_en = $('.diag-eng');
 
 var addSector = function(data, startAngle, collapse) {
   var sectorDeg = 3.6 * data.value;
@@ -56,12 +53,12 @@ var addSector = function(data, startAngle, collapse) {
     'background': data.color,
     'transform': 'rotate(' + rotateDeg + 'deg) skewY(' + skewDeg + 'deg)'
   });
-  container.append(sector);
+  container_en.append(sector);
 
   return startAngle + sectorDeg;
 };
 
-dataset.reduce(function (prev, curr) {
+dataset_en.reduce(function (prev, curr) {
   return (function addPart(data, angle) {
     if (data.value <= maxValue) {
       return addSector(data, angle, false);
@@ -78,7 +75,7 @@ dataset.reduce(function (prev, curr) {
 }, 0);
 
 
-var dataset = [
+var dataset_ru = [
 {
     value: 100,
     color: '#4D648D'
@@ -86,7 +83,7 @@ var dataset = [
 ];
 
 var maxValue = 25;
-var container = $('.diag-rus');
+var container_ru = $('.diag-rus');
 
 var addSector = function(data, startAngle, collapse) {
   var sectorDeg = 3.6 * data.value;
@@ -102,12 +99,12 @@ var addSector = function(data, startAngle, collapse) {
     'background': data.color,
     'transform': 'rotate(' + rotateDeg + 'deg) skewY(' + skewDeg + 'deg)'
   });
-  container.append(sector);
+  container_ru.append(sector);
 
   return startAngle + sectorDeg;
 };
 
-dataset.reduce(function (prev, curr) {
+dataset_ru.reduce(function (prev, curr) {
   return (function addPart(data, angle) {
     if (data.value <= maxValue) {
       return addSector(data, angle, false);
