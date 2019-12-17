@@ -805,14 +805,14 @@ a {
 
 .contact-link {
 	color: #858585;
-	text-decoration: underline;
+	border-bottom: 1px solid;
 	text-align: right;
 	width: max-content;
-	transition: color .1s ease;
+	transition: color .1s ease, border-bottom .1s ease;
 }
 
 .contact-link:hover {
-	text-decoration: none;
+	border-bottom: none;
 	color: #363642;
 }
 
