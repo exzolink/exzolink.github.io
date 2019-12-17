@@ -271,7 +271,7 @@ a {
 	max-width: inherit;
 	width: 100%;
 	margin-top: 20px;
-	height: 500px;
+	height: 600px;
 	border-radius: 3px;
 	box-shadow: 0 0 2px rgba(0,0,0,.1);
 	background-color: #fff;
@@ -281,7 +281,7 @@ a {
 	width: inherit;
 	position: relative;
 	opacity: .08;
-	height: 500px;
+	height: 600px;
 	background: url('../img/welcome-bg.jpg') no-repeat center;
 	-webkit-background-size: cover;
 	background-size: cover;
