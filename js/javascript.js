@@ -32,7 +32,6 @@ var dataset_en = [
     color: 'darkcyan'
 }
 ];
-
 var maxValue = 25;
 var container_en = $('.diag-eng');
 
@@ -43,7 +42,6 @@ var addSector = function(data, startAngle, collapse) {
   if (collapse) {
     skewDeg++;
   }
-
   var sector = $('<div>', {
     'class': 'sector-eng'
   }).css({
@@ -51,7 +49,6 @@ var addSector = function(data, startAngle, collapse) {
     'transform': 'rotate(' + rotateDeg + 'deg) skewY(' + skewDeg + 'deg)'
   });
   container_en.append(sector);
-
   return startAngle + sectorDeg;
 };
 
@@ -60,7 +57,6 @@ dataset_en.reduce(function (prev, curr) {
     if (data.value <= maxValue) {
       return addSector(data, angle, false);
     }
-
     return addPart({
       value: data.value - maxValue,
       color: data.color
@@ -71,14 +67,12 @@ dataset_en.reduce(function (prev, curr) {
   })(curr, prev);
 }, 0);
 
-
 var dataset_ru = [
 {
     value: 100,
     color: '#4D648D'
 }
 ];
-
 var maxValue = 25;
 var container_ru = $('.diag-rus');
 
@@ -89,7 +83,6 @@ var addSector = function(data, startAngle, collapse) {
   if (collapse) {
     skewDeg++;
   }
-
   var sector = $('<div>', {
     'class': 'sector-rus'
   }).css({
@@ -97,7 +90,6 @@ var addSector = function(data, startAngle, collapse) {
     'transform': 'rotate(' + rotateDeg + 'deg) skewY(' + skewDeg + 'deg)'
   });
   container_ru.append(sector);
-
   return startAngle + sectorDeg;
 };
 
@@ -106,7 +98,6 @@ dataset_ru.reduce(function (prev, curr) {
     if (data.value <= maxValue) {
       return addSector(data, angle, false);
     }
-
     return addPart({
       value: data.value - maxValue,
       color: data.color
