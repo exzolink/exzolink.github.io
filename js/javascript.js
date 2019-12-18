@@ -19,7 +19,7 @@ $('.portfolio-cards-container').slick({
 function removeAos() {
 styleTag.removeAttribute('data-aos'); }
 
-document.addEventListener('DOMContentLoaded', (setTimeout(removeAos, 800)));
+document.addEventListener('DOMContentLoaded', (function() {setTimeout(removeAos, 800)}));
 
 // Navigation Scroll To #
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
