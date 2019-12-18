@@ -674,7 +674,7 @@ a {
 
 .portfolio-cards-container {
 	margin: 0 auto;
-	max-width: 900px;
+	max-width: 900px !important;
 	width: 100%;
 }
 
@@ -691,13 +691,16 @@ a {
 	background: #fff;
 }
 
+.title-portfolio {
+	max-width: 885px;
+}
+
 .mirror {
 	flex-direction: row-reverse;
 	text-align: right;
 	padding-right: 10px;
 	padding-left: 0;
 }
-
 
 .portfolio-img-block {
 	display: flex;

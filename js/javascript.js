@@ -14,7 +14,6 @@ $('.portfolio-cards-container').slick({
   nextArrow: '<img src="img/next.png">'
   });
 });
-    
 
 function removeAos() {
 styleTag.removeAttribute('data-aos'); }
