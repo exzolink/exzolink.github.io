@@ -40,6 +40,21 @@ a {
 	flex-direction: column;
 }
 
+.button-up {
+	display: none;
+	width: 64px;
+	position: fixed;
+	bottom: 10vh;
+	right: 8vh;
+	opacity: .5;
+	transition: all .2s ease;
+}
+
+.button-up:hover {
+	cursor: pointer;
+	opacity: .7;
+}
+
 /* TOOLTIPS INIT ========== */
 
 *[tooltip]:hover::before {
@@ -910,6 +925,21 @@ a {
 	border-radius: 3px;
 	box-shadow: 0 0 2px rgba(0,0,0,.1);
 	background-color: #fff;
+}
+
+.footer-text {
+	display: flex;
+	align-items: center;
+	height: inherit;
+	justify-content: center;
+	font-family: 'Rubik', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	color: #363642;
+}
+
+.copyright {
+	margin-right: 5px;
 }
 
 /* TECH ==== */

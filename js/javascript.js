@@ -17,6 +17,22 @@ function removeAos() {
 styleTag.removeAttribute('data-aos'); }
 setTimeout(removeAos, 800);
 
+$(document).ready(function(){
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 600) {
+    $('.button-up').show();
+      } else {
+    $('.button-up').hide();
+  }
+});
+  $('.button-up').click(function () {
+    $('body,html').animate({
+      scrollTop: 0
+        }, 300);
+    return false;
+  });     
+});
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
