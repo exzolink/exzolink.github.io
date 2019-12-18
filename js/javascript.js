@@ -15,6 +15,7 @@ $('.portfolio-cards-container').slick({
   });
 });
 
+//Make Sidebar Fixed after animation
 function removeAos() {
 styleTag.removeAttribute('data-aos'); }
 setTimeout(removeAos, 800);
@@ -23,12 +24,12 @@ setTimeout(removeAos, 800);
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
-      const offset = document.querySelector('.nav').offsetHeight;
-      const element = document.querySelector(this.getAttribute('href'));
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
+      var offset = document.querySelector('.nav').offsetHeight;
+      var element = document.querySelector(this.getAttribute('href'));
+      var bodyRect = document.body.getBoundingClientRect().top;
+      var elementRect = element.getBoundingClientRect().top;
+      var elementPosition = elementRect - bodyRect;
+      var offsetPosition = elementPosition - offset;
 
       window.scrollTo({
         top: offsetPosition,
@@ -126,7 +127,7 @@ dataset_ru.reduce(function (prev, curr) {
 
 
 // Scroll Top Button
-$(document).ready(function(){
+($(document).ready(function(){
   $(window).scroll(function () {
     if ($(this).scrollTop() > 500) {
     $('.button-up').show();
@@ -135,10 +136,11 @@ $(document).ready(function(){
   }
 });
   $('.button-up').click(function () {
-    $('html').animate({
+    $('html:not(:animated), body:not(:animated)').animate({
       scrollTop: 0
-        }, 200);
+        }, 250);
+    return false;
   });     
-});
+}));
 
 
