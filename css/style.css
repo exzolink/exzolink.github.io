@@ -716,10 +716,11 @@ a {
 	max-width: 100%;
 	max-height: 100%;
 	border-radius: 5px;
-	transition: transform .2s ease;
+	transition: transform .2s ease, filter .2s ease;
 }
 
 .portfolio-img:hover {
+	filter: saturate(120%);
 	cursor: pointer;
 	transform: scale(0.98);
 }

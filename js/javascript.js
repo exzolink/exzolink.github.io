@@ -8,10 +8,8 @@ $('.portfolio-cards-container').slick({
   slidesToShow: 3,
   slidesToScroll: 3,
   appendArrows: $('.portfolio-slider-arrows'),
-  dots: false,
-  appendDots: $('.portfolio-slider-arrows'),
   prevArrow: '<img src="img/back.png">',
-  nextArrow: '<img src="img/next.png">'
+  nextArrow: '<img src="img/next.png">',
   });
 });
 
