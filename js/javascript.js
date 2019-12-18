@@ -2,20 +2,6 @@
 var link = jQuery('.sidebar-title');             
 if (h > 11 && h <  19) var new_text = link.text().replace('Maxim Gromenkov' , 'Добрый день');
 link.text(new_text);*/
-$(function(){
-$('.portfolio-cards-container').slick({
-  infinite: false,
-  slidesToShow: 3,
-  slidesToScroll: 3,
-  appendArrows: $('.portfolio-slider-arrows'),
-  dots: false,
-  appendDots: $('.portfolio-slider-arrows'),
-  prevArrow: '<img src="img/back.png">',
-  nextArrow: '<img src="img/next.png">'
-  });
-});
-    
-
 function removeAos() {
 styleTag.removeAttribute('data-aos'); }
 setTimeout(removeAos, 800);
