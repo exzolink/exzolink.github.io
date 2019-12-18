@@ -18,7 +18,8 @@ $('.portfolio-cards-container').slick({
 //Make Sidebar Fixed after animation
 function removeAos() {
 styleTag.removeAttribute('data-aos'); }
-document.ready(setTimeout(removeAos, 800));
+
+document.addEventListener('DOMContentLoaded', (setTimeout(removeAos, 800)));
 
 // Navigation Scroll To #
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
