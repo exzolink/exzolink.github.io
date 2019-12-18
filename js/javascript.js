@@ -125,7 +125,6 @@ dataset_ru.reduce(function (prev, curr) {
   })(curr, prev);
 }, 0);
 
-
 // Scroll Top Button
 ($(document).ready(function(){
   $(window).scroll(function () {
