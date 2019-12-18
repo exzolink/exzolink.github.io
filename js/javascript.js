@@ -2,6 +2,8 @@
 var link = jQuery('.sidebar-title');             
 if (h > 11 && h <  19) var new_text = link.text().replace('Maxim Gromenkov' , 'Добрый день');
 link.text(new_text);*/
+
+// Slider Options
 $(function(){
 $('.portfolio-cards-container').slick({
   infinite: false,
@@ -17,22 +19,7 @@ function removeAos() {
 styleTag.removeAttribute('data-aos'); }
 setTimeout(removeAos, 800);
 
-$(document).ready(function(){
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 600) {
-    $('.button-up').show();
-      } else {
-    $('.button-up').hide();
-  }
-});
-  $('.button-up').click(function () {
-    $('body,html').animate({
-      scrollTop: 0
-        }, 300);
-    return false;
-  });     
-});
-
+// Navigation Scroll To #
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -50,6 +37,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Diagram English
 var dataset_en = [
   {
     value: 25,
@@ -94,6 +82,7 @@ dataset_en.reduce(function (prev, curr) {
   })(curr, prev);
 }, 0);
 
+// Diagram Russian
 var dataset_ru = [
 {
     value: 100,
@@ -135,5 +124,21 @@ dataset_ru.reduce(function (prev, curr) {
   })(curr, prev);
 }, 0);
 
+
+// Scroll Top Button
+$(document).ready(function(){
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 500) {
+    $('.button-up').show();
+      } else {
+    $('.button-up').hide();
+  }
+});
+  $('.button-up').click(function () {
+    $('html').animate({
+      scrollTop: 0
+        }, 200);
+  });     
+});
 
 
