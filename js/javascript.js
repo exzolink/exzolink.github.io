@@ -133,14 +133,9 @@ dataset_ru.reduce(function (prev, curr) {
     $('.button-up').show();
       } else {
     $('.button-up').hide();
-  }
-});
-  $('.button-up').click(function () {
-    $('html:not(:animated), body:not(:animated)').animate({
-      scrollTop: 0
-        }, 250);
-    return false;
-  });     
+    }
+  });
 }));
+
 
 
