@@ -3,6 +3,10 @@ var link = jQuery('.sidebar-title');
 if (h > 11 && h <  19) var new_text = link.text().replace('Maxim Gromenkov' , 'Добрый день');
 link.text(new_text);*/
 
+$(document).ready(function() {
+  $('body').fadeIn(500);
+});
+
 // Slider Options
 $(function(){
 $('.portfolio-cards-container').slick({
@@ -14,12 +18,6 @@ $('.portfolio-cards-container').slick({
   nextArrow: '<img src="img/next.png">',
   });
 });
-
-//Make Sidebar Fixed after animation
-function removeAos() {
-styleTag.removeAttribute('data-aos'); }
-
-document.addEventListener('DOMContentLoaded', (function() {setTimeout(removeAos, 800)}));
 
 // Navigation Scroll To #
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

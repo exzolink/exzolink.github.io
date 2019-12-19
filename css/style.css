@@ -11,6 +11,7 @@
 }
 
 body {
+	display: none;
 	font-smoothing: antialiased;
 	background-color: #f2f2f2;
 	overflow-x: hidden;
