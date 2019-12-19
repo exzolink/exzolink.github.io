@@ -10,29 +10,6 @@ body, h1, h2, h3, h4, h5, h6, p {
 	font-smoothing: antialiased;
 }
 
-.back-button-global {
-	position: fixed;
-	top: 10vh;
-	left: 3vw;
-	max-width: 64px;
-	width: 100%;
-}
-
-@keyframes mg-switch {
-	0% {
-		margin-left: 0px;
-	}
-
-	100%{
-		margin-left: 10px;
-	}
-}
-
-.back-button-global:hover {
-	animation: mg-switch .2s forwards;
-	cursor: pointer;
-}
-
 .container1 {
 	max-width: 1440px;
 	width: 100%;

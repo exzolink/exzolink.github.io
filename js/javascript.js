@@ -7,6 +7,15 @@ $('.portfolio-cards-container').slick({
   appendArrows: $('.portfolio-slider-arrows'),
   prevArrow: '<img src="img/back.png">',
   nextArrow: '<img src="img/next.png">',
+  responsive: [
+  {
+    breakpoint: 600,
+    settings: {
+      slidesToScroll: 2,
+      slidesToShow: 2
+        }
+      }
+    ]
   });
 });
 

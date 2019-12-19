@@ -109,6 +109,7 @@ a {
 	right: 9vh;
 	opacity: .4;
 	transition: all .2s ease;
+	z-index: 1001;
 }
 
 .button-up:hover {
@@ -317,8 +318,9 @@ a {
 	justify-content: center;
 	align-items: center;
 	height: inherit;
-	max-width: 150px;
+	max-width: max-content;
 	width: 100%;
+	padding: 0 15px;
 	transition: background-color .2s ease;
 }
 
@@ -1015,14 +1017,385 @@ a {
 
 
 
-
-
-
-
-
-
 @media screen and (max-width: 1023px) {
 	.sidebar {
 		display: none;
 	}
 }
+
+@media screen and (max-width: 1440px) {
+	.container {
+		max-width: 1300px;
+	}
+
+	.adaptive-width	{
+		max-width: 850px !important;
+	}
+
+	.text-skills {
+		max-width: 850px;
+	}
+	.msg-btn {
+		margin-top: 20px;
+	}
+}
+
+@media screen and (max-width: 1340px) {
+	.container {
+		max-width: 1200px;
+	}
+
+	.adaptive-width	{
+		max-width: 780px !important;
+	}
+
+	.text-skills {
+		max-width: 780px;
+	}
+
+	.nav {
+		margin: 0 20px;
+	}
+	.text-skills {
+		margin-bottom: 30px;
+	}
+	.portfolio-card {
+		margin-bottom: 15px;
+	}
+}
+
+@media screen and (max-width: 1240px) {
+	.container {
+		max-width: 1100px;
+	}
+
+	.adaptive-width	{
+		max-width: 680px !important;
+	}
+
+	.text-skills {
+		max-width: 680px;
+	}
+
+	.nav {
+		margin: 0 20px;
+	}
+	.header-logo {
+		margin-left: 5px;
+	}
+	.theme-toggle {
+		margin-right: 15px;
+	}
+	.sidebar, .sidebar-fixed {
+		max-width: 330px
+	}
+}
+
+@media screen and (max-width: 1140px) {
+	.container {
+		max-width: 1000px;
+	}
+
+	.adaptive-width	{
+		max-width: 550px !important;
+	}
+	.portfolio {
+		height: 1000px;
+	}
+	.text-skills {
+		max-width: 550px;
+	}
+	.nav-link {
+		font-size: 16px;
+	}
+	.header-logo {
+		max-width: 150px;
+	}
+	.portfolio-title {
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	.portfolio-par {
+		margin-bottom: 25px;
+	}
+	.portfolio-btn {
+		font-size: 15px;
+		padding: 6px 12px;
+	}
+	.title-portfolio {
+		margin-bottom: 0;
+	}
+	.portfolio-slider-arrows {
+		margin-top: 0;
+	}
+	.contact-container {
+		display: block;
+	}
+	.contact-social {
+		align-items: center;
+		max-width: inherit;
+		height: max-content;
+		margin: 0 auto;
+	}
+	.contact-form {
+		margin: 10px auto;
+		height: 550px;
+	}
+	.contact-social-block {
+		margin-bottom: 20px;
+	}
+	.contact {
+		height: 1050px;
+	}
+
+}
+
+@media screen and (max-width: 1020px) {
+	.container {
+		max-width: 950px;
+	}
+
+	.adaptive-width	{
+		max-width: 850px !important;
+	}
+	.text-skills {
+		max-width: 850px;
+	}
+	.title-portfolio {
+		margin-bottom: 20px;
+	}
+	.contact-container {
+		display: flex;
+	}
+	.contact-social {
+		height: inherit;
+		justify-content: center;
+	}
+	.contact-form {
+		height: 650px;
+	}
+	.theme-toggle {
+		margin-right: 35px;
+	}
+	.header-logo {
+		max-width: 195px;
+		margin-left: 15px;
+	}
+	.nav-link {
+		font-size: 18px;
+	}
+	.nav {
+		justify-content: space-around;
+	}
+	.contact {
+		height: 900px;
+	}
+	.contact-social-block {
+		margin-right: 10px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.adaptive-width	{
+		max-width: 750px !important;
+	}
+	.text-skills {
+		max-width: 750px;
+	}
+}
+
+@media screen and (max-width: 790px) {
+	.adaptive-width	{
+		max-width: 650px !important;
+	}
+	.text-skills {
+		max-width: 650px;
+		margin-top: 40px;
+	}
+	.header-logo {
+		margin-left: 5px;
+		max-width: 150px;
+	}
+	.theme-toggle {
+		margin-right: 25px;
+	}
+	.skills {
+		height: 820px;
+	}
+}
+
+@media screen and (max-width: 680px) {
+	.adaptive-width	{
+		max-width: 550px !important;
+	}
+	.text-skills {
+		max-width: 550px;
+	}
+	.contact-container {
+		display: block;
+	}
+	.contact-social {
+		height: max-content;
+	}
+	.contact-form {
+		height: 550px;
+	}
+	.contact {
+		height: 1020px;
+	}
+	.skills {
+		height: 820px;
+	}
+	.portfolio {
+		height: 900px;
+	}
+	.title-portfolio {
+		margin-bottom: 0;
+	}
+	.portfolio-card {
+		height: 220px !important;
+	}
+	.nav-link {
+		font-size: 16px;
+	}
+	.header-logo {
+		max-width: 125px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.adaptive-width	{
+		max-width: 450px !important;
+	}
+	.text-skills {
+		max-width: 450px;
+		text-align: center;
+	}
+	.diag-eng, .diag-rus {
+		width: 160px;
+		height: 160px;
+	}
+	.diag-eng {
+		margin-left: 40px;
+	}
+	.portfolio-card {
+		align-items: center;
+		flex-direction: column;
+		height: 350px !important;
+		text-align: center;
+		padding: 0;
+	}
+	.mirror {
+		text-align: center;
+	}
+	.portfolio-img {
+		max-width: 330px !important;
+		width: 100% !important;
+	}
+	.portfolio-slider-arrows {
+		margin-top: 20px;
+	}
+	.portfolio {
+		height: 930px;
+	}
+	.nav {
+		display: none;
+	}
+	.header {
+		justify-content: space-between;
+	}
+	.header-logo {
+		max-width: 195px;
+	}
+	.title-portfolio {
+		margin-bottom: 10px;
+	}
+	.button-up {
+		bottom: 2vh;
+		right: 2vh;
+	}
+}
+
+@media screen and (max-width: 485px) {
+	.adaptive-width	{
+		max-width: 400px !important;
+	}
+	.text-skills {
+		font-size: 32px;
+	}
+	.margin-left {
+		margin-left: 100px;
+	}
+}
+@media screen and (max-width: 485px) {
+	.adaptive-width	{
+		max-width: 360px !important;
+	}
+	.progress-bar {
+		width: 200px;
+	}
+	.diag-eng {
+		margin-left: 10px;
+	}
+	.contact-container {
+		max-width: 400px !important;
+	}
+}
+
+@media screen and (max-width: 440px) {
+	.contact-container {
+		max-width: 370px !important;
+	}
+}
+
+@media screen and (max-width: 390px) {
+	.adaptive-width {
+		max-width: 320px !important;
+	}
+	.diag-eng, .diag-rus {
+		width: 150px;
+		height: 150px;
+	}
+	.progress-bar {
+		width: 180px;
+	}
+	.contact-container {
+		max-width: 320px !important;
+	}
+	.text-skills {
+		font-size: 28px;
+	}
+	.welcome-title-glitch .welcome-glitch{
+		font-size: 46px;
+	}
+	.contact {
+		height: 1000px;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.adaptive-width {
+		max-width: 300px !important;
+	}
+	.welcome-title-glitch .welcome-glitch{
+		font-size: 42px;
+	}
+	.progress-bar {
+		width: 150px;
+	}
+	.diag-eng, .diag-rus {
+		width: 130px;
+		height: 130px;
+	}
+	.diagrams {
+		height: 240px;
+	}
+	.contact-container {
+		max-width: 310px !important;
+	}
+	.skills {
+		height: 780px;
+	}
+	.header-logo {
+		max-width: 175px;
+	}
