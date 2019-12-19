@@ -128,3 +128,44 @@ dataset_ru.reduce(function (prev, curr) {
 
 
 
+/*
+.sk-three-bounce {
+  $animationDuration: 1.4s;
+  $delayRange: 0.32s;
+  width: ($spinkit-size * 2);
+  margin: auto;
+  text-align: center;
+
+  .sk-child {
+    width: ($spinkit-size / 2);
+    height: ($spinkit-size / 2);
+    background-color: $spinkit-spinner-color;
+
+    border-radius: 100%;
+    display: inline-block;
+    animation: sk-three-bounce $animationDuration ease-in-out 0s infinite both;
+  }
+
+  .sk-bounce-1 {
+    animation-delay: -$delayRange;
+  }
+  .sk-bounce-2 {
+    animation-delay: (-$delayRange / 2);
+  }
+}
+
+@keyframes sk-three-bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1.0);
+  }
+}
+
+
+
+%section
+  .sk-three-bounce
+    - (1..3).each do |i|
+      .sk-child{:class => "sk-bounce-#{i}"} (Haml)
