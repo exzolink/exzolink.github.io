@@ -43,16 +43,16 @@ a {
   margin-top: -35px;
   margin-left: -35px;
   text-align: center;
-  animation: preloader-rotate 1.5s infinite linear;
+  animation: preloader-rotate 2s infinite linear;
 }
 .preloader__item {
   position: absolute;
   display: inline-block;
   top: 0;
+  border: 2px solid cyan;
   background-color: darkcyan;
-  border-radius: 100%;
-  width: 42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
   animation: preloader-bounce 2s infinite ease-in-out;
 }
 .preloader__item:last-child {
