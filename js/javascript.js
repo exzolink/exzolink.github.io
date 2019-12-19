@@ -1,12 +1,3 @@
-/*var h=(new Date()).getHours();
-var link = jQuery('.sidebar-title');             
-if (h > 11 && h <  19) var new_text = link.text().replace('Maxim Gromenkov' , 'Добрый день');
-link.text(new_text);*/
-
-$(document).ready(function() {
-  $('body').fadeIn(500);
-});
-
 // Slider Options
 $(function(){
 $('.portfolio-cards-container').slick({
