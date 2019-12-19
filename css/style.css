@@ -103,11 +103,11 @@ a {
 
 .button-up {
 	display: none;
-	width: 64px;
+	width: 48px;
 	position: fixed;
-	bottom: 10vh;
-	right: 8vh;
-	opacity: .5;
+	bottom: 8vh;
+	right: 9vh;
+	opacity: .4;
 	transition: all .2s ease;
 }
 
