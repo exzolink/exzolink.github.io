@@ -53,7 +53,7 @@ a {
   border-radius: 100%;
   width: 42px;
   height: 42px;
-  animation: preloader-bounce 1.5s infinite ease-in-out;
+  animation: preloader-bounce 2s infinite ease-in-out;
 }
 .preloader__item:last-child {
   top: auto;
@@ -75,7 +75,7 @@ a {
   }
 }
 .loaded_hiding .preloader {
-  transition: 0.4s opacity;
+  transition: 0.2s opacity;
   opacity: 0;
 }
 .loaded .preloader {
