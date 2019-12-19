@@ -125,3 +125,10 @@ dataset_ru.reduce(function (prev, curr) {
     }
   });
 }));
+
+// AOS Init
+document.addEventListener('DOMContentLoaded', function() {
+  AOS.init({
+    disable: 'mobile'
+    });
+});
