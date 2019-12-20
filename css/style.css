@@ -1266,6 +1266,9 @@ a {
 }
 
 @media screen and (max-width: 600px) {
+	.preloader {
+		display: none;
+	}
 	.adaptive-width	{
 		max-width: 450px !important;
 	}
