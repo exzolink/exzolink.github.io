@@ -419,20 +419,147 @@ a {
 
 .welcome-title-glitch .welcome-glitch:before {
   left: 2px;
-  opacity: 0.9;
   text-shadow: -1px 0 red;
   animation: glitch-before 3s linear 0s infinite alternate;
 }
 
 .welcome-title-glitch .welcome-glitch:after {
   left: -1px;
-  opacity: 0.9;
   text-shadow: -1px 0 blue;
   animation: glitch-after 1s linear 0s infinite alternate;
 }
 
+@keyframes glitch-before {
+  0% {
+    clip: rect(24px, 350px, 42px, 30px);
+  }
+  5% {
+    clip: rect(70px, 350px, 15px, 30px);
+  }
+  10% {
+    clip: rect(141px, 350px, 6px, 30px);
+  }
+  15% {
+    clip: rect(7px, 350px, 30px, 30px);
+  }
+  20% {
+    clip: rect(39px, 350px, 94px, 30px);
+  }
+  25% {
+    clip: rect(35px, 350px, 128px, 30px);
+  }
+  30% {
+    clip: rect(110px, 350px, 5px, 30px);
+  }
+  35% {
+    clip: rect(140px, 350px, 2px, 30px);
+  }
+  40% {
+    clip: rect(17px, 350px, 17px, 30px);
+  }
+  45% {
+    clip: rect(79px, 350px, 48px, 30px);
+  }
+  50% {
+    clip: rect(36px, 350px, 134px, 30px);
+  }
+  55% {
+    clip: rect(110px, 350px, 85px, 30px);
+  }
+  60% {
+    clip: rect(47px, 350px, 34px, 30px);
+  }
+  65% {
+    clip: rect(147px, 350px, 16px, 30px);
+  }
+  70% {
+    clip: rect(91px, 350px, 36px, 30px);
+  }
+  75% {
+    clip: rect(62px, 350px, 110px, 30px);
+  }
+  80% {
+    clip: rect(26px, 350px, 73px, 30px);
+  }
+  85% {
+    clip: rect(67px, 350px, 79px, 30px);
+  }
+  90% {
+    clip: rect(24px, 350px, 125px, 30px);
+  }
+  95% {
+    clip: rect(140px, 350px, 123px, 30px);
+  }
+  100% {
+    clip: rect(129px, 350px, 89px, 30px);
+  }
+}
 
-
+@keyframes glitch-after {
+  0% {
+    clip: rect(104px, 350px, 145px, 30px);
+  }
+  5% {
+    clip: rect(144px, 350px, 131px, 30px);
+  }
+  10% {
+    clip: rect(23px, 350px, 14px, 30px);
+  }
+  15% {
+    clip: rect(98px, 350px, 136px, 30px);
+  }
+  20% {
+    clip: rect(66px, 350px, 140px, 30px);
+  }
+  25% {
+    clip: rect(110px, 350px, 99px, 30px);
+  }
+  30% {
+    clip: rect(60px, 350px, 2px, 30px);
+  }
+  35% {
+    clip: rect(150px, 350px, 78px, 30px);
+  }
+  40% {
+    clip: rect(99px, 350px, 147px, 30px);
+  }
+  45% {
+    clip: rect(116px, 350px, 80px, 30px);
+  }
+  50% {
+    clip: rect(125px, 350px, 129px, 30px);
+  }
+  55% {
+    clip: rect(114px, 350px, 32px, 30px);
+  }
+  60% {
+    clip: rect(67px, 350px, 146px, 30px);
+  }
+  65% {
+    clip: rect(23px, 350px, 19px, 30px);
+  }
+  70% {
+    clip: rect(46px, 350px, 133px, 30px);
+  }
+  75% {
+    clip: rect(14px, 350px, 49px, 30px);
+  }
+  80% {
+    clip: rect(19px, 350px, 82px, 30px);
+  }
+  85% {
+    clip: rect(27px, 350px, 72px, 30px);
+  }
+  90% {
+    clip: rect(41px, 350px, 28px, 30px);
+  }
+  95% {
+    clip: rect(78px, 350px, 38px, 30px);
+  }
+  100% {
+    clip: rect(38px, 350px, 127px, 30px);
+  }
+}
 
 /* SKILLS ============================ */
 
@@ -1059,6 +1186,10 @@ a {
 	}
 	.contact-social-block {
 		margin-right: 10px;
+	}
+	.welcome-title-glitch .welcome-glitch:after, .welcome-title-glitch .welcome-glitch:before {
+		animation: none;
+		text-shadow: none;
 	}
 }
 
