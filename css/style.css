@@ -293,7 +293,7 @@ a {
 .header-logo {
 	max-width: 195px;
 	width: 100%;
-	margin-left: 15px;
+	margin-left: 30px;
 	max-height: 50px;
 	height: 100%;
 }
@@ -1078,7 +1078,7 @@ a {
 		margin: 0 20px;
 	}
 	.header-logo {
-		margin-left: 5px;
+		margin-left: 10px;
 	}
 	.theme-toggle {
 		margin-right: 15px;
@@ -1176,7 +1176,7 @@ a {
 	}
 	.header-logo {
 		max-width: 195px;
-		margin-left: 15px;
+		margin-left: 30px;
 	}
 	.nav-link {
 		font-size: 18px;
@@ -1215,7 +1215,7 @@ a {
 		margin-top: 40px;
 	}
 	.header-logo {
-		margin-left: 5px;
+		margin-left: 10px;
 		max-width: 150px;
 	}
 	.theme-toggle {
