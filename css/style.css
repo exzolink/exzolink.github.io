@@ -1188,6 +1188,7 @@ a {
 		margin-right: 10px;
 	}
 	.welcome-title-glitch .welcome-glitch:after, .welcome-title-glitch .welcome-glitch:before {
+		left: 0px;
 		animation: none;
 		text-shadow: none;
 	}
