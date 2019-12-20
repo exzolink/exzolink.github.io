@@ -14,13 +14,13 @@
 		<meta name="description" content="hello world">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 		<title>Maxim Gromenkov - Portfolio</title>
-		<link rel="preload" href="css/style.min.css" as="style">
+		<link rel="preload" href="js/javascript.js" as="script">
+		<link rel="preload" href="css/style_light.css" as="style">
 		<link rel="preload" href="js/jquery-1.11.0.min.js" as="script">
 		<link rel="preload" href="js/jquery-migrate-1.2.1.min.js" as="script">
-		<link rel="preload" href="js/javascript.js" as="script">
-		<link rel="stylesheet" type="text/css" href="css/style.min.css">
 		<link rel="icon" type="image/x-icon" href="favicon.ico">
 		<link rel="stylesheet" type="text/css" href="slick/slick.css">
+		<link rel="stylesheet" type="text/css" href="css/style_light.css">
 		<meta name="yandex-verification" content="a7db040fe435ce1b" />
 	</head>
 	<body>
@@ -55,14 +55,16 @@
 			</aside>
 			<div class="subcontainer">
 				<header id="header-anchor" class="header">
-					<a href="#header-anchor" aria-label="Homepage" class="header-logo"><img src="img/logo.svg" alt="Gromenkov" class="header-logo no-margin-left"></a>
+					<a href="#header-anchor" aria-label="Homepage" class="header-logo"><img src="img/logo.png" alt="Gromenkov" class="header-logo no-margin-left"></a>
 					<nav class="nav">
 						<a href="#header-anchor" class="nav-link nl-item1">Главная</a>
 						<a href="#portfolio-anchor" class="nav-link nl-item2">Портфолио</a>
 						<a href="#skills-anchor" class="nav-link nl-item3">Навыки</a>
 						<a href="#contact-anchor" class="nav-link nl-item4">Связаться</a>
 					</nav>
-					<div tooltip="Тема" class="theme-toggle"><img src="img/lamp.png" alt="" class="lamp"></div>
+					<div tooltip="Тема" class="theme-toggle"><img src="img/lamp.png" alt="" class="lamp theme-toggle">
+						<input type="checkbox" checked="checked" id="theme-toggler"><label for="theme-toggler"></label>
+					</div>
 				</header>
 				<section class="welcome">
 					<div class="welcome-bg">
@@ -205,13 +207,13 @@
 				</footer>
 			</div>
 		</main>
-		<link href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500&display=swap&subset=cyrillic-ext" rel="stylesheet">
 		<script async src="https://kit.fontawesome.com/a365e4a8ae.js" crossorigin="anonymous"></script>
 		<script src="js/jquery-1.11.0.min.js"></script>
 		<script src="js/jquery-migrate-1.2.1.min.js"></script>
-		<script async src="js/javascript.js"></script>
+		<script defer src="js/javascript.js"></script>
 		<script src="slick/slick.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500&display=swap&subset=cyrillic-ext" rel="stylesheet">
 		<script>
 		if (window.innerWidth > 600) {
 		window.onload = function () {

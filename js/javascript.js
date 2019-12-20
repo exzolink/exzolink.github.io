@@ -1,3 +1,28 @@
+//theme toggler
+  let head = document.head,
+      link = document.createElement('link');
+  link.rel = 'stylesheet';
+  if (localStorage.getItem('themeStyle') === 'dark') {
+    link.href = 'css/style_dark.css';
+    document.getElementById('theme-toggler').setAttribute('checked', true);
+  }
+  else {
+  }
+  head.appendChild(link); 
+
+  document.getElementById('theme-toggler').addEventListener('change', ev => {
+    let btn = ev.target;
+    if (btn.checked) {
+      console.log('yeap');
+      link.href = 'css/style_dark.css';
+      localStorage.setItem('themeStyle', 'dark');
+    }
+    else {
+      link.href = 'css/style_light.css';
+      localStorage.setItem('themeStyle', 'light');
+    }
+  });
+
 // Slider Options
 $(function(){
 $('.portfolio-cards-container').slick({
