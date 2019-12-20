@@ -162,6 +162,12 @@ a {
 .footer-text {
 	color: var(--title-color);
 }
-.theme-toggle img{
+.theme-toggle img {
 	filter: invert(60%);
+}
+
+@media screen and (max-width: 390px) {
+	.welcome-title-glitch .welcome-glitch {
+		font-size: 44px;
+	}
 }
