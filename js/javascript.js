@@ -13,7 +13,6 @@
   document.getElementById('theme-toggler').addEventListener('change', ev => {
     let btn = ev.target;
     if (btn.checked) {
-      console.log('yeap');
       link.href = 'css/style_dark.css';
       localStorage.setItem('themeStyle', 'dark');
     }
