@@ -213,12 +213,17 @@
 		<script async src="js/javascript.js"></script>
 		<script src="slick/slick.min.js"></script>
 		<script>
+		if (window.innerWidth > 600) {
 		window.onload = function () {
 		document.body.classList.add('loaded_hiding');
 		window.setTimeout(function () {
 		document.body.classList.add('loaded');
 		document.body.classList.remove('loaded_hiding');
-		}, 100);
+				}, 100);
+			};
+		}
+		else {
+		document.body.classList.add('loaded');
 		};
 		</script>
 	</body>
