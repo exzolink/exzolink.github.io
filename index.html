@@ -24,7 +24,7 @@
 		<meta name="yandex-verification" content="a7db040fe435ce1b" />
 	</head>
 	<body>
-		<div class="preloader">
+		<div id="preload" class="preloader">
 			<div class="preloader__row">
 				<div class="preloader__item"></div>
 				<div class="preloader__item"></div>
@@ -223,7 +223,8 @@
 			};
 		}
 		else {
-		document.body.classList.add('loaded');
+		var elem = document.getElementById("preload");
+		elem.parentNode.removeChild(elem);
 		};
 		</script>
 	</body>
