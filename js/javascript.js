@@ -8,8 +8,7 @@
   }
   else {
   }
-  head.appendChild(link); 
-
+  head.appendChild(link);
   document.getElementById('theme-toggler').addEventListener('change', ev => {
     let btn = ev.target;
     if (btn.checked) {
