@@ -1003,10 +1003,6 @@ a {
 }
 
 /* TECH ==== */
-
-.no-margin-left {
-	margin-left: 0;
-}
 .icon-margin-left {
 	margin-left: 15px;
 }
@@ -1404,3 +1400,8 @@ a {
 	.header-logo {
 		max-width: 175px;
 	}
+}
+
+.no-margin-left {
+	margin-left: 0;
+}
