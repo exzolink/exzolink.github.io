@@ -45,9 +45,18 @@ gulp.task('watch', function(done) {
         server: "app/"
     });
 
-    gulp.watch("app/images");
-    gulp.watch("app/css/*.css");
-    gulp.watch("app/js/*.js");
+    gulp.watch("app/images").on('change', () => {
+      browserSync.reload();
+      done();
+    });
+    gulp.watch("app/css/*.css").on('change', () => {
+      browserSync.reload();
+      done();
+    });
+    gulp.watch("app/js/*.js").on('change', () => {
+      browserSync.reload();
+      done();
+    });
     gulp.watch("app/*.html").on('change', () => {
       browserSync.reload();
       done();
