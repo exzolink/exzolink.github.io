@@ -15,13 +15,13 @@ gulp.task('allfiles', function () {
         .pipe(useref())
         .pipe(gulpif('*.js', terser()))
         .pipe(gulpif('*.css', minifyCss()))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('./'));
 });
 
 gulp.task('otherfiles', () => {
   return gulp.src('app/css/style_dark.min.css')
     .pipe(minifyCss())
-    .pipe(gulp.dest('dist/css'));
+    .pipe(gulp.dest('./css'));
 });
 
 gulp.task('minify', gulp.parallel('allfiles', 'otherfiles'));
@@ -29,7 +29,7 @@ gulp.task('minify', gulp.parallel('allfiles', 'otherfiles'));
 gulp.task('min-imgs', function(){
   return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
   .pipe(cache(image()))
-  .pipe(gulp.dest('dist/images'))
+  .pipe(gulp.dest('./images'))
 });
 
 gulp.task('clear', () =>
