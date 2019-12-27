@@ -203,16 +203,16 @@
 							<div class="cf-form">
 								<form action="https://formspree.io/mdoagkzw" method="POST">
 									<div class="contact-block">
-										<input id="theme" type="text" name="text" class="cf-input">
-										<label for="theme" class="cf-label">Заголовок</label>
+										<input id="theme" type="text" name="text" class="cf-input" required>
+										<label for="theme" class="cf-label">Заголовок *</label>
 									</div>
 									<div class="contact-block">
 										<input id="email" type="email" name="_replyto" class="cf-input" required>
 										<label for="email" class="cf-label">Email *</label>
 									</div>
 									<div class="contact-block">
-										<textarea id="message" name="message" class="cf-textarea"></textarea>
-										<label for="message" class="cf-label-ta">Сообщение</label>
+										<textarea id="message" name="message" class="cf-textarea" required></textarea>
+										<label for="message" class="cf-label-ta">Сообщение *</label>
 									</div>
 									<input type="hidden" name="_next" value="https://mysite.com/thanks.html"/>
 									<button class="submit-btn" type="submit"><i class="fas fa-envelope-square fa-lg"></i></i> Отправить</button>
