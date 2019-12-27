@@ -7,24 +7,39 @@ var minifyCss = require('gulp-csso');
 var imagemin = require('gulp-pngquant');
 var cache = require('gulp-cache');
 var image = require('gulp-image');
- 
-
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
+var cssnext = require('cssnext');
+var cssnano = require('cssnano');
+var pxtorem = require('postcss-pxtorem');
 
 gulp.task('allfiles', function () {
+   var processors = [
+    autoprefixer,
+    pxtorem,
+    cssnext, 
+    cssnano
+ ];
     return gulp.src('app/*.html')
         .pipe(useref())
         .pipe(gulpif('*.js', terser()))
-        .pipe(gulpif('*.css', minifyCss()))
+        .pipe(gulpif('*.css', postcss(processors)))
         .pipe(gulp.dest('./'));
 });
 
 gulp.task('otherfiles', () => {
+     var processors = [
+    autoprefixer,
+    pxtorem,
+    cssnext, 
+    cssnano
+ ];
   return gulp.src('app/css/style_dark.min.css')
-    .pipe(minifyCss())
+    .pipe(postcss(processors))
     .pipe(gulp.dest('./css'));
 });
 
-gulp.task('minify', gulp.parallel('allfiles', 'otherfiles'));
+gulp.task('minify', gulp.series('allfiles', 'otherfiles'));
 
 gulp.task('min-imgs', function(){
   return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
