@@ -12,6 +12,7 @@ var autoprefixer = require('autoprefixer');
 var cssnext = require('cssnext');
 var cssnano = require('cssnano');
 var pxtorem = require('postcss-pxtorem');
+var htmlmin = require('gulp-htmlmin');
 
 gulp.task('allfiles', function () {
    var processors = [
@@ -39,7 +40,14 @@ gulp.task('otherfiles', () => {
     .pipe(gulp.dest('./css'));
 });
 
-gulp.task('minify', gulp.series('allfiles', 'otherfiles'));
+gulp.task('html-min', () => {
+  return gulp.src('*.html')
+    .pipe(htmlmin({ preserveLineBreaks: true, collapseWhitespace: true, removeComments: true, removeEmptyAttributes: true, minifyJS: true }))
+    .pipe(gulp.dest('./'));
+});
+
+
+gulp.task('minify', gulp.series('allfiles', 'otherfiles', 'html-min'));
 
 gulp.task('min-imgs', function(){
   return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
