@@ -16,7 +16,7 @@ var pxtorem = require('postcss-pxtorem');
 gulp.task('allfiles', function () {
    var processors = [
     autoprefixer,
-    pxtorem,
+    pxtorem({rootValue: 17, unitPrecision: 5}),
     cssnext, 
     cssnano
  ];
@@ -30,7 +30,7 @@ gulp.task('allfiles', function () {
 gulp.task('otherfiles', () => {
      var processors = [
     autoprefixer,
-    pxtorem,
+    pxtorem({rootValue: 17, unitPrecision: 5}),
     cssnext, 
     cssnano
  ];
