@@ -17,7 +17,7 @@ var htmlmin = require('gulp-htmlmin');
 gulp.task('allfiles', function () {
    var processors = [
     autoprefixer,
-    pxtorem({rootValue: 17, unitPrecision: 5}),
+    pxtorem({rootValue: 16, propList: ['*']}),
     cssnext, 
     cssnano
  ];
@@ -31,7 +31,7 @@ gulp.task('allfiles', function () {
 gulp.task('otherfiles', () => {
      var processors = [
     autoprefixer,
-    pxtorem({rootValue: 17, unitPrecision: 5}),
+    pxtorem({rootValue: 16, propList: ['*']}),
     cssnext, 
     cssnano
  ];
