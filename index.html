@@ -21,7 +21,12 @@
 		<meta name="yandex-verification" content="a7db040fe435ce1b" />
 	</head>
 	<body>
-	
+		<div id="preload" class="preloader">
+			<div class="preloader__row">
+				<div class="preloader__item"></div>
+				<div class="preloader__item"></div>
+			</div>
+		</div>
 		<div class="back-wall">
 			<a href="#header-anchor" class="button-up">
 			<img class="button-up" src="images/up-button.svg" alt="UP">
@@ -228,6 +233,20 @@
 		</script>
 		<script src="js/main.min.js"></script>
 		<script src="https://kit.fontawesome.com/a365e4a8ae.js" crossorigin="anonymous"></script>
-
+		<script>
+		if (window.innerWidth > 1025) {
+		window.onload = function () {
+		document.body.classList.add('loaded_hiding');
+		window.setTimeout(function () {
+		document.body.classList.add('loaded');
+		document.body.classList.remove('loaded_hiding');
+				}, 100);
+			};
+		}
+		else {
+		var elem = document.getElementById("preload");
+		elem.parentNode.removeChild(elem);
+		};
+		</script>
 	</body>
 </html>
