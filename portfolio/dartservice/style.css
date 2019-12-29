@@ -1042,13 +1042,14 @@ body, h1, h2, h3, h4, h5, h6, p {
 }
 
 .cover {
+	justify-content: center !important;
 	max-width: 660px;
 	padding-top: 16px;
 	padding-bottom: 16px;
 }
 
 .slick-vertical .slick-arrow {
-	margin-left: 250px;
+	margin-left: 0px;
 }
 
 
@@ -1068,12 +1069,6 @@ body, h1, h2, h3, h4, h5, h6, p {
 }
 
 @media screen and (max-width: 1200px) {
-.text {
-	max-width: 500px;
-}
-}
-
-@media screen and (max-width: 1200px) {
 .header-main {
 	display: block;
 	margin-top: 50px;
@@ -1088,9 +1083,296 @@ body, h1, h2, h3, h4, h5, h6, p {
 
 .text {
 	margin: 0 auto;
+	max-width: 500px;
 }
 
 .buttons {
 	margin-bottom: 60px;
 }
+
 }
+
+
+@media screen and (max-width: 1023px) {
+	.feedback {
+		flex-direction: column;
+		justify-content: center;
+			height: 650px;
+	}
+	.feedback-img {
+		display: none !important;
+	}
+	.cover {
+		max-width: 800px;
+	}
+	.slider {
+		margin-top: 30px;
+		margin-right: 0;
+	}
+	.slick-vertical .slick-arrow {
+	margin-left: 0px;
+	}
+	.feedback-left {
+		margin-left: 0;
+		align-items: center;
+	}
+	.feedback-par {
+		text-align: center;
+	}
+	.feedback-get-started {
+		margin-top: 20px;
+	}
+	.f-card-text {
+		font-size: 18px;
+		margin-left: 10px;
+	}
+	.cards {
+		justify-content: space-around;
+	}
+	.card2, .card3 {
+		margin-left: 75px;
+	}
+	.team-under-par {
+		max-width: 750px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 890px) {
+	.nav {
+		display: none !important;
+	}
+	.signUp {
+		display: none !important;
+	}
+	.menu {
+		display: flex !important;
+	}
+	.menu:hover {
+		cursor: pointer;
+	}
+	.footer-inner {
+		justify-content: center !important;
+	}
+	.footer-down {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.boxes {
+		margin: 0 30px;
+	}
+	.card-title {
+		margin-top: 90px;
+	}
+	.team-under-par {
+		max-width: 600px;
+	}
+	.team-under-photo {
+		margin-top: 60px;
+	}
+}
+@media screen and (max-width: 665px) {
+	.cards {
+		flex-direction: column;
+		margin-top: 250px;
+	}
+	.card2, .card3, .card1 {
+		margin-left: 0;
+		margin-top: 20px;
+		max-width: 500px;
+	}
+	.section {
+		height: 850px;
+		margin-bottom: 80px;
+	}
+	.get-started {
+		margin-top: 40px;
+	}
+	.f-card1-img, .f-card2-img, .f-card3-img, .f-card4-img {
+		display: none;
+	}
+}
+@media screen and (max-width: 610px) {
+	.textareas {
+		max-width: 500px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center !important;
+		align-items: center;
+	}
+	.textarea {
+		margin-right: 0;
+		margin-left: 0;
+	}
+	.contacts {
+		height: 740px;
+	}
+	.ta-right {
+		margin-top: 20px !important;
+	}
+	.checkbox-send {
+		margin-top: 40px;
+		justify-content: space-around;
+	}
+	.textareaMsg {
+		max-width: 450px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.team-photo {
+		margin-left: 50px;
+	}
+	.tp-1 {
+		margin-left: 0;
+	}
+	.active {
+		transform: scale(1.25);
+	}
+	.title-text {
+		font-size: 40px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.feedback-par {
+		max-width: 310px;
+	}
+	.feedback {
+		height: 700px;
+	}
+	.features {
+		flex-direction: column;
+		height: 300px;
+	}
+	.f-card1-img, .f-card2-img, .f-card3-img, .f-card4-img {
+		display: block;
+	}
+	.f-card-text {
+		width: 150px;
+		margin-left: 20px;
+	}
+	.feature-card {
+		padding-left: 40px;
+	}
+	.title-text {
+		font-size: 35px;
+		line-height: 36px;
+		margin-bottom: 8px;
+	}
+	.header-inner {
+		padding-top: 30px;
+	}
+	.buttons {
+		display: flex;
+		flex-direction: column;
+	}
+	.btn1, .btn2 {
+		margin: 0 auto;
+		margin-bottom: 20px;
+		max-width: 250px;
+		width: 100%;
+	}
+	.header-bg, .header-opacity {
+		height: 850px;
+	}
+	.contacts-par {
+		width: 310px;
+		margin: 0 auto;
+	}
+	.textareaMsg {
+		width: 310px;
+	}
+	.footer-down {
+		margin: 50px 10px;
+	}
+	.footer-inner {
+		padding-top: 60px !important;
+	}
+	.header-inner {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.title-text {
+		font-size: 26px;
+	}
+	.video {
+		min-height: 160px;
+	}
+	.checkbox-send {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.team-photo {
+		margin-left: 16px;
+	}
+	.tp-1 {
+		margin-left: 0 !important;
+	}
+	.team-under-par {
+		max-width: 310px;
+	}
+	.feedback-title {
+		font-size: 32px;
+	}
+	.feedback {
+		height: 820px;
+	}
+	.spoiler {
+		display: block;
+	}
+	.stats-photo {
+		width: 200px;
+		height: 100px;
+	}
+	.spoiler-text {
+		padding: 0;
+		padding-right: 10px;
+	}
+	.section {
+		margin-bottom: 200px;
+	}
+	.team-par {
+		max-width: 310px;
+	}
+	.cards {
+		margin-top: 300px;
+	}
+	.section-par {
+		max-width: 310px;
+	}
+	.video {
+		min-width: 320px;
+		min-height: 170px;
+		align-self: center;
+	}
+	.video:after {
+		width: 20%;
+		height: 30%;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.video {
+		min-width: 260px;
+		min-height: 125px;
+		align-self: center;
+	}
+	.video:after {
+		width: 20%;
+		height: 30%;
+	}
+}
+@media screen and (max-width: 360px) {
+	.video {
+		min-width: 220px;
+		min-height: 125px;
+		align-self: center;
+	}
+	.video:after {
+		width: 20%;
+		height: 30%;
+	}
+}		
