@@ -350,6 +350,11 @@ body, h1, h2, h3, h4, h5, h6, p {
 	color: #78909c;
 }
 
+.cards-full {
+	display: flex;
+	flex-direction: column;
+}
+
 .get-started {
 	padding: 18px 26px;
 	color: #fff;
@@ -1188,8 +1193,8 @@ body, h1, h2, h3, h4, h5, h6, p {
 		height: 850px;
 		margin-bottom: 80px;
 	}
-	.get-started {
-		margin-top: 40px;
+	.gs-btn {
+		margin-top: 130px;
 	}
 	.f-card1-img, .f-card2-img, .f-card3-img, .f-card4-img {
 		display: none;
@@ -1234,6 +1239,12 @@ body, h1, h2, h3, h4, h5, h6, p {
 	.title-text {
 		font-size: 40px;
 	}
+	.gs-btn {
+		margin-top: 170px;
+	}
+	.section {
+		height: 900px;
+	}
 }
 
 @media screen and (max-width: 450px) {
@@ -1246,6 +1257,9 @@ body, h1, h2, h3, h4, h5, h6, p {
 	.features {
 		flex-direction: column;
 		height: 300px;
+	}
+	.gs-btn {
+		margin-top: 200px;
 	}
 	.f-card1-img, .f-card2-img, .f-card3-img, .f-card4-img {
 		display: block;
@@ -1351,6 +1365,9 @@ body, h1, h2, h3, h4, h5, h6, p {
 	.video:after {
 		width: 20%;
 		height: 30%;
+	}
+	.section {
+		height: 900px;
 	}
 }
 
