@@ -16,6 +16,7 @@
 <div id="preload" class="preloader">
 <div class="preloader__row">
 <div class="preloader__item"></div>
+<div class="preloader__item"></div>
 </div>
 </div>
 <div class="back-wall">
@@ -245,6 +246,20 @@
 </main>
 <script src="https://code.jquery.com/jquery-1.11.0.min.js" integrity="sha256-spTpc4lvj4dOkKjrGokIrHkJgNA0xMS98Pw9N7ir9oI=" crossorigin="anonymous"></script>
 <script src="js/main.min.js"></script>
-<script>if(1025<window.innerWidth)window.onload=function(){document.body.classList.add("loaded_hiding"),window.setTimeout(function(){document.body.classList.add("loaded"),document.body.classList.remove("loaded_hiding")},100)};else{var elem=document.getElementById("preload");elem.parentNode.removeChild(elem)}</script>
+<script>
+/*if (window.innerWidth > 1025) {
+		window.onload = function () {
+		document.body.classList.add('loaded_hiding');
+		window.setTimeout(function () {
+		document.body.classList.add('loaded');
+		document.body.classList.remove('loaded_hiding');
+				}, 200);
+			};
+		}
+		else {
+		var elem = document.getElementById("preload");
+		elem.parentNode.removeChild(elem);
+		};
+</script>
 </body>
 </html>
