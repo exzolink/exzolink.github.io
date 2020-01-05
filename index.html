@@ -243,6 +243,6 @@
 <script src="https://code.jquery.com/jquery-1.11.0.min.js" integrity="sha256-spTpc4lvj4dOkKjrGokIrHkJgNA0xMS98Pw9N7ir9oI=" crossorigin="anonymous"></script>
 <script src="js/main.min.js"></script>
 <script async src="https://kit.fontawesome.com/a365e4a8ae.js" crossorigin="anonymous"></script>
-<script>if(1025<window.innerWidth)window.onload=function(){document.body.classList.add("loaded_hiding"),window.setTimeout(function(){document.body.classList.add("loaded"),document.body.classList.remove("loaded_hiding")},200)};else{var elem=document.getElementById("preload");elem.parentNode.removeChild(elem)}</script>
+<script>if(1025<window.innerWidth)window.onload=function(){document.body.classList.add("loaded_hiding"),document.getElementsByClassName("preloader")[0].style="padding: 0",document.documentElement.style.overflowY="visible",window.setTimeout(function(){document.body.classList.add("loaded"),document.body.classList.remove("loaded_hiding")},200)};else{var elem=document.getElementById("preload");document.documentElement.style.overflowY="visible",elem.parentNode.removeChild(elem)}</script>
 </body>
 </html>
