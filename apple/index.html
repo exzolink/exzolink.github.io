@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content = "
+    Сервисный центр Apple.
+    Ремонт iPhone, Ремонт MacBook, Ремонт iPad, Ремонт iMac, Ремонт iPod, Ремонт iWatch. Разблокировка iCloud.
+    Поддержка и обслуживание техники Apple.
+    ">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Сервисный центр Apple.</title>
+	<link rel="icon" href="img/icon_large.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+</head>
+<div id="remonline-widget" data-key="ca5f2361485b32cacecca0c38301b813"></div>
+<body>
+    <div class="modal flex modal-3">
+        <div onclick="closeModal()" class="close">
+            <img src="img/close.svg" alt="X">
+        </div>
+        <form class="block-form__form flex flex--column align--center" action="send.php" method="POST">
+            <input class="input" type="text" name="firstname" placeholder="Имя">
+            <input class="input" type="text" name="lastname" placeholder="Фамилия">
+            <input class="input" type="text" name="email" placeholder="Email" required>
+            <input class="input" type="text" name="number" placeholder="Телефон"required>
+            <button type="submit" class="button button--primary">Отправить ></button>
+        </form>
+    </div>
+    <div class="modal flex modal-1">
+        <div class="modal__img">
+            <img src="img/modal-1.svg" alt="MAC">
+        </div>
+        <div class="modal__text">
+            <div onclick="closeModal()" class="close">
+                <img src="img/close.svg" alt="X">
+            </div>
+            <p>— Взависимости от модели и года выпуска, можно увеличить оперативную память от 2 до 32 Гб.</p>
+            <p>— Флеш накопитель позволит увеличить скорость и мощность вашего устройства. </p>
+            <p>— Точный потенциал вашего Imac мастер сможет определить после бесплатной <a class="link link--primary link--underline" href="#">диагностики устройства</a> и осмотра платы.</p>
+            <div class="button">
+                <a class="link link--primary" href="#">Узнать стоимость ></a>
+            </div>
+        </div>
+    </div>
+    <div class="modal flex modal-2">
+        <div class="modal__img">
+            <img src="img/modal-2.svg" alt="MAC">
+        </div>
+        <div class="modal__text">
+            <div onclick="closeModal()" class="close">
+                <img src="img/close.svg" alt="X">
+            </div>
+            <p>— Взависимости от модели и года выпуска, можно увеличить оперативную память от 2 до 32 Гб.</p>
+            <p>— Флеш накопитель позволит увеличить скорость и мощность вашего устройства. </p>
+            <p>— Для Imac, выпущенных до 2012 года имеется возможность установить SSD диска SATA</p>
+            <p>— Точный потенциал мастер сможет определить после <a class="link link--primary link--underline" href="#"></a> и осмотра устройства</p>
+            <div class="button">
+                <a class="link link--primary" href="#">Узнать стоимость ></a>
+            </div>
+        </div>
+    </div>
+    <div onclick="closeModal()" class="modal-bg"></div>
+    <header class="header">
+        <div class="container flex align--center">
+            <a href="#" class="header__mobile-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <nav class="header__menu flex">
+                <a class="link" href="#">MAC</a>
+                <a class="link" href="#">iPad</a>
+                <a class="link" href="#">iPhone</a>
+                <a class="link" href="#">Watch</a>
+                <a class="link" href="#">TV</a>
+            </nav>
+            <div class="header__contacts flex flex--column align--end">
+                <a href="tel:+77010195455">+7 (701) 019 54 55</a>
+                <a class="link link--light-gray bingc-action-open-passive-form" href="#">Заказать звонок</a>
+            </div>
+        </div>
+    </header>
+    <div class="header__mobile-menu">
+        <div class="links flex flex--column">
+            <a class="link" href="#">Mac</a>
+            <a class="link" href="#">iPad</a>
+            <a class="link" href="#">iPhone</a>
+            <a class="link" href="#">Watch</a>
+            <a class="link" href="#">TV</a>
+        </div>
+    </div>
+    <!--/.header-->
+    <main>
+        <img class="main__img" id="bg-1" src="img/bg-1.svg" alt="">
+        <div class="heading heading--block">
+            <div class="container flex flex--column">
+                <h1 class="heading__text">Поддержка и ремонт техники Apple в Алматы</h1>
+                <a class="link link--primary heading__sub-link bingc-action-open-passive-form" href="#"">Оставить заявку ></a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="devices flex flex--column align--center">
+                <h1 class="heading__text heading__text--min">Выберите свое устройство и менеджер службы поддержки свяжется с вами </h1>
+                <div class="devices__items flex justify--center align--center">
+                    <div class="devices__item flex flex--column align--center">
+                        <a class="link devices__link" href="#">
+                            <img class="devices__img" src="img/device-1.svg" alt="Iphone">
+                            <a class="link devices__link" href="#">iPhone</a>
+                        </a>
+                    </div>
+                    <div class="devices__item flex flex--column align--center">
+                        <a class="link devices__link" href="#">
+                            <img class="devices__img" src="img/device-2.svg" alt="MAC">
+                            <a class="link devices__link" href="#">MAC</a>
+                        </a>
+                    </div>
+                    <div class="devices__item flex flex--column align--center">
+                        <a class="link devices__link" href="#">
+                            <img class="devices__img" src="img/device-3.svg" alt="Ipod">
+                            <a class="link devices__link" href="#">Ipod</a>
+                        </a>
+                    </div>
+                    <div class="devices__item flex flex--column align--center">
+                        <a class="link devices__link" href="#">
+                            <img class="devices__img" src="img/device-4.svg" alt="Watch">
+                            <a class="link devices__link" href="#">Watch</a>
+                        </a>
+                    </div>
+                    <div class="devices__item flex flex--column align--center">
+                        <a class="link devices__link" href="#">
+                            <img class="devices__img" src="img/device-5.svg" alt="Music">
+                            <a class="link devices__link" href="#">Music</a>
+                        </a>
+                    </div>
+                    <div class="devices__item flex flex--column align--center">
+                        <a class="link devices__link" href="#">
+                            <img class="devices__img" src="img/device-6.svg" alt="TV">
+                            <a class="link devices__link" href="#">TV</a>
+                        </a>
+                    </div>
+                    <div class="devices__item flex flex--column align--center">
+                        <a class="link devices__link" href="#">
+                            <img class="devices__img" src="img/device-7.svg" alt="Apple ID">
+                            <a class="link devices__link" href="#">Apple ID</a>
+                        </a>
+                    </div>
+                    <div class="devices__item flex flex--column align--center">
+                        <a class="link devices__link" href="#">
+                            <img class="devices__img" src="img/device-8.svg" alt="AirPods">
+                            <a class="link devices__link" href="#">AirPods</a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="status-block flex flex--column">
+            <div class="border-img">
+                <img class="main__img" src="img/bg-2.svg" alt="">
+            </div>
+            <div class="container flex flex--column">
+                <div class="status">
+                    <div class="container flex flex--column">
+                        <div class="heading flex flex--column">
+                            <h1 class="heading__text">Узнайте статус своего заказа</h1>
+                            <a class="link link--primary heading__sub-link bingc-action-open-passive-form" href="#">Узнать статус заказа ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="upgrade">
+            <div class="container">
+                <div class="heading">
+                    <h1 class="heading__text">Официальная модернизация вашего устройства</h1>
+                    <div class="heading__descr">Узнайте больше о возможностях совершенствования своей техники Выберите свое устройство</div>
+                </div>
+                <div class="upgrade__items flex justify--center align--center">
+                    <div class="upgrade__item flex flex--column align--center justify--center">
+                        <img class="upgrade__img" src="img/upgrade-1.svg" alt="Macbook Air">
+                        <a class="link upgrade__link" href="#">Macbook Air</a>
+                    </div>
+                    <div class="upgrade__item flex flex--column align--center justify--center">
+                        <img class="upgrade__img" src="img/upgrade-2.svg" alt="Macbook Pro">
+                        <a class="link upgrade__link" href="#">Macbook Pro</a>
+                    </div>
+                    <div class="upgrade__item flex flex--column align--center justify--center">
+                        <img class="upgrade__img" src="img/upgrade-3.svg" alt="iMac">
+                        <a class="link upgrade__link" href="#">iMac</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="container">
+                <div class="heading">
+                    <h1 class="heading__text">Часто задаваемые вопросы и возможные проблемы</h1>
+                </div>
+                <div class="slider">
+                    <ol>
+                        <li class="slider__name flex flex--column">
+                            <div class="slider__name-btn flex flex--column">
+                                <span class="slider__name-text">iPhone не ловит сеть. Пишет «Нет сети» или «Поиск»</span>
+                                <button class="slider__button">+</button>
+                            </div>
+                            <ul class="slider__sub-text">
+                                <li>Для начала, необходимо выяснить, нет ли проблемы, связанной с оператором, предоставляющим связь, а так же возможность повреждения SIM-карты. Попытайтесь сбросить настройки самостоятельно. Перейдите в меню «Настройки» > «Основные» > «Сброс» > «Сбросить настройки сети». При этом сбрасываются сети Wi-Fi и пароли, настройки сотовой сети, а также параметры VPN и APN, которые использовались ранее. Если проблема не решилась, то возможно ….. Для того, чтобы точно определить проблему вы можете принести устройство на <a class="link link--primary link--underline link--small bingc-action-open-passive-form" href="#">бесплатную диагностику.</a></li>
+                            </ul>
+                        </li>
+                        <li class="slider__name flex flex--column">
+                            <div class="slider__name-btn flex flex--column">
+                                <span class="slider__name-text">iMac не включается?</span>
+                                <button class="slider__button">+</button>
+                            </div>
+                            <ul class="slider__sub-text">
+                                <li>Проверьте подключение устройства к электросети. Так же, возможно, что из строя вышла видеокарта.Или устройству необходима <a class="link link--primary link--underline link--small bingc-action-open-passive-form" href="#"> чистка и профилактика.</a></li>
+                            </ul>
+                        </li>
+                        <li class="slider__name flex flex--column">
+                            <div class="slider__name-btn flex flex--column">
+                                <span class="slider__name-text">Залили устройство Apple водой, что делать?</span>
+                                <button class="slider__button">+</button>
+                            </div>
+                            <ul class="slider__sub-text">
+                                <li>Если устройство работает, выключите его и не пытайтесь включать, т.к. при включении может произойти замыкание, после которого устройство будет сложнее восстановить. Определить степень «вреда» может только специалист сервисного центра. <a class="link link--primary link--underline link--small bingc-action-open-passive-form" href="#">Запишитесь на бесплатную диагностику.</a></li>
+                            </ul>
+                        </li>
+                        <li class="slider__name flex flex--column">
+                            <div class="slider__name-btn flex flex--column">
+                                <span class="slider__name-text">Случайная покупка в AppStore, как вернуть деньги</span>
+                                <button class="slider__button">+</button>
+                            </div>
+                            <ul class="slider__sub-text">
+                                <li>Если вы совершили случайную покупку через AppStore и с её момента прошло не более 14 дней, <a class="link link--primary link--underline link--small bingc-action-open-passive-form" href="#">заполните эту форму</a> и сотрудниче службы поддержки свяжется с вами для возврата средств.</li>
+                            </ul>
+                        </li>
+                        <li class="slider__name flex flex--column">
+                            <div class="slider__name-btn flex flex--column">
+                                <span class="slider__name-text">Заблокировался iCloud? Какие документы нужны для разблокировки?</span>
+                                <button class="slider__button">+</button>
+                            </div>
+                            <ul class="slider__sub-text">
+                                <li>Вам необходимо прийти в сервисный центр с коробкой оттелефона, документами и с фискальным чеком, подтверждающий покупку.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <img class="main__img main__img-2" src="img/bg-3.svg" alt="">
+        </div>
+        <div class="price">
+            <div class="container flex flex--column align--center">
+                <div class="heading">
+                    <h1 class="heading__text">Примеры и стоимость ремонта через сервисный центр Apple</h1>
+                </div>
+                <div class="price__items flex justify--center">
+                    <div class="price__item flex flex--column justify--center align--center">
+                        <img class="price__img" src="img/price-1.svg" alt="">
+                        <div class="heading">
+                            <h1 class="heading__text heading__text--normal">Причина обращения:</h1>
+                            <div class="heading__descr">Поврежден экран на Iphone 5SE</div>
+                        </div>
+                        <div class="heading">
+                            <h1 class="heading__text heading__text--normal">Оказанные услуги:</h1>
+                            <div class="heading__descr">Профилактическая чистка динамиков и микрофона <span class="text--gray">(Бесплатно)</span></div>
+                            <div class="heading__descr">Замена экрана <span class="text--gray">(12 000 тг.)</span></div>
+                        </div>
+                    </div>
+                    <div class="price__item flex flex--column justify--center align--center">
+                        <img class="price__img" src="img/price-2.svg" alt="">
+                        <div class="heading">
+                            <h1 class="heading__text heading__text--normal">Причина обращения:</h1>
+                            <div class="heading__descr">Macbook Air греется и выключается при работе</div>
+                        </div>
+                        <div class="heading">
+                            <h1 class="heading__text heading__text--normal">Оказанные услуги:</h1>
+                            <div class="heading__descr">Профилактическая чистка динамиков и микрофона <span class="text--gray">(5000 тг.)</span></div>
+                        </div>
+                    </div>
+                    <div class="price__item flex flex--column justify--center align--center">
+                        <img class="price__img" src="img/price-1.svg" alt="">
+                        <div class="heading">
+                            <h1 class="heading__text heading__text--normal">Причина обращения:</h1>
+                            <div class="heading__descr">Поврежден экран на Iphone 5SE</div>
+                        </div>
+                        <div class="heading">
+                            <h1 class="heading__text heading__text--normal">Оказанные услуги:</h1>
+                            <div class="heading__descr">Профилактическая чистка динамиков и микрофона <span class="text--gray">(Бесплатно)</span></div>
+                            <div class="heading__descr">Замена экрана <span class="text--gray">(12 000 тг.)</span></div>
+                        </div>
+                    </div>
+                    <div class="price__item flex flex--column justify--center align--center">
+                        <img class="price__img" src="img/price-1.svg" alt="">
+                        <div class="heading">
+                            <h1 class="heading__text heading__text--normal">Причина обращения:</h1>
+                            <div class="heading__descr">Поврежден экран на Iphone 5SE</div>
+                        </div>
+                        <div class="heading">
+                            <h1 class="heading__text heading__text--normal">Оказанные услуги:</h1>
+                            <div class="heading__descr">Профилактическая чистка динамиков и микрофона <span class="text--gray">(Бесплатно)</span></div>
+                            <div class="heading__descr">Замена экрана <span class="text--gray">(12 000 тг.)</span></div>
+                        </div>
+                    </div>
+                    <div class="price__item flex flex--column justify--center align--center">
+                        <img class="price__img" src="img/price-1.svg" alt="">
+                        <div class="heading">
+                            <h1 class="heading__text heading__text--normal">Причина обращения:</h1>
+                            <div class="heading__descr">Поврежден экран на Iphone 5SE</div>
+                        </div>
+                        <div class="heading">
+                            <h1 class="heading__text heading__text--normal">Оказанные услуги:</h1>
+                            <div class="heading__descr">Профилактическая чистка динамиков и микрофона <span class="text--gray">(Бесплатно)</span></div>
+                            <div class="heading__descr">Замена экрана <span class="text--gray">(12 000 тг.)</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="price__buttons flex">
+                    <button id="price-prev" class="slider__button"><</button>
+                    <button id="price-next" class="slider__button">></button>
+                </div>
+            </div>
+        </div>
+        <div class="block-form">
+            <div class="heading">
+                <div class="container flex flex--column">
+                    <h1 class="heading__text heading__text--normal">Если вы совершили случайную покупку в AppStore специалисты службы поддержки помогут вернуть вам деньги, просто заполните форму</h1>
+                    <form class="block-form__form flex flex--column align--center" action="#">
+                        <a class="link link--primary false" onclick="openModal(3)" href="#">Заполнить форму</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="questions">
+            <div class="container">
+                <div class="heading">
+                    <h1 class="headinkg heading__text">Есть вопросы<br> по эскплуатации техники Apple?</h1>
+                    <div class="heading__descr">Cвяжитесь со службой поддержки</div>
+                    <a class="link link--primary bingc-action-open-passive-form" href="#">Задать вопрос ></a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer class="footer flex flex--column">
+        <div class="cart">
+            <a class="dg-widget-link" href="http://2gis.kz/almaty/firm/70000001031732363/center/76.91270828247072,43.24729715646597/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Алматы</a><div class="dg-widget-link"><a href="http://2gis.kz/almaty/firm/70000001031732363/photos/70000001031732363/center/76.91270828247072,43.24729715646597/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии компании</a></div><div class="dg-widget-link"><a href="http://2gis.kz/almaty/center/76.912712,43.246719/zoom/16/routeTab/rsType/bus/to/76.912712,43.246719╎ABC-service, центр по ремонту мобильных телефонов?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до ABC-service, центр по ремонту мобильных телефонов</a></div><script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script><script charset="utf-8">new DGWidgetLoader({"width":640,"height":600,"borderColor":"#a3a3a3","pos":{"lat":43.24729715646597,"lon":76.91270828247072,"zoom":16},"opt":{"city":"almaty"},"org":[{"id":"70000001031732363"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
+        </div>
+        <div class="footer__contacts footer__contacts-all">
+            <div class="container">
+                <div class="footer__contacts">
+                    <a class="footer__contacts-link flex align--center" href="tel:+77010195455"><img class="footer__contacts-img" src="img/tel.svg" alt="Telephone">+7 (701) 019 54 55</a>
+                    <a class="footer__contacts-link flex align--center" href="#"><img class="footer__contacts-img" src="img/map.svg" alt="Telephone">г. Алматы, ул. Байзакова 222</a>
+                </div>
+                <div class="footer__private">
+                    <span class="text--gray">«Данный сайт носит исключительно информационный характер, материалы, размещенные на сайте — не являются публичной офертой</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript">  (function(d, w, s) { var widgetHash = 'quxtp9u4fmkjitij94dy', gcw = d.createElement(s); gcw.type = 'text/javascript'; gcw.async = true; gcw.src = '//widgets.binotel.com/getcall/widgets/'+ widgetHash +'.js'; var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(gcw, sn);  })(document, window, 'script');</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="js/script.js"></script>
+    <script type="text/javascript">
+    (function() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript'; script.async = true;
+        script.src = '//remonline.ru/static/js/remonline-widget.js';
+        document.getElementsByTagName('head')[0].appendChild(script);
+    })();
+    </script>
+    </body>
+</html>
