@@ -455,6 +455,23 @@ main{
 .main__img-2{
     height: 500px;
 }
+.modal-remonline {
+    width: 100% !important;
+    height: 100% !important;
+    position: fixed;
+    display: none;
+    top: 45%;
+    left: 41%;
+    overflow: hidden !important;
+    max-width: 342px !important;
+    max-height: 168px !important;
+    z-index: 1000;
+}
+.bg-color {
+    width: 30px !important;
+    height: 30px !important;
+    background: var(--dark-gray) !important;
+}
 /* FORM */
 .block-form{
     background: var(--dark-gray);
@@ -717,7 +734,7 @@ body.open{
         margin-bottom: 10px;
     }
     .modal-3 .block-form__form .input{
-        width: 60%;
+        width: 70%;
     }
 }
 @media(max-width:935px){
@@ -731,7 +748,7 @@ body.open{
         width: 100%;
     }
     .modal{
-        max-height:100%;
+        max-height:340px;
     }
 }
 @media(min-width:380px){
@@ -857,6 +874,9 @@ body.open{
     }
     .header__menu{
         display: none;
+    }
+    .modal {
+        width: 90% !important;
     }
 }
 @media(min-width:768px){
@@ -1399,7 +1419,7 @@ body.open{
         margin-top: 0;
     }
 }
-@media(max-height:755px){
+@media screen and (max-height:755px){
     .modal__img{
         height: auto;
     }

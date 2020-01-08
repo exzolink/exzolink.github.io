@@ -34,3 +34,11 @@ function closeModal(){
 $(".bingc-action-open-passive-form, .false").click(function(e){
     e.preventDefault()
 })
+$(function(){
+    $('.remonline-form').click(function(e){
+        e.preventDefault();
+            $("body, .modal-bg, .modal-9").addClass("open");
+        $('.modal-remonline, .modal-bg, .modal-9, body').addClass("open");
+    });
+});
+
