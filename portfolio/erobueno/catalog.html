@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Сайт от Квинова - Erabueno</title>
+
+	<meta name="description" content="Erabueno - Онлайн магазин">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- FAVICON -->
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	
+	<!-- LINKS -->
+	<link rel="stylesheet" href="css/header-mobile.css">
+	<link rel="stylesheet" href="css/header-tablet.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
+
+</head>
+<body>
+
+	<!-- Here write code -->
+	<div class="catalog-page">	
+		<div class="container p-md-0">
+
+			<div class="col-12">
+				<div class="row">
+					<ul class="site-tree">
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">Каталог</a></li>
+						<li><a href="#">Раздел каталога</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+
+				<div class="col-md-12 col-lg-3">
+					<div class="row row-catalog-filter">
+						<div class="catalog-filter">
+							<div class="catalog-filter__title-block">
+								<span class="catalog-filter__title">Раздел каталога</span>
+								<button class="catalog-filter__button">X</button>
+							</div>
+							<div class="catalog-filter__container">
+
+								<ul class="catalog-filter__nav">
+									<li>
+										<a href="#" class="child-name">Анальные игрушки</a>
+										<ul class="child">
+											<li><a href="#">Один</a></li>
+											<li><a href="#">Один</a></li>
+											<li><a href="#">Один</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" class="child-name">Вибраторы</a>
+										<ul class="child">
+											<li><a href="#">Один</a></li>
+											<li><a href="#">Один</a></li>
+											<li><a href="#">Один</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" class="child-name">Секс-товары для женщин</a>
+										<ul class="child">
+											<li><a href="#">Один</a></li>
+											<li><a href="#">Один</a></li>
+											<li><a href="#">Один</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" class="child-name">Филлоиметаторы</a>
+										<ul class="child">
+											<li><a href="#">Один</a></li>
+											<li><a href="#">Один</a></li>
+											<li><a href="#">Один</a></li>
+										</ul>
+									</li>
+								</ul>
+								<div class="catalog-filter__ranges">
+									<div class="catalog-filter__ranges-container">
+										<div class="catalog-filter__ranges__range">
+											<span class="catalog-filter__title-name">Розничная цена</span>
+											<div class="slider-range" id="slider-range1"></div>
+											<div class="slider-range__block">
+												<input class="range-input" type="text" id="amount1" readonly>
+												<input class="range-input text-right" type="text" id="amount2" readonly>
+											</div>
+											<div class="range-popup">
+												<span>Найдено 24 товара:</span>
+												<a href="#">показать</a>
+											</div>
+
+										</div>
+
+										<div class="catalog-filter__ranges__range">
+											<span class="catalog-filter__title-name">Диаметр</span>
+											<div class="slider-range" id="slider-range2"></div>
+											<div class="slider-range__block">
+												<input class="range-input" type="text" id="amount3" readonly>
+												<input class="range-input text-right" type="text" id="amount4" readonly>
+											</div>
+										</div>
+
+										<div class="catalog-filter__ranges__range">
+											<span class="catalog-filter__title-name">Длина</span>
+											<div class="slider-range" id="slider-range3"></div>
+											<div class="slider-range__block">
+												<input class="range-input" type="text" id="amount5" readonly>
+												<input class="range-input text-right" type="text" id="amount6" readonly>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="catalog-filter__brand">
+									<span class="catalog-filter__title-name">Производитель:</span>
+									<div class="select">
+										<select name="select-brand">
+											<option value="1">Peterson</option>
+											<option value="2">Docjohnson</option>
+										</select>
+									</div>
+								</div>
+								<div class="catalog-filter__colors">
+									<span class="catalog-filter__title-name">Выбор цвета:</span>
+									<div class="catalog-filter__colors-block">
+										<button class="catalog-filter__colors__color color1 color-active"></button>
+										<button class="catalog-filter__colors__color color2"></button>
+										<button class="catalog-filter__colors__color color3"></button>
+										<button class="catalog-filter__colors__color color4"></button>
+										<button class="catalog-filter__colors__color color5"></button>
+										<button class="catalog-filter__colors__color color6"></button>
+										<button class="catalog-filter__colors__color color7"></button>
+										<button class="catalog-filter__colors__color color8"></button>
+									</div>
+								</div>
+								<div class="catalog-filter__choose">
+									<span class="catalog-filter__title-name">Фильтр (выбрать несколько)</span>
+									<div class="catalog-filter__choose-block">
+										<form action="#">
+											<label><input class="default-checkbox" type="checkbox" name="#">Вариант выбора 1</label>
+											<label><input class="default-checkbox" type="checkbox" name="#">Вариант выбора 2</label>
+											<label><input class="default-checkbox" type="checkbox" name="#">Вариант выбора 3</label>
+										</form>
+									</div>
+								</div>
+								<div class="catalog-filter__choose">
+									<span class="catalog-filter__title-name">Фильтр (выбрать один)</span>
+									<div class="catalog-filter__choose-block">
+										<form action="#">
+											<label><input class="default-radio" type="radio" name="#">Вариант выбора 1</label>
+											<label><input class="default-radio" type="radio" name="#">Вариант выбора 2</label>
+											<label><input class="default-radio" type="radio" name="#">Вариант выбора 3</label>
+										</form>
+									</div>
+								</div>
+								<div class="catalog-filter__size">
+									<span class="catalog-filter__title-name">Размер</span>
+									<div class="catalog-filter__size-block">
+										<button class="catalog-filter__size-block__button">L</button>
+										<button class="catalog-filter__size-block__button">XL</button>
+										<button class="catalog-filter__size-block__button">XXL</button>
+										<button class="catalog-filter__size-block__button">XXXl</button>
+										<button class="catalog-filter__size-block__button">XXXXL</button>
+									</div>
+								</div>
+								<div class="catalog-filter__buttons">
+									<button class="catalog-filter__buttons-submit">Показать</button>
+									<button class="catalog-filter__buttons-clear">Сбросить</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12 col-lg-9">
+					<span class="catalog-description">Место для небольшого текстового блока для заманухи</span>
+
+					<div class="catalog-sort">
+						<div class="catalog-sort__main">
+							<span>Сортировать:</span>
+							<div class="select">
+								<select name="catalog-sort__main-sort">
+									<option value="1">Возрастание цены</option>
+									<option value="2">Уменьшение цены</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="catalog-sort__buttons">
+							<button class="catalog-sort__buttons-blocks"></button>
+							<button class="catalog-sort__buttons-list sort__button-active"></button>
+						</div>
+
+						<div class="catalog-sort__numitems">
+							<span>На странице:</span>
+							<div class="select">
+								<select name="catalog-sort__numitems-filter">
+									<option value="1">20</option>
+									<option value="2">30</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="catalog-pagination">
+							<ul class="catalog-pagination__list">
+								<li><a class="catalog-pagination__button" href="#">1</a></li>
+								<hr>
+								<li><a class="catalog-pagination__button" href="#">7</a></li>
+								<li><a class="catalog-pagination__button catalog-pagination__button-active" href="#">8</a></li>
+								<li><a class="catalog-pagination__button" href="#">9</a></li>
+								<hr>
+								<li><a class="catalog-pagination__button" href="#">22</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="catalog-items">
+
+						<div class="catalog-items__item">
+							<div class="catalog-items__item-image">
+								<a class="item-image2" href="#" alt="item-image"></a>
+								<div class="catalog-items__item-hover">
+									<button class="catalog-items__item-hover-search"></button>
+								</div>
+							</div>
+							<div class="catalog-items__item-content">
+								<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+								<div class="catalog-items__item-content__prices">
+									<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+									<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+								</div>
+								<div class="catalog-items__item-content__buttons">
+									<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+									<button class="catalog-items__item-content__buttons__analitics"></button>											
+									<button class="catalog-items__item-content__buttons__favourite"></button>											
+								</div>
+							</div>
+						</div>
+
+						<div class="catalog-items__item">
+							<div class="catalog-items__item-image">
+								<a class="item-image4" href="#" alt="item-image"></a>
+								<div class="catalog-items__item-hover">
+									<button class="catalog-items__item-hover-search"></button>
+								</div>
+							</div>
+							<div class="catalog-items__item-content">
+								<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+								<div class="catalog-items__item-content__prices">
+									<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+									<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+								</div>
+								<div class="catalog-items__item-content__buttons">
+									<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+									<button class="catalog-items__item-content__buttons__analitics"></button>											
+									<button class="catalog-items__item-content__buttons__favourite"></button>											
+								</div>
+							</div>
+						</div>
+
+						<div class="catalog-items__item">
+							<div class="catalog-items__banner">
+
+								<div class="banner_bg banner1"></div>
+
+								<div class="catalog-items__banner-container">
+									<div class="catalog-items__banner-text">
+										<span class="catalog-items__banner-title">Статья</span>
+										<span class="catalog-items__banner-text__name">Как сохранить пульт после сильного падения</span>
+									</div>
+									<a href="#" class="catalog-items__banner-text__readmore">Читать полностью</a>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="catalog-items__item">
+							<div class="catalog-items__item-image">
+								<a class="item-image1" href="#" alt="item-image"></a>
+								<div class="catalog-items__item-hover">
+									<button class="catalog-items__item-hover-search"></button>
+								</div>
+							</div>
+							<div class="catalog-items__item-content">
+								<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+								<div class="catalog-items__item-content__prices">
+									<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+									<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+								</div>
+								<div class="catalog-items__item-content__buttons">
+									<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+									<button class="catalog-items__item-content__buttons__analitics"></button>											
+									<button class="catalog-items__item-content__buttons__favourite"></button>											
+								</div>
+							</div>
+						</div>
+
+						<div class="catalog-items__item">
+							<div class="catalog-items__item-image">
+								<a class="item-image3" href="#" alt="item-image"></a>
+								<div class="catalog-items__item-hover">
+									<button class="catalog-items__item-hover-search"></button>
+								</div>
+							</div>
+							<div class="catalog-items__item-content">
+								<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+								<div class="catalog-items__item-content__prices">
+									<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+									<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+								</div>
+								<div class="catalog-items__item-content__buttons">
+									<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+									<button class="catalog-items__item-content__buttons__analitics"></button>											
+									<button class="catalog-items__item-content__buttons__favourite"></button>											
+								</div>
+							</div>
+						</div>
+
+						<div class="catalog-items__item">
+							<div class="catalog-items__item-image">
+								<a class="item-image4" href="#" alt="item-image"></a>
+								<div class="catalog-items__item-hover">
+									<button class="catalog-items__item-hover-search"></button>
+								</div>
+							</div>
+							<div class="catalog-items__item-content">
+								<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+								<div class="catalog-items__item-content__prices">
+									<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+									<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+								</div>
+								<div class="catalog-items__item-content__buttons">
+									<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+									<button class="catalog-items__item-content__buttons__analitics"></button>											
+									<button class="catalog-items__item-content__buttons__favourite"></button>											
+								</div>
+							</div>
+						</div>
+
+						<div class="catalog-items__item">
+							<div class="catalog-items__item-image">
+								<a class="item-image5" href="#" alt="item-image"></a>
+								<div class="catalog-items__item-hover">
+									<button class="catalog-items__item-hover-search"></button>
+								</div>
+							</div>
+							<div class="catalog-items__item-content">
+								<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+								<div class="catalog-items__item-content__prices">
+									<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+									<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+								</div>
+								<div class="catalog-items__item-content__buttons">
+									<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+									<button class="catalog-items__item-content__buttons__analitics"></button>											
+									<button class="catalog-items__item-content__buttons__favourite"></button>											
+								</div>
+							</div>
+						</div>
+
+						<div class="catalog-items__item">
+							<div class="catalog-items__item-image">
+								<a class="item-image4" href="#" alt="item-image"></a>
+								<div class="catalog-items__item-hover">
+									<button class="catalog-items__item-hover-search"></button>
+								</div>
+							</div>
+							<div class="catalog-items__item-content">
+								<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+								<div class="catalog-items__item-content__prices">
+									<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+									<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+								</div>
+								<div class="catalog-items__item-content__buttons">
+									<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+									<button class="catalog-items__item-content__buttons__analitics"></button>											
+									<button class="catalog-items__item-content__buttons__favourite"></button>											
+								</div>
+							</div>
+						</div>
+						
+						<div class="catalog-items__item">
+							<div class="catalog-items__item-image">
+								<a class="item-image4" href="#" alt="item-image"></a>
+								<div class="catalog-items__item-hover">
+									<button class="catalog-items__item-hover-search"></button>
+								</div>
+							</div>
+							<div class="catalog-items__item-content">
+								<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+								<div class="catalog-items__item-content__prices">
+									<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+									<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+								</div>
+								<div class="catalog-items__item-content__buttons">
+									<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+									<button class="catalog-items__item-content__buttons__analitics"></button>											
+									<button class="catalog-items__item-content__buttons__favourite"></button>											
+								</div>
+							</div>
+						</div>
+
+						<div class="catalog-items__item">
+							<div class="catalog-items__item-image">
+								<a class="item-image4" href="#" alt="item-image"></a>
+								<div class="catalog-items__item-hover">
+									<button class="catalog-items__item-hover-search"></button>
+								</div>
+							</div>
+							<div class="catalog-items__item-content">
+								<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+								<div class="catalog-items__item-content__prices">
+									<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+									<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+								</div>
+								<div class="catalog-items__item-content__buttons">
+									<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+									<button class="catalog-items__item-content__buttons__analitics"></button>											
+									<button class="catalog-items__item-content__buttons__favourite"></button>											
+								</div>
+							</div>
+						</div>
+
+						<div class="catalog-items__item">
+							<div class="catalog-items__item-image">
+								<a class="item-image4" href="#" alt="item-image"></a>
+								<div class="catalog-items__item-hover">
+									<button class="catalog-items__item-hover-search"></button>
+								</div>
+							</div>
+							<div class="catalog-items__item-content">
+								<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+								<div class="catalog-items__item-content__prices">
+									<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+									<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+								</div>
+								<div class="catalog-items__item-content__buttons">
+									<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+									<button class="catalog-items__item-content__buttons__analitics"></button>											
+									<button class="catalog-items__item-content__buttons__favourite"></button>											
+								</div>
+							</div>
+						</div>
+
+						<div class="catalog-items__item">
+							<div class="catalog-items__item-image">
+								<a class="item-image4" href="#" alt="item-image"></a>
+								<div class="catalog-items__item-hover">
+									<button class="catalog-items__item-hover-search"></button>
+								</div>
+							</div>
+							<div class="catalog-items__item-content">
+								<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+								<div class="catalog-items__item-content__prices">
+									<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+									<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+								</div>
+								<div class="catalog-items__item-content__buttons">
+									<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+									<button class="catalog-items__item-content__buttons__analitics"></button>											
+									<button class="catalog-items__item-content__buttons__favourite"></button>											
+								</div>
+							</div>
+						</div>
+						
+						<div class="catalog-items__item second-banner">
+							<div class="catalog-items__banner">
+								<div class="banner_bg banner2"></div>
+								<div class="catalog-items__banner-container">
+									<div class="catalog-items__banner-text">
+										<span class="catalog-items__banner-title">Статья</span>
+										<span class="catalog-items__banner-text__name">Как сохранить пульт после сильного падения</span>
+									</div>
+									<a href="#" class="catalog-items__banner-text__readmore">Читать полностью</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="catalog-items__item">
+							<div class="catalog-items__item-image">
+								<a class="item-image4" href="#" alt="item-image"></a>
+								<div class="catalog-items__item-hover">
+									<button class="catalog-items__item-hover-search"></button>
+								</div>
+							</div>
+							<div class="catalog-items__item-content">
+								<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+								<div class="catalog-items__item-content__prices">
+									<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+									<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+								</div>
+								<div class="catalog-items__item-content__buttons">
+									<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+									<button class="catalog-items__item-content__buttons__analitics"></button>											
+									<button class="catalog-items__item-content__buttons__favourite"></button>											
+								</div>
+							</div>
+						</div>
+
+						<div class="catalog-items__item">
+							<div class="catalog-items__item-image">
+								<a class="item-image1" href="#" alt="item-image"></a>
+								<div class="catalog-items__item-hover">
+									<button class="catalog-items__item-hover-search"></button>
+								</div>
+							</div>
+							<div class="catalog-items__item-content">
+								<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+								<div class="catalog-items__item-content__prices">
+									<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+									<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+								</div>
+								<div class="catalog-items__item-content__buttons">
+									<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+									<button class="catalog-items__item-content__buttons__analitics"></button>											
+									<button class="catalog-items__item-content__buttons__favourite"></button>											
+								</div>
+							</div>
+						</div>
+						
+						<div class="catalog-items__container-big">
+							<div class="catalog-items__container">
+								<div class="catalog-items__item">
+									<div class="catalog-items__item-image">
+										<a class="item-image1" href="#" alt="item-image"></a>
+										<div class="catalog-items__item-hover">
+											<button class="catalog-items__item-hover-search"></button>
+										</div>
+									</div>
+									<div class="catalog-items__item-content">
+										<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+										<div class="catalog-items__item-content__prices">
+											<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+											<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+										</div>
+										<div class="catalog-items__item-content__buttons">
+											<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+											<button class="catalog-items__item-content__buttons__analitics"></button>											
+											<button class="catalog-items__item-content__buttons__favourite"></button>											
+										</div>
+									</div>
+								</div>
+
+								<div class="catalog-items__item">
+									<div class="catalog-items__item-image">
+										<a class="item-image1" href="#" alt="item-image"></a>
+										<div class="catalog-items__item-hover">
+											<button class="catalog-items__item-hover-search"></button>
+										</div>
+									</div>
+									<div class="catalog-items__item-content">
+										<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+										<div class="catalog-items__item-content__prices">
+											<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+											<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+										</div>
+										<div class="catalog-items__item-content__buttons">
+											<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+											<button class="catalog-items__item-content__buttons__analitics"></button>											
+											<button class="catalog-items__item-content__buttons__favourite"></button>											
+										</div>
+									</div>
+								</div>
+
+								<div class="catalog-items__item">
+									<div class="catalog-items__item-image">
+										<a class="item-image1" href="#" alt="item-image"></a>
+										<div class="catalog-items__item-hover">
+											<button class="catalog-items__item-hover-search"></button>
+										</div>
+									</div>
+									<div class="catalog-items__item-content">
+										<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+										<div class="catalog-items__item-content__prices">
+											<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+											<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+										</div>
+										<div class="catalog-items__item-content__buttons">
+											<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+											<button class="catalog-items__item-content__buttons__analitics"></button>											
+											<button class="catalog-items__item-content__buttons__favourite"></button>											
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="catalog-items__container">
+								<div class="catalog-items__item">
+									<div class="catalog-items__item-image">
+										<a class="item-image1" href="#" alt="item-image"></a>
+										<div class="catalog-items__item-hover">
+											<button class="catalog-items__item-hover-search"></button>
+										</div>
+									</div>
+									<div class="catalog-items__item-content">
+										<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+										<div class="catalog-items__item-content__prices">
+											<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+											<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+										</div>
+										<div class="catalog-items__item-content__buttons">
+											<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+											<button class="catalog-items__item-content__buttons__analitics"></button>											
+											<button class="catalog-items__item-content__buttons__favourite"></button>											
+										</div>
+									</div>
+								</div>
+
+								<div class="catalog-items__item">
+									<div class="catalog-items__item-image">
+										<a class="item-image1" href="#" alt="item-image"></a>
+										<div class="catalog-items__item-hover">
+											<button class="catalog-items__item-hover-search"></button>
+										</div>
+									</div>
+									<div class="catalog-items__item-content">
+										<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+										<div class="catalog-items__item-content__prices">
+											<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+											<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+										</div>
+										<div class="catalog-items__item-content__buttons">
+											<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+											<button class="catalog-items__item-content__buttons__analitics"></button>											
+											<button class="catalog-items__item-content__buttons__favourite"></button>											
+										</div>
+									</div>
+								</div>
+
+								<div class="catalog-items__item">
+									<div class="catalog-items__item-image">
+										<a class="item-image1" href="#" alt="item-image"></a>
+										<div class="catalog-items__item-hover">
+											<button class="catalog-items__item-hover-search"></button>
+										</div>
+									</div>
+									<div class="catalog-items__item-content">
+										<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+										<div class="catalog-items__item-content__prices">
+											<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+											<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+										</div>
+										<div class="catalog-items__item-content__buttons">
+											<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+											<button class="catalog-items__item-content__buttons__analitics"></button>											
+											<button class="catalog-items__item-content__buttons__favourite"></button>											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="catalog-items__container-banner">
+							<div class="catalog-items__banner">
+								<div class="banner_bg banner3"></div>
+								<div class="catalog-items__banner-container">
+									<div class="catalog-items__banner-text">
+										<span class="catalog-items__banner-title">Статья</span>
+										<span class="catalog-items__banner-text__name">Как сохранить пульт после сильного падения</span>
+									</div>
+									<a href="#" class="catalog-items__banner-text__readmore">Читать полностью</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="catalog-items__item">
+							<div class="catalog-items__item-image">
+								<a class="item-image1" href="#" alt="item-image"></a>
+								<div class="catalog-items__item-hover">
+									<button class="catalog-items__item-hover-search"></button>
+								</div>
+							</div>
+							<div class="catalog-items__item-content">
+								<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+								<div class="catalog-items__item-content__prices">
+									<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+									<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+								</div>
+								<div class="catalog-items__item-content__buttons">
+									<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+									<button class="catalog-items__item-content__buttons__analitics"></button>											
+									<button class="catalog-items__item-content__buttons__favourite"></button>											
+								</div>
+							</div>
+						</div>
+
+						<div class="catalog-items__item">
+							<div class="catalog-items__item-image">
+								<a class="item-image1" href="#" alt="item-image"></a>
+								<div class="catalog-items__item-hover">
+									<button class="catalog-items__item-hover-search"></button>
+								</div>
+							</div>
+							<div class="catalog-items__item-content">
+								<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+								<div class="catalog-items__item-content__prices">
+									<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+									<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+								</div>
+								<div class="catalog-items__item-content__buttons">
+									<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+									<button class="catalog-items__item-content__buttons__analitics"></button>											
+									<button class="catalog-items__item-content__buttons__favourite"></button>											
+								</div>
+							</div>
+						</div>
+
+						<div class="catalog-items__item">
+							<div class="catalog-items__item-image">
+								<a class="item-image1" href="#" alt="item-image"></a>
+								<div class="catalog-items__item-hover">
+									<button class="catalog-items__item-hover-search"></button>
+								</div>
+							</div>
+							<div class="catalog-items__item-content">
+								<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+								<div class="catalog-items__item-content__prices">
+									<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+									<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+								</div>
+								<div class="catalog-items__item-content__buttons">
+									<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+									<button class="catalog-items__item-content__buttons__analitics"></button>											
+									<button class="catalog-items__item-content__buttons__favourite"></button>											
+								</div>
+							</div>
+						</div>
+
+						<div class="catalog-items__item">
+							<div class="catalog-items__item-image">
+								<a class="item-image1" href="#" alt="item-image"></a>
+								<div class="catalog-items__item-hover">
+									<button class="catalog-items__item-hover-search"></button>
+								</div>
+							</div>
+							<div class="catalog-items__item-content">
+								<span class="catalog-items__item-content__name">Название товара на две строки рыбка не рыбка</span>
+								<div class="catalog-items__item-content__prices">
+									<span class="catalog-items__item-content__prices__price-old">12 222 руб</span>
+									<span class="catalog-items__item-content__prices__price">14 444 руб</span>
+								</div>
+								<div class="catalog-items__item-content__buttons">
+									<button class="catalog-items__item-content__buttons__basket">В корзину</button>											
+									<button class="catalog-items__item-content__buttons__analitics"></button>											
+									<button class="catalog-items__item-content__buttons__favourite"></button>											
+								</div>
+							</div>
+						</div>
+
+						<div class="catalog-items__item fourth-banner">
+							<div class="catalog-items__banner">
+								<div class="banner_bg banner4"></div>
+								<div class="catalog-items__banner-container">
+									<div class="catalog-items__banner-text">
+										<span class="catalog-items__banner-title">Статья</span>
+										<span class="catalog-items__banner-text__name">Как сохранить пульт после сильного падения</span>
+									</div>
+									<a href="#" class="catalog-items__banner-text__readmore">Читать полностью</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<p class="catalog-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<div class="catalog-button__block">
+						<button class="catalog-button-load">Загрузить ещё товары</button>
+					</div>
+
+					<div class="catalog-pagination footer-pagination">
+						<ul class="catalog-pagination__list">
+							<li><a class="catalog-pagination__button" href="#">1</a></li>
+							<hr>
+							<li><a class="catalog-pagination__button" href="#">7</a></li>
+							<li><a class="catalog-pagination__button catalog-pagination__button-active" href="#">8</a></li>
+							<li><a class="catalog-pagination__button" href="#">9</a></li>
+							<hr>
+							<li><a class="catalog-pagination__button" href="#">22</a></li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script
+	src="https://code.jquery.com/jquery-3.4.1.js"
+	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	crossorigin="anonymous">
+</script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/interactive.js"></script>
+
+</body>
+</html>

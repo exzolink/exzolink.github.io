@@ -1,0 +1,308 @@
+@media screen and (max-width: 1169px) {
+	.logo-btn {
+		display: block;
+	}
+	.burger-btn {
+		display: block;
+		z-index: 1000;
+	}
+	.registration {
+		display: none;
+	}
+	.header-logo {
+		display: none;
+	}
+	.sub-header {
+		display: none;
+	}
+	.hide-block {
+		display: none;
+	}
+	.info {
+		display: none;
+	}
+	.logo-img {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.contact-block {
+		margin-right: 5px;
+	}
+	.basket-icon {
+		height: 40px;
+	}
+	.search {
+		margin-right: 10px;
+		max-width: 420px;
+	}
+	.basket {
+		margin-left: 0;
+		position: static;
+		right: 0;
+	}
+	.first-bar {
+		margin-bottom: 15px;
+		padding-right: 0;
+	}
+	.nav-link:first-child {
+		padding-left: 15px;
+	}
+	.socials {
+		margin-right: 0;
+	}
+	.header {
+		border: none;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin-top: 0;
+		padding-top: 0px;
+		background-color: #FDF0E8;
+		z-index: 9999;
+		padding-bottom: 0;
+	}
+	.nav-link {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.nav-link:first-child {
+		padding-left: 0;
+	}
+	.basket-popup {
+		right: 5%;
+	}
+	.basket-items {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		margin-top: 10px;
+	}
+	.menu-mobile {
+		z-index: 3000;
+		background-color: #fbfbfb;
+		width: 100%;
+	}
+	.close-btn {
+		padding-right: 15px;
+		padding-top: 15px;
+		text-align: right;
+	}
+	.cats-mobile {
+		display: flex;
+		flex-direction: column;
+		float: left;
+		padding-left: 15px;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.category {
+		float: left;
+		width: max-content;
+		font-size: 20px;
+		color: #7f5c47;
+		margin-bottom: 10px;
+		margin-left: 0;
+		margin-right: auto;
+	}
+	.female, .male {
+		margin-left: 10px;
+	}
+	.para {
+		margin-left: 4px;
+	}
+	.mokup {
+		margin-left: 9px;
+	}
+	.male-icon, .female-icon {
+		padding-left: 8px;
+	}
+	.mokup-icon {
+		margin-left: 8px;
+	}
+	.more-info {
+		display: inline-flex;
+		flex-direction: column;
+		width: 95%;
+		margin-left: 10px;
+		margin-right: 10px;
+		padding-top: 20px;
+		border-top: 1px solid #fcefe8;
+	}
+	.promo {
+		margin-left: 10px;
+		margin-bottom: 10px;
+	}
+	.navig-mobile {
+		display: flex;
+		flex-wrap: wrap;
+		width: auto;
+		margin-top: 10px;
+		margin-left: 10px;
+	}
+	.nav-mobile {
+		line-height: 30px;
+	}
+	.contact-mobile {
+		display: flex;
+		flex-direction: column;
+		background-color: #fff7f2;
+		margin-top: 25px;
+	}
+	.contact-block-mobile, .contact-block-mobile .info {
+		display: flex;
+		margin-left: 15px;
+		margin-top: 10px;
+	}
+	.contact-block-mobile .info {
+		margin-left: 0;
+	}
+	.contact-img-mobile {
+		margin-top: 12px;
+	}
+	.socials-mobile {
+		margin-left: 18px;
+		margin-top: 25px;
+		margin-bottom: 15px;
+	}
+	.burger-img {
+		transform: scale(1.8);
+		margin-top: 10px;
+		width: 40px;
+		height: 40px;
+	}
+	.logo-img {
+		width: 58px;
+		height: 46px;
+	}
+	.phone-img {
+		width: 40px;
+		height: 40px;
+	}
+	.email-img {
+		width: 40px;
+		height: 40px;
+	}
+	.dark-bg-menu {
+		position: absolute;
+		width: 100%;
+		height: 10000px;
+		top: 0;
+		left: 0;
+		background-color: #000;
+		opacity: .2;
+		z-index: 999;
+	}
+	.navigation {
+		position: fixed;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		background-color: #FDF0E8;
+		top: 0;
+		width: 100%;
+	}
+
+	/* BASKET */
+	.basket-mobile {
+		z-index: 1999;
+	}
+	.dark-bg-basket {
+		position: absolute;
+		width: 100%;
+		height: 10000px;
+		top: 0;
+		left: 0;
+		background-color: #000;
+		opacity: .2;
+		z-index: 2002;
+	}
+	.basket-block-mobile {
+		z-index: 2003;
+		position: absolute;
+		background-color: #fe98b3;
+		width: 40%;
+		top: 137px;
+		right: 0;
+	}
+	.basket-mobile {
+		display: block !important;
+		z-index: 999;
+	}
+	.basket-mobile p {
+	margin-bottom: 0;
+	width: max-content;
+	}
+	.mobile-basket {
+		z-index: 1999;
+		margin-top: 10px;
+		padding-left: 20px;
+	}
+	.icon-mobile {
+		z-index: 500;
+		margin-top: 5px;
+	}
+	.basket-icon {
+		width: 40px;
+	}
+	.number-mobile {
+		display: none;
+	}
+	.basket-go {
+		color: #be5974;
+		border-bottom: 1px dashed #be5974;
+		font-size: 13px;
+	}
+	.basket-arrow {
+		position: absolute;
+		align-self: center;
+		right: 15px;
+	}
+	.features-mobile {
+		justify-content: space-between;
+		padding-top: 15px;
+		width: 80%;
+		margin: 0 auto;
+		margin-top: 10px;
+		padding-bottom: 10px;
+		border-top: 1px solid #f18aa6;
+	}
+	.basket-featured {
+		font-size: 16px;
+	}
+	.basket-number {
+		margin-left: 30px;
+	}
+	.basket-count {
+		color: #fff;
+	}
+	.white {
+		color: #fff;
+	}
+	.second-bar {
+		padding-left: 0;
+		justify-content: center;
+	}
+	.registration-mobile {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #f7a98f;
+		height: 50px;
+		z-index: 1000;
+	}
+	.mobile {
+		color: #fff;
+	}
+	.registration-mobile span {
+		color: #fff;
+	}
+	.nav-mobile:first-child {
+		padding-left: 12px;
+	}
+	.menu-adaptive {
+		position: relative;
+		z-index: 3000;
+		background-color: #fff;
+	}
+	.dark-bg-mob-menu {
+		z-index: 999;
+	}
+}
