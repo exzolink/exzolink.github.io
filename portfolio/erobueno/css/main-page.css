@@ -111,7 +111,6 @@ body {
   border-radius: 10px;
   background-color: #ffffff;
   background: url("../img/banner-2.jpg") 0 0 no-repeat; }
- 
   .item-banner-white__title {
     max-width: 130px;
     margin: 0px 0px 100px 0px;
@@ -342,7 +341,7 @@ body {
   background-color: #7594c7;
 }
 .top-block-name__title {
-  z-index: 9999;
+  z-index: 9900;
 }
 .pink-cube {
   background-color: #f4b8c6;
@@ -626,7 +625,7 @@ font-family: "ProximaNova-SemiBold";
   height: max-content;
   top: 0px;
   left: 0px;
-  z-index: 9999;
+  z-index: 9800;
 }
 
 .list-column {
@@ -961,7 +960,9 @@ font-family: "ProximaNova-SemiBold";
     background-size: cover;
     max-width: 450px;
     width: 100%;
-
+  }
+  .mar-top {
+    margin-top: 100px;
   }
   .small-block-img {
     display: block;
@@ -1476,6 +1477,9 @@ font-family: "ProximaNova-SemiBold";
   }
   .buy-onehand {
     font-size: 30px;
+  }
+  .mar-top {
+    margin-top: 140px;
   }
       .bottom-block__sub-block:last-child {
     width: 50%;
