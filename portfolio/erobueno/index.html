@@ -9,17 +9,7 @@
 <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 <link rel="stylesheet" href="css/jquery-ui.css">
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<link rel="stylesheet" href="css/fonts.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/media.css">
-<link rel="stylesheet" href="css/header.css">
-<link rel="stylesheet" href="css/footer.css">
-<link rel="stylesheet" href="css/main-page.css">
-<link rel="stylesheet" type="text/css" href="slick/slick.css">
-<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
-<link rel="stylesheet" href="css/footer.css">
-<link rel="stylesheet" href="css/header-tablet.css">
-<link rel="stylesheet" href="css/header-mobile.css">
+<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <header class="header">
@@ -94,7 +84,7 @@
 </div>
 </div>
 </div>
-<a class="header-logo" href=""><img src="img/logo.png" alt=""></a>
+<a class="header-logo" href=""><img class="header-logo" src="img/logo-small-2.png" alt=""></a>
 <div class="navigation">
 <div class="first-bar">
 <nav class="nav">
@@ -117,13 +107,18 @@
 <span>/</span>
 <a href="" class="registr link">Регистрация</a>
 </div>
+<div class="nickname">
+<a class="login link">Привет,
+</a>
+<a href="" class="name link">Иван</a>
+</div>
 </div>
 <div class="second-bar">
 <div class="burger-btn menu-toggle">
 <img src="img/burger.svg" alt="" class="burger-img contact-img">
 </div>
 <div class="logo-btn">
-<a href=""><img src="img/logo-small.png" alt="" class="logo-img contact-img"></a>
+<a href=""><img src="img/logo-small-2.png" alt="" class="logo-img contact-img"></a>
 </div>
 <div class="contact-block">
 <a href="tel:88007761234"><img src="img/phone-circle.svg" alt="" class="phone-img contact-img"></a>
@@ -231,7 +226,7 @@
 <li><a class="simple-menu_li" href="">Со стимулятором клитора</a></li>
 <li><a class="simple-menu_li" href="">Стимуляторы G-точки</a></li>
 </ul>
-<ul><a id="t_3" class="sm-li_main" href="">Секс-товары для женщин</a></ul>
+<ul><a id="t_3" class="sm-li_main mr-auto" href="">Секс-товары для женщин</a></ul>
 <ul id="test_3" class="simple-menu-list-column list-mobile pb-3 m-0">
 <li><a class="simple-menu_li" href="">Вагинальные шарики</a></li>
 <li><a class="simple-menu_li" href="">Виброяйцо</a></li>
@@ -239,7 +234,7 @@
 <li><a class="simple-menu_li" href="">Помпы для клитора</a></li>
 <li><a class="simple-menu_li" href="">Помпы и стимуляторы для груди</a></li>
 </ul>
-<ul><a id="t_4" class="sm-li_main" href="">Фаллоимитаторы</a></ul>
+<ul><a id="t_4" class="sm-li_main mr-auto" href="">Фаллоимитаторы</a></ul>
 <ul id="test_4" class="simple-menu-list-column list-mobile pb-3 m-0">
 <li><a class="simple-menu_li" href="">Анально-вагинальные</a></li>
 <li><a class="simple-menu_li" href="">Вагинальные пробки</a></li>
@@ -726,12 +721,6 @@
 <a class="arrownext-icon" href=""><img src="img/arrow-next-mp.svg" alt=""></a>
 <img class="small-block-img" src="img/cats-mini-item3.png" alt="">
 </div>
-<div class="bottom-block__sub-block">
-<a href="" class="sub-block__title">Вибраторы<br>для точки G</a>
-<p class="sub-block__price">от 500 руб.</p>
-<a class="arrownext-icon" href=""><img src="img/arrow-next-mp.svg" alt=""></a>
-<img class="small-block-img" src="img/cats-mini-item3.png" alt="">
-</div>
 </div>
 </div>
 <div class="mp-items__item mp-cubes">
@@ -810,12 +799,6 @@
 <a class="arrownext-icon" href=""><img src="img/arrow-next-mp.svg" alt=""></a>
 <img class="small-block-img" src="img/cats-mini-item6.png" alt="">
 </div>
-<div class="bottom-block__sub-block">
-<a href="" class="sub-block__title">Реалистичные<br><br></a>
-<p class="sub-block__price">от 500 руб.</p>
-<a class="arrownext-icon" href=""><img src="img/arrow-next-mp.svg" alt=""></a>
-<img class="small-block-img" src="img/cats-mini-item4.png" alt="">
-</div>
 </div>
 </div>
 </div>
@@ -838,7 +821,12 @@
 </div>
 <div class="main-page__item">
 <div class="main-page__top-block">
-<img class="sale-icon" src="img/mp-sale.svg" alt="">
+<div class="sale-icon">
+<div title="Товар со скидкой" class="sale-count"><span class="sale">-99%<span></span></span></div>
+<img title="Хит продаж" src="img/mp-hot.svg" alt="">
+<img title="Популярный товар" src="img/mp-like.svg" alt="">
+<img title="Высокая оценка" src="img/mp-thumb.svg" alt="">
+</div>
 <img class="item-image" src="img/item3.png" alt="">
 <div class="main-page-items__item-image">
 <button class="main-page-items__item-hover-search"></button>
@@ -846,7 +834,10 @@
 </div>
 <div class="main-page__bottom-block">
 <p class="bottom-block__desc pos-absolute"><a href="" class="bottom-block__desc">Краткое описание товара в две строки для наглядности Краткое описание товара в две строки для наглядности</a></p>
-<p class="bottom-block__price">3 000 руб.</p>
+<div class="block-price">
+<p class="bottom-block__price line-over">3 000 руб.</p>
+<p class="bottom-block__price-sale">2 000 руб.</p>
+</div>
 <div class="bottom-block-button">
 <a href="" class="bottom-block-button__btn">В корзину
 <i class="fas fa-shopping-basket ml-2"></i>
@@ -860,7 +851,12 @@
 </div>
 <div class="main-page__item">
 <div class="main-page__top-block">
-<img class="sale-icon" src="img/mp-sale.svg" alt="">
+<div class="sale-icon">
+<div title="Товар со скидкой" class="sale-count"><span class="sale">-50%<span></span></span></div>
+<img title="Хит продаж" src="img/mp-hot.svg" alt="">
+<img title="Популярный товар" src="img/mp-like.svg" alt="">
+<img title="Высокая оценка" src="img/mp-thumb.svg" alt="">
+</div>
 <img class="item-image" src="img/item6.jpg" alt="">
 <div class="main-page-items__item-image">
 <button class="main-page-items__item-hover-search"></button>
@@ -868,7 +864,9 @@
 </div>
 <div class="main-page__bottom-block">
 <p class="bottom-block__desc"><a href="" class="bottom-block__desc">Краткое описание товара в две строки для наглядности</a></p>
+<div class="block-price">
 <p class="bottom-block__price">3 000 руб.</p>
+</div>
 <div class="bottom-block-button">
 <a href="" class="bottom-block-button__btn">В корзину
 <i class="fas fa-shopping-basket ml-2"></i>
@@ -882,7 +880,12 @@
 </div>
 <div class="main-page__item">
 <div class="main-page__top-block">
-<img class="sale-icon" src="img/mp-sale.svg" alt="">
+<div class="sale-icon">
+<div title="Товар со скидкой" class="sale-count"><span class="sale">-30%<span></span></span></div>
+<img title="Хит продаж" src="img/mp-hot.svg" alt="">
+<img title="Популярный товар" src="img/mp-like.svg" alt="">
+<img title="Высокая оценка" src="img/mp-thumb.svg" alt="">
+</div>
 <img class="item-image" src="img/item5.jpg" alt="">
 <div class="main-page-items__item-image">
 <button class="main-page-items__item-hover-search"></button>
@@ -890,7 +893,9 @@
 </div>
 <div class="main-page__bottom-block">
 <p class="bottom-block__desc"><a href="" class="bottom-block__desc">Краткое описание товара в две строки для наглядности</a></p>
+<div class="block-price">
 <p class="bottom-block__price">3 000 руб.</p>
+</div>
 <div class="bottom-block-button">
 <a href="" class="bottom-block-button__btn">В корзину
 <i class="fas fa-shopping-basket ml-2"></i>
@@ -915,7 +920,12 @@
 </div>
 <div class="main-page__item">
 <div class="main-page__top-block">
-<img class="sale-icon" src="img/mp-sale.svg" alt="">
+<div class="sale-icon">
+<div title="Товар со скидкой" class="sale-count"><span class="sale">-10%<span></span></span></div>
+<img title="Хит продаж" src="img/mp-hot.svg" alt="">
+<img title="Популярный товар" src="img/mp-like.svg" alt="">
+<img title="Высокая оценка" src="img/mp-thumb.svg" alt="">
+</div>
 <img class="item-image" src="img/item2.jpg" alt="">
 <div class="main-page-items__item-image">
 <button class="main-page-items__item-hover-search"></button>
@@ -923,7 +933,9 @@
 </div>
 <div class="main-page__bottom-block">
 <p class="bottom-block__desc"><a href="" class="bottom-block__desc">Краткое описание товара в две строки для наглядности</a></p>
+<div class="block-price">
 <p class="bottom-block__price">3 000 руб.</p>
+</div>
 <div class="bottom-block-button">
 <a href="" class="bottom-block-button__btn">В корзину
 <i class="fas fa-shopping-basket ml-2"></i>
@@ -948,7 +960,12 @@
 </div>
 <div class="main-page__item">
 <div class="main-page__top-block">
-<img class="sale-icon" src="img/mp-sale.svg" alt="">
+<div class="sale-icon">
+<div title="Товар со скидкой" class="sale-count"><span class="sale">-50%<span></span></span></div>
+<img title="Хит продаж" src="img/mp-hot.svg" alt="">
+<img title="Популярный товар" src="img/mp-like.svg" alt="">
+<img title="Высокая оценка" src="img/mp-thumb.svg" alt="">
+</div>
 <img class="item-image" src="img/item3.jpg" alt="">
 <div class="main-page-items__item-image">
 <button class="main-page-items__item-hover-search"></button>
@@ -956,7 +973,9 @@
 </div>
 <div class="main-page__bottom-block">
 <p class="bottom-block__desc"><a href="" class="bottom-block__desc">Краткое описание товара в две строки для наглядности</a></p>
+<div class="block-price">
 <p class="bottom-block__price">3 000 руб.</p>
+</div>
 <div class="bottom-block-button">
 <a href="" class="bottom-block-button__btn">В корзину
 <i class="fas fa-shopping-basket ml-2"></i>
@@ -979,20 +998,11 @@
 <h3 class="buy-onehand">
 Наши производители:</h3>
 <section class="sponsors">
-<div class="container">
+<div class="container for-slider">
 <div class="row">
 <div class="sponsors-upblock">
 <div class="sponsors__item">
-<img class="sponsors-img" src="img/sp1.png" alt="">
-</div>
-<div class="sponsors__item">
-<img class="sponsors-img" src="img/sponsor-camera.png" alt="">
-</div>
-<div class="sponsors__item">
 <img class="sponsors-img" src="img/sp2.png" alt="">
-</div>
-<div class="sponsors__item">
-<img class="sponsors-img" src="img/sponsor-camera.png" alt="">
 </div>
 <div class="sponsors__item">
 <img class="sponsors-img" src="img/sp3.png" alt="">
@@ -1014,6 +1024,17 @@
 </div>
 <div class="sponsors__item">
 <img class="sponsors-img" src="img/sponsor-camera.png" alt="">
+</div>
+</div>
+<div class="sponsors-botblock">
+<div class="sponsors__item">
+<img class="sponsors-img" src="img/sp1.png" alt="">
+</div>
+<div class="sponsors__item">
+<img class="sponsors-img" src="img/sponsor-camera.png" alt="">
+</div>
+<div class="sponsors__item">
+<img class="sponsors-img" src="img/sp3.png" alt="">
 </div>
 <div class="sponsors__item">
 <img class="sponsors-img" src="img/sponsor-camera.png" alt="">
