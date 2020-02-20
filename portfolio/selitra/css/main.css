@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	outline: none;
 }
 
 html {
@@ -204,4 +205,109 @@ a:hover {
 
 .catalog {
 	background-color: #DCDCDC;
+}
+
+.catalog__title {
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 39px;
+	text-align: center;
+	color: #000000;
+	padding-top: 58px;
+	padding-bottom: 50px;
+}
+
+.catalog-cards {
+	display: flex;
+	justify-content: space-between;
+	color: #fff;
+}
+
+.catalog-cards__filler {
+	background: rgba(21, 21, 21, 0.7);
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+
+.catalog-cards__card-big {
+	width: 395px;
+	position: relative;
+	border-radius: 10px;
+	height: 862px;
+	background-color: #000;
+}
+
+.card-item {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.card__title {
+	position: absolute;
+	top: 70px;
+	left: 22px;
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 37px;
+	margin-right: 22px;
+}
+
+.card__value {
+	position: absolute;
+	font-weight: 600;
+	font-size: 25px;
+	line-height: 30px;
+	left: 22px;
+	top: 127px;
+}
+
+.card__desc	{
+	position: absolute;
+	font-weight: normal;
+	font-size: 25px;
+	line-height: 30px;
+	left: 22px;
+	top: 207px;
+	margin-right: 22px;
+}
+
+.card__price-block {
+	position: absolute;
+	top: 636px;
+	left: 22px;
+}
+
+.price {
+	font-weight: 500;
+	font-size: 45px;
+	line-height: 55px;
+	color: #20A120;
+}
+
+.price-text {
+	font-weight: 500;
+	font-size: 25px;
+	line-height: 30px;
+}
+
+.buy-btn {
+	position: absolute;
+	bottom: 30px;
+	left: 58px;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 29px;
+	height: 60px;
+	padding-left: 95px;
+	padding-right: 95px;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
 }
