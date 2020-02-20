@@ -164,8 +164,7 @@ a:hover {
 .discount-text {
 	font-weight: 600;
 	font-size: 150px;
-	color: rgba(255,255,255,.1);
-	filter: contrast(700%);
+	color: rgba(255,255,255,.5);
 	margin-right: auto;
 	width: max-content;
 	line-height: 183px;
@@ -335,6 +334,7 @@ a:hover {
 }
 
 .card__small_inner {
+	text-align: center;
 	padding: 22px;
 	height: 100%;
 	width: 100%;
@@ -355,7 +355,7 @@ a:hover {
 }
 
 .card-small__value {
-	top: 92px;
+	top: 100px;
 	font-weight: 600;
 	font-size: 25px;
 	line-height: 30px;
@@ -387,6 +387,8 @@ a:hover {
 	position: relative !important;
 	margin-top: 40px !important;
 	height: 10px !important;
+	background: #AFAFAF !important;
+	cursor: pointer;
 }
 
 .swiper-scrollbar-drag {
