@@ -59,6 +59,7 @@ a:hover {
 	padding-top: 33px;
 	display: flex;
 	align-items: center;
+	position: relative;
 	justify-content: space-between;
 }
 
@@ -113,12 +114,11 @@ a:hover {
 
 .language {
 	display: flex;
-	position: relative;
 	margin-left: 100px;
 	cursor: pointer;
 	font-size: 15px;
 	font-weight: 300;
-	margin-right: 24px;
+	z-index: 1000;
 }
 
 .svg-icon {
@@ -127,18 +127,32 @@ a:hover {
 	margin-right: 3px;
 }
 
-.language:after {
-	content: '';
+.language-selector.active {
+	display: flex;
+}
+
+.language-selector {
 	position: absolute;
-	background: url("../images/down-arrow.svg") no-repeat 100% 100%/100%;
-	width: 20px;
+	right: 0;
+	top: 60px;
+	height: 65px;
+	display: none;
+	align-items: flex-end;
+	background-color: #535353;
+	border-radius: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+
+.arrow-down {
+	width: 22px;
 	height: 12px;
-	right: -24px;
-	top: 1px;
-	-webkit-transform: translateY(50%);
-	-moz-transform: translateY(50%);
-	-ms-transform: translateY(50%);
-	-o-transform: translateY(50%);
+	margin-top: 5px;
+}
+
+.m-0 {
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .header-text {
