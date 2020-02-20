@@ -661,4 +661,78 @@ a:hover {
 	.buy-btn {
 		bottom: 20px;
 	}
+	.catalog__title {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+	.logo {
+		max-width: 110px;
+	}
+	.shop-link {
+		display: none;
+	}
+	.phones__number-small {
+		font-size: 8px;
+		line-height: 10px;
+	}
+	.phones__number-big {
+		font-size: 10px;
+		line-height: 22px;
+	}
+	.request-call {
+		font-size: 10px;
+		line-height: 12px;
+		padding-left: 8px;
+		padding-right: 8px;
+		height: 26px;
+	}
+	.svg-icon {
+		width: 20px;
+		margin-right: 0;
+	}
+	.container {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.arrow-down {
+		display: none;
+	}
+	.nav {
+		padding-top: 22px;
+	}
+	.language-selector {
+		padding-left: 6px;
+		width: 30px;
+		top: 32px;
+		right: -4px;
+	}
+	.discount-text {
+		font-size: 58px;
+		line-height: 73px;
+	}
+	.pay-text {
+		font-size: 27px;
+		line-height: 33px;
+	}
+	.catalog-cards {
+		flex-direction: column;
+		align-items: center;
+	}
+	.catalog-cards__card-big {
+		margin-bottom: 10px;
+		height: 550px;
+		max-width: 450px;
+		margin-right: 0;
+	}
+	.card__title {
+		font-size: 30px;
+		line-height: 37px;
+	}
+
 }
