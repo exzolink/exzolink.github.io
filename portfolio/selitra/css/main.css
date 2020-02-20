@@ -205,6 +205,7 @@ a:hover {
 
 .catalog {
 	background-color: #DCDCDC;
+	padding-bottom: 27px;
 }
 
 .catalog__title {
@@ -310,4 +311,84 @@ a:hover {
 	border-radius: 10px;
 	display: flex;
 	align-items: center;
+}
+
+.slider-cards {
+	background-color: #E5E5E5;
+	padding-top: 23px;
+	padding-bottom: 23px;
+}
+
+.card__small {
+	width: 400px;
+	height: 368px !important;
+	background-color: #000;
+	border-radius: 10px;
+	position: relative;
+}
+
+.slider-container {
+	max-width: 1220px;
+	width: 100%;
+	margin: 0 auto;
+	color: #fff;
+}
+
+.card__small_inner {
+	padding: 22px;
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.card-small__title {
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 37px;
+	position: absolute;
+}
+
+.card-small__value {
+	top: 92px;
+	font-weight: 600;
+	font-size: 25px;
+	line-height: 30px;
+	position: absolute;
+}
+
+.card-small__price-block {
+	top: 163px;
+	display: flex;
+	position: absolute;
+	flex-direction: column;
+	align-items: center;
+}
+
+.cm-price {
+	font-weight: 500;
+	font-size: 45px;
+	line-height: 55px;
+	color: #20A120;
+}
+
+.cm-price-text {
+	font-weight: 500;
+	font-size: 25px;
+	line-height: 30px;
+}
+
+.swiper-container-horizontal > .swiper-scrollbar {
+	position: relative !important;
+	margin-top: 40px !important;
+	height: 10px !important;
+}
+
+.swiper-scrollbar-drag {
+	background: #20A120 !important;
 }
