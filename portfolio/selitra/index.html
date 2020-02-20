@@ -212,8 +212,26 @@
 		</section>
 		<section class="feedback">
 			<h3 class="feedback__title"><span class="green-color">Мы</span> всегда<br>Готовы общаться с <span class="green-color">Вами</span></h3>
+			<div class="form-block">
+				<form class="form" action="">
+					<input class="input-form" type="text" placeholder="Укажите ваше имя">
+					<input class="input-form" type="text" placeholder="Телефон">
+					<textarea class="textarea-form" name="" id="" placeholder="Оставьте ваш комментарий"></textarea>
+					<button class="button submit-btn" type="submit">Отправить</button>
+				</form>
+			</div>
+			<div class="footer">
+				<div class="container flexbox">
+				<p class="footer__title">Селітра © 2020</p>
+				<div class="phones ml-1">
+					<a class="phones__number-small" href="tel:0955810088">(095) 581-00-88</a>
+					<a class="phones__number-big" href="tel:0675810088">(067) 581-00-88</a>
+					<a class="phones__number-small" href="tel:0635810088">(063) 581-00-88</a>
+				</div>
+				<a href="mailto:selitra.biz.ua@gmail.com" class="footer__email">selitra.biz.ua@gmail.com</a>
+			</div>
+			</div>
 		</section>
-
 		<script src="js/jquery-1.12.4.min.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/swiper.min.js"></script>
@@ -222,9 +240,9 @@
 		var mySwiper = new Swiper('.swiper-container', {
 		preloadImages: false,
 		watchSlidesVisibility: true,
-    	lazy: {
-    		loadOnTransitionStart: true,
-    	},
+		lazy: {
+		loadOnTransitionStart: true,
+		},
 		slidesPerView: 3,
 		direction: 'horizontal',
 		keyboard: {
