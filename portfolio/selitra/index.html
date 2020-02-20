@@ -219,7 +219,10 @@
 		<script>
 		var mySwiper = new Swiper('.swiper-container', {
 		preloadImages: false,
-    	lazy: true,
+		watchSlidesVisibility: true,
+    	lazy: {
+    		loadPrevNext: true,
+    	},
 		slidesPerView: 3,
 		direction: 'horizontal',
 		keyboard: {
