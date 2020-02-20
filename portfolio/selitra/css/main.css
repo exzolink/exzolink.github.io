@@ -394,3 +394,38 @@ a:hover {
 .swiper-scrollbar-drag {
 	background: #20A120 !important;
 }
+
+.feedback {
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(36,36,36,.2);
+}
+
+.webp .feedback {
+	background-image: url('../images/feedback-bg.webp');
+	background-repeat: no-repeat;
+	background-position: top;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.no-webp .feedback {
+	background-image: url('../images/feedback-bg-fallback.jpg');
+	background-repeat: no-repeat;
+	background-position: top;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.green-color {
+	color: #20A120;
+}
+
+.feedback__title {
+	font-weight: 600;
+	font-size: 50px;
+	line-height: 61px;
+	text-align: center;
+	color: #fff;
+	padding-top: 50px;
+}
