@@ -2,8 +2,10 @@
 <html lang="ru">
 	<head>
 		<meta charset="UTF-8">
-		<title>Selitra</title>
+		<title>Купить Селитру оптом и розницу | Низкие цены | Высокое Качество‎</title>
+		<meta name="description" content="Селитра аммиачная ведущих Производителей Украины и ближнего зарубежья. Заводское Качество! Большой Ассортимент удобрений. Квалифицированные консультации + Скидки. Звоните!">
 		<link rel="stylesheet" href="css/main.css">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<link rel="stylesheet" href="css/swiper.min.css">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<link rel="dns-prefetch" href="//fonts.googleapis.com/">
@@ -20,8 +22,8 @@
 						<a class="phones__number-big" href="tel:0675810088">(067) 581-00-88</a>
 						<a class="phones__number-small" href="tel:0635810088">(063) 581-00-88</a>
 					</div>
-					<a href=""><div class="button request-call">Заказать звонок</div></a>
-					<a href="" class="shop-link">Розничный магазин</a>
+					<a href="#contact"><div class="button request-call">Заказать звонок</div></a>
+					<a href="https://selitra.biz.ua" class="shop-link">Розничный магазин</a>
 					<a id="switchLang" class="language">
 						<img class="svg-icon" src="images/russia.svg" alt="">
 						<p class="lang">русский</p>
@@ -38,20 +40,20 @@
 					<h2 class="discount-text">Скидка 5%</h2>
 					<h3 class="pay-text">При оплате наличными</h3>
 				</div>
-				<div class="catalog-btn"><a href="" class="button go-catalog">Перейти в каталог</a></div>
+				<div class="catalog-btn"><a href="#catalog" class="button go-catalog">Перейти в каталог</a></div>
 			</div>
 		</header>
 		<section class="catalog">
 			<h2 class="catalog__title">Наша продукция</h2>
 			<div class="container">
-				<div class="catalog-cards">
+				<div id="catalog" class="catalog-cards">
 					<div class="catalog-cards__card-big">
 						<img src="images/item1.png" alt="" class="card-item">
 						<div class="catalog-cards__filler"></div>
 						<h3 class="card__title">Аммиачная селитра</h3>
 						<p class="card__value">34,4%, б/б, мешок</p>
-						<p class="card__desc">Аммиачная селитра - по другому называется аммиачно-нитрат удобрение его используют в вашем огороде, а также в саду.
-						Благодаря комплексному составу этого удобрения и высокой.</p>
+						<p class="card__desc"> Аммиачная селитра - по другому называется нитрат - аммония. Его используют в вашем огороде, а также в саду.
+						Благодаря комплексному составу этого удобрения и высокой концентрации в нем питательных веществ</p>
 						<div class="card__price-block">
 							<p class="price">7100₴</p>
 							<p class="price-text">за тонну</p>
@@ -93,9 +95,9 @@
 						<img data-src="images/item4.png" alt="" class="swiper-lazy card-item">
 						<div class="catalog-cards__filler"></div>
 						<div class="card__small_inner">
-							<h3 class="card-small__title">Амофос</h3>
+							<h3 class="card-small__title">Аммофос</h3>
 							<p class="card-small__value">N:P 12-52</p>
-							<p class="card-small__desc">Карбамид это популярное удобрение, которое проверялось годами. Это универсальное удобрение используют почти везде. В состав карбамида входят многие смесей, которые разработаны для обработки полей.</p>
+							<p class="card-small__desc">Аммофос - одно из наиболее эффективных фосфорных удобрений, которое используют во всех уголках страны, перед прополка и посевом различных зерновых культур и корнеплодов.</p>
 							<div class="card-small__price-block">
 								<p class="cm-price">15600₴</p>
 								<p class="cm-price-text">за тонну</p>
@@ -222,28 +224,29 @@
 		</section>
 		<section class="feedback">
 			<h3 class="feedback__title"><span class="green-color">Мы</span> всегда<br>
-				<p class="second-words">Готовы общаться с <span class="green-color">Вами</span></p></h3>
+			<p class="second-words">Готовы общаться с <span class="green-color">Вами</span></p></h3>
 			<div class="form-block">
-				<form class="form" action="">
-					<input class="input-form" type="text" placeholder="Укажите ваше имя">
-					<input class="input-form" type="text" placeholder="Телефон">
-					<textarea class="textarea-form" name="" id="" placeholder="Оставьте ваш комментарий"></textarea>
-					<button class="button submit-btn" type="submit">Отправить</button>
+				<div class="form-result">Спасибо за Ваше сообщение!</div>
+				<form id="contact" class="form" action="send.php" method="POST">
+					<input class="input-form" id="user_name" type="text" placeholder="Укажите ваше имя" required>
+					<input class="input-form" id="user_phone" type="text" placeholder="Телефон" required>
+					<textarea class="textarea-form" id="user_comment" name="" placeholder="Оставьте ваш комментарий" required></textarea>
+					<input class="button submit-btn" id="btn_submit" type="button" value="Отправить">
 				</form>
 			</div>
 			<div class="footer">
 				<div class="container flexbox">
-				<p class="footer__title">Селітра © 2020</p>
-				<div class="phones ml-1">
-					<a class="phones__number-small footer-number-small" href="tel:0955810088">(095) 581-00-88</a>
-					<a class="phones__number-big footer-number-big" href="tel:0675810088">(067) 581-00-88</a>
-					<a class="phones__number-small footer-number-small" href="tel:0635810088">(063) 581-00-88</a>
+					<p class="footer__title">Селітра © 2020</p>
+					<div class="phones ml-1">
+						<a class="phones__number-small footer-number-small" href="tel:0955810088">(095) 581-00-88</a>
+						<a class="phones__number-big footer-number-big" href="tel:0675810088">(067) 581-00-88</a>
+						<a class="phones__number-small footer-number-small" href="tel:0635810088">(063) 581-00-88</a>
+					</div>
+					<a href="mailto:selitra.biz.ua@gmail.com" class="footer__email">selitra.biz.ua@gmail.com</a>
 				</div>
-				<a href="mailto:selitra.biz.ua@gmail.com" class="footer__email">selitra.biz.ua@gmail.com</a>
-			</div>
 			</div>
 		</section>
-		<script src="js/jquery-1.12.4.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/swiper.min.js"></script>
 		<script src="js/modernizr-custom.js"></script>
@@ -257,19 +260,19 @@
 		slidesPerView: 3,
 		spaceBetween: 18,
 		breakpoints: {
-    	320: {
-      	slidesPerView: 1,
-      	spaceBetween: 10,
-    		},
-    	500: {
-      	slidesPerView: 2,
-      	spaceBetween: 15,
-    		},
-    	700: {
-      	slidesPerView: 3,
-      	spaceBetween: 18,
-    		},
-    	},
+		320: {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		},
+		500: {
+		slidesPerView: 2,
+		spaceBetween: 15,
+		},
+		700: {
+		slidesPerView: 3,
+		spaceBetween: 18,
+		},
+		},
 		direction: 'horizontal',
 		keyboard: {
 		enabled: true,
@@ -280,6 +283,28 @@
 		hide: false,
 		draggable: true,
 		},
+		});
+		</script>
+		<script>
+		$(document).ready(function(){
+		$('#btn_submit').click(function(){
+		var user_name    = $('#user_name').val();
+		var user_phone = $('#user_phone').val();
+		var user_comment = $('#user_comment').val();
+		$.ajax({
+		url: "send.php",
+		type: "post",
+		data: {
+		"user_name":    user_name,
+		"user_phone":   user_phone,
+		"user_comment": user_comment
+		},
+		error:function(){$(".form-result").html("Произошла ошибка!");},
+		success: function(result){
+		$('.form-result').show();
+		}
+		});
+		});
 		});
 		</script>
 	</body>

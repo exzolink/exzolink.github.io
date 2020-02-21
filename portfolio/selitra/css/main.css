@@ -106,7 +106,7 @@ a:hover {
 	align-items: center;
 	font-weight: 500;
 	line-height: 20px;
-	margin-left: 50px;
+	margin-left: 39px;
 }
 
 .shop-link {
@@ -144,6 +144,7 @@ a:hover {
 	padding-bottom: 5px;
 	padding-left: 5px;
 	padding-right: 5px;
+	width: 160px;
 }
 
 .arrow-down {
@@ -187,7 +188,7 @@ a:hover {
 }
 
 .go-catalog {
-	max-width: 320px;
+	max-width: max-content;
 	width: 100%;
 	font-weight: 500;
 	font-size: 25px;
@@ -448,12 +449,37 @@ a:hover {
 	display: flex;
 	justify-content: center;
 	padding: 30px;
+	position: relative;
 }
 
 .form {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+}
+
+input:required, textarea:required {
+	box-shadow: none;
+	outline: none;
+}
+
+.form-result {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	z-index: 9999;
+	padding: 20px;
+	height: 100%;
+	width: 100%;
+	color: #3C3C3C;
+	font-weight: 600;
+	font-size: 50px;
+	line-height: 61px;
+	padding-top: 170px;
+	text-align: center;
+	border-radius: 10px;
 }
 
 .input-form {
@@ -676,28 +702,24 @@ a:hover {
 
 @media screen and (max-width: 700px) {
 	.logo {
-		max-width: 110px;
+		max-width: 160px;
 	}
 	.shop-link {
 		display: none;
 	}
 	.phones__number-small {
-		font-size: 8px;
-		line-height: 10px;
+		font-size: 12px;
+		line-height: 16px;
 	}
 	.phones__number-big {
-		font-size: 10px;
-		line-height: 22px;
+		font-size: 14px;
+		line-height: 26px;
 	}
 	.request-call {
-		font-size: 10px;
-		line-height: 12px;
-		padding-left: 8px;
-		padding-right: 8px;
-		height: 26px;
+		display: none;
 	}
 	.svg-icon {
-		width: 20px;
+		width: 30px;
 		margin-right: 0;
 	}
 	.container {
@@ -707,12 +729,15 @@ a:hover {
 	.arrow-down {
 		display: none;
 	}
+	.phones {
+		margin-left: 7px;
+	}
 	.nav {
 		padding-top: 22px;
 	}
 	.language-selector {
 		padding-left: 6px;
-		width: 30px;
+		width: 40px;
 		top: 32px;
 		right: -4px;
 	}
@@ -827,5 +852,9 @@ a:hover {
 	.footer-number-big {
 		font-size: 20px;
 		line-height: 24px;
+	}
+	.form-result {
+		font-size: 35px;
+		line-height: 43px;
 	}
 }
