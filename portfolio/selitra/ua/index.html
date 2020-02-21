@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>Селітра Аміачна оптом вроздріб | Низькі ціни | Висока Якість</title>
 		<meta name="description" content="Селітра аміачна провідних Виробників України та ближнього зарубіжжя. Заводська Якість! Великий Асортимент добрив. Кваліфіковані консультації + Знижки + Гарантія. Дзвоніть!">
-		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/main.min.css">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<link rel="stylesheet" href="../css/swiper.min.css">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
@@ -227,8 +227,11 @@
 			<h3 class="feedback__title"><span class="green-color">Ми</span> завжди<br>
 			<p class="second-words">Готовi спілкуватися з <span class="green-color">Вами</span></p></h3>
 			<div class="form-block">
-				<div class="form-result">Дякуюмо за Ваше повідомлення!</div>
-				<form id="contact" class="form" action="../send.php" method="POST">
+				<div class="form-result">
+				<p>Спасибо за Ваше сообщение!</p>
+				<img src="images/close.svg" alt="" class="close-icon">
+				</div>
+				<form id="contact" class="form" action="send.php" method="POST">
 					<input class="input-form" id="user_name" type="text" placeholder="Укажите ваше имя" required>
 					<input class="input-form" id="user_phone" type="text" placeholder="Телефон" required>
 					<textarea class="textarea-form" id="user_comment" name="" placeholder="Оставьте ваш комментарий" required></textarea>
@@ -303,6 +306,7 @@
 		error:function(){$(".form-result").html("Произошла ошибка!");},
 		success: function(result){
 		$('.form-result').show();
+		$('.form-result p').html(result);
 		}
 		});
 		});
