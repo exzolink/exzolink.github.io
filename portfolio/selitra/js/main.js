@@ -18,3 +18,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       }); 
     });
 });
+
+$('.close-icon').click(function() {
+  $('.form-result').hide();
+  $('.input-form, .textarea-form').val('');
+});

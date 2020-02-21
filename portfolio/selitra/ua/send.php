@@ -17,6 +17,6 @@
         $message .= "Телефон: ".$phone."\n";
         $message .= "Сообщение: ".$text_comment."\n";
         $send = mail($to, $subject, $message, $headers);
-        echo "Спасибо за Ваше сообщение";
+        echo "Дякуюмо за Ваше повідомлення!";
         }
 ?>

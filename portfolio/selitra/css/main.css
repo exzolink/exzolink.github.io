@@ -458,6 +458,19 @@ a:hover {
 	width: 100%;
 }
 
+.close-icon {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: 35px;
+	transition: opacity .2s ease;
+}
+
+.close-icon:hover {
+	cursor: pointer;
+	opacity: .8;
+}
+
 input:required, textarea:required {
 	box-shadow: none;
 	outline: none;
