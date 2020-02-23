@@ -1,14 +1,5 @@
 Options All -ExecCGI -Indexes -Includes +FollowSymLinks
 
-<IfModule mod_rewrite.c>
-    RewriteEngine on
-    RewriteBase /
-    RewriteCond %{HTTP_HOST} ^black-web
-    RewriteRule (.*) https://selitra.biz.ua/$1 [R=301,L]
-    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
-    RewriteRule ^index\.html$ https://selitra.biz.ua/ [R=301,L]
-</IfModule>
-
 DirectoryIndex index.html
 
 <IfModule mod_setenvif.c>
@@ -65,8 +56,8 @@ AddType application/octet-stream .doc .mov .avi .pdf .xls
 
 <ifModule mod_expires.c>
     ExpiresActive On
-    #по умолчанию кеш в 30 дней
-    ExpiresDefault "access plus 2592000 seconds"
+    #по умолчанию кеш в 1 день
+    ExpiresDefault "access plus 86400 seconds"
     #кэшировать флэш и изображения на месяц
     ExpiresByType image/x-icon "access plus 2592000 seconds"
     ExpiresByType image/jpeg "access plus 2592000 seconds"
