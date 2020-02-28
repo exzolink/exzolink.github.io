@@ -16,7 +16,7 @@
         $message .= "Имя пользователя: ".$name."<br>";
         $message .= "Телефон: ".$phone."<br>";
         $message .= "Сообщение: ".$text_comment."<br>";
-        $send = mail($to, $subject, $message, $headers);
+        $send = send_mail($to, $subject, $message, $headers);
         echo "Спасибо за Ваше сообщение";
         }
 ?>

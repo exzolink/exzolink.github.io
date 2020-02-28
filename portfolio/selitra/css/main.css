@@ -870,4 +870,8 @@ input:required, textarea:required {
 		font-size: 35px;
 		line-height: 43px;
 	}
+	.go-catalog {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
 }
