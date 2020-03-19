@@ -678,6 +678,7 @@ input.quantity-field-input {
 .urid-label {
 	width: 174px;
 	align-self: center;
+	margin-bottom: 0;
 }
 
 .wrap {
