@@ -329,6 +329,11 @@ input.quantity-field-input {
 	font-weight: 400;
 	color: #3a495e;
 	width: max-content;
+	visibility: hidden;
+}
+
+.coupon-discount span {
+	margin-left: 5px;
 }
 
 .coupon-discount-block {
@@ -336,7 +341,6 @@ input.quantity-field-input {
 	justify-content: space-between;
 	align-items: center;
 	margin-right: 14px;
-	display: none;
 }
 
 .coupon-discount-price {
@@ -372,6 +376,7 @@ input.quantity-field-input {
 	opacity: 0;
 	animation: enabled .8s forwards;
 	display: flex !important;
+	visibility: visible;
 }
 
 .image-pay-wrapper {

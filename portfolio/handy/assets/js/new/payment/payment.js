@@ -6,9 +6,9 @@ jQuery(document).ready(function () {
 
 jQuery('#checkbox-coupon').click(function (){
 if (jQuery('#checkbox-coupon').is(':checked')){
-	jQuery('.coupon-discount-block, .coupon-input, .coupon-reload').addClass('enabled');
+	jQuery('.coupon-discount, .coupon-input, .coupon-reload').addClass('enabled');
 } else {
-	jQuery('.coupon-discount-block, .coupon-input, .coupon-reload').removeClass('enabled');
+	jQuery('.coupon-discount, .coupon-input, .coupon-reload').removeClass('enabled');
 }
 });
 
