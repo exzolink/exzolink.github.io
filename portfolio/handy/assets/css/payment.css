@@ -680,6 +680,7 @@ input.quantity-field-input {
 
 .urid-wrapper {
 	margin-top: 15px;
+	display: flex;
 }
 
 .mar-t-10 {
