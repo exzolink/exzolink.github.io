@@ -771,6 +771,10 @@ input.quantity-field-input {
 	.modal {
 		width: 85%;
 	}
+	.close-icon {
+		top: 8px;
+		right: 8px;
+	}
 	.payment-licensed {
 		flex-direction: column;
 		align-items: flex-start;
