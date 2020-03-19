@@ -3,10 +3,8 @@ var browserSync = require('browser-sync').create();
 var useref = require('gulp-useref');
 var gulpif = require('gulp-if');
 var terser = require('gulp-terser');
-var minifyCss = require('gulp-csso');
-var imagemin = require('gulp-pngquant');
 var cache = require('gulp-cache');
-var image = require('gulp-image');
+var imagemin = require('gulp-tinypng-nokey');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var cssnext = require('cssnext');
@@ -52,7 +50,7 @@ gulp.task('minify', gulp.series('allfiles', 'otherfiles', 'html-min'));
 
 gulp.task('min-imgs', function(){
   return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
-  .pipe(cache(image()))
+  .pipe(cache(imagemin()))
   .pipe(gulp.dest('./images'))
 });
 
