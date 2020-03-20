@@ -24,7 +24,7 @@
 	background-color: #fff;
 	border: 2px solid #a8cae0;
 	height: 100%;
-	max-height: 600px;
+	max-height: 560px;
 	top: 50%;
 	left: 50%;
 	-webkit-transform: translate(-50%,-50%);
@@ -41,16 +41,15 @@
 	border-radius: 5px;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	justify-content: space-around;
-	max-height: 600px;
+	max-height: 560px;
 	overflow-y: auto;
 
 
 }
 
 .modal-inner__item {
-	width: 210px;
-	height: 120px;
+	width: 170px;
+	height: 110px;
 	box-shadow: 0 0 8px 0 rgba(100,100,100,.3);
 	border-radius: 5px;
 	display: flex;
@@ -59,6 +58,48 @@
 	padding: 10px;
 	transition: box-shadow .3s ease;
 	margin-bottom: 20px;
+}
+
+.big-item {
+	width: 355px;
+	height: 240px;
+	margin-bottom: 0;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	justify-content: center;
+
+}
+
+.bank-card {
+	margin-bottom: 0;
+}
+
+.big-item-top {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.big-item-top img {
+	width: 50% !important;
+}
+
+.big-item-bottom {
+	position: absolute;
+	bottom: 0;
+}
+
+.modal-inner__items-wrapper {
+	width: 540px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	height: 240px;
+}
+
+.mar-b-0 {
+	margin-bottom: 0;
 }
 
 .modal-inner__item:hover {
@@ -95,7 +136,7 @@
 
 
 .payment {
-	padding-top: 125px;
+	padding-top: 0;
 	padding-bottom: 50px;
 }
 
@@ -583,6 +624,14 @@ input.quantity-field-input {
 	margin-left: 25px;
 }
 
+.privacy-notAgree3 {
+	font-size: 13px;
+	line-height: 14px;
+	font-weight: 400;
+	color: #e81123;
+	margin-left: 25px;
+}
+
 .policy-link {
 	color: #008ae3;
 }
@@ -635,6 +684,27 @@ input.quantity-field-input {
 	opacity: .4;
 }
 
+.submit-btn3 {
+	background-color: #1bb43f;
+	border: 0;
+	color: #fff;
+	border-radius: 4.0px;
+	max-width: 210px;
+	width: 210px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	font-weight: 700;
+	position: absolute;
+	bottom: -116px;
+	left: 50%;
+	margin-left: -110px;
+	pointer-events: none;
+	opacity: .4;
+}
+
 .accepted {
 	opacity: 1;
 	pointer-events: all;
@@ -648,13 +718,32 @@ input.quantity-field-input {
 	margin-right: 25px;
 }
 
+.submit-btn3 img {
+	margin-right: 25px;
+}
+
 
 .form-bottom {
 	margin-bottom: 100px;
 	display: none;
 }
 
+.form-second {
+	margin-bottom: 100px;
+	display: none;
+}
+
 .form-urid {
+	margin-left: 100px;
+	margin-right: 100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	position: relative;
+	display: none;
+}
+
+.form-urid-second {
 	margin-left: 100px;
 	margin-right: 100px;
 	display: flex;
@@ -673,6 +762,10 @@ input.quantity-field-input {
 .selected {
 	border: 2px solid #0063b1;
 	opacity: 1;
+}
+
+.btn1 {
+	display: none;
 }
 
 .urid-label {
@@ -698,6 +791,20 @@ input.quantity-field-input {
 	opacity: 0;
 	animation: enabled .6s forwards;
 	display: block;
+}
+
+.w-auto {
+	width: auto;
+}
+
+.form-not-available {
+	font-size: 16px;
+	color: red;
+	margin-top: 10px;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 0;
 }
 
 @media screen and (max-width: 1000px) {
@@ -728,6 +835,10 @@ input.quantity-field-input {
 
 	}
 	.form-urid {
+		margin-left: 25px;
+		margin-right: 25px;
+	}
+	.form-urid-second {
 		margin-left: 25px;
 		margin-right: 25px;
 	}
@@ -775,11 +886,39 @@ input.quantity-field-input {
 	.urid-label {
 		align-self: auto;
 	}
+	.big-item {
+		margin-right: 330px;
+		margin-bottom: 25px;
+	}
+	.modal-inner {
+		justify-content: space-between;
+	}
+	.mar-b-0 {
+		margin-bottom: 25px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.big-item {
+		margin-right: 150px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.big-item {
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 @media screen and (max-width: 505px) {
 	.modal {
 		width: 85%;
+	}
+	.form-not-available {
+		line-height: inherit;
+		margin-left: 25px;
+		margin-right: 25px;
 	}
 	.close-icon {
 		top: 8px;
@@ -833,5 +972,23 @@ input.quantity-field-input {
 	}
 	.coupon-discount-block {
 		margin-top: 5px;
+	}
+}
+
+@media screen and (max-width: 460px) {
+	.modal-inner {
+		align-items: center;
+		justify-content: center;
+	}
+	.modal-inner__item {
+		height: 120px;
+		width: 230px;
+	}
+	.modal-inner__item img {
+		width: 100%;
+	}
+	.big-item {
+    	width: 355px;
+    	height: 200px;
 	}
 }

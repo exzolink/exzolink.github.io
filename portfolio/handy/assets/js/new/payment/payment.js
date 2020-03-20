@@ -2,6 +2,7 @@ jQuery(document).ready(function () {
 	jQuery('#payment-selector').select2({
 		minimumResultsForSearch: Infinity
 	});
+	jQuery('#Select1').trigger('click');
 });
 
 jQuery('#checkbox-coupon').click(function (){
@@ -32,18 +33,30 @@ if (jQuery('#checkbox-agree2').is(':checked')){
 }
 });
 
-jQuery('#first-method').click(function(){
-	jQuery(this).addClass('selected');
+jQuery('#checkbox-agree4').click(function (){
+if (jQuery('#checkbox-agree4').is(':checked')){
+	jQuery('.privacy-notAgree3').hide('slide');
+	jQuery('.submit-btn3').addClass('accepted');
+} else {
+	jQuery('.privacy-notAgree3').show('slide');
+	jQuery('.submit-btn3').removeClass('accepted');
+}
+});
+
+jQuery('#Select1').click(function(){
+	jQuery('#first-method').addClass('selected');
 	jQuery('.form-bottom').addClass('activated');
 	jQuery('#Choice1').trigger('click');
 	jQuery('#second-method').removeClass('selected');
+	jQuery('.form-second').removeClass('activated');
 });
 
-jQuery('#second-method').click(function(){
-	jQuery(this).addClass('selected');
-	jQuery('.form-bottom').addClass('activated');
-	jQuery('#Choice2').trigger('click');
+jQuery('#Select2').click(function(){
+	jQuery('#second-method').addClass('selected');
+	jQuery('.form-second').addClass('activated');
+	jQuery('#Choice5').trigger('click');
 	jQuery('#first-method').removeClass('selected');
+	jQuery('.form-bottom').removeClass('activated');
 });
 
 jQuery('#Choice1').click(function (){
@@ -56,6 +69,17 @@ jQuery('#Choice2').click(function (){
 	jQuery('.form-fiz').removeClass('enabled');
 });
 
+jQuery('#Choice4').click(function (){
+	jQuery('.form-not-available').addClass('enabled');
+	jQuery('.form-urid-second').removeClass('enabled');
+});
+
+jQuery('#Choice5').click(function (){
+	jQuery('.form-urid-second').addClass('enabled');
+	jQuery('.form-not-available').removeClass('enabled');
+});
+
+
 function openModal(){
     jQuery(".modal-bg, .modal").addClass("enabled");
 }
@@ -67,3 +91,10 @@ jQuery('.modal-inner__item').click(function(){
 	jQuery(".modal, .modal-bg").removeClass("enabled");
 });
 
+
+$(window).resize(function (){
+	var width = $(window).width();
+	if (width < 1000) {
+		$('.modal-inner__items-wrapper').remove();
+	}
+});
