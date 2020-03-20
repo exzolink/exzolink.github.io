@@ -62,7 +62,7 @@
 }
 
 .big-item {
-	width: 355px;
+	width: 350px;
 	height: 240px;
 	margin-bottom: 0;
 	display: flex;
@@ -933,6 +933,7 @@ input.quantity-field-input {
 	.modal-inner__item {
 		height: 120px;
 		width: 230px;
+		margin-left: 0;
 	}
 	.modal-inner__item img {
 		width: 100%;
