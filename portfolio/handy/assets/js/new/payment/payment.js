@@ -1,7 +1,4 @@
 jQuery(document).ready(function () {
-	jQuery('#payment-selector').select2({
-		minimumResultsForSearch: Infinity
-	});
 	jQuery('#Select1').trigger('click');
 });
 
@@ -16,30 +13,30 @@ if (jQuery('#checkbox-coupon').is(':checked')){
 jQuery('#checkbox-agree').click(function (){
 if (jQuery('#checkbox-agree').is(':checked')){
 	jQuery('.privacy-notAgree').hide('slide');
-	jQuery('.submit-btn').addClass('accepted');
+	jQuery('.first-btn').addClass('accepted');
 } else {
 	jQuery('.privacy-notAgree').show('slide');
-	jQuery('.submit-btn').removeClass('accepted');
+	jQuery('.first-btn').removeClass('accepted');
 }
 });
 
 jQuery('#checkbox-agree2').click(function (){
 if (jQuery('#checkbox-agree2').is(':checked')){
 	jQuery('.privacy-notAgree2').hide('slide');
-	jQuery('.submit-btn2').addClass('accepted');
+	jQuery('.second-btn').addClass('accepted');
 } else {
 	jQuery('.privacy-notAgree2').show('slide');
-	jQuery('.submit-btn2').removeClass('accepted');
+	jQuery('.second-btn').removeClass('accepted');
 }
 });
 
 jQuery('#checkbox-agree4').click(function (){
 if (jQuery('#checkbox-agree4').is(':checked')){
 	jQuery('.privacy-notAgree3').hide('slide');
-	jQuery('.submit-btn3').addClass('accepted');
+	jQuery('.third-btn').addClass('accepted');
 } else {
 	jQuery('.privacy-notAgree3').show('slide');
-	jQuery('.submit-btn3').removeClass('accepted');
+	jQuery('.third-btn').removeClass('accepted');
 }
 });
 
@@ -79,7 +76,6 @@ jQuery('#Choice5').click(function (){
 	jQuery('.form-not-available').removeClass('enabled');
 });
 
-
 function openModal(){
     jQuery(".modal-bg, .modal").addClass("enabled");
 }
@@ -91,10 +87,9 @@ jQuery('.modal-inner__item').click(function(){
 	jQuery(".modal, .modal-bg").removeClass("enabled");
 });
 
-
-$(window).resize(function (){
-	var width = $(window).width();
+jQuery(window).resize(function (){
+	var width = jQuery(window).width();
 	if (width < 1000) {
-		$('.modal-inner__items-wrapper').remove();
+		jQuery('.modal-inner__items-wrapper').remove();
 	}
 });
