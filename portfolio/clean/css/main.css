@@ -103,6 +103,7 @@ body {
 
 .content__inner_logo img {
     max-width: 440px;
+    pointer-events: none;
 }
 
 .content__inner {
