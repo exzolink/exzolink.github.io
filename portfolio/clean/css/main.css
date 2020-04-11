@@ -448,16 +448,17 @@ body {
         font-size: 27px;
         padding-left: 20px;
         padding-right: 20px;
+        margin-top: -15px;
     }
     .content__inner_inner {
         padding-left: 10px;
         padding-right: 10px;
-        max-height: 170px;
+        max-height: 185px;
     }
     .content__inner_wrap {
         padding-left: 10px;
         padding-right: 10px;
-        max-height: 185px;
+        max-height: 200px;
     }
 }
 
