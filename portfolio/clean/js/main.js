@@ -18,4 +18,9 @@ document.addEventListener('keydown', function (e) {
     }
   });
 
+  $('[data-fancybox="gallery"]').fancybox({
+      autoStart : true,
+      preventCaptionOverlap: false,
+  });
+
 });

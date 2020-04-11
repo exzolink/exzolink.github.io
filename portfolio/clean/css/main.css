@@ -185,6 +185,19 @@ body {
     margin-bottom: 10px;
 }
 
+.photo_img:hover {
+    cursor: pointer;
+    opacity: .9;
+}
+
+.fancybox-container {
+    height: 100vh !important;
+}
+
+.fancybox-active {
+    height: 100vh !important;
+}
+
 .feedback_img:last-child {
     margin-bottom: 0;
 }
