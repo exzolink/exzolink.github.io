@@ -439,10 +439,25 @@ body {
         min-height: auto;
     }
     .photo_img {
-        width: 175px;
+        width: 185px;
         max-width: max-content;
         min-height: auto;
-        height: 100px;
+        height: 110px;
+    }
+    .content__inner_item-desc {
+        font-size: 27px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .content__inner_inner {
+        padding-left: 10px;
+        padding-right: 10px;
+        max-height: 170px;
+    }
+    .content__inner_wrap {
+        padding-left: 10px;
+        padding-right: 10px;
+        max-height: 185px;
     }
 }
 
