@@ -8,7 +8,7 @@
 ::-webkit-scrollbar {
 	display: block;
     background: #222;
-    width: 10px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -36,6 +36,7 @@
 html, body {
     overflow-x: hidden;
     scrollbar-color: #333 #111;
+    scrollbar-width: none;
 }
 
 body {
