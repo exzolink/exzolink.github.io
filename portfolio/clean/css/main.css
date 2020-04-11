@@ -460,6 +460,9 @@ body {
         padding-right: 10px;
         max-height: 200px;
     }
+    .pro {
+        font-size: 24px;
+    }
 }
 
 @media screen and (max-width: 350px) {
