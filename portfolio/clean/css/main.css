@@ -352,7 +352,7 @@ body {
     }
     .pos-2 {
         top: -65px;
-        left: -50px;
+        left: -55px;
     }
     .pos-1 {
         top: -120px;
@@ -363,16 +363,16 @@ body {
         left: 385px;
     }
     .pos-4 {
-        top: 335px;
-        left: 385px;
+        top: 350px;
+        left: 380px;
     }
     .pos-5 {
         top: 450px;
-        left: 170px;
+        left: 160px;
     }
     .pos-6 {
-        left: -25px;
-        top: 360px;
+        left: -42px;
+        top: 350px;
     }
     .posd-gen {
         top: 50%;
