@@ -437,6 +437,12 @@ body {
     body {
         min-height: auto;
     }
+    .photo_img {
+        width: 175px;
+        max-width: max-content;
+        min-height: auto;
+        height: 100px;
+    }
 }
 
 @media screen and (max-width: 350px) {
