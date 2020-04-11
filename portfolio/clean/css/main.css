@@ -98,12 +98,12 @@ body {
     padding: 70px;
     padding-left: 0;
     border-radius: 100%;
+    pointer-events: none;
     border-right: 6px solid #fff;
 }
 
 .content__inner_logo img {
     max-width: 440px;
-    pointer-events: none;
 }
 
 .content__inner {
