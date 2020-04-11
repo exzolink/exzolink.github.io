@@ -100,10 +100,16 @@ body {
     border-radius: 100%;
     pointer-events: none;
     border-right: 6px solid #fff;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
 }
 
 .content__inner_logo img {
     max-width: 440px;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
 }
 
 .content__inner {
