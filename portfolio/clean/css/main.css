@@ -49,7 +49,7 @@ body {
     width: 100vw;
     min-height: 650px;
     color: #fff;
-    font-family: 'Aprille';
+    font-family: 'Aprille', serif;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
