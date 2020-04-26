@@ -196,6 +196,11 @@ i {
     justify-content: space-around;
 }
 
+.w100 {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
 .date__wrapper {
     position: relative;
     max-width: 410px;
