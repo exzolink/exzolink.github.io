@@ -3,27 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="keywords" content="pageproof, верстка, вёрстка, maxim, gromenkov, exzolink, верстальщик, frontend, front-end, dev, developer, development">
-<meta name="description" content="Welcome to my Portfolio!">
+<meta name="description" content="Приветствую! Я занимаюсь версткой сайтов и фронтенд-разработкой. На сайте вы можете посмотреть список моих работ и используемых мной технологий. Связаться со мной. Портфолио. exzolink">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="css/style_light.min.css">
-<title>Maxim Gromenkov - Portfolio</title>
+<title>Maxim Gromenkov (exzolink) | Portfolio</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-<div id="preload" class="preloader">
-<div class="preloader__row">
-<div class="preloader__item"></div>
-<div class="preloader__item"></div>
-</div>
-</div>
-<div class="back-wall">
-<a href="#header-anchor" class="button-up">
-<img class="button-up" src="images/up-button.svg" alt="UP">
+<a href="#header" class="button-up" style="display: inline;">
+<img class="button-up" src="images/up-button.svg" alt="UP" style="display: inline;">
 </a>
-</div>
 <div class="menu">
 <div class="mobile-menu">
-<a href="#header-anchor" aria-label="Homepage" class="header-logo"><img src="images/logo.png" alt="Gromenkov" class="header-logo no-margin-left"></a>
+<a href="#header" aria-label="Homepage" class="header-logo"><img src="images/logo.png" alt="Gromenkov" class="header-logo no-margin-left"></a>
 <div class="close-rightside">
 <div class="theme-toggle"><img src="images/lamp.png" alt="" class="lamp theme-toggle">
 <input type="checkbox" id="theme-toggler"><label for="theme-toggler"></label>
@@ -32,9 +24,9 @@
 </div>
 </div>
 <div class="menu-link sector">Разделы</div>
-<a href="#portfolio-anchor" class="menu-link">Портфолио</a>
-<a href="#skills-anchor" class="menu-link">Навыки</a>
-<a href="#contact-anchor" class="menu-link">Связаться со мной</a>
+<a href="#portfolio" class="menu-link">Портфолио</a>
+<a href="#skills" class="menu-link">Навыки</a>
+<a href="#contact" class="menu-link">Связаться со мной</a>
 <div class="mobile-menu-social">
 <a href="https://vk.com/exzolink" target="_blank" rel="nofollow noopener" class="vk-icon icons no-margin-left"><i class="fab fa-vk fa-lg"></i></a>
 <a href="mailto:exzolink@gmail.com" target="_blank" rel="nofollow noopener" class="gmail-icon icons"><i class="fas fa-envelope fa-lg"></i></a>
@@ -42,7 +34,6 @@
 </div>
 </div>
 <main class="container">
-<div tooltip="Sidebar" class="sidebar-close"><img class="close-button-sidebar" src="images/close-sidebar.png" width="32" height="32" alt=""></div>
 <aside id="styleTag" class="sidebar">
 <div class="sidebar-fixed">
 <div class="sidebar-inner">
@@ -58,19 +49,19 @@
 <div class="sidebar-about">
 <h2 class="about-title">Обо мне</h2>
 <p class="about-ph">Здравствуйте. Я занимаюсь версткой сайтов (лендинги, визитки и др.). Стараюсь следить за профессиональными трендами и использовать только самые передовые технологии и решения. Люблю заморачиваться над деталями и сложными задачами. Работу выполняю с душой, а<br>потому - качественно.</p>
-<a href="#contact-anchor" class="msg-btn">Написать мне</a>
+<a href="#contact" class="msg-btn">Написать мне</a>
 </div>
 </div>
 </aside>
-<div id="header-anchor" class="subcontainer">
+<div id="header" class="subcontainer">
 <section class="header-sticky">
 <header class="header">
-<a href="#header-anchor" aria-label="Homepage" class="header-logo"><img src="images/logo.png" alt="Gromenkov" class="header-logo no-margin-left"></a>
+<a href="#header" aria-label="Homepage" class="header-logo"><img src="images/logo.png" alt="Gromenkov" class="header-logo no-margin-left"></a>
 <nav class="nav">
-<a href="#header-anchor" class="nav-link nl-item1">Главная</a>
-<a href="#portfolio-anchor" class="nav-link nl-item2">Портфолио</a>
-<a href="#skills-anchor" class="nav-link nl-item3">Навыки</a>
-<a href="#contact-anchor" class="nav-link nl-item4">Связаться</a>
+<a href="#header" class="nav-link nl-item1">Главная</a>
+<a href="#portfolio" class="nav-link nl-item2">Портфолио</a>
+<a href="#skills" class="nav-link nl-item3">Навыки</a>
+<a href="#contact" class="nav-link nl-item4">Связаться</a>
 </nav>
 <div class="header-rightside-btns">
 <div class="theme-toggle"><img src="images/lamp.png" alt="" class="lamp theme-toggle">
@@ -87,7 +78,9 @@
 </div>
 <div class="welcome-title">
 <div class="welcome-title-glitch">
-<h1 class="welcome-glitch margin-right" data-text="<Верстка>"><верстка></верстка></h1>
+<h1 class="welcome-glitch margin-right" data-text="<Верстка>">
+<верстка>
+</верстка></h1>
 <h2 class="welcome-glitch" data-text="&">&</h2>
 <h1 class="welcome-glitch margin-left" data-text="{FrontEnd}">{FrontEnd}</h1>
 </div>
@@ -95,62 +88,65 @@
 <h3 class="welcome-ph"><span class="welcome-ph-dot">.</span>Портфолио</h3>
 </div>
 </section>
-<section id="portfolio-anchor" class="portfolio">
+<section id="portfolio" class="portfolio">
 <h3 class="text-skills title-portfolio">Мои работы<i class="fas fa-briefcase fa-1x icon-margin-left"></i></h3>
 <div class="portfolio-cards-container adaptive-width">
 <div class="portfolio-card adaptive-width">
-<div class="portfolio-img-block"><a href="https://exzolink.github.io/portfolio/selitra" target="_blank" rel="nofollow noopener"><img src="images/example-selitra-lq.jpg" data-src="images/example-selitra.png" class="portfolio-img lazy"></a></div>
+<div class="portfolio-img-block"><a href="portfolio/selitra" target="_blank" rel="nofollow noopener"><img src="images/example-selitra-lq.jpg" data-src="images/example-selitra.png" class="portfolio-img lazy"></a></div>
 <div class="portfolio-text">
 <div class="portfolio-title">Лендинг СЕЛIТРА</div>
 <div class="portfolio-par">Адаптивная и кроссбраузерная<br>верстка лендинга</div>
-<a href="https://exzolink.github.io/portfolio/selitra" class="portfolio-btn" target="_blank" rel="nofollow noopener">Перейти</a>
+<a href="portfolio/selitra" class="portfolio-btn" target="_blank" rel="nofollow noopener">Перейти</a>
 </div>
 </div>
 <div class="portfolio-card mirror adaptive-width">
-<div class="portfolio-img-block"><a target="_blank" rel="nofollow noopener" href="https://exzolink.github.io/portfolio/dartservice"><img src="images/example-min-lq.jpg" data-src="images/example-min.png" class="portfolio-img lazy"></a></div>
+<div class="portfolio-img-block"><a target="_blank" rel="nofollow noopener" href="portfolio/dartservice"><img src="images/example-min-lq.jpg" data-src="images/example-min.png" class="portfolio-img lazy"></a></div>
 <div class="portfolio-text mirror">
 <div class="portfolio-title">Лендинг Dart Service Manager</div>
 <div class="portfolio-par">Адаптивная и кроссбраузерная<br>верстка лендинга</div>
-<a href="https://exzolink.github.io/portfolio/dartservice" class="portfolio-btn" target="_blank" rel="nofollow noopener">Перейти</a>
+<a href="portfolio/dartservice" class="portfolio-btn" target="_blank" rel="nofollow noopener">Перейти</a>
 </div>
 </div>
 <div class="portfolio-card adaptive-width">
 <div class="portfolio-img-block"><a href=""><img src="images/none-image-lq.jpg" data-src="images/none-image.jpg" class="portfolio-img lazy"></a></div>
 <div class="portfolio-text">
 <div class="portfolio-title">WIP</div>
-<div class="portfolio-par">Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
+<div class="portfolio-par">Lorem ipsum dolor sit amet, consectetur adipisicing elit
+</div>
 <a href="" class="portfolio-btn portfolio-margin-left">Перейти</a>
 </div>
 </div>
 <div class="portfolio-card mirror adaptive-width">
-<div class="portfolio-img-block"><a target="_blank" rel="nofollow noopener" href="https://exzolink.github.io/portfolio/salatik"><img data-src="images/example-salatik.png" src="images/example-salatik-lq.jpg" class="portfolio-img lazy"></a></div>
+<div class="portfolio-img-block"><a target="_blank" rel="nofollow noopener" href="portfolio/salatik"><img data-src="images/example-salatik.png" src="images/example-salatik-lq.jpg" class="portfolio-img lazy"></a></div>
 <div class="portfolio-text portfolio-margin-right mirror">
 <div class="portfolio-title">Блог SALATIK</div>
 <div class="portfolio-par">Адаптивная и кроссбраузерная<br>верстка блога</div>
-<a target="_blank" rel="nofollow noopener" href="https://exzolink.github.io/portfolio/salatik" class="portfolio-btn portfolio-margin-left">Перейти</a>
+<a target="_blank" rel="nofollow noopener" href="portfolio/salatik" class="portfolio-btn portfolio-margin-left">Перейти</a>
 </div>
 </div>
 <div class="portfolio-card no-margin-bottom adaptive-width">
-<div class="portfolio-img-block"><a href="https://exzolink.github.io/portfolio/erobueno" target="_blank" rel="nofollow noopener"><img src="images/example-erobueno-lq.jpg" data-src="images/example-erobueno.png" class="portfolio-img lazy"></a></div>
+<div class="portfolio-img-block"><a href="portfolio/erobueno" target="_blank" rel="nofollow noopener"><img src="images/example-erobueno-lq.jpg" data-src="images/example-erobueno.png" class="portfolio-img lazy"></a></div>
 <div class="portfolio-text">
 <div class="portfolio-title">Интернет-магазин EroBueno</div>
-<div class="portfolio-par">Адаптивная и кроссбраузерная<br>верстка интернет-магазина</div>
-<a target="_blank" rel="nofollow noopener" href="https://exzolink.github.io/portfolio/erobueno" class="portfolio-btn">Перейти</a>
+<div class="portfolio-par">Адаптивная и кроссбраузерная<br>верстка интернет-магазина
+</div>
+<a target="_blank" rel="nofollow noopener" href="portfolio/erobueno" class="portfolio-btn">Перейти</a>
 </div>
 </div>
 <div class="portfolio-card mirror no-margin-bottom adaptive-width">
-<div class="portfolio-img-block"><a href=""><img src="images/none-image-lq.jpg" data-src="images/none-image.jpg" class="portfolio-img lazy"></a></div>
+<div class="portfolio-img-block"><a href="portfolio/clean" target="_blank" rel="nofollow noopener"><img src="images/none-image-lq.jpg" data-src="images/none-image.jpg" class="portfolio-img lazy"></a></div>
 <div class="portfolio-text mirror">
-<div class="portfolio-title">WIP</div>
-<div class="portfolio-par">Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
-<a href="" class="portfolio-btn">Перейти</a>
+<div class="portfolio-title">Сайт-визитка genCLEANman</div>
+<div class="portfolio-par">Адаптивная и кроссбраузерная<br>верстка сайта-визитки
+</div>
+<a href="portfolio/clean" target="_blank" rel="nofollow noopener" class="portfolio-btn">Перейти</a>
 </div>
 </div>
 </div>
 <div class="portfolio-slider-arrows">
 </div>
 </section>
-<section id="skills-anchor" class="skills">
+<section id="skills" class="skills">
 <h3 class="text-skills">Мои навыки<i class="fas fa-code fa-1x icon-margin-left"></i></h3>
 <div class="prof-skills adaptive-width">
 <div class="progress-block">
@@ -202,18 +198,24 @@
 </div>
 </div>
 </section>
-<section id="contact-anchor" class="contact">
+<section id="contact" class="contact">
 <h3 class="text-skills">Связаться со мной<i class="fas fa-user fa-1x icon-margin-left"></i></h3>
 <div class="contact-container adaptive-width">
 <div class="contact-social">
 <div class="contact-social-block">
 <h4 class="contact-social-block-title">Социальные сети</h4>
-<div class="contact-social-block-par contact-margin-bottom"><p class="contact-social-block-par-first"><i class="fab fa-vk fa-lg contact-icons vk-icon"></i>VK</p><a class="contact-link" href="https://vk.com/exzolink" target="_blank" rel="nofollow noopener">vk.com/exzolink</a></div>
-<div class="contact-social-block-par"><p class="contact-social-block-par-first"><i class="fab fa-telegram-plane fa-lg contact-icons tg-icon"></i>Telegram</p><a class="contact-link" href="tg://resolve?domain=exzolink" target="_blank" rel="nofollow noopener">exzolink</a></div>
+<div class="contact-social-block-par contact-margin-bottom">
+<p class="contact-social-block-par-first"><i class="fab fa-vk fa-lg contact-icons vk-icon"></i>VK</p><a class="contact-link" href="https://vk.com/exzolink" target="_blank" rel="nofollow noopener">vk.com/exzolink</a>
+</div>
+<div class="contact-social-block-par">
+<p class="contact-social-block-par-first"><i class="fab fa-telegram-plane fa-lg contact-icons tg-icon"></i>Telegram</p><a class="contact-link" href="tg://resolve?domain=exzolink" target="_blank" rel="nofollow noopener">exzolink</a>
+</div>
 </div>
 <div class="contact-social-block">
 <h4 class="contact-social-block-title">Электронная почта</h4>
-<div class="contact-social-block-par"><p class="contact-social-block-par-first"><i class="fas fa-envelope fa-lg contact-icons gmail-icon"></i>Mail</p><a class="contact-link" href="mailto:exzolink@gmail.com" target="_blank" rel="nofollow noopener">exzolink@gmail.com</a></div>
+<div class="contact-social-block-par">
+<p class="contact-social-block-par-first"><i class="fas fa-envelope fa-lg contact-icons gmail-icon"></i>Mail</p><a class="contact-link" href="mailto:exzolink@gmail.com" target="_blank" rel="nofollow noopener">exzolink@gmail.com</a>
+</div>
 </div>
 </div>
 <div data-aos="zoom-in" data-aos-duration="600" class="contact-form">
@@ -239,13 +241,17 @@
 </div>
 </section>
 <footer class="footer">
-<h4 class="footer-text"><span class="copyright">©</span>Maxim Gromenkov, 2019</h4>
+<h4 class="footer-text"><span class="copyright">©</span>Maxim Gromenkov, 2020</h4>
 </footer>
 </div>
 </main>
 <script src="https://code.jquery.com/jquery-1.11.0.min.js" integrity="sha256-spTpc4lvj4dOkKjrGokIrHkJgNA0xMS98Pw9N7ir9oI=" crossorigin="anonymous"></script>
 <script src="js/main.min.js"></script>
 <script async src="https://kit.fontawesome.com/a365e4a8ae.js" crossorigin="anonymous"></script>
-<script>if(1025<window.innerWidth)window.onload=function(){document.body.classList.add("loaded_hiding"),document.getElementsByClassName("preloader")[0].style="padding: 0",document.documentElement.style.overflowY="visible",window.setTimeout(function(){document.body.classList.add("loaded"),document.body.classList.remove("loaded_hiding")},200)};else{var elem=document.getElementById("preload");document.documentElement.style.overflowY="visible",elem.parentNode.removeChild(elem)}function isIE(){var e=navigator.userAgent.toLowerCase();return-1!=e.indexOf("msie")||-1!=e.indexOf("trident")}isIE()&&(document.documentElement.style.display="none",alert("Internet Explorer is NOT supported\nPlease, download modern browser"))</script>
+<script type="text/javascript">!function(e,t,a,n,c,m,r){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date,m=t.createElement(a),r=t.getElementsByTagName(a)[0],m.async=1,m.src="https://mc.yandex.ru/metrika/tag.js",r.parentNode.insertBefore(m,r)}(window,document,"script"),ym(56697964,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0})</script>
+<noscript>
+<div><img src="https://mc.yandex.ru/watch/56697964" style="position:absolute; left:-9999px;" alt=""></div>
+</noscript>
+<script>isIE()&&(document.documentElement.style.display="none",alert("Internet Explorer is NOT supported\nPlease, download modern browser"))</script>
 </body>
 </html>
