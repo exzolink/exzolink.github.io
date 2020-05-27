@@ -253,5 +253,23 @@
 <script src="js/modernizr-custom.js"></script>
 <script>var mySwiper=new Swiper(".swiper-container",{autoplay:{delay: 3000,},preloadImages:!1,watchSlidesVisibility:!0,lazy:{loadOnTransitionStart:!0},slidesPerView:3,spaceBetween:18,breakpoints:{320:{slidesPerView:1,spaceBetween:10},500:{slidesPerView:2,spaceBetween:15},700:{slidesPerView:3,spaceBetween:18}},direction:"horizontal",keyboard:{enabled:!0},mousewheel:!0,scrollbar:{el:".swiper-scrollbar",hide:!1,draggable:!0}})</script>
 <script>$(document).ready(function(){$("#btn_submit").click(function(){var e=$("#user_name").val(),r=$("#user_phone").val(),n=$("#user_comment").val();$.ajax({url:"send.php",type:"post",data:{user_name:e,user_phone:r,user_comment:n},error:function(){$(".form-result").html("Произошла ошибка!")},success:function(e){$(".form-result").show(),$(".form-result p").html(e)}})})})</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (m, e, t, r, i, k, a) {
+m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+})
+(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+ym(56697964, "init", {
+clickmap: true,
+trackLinks: true,
+accurateTrackBounce: true
+});
+</script>
+<noscript>
+<div><img src="https://mc.yandex.ru/watch/56697964" style="position:absolute; left:-9999px;" alt="" /></div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
 </body>
 </html>
