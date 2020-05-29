@@ -1,0 +1,175 @@
+.main {
+    background-color: $bg-color;
+}
+
+.homepage {
+    background-color: $frontpage-color;
+    min-height: 800px;
+    background-image: url('../imgs/bg_header.jpg');
+    background-position: 80% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &__inner {
+        min-height: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__title {
+        font-size: 90px;
+        letter-spacing: -2px;
+        line-height: 1.2;
+    }
+
+    &__subtitle {
+        font-size: 65px;
+        letter-spacing: -2px;
+        line-height: 1.2;
+    }
+
+    &__desc {
+        color: $desc-color;
+        line-height: 28px;
+        max-width: 600px;
+    }
+
+    &__motto {
+        font-size: 26px;
+        font-weight: 500;
+        color: $active-color;
+        display: block;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        letter-spacing: 6px;
+
+        &:before {
+            content: "";
+            background: $desc-color;
+            height: 3px;
+            float: left;
+            width: 60px;
+            margin-top: 18px;
+            margin-right: 12px;
+        }
+    }
+
+    &__btn {
+        background: $active-color;
+        color: $frontpage-color;
+        border: 2px solid $active-color;
+        width: max-content;
+        margin-top: 40px;
+
+        &:hover {
+            background-color: transparent;
+            color: $title-color;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1366px) {
+    .homepage {
+        background-position: 100% 50%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .homepage {
+
+        &__title {
+            font-size: 60px;
+        }
+
+        &__subtitle {
+            font-size: 50px;
+        }
+
+        &__motto {
+            font-size: 20px;
+            letter-spacing: 4px;
+
+            &:before {
+                margin-top: 14px;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .homepage {
+        &__title {
+            font-size: 50px;
+        }
+
+        &__subtitle {
+            font-size: 40px;
+        }
+        min-height: auto;
+        height: 86vh;
+        &__inner {
+            min-height: auto;
+            height: 86vh;
+
+        }
+    }
+}
+
+
+@media screen and (max-width: 535px) {
+    .homepage {
+        &__motto {
+            &:before {
+                display: none;
+            }
+        }
+
+        &__title {
+            font-size: 40px;
+            letter-spacing: normal;
+        }
+
+        &__subtitle {
+            font-size: 30px;
+            letter-spacing: normal;
+        }
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .homepage {
+
+        &__title {
+            font-size: 36px;
+        }
+
+        &__subtitle {
+            font-size: 26px;
+        }
+        &__desc {
+            font-size: 14px;
+            line-height: 26px;
+        }
+        &__motto {
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .homepage {
+        &__subtitle {
+            font-size: 24px;
+        }
+        &__motto {
+            font-size: 14px;
+        }
+    }
+}

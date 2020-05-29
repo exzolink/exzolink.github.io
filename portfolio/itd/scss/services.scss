@@ -1,0 +1,143 @@
+.services {
+    position: relative;
+
+    &:before {
+        content: '';
+        background-color: $active-color;
+        height: 60px;
+        width: 2px;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+    }
+
+    &__inner {
+        padding: 150px 0;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 55px;
+        padding-bottom: 30px;
+    }
+
+    &__desc {
+        color: $desc-color;
+        line-height: 28px;
+    }
+
+    &__wrapper {
+        text-align: left;
+        margin-top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .icon_wrapper {
+        transition: all .3s ease;
+    }
+
+    &__item {
+        margin-bottom: 45px;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 48%;
+        background-color: $services-item;
+        transition: .3s;
+
+        &:hover {
+            box-shadow: 1px 2px 15px 5px rgba(219, 219, 219, 0.11);
+
+            & .icon_wrapper {
+                transform: translateY(-15px);
+                color: $active-color;
+            }
+
+            & .services__item_desc {
+                transform: translateY(-10px);
+            }
+
+            & .services__item_title {
+                transform: translateY(-10px);
+            }
+        }
+
+        &_inner {
+            padding: 75px;
+        }
+
+
+        &_title {
+            font-family: 'Roboto', sans-serif;
+            margin-top: 30px;
+            font-size: 28px;
+            line-height: 1.5;
+            transition: 700ms cubic-bezier(0.17, 0.67, 0, 1.01);
+        }
+
+        &_desc {
+            margin-top: 20px;
+            font-size: 18px;
+            color: $desc-color;
+            line-height: 1.6;
+            transition: 700ms cubic-bezier(0.17, 0.67, 0, 1.01);
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .services__item {
+
+        &_inner {
+            padding: 50px;
+        }
+
+        &_desc {
+            font-size: 16px;
+        }
+
+        &_title {
+            font-size: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .services__item {
+        flex-basis: 100%;
+
+        &_inner {
+            padding: 80px;
+        }
+        
+        &_desc {
+            font-size: 20px;
+        }
+
+        &_title {
+            font-size: 32px;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .services {
+        &__desc {
+            font-size: 14px;
+            line-height: 26px;
+        }
+        &__item_inner {
+            padding: 40px;
+        }
+        &__item_desc {
+            font-size: 16px;
+            line-height: 26px;
+        }
+        &__item_title {
+            font-size: 24px;
+        }
+    }
+}
