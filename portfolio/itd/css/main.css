@@ -94,6 +94,10 @@ body {
   color: #000;
 }
 
+.active {
+  color: #FDF34F;
+}
+
 @media screen and (max-width: 1000px) {
   .nav {
     display: none;
