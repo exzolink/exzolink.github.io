@@ -4,14 +4,14 @@
 
 .homepage {
     background-color: $frontpage-color;
-    min-height: 800px;
+    min-height: 850px;
     background-image: url('../imgs/bg_header.jpg');
     background-position: 80% 50%;
     background-repeat: no-repeat;
     background-size: contain;
 
     &__inner {
-        min-height: 800px;
+        min-height: 850px;
         display: flex;
         flex-direction: column;
         justify-content: center;

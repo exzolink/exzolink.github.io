@@ -1,0 +1,227 @@
+.news {
+    position: relative;
+
+    &:before {
+        content: '';
+        background-color: $active-color;
+        height: 60px;
+        width: 2px;
+        position: absolute;
+        top: 40px;
+        left: 50%;
+    }
+
+    &__icon {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        font-size: 3em;
+        left: 50%;
+        opacity: 0;
+        transition: opacity .6s ease;
+        z-index: 2;
+    }
+
+    &__inner {
+        padding: 150px 0;
+        padding-bottom: 0;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 55px;
+        padding-bottom: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    &__desc {
+        color: $desc-color;
+        line-height: 28px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    &__wrapper {
+        display: flex;
+    }
+    .swiper-button-next, .swiper-button-prev {
+        top: 47%;
+    }
+
+    &__slide {
+
+
+        &_title {
+            padding-bottom: 30px;
+            padding-top: 10px;
+            font-size: 22px;
+            font-weight: 700;
+            transition: all .5s ease;
+        }
+
+        &_tag,
+        &_date {
+            transition: 700ms cubic-bezier(0.17, 0.67, 0, 1.01);
+            font-family: 'Roboto';
+            font-weight: 700;
+
+        }
+
+        &_tag {
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+    }
+
+    &__item_inner {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+    &__link {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &__item_filler {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: $frontpage-color;
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: grayscale(1);
+        background-position: 50%;
+        transition: all .8s ease;
+    }
+
+    &__container {
+        margin-top: 100px;
+        padding-bottom: 75px;
+    }
+
+    &__slide {
+        position: relative;
+        height: 600px;
+
+        &:hover .news__item_filler {
+            filter: none;
+        }
+
+        &:hover .news__slide_tag {
+            transform: translateY(-15px);
+        }
+
+        &:hover .news__slide_date {
+            transform: translateY(-15px);
+        }
+
+        &:hover .news__slide_title {
+            transform: translateY(-10px);
+        }
+
+        &:hover .news__icon {
+            opacity: 1;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 1366px) {
+    .news {
+
+        &__slide {
+            height: 33vw;
+        }
+
+        &__icon {
+            font-size: 2em;
+            top: 40%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .news {
+
+        &__slide {
+            height: 50vw;
+        }
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .news {
+
+        &__slide_title {
+            font-size: 20px;
+        }
+
+        &__slide_date,
+        &__slide_tag {
+            font-size: 14px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            transform: scale(.7);
+        }
+
+        &__icon {
+            top: 35%;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .news {
+
+        &__slide {
+            height: 70vw;
+        }
+
+        .swiper-button-next, .swiper-button-prev {
+            display: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .news {
+        &__desc {
+        font-size: 14px;
+        line-height: 26px;
+        }
+       
+        &__icon {
+            top: 30%;
+            font-size: 1.5;
+        }
+        &__slide_title {
+            padding-bottom: 20px;
+            font-size: 18px;
+        }
+        .swiper-pagination-bullet {
+            width: 14px;
+            height: 14px;
+        }
+        &__container {
+            padding-bottom: 65px;
+        }
+    }
+}

@@ -18,6 +18,9 @@ body {
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     background-color: $frontpage-color;
+    overflow-x: hidden;
+    cursor: default;
+    box-sizing: border-box;
 }
 
 .container {
@@ -28,6 +31,10 @@ body {
     color: $title-color;
 }
 
+.container-full {
+    color: $title-color;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -35,7 +42,7 @@ body {
     width: 100%;
     padding: 18px 0;
     color: $desc-color;
-    z-index: 1;
+    z-index: 10;
     background-color: $frontpage-color-opacity;
 
     &__inner {
@@ -113,7 +120,7 @@ body {
 }
 
 .active {
-    color: $active-color;
+    color: $active-color !important;
 }
 
 
