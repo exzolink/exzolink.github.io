@@ -145,11 +145,11 @@
     .homepage {
 
         &__title {
-            font-size: 36px;
+            font-size: 42px;
         }
 
         &__subtitle {
-            font-size: 26px;
+            font-size: 32px;
         }
         &__desc {
             font-size: 14px;
@@ -165,9 +165,6 @@
 
 @media screen and (max-width: 350px) {
     .homepage {
-        &__subtitle {
-            font-size: 24px;
-        }
         &__motto {
             font-size: 14px;
         }
