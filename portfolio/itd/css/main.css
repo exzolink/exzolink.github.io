@@ -95,6 +95,7 @@ body {
   position: relative;
   text-transform: uppercase;
   font-family: "Poppins";
+  text-decoration: none;
 }
 .button:hover {
   cursor: pointer;
@@ -427,7 +428,7 @@ body {
   height: 60px;
   width: 2px;
   position: absolute;
-  top: 70px;
+  top: 100px;
   left: 50%;
 }
 .news__icon {
@@ -441,7 +442,7 @@ body {
   z-index: 2;
 }
 .news__inner {
-  padding: 180px 0;
+  padding: 220px 0;
   padding-bottom: 0;
   text-align: center;
 }
@@ -603,10 +604,20 @@ body {
   top: 30px;
   left: 50%;
 }
+.form__btn {
+  background-color: #FDF34F;
+  padding: 12px 36px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  color: #000;
+}
+.form__btn:hover {
+  color: #fff;
+  background-color: transparent;
+}
 .form__inner {
   padding: 180px 0;
   padding-bottom: 0;
-  align-items: center;
   text-align: center;
   display: flex;
 }
@@ -615,7 +626,6 @@ body {
   display: flex;
   flex-direction: column;
   text-align: left;
-  padding: 60px 0;
 }
 .form__info_title {
   font-size: 55px;
@@ -790,6 +800,10 @@ body {
   margin-bottom: 30px;
 }
 
+.flex {
+  display: flex;
+}
+
 @media screen and (max-width: 1230px) {
   .form__inner {
     padding-top: 100px;
@@ -797,6 +811,7 @@ body {
   }
   .form__info {
     align-items: center;
+    padding: 60px 0;
   }
   .form__info_desc {
     max-width: 600px;
@@ -846,5 +861,168 @@ body {
   }
   .form__fields_textarea {
     font-size: 14px;
+  }
+}
+body {
+  background-color: #101010;
+}
+
+.s__header {
+  text-align: center;
+}
+.s__title {
+  color: #fff;
+  margin-top: 15px;
+  font-size: 55px;
+}
+.s__desc {
+  color: #aaa;
+  max-width: 600px;
+  text-align: center;
+  margin: 30px auto;
+}
+.s__btn {
+  margin-top: 15px;
+  background-color: #FDF34F;
+  border: 2px solid #FDF34F;
+  color: #000;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.s__btn:hover {
+  background-color: transparent;
+  cursor: pointer;
+  color: #fff;
+}
+
+.about {
+  position: relative;
+}
+.about:before {
+  content: "";
+  background-color: #FDF34F;
+  height: 60px;
+  width: 2px;
+  position: absolute;
+  top: 90px;
+  left: 50%;
+}
+.about__inner {
+  padding: 240px 0;
+  padding-bottom: 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.about__photo {
+  height: 100%;
+  filter: grayscale(1);
+  width: 100%;
+  background-image: url("../imgs/about.jpg");
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+.about__photo_inner {
+  position: relative;
+  flex-basis: 35%;
+  height: 600px;
+}
+.about__photo_bg {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  bottom: -20px;
+  right: -20px;
+  z-index: 1;
+  background-color: #FDF34F;
+}
+.about__info {
+  flex-basis: 65%;
+  padding-left: 80px;
+}
+.about__title {
+  font-size: 55px;
+  margin-bottom: 30px;
+}
+.about__desc {
+  color: #aaa;
+  font-size: 22px;
+  line-height: 36px;
+}
+
+.bio__inner {
+  flex-direction: row-reverse;
+  padding-top: 100px;
+}
+.bio__info {
+  padding-left: 0;
+  padding-right: 80px;
+}
+.bio__photo {
+  background-repeat: no-repeat;
+  background-image: url("../imgs/bio.jpg");
+}
+.bio__photo_inner {
+  height: 500px;
+}
+.bio__photo_bg {
+  bottom: -20x;
+  left: -20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .about__desc {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .about__info {
+    flex-basis: 55%;
+    padding-left: 40px;
+  }
+  .about__photo_inner {
+    flex-basis: 45%;
+  }
+
+  .bio__info {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .about__desc {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .about__info {
+    padding: 0;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .about__photo {
+    height: 400px;
+    width: 300px;
+  }
+  .about__photo_bg {
+    top: -10px;
+    right: -10px;
+  }
+  .about__inner {
+    flex-direction: column;
+  }
+
+  .bio__photo_bg {
+    left: -10px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .about__title {
+    font-size: 50px;
+  }
+  .about__desc {
+    font-size: 14px;
+    line-height: 26px;
   }
 }

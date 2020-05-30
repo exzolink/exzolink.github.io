@@ -28,7 +28,7 @@
                         <a href="#news" class="nav__link">News</a>
                         <a href="#refs" class="nav__link">References</a>
                     </nav>
-                    <button class="button nav__btn">Get A Quote</button>
+                    <a href="#getquote" class="button nav__btn">Get A Quote</a>
                     <div class="header__menu"><i class="fas fa-bars fa-2x"></i></div>
                 </div>
             </div>
@@ -61,7 +61,7 @@
                             IT Diversity is a Woman and Minority Owned Business Enterprise (WBE, MBE)
                             focused on enhancing IT Diversity Spend within Corporations.
                         </p>
-                        <div class="button homepage__btn">Get A Quote</div>
+                        <a href="#getquote" class="button homepage__btn">Get A Quote</a>
                     </div>
                 </div>
             </section>
@@ -150,7 +150,7 @@
                 </div>
             </section>
             <section id="quote" class="form">
-                <div class="container">
+                <div id="getquote" class="container">
                     <div class="form__inner">
                         <div class="form__info">
                             <h3 class="form__info_title">Get In Touch</h3>
@@ -169,89 +169,109 @@
                             </div>
                         </div>
                         <div class="form__fields">
-                            <form class="form_form" action="">
-                                <input class="form__fields_input fb-100" type="text" placeholder="Your Name">
-                                <input class="form__fields_input" type="text" placeholder="Your Company">
-                                <input class="form__fields_input" type="text" placeholder="Your Phone">
-                                <input class="form__fields_input" type="email" placeholder="Your Email">
-                                <input class="form__fields_input" type="text" placeholder="Your Company Website">
-                                <textarea name="" class="form__fields_textarea"
+                            <form enctype="multipart/form-data" class="form_form" action="form.php" method="POST">
+                                <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+                                <input class="form__fields_input fb-100" type="text" name="name"
+                                    placeholder="Your Name">
+                                <input class="form__fields_input" name="company" type="text" placeholder="Your Company">
+                                <input class="form__fields_input" name="phone" type="text" placeholder="Your Phone">
+                                <input class="form__fields_input" name="email" type="email" placeholder="Your Email"
+                                    required>
+                                <input class="form__fields_input" name="website" type="text"
+                                    placeholder="Your Company Website">
+                                <textarea name="description" class="form__fields_textarea"
                                     placeholder="Describe Request Further"></textarea>
-                                <input class="form__fields_input no-border" type="file" name="upload">
+                                <input class="form__fields_input no-border" type="file" name="file">
                                 <p class="form__fields_title">Product</p>
                                 <div class="form__fields_wrapper">
 
                                     <div class="form__fields__products_wrapper">
                                         <p class="form__fields__products_title">Broadband (Pt to Pt)</p>
-                                        <select name="" id="" class="form__fields__products_select">
-                                            <option value="" class="form__field__products_option">Broadband Speed
+                                        <select name="Broadband" id="" class="form__fields__products_select">
+                                            <option value="BroadbandSpeed" class="form__field__products_option">
+                                                Broadband Speed
                                             </option>
-                                            <option value="" class="form__field__products_option">Broadband A Location
+                                            <option value="BroadBandALoc" class="form__field__products_option">Broadband
+                                                A Location
                                             </option>
-                                            <option value="" class="form__field__products_option">Broadband Z Location
+                                            <option value="BroadBandZLoc" class="form__field__products_option">Broadband
+                                                Z Location
                                             </option>
                                         </select>
                                     </div>
                                     <div class="form__fields__products_wrapper">
                                         <p class="form__fields__products_title">Internet Access</p>
-                                        <select name="" id="" class="form__fields__products_select">
-                                            <option value="" class="form__field__products_option">IP Speed
+                                        <select name="InternetAccess" id="" class="form__fields__products_select">
+                                            <option value="IPSpeed" class="form__field__products_option">IP Speed
                                             </option>
-                                            <option value="" class="form__field__products_option">IP A Location
+                                            <option value="IPALoc" class="form__field__products_option">IP A Location
                                             </option>
                                         </select>
                                     </div>
                                     <div class="form__fields__products_wrapper">
                                         <p class="form__fields__products_title">Broadband Management</p>
-                                        <select name="" id="" class="form__fields__products_select">
-                                            <option value="" class="form__field__products_option">TEM
+                                        <select name="BroadbandManagement" id="" class="form__fields__products_select">
+                                            <option value="TEM" class="form__field__products_option">TEM
                                             </option>
-                                            <option value="" class="form__field__products_option">Network Optimization
+                                            <option value="NetworkOpt" class="form__field__products_option">Network
+                                                Optimization
                                             </option>
-                                            <option value="" class="form__field__products_option">Benchmarking
+                                            <option value="Benchmarking" class="form__field__products_option">
+                                                Benchmarking
                                             </option>
-                                            <option value="" class="form__field__products_option">Order Desk
+                                            <option value="OrderDesk" class="form__field__products_option">Order Desk
                                             </option>
                                         </select>
                                     </div>
                                     <div class="form__fields__products_wrapper">
                                         <p class="form__fields__products_title">IT Infrastructure</p>
-                                        <select name="" id="" class="form__fields__products_select">
-                                            <option value="" class="form__field__products_option">VoIP
+                                        <select name="ITInfrastructure" id="" class="form__fields__products_select">
+                                            <option value="VoIP" class="form__field__products_option">VoIP
                                             </option>
-                                            <option value="" class="form__field__products_option">Data Center
+                                            <option value="DataCenter" class="form__field__products_option">Data Center
                                             </option>
-                                            <option value="" class="form__field__products_option">Cloud
+                                            <option value="Cloud" class="form__field__products_option">Cloud
                                             </option>
-                                            <option value="" class="form__field__products_option">Hardware
+                                            <option value="Hardware" class="form__field__products_option">Hardware
                                             </option>
-                                            <option value="" class="form__field__products_option">Sofware
+                                            <option value="Software" class="form__field__products_option">Sofware
                                             </option>
-                                            <option value="" class="form__field__products_option">Security Services
+                                            <option value="SecurityServices" class="form__field__products_option">
+                                                Security Services
                                             </option>
                                         </select>
                                     </div>
                                     <div class="form__fields__products_wrapper">
                                         <p class="form__fields__products_title">Staff Augmentation</p>
-                                        <select name="" id="" class="form__fields__products_select">
-                                            <option value="" class="form__field__products_option">Strategic Sourcing
+                                        <select name="StaffAug" id="" class="form__fields__products_select">
+                                            <option value="RFP" class="form__field__products_option">Strategic Sourcing
                                                 Projects (RFP)
                                             </option>
-                                            <option value="" class="form__field__products_option">Business Process
+                                            <option value="BPO" class="form__field__products_option">Business Process
                                                 Outsourcing (BPO)
                                             </option>
-                                            <option value="" class="form__field__products_option">Interim Executives
+                                            <option value="InterimExec" class="form__field__products_option">Interim
+                                                Executives
                                             </option>
                                         </select>
                                     </div>
-                                    <div class="form__fields__products_wrapper form__fields__products_check-wrapper">
-                                        <input class="form__fields__products_checkbox" type="checkbox" name="" id="mob">
-                                        <label for="mob" class="form__fields__products_label">Mobile Expense Management</label>
+                                    <div class="fb-100 flex">
+                                        <div
+                                            class="form__fields__products_wrapper form__fields__products_check-wrapper">
+                                            <input class="form__fields__products_checkbox" type="checkbox"
+                                                name="MobileExpenseManagement" id="mob">
+                                            <label for="mob" class="form__fields__products_label">Mobile Expense
+                                                Management</label>
+                                        </div>
+                                        <div
+                                            class="form__fields__products_wrapper form__fields__products_check-wrapper">
+                                            <input class="form__fields__products_checkbox" type="checkbox" name="Other"
+                                                id="other">
+                                            <label for="other" class="form__fields__products_label">Other
+                                                Product</label>
+                                        </div>
                                     </div>
-                                    <div class="form__fields__products_wrapper form__fields__products_check-wrapper">
-                                        <input class="form__fields__products_checkbox" type="checkbox" name="" id="other">
-                                        <label for="other" class="form__fields__products_label">Other Product</label>
-                                    </div>
+                                    <button type="submit" class="button form__btn">Send</button>
                                 </div>
 
                             </form>
@@ -259,6 +279,44 @@
                     </div>
                 </div>
             </section>
+
+            <section id="about" class="about">
+                <div class="container">
+                    <div class="about__inner">
+                        <div class="about__photo_inner">
+                            <div class="about__photo">
+                            </div>
+                            <div class="about__photo_bg"></div>
+                        </div>
+                        <div class="about__info">
+                            <h3 class="about__title">About Us</h3>
+                            <p class="about__desc">As the Global IT Sourcing Leader for xxx, Mr. xxx discovered just how
+                                challenging it is to grow diversity spend in the IT and Telecom Spend categories, since
+                                most technology companies and telecom carriers are not recognized as Diversity
+                                Suppliers. IT Diversity is changing that reality thru a portfolio of IT products and
+                                services that are delivered directly, thru agency agreements or as a value added
+                                reseller. From IT Infrastructure to Broadband to Staff Augmentation, IT Diversity is
+                                providing Corporations a path to optimal solutions, while supporting Diversity Spend.
+                            </p>
+                        </div>
+                    </div>
+  
+         
+                    <div class="about__inner bio__inner">
+                        <div class="about__photo_inner bio__photo_inner">
+                            <div class="about__photo bio__photo">
+                            </div>
+                            <div class="about__photo_bg bio__photo_bg"></div>
+                        </div>
+                        <div class="about__info bio__info">
+                            <h3 class="about__title">Biography</h3>
+                            <p class="about__desc">I’ve had the good fortune of being intimately involved in the launch of Internet related technologies which have transformed the commercial economy. Beginning with the deployment of 80 of the earliest fiber broadband networks and the launch of the first competitive switched voice service in the 1990’s. Driving competitive broadband deployment at TCG and e.Spire, enhanced consumer choice and reduced the cost of high speed communications. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section id="news" class="news">
                 <div class="container-full">
                     <div class="news__inner">

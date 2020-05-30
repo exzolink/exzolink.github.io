@@ -1,0 +1,33 @@
+body {
+    background-color: $bg-color;
+}
+.s {
+    &__header {
+        text-align: center; 
+    }
+    &__title {
+        color: $title-color;
+        margin-top: 15px;
+        font-size: 55px;
+        
+    }
+    &__desc {
+        color: $desc-color;
+        max-width: 600px;
+        text-align: center;
+        margin: 30px auto;
+    }
+    &__btn {
+        margin-top: 15px;
+        background-color: $active-color;
+        border: 2px solid $active-color;
+        color: $frontpage-color;
+        transition: all .3s ease;
+        text-decoration: none;
+        &:hover {
+            background-color: transparent;
+            cursor: pointer;
+            color: $title-color;
+        }
+    }
+}
