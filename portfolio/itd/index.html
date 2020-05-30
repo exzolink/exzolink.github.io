@@ -9,6 +9,7 @@
             href="https://fonts.googleapis.com/css?family=Poppins:400,500,700|Roboto:400,500,700&display=swap">
         <link rel="stylesheet" href="css/all.min.css">
         <link rel="stylesheet" href="css/swiper.min.css">
+        <link rel="stylesheet" href="css/select2.min.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
 
@@ -20,12 +21,12 @@
                         <img src="imgs/logo.png" alt="ITDiversity" class="header__logo logo-img">
                     </a>
                     <nav class="nav">
-                        <a href="#1" class="nav__link active">Home</a>
-                        <a href="#2" class="nav__link">Services</a>
-                        <a href="" class="nav__link">Request Quote</a>
-                        <a href="" class="nav__link">About</a>
-                        <a href="#5" class="nav__link">News</a>
-                        <a href="" class="nav__link">References</a>
+                        <a href="#home" class="nav__link active">Home</a>
+                        <a href="#services" class="nav__link">Services</a>
+                        <a href="#quote" class="nav__link">Request Quote</a>
+                        <a href="#about" class="nav__link">About</a>
+                        <a href="#news" class="nav__link">News</a>
+                        <a href="#refs" class="nav__link">References</a>
                     </nav>
                     <button class="button nav__btn">Get A Quote</button>
                     <div class="header__menu"><i class="fas fa-bars fa-2x"></i></div>
@@ -33,12 +34,12 @@
             </div>
             <div class="header__popup">
                 <div class="header__popup_nav">
-                    <a href="#1" class="header__popup_nav-link active">Home</a>
-                    <a href="#2" class="header__popup_nav-link">Services</a>
-                    <a href="" class="header__popup_nav-link">Request Quote</a>
-                    <a href="" class="header__popup_nav-link">About</a>
-                    <a href="#5" class="header__popup_nav-link">News</a>
-                    <a href="" class="header__popup_nav-link">References</a>
+                    <a href="#home" class="header__popup_nav-link active">Home</a>
+                    <a href="#services" class="header__popup_nav-link">Services</a>
+                    <a href="#quote" class="header__popup_nav-link">Request Quote</a>
+                    <a href="#about" class="header__popup_nav-link">About</a>
+                    <a href="#news" class="header__popup_nav-link">News</a>
+                    <a href="#refs" class="header__popup_nav-link">References</a>
                     <div class="header__close">
                         <i class="fas fa-times fa-2x"></i>
                     </div>
@@ -46,7 +47,7 @@
             </div>
         </header>
         <main class="main">
-            <section id="1" class="homepage">
+            <section id="home" class="homepage">
                 <div class="container">
                     <div class="homepage__inner">
                         <h1 class="homepage__title">
@@ -64,7 +65,7 @@
                     </div>
                 </div>
             </section>
-            <section id="2" class="services">
+            <section id="services" class="services">
                 <div class="container">
                     <div class="services__inner">
                         <h3 class="services__title">Services</h3>
@@ -148,7 +149,117 @@
                 </div>
                 </div>
             </section>
-            <section id="5" class="news">
+            <section id="quote" class="form">
+                <div class="container">
+                    <div class="form__inner">
+                        <div class="form__info">
+                            <h3 class="form__info_title">Get In Touch</h3>
+                            <a href="mailto:123@gmail.com" class="form__info_mail">123@gmail.com</a>
+                            <p class="form__info_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo cum
+                                sapiente eaque soluta nobis necessitatibus! Aut deserunt nam laudantium tempore.</p>
+                            <div class="form__socials">
+                                <a href="" class="button form__socials_btn" title="Facebook"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="" class="button form__socials_btn" title="Twitter"><i
+                                        class="fab fa-twitter"></i></i></a>
+                                <a href="" class="button form__socials_btn" title="Instagram"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="" class="button form__socials_btn" title="Dribble"><i
+                                        class="fab fa-dribbble"></i></a>
+                            </div>
+                        </div>
+                        <div class="form__fields">
+                            <form class="form_form" action="">
+                                <input class="form__fields_input fb-100" type="text" placeholder="Your Name">
+                                <input class="form__fields_input" type="text" placeholder="Your Company">
+                                <input class="form__fields_input" type="text" placeholder="Your Phone">
+                                <input class="form__fields_input" type="email" placeholder="Your Email">
+                                <input class="form__fields_input" type="text" placeholder="Your Company Website">
+                                <textarea name="" class="form__fields_textarea"
+                                    placeholder="Describe Request Further"></textarea>
+                                <input class="form__fields_input no-border" type="file" name="upload">
+                                <p class="form__fields_title">Product</p>
+                                <div class="form__fields_wrapper">
+
+                                    <div class="form__fields__products_wrapper">
+                                        <p class="form__fields__products_title">Broadband (Pt to Pt)</p>
+                                        <select name="" id="" class="form__fields__products_select">
+                                            <option value="" class="form__field__products_option">Broadband Speed
+                                            </option>
+                                            <option value="" class="form__field__products_option">Broadband A Location
+                                            </option>
+                                            <option value="" class="form__field__products_option">Broadband Z Location
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="form__fields__products_wrapper">
+                                        <p class="form__fields__products_title">Internet Access</p>
+                                        <select name="" id="" class="form__fields__products_select">
+                                            <option value="" class="form__field__products_option">IP Speed
+                                            </option>
+                                            <option value="" class="form__field__products_option">IP A Location
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="form__fields__products_wrapper">
+                                        <p class="form__fields__products_title">Broadband Management</p>
+                                        <select name="" id="" class="form__fields__products_select">
+                                            <option value="" class="form__field__products_option">TEM
+                                            </option>
+                                            <option value="" class="form__field__products_option">Network Optimization
+                                            </option>
+                                            <option value="" class="form__field__products_option">Benchmarking
+                                            </option>
+                                            <option value="" class="form__field__products_option">Order Desk
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="form__fields__products_wrapper">
+                                        <p class="form__fields__products_title">IT Infrastructure</p>
+                                        <select name="" id="" class="form__fields__products_select">
+                                            <option value="" class="form__field__products_option">VoIP
+                                            </option>
+                                            <option value="" class="form__field__products_option">Data Center
+                                            </option>
+                                            <option value="" class="form__field__products_option">Cloud
+                                            </option>
+                                            <option value="" class="form__field__products_option">Hardware
+                                            </option>
+                                            <option value="" class="form__field__products_option">Sofware
+                                            </option>
+                                            <option value="" class="form__field__products_option">Security Services
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="form__fields__products_wrapper">
+                                        <p class="form__fields__products_title">Staff Augmentation</p>
+                                        <select name="" id="" class="form__fields__products_select">
+                                            <option value="" class="form__field__products_option">Strategic Sourcing
+                                                Projects (RFP)
+                                            </option>
+                                            <option value="" class="form__field__products_option">Business Process
+                                                Outsourcing (BPO)
+                                            </option>
+                                            <option value="" class="form__field__products_option">Interim Executives
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="form__fields__products_wrapper form__fields__products_check-wrapper">
+                                        <input class="form__fields__products_checkbox" type="checkbox" name="" id="mob">
+                                        <label for="mob" class="form__fields__products_label">Mobile Expense Management</label>
+                                    </div>
+                                    <div class="form__fields__products_wrapper form__fields__products_check-wrapper">
+                                        <input class="form__fields__products_checkbox" type="checkbox" name="" id="other">
+                                        <label for="other" class="form__fields__products_label">Other Product</label>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="news" class="news">
                 <div class="container-full">
                     <div class="news__inner">
                         <h3 class="news__title">News</h3>
@@ -233,11 +344,7 @@
                     </div>
                 </div>
             </section>
-            <section class="form">
-                <div class="container">
 
-                </div>
-            </section>
         </main>
 
 
@@ -249,6 +356,7 @@
         <script src="js/jquery.js"></script>
         <script src="js/typed.js"></script>
         <script src="js/swiper.min.js"></script>
+        <script src="js/select2.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 

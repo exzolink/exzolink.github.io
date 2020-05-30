@@ -1,10 +1,3 @@
-*,
-*:after,
-*:before {
-    margin: 0;
-    padding: 0;
-}
-
 $active-color: #FDF34F;
 $frontpage-color: #000;
 $frontpage-color-opacity: rgba(0, 0, 0, .9);
@@ -12,6 +5,23 @@ $bg-color: #101010;
 $title-color: #fff;
 $desc-color: #aaa;
 $services-item: #191919;
+$input: #444;
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+}
+
+::placeholder {
+    opacity: 1;
+}
+
+::selection {
+    background-color: $active-color;
+    color: $frontpage-color;
+}
 
 body {
     margin-top: 88px;
@@ -60,7 +70,7 @@ body {
     &__menu {
         display: none;
     }
-    
+
     &__popup {
         display: none;
     }
@@ -139,7 +149,7 @@ body {
         &__menu {
             display: block;
             transition: color .3s ease;
-            
+
             &:hover {
                 color: $active-color;
                 cursor: pointer;
