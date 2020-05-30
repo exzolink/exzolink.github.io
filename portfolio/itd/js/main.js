@@ -83,4 +83,11 @@ $(document).ready(function () {
   $('.form__fields__products_select').select2({
     minimumResultsForSearch: -1
   });
+
+/*
+  $('.refs__item').each(function (index, element) {
+    var getW = $(this).width();
+    $(element).css({'height':getW+'px'});
+  });
+  */
 });
