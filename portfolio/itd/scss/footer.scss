@@ -1,0 +1,61 @@
+.footer {
+    background-color: $frontpage-color;
+    padding: 20px 0;
+    margin-top: 100px;
+
+    &__block {
+        align-items: center;
+        display: flex;
+        font-size: 22px;
+        color: $active-color;
+
+        &_bottom {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &_inner {
+            display: flex;
+        }
+    }
+
+    &__year {
+        margin-left: 15px;
+        color: $desc-color;
+        font-size: 18px;
+    }
+
+    &__rights {
+        color: $title-color;
+        font-size: 16px;
+    }
+    &__privacy {
+        color: $desc-color;
+        font-size: 16px;
+        text-decoration: none;
+        transition: color .3s ease;
+
+        &:hover {
+            color: $active-color;
+        }
+
+        &:last-child {
+            margin-left: 15px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .footer {
+        &__block {
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__block_bottom {
+            margin-top: 10px;
+            flex-direction: column;
+        }
+    }
+}
