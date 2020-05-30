@@ -52,7 +52,7 @@ body {
     width: 100%;
     padding: 18px 0;
     color: $desc-color;
-    z-index: 10;
+    z-index: 1000;
     background-color: $frontpage-color-opacity;
 
     &__inner {
