@@ -32,8 +32,8 @@ $mail->Password = '123'; // Ваш пароль от почты с которо�
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
 */
-$mail->setFrom('exzolink@gmail.com'); // от кого будет уходить письмо?
-$mail->addAddress('exzolink@gmail.com');
+$mail->setFrom('test@gmail.com'); // от кого будет уходить письмо?
+$mail->addAddress('test@gmail.com');
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
@@ -59,7 +59,7 @@ $mail->Body    = 'Name: ' .$name.
 '<br><br>IT Infrastructure: ' .$it. 
 '<br><br>Staff Augmentation: ' .$staff. 
 '<br><br>Broadband Management: ' .$bm. 
-'<br><br>Mobile Expense Management: ' .$mem. 
+'<br><br>Mobile Expense Management (empty means not checked): ' .$mem. 
 '<br><br>Other: ' .$other;
 
 $mail->AltBody = '';
