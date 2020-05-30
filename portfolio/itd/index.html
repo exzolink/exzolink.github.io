@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/all.min.css">
         <link rel="stylesheet" href="css/swiper.min.css">
         <link rel="stylesheet" href="css/select2.min.css">
+        <link rel="stylesheet" href="css/aos.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
 
@@ -169,7 +170,7 @@
                             </div>
                         </div>
                         <div class="form__fields">
-                            <form enctype="multipart/form-data" class="form_form" action="form.php" method="POST">
+                            <form enctype="multipart/form-data" class="form_form" action="mail.php" method="POST">
                                 <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
                                 <input class="form__fields_input fb-100" type="text" name="name"
                                     placeholder="Your Name">
@@ -181,7 +182,7 @@
                                     placeholder="Your Company Website">
                                 <textarea name="description" class="form__fields_textarea"
                                     placeholder="Describe Request Further"></textarea>
-                                <input class="form__fields_input no-border" type="file" name="file">
+                                <input class="form__fields_input no-border" type="file" id="file" name="file" multiple="multiple">
                                 <p class="form__fields_title">Product</p>
                                 <div class="form__fields_wrapper">
 
@@ -493,19 +494,12 @@
             </section>
             <footer class="footer">
                 <div class="container">
-                    <div class="footer__inner">
-                        <div class="footer__block">
+                    <div class="footer__inner">      
                             <h3 class="footer__title">IT Diversity</h3>
                             <p id="year" class="footer__year">
                                 <script>document.getElementById("year").innerHTML = new Date().getFullYear()</script>
                             </p>
-                        </div>
-                        <div class="footer__block footer__block_bottom">
                             <p class="footer__rights">All Rights Reserved</p>
-                            <div class="footer__block_inner">
-                                <a href="" class="footer__privacy">Privacy Policy</a>
-                                <a href="" class="footer__privacy">Cookies</a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -522,6 +516,7 @@
         <script src="js/typed.js"></script>
         <script src="js/swiper.min.js"></script>
         <script src="js/select2.min.js"></script>
+        <script src="js/aos.js"></script>
         <script src="js/main.js"></script>
     </body>
 

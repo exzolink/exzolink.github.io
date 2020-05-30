@@ -34,5 +34,5 @@ $message .= "Mobile Expense Management: ".$mem."<br>";
 $message .= "Other: ".$other."<br>";
 
 $mail = mail($to, $subject, $message, $headers);
-header("Location: /success.html")
+header("Location: success.html")
 ?>
