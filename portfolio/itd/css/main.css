@@ -141,7 +141,7 @@ body {
   .header__popup {
     position: fixed;
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     top: 0;
     right: 0;
     background-color: #000;
