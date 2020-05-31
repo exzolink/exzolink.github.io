@@ -232,6 +232,7 @@ body {
   border: 2px solid #FDF34F;
   width: max-content;
   margin-top: 40px;
+  transition-property: opacity, transform, color, background-color, border !important;
 }
 .homepage__btn:hover {
   background-color: transparent;

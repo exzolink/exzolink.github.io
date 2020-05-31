@@ -62,6 +62,7 @@
         border: 2px solid $active-color;
         width: max-content;
         margin-top: 40px;
+        transition-property: opacity,transform,color,background-color,border !important;
 
         &:hover {
             background-color: transparent;
