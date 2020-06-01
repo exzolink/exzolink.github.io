@@ -704,7 +704,7 @@ body {
   }
   .news__icon {
     font-size: 2em;
-    top: 40%;
+    top: 35%;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -722,9 +722,6 @@ body {
   .news .swiper-button-next,
 .news .swiper-button-prev {
     transform: scale(0.7);
-  }
-  .news__icon {
-    top: 35%;
   }
 }
 @media screen and (max-width: 600px) {
