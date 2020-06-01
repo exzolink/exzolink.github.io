@@ -12,7 +12,7 @@
     }
 
     &__inner {
-        padding: 240px 0;
+        padding: 220px 0;
         padding-bottom: 0;
         text-align: left;
         display: flex;
@@ -24,7 +24,7 @@
         filter: grayscale(1);
         width: 100%;
         background-image: url('../imgs/about.jpg');
-        background-position: 50%;
+        background-position: 75% 100%;
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -32,7 +32,7 @@
             position: relative;
             flex-basis: 35%;
             z-index: 2;
-            height: 600px;
+            height: 650px;
         }
         
         &_bg {
@@ -54,13 +54,39 @@
 
     &__title {
         font-size: 55px;
-        margin-bottom: 30px;
+        margin-bottom: 5px;
     }
+
+    &__subtitle {
+        font-size: 28px;
+        margin-bottom: 25px;
+
+    }
+
     &__desc {
         color: $desc-color;
-        font-size: 22px;
-        line-height: 36px;
+        font-size: 16px;
+        line-height: 28px;
     }
+}
+
+.centered {
+    text-align: center;
+    justify-content: center;
+}
+
+.no-padding {
+    padding: 0;
+    flex-basis: 70%;
+}
+
+.pb-30 {
+    padding-bottom: 30px;
+    margin-bottom: 0;
+}
+
+.pt-100 {
+    padding-top: 150px;
 }
 
 .bio {
@@ -76,10 +102,11 @@
 
     &__photo {
         background-repeat: no-repeat;
+        background-position: 50% 100%;
         background-image: url('../imgs/bio.jpg');
 
         &_inner {
-            height: 500px;
+            height: 650px;
         }
 
         &_bg {

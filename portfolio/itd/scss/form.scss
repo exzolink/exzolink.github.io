@@ -33,37 +33,6 @@
         display: flex;
     }
 
-    &__info {
-        flex-basis: 33.333%;
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-
-        &_title {
-            font-size: 55px;
-            font-weight: 700;
-        }
-
-        &_mail {
-            color: $active-color;
-            font-weight: 700;
-            font-size: 18px;
-            text-decoration: none;
-            margin-top: 10px;
-            margin-bottom: 40px;
-            transition: opacity .3s ease;
-
-            &:hover {
-                opacity: .8;
-            }
-        }
-
-        &_desc {
-            color: $desc-color;
-            line-height: 28px;
-        }
-    }
-
     &__socials {
         margin-top: 40px;
         display: flex;
@@ -91,8 +60,8 @@
 
     &__fields {
         display: flex;
-        flex-basis: 66.666%;
-        padding-left: 80px;
+        flex-basis: 70%;
+        margin: 0 auto;
 
         &_input {
             flex-basis: 48%;

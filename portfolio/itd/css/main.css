@@ -207,6 +207,9 @@ body {
   line-height: 28px;
   max-width: 600px;
 }
+.homepage__typed {
+  text-transform: uppercase;
+}
 .homepage__motto {
   font-size: 26px;
   font-weight: 500;
@@ -437,7 +440,7 @@ body {
   left: 50%;
 }
 .about__inner {
-  padding: 240px 0;
+  padding: 220px 0;
   padding-bottom: 0;
   text-align: left;
   display: flex;
@@ -448,7 +451,7 @@ body {
   filter: grayscale(1);
   width: 100%;
   background-image: url("../imgs/about.jpg");
-  background-position: 50%;
+  background-position: 75% 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -456,7 +459,7 @@ body {
   position: relative;
   flex-basis: 35%;
   z-index: 2;
-  height: 600px;
+  height: 650px;
 }
 .about__photo_bg {
   position: absolute;
@@ -473,12 +476,35 @@ body {
 }
 .about__title {
   font-size: 55px;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
+}
+.about__subtitle {
+  font-size: 28px;
+  margin-bottom: 25px;
 }
 .about__desc {
   color: #aaa;
-  font-size: 22px;
-  line-height: 36px;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.centered {
+  text-align: center;
+  justify-content: center;
+}
+
+.no-padding {
+  padding: 0;
+  flex-basis: 70%;
+}
+
+.pb-30 {
+  padding-bottom: 30px;
+  margin-bottom: 0;
+}
+
+.pt-100 {
+  padding-top: 150px;
 }
 
 .bio__inner {
@@ -491,10 +517,11 @@ body {
 }
 .bio__photo {
   background-repeat: no-repeat;
+  background-position: 50% 100%;
   background-image: url("../imgs/bio.jpg");
 }
 .bio__photo_inner {
-  height: 500px;
+  height: 650px;
 }
 .bio__photo_bg {
   bottom: -20x;
@@ -607,6 +634,8 @@ body {
   font-size: 22px;
   font-weight: 700;
   transition: all 0.5s ease;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .news__slide_tag, .news__slide_date {
   transition: 700ms cubic-bezier(0.17, 0.67, 0, 1.01);
@@ -758,32 +787,6 @@ body {
   text-align: center;
   display: flex;
 }
-.form__info {
-  flex-basis: 33.333%;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-.form__info_title {
-  font-size: 55px;
-  font-weight: 700;
-}
-.form__info_mail {
-  color: #FDF34F;
-  font-weight: 700;
-  font-size: 18px;
-  text-decoration: none;
-  margin-top: 10px;
-  margin-bottom: 40px;
-  transition: opacity 0.3s ease;
-}
-.form__info_mail:hover {
-  opacity: 0.8;
-}
-.form__info_desc {
-  color: #aaa;
-  line-height: 28px;
-}
 .form__socials {
   margin-top: 40px;
   display: flex;
@@ -808,8 +811,8 @@ body {
 }
 .form__fields {
   display: flex;
-  flex-basis: 66.666%;
-  padding-left: 80px;
+  flex-basis: 70%;
+  margin: 0 auto;
 }
 .form__fields_input {
   flex-basis: 48%;

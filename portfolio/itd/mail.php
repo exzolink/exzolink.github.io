@@ -22,23 +22,20 @@ $other = $_POST['Other'];
 
 
 
-//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+//$mail->SMTPDebug = 3;                             
 
-/*$mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.mail.ru';  																							// Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = '123@mail.ru'; // Ваш логин от почты с которой будут отправляться письма
-$mail->Password = '123'; // Ваш пароль от почты с которой будут отправляться письма
-$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
+/*
+$mail->isSMTP();                                    
+$mail->Host = 'smtp.mail.ru';  					
+$mail->SMTPAuth = true;                             
+$mail->Username = '123@mail.ru'; 
+$mail->Password = '123'; 
+$mail->SMTPSecure = 'ssl';                
+$mail->Port = 465;
 */
-$mail->setFrom('test@gmail.com'); // от кого будет уходить письмо?
-$mail->addAddress('test@gmail.com');
-//$mail->addAddress('ellen@example.com');               // Name is optional
-//$mail->addReplyTo('info@example.com', 'Information');
-//$mail->addCC('cc@example.com');
-//$mail->addBCC('bcc@example.com');
-//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+
+$mail->setFrom('J.Martino@ITDiversity.net');
+$mail->addAddress('J.Martino@ITDiversity.net');
 $mail->AddAttachment($_FILES['file']['tmp_name'], $_FILES['file']['name']); 
 $mail->isHTML(true);  
 
@@ -46,7 +43,6 @@ $mail->isHTML(true);
 
 
 $mail->Subject = 'IT Diversity Form';
-// $mail->Body    = '' .$nameCompany . ' оставил заявку, его телефон ' .$phone. '<br>Почта этого пользователя: ' .$email;
 
 $mail->Body    = 'Name: ' .$name. 
 '<br><br>Company: ' .$company. 
