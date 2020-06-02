@@ -127,7 +127,11 @@
             margin-right: auto;
         }
     }
+    .icon_wrapper img {
+        height: 200px;
+    }
 }
+
 
 
 
@@ -183,6 +187,12 @@
     }
 }
 
+@media screen and (max-width: 550px) {
+    .icon_wrapper img {
+        height: 150px;
+    }
+}
+
 @media screen and (max-width: 450px) {
     .services {
         &__desc {
@@ -199,5 +209,8 @@
         &__item_title {
             font-size: 24px;
         }
+    }
+    .icon_wrapper img {
+        height: 120px;
     }
 }
