@@ -1,11 +1,12 @@
 $active-color: #FDF34F;
 $frontpage-color: #000;
-$frontpage-color-opacity: rgba(0, 0, 0, .9);
+$frontpage-color-opacity: rgba(0, 0, 0, .85);
 $bg-color: #101010;
 $title-color: #fff;
 $desc-color: #aaa;
 $services-item: #191919;
 $input: #444;
+$services-btn: #141414;
 
 *,
 *:after,
@@ -28,7 +29,6 @@ html {
 }
 
 body {
-    margin-top: 88px;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     background-color: $frontpage-color;
@@ -127,6 +127,7 @@ body {
     background: transparent;
     color: $title-color;
     border: 2px solid $active-color;
+    padding: 16px 28px;
 
     &:hover {
         background-color: $active-color;

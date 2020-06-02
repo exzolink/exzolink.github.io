@@ -17,7 +17,7 @@
         background-repeat: no-repeat;
         background-position: center;
         flex-basis: 50%;
-        height: 500px;
+        height: 550px;
         width: 100%;
     }
 
@@ -88,13 +88,13 @@
     &__item {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         height: 100%;
+        justify-content: center;
+        padding-bottom: 100px;
 
         &_desc {
-            margin-top: 30px;
-            padding: 0 60px;
+            padding: 0 75px;
         }
 
         &_by {
@@ -149,7 +149,7 @@
             height: 500px;
 
             &_desc {
-                padding: 0 150px;
+                width: 60%;
             }
 
             &_by {
@@ -177,7 +177,7 @@
             height: 400px;
 
             &_desc {
-                padding: 0 100px;
+                width: 65%;
             }
 
             &_by {
@@ -204,11 +204,13 @@
 
         &__item {
             height: 100%;
+            padding: 0;
+            padding-top: 15px;
 
 
             &_desc {
-                margin-top: 30px;
                 font-size: 16px;
+                width: auto;
                 padding: 0;
                 padding-left: 15px;
                 padding-right: 15px;

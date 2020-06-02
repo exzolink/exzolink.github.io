@@ -99,7 +99,4 @@ $(document).ready(function () {
     minimumResultsForSearch: -1
   });
 
-  $('.form__fields__products_label').click(function (e) {
-    $(this).parent().find('.form__fields_input-apl').toggleClass('enabled');
-  })
 });

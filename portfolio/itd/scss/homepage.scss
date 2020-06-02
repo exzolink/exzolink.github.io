@@ -3,12 +3,14 @@
 }
 
 .homepage {
+    position: relative;
     background-color: $frontpage-color;
     min-height: 750px;
-    background-image: url('../imgs/bg_header.png');
-    background-position: 78% 100%;
+    padding-top: 88px;
+    background-image: url('../imgs/bg.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size: 550px;
+    z-index: 1;
 
     &__inner {
         min-height: 750px;
@@ -16,6 +18,20 @@
         flex-direction: column;
         justify-content: center;
         padding: 30px 0;
+    }
+
+    &__bg {
+        position: absolute;
+        background-image: url('../imgs/bg_header.png');
+        background-position: 78% 100%;
+        background-repeat: no-repeat;
+        background-size: 550px;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
     }
 
     &__title {
@@ -79,21 +95,27 @@
 
 @media screen and (max-width: 1366px) {
     .homepage {
-        background-position: 98% 50%;
+        &__bg {
+        background-position: 103% 85%;
+        }
     }
 }
 
 @media screen and (max-width: 760px) {
     .homepage {
+        &__bg {
+            background-size: contain;
+            background-position: 100% 100%;
+        }
         min-height: auto;
         height: auto;
-        background-size: contain;
-        background-position: 100% 100%;
+       
 
         &__inner {
             min-height: auto;
             height: calc(100vh - 88px);
             padding: 0;
+            padding-bottom: 50px;
 
         }
 
@@ -156,8 +178,9 @@
 
 @media screen and (max-width: 400px) {
     .homepage {
+        &__bg {
         background-position: 100% 100%;
-
+        }
         &__title {
             font-size: 42px;
         }
@@ -168,6 +191,7 @@
 
         &__desc {
             font-size: 14px;
+            text-shadow: 0 .0625rem .0625rem rgba(0,0,0,.6);
             line-height: 26px;
         }
 
@@ -181,9 +205,6 @@
 
 @media screen and (max-width: 350px) {
     .homepage {
-        
-        background: none;
-        background-color: $frontpage-color;
 
         &__motto {
             font-size: 14px;
@@ -195,6 +216,8 @@
 
         &__inner {
             padding: 0;
+            height: auto;
+            padding-bottom: 30px;
         }
     }
 }

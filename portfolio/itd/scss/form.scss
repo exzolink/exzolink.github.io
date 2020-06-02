@@ -31,7 +31,7 @@
 
 
     &__inner {
-        padding: 180px 0;
+        padding: 160px 0;
         padding-bottom: 0;
         text-align: center;
         display: flex;
@@ -118,7 +118,7 @@
                 flex-direction: column;
                 flex-basis: 48%;
                 margin-top: 15px;
-                margin-bottom: 15px;
+                margin-bottom: 30px;
                 display: flex;
                 justify-content: space-between;
                 font-size: 18px;
@@ -222,17 +222,13 @@
 .flex {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+
+    & .form__fields_input:last-child {
+        margin-bottom: 30px;
+    }
 }
 
-.form__fields_input-apl {
-    opacity: 0;
-    margin: 0;
-    visibility: hidden;
-    max-height: 0;
-    padding: 0;
-    transition: all .3s ease;
-
-}
 
 .enabled {
     max-height: 27px;

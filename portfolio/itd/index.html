@@ -29,7 +29,7 @@
                         <a href="#news" class="nav__link">News</a>
                         <a href="#refs" class="nav__link">References</a>
                     </nav>
-                    <a href="#getquote" class="button nav__btn">Get A Quote</a>
+                    <a href="#getquote" class="button nav__btn">Request Quote</a>
                     <div class="header__menu"><i class="fas fa-bars fa-2x"></i></div>
                 </div>
             </div>
@@ -51,6 +51,7 @@
             <section id="home" class="homepage">
                 <div class="container">
                     <div class="homepage__inner">
+                        <div class="homepage__bg"></div>
                         <h1 data-aos="fade-up" data-aos-duration="1000" class="homepage__title">
                             IT Diversity
                         </h1>
@@ -62,7 +63,9 @@
                         <p data-aos="fade-up" data-aos-duration="800" class="homepage__desc">
                             IT Diversity is a Woman and Minority Owned Business Enterprise (WBE, MBE) focused on
                             enhancing IT Diversity Spend within Corporations. IT Diversity optimizes its relationship
-                            with over 100 IT Suppliers and Telecom Carriers to solve complex Network and IT challenges.
+                            with over 200 IT Suppliers and Telecom Carriers to solve complex Network and IT challenges.
+                            Our team’s accomplishments include: leading the development of 80 metro fiber networks,
+                            delivering the first competitive voice services and saving firm’s over $300,000,000.
                         </p>
                         <a data-aos="fade-up" data-aos-duration="800" href="#getquote" class="button homepage__btn">Get
                             A Quote</a>
@@ -80,7 +83,7 @@
                             hic commodi soluta eveniet ut amet illo cumque reprehenderit maxime!
                         </p>
                         <div class="services__wrapper">
-                            <div data-aos="fade-up" data-aos-duration="800" class="services__item">
+                            <a href="" data-aos="fade-up" data-aos-duration="800" class="services__item">
                                 <div class="services__item_inner">
                                     <div class="icon_wrapper">
                                         <img class="services__img" src="imgs/1.svg" alt="">
@@ -98,8 +101,9 @@
                                         Benchmarking
                                     </p>
                                 </div>
-                            </div>
-                            <div data-aos="fade-up" data-aos-duration="1200" class="services__item">
+                                <div class="services__btn">Learn More</div>
+                            </a>
+                            <a href="" data-aos="fade-up" data-aos-duration="1200" class="services__item">
                                 <div class="services__item_inner">
                                     <div class="icon_wrapper">
                                         <img class="services__img smaller" src="imgs/2.svg" alt="">
@@ -117,8 +121,9 @@
                                         IoT Global Wireless
                                     </p>
                                 </div>
-                            </div>
-                            <div data-aos="fade-up" data-aos-duration="1600" class="services__item">
+                                <div class="services__btn">Learn More</div>
+                            </a>
+                            <a href="" data-aos="fade-up" data-aos-duration="1600" class="services__item">
                                 <div class="services__item_inner">
                                     <div class="icon_wrapper">
                                         <img class="services__img" src="imgs/3.svg" alt="">
@@ -137,7 +142,8 @@
                                         Interim Executives
                                     </p>
                                 </div>
-                            </div>
+                                <div class="services__btn">Learn More</div>
+                            </a>
 
                         </div>
                     </div>
@@ -147,7 +153,7 @@
             <section id="quote" class="form">
                 <div id="getquote" class="container">
                     <div class="form__inner">
-                        <h3 data-aos="fade-up" data-aos-duration="800" class="form__title">Request Quote</h3>
+                        <h3 data-aos="fade-up" data-aos-duration="800" class="form__title">Contact Me</h3>
                         <div data-aos="fade-up" data-aos-duration="1000" class="form__fields">
                             <form enctype="multipart/form-data" class="form_form" action="mail.php" method="POST">
                                 <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
@@ -202,36 +208,14 @@
                                     </div>
 
                                     <div class="fb-100 flex">
-                                        <div
-                                            class="form__fields__products_wrapper form__fields__products_check-wrapper">
-                                            <input class="form__fields__products_checkbox" type="checkbox" name="Speed"
-                                                id="speed">
-                                            <label for="speed" class="form__fields__products_label">Speed</label>
-                                            <input class="form__fields_input form__fields_input-apl" name="speedinput"
-                                            type="text" placeholder="Speed">
-
-                                        </div>
-                                        
-                                        <div
-                                            class="form__fields__products_wrapper form__fields__products_check-wrapper">
-                                            <input class="form__fields__products_checkbox" type="checkbox"
-                                                name="A Location" id="aloc">
-                                            <label for="aloc" class="form__fields__products_label">A Location
-                                            </label>
-                                            <input class="form__fields_input form__fields_input-apl" name="alocinput"
-                                            type="text" placeholder="Address">
-                                        </div>
-                                       
-                                        <div
-                                            class="form__fields__products_wrapper form__fields__products_check-wrapper">
-                                            <input class="form__fields__products_checkbox" type="checkbox"
-                                                name="A Location" id="zloc">
-                                            <label for="zloc" class="form__fields__products_label">Z Location
-                                            </label>
-                                            <input class="form__fields_input form__fields_input-apl" name="zlocinput"
-                                            type="text" placeholder="Address">
-                                        </div>
                                       
+                                                
+                                            <input class="form__fields_input" name="alocinput"
+                                                type="text" placeholder="A Location">
+                                            <input class="form__fields_input" name="zlocinput"
+                                                type="text" placeholder="Z Location">
+                                                <input class="form__fields_input form__fields_input-apl" name="speedinput"
+                                                type="text" placeholder="Speed">
                                     </div>
                                     <button type="submit" class="button form__btn">Send</button>
                                 </div>
@@ -247,7 +231,8 @@
                     <div class="about__inner centered">
                         <div data-aos="fade-up" data-aos-duration="1000" class="about__info no-padding">
                             <h3 class="about__title centered pb-30">About Us</h3>
-                            <p class="about__desc">As the Global IT Sourcing Leader for Ingersoll Rand, Mr. Martino
+                            <p class="about__desc">As the Global IT Sourcing Leader for a Fortune 500 Company, Mr.
+                                Martino
                                 discovered just how challenging it is to grow diversity spend in the IT and Telecom
                                 procurement categories. Most major technology companies and telecom carriers are
                                 publicly traded and not recognized as Diversity Suppliers.
@@ -319,7 +304,8 @@
                                 Jamie has unique leadership experience in IT sourcing, procurement, and expense
                                 management. As CEO of Last Mile Connections and Avotus Corporation, he designed sourcing
                                 software solutions, which disrupted an industry and enhanced leverage for buyers. As the
-                                Global Leader of IT Sourcing at Ingersoll Rand, he managed over $300M in IT Spend and
+                                Global Leader of IT Sourcing at a Fortune 500 Company, he managed over $300M in IT Spend
+                                and
                                 achieved record results for Savings, Diversity Spend, Working Capital and Employee
                                 Engagement. As the Global Leader for Access Management at Global Crossing, he managed a
                                 $2.8 billion P&L and achieved savings of over $225M.
@@ -340,9 +326,9 @@
                     <div class="news__inner">
                         <h3 data-aos="fade-up" data-aos-duration="800" class="news__title">News</h3>
                         <p data-aos="fade-up" data-aos-duration="800" class="news__desc">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, quasi suscipit
+                            We love to learn and share. Our executives are active in writing articles, speaking
                             <br>
-                            possimus asperiores autem dolor libero fuga voluptatem animi sunt.
+                            at conferences, participating in webinars and sharing best practices.
                         </p>
                         <div class="swiper-container news__container">
                             <div class="swiper-wrapper news__wrapper">
@@ -414,7 +400,7 @@
                                         rel="nofollow noopener" class="news__link">
                                         <div class="news__item_inner">
                                             <i class="fas fa-external-link-alt news__icon"></i>
-                                            <p class="news__slide_date">April 20, 2020</p>
+                                            <p class="news__slide_date">May, 2017</p>
                                             <h3 class="news__slide_title">Wireless Management</h3>
                                         </div>
                                     </a>
@@ -427,7 +413,7 @@
                                         rel="nofollow noopener" class="news__link">
                                         <div class="news__item_inner">
                                             <i class="fas fa-external-link-alt news__icon"></i>
-                                            <p class="news__slide_date">April 27, 2020</p>
+                                            <p class="news__slide_date">November, 2016</p>
                                             <h3 class="news__slide_title">S0200 AVOTUS</h3>
                                         </div>
                                     </a>
@@ -445,8 +431,9 @@
                     <div class="refs__inner">
                         <div data-aos="fade-right" data-aos-duration="1000" class="refs__info">
                             <h3 class="refs__info_title">References</h3>
-                            <p class="refs__info_desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem
-                                distinctio autem dolor fugit fuga perspiciatis eligendi mollitia corporis modi! Saepe!
+                            <p class="refs__info_desc">IT Diversity’s team is committed to delivering exceptional
+                                results. Customer’s often save 20-30% and gain critical visibility into their IT and
+                                Telecom Spend.
                             </p>
                             <div class="refs__btns">
                                 <button class="button refs__btn refs__prev"><i
@@ -459,26 +446,26 @@
                         <div data-aos="fade-left" data-aos-duration="1000" class="swiper-container refs__container">
                             <div class="swiper-wrapper refs__wrapper">
                                 <div class="swiper-slide refs__item">
-                                    <i class="fa fa-quote-right fa-2x"></i>
+
                                     <p class="refs__item_desc">"IT Diversity has delivered unique value in Broadband
                                         Benchmarking, Point ot Point and Strategic Sourcing"</p>
                                     <p class="refs__item_by">British Telecom Americas</p>
                                 </div>
                                 <div class="swiper-slide refs__item">
-                                    <i class="fa fa-quote-right fa-2x"></i>
+
                                     <p class="refs__item_desc">"IT Diversity’s deep relationships with major carriers
                                         allowed us to deliver a series of hardware solutions to Charter"</p>
                                     <p class="refs__item_by">Eric Pankonin, Integra Networks</p>
                                 </div>
                                 <div class="swiper-slide refs__item">
-                                    <i class="fa fa-quote-right fa-2x"></i>
+
                                     <p class="refs__item_desc">"IT Diversity is able to provide a unique suite of
                                         Expense
                                         Management solutions that deliver considerable savings"</p>
-                                    <p class="refs__item_by">Nisha Jagmohan, Avotus</p>
+                                    <p class="refs__item_by">Nisha Jagmohan, Consultant</p>
                                 </div>
                                 <div class="swiper-slide refs__item">
-                                    <i class="fa fa-quote-right fa-2x"></i>
+
                                     <p class="refs__item_desc">"IT Diversity’s team understands Wireless Expense
                                         Management
                                         at a detail level. We have regularly been able to save their clients over $1
@@ -487,20 +474,20 @@
                                     <p class="refs__item_by">Randall Light, Ovation Wireless</p>
                                 </div>
                                 <div class="swiper-slide refs__item">
-                                    <i class="fa fa-quote-right fa-2x"></i>
+
                                     <p class="refs__item_desc">"IT Diversity’s has shown experience in both domestic and
                                         complex international broadband projects that produce results for their clients"
                                     </p>
                                     <p class="refs__item_by">Jorge Granados, EMCOTEL</p>
                                 </div>
                                 <div class="swiper-slide refs__item">
-                                    <i class="fa fa-quote-right fa-2x"></i>
+
                                     <p class="refs__item_desc">"The IT Diversity team is a pleasure to work with. Honest
                                         folks who care deeply about their customers"</p>
                                     <p class="refs__item_by">Ralph Wagner, ID Seal</p>
                                 </div>
                                 <div class="swiper-slide refs__item">
-                                    <i class="fa fa-quote-right fa-2x"></i>
+
                                     <p class="refs__item_desc">"Jamie and Nieves are well respected in the Technology
                                         marketplace. I have watched Jamie grow companies from scratch into large
                                         profitable
@@ -510,7 +497,7 @@
                                     <p class="refs__item_by">Caitlin O'Hagan, Jaymie Scotto & Associates</p>
                                 </div>
                                 <div class="swiper-slide refs__item">
-                                    <i class="fa fa-quote-right fa-2x"></i>
+
                                     <p class="refs__item_desc">"IT Diversity has proven to be a great partner in
                                         designing
                                         and building our Strategic Sourcing platform. Their Telecom and procurement
@@ -519,7 +506,7 @@
                                     <p class="refs__item_by">Jonathan Rollason, Purchasing Auctions</p>
                                 </div>
                                 <div class="swiper-slide refs__item">
-                                    <i class="fa fa-quote-right fa-2x"></i>
+
                                     <p class="refs__item_desc">"Mr Martino’s deep set of contacts and knowledge was
                                         instrumental in delivering a highly successful engagement"</p>
                                     <p class="refs__item_by">Wynn Grubbs, (VP of Sales) PlumChoice</p>
