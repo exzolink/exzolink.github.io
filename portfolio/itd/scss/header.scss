@@ -205,3 +205,13 @@ body {
     }
 
 }
+
+@media screen and (max-width: 500px) {
+    .header {
+
+        &__logo {
+            height: 50px;
+        }
+    }
+
+}
