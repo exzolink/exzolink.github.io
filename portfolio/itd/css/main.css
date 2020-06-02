@@ -1004,6 +1004,11 @@ body {
     flex-basis: 100% !important;
   }
 }
+@media screen and (max-width: 950px) {
+  .form__fields {
+    width: auto;
+  }
+}
 @media screen and (max-width: 760px) {
   .form__fields__products_wrapper {
     flex-basis: 48%;
@@ -1021,11 +1026,14 @@ body {
 @media screen and (max-width: 460px) {
   .form__fields__products_wrapper {
     flex-basis: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
   .form__fields_input {
     margin-bottom: 35px;
+  }
+  .form__fields_input-apl {
+    margin-bottom: 0;
   }
   .form__info_desc {
     line-height: 26px;
@@ -1035,6 +1043,11 @@ body {
     font-size: 45px;
   }
 }
+.enabled {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
 @media screen and (max-width: 340px) {
   .form__fields_input {
     font-size: 14px;

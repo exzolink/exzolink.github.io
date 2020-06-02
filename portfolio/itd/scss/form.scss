@@ -272,6 +272,14 @@
     }
 }
 
+@media screen and (max-width: 950px) {
+    .form {
+        &__fields {
+            width: auto;
+        }
+    }
+}
+
 @media screen and (max-width: 760px) {
     .form {
 
@@ -304,12 +312,16 @@
         &__fields {
             &__products_wrapper {
                 flex-basis: 100%;
-                margin-top: 10px;
-                margin-bottom: 10px;
+                margin-top: 15px;
+                margin-bottom: 15px;
             }
 
             &_input {
                 margin-bottom: 35px;
+
+                &-apl {
+                    margin-bottom: 0;
+                }
             }
         }
 
@@ -324,6 +336,11 @@
             }
         }
     }
+}
+
+.enabled {
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 340px) {
