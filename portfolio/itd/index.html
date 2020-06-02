@@ -86,7 +86,7 @@
                             <a href="" data-aos="fade-up" data-aos-duration="800" class="services__item">
                                 <div class="services__item_inner">
                                     <div class="icon_wrapper">
-                                        <img class="services__img" src="imgs/1.svg" alt="">
+                                        <img class="services__img" src="imgs/serv1.jpg" alt="">
                                     </div>
                                     <h3 class="services__item_title">Broadband</h3>
                                     <p class="services__item_desc">
@@ -106,7 +106,7 @@
                             <a href="" data-aos="fade-up" data-aos-duration="1200" class="services__item">
                                 <div class="services__item_inner">
                                     <div class="icon_wrapper">
-                                        <img class="services__img smaller" src="imgs/2.svg" alt="">
+                                        <img class="services__img" src="imgs/serv2.jpg" alt="">
                                     </div>
                                     <h3 class="services__item_title">Mobile Expense Management</h3>
                                     <p class="services__item_desc">
@@ -126,7 +126,7 @@
                             <a href="" data-aos="fade-up" data-aos-duration="1600" class="services__item">
                                 <div class="services__item_inner">
                                     <div class="icon_wrapper">
-                                        <img class="services__img" src="imgs/3.svg" alt="">
+                                        <img class="services__img" src="imgs/serv3.jpg" alt="">
                                     </div>
                                     <h3 class="services__item_title">IT Services</h3>
                                     <p class="services__item_desc">
@@ -183,7 +183,7 @@
                         <h3 data-aos="fade-up" data-aos-duration="800" class="form__title">Contact Me</h3>
                         <div data-aos="fade-up" data-aos-duration="1000" class="form__fields">
                             <form enctype="multipart/form-data" class="form_form" action="mail.php" method="POST">
-                                <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+                                <input type="hidden" name="MAX_FILE_SIZE" value="200000" />
                                 <input class="form__fields_input fb-100" type="text" name="name"
                                     placeholder="Your Name">
                                 <input class="form__fields_input" name="company" type="text" placeholder="Your Company">
@@ -192,15 +192,11 @@
                                     required>
                                 <input class="form__fields_input" name="website" type="text"
                                     placeholder="Your Company Website">
-                                <textarea name="description" class="form__fields_textarea"
-                                    placeholder="Describe Request Further"></textarea>
-                                <input class="form__fields_input no-border" type="file" id="file" name="file"
-                                    multiple="multiple">
                                 <div class="form__fields_wrapper">
 
                                     <div class="form__fields__products_wrapper">
-                                        <p class="form__fields__products_title">Services</p>
-                                        <select name="Services" id="" class="form__fields__products_select">
+                                        <p class="form__fields__products_title">Choose Services</p>
+                                        <select name="services" id="" class="form__fields__products_select">
                                             <option value="Broadband (Pt to Pt)" class="form__field__products_option">
                                                 Broadband (Pt to Pt)</option>
                                             <option value="Internet Access" class="form__field__products_option">
@@ -242,7 +238,11 @@
                                             <input class="form__fields_input" name="zlocinput"
                                                 type="text" placeholder="Z Location">
                                                 <input class="form__fields_input form__fields_input-apl" name="speedinput"
-                                                type="text" placeholder="Speed">
+                                                type="text" placeholder="Speed\Capacity">
+                                                <textarea name="description" class="form__fields_textarea"
+                                                placeholder="Describe Request Further"></textarea>
+                                            <input class="form__fields_input no-border" type="file" id="file" name="file"
+                                                multiple="multiple">
                                     </div>
                                     <button type="submit" class="button form__btn">Send</button>
                                 </div>
@@ -428,7 +428,7 @@
                                         <div class="news__item_inner">
                                             <i class="fas fa-external-link-alt news__icon"></i>
                                             <p class="news__slide_date">May, 2017</p>
-                                            <h3 class="news__slide_title">Wireless Management</h3>
+                                            <h3 class="news__slide_title">Benefits of Partnering on Wireless</h3>
                                         </div>
                                     </a>
                                 </div>
@@ -441,7 +441,7 @@
                                         <div class="news__item_inner">
                                             <i class="fas fa-external-link-alt news__icon"></i>
                                             <p class="news__slide_date">November, 2016</p>
-                                            <h3 class="news__slide_title">S0200 AVOTUS</h3>
+                                            <h3 class="news__slide_title">IT as an Investment</h3>
                                         </div>
                                     </a>
                                 </div>

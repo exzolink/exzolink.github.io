@@ -50,8 +50,8 @@ $mail->Body    = 'Name: ' .$name.
 '<br>Description: ' .$desc. 
 '<br>Service: ' .$services. 
 '<br><br><br>Speed: ' .$speed. 
-'<br><br>A Location: ' .$aloc. 
-'<br><br>Z Location: ' .$zloc. 
+'<br>A Location: ' .$aloc. 
+'<br>Z Location: ' .$zloc. 
 
 $mail->AltBody = '';
 

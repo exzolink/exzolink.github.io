@@ -2,8 +2,9 @@
     position: relative;
 
     &__img {
-        width: 75px;
-        transition: all .3s ease, filter 0s ease;
+        width: 100%;
+        border-radius: 6px;
+        transition: all .3s ease;
     }
 
     &__btn {
@@ -68,7 +69,6 @@
             & .services__img {
                 transform: translateY(-15px);
                 
-                filter: brightness(0) saturate(100%) invert(94%) sepia(30%) saturate(1013%) hue-rotate(346deg) brightness(101%) contrast(98%);
             }
 
             & .services__item_desc {
@@ -112,13 +112,10 @@
     }
 }
 
-.icon_wrapper {
-    height: 80px;
+.icon_wrapper img {
+    height: 150px;
 }
 
-.smaller {
-    max-width: 55px;
-}
 
 
 @media screen and (max-width: 1200px) {
