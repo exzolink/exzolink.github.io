@@ -19,6 +19,9 @@ $(document).ready(function () {
     loop: true,
     slidesPerView: 2,
     spaceBetween: 20,
+    autoplay: {
+      delay: 5000,
+    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -46,7 +49,7 @@ $(document).ready(function () {
     loop: true,
     slidesPerView: 1,
     autoplay: {
-      delay: 4000,
+      delay: 5000,
     },
     navigation: {
       nextEl: '.refs__next',
