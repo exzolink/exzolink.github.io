@@ -4,14 +4,14 @@
 
 .homepage {
     background-color: $frontpage-color;
-    min-height: 700px;
+    min-height: 750px;
     background-image: url('../imgs/bg_header.png');
-    background-position: 77% 100%;
+    background-position: 78% 100%;
     background-repeat: no-repeat;
     background-size: 550px;
 
     &__inner {
-        min-height: 700px;
+        min-height: 750px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -79,7 +79,7 @@
 
 @media screen and (max-width: 1366px) {
     .homepage {
-        background-position: 90% 50%;
+        background-position: 98% 50%;
     }
 }
 
@@ -156,6 +156,7 @@
 
 @media screen and (max-width: 400px) {
     .homepage {
+        background-position: 100% 100%;
 
         &__title {
             font-size: 42px;

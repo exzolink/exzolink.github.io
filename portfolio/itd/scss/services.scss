@@ -36,17 +36,15 @@
         text-align: left;
         margin-top: 100px;
         display: flex;
-        flex-direction: column;
-        max-width: 600px;
-        margin: 0 auto;
         margin-top: 80px;
+        justify-content: space-between;
     }
 
     &__item {
         margin-bottom: 45px;
         display: flex;
         flex-direction: column;
-        flex-basis: 48%;
+        flex-basis: 32%;
         background-color: $services-item;
         transition-property: opacity,transform,box-shadow !important;
 
@@ -69,7 +67,7 @@
         }
 
         &_inner {
-            padding: 75px;
+            padding: 50px;
         }
 
 
@@ -83,10 +81,20 @@
 
         &_desc {
             margin-top: 20px;
-            font-size: 18px;
+            font-size: 16px;
             color: $desc-color;
-            line-height: 1.6;
+            line-height: 26px;
             transition: 700ms cubic-bezier(0.17, 0.67, 0, 1.01);
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .services {
+        &__wrapper {
+            flex-direction: column;
+            width: 60%;
         }
     }
 }
