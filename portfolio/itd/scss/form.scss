@@ -309,6 +309,10 @@
 
 @media screen and (max-width: 460px) {
     .form {
+        &__title {
+            font-size: 50px;
+            margin-top: 35px;
+        }
         &__fields {
             &__products_wrapper {
                 flex-basis: 100%;

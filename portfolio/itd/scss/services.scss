@@ -89,12 +89,22 @@
     }
 }
 
+.icon_wrapper {
+    height: 80px;
+}
+
+.smaller {
+    max-width: 55px;
+}
+
 
 @media screen and (max-width: 1200px) {
     .services {
         &__wrapper {
             flex-direction: column;
             width: 60%;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }
@@ -118,7 +128,24 @@
     }
 }
 
+@media screen and (max-width: 820px) {
+    .services {
+        &__wrapper {
+            width: 80%;
+        }
+    }
+}
+
 @media screen and (max-width: 700px) {
+    .services {
+
+        &__wrapper {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+    }
     .services__item {
         flex-basis: 100%;
 

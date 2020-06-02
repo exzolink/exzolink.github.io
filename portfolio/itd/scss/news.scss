@@ -105,7 +105,6 @@
         background-color: $frontpage-color;
         background-size: cover;
         background-repeat: no-repeat;
-        filter: grayscale(1);
         background-position: 50%;
         transition: all .8s ease;
     }
@@ -117,7 +116,14 @@
 
     &__slide {
         position: relative;
+        transition: all .8s ease;
+        transition-property: opacity,transform,color,background-color,border !important;
         height: 600px;
+        border-bottom: 5px solid $bg-color;
+
+        &:hover {
+            border-bottom: 5px solid $active-color;
+        }
 
         &:hover .news__item_filler {
             filter: none;
