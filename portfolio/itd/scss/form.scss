@@ -11,6 +11,10 @@
         left: 50%;
     }
 
+    &__title {
+        font-size: 55px;
+        padding-bottom: 90px;
+    }
     
     &__btn {
         background-color: $active-color;
@@ -31,6 +35,7 @@
         padding-bottom: 0;
         text-align: center;
         display: flex;
+        flex-direction: column;
     }
 
     &__socials {
@@ -60,7 +65,7 @@
 
     &__fields {
         display: flex;
-        flex-basis: 70%;
+        width: 70%;
         margin: 0 auto;
 
         &_input {
@@ -111,13 +116,12 @@
         &__products {
             &_wrapper {
                 flex-direction: column;
-                flex-basis: 32%;
+                flex-basis: 48%;
                 margin-top: 15px;
                 margin-bottom: 15px;
                 display: flex;
                 justify-content: space-between;
                 font-size: 18px;
-                margin-right: 14px;
 
                 &:nth-child(3) {
                     margin-right: 0;
@@ -125,19 +129,15 @@
             }
 
             &_check-wrapper {
-                flex-basis: auto;
-                margin-right: 30px;
+                flex-basis: 100%;
                 margin-top: 20px;
-
-                &:last-child {
-                    margin-right: 0;
-                }
             }
 
             &_title {
-                color: $desc-color;
+                color: $title-color;
                 margin-bottom: 8px;
-                font-size: 16px;
+                font-size: 28px;
+                font-weight: 700;
             }
 
             &_checkbox {
@@ -221,7 +221,28 @@
 
 .flex {
     display: flex;
+    flex-wrap: wrap;
 }
+
+.form__fields_input-apl {
+    opacity: 0;
+    margin: 0;
+    visibility: hidden;
+    max-height: 0;
+    padding: 0;
+    transition: all .3s ease;
+
+}
+
+.enabled {
+    max-height: 27px;
+    visibility: visible;
+    opacity: 1;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+}
+
 
 @media screen and (max-width: 1230px) {
     .form {

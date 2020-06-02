@@ -11,13 +11,11 @@ $phone = $_POST['phone'];
 $email = $_POST['email'];
 $website = $_POST['website'];
 $desc = $_POST['description'];
-$broadband = $_POST['Broadband'];
-$ia = $_POST['InternetAccess'];
-$bm = $_POST['BroadbandManagement'];
-$it = $_POST['ITInfrastructure'];
-$staff = $_POST['StaffAug'];
-$mem = $_POST['MobileExpenseManagement'];
-$other = $_POST['Other'];
+$services = $_POST['services'];
+$speed = $_POST['speedinput'];
+$aloc = $_POST['alocinput'];
+$zloc = $_POST['zlocinput'];
+
 
 
 
@@ -45,18 +43,15 @@ $mail->isHTML(true);
 $mail->Subject = 'IT Diversity Form';
 
 $mail->Body    = 'Name: ' .$name. 
-'<br><br>Company: ' .$company. 
-'<br><br>Phone ' .$phone. 
-'<br><br>Email: ' .$email. 
-'<br><br>Company`s Website: ' .$website. 
-'<br><br>Description: ' .$desc. 
-'<br><br>Broadband: ' .$broadband. 
-'<br><br>Internet Access: ' .$ia. 
-'<br><br>IT Infrastructure: ' .$it. 
-'<br><br>Staff Augmentation: ' .$staff. 
-'<br><br>Broadband Management: ' .$bm. 
-'<br><br>Mobile Expense Management (empty means not checked): ' .$mem. 
-'<br><br>Other: ' .$other;
+'<br>Company: ' .$company. 
+'<br>Phone ' .$phone. 
+'<br>Email: ' .$email. 
+'<br>Company`s Website: ' .$website. 
+'<br>Description: ' .$desc. 
+'<br>Service: ' .$services. 
+'<br><br><br>Speed: ' .$speed. 
+'<br><br>A Location: ' .$aloc. 
+'<br><br>Z Location: ' .$zloc. 
 
 $mail->AltBody = '';
 

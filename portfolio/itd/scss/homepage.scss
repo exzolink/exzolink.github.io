@@ -4,17 +4,18 @@
 
 .homepage {
     background-color: $frontpage-color;
-    min-height: 850px;
-    background-image: url('../imgs/bg_header.jpg');
-    background-position: 80% 50%;
+    min-height: 700px;
+    background-image: url('../imgs/bg_header.png');
+    background-position: 77% 100%;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 550px;
 
     &__inner {
-        min-height: 850px;
+        min-height: 700px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding: 30px 0;
     }
 
     &__title {
@@ -78,12 +79,23 @@
 
 @media screen and (max-width: 1366px) {
     .homepage {
-        background-position: 100% 50%;
+        background-position: 90% 50%;
     }
 }
 
 @media screen and (max-width: 760px) {
     .homepage {
+        min-height: auto;
+        height: auto;
+        background-size: contain;
+        background-position: 100% 100%;
+
+        &__inner {
+            min-height: auto;
+            height: calc(100vh - 88px);
+            padding: 0;
+
+        }
 
         &__title {
             font-size: 60px;
@@ -107,6 +119,8 @@
 
 @media screen and (max-width: 620px) {
     .homepage {
+
+
         &__title {
             font-size: 50px;
         }
@@ -115,14 +129,6 @@
             font-size: 40px;
         }
 
-        min-height: auto;
-        height: 86vh;
-
-        &__inner {
-            min-height: auto;
-            height: 86vh;
-
-        }
     }
 }
 
@@ -174,8 +180,20 @@
 
 @media screen and (max-width: 350px) {
     .homepage {
+        
+        background: none;
+        background-color: $frontpage-color;
+
         &__motto {
             font-size: 14px;
+        }
+
+        &__subtitle {
+            font-size: 28px;
+        }
+
+        &__inner {
+            padding: 0;
         }
     }
 }

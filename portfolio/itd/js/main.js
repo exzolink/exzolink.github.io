@@ -17,7 +17,7 @@ $(document).ready(function () {
 
   var mySwiper = new Swiper('.news__container', {
     loop: true,
-    slidesPerView: 3,
+    slidesPerView: 2,
     spaceBetween: 20,
     pagination: {
       el: '.swiper-pagination',
@@ -37,7 +37,7 @@ $(document).ready(function () {
         spaceBetween: 15
       },
       1001: {
-        slidesPerView: 3
+        slidesPerView: 2
       }
     }
   });
@@ -96,37 +96,7 @@ $(document).ready(function () {
     minimumResultsForSearch: -1
   });
 
-
+  $('.form__fields__products_label').click(function (e) {
+    $(this).parent().find('.form__fields_input-apl').toggleClass('enabled');
+  })
 });
-
-
-/* 
-<div class="refs__item">
-<p class="refs__item_desc">"IT Diversity’s deep relationships with major carriers allowed us to deliver  a  series of hardware  solutions to Charter"</p>
-<p class="refs__item_by">Eric Pankonin, Integra Networks</p>
-</div>
-<div class="refs__item">
-<p class="refs__item_desc">"IT Diversity is able to provide a unique suite of Expense Management solutions that deliver considerable savings"</p>
-<p class="refs__item_by">Nisha Jagmohan, Avotus</p>
-</div>
-<div class="refs__item">
-<p class="refs__item_desc">"IT Diversity’s team understands Wireless Expense Management at a detail level. We have regularly been able to save their clients over $1 Million on each engagement"</p>
-<p class="refs__item_by">Randall Light, Ovation Wireless</p>
-</div>
-<div class="refs__item">
-<p class="refs__item_desc">"IT Diversity’s has shown experience in both domestic and complex international broadband projects that produce results for their clients"</p>
-<p class="refs__item_by">Jorge Granados, EMCOTEL</p>
-</div>
-<div class="refs__item">
-<p class="refs__item_desc">"The IT Diversity team  is a pleasure to work with. Honest folks who  care deeply about their customers"</p>
-<p class="refs__item_by">Ralph Wagner, ID Seal</p>
-</div>
-<div class="refs__item">
-<p class="refs__item_desc">"Jamie and Nieves are well respected in the Technology marketplace. I have watched Jamie grow companies from scratch into large profitable organizations. Jamie has built trust and credibility with his clients and partners, and delivers on his word"</p>
-<p class="refs__item_by">Caitlin O'Hagan, Jaymie Scotto & Associates</p>
-</div>
-<div class="refs__item">
-<p class="refs__item_desc">"IT Diversity has proven to be a great partner in designing and building our Strategic Sourcing platform. Their Telecom and procurement expertise allowed our programmers to build a truly unique and powerful Auction platform"</p>
-<p class="refs__item_by">Jonathan Rollason, Purchasing Auctions</p>
-</div> 
-*/

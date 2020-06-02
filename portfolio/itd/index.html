@@ -57,7 +57,8 @@
                         <h2 data-aos="fade-up" data-aos-duration="1000" class="homepage__subtitle">
                             Diverse <span class="homepage__typed"></span>
                         </h2>
-                        <h2 data-aos="fade-up" data-aos-duration="700" class="homepage__motto">IT & Telecom Solutions</h2>
+                        <h2 data-aos="fade-up" data-aos-duration="700" class="homepage__motto">IT & Telecom Solutions
+                        </h2>
                         <p data-aos="fade-up" data-aos-duration="800" class="homepage__desc">
                             IT Diversity is a Woman and Minority Owned Business Enterprise (WBE, MBE) focused on
                             enhancing IT Diversity Spend within Corporations. IT Diversity optimizes its relationship
@@ -82,11 +83,10 @@
                             <div data-aos="fade-right" data-aos-duration="1000" class="services__item">
                                 <div class="services__item_inner">
                                     <div class="icon_wrapper">
-                                        <i class="fas fa-network-wired fa-4x"></i>
+                                        <img class="services__img" src="imgs/3.svg" alt="">
                                     </div>
                                     <h3 class="services__item_title">Broadband</h3>
                                     <p class="services__item_desc">
-                                        100MB+<br>
                                         Internet Access<br>
                                         Point to Point<br>
                                         Diverse Routes<br>
@@ -102,7 +102,7 @@
                             <div data-aos="fade-left" data-aos-duration="1000" class="services__item">
                                 <div class="services__item_inner">
                                     <div class="icon_wrapper">
-                                        <i class="fas fa-dollar-sign fa-4x"></i>
+                                        <img class="services__img" src="imgs/2.svg" alt="">
                                     </div>
                                     <h3 class="services__item_title">Mobile Expense Management</h3>
                                     <p class="services__item_desc">
@@ -121,32 +121,24 @@
                             <div data-aos="fade-right" data-aos-duration="1000" class="services__item">
                                 <div class="services__item_inner">
                                     <div class="icon_wrapper">
-                                        <i class="fas fa-hdd fa-4x"></i>
+                                        <img class="services__img" src="imgs/1.svg" alt="">
                                     </div>
-                                    <h3 class="services__item_title">IT Infrastructure</h3>
+                                    <h3 class="services__item_title">IT Services</h3>
                                     <p class="services__item_desc">
                                         VoIP<br>
                                         Data Center<br>
                                         Cloud<br>
                                         Hardware<br>
                                         Software<br>
-                                        Security Services
-                                    </p>
-                                </div>
-                            </div>
-                            <div data-aos="fade-left" data-aos-duration="1000" class="services__item">
-                                <div class="services__item_inner">
-                                    <div class="icon_wrapper">
-                                        <i class="fas fa-users fa-4x"></i>
-                                    </div>
-                                    <h3 class="services__item_title">Staff Augmentation</h3>
-                                    <p class="services__item_desc">
+                                        Security Services<br>
+                                        Staff Augmentation<br>
                                         Strategic Sourcing Projects (RFP)<br>
                                         Business Process Outsourcing (BPO)<br>
                                         Interim Executives
                                     </p>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -155,7 +147,7 @@
             <section id="quote" class="form">
                 <div id="getquote" class="container">
                     <div class="form__inner">
-
+                        <h3 class="form__title">Request Quote</h3>
                         <div data-aos="fade-up" data-aos-duration="1000" class="form__fields">
                             <form enctype="multipart/form-data" class="form_form" action="mail.php" method="POST">
                                 <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
@@ -171,94 +163,75 @@
                                     placeholder="Describe Request Further"></textarea>
                                 <input class="form__fields_input no-border" type="file" id="file" name="file"
                                     multiple="multiple">
-                                <p class="form__fields_title">Product</p>
                                 <div class="form__fields_wrapper">
 
                                     <div class="form__fields__products_wrapper">
-                                        <p class="form__fields__products_title">Broadband (Pt to Pt)</p>
-                                        <select name="Broadband" id="" class="form__fields__products_select">
-                                            <option value="BroadbandSpeed" class="form__field__products_option">
-                                                Broadband Speed
+                                        <p class="form__fields__products_title">Services</p>
+                                        <select name="Services" id="" class="form__fields__products_select">
+                                            <option value="Broadband (Pt to Pt)" class="form__field__products_option">
+                                                Broadband (Pt to Pt)</option>
+                                            <option value="Internet Access" class="form__field__products_option">
+                                                Internet Access</option>
+                                            <option value="Mobile Device Management"
+                                                class="form__field__products_option">Mobile Device Management</option>
+                                            <option value="Technology Expense Management"
+                                                class="form__field__products_option">Technology Expense Management
                                             </option>
-                                            <option value="BroadBandALoc" class="form__field__products_option">Broadband
-                                                A Location
-                                            </option>
-                                            <option value="BroadBandZLoc" class="form__field__products_option">Broadband
-                                                Z Location
-                                            </option>
-                                        </select>
-                                    </div>
-                                    <div class="form__fields__products_wrapper">
-                                        <p class="form__fields__products_title">Internet Access</p>
-                                        <select name="InternetAccess" id="" class="form__fields__products_select">
-                                            <option value="IPSpeed" class="form__field__products_option">IP Speed
-                                            </option>
-                                            <option value="IPALoc" class="form__field__products_option">IP A Location
-                                            </option>
-                                        </select>
-                                    </div>
-                                    <div class="form__fields__products_wrapper">
-                                        <p class="form__fields__products_title">Broadband Management</p>
-                                        <select name="BroadbandManagement" id="" class="form__fields__products_select">
-                                            <option value="TEM" class="form__field__products_option">TEM
-                                            </option>
-                                            <option value="NetworkOpt" class="form__field__products_option">Network
-                                                Optimization
-                                            </option>
+                                            <option value="Network Optimization" class="form__field__products_option">
+                                                Network Optimization</option>
                                             <option value="Benchmarking" class="form__field__products_option">
-                                                Benchmarking
+                                                Benchmarking</option>
+                                            <option value="Order Desk\Procurement" class="form__field__products_option">
+                                                Order Desk\Procurement</option>
+                                            <option value="Voice\VoIP" class="form__field__products_option">Voice\VoIP
                                             </option>
-                                            <option value="OrderDesk" class="form__field__products_option">Order Desk
+                                            <option value="Data Center" class="form__field__products_option">Data Center
                                             </option>
-                                        </select>
-                                    </div>
-                                    <div class="form__fields__products_wrapper">
-                                        <p class="form__fields__products_title">IT Infrastructure</p>
-                                        <select name="ITInfrastructure" id="" class="form__fields__products_select">
-                                            <option value="VoIP" class="form__field__products_option">VoIP
-                                            </option>
-                                            <option value="DataCenter" class="form__field__products_option">Data Center
-                                            </option>
-                                            <option value="Cloud" class="form__field__products_option">Cloud
-                                            </option>
+                                            <option value="Cloud" class="form__field__products_option">Cloud</option>
                                             <option value="Hardware" class="form__field__products_option">Hardware
                                             </option>
-                                            <option value="Software" class="form__field__products_option">Sofware
+                                            <option value="Software" class="form__field__products_option">Software
                                             </option>
-                                            <option value="SecurityServices" class="form__field__products_option">
-                                                Security Services
+                                            <option value="Consulting: Strategic Sourcing"
+                                                class="form__field__products_option">Consulting: Strategic Sourcing
                                             </option>
-                                        </select>
-                                    </div>
-                                    <div class="form__fields__products_wrapper">
-                                        <p class="form__fields__products_title">Staff Augmentation</p>
-                                        <select name="StaffAug" id="" class="form__fields__products_select">
-                                            <option value="RFP" class="form__field__products_option">Strategic Sourcing
-                                                Projects (RFP)
-                                            </option>
-                                            <option value="BPO" class="form__field__products_option">Business Process
-                                                Outsourcing (BPO)
-                                            </option>
-                                            <option value="InterimExec" class="form__field__products_option">Interim
-                                                Executives
+                                            <option value="Business Process Outsourcing (BPO)"
+                                                class="form__field__products_option">Business Process Outsourcing (BPO)
                                             </option>
                                         </select>
                                     </div>
+
                                     <div class="fb-100 flex">
                                         <div
                                             class="form__fields__products_wrapper form__fields__products_check-wrapper">
-                                            <input class="form__fields__products_checkbox" type="checkbox"
-                                                name="MobileExpenseManagement" id="mob">
-                                            <label for="mob" class="form__fields__products_label">Mobile Expense
-                                                Management</label>
+                                            <input class="form__fields__products_checkbox" type="checkbox" name="Speed"
+                                                id="speed">
+                                            <label for="speed" class="form__fields__products_label">Speed</label>
+                                            <input class="form__fields_input form__fields_input-apl" name="speedinput"
+                                            type="text" placeholder="Speed">
+
                                         </div>
+                                        
                                         <div
                                             class="form__fields__products_wrapper form__fields__products_check-wrapper">
-                                            <input class="form__fields__products_checkbox" type="checkbox" name="Other"
-                                                id="other">
-                                            <label for="other" class="form__fields__products_label">Other
-                                                Product</label>
+                                            <input class="form__fields__products_checkbox" type="checkbox"
+                                                name="A Location" id="aloc">
+                                            <label for="aloc" class="form__fields__products_label">A Location
+                                            </label>
+                                            <input class="form__fields_input form__fields_input-apl" name="alocinput"
+                                            type="text" placeholder="Address">
                                         </div>
+                                       
+                                        <div
+                                            class="form__fields__products_wrapper form__fields__products_check-wrapper">
+                                            <input class="form__fields__products_checkbox" type="checkbox"
+                                                name="A Location" id="zloc">
+                                            <label for="zloc" class="form__fields__products_label">Z Location
+                                            </label>
+                                            <input class="form__fields_input form__fields_input-apl" name="zlocinput"
+                                            type="text" placeholder="Address">
+                                        </div>
+                                      
                                     </div>
                                     <button type="submit" class="button form__btn">Send</button>
                                 </div>
@@ -363,7 +336,7 @@
             </section>
 
             <section id="news" class="news">
-                <div class="container-full">
+                <div class="container">
                     <div class="news__inner">
                         <h3 data-aos="fade-up" data-aos-duration="800" class="news__title">News</h3>
                         <p data-aos="fade-up" data-aos-duration="800" class="news__desc">
@@ -379,11 +352,14 @@
                                     <div class="news__item_filler" style="background-image: url('./imgs/post1.jpg');">
                                     </div>
 
-                                    <a href="https://www.linkedin.com/pulse/why-now-best-time-ever-launch-electronic-rfp-jamie-martino/" target="_blank" rel="nofollow noopener"" target="_blank" rel="nofollow noopener" class="news__link">
+                                    <a href="https://www.linkedin.com/pulse/why-now-best-time-ever-launch-electronic-rfp-jamie-martino/"
+                                        target="_blank" rel="nofollow noopener"" target=" _blank"
+                                        rel="nofollow noopener" class="news__link">
                                         <div class="news__item_inner">
                                             <i class="fas fa-external-link-alt news__icon"></i>
                                             <p class="news__slide_date">April 7, 2020 / Jamie Martino</p>
-                                            <h3 class="news__slide_title">Why Now is the Best Time Ever to Launch an electronic RFP!</h3>
+                                            <h3 class="news__slide_title">Why Now is the Best Time Ever to Launch an
+                                                electronic RFP!</h3>
                                         </div>
                                     </a>
                                 </div>
@@ -392,7 +368,8 @@
                                     <div class="news__item_filler" style="background-image: url('./imgs/post2.jpg');">
                                     </div>
 
-                                    <a href="https://www.linkedin.com/pulse/covid-19-spikes-mobile-phone-bills-jamie-martino/" target="_blank" rel="nofollow noopener" class="news__link">
+                                    <a href="https://www.linkedin.com/pulse/covid-19-spikes-mobile-phone-bills-jamie-martino/"
+                                        target="_blank" rel="nofollow noopener" class="news__link">
                                         <div class="news__item_inner">
                                             <i class="fas fa-external-link-alt news__icon"></i>
                                             <p class="news__slide_date">April 22, 2020 / Jamie Martino</p>
@@ -405,11 +382,13 @@
                                     <div class="news__item_filler" style="background-image: url('./imgs/post3.png');">
                                     </div>
 
-                                    <a href="https://spendmatters.com/2015/01/28/road-sourcing-telecom-services-starts-choosing-right-e-sourcing-technology/" target="_blank" rel="nofollow noopener" class="news__link">
+                                    <a href="https://spendmatters.com/2015/01/28/road-sourcing-telecom-services-starts-choosing-right-e-sourcing-technology/"
+                                        target="_blank" rel="nofollow noopener" class="news__link">
                                         <div class="news__item_inner">
                                             <i class="fas fa-external-link-alt news__icon"></i>
                                             <p class="news__slide_date">January 28, 2015</p>
-                                            <h3 class="news__slide_title">The Road to Sourcing for Telecom Services Starts with Choosing the Right E-Sourcing Technology</h3>
+                                            <h3 class="news__slide_title">The Road to Sourcing for Telecom Services
+                                                Starts with Choosing the Right E-Sourcing Technology</h3>
                                         </div>
                                     </a>
                                 </div>
@@ -417,11 +396,13 @@
                                     <div class="news__item_filler" style="background-image: url('./imgs/post4.jpg');">
                                     </div>
 
-                                    <a href="https://spendmatters.com/2015/04/23/why-optimizing-corporate-mobility-spend-is-more-critical-than-ever-2/" target="_blank" rel="nofollow noopener" class="news__link">
+                                    <a href="https://spendmatters.com/2015/04/23/why-optimizing-corporate-mobility-spend-is-more-critical-than-ever-2/"
+                                        target="_blank" rel="nofollow noopener" class="news__link">
                                         <div class="news__item_inner">
                                             <i class="fas fa-external-link-alt news__icon"></i>
                                             <p class="news__slide_date">April 23, 2015</p>
-                                            <h3 class="news__slide_title">Why Optimizing Corporate Mobility Spend is More Critical than Ever</h3>
+                                            <h3 class="news__slide_title">Why Optimizing Corporate Mobility Spend is
+                                                More Critical than Ever</h3>
                                         </div>
                                     </a>
                                 </div>
@@ -429,7 +410,8 @@
                                     <div class="news__item_filler" style="background-image: url('./imgs/post6.jpg');">
                                     </div>
 
-                                    <a href="https://www.avotus.com/media/Wireless%20Management.mp4" target="_blank" rel="nofollow noopener" class="news__link">
+                                    <a href="https://www.avotus.com/media/Wireless%20Management.mp4" target="_blank"
+                                        rel="nofollow noopener" class="news__link">
                                         <div class="news__item_inner">
                                             <i class="fas fa-external-link-alt news__icon"></i>
                                             <p class="news__slide_date">April 20, 2020</p>
@@ -441,7 +423,8 @@
                                     <div class="news__item_filler" style="background-image: url('./imgs/post7.png');">
                                     </div>
 
-                                    <a href="https://www.youtube.com/watch?v=zfdvQOTVL5Y" target="_blank" rel="nofollow noopener" class="news__link">
+                                    <a href="https://www.youtube.com/watch?v=zfdvQOTVL5Y" target="_blank"
+                                        rel="nofollow noopener" class="news__link">
                                         <div class="news__item_inner">
                                             <i class="fas fa-external-link-alt news__icon"></i>
                                             <p class="news__slide_date">April 27, 2020</p>
@@ -476,26 +459,26 @@
                         <div data-aos="fade-left" data-aos-duration="1000" class="swiper-container refs__container">
                             <div class="swiper-wrapper refs__wrapper">
                                 <div class="swiper-slide refs__item">
-                                    <img class="refs__img" src="imgs/refer1.jpg" width="65px" height="65px" alt="">
+                                    <i class="fa fa-quote-right fa-2x"></i>
                                     <p class="refs__item_desc">"IT Diversity has delivered unique value in Broadband
                                         Benchmarking, Point ot Point and Strategic Sourcing"</p>
                                     <p class="refs__item_by">British Telecom Americas</p>
                                 </div>
                                 <div class="swiper-slide refs__item">
-                                    <img class="refs__img" src="imgs/refer1.png" width="65px" height="65px" alt="">
+                                    <i class="fa fa-quote-right fa-2x"></i>
                                     <p class="refs__item_desc">"IT Diversity’s deep relationships with major carriers
                                         allowed us to deliver a series of hardware solutions to Charter"</p>
                                     <p class="refs__item_by">Eric Pankonin, Integra Networks</p>
                                 </div>
                                 <div class="swiper-slide refs__item">
-                                    <img class="refs__img" src="imgs/refer1.png" width="65px" height="65px" alt="">
+                                    <i class="fa fa-quote-right fa-2x"></i>
                                     <p class="refs__item_desc">"IT Diversity is able to provide a unique suite of
                                         Expense
                                         Management solutions that deliver considerable savings"</p>
                                     <p class="refs__item_by">Nisha Jagmohan, Avotus</p>
                                 </div>
                                 <div class="swiper-slide refs__item">
-                                    <img class="refs__img" src="imgs/refer1.jpg" width="65px" height="65px" alt="">
+                                    <i class="fa fa-quote-right fa-2x"></i>
                                     <p class="refs__item_desc">"IT Diversity’s team understands Wireless Expense
                                         Management
                                         at a detail level. We have regularly been able to save their clients over $1
@@ -504,20 +487,20 @@
                                     <p class="refs__item_by">Randall Light, Ovation Wireless</p>
                                 </div>
                                 <div class="swiper-slide refs__item">
-                                    <img class="refs__img" src="imgs/refer1.png" width="65px" height="65px" alt="">
+                                    <i class="fa fa-quote-right fa-2x"></i>
                                     <p class="refs__item_desc">"IT Diversity’s has shown experience in both domestic and
                                         complex international broadband projects that produce results for their clients"
                                     </p>
                                     <p class="refs__item_by">Jorge Granados, EMCOTEL</p>
                                 </div>
                                 <div class="swiper-slide refs__item">
-                                    <img class="refs__img" src="imgs/refer1.jpg" width="65px" height="65px" alt="">
+                                    <i class="fa fa-quote-right fa-2x"></i>
                                     <p class="refs__item_desc">"The IT Diversity team is a pleasure to work with. Honest
                                         folks who care deeply about their customers"</p>
                                     <p class="refs__item_by">Ralph Wagner, ID Seal</p>
                                 </div>
                                 <div class="swiper-slide refs__item">
-                                    <img class="refs__img" src="imgs/refer1.png" width="65px" height="65px" alt="">
+                                    <i class="fa fa-quote-right fa-2x"></i>
                                     <p class="refs__item_desc">"Jamie and Nieves are well respected in the Technology
                                         marketplace. I have watched Jamie grow companies from scratch into large
                                         profitable
@@ -527,7 +510,7 @@
                                     <p class="refs__item_by">Caitlin O'Hagan, Jaymie Scotto & Associates</p>
                                 </div>
                                 <div class="swiper-slide refs__item">
-                                    <img class="refs__img" src="imgs/refer1.jpg" width="65px" height="65px" alt="">
+                                    <i class="fa fa-quote-right fa-2x"></i>
                                     <p class="refs__item_desc">"IT Diversity has proven to be a great partner in
                                         designing
                                         and building our Strategic Sourcing platform. Their Telecom and procurement
@@ -536,7 +519,7 @@
                                     <p class="refs__item_by">Jonathan Rollason, Purchasing Auctions</p>
                                 </div>
                                 <div class="swiper-slide refs__item">
-                                    <img class="refs__img" src="imgs/refer1.png" width="65px" height="65px" alt="">
+                                    <i class="fa fa-quote-right fa-2x"></i>
                                     <p class="refs__item_desc">"Mr Martino’s deep set of contacts and knowledge was
                                         instrumental in delivering a highly successful engagement"</p>
                                     <p class="refs__item_by">Wynn Grubbs, (VP of Sales) PlumChoice</p>
