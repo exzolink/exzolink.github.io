@@ -57,6 +57,18 @@ $(document).ready(function () {
     }
   });
 
+  var logos = new Swiper('.partners__container', {
+    loop: true,
+    spaceBetween: 30,
+    centeredMode: true,
+    slidesPerView: 10,
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    autoplay: {
+      delay: 3000,
+    }
+  });
+
 
   var sections = $('section');
   var header = $('.header, .header__popup')
