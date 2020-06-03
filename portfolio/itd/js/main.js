@@ -110,7 +110,8 @@ $(document).ready(function () {
   });
 
   $('.form__fields__products_select').select2({
-    minimumResultsForSearch: -1
+    minimumResultsForSearch: -1,
+    placeholder: 'Click to choose...'
   });
 
 });

@@ -47,11 +47,11 @@ $mail->Body    = 'Name: ' .$name.
 '<br>Phone ' .$phone. 
 '<br>Email: ' .$email. 
 '<br>Company`s Website: ' .$website. 
-'<br>Description: ' .$desc. 
-'<br>Service: ' .$services. 
-'<br><br><br>Speed: ' .$speed. 
+'<br><br>Services: ' .$services[0].', ' .$services[1].', ' .$services[2].', ' .$services[3].', ' .$services[4].', ' .$services[5].', ' .$services[6].', ' .$services[7].', ' .$services[8].', ' .$services[9].', ' .$services[10].', ' .$services[11].', ' .$services[12].', ' .$services[13].
+'<br><br>Speed: ' .$speed. 
 '<br>A Location: ' .$aloc. 
 '<br>Z Location: ' .$zloc. 
+'<br>Description: ' .$desc. 
 
 $mail->AltBody = '';
 
