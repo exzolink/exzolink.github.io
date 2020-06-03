@@ -7,7 +7,7 @@
         height: 60px;
         width: 2px;
         position: absolute;
-        top: 85px;
+        top: 70px;
         left: 50%;
     }
 
@@ -299,6 +299,15 @@
                 flex-basis: 100%;
             }
         }
+
+        
+    &__inner {
+        padding: 120px 0;
+        padding-bottom: 0;
+    }
+    &:before {
+        top: 40px;
+    }
     }
 }
 
@@ -318,9 +327,6 @@
             &_input {
                 margin-bottom: 35px;
 
-                &-apl {
-                    margin-bottom: 0;
-                }
             }
         }
 
