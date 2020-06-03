@@ -12,6 +12,12 @@
     background-repeat: no-repeat;
     z-index: 1;
 
+    &__logo {
+        height: 130px;
+        width: 153px;
+        margin-bottom: 15px;
+    }
+
     &__inner {
         min-height: 750px;
         display: flex;
@@ -35,6 +41,7 @@
     }
 
     &__title {
+        display: none;
         font-size: 90px;
         letter-spacing: -2px;
         line-height: 1.2;
@@ -98,6 +105,10 @@
         &__bg {
         background-position: 103% 85%;
         }
+        &__inner {
+            justify-content: flex-start;
+            padding-top: 60px;
+        }
     }
 }
 
@@ -115,6 +126,7 @@
             min-height: auto;
             height: calc(100vh - 88px);
             padding: 0;
+            justify-content: center;
             padding-bottom: 50px;
 
         }
@@ -138,6 +150,18 @@
 
     }
 }
+
+@media screen and (max-width: 700px) {
+    .homepage {
+        &__logo {
+            display: none;
+        }
+        &__title {
+            display: block;
+        }
+    }
+}
+
 
 @media screen and (max-width: 620px) {
     .homepage {
