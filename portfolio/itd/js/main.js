@@ -60,12 +60,9 @@ $(document).ready(function () {
   var logos = new Swiper('.partners__container', {
     loop: true,
     spaceBetween: 30,
-    slidesPerView: 10,
     slidesPerView: 'auto',
     freeMode: true,
     centeredSlides: true,
-    freeModeSticky: false,
-    freeModeMomentum: true,
     autoplay: {
       delay: 1000,
     }

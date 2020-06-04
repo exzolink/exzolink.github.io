@@ -29,6 +29,7 @@ html {
 }
 
 body {
+    outline: none;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     background-color: $frontpage-color;
@@ -78,10 +79,6 @@ body {
     &__popup {
         display: none;
     }
-}
-
-.logo-img {
-    margin-right: 20px;
 }
 
 .nav {
