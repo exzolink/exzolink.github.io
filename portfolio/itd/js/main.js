@@ -61,10 +61,11 @@ $(document).ready(function () {
     loop: true,
     spaceBetween: 30,
     slidesPerView: 'auto',
+    speed: 2500,
     freeMode: true,
     centeredSlides: true,
     autoplay: {
-      delay: 1000,
+      delay: 0,
     }
   });
 
@@ -108,7 +109,7 @@ $(document).ready(function () {
 
   $('.form__fields__products_select').select2({
     minimumResultsForSearch: -1,
-    placeholder: 'Click to choose...'
+    placeholder: 'Select all that apply'
   });
 
 });

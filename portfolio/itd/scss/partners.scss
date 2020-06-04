@@ -40,7 +40,12 @@
     &__wrapper {
         display: flex;
         align-items: center;
+
     }
+}
+
+.swiper-container-free-mode > .swiper-wrapper {
+    transition-timing-function: linear !important;
 }
 
 
