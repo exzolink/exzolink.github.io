@@ -5,7 +5,7 @@
 .homepage {
     position: relative;
     background-color: $frontpage-color;
-    min-height: 750px;
+    min-height: 800px;
     padding-top: 88px;
     background-image: url('../imgs/bg.jpg');
     background-size: cover;
@@ -13,14 +13,14 @@
     z-index: 1;
 
     &__logo {
-        height: 125px;
-        width: 125px;
+        height: 230px;
+        width: 230px;
         border-radius: 6px;
         margin-bottom: 15px;
     }
 
     &__inner {
-        min-height: 750px;
+        min-height: 800px;
         display: flex;
         flex-direction: column;
         justify-content: center;
