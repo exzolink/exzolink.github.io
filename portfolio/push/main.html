@@ -1,24 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Push.Gun</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <h1 class=>12312fgdgddfgdf</h1>
-            <h1>пвапвапвапвапва</h1>
-        </div>
-    </header>    
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Push.Gun</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a href="#" class="header__logo">
+                        <img src="imgs/logo.svg" alt="" class="header__logo_img">
+                    </a>
+                    <nav class="nav">
+                        <a href="#" class="nav__item">
+                            <div class="nav__item_wrap">
+                                <span>Главная</span>
+                                <img class="nav__item_img" src="imgs/main.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="#" class="nav__item">
+                            <div class="nav__item_wrap">
+                                <span>Мои рассылки</span>
+                                <img class="nav__item_img" src="imgs/send.svg" alt="">
+                            </div>
+                        </a>
+
+                        <div class="nav__wrapper">
+                            <a href="#" class="nav__item nav__arrow">
+                                <div class="nav__item_wrap">
+                                    <span>Мои сайты</span>
+                                    <img class="nav__item_img" src="imgs/sites.svg" alt="">
+                                </div>
+                            </a>
+                            <div class="nav__menu">
+                                <ul class="nav__menu_inner">
+                                    <li class="nav__menu_item">
+                                        <a class="nav__menu_link" href="#">puzzle.pro</a>
+                                    </li>
+                                    <li class="nav__menu_item">
+                                        <a class="nav__menu_link" href="#">puzzle.pro</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <a href="#" class="nav__item">
+                            <div class="nav__item_wrap">
+                                <span>Тарифы</span>
+                                <img class="nav__item_img" src="imgs/tarif.svg" alt="">
+                            </div>
+                        </a>
+
+                    </nav>
+                    <div class="header__subscription">
+                        <h3 class="header__subscription_title">Подписка 1000</h3>
+                        <a href="#" class="header__subscription_link">Повысить тариф</a>
+                    </div>
+                    <a class="header__account">
+
+                        <img class="header__account_img" src="imgs/avatar.png" alt="">
+
+                    </a>
+                </div>
+                <div class="account__popup">
+                    <div class="account__inner">
+                        <div class="account__top">
+                            <p class="account__top_name">Максим</p>
+                            <p class="account__top_email">test@mail.ru</p>
+                            <p class="account__top_id">ID <span>123456</span></p>
+                        </div>
+                        <div class="account__bottom">
+                            <h3 class="account__bottom_subscribtion">Бесплатный тариф</h3>
+                            <a href="#" class="account__bottom_subscribe">Повысить тариф</a>
+                            <div class="account__bottom_balance-wrapper">
+                                <p class="account__bottom_balance">Баланс <span>300 руб</span></p>
+                                <a href="#" class="account__bottom_subscribe">Пополнить</a>
+                            </div>
+                            <div class="account__bottom_links">
+                                <div class="account__link_wrapper icon icon-pay">
+                                    <a href="#" class="account__bottom_link">Платежи</a>
+                                </div>
+                                <div class="account__link_wrapper icon icon-settings">
+                                    <a href="#" class="account__bottom_link">Настройки аккаунта</a>
+                                </div>
+                                <div class="account__link_wrapper icon icon-support">
+                                    <a href="#" class="account__bottom_link">Тех. поддержка</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account__link_exit">
+                            <div class="account__link_wrapper icon icon-exit">
+                                <a href="#" class="account__bottom_link">Выйти</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="container">
+                <section class="mainpage">
+                    <div class="mainpage__title">
+                        <h1 class="title">Web Push рассылки</h1>
+                        <img class="mainpage__info" src="imgs/info.svg" alt="">
+                    </div>
+                    <div class="mainpage__status">
+                        <div class="mainpage__subs">
+                            <p class="">Подписчиков: <span>500</span> из 1000</p>
+                            <p class="percent">50%</p>
+                        </div>
+                        <div class="progress">
+                            <progress max="100" value="50"></progress>
+                            <div class="progress_bg">
+                                <div class="progress_bar"></div>
+                            </div>
+                        </div>
+                        <div class="mainpage__status_info">
+                            <p>Тариф “Бесплатно 10 000” будет продлен 16 июня 2020 г.</p>
+                            <a href="#" class="account__bottom_subscribe">Изменить</a>
+                        </div>
+                    </div>
+                    <h2 class="subtitle">Мои сайты</h2>
+                    <div class="mainpage__sites">
+                        <div class="mainpage__sites_item">
+                            <div class="mainpage__sites_item-more"><img src="imgs/more.svg" alt=""></div>
+                            <a href="#"><img class="mainpage__sites_item-img" src="imgs/site.png" alt=""></a>
+                            <div class="mainpage__sites_info checkmark">
+                                <a href="#" class="account__bottom_subscribe mainpage__sites_title">https://hello.world</a>
+                                <p>Подписчиков: <span>2</span></p>
+                            </div>
+                        </div>
+                        <div class="mainpage__sites_item">
+                            <div class="mainpage__sites_item-more"><img src="imgs/more.svg" alt=""></div>
+                            <a href="#"><img class="mainpage__sites_item-img" src="imgs/site.png" alt=""></a>
+                            <div class="mainpage__sites_info checkmark">
+                                <a href="#" class="account__bottom_subscribe mainpage__sites_title">https://hello.world</a>
+                                <p>Подписчиков: <span>2</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
 
 
 
 
-    <script src="js/jquery.js"></script>
-    <script src="js/select2.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
+
+        <script src="js/jquery.js"></script>
+        <script src="js/select2.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+
 </html>

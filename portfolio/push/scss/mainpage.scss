@@ -1,0 +1,112 @@
+
+
+.mainpage {
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 46px;
+        margin-bottom: 24px;
+    }
+
+    &__info {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__status {
+        padding: 24px;
+        background-color: $white;
+        box-shadow: $shadow;
+        border-radius: 10px;
+
+        &_info {
+            font-size: 12px;
+            font-weight: 500;
+            display: flex;
+            & p {
+                margin-right: 16px;
+            }
+        }
+    }
+
+    &__subs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & span {
+            color: $green;
+        }
+    }
+        
+    &__sites {
+        background-color: $white;
+        box-shadow: $shadow;
+        padding: 24px;
+        border-radius: 10px;
+
+        &_title {
+            font-size: 16px;
+        }
+
+        &_info {
+            flex-direction: column;
+            height: inherit;
+            display: flex;
+            margin-left: 16px;
+            justify-content: space-between;
+
+            & p {
+                font-weight: 500;
+                color: $black;
+            }
+            & p span {
+                font-weight: 700;
+            }
+        }
+
+        &_item {
+            height: 46px;
+            display: flex;
+            position: relative;
+            margin-bottom: 16px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &-more {
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                right: 0;
+                top: 0;
+                transition: all .3s ease;
+                &:hover {
+                    cursor: pointer;
+                    filter: invert(1);
+                }
+            }
+
+            &-img {
+                width: 46px;
+                height: 46px;
+                border-radius: 4px;
+            }
+        }
+    }
+  
+}
+
+
+
+
+
+
+
+
+
+
