@@ -9,6 +9,21 @@
         position: absolute;
         top: 80px;
         left: 50%;
+        
+    }
+
+    &__divider {
+        position: relative;
+        &:before {
+            content: '';
+            background-color: $active-color;
+            height: 2px;
+            width: 60px;
+            position: absolute;
+            top: 70px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
     }
 
     &__inner {
