@@ -1,0 +1,42 @@
+$black: #060607;
+$darkblue: #323441;
+$gray: #F8F9FC;
+$white: #fff;
+$blue: #5BA4D7;
+$green: #3B8378;
+$blue-gradient: linear-gradient(170deg, #D6E9F5 -0.37%, #ADD2EB 97%);
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body,
+html {
+    color: $darkblue;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Gilroy', Arial, sans-serif;
+}
+
+.container {
+    width: 1226px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.arrow {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-color: transparent;
+    border-style: solid;
+    top: 4px;
+    margin-left: -5px;
+    border-width: 0px 5px 5px;
+    border-bottom-color: #000;
+}

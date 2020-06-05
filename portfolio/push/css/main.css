@@ -1,0 +1,70 @@
+@font-face {
+		font-family: "Gilroy";
+		src: url("../fonts/GilroyLight.woff2") format("woff2");
+		font-weight: 300;
+		font-style: normal;
+}
+@font-face {
+		font-family: "Gilroy";
+		src: url("../fonts/GilroyRegular.woff2") format("woff2");
+		font-weight: 400;
+		font-style: normal;
+}
+@font-face {
+		font-family: "Gilroy";
+		src: url("../fonts/GilroyMedium.woff2") format("woff2");
+		font-weight: 500;
+		font-style: normal;
+}
+@font-face {
+		font-family: "Gilroy";
+		src: url("../fonts/GilroySemibold.woff2") format("woff2");
+		font-weight: 600;
+		font-style: normal;
+}
+@font-face {
+		font-family: "Gilroy";
+		src: url("../fonts/GilroyBold.woff2") format("woff2");
+		font-weight: 700;
+		font-style: normal;
+}
+*,
+*:after,
+*:before {
+		margin: 0;
+		padding: 0;
+		outline: none;
+}
+
+body,
+html {
+		color: #323441;
+		box-sizing: border-box;
+		overflow-x: hidden;
+		font-family: "Gilroy", Arial, sans-serif;
+}
+
+.container {
+		width: 1226px;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin: 0 auto;
+}
+
+.arrow {
+		position: absolute;
+		width: 0px;
+		height: 0px;
+		border-color: transparent;
+		border-style: solid;
+		top: 4px;
+		margin-left: -5px;
+		border-width: 0px 5px 5px;
+		border-bottom-color: #000;
+}
+
+.header {
+		background-color: #5BA4D7;
+		height: 80px;
+		width: 100%;
+}
