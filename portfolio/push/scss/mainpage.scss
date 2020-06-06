@@ -132,7 +132,6 @@
                 justify-content: space-between;
                 min-height: 120px;
                 color: $white;
-                height: 100%;
                 box-shadow: $shadow;
                 border-radius: 10px;
                 margin-top: 8px;
@@ -242,4 +241,8 @@
 .semibold {
     font-weight: 600;
     margin-top: 4px;
+}
+
+.stats__item {
+    height: 100%;
 }

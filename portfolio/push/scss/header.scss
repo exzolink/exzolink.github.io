@@ -352,6 +352,7 @@
             text-decoration: none;
             color: $darkblue;
             font-weight: 500;
+            font-size: 14px;
             display: inline-block;
             width: max-content;
 
@@ -500,5 +501,6 @@
         background-image: url('../imgs/exit.svg');
         width: 9px;
         height: 12px;
+        top: 2px;
     }
 }
