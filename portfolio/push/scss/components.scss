@@ -365,6 +365,18 @@ html {
     }
 }
 
+button {
+    border: 0;
+    font-family: 'Gilroy', Arial, sans-serif;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+input, textarea {
+    font-family: 'Gilroy', Arial, sans-serif;
+}
+
 .selected {
     color: #979797 !important;
 }

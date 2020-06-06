@@ -115,10 +115,13 @@ $(document).ready(function () {
 
     $('.mails__reset').click(function () {
         $('#firstDate').removeClass('activated');
-        $('#firstDate-input').val('');
         $('#lastDate').removeClass('activated');
-        $('#lastDate-input').val('');
+        $('.filter__input').val('');
         $(this).fadeOut(300);
+    });
+
+    $('.button_lb').click(function () {
+        $('.filter__input').val('');
     });
 
     $('#first-date-del').click(function () {

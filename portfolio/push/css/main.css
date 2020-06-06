@@ -756,6 +756,18 @@ html {
 		border-bottom-left-radius: 0;
 }
 
+button {
+		border: 0;
+		font-family: "Gilroy", Arial, sans-serif;
+}
+button:hover {
+		cursor: pointer;
+}
+
+input, textarea {
+		font-family: "Gilroy", Arial, sans-serif;
+}
+
 .selected {
 		color: #979797 !important;
 }
