@@ -154,28 +154,28 @@ $(document).ready(function () {
             datasets: [{
                 data: dataMailing,
                 label: "рассылок",
-                borderColor: "#3e95cd",
+                borderColor: "#36C2CF",
                 fill: false,
                 backgroundColor: 'transparent',
                 pointBackgroundColor: '#ffffff00'
             }, {
                 data: dataSent,
                 label: "отправлено",
-                borderColor: "#8e5ea2",
+                borderColor: "#5BA4D7",
                 fill: false,
                 backgroundColor: 'transparent',
                 pointBackgroundColor: '#ffffff00'
             }, {
                 data: dataDelivery,
                 label: "доставлено",
-                borderColor: "#3cba9f",
+                borderColor: "#9698D5",
                 fill: false,
                 backgroundColor: 'transparent',
                 pointBackgroundColor: '#ffffff00'
             }, {
                 data: dataGo,
                 label: "переходов",
-                borderColor: "#e8c3b9",
+                borderColor: "#68B781",
                 fill: false,
                 backgroundColor: 'transparent',
                 pointBackgroundColor: '#ffffff00'
@@ -214,8 +214,6 @@ $(document).ready(function () {
             }
         }
     });
-
-
 
     function addData(chart, label) {
         chart.data.labels = label;
