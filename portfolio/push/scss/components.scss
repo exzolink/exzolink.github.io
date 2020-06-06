@@ -44,7 +44,7 @@ html {
 
 .container {
     max-width: 1196px;
-    width: 100%;
+    width: auto;
     position: relative;
     padding-left: 15px;
     padding-right: 15px;
@@ -73,11 +73,12 @@ html {
 }
 
 @for $i from 0 through 100 {
-    .progress progress[value="#{$i}"]
-    {
-      & ~ .progress_bg .progress_bar { width: $i * 1% }
+    .progress progress[value="#{$i}"] {
+        &~.progress_bg .progress_bar {
+            width: $i * 1%
+        }
     }
-  }
+}
 
 .progress {
     overflow: hidden;
@@ -87,6 +88,7 @@ html {
     margin: 18px 0;
     border-radius: 100px;
     z-index: 1;
+
     progress {
         position: absolute;
         width: 0;
@@ -94,12 +96,14 @@ html {
         overflow: hidden;
         left: -7777px;
     }
+
     &_bg {
         position: relative;
         height: 16px;
         border-radius: 5px;
         overflow: hidden;
     }
+
     &_bar {
         overflow: hidden;
         max-width: 100%;
@@ -114,6 +118,7 @@ html {
 
 .checkmark {
     position: relative;
+
     &:before {
         position: absolute;
         right: -24px;
@@ -126,4 +131,239 @@ html {
         width: 12px;
         height: 12px;
     }
+}
+
+.button_green {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    border-radius: 100px;
+    margin-bottom: 30px;
+}
+
+.green_button_circle {
+    background-color: $green;
+    border-radius: 1000px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0px;
+    height: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    pointer-events: none;
+}
+
+.button_green_inner {
+    display: inline-block;
+    background: $green;
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    border-radius: 100px;
+    transition: 400ms;
+    text-decoration: none;
+    padding: 19px 46px;
+    z-index: 100000;
+}
+
+.button_text_container {
+    position: relative;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+
+    & img {
+        margin-right: 10px;
+    }
+}
+
+.explode-circle {
+    animation: explode 0.5s forwards;
+}
+
+.desplode-circle {
+    animation: desplode 0.5s forwards;
+
+}
+
+@keyframes explode {
+    0% {
+        width: 0px;
+        height: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        background-color: $green;
+    }
+
+    100% {
+        width: 500px;
+        height: 500px;
+        margin-left: -250px;
+        margin-top: -200px;
+        background-color: $darkblue;
+    }
+}
+
+@keyframes desplode {
+    0% {
+        width: 400px;
+        height: 400px;
+
+        margin-left: -200px;
+        margin-top: -200px;
+        background-color: $darkblue;
+    }
+
+    100% {
+        width: 0px;
+        height: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        background-color: $green
+    }
+}
+
+.button_white {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    border-radius: 100px;
+    margin-bottom: 30px;
+    box-shadow: $shadow;
+    color: $darkblue;
+}
+
+.button-img {
+    transition: all .3s ease;
+}
+
+.white_button_circle {
+    background-color: $white;
+    border-radius: 1000px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0px;
+    height: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    pointer-events: none;
+}
+
+.button_white_inner {
+    display: inline-block;
+    background: $white;
+    color: $darkblue;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    border-radius: 100px;
+    transition: 400ms;
+    text-decoration: none;
+    padding: 19px 46px;
+    transition: color .3s ease;
+    z-index: 100000;
+
+    &:hover {
+        color: $white;
+    }
+
+    &:hover .button-img {
+        filter: invert(100%) sepia(62%) saturate(0%) hue-rotate(208deg) brightness(108%) contrast(101%);
+    }
+}
+
+.button_text_container {
+    position: relative;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+
+    & img {
+        margin-right: 10px;
+    }
+}
+
+.explode-circle-w {
+    animation: explode-w 0.8s forwards;
+}
+
+.desplode-circle-w {
+    animation: desplode-w 0.5s forwards;
+}
+
+@keyframes explode-w {
+    0% {
+        width: 0px;
+        height: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        background-color: $white;
+    }
+
+    100% {
+        width: 600px;
+        height: 600px;
+        margin-left: -300px;
+        margin-top: -250px;
+        background-color: $green;
+    }
+}
+
+@keyframes desplode-w {
+    0% {
+        width: 400px;
+        height: 400px;
+        margin-left: -200px;
+        margin-top: -200px;
+        background-color: $green;
+    }
+
+    100% {
+        width: 0px;
+        height: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        background-color: $white
+    }
+}
+
+.button {
+    background: #F8F9FC;
+    border: 1px solid #F2F2F2;
+    padding: 8px 24px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    color: $darkblue;
+    border-radius: 4px;
+    transition: all .3s ease;
+    
+    &:hover {
+        cursor: pointer;
+    }
+
+
+    &_left-btn {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    &_right-btn {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+.selected {
+    color: #979797 !important;
 }

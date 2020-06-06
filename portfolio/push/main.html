@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Push.Gun</title>
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/select2.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.css">
     </head>
 
     <body>
@@ -125,25 +127,89 @@
                             <a href="#" class="account__bottom_subscribe">Изменить</a>
                         </div>
                     </div>
-                    <h2 class="subtitle">Мои сайты</h2>
-                    <div class="mainpage__sites">
-                        <div class="mainpage__sites_item">
-                            <div class="mainpage__sites_item-more"><img src="imgs/more.svg" alt=""></div>
-                            <a href="#"><img class="mainpage__sites_item-img" src="imgs/site.png" alt=""></a>
-                            <div class="mainpage__sites_info checkmark">
-                                <a href="#" class="account__bottom_subscribe mainpage__sites_title">https://hello.world</a>
-                                <p>Подписчиков: <span>2</span></p>
+                    <div class="mainpage__stats">
+                        <div class="mainpage__stats_left">
+                            <div class="mainpage__stats_left-item" style="background: #FF808B;">
+                                <h3>2</h3>
+                                <div class="mb-10">
+                                    <p class="medium">активных подписчиков</p>
+                                    <p class="semibold">за сегодня: 0</p>
+                                </div>
+                            </div>
+                            <div class="mainpage__stats_left-item" style="background: #9698D5;">
+                                <h3>2</h3>
+                                <p class="medium mb-10"">100% доставлено</p>
+                            </div>
+                            <div class=" mainpage__stats_left-item" style="background: #4AB731;">
+                                <h3>2</h3>
+                                <div class="mb-10">
+                                    <p class="medium">50% переходов</p>
+                                    <p class="semibold">за сегодня: 0</p>
+                                </div>
+                            </div>
+                            <div class="mainpage__stats_left-item" style="background: #36C2CF;">
+                                <h3>2</h3>
+                                <p class="medium mb-10"">рассылок</p>
                             </div>
                         </div>
-                        <div class="mainpage__sites_item">
-                            <div class="mainpage__sites_item-more"><img src="imgs/more.svg" alt=""></div>
-                            <a href="#"><img class="mainpage__sites_item-img" src="imgs/site.png" alt=""></a>
-                            <div class="mainpage__sites_info checkmark">
-                                <a href="#" class="account__bottom_subscribe mainpage__sites_title">https://hello.world</a>
-                                <p>Подписчиков: <span>2</span></p>
+                        <div class=" mainpage__stats_right">
+                                <div class="mainpage__stats_right__inner">
+                                    <div class="mainpage__stats_right-top">
+                                        <h3>Статистика последних рассылок</h3>
+                                        <div class="mainpage__stats_right-buttons">
+                                            <div class="mainpage__stats_right-double_button">
+                                                <button class="button button_left-btn">По дням</button>
+                                                <button class="button button_right-btn selected">По неделям</button>
+                                            </div>
+                                            <select class="stats__selector">
+                                                <option value="week">За неделю</option>
+                                                <option value="month">За месяц</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <canvas id="myChart"></canvas>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <h2 class="subtitle">Мои сайты</h2>
+                        <div class="mainpage__sites">
+                            <div class="mainpage__sites_item">
+                                <div class="mainpage__sites_item-more"><img src="imgs/more.svg" alt=""></div>
+                                <a href="#"><img class="mainpage__sites_item-img" src="imgs/site.png" alt=""></a>
+                                <div class="mainpage__sites_info checkmark">
+                                    <a href="#"
+                                        class="account__bottom_subscribe mainpage__sites_title">https://hello.world</a>
+                                    <p>Подписчиков: <span>2</span></p>
+                                </div>
+                            </div>
+                            <div class="mainpage__sites_item">
+                                <div class="mainpage__sites_item-more"><img src="imgs/more.svg" alt=""></div>
+                                <a href="#"><img class="mainpage__sites_item-img" src="imgs/site.png" alt=""></a>
+                                <div class="mainpage__sites_info checkmark">
+                                    <a href="#"
+                                        class="account__bottom_subscribe mainpage__sites_title">https://hello.world</a>
+                                    <p>Подписчиков: <span>2</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button_green">
+                            <span class="green_button_circle">
+                            </span>
+                            <a href="#" class="button_green_inner">
+                                <p class="button_text_container">
+                                    <img src="imgs/send.svg" alt="">Отправить PUSH
+                                </p>
+                            </a>
+                        </div>
+                        <div class="button_white ml-24">
+                            <span class="white_button_circle">
+                            </span>
+                            <a href="#" class="button_white_inner">
+                                <p class="button_text_container">
+                                    <img class="button-img" src="imgs/add.svg" alt="">Добавить новый сайт
+                                </p>
+                            </a>
+                        </div>
                 </section>
             </div>
         </main>
@@ -154,6 +220,7 @@
 
         <script src="js/jquery.js"></script>
         <script src="js/select2.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 
