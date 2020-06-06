@@ -1,6 +1,6 @@
 'use strict';
 
-$('.stats__selector').select2({
+$('.stats__selector, .filter__selector').select2({
     minimumResultsForSearch: -1,
     placeholder: 'Выбрать'
 });
@@ -31,6 +31,40 @@ $(document).ready(function () {
         $(this).prev(".green_button_circle").addClass("desplode-circle");
     });
 
+    $(".button_lb_inner").mouseenter(function (e) {
+        var parentOffset = $(this).offset();
+        var relX = e.pageX - parentOffset.left;
+        var relY = e.pageY - parentOffset.top;
+        $(this).prev(".lb_button_circle").css({ "left": relX, "top": relY });
+        $(this).prev(".lb_button_circle").removeClass("desplode-circle-lb");
+        $(this).prev(".lb_button_circle").addClass("explode-circle-lb");
+    });
+    $(".button_lb_inner").mouseleave(function (e) {
+        var parentOffset = $(this).offset();
+        var relX = e.pageX - parentOffset.left;
+        var relY = e.pageY - parentOffset.top;
+        $(this).prev(".lb_button_circle").css({ "left": relX, "top": relY });
+        $(this).prev(".lb_button_circle").removeClass("explode-circle-lb");
+        $(this).prev(".lb_button_circle").addClass("desplode-circle-lb");
+    });
+
+    $(".button_rb_inner").mouseenter(function (e) {
+        var parentOffset = $(this).offset();
+        var relX = e.pageX - parentOffset.left;
+        var relY = e.pageY - parentOffset.top;
+        $(this).prev(".rb_button_circle").css({ "left": relX, "top": relY });
+        $(this).prev(".rb_button_circle").removeClass("desplode-circle-rb");
+        $(this).prev(".rb_button_circle").addClass("explode-circle-rb");
+    });
+    $(".button_rb_inner").mouseleave(function (e) {
+        var parentOffset = $(this).offset();
+        var relX = e.pageX - parentOffset.left;
+        var relY = e.pageY - parentOffset.top;
+        $(this).prev(".rb_button_circle").css({ "left": relX, "top": relY });
+        $(this).prev(".rb_button_circle").removeClass("explode-circle-rb");
+        $(this).prev(".rb_button_circle").addClass("desplode-circle-rb");
+    });
+
     $(".button_white_inner").mouseenter(function (e) {
         var parentOffset = $(this).offset();
         var relX = e.pageX - parentOffset.left;
@@ -52,6 +86,53 @@ $(document).ready(function () {
         $('.button').removeClass('selected');
         $(this).addClass('selected')
     });
+
+    $('#filter').click(function () {
+        $('.filter__popup').fadeToggle(300);
+    });
+    $('.button_rb').click(function () {
+        $('.filter__popup').fadeToggle(300);
+        if ($('#firstDate-input').val() !== '' && $('#lastDate-input').val() !== '') {
+            var fD = $('#firstDate-input').val();
+            var lD = $('#lastDate-input').val();
+
+            $('#firstDate').addClass('activated');
+            $('#first-date').text(fD);
+
+            $('#lastDate').addClass('activated');
+            $('#last-date').text(lD);
+
+            $('.mails__reset').fadeIn(300);
+
+        }
+    });
+
+    function checkEmpty() {
+        if ($('#firstDate-input').val() == 0 && $('#lastDate-input').val() == 0) {
+            $('.mails__reset').fadeOut(300);
+        }
+    }
+
+    $('.mails__reset').click(function () {
+        $('#firstDate').removeClass('activated');
+        $('#firstDate-input').val('');
+        $('#lastDate').removeClass('activated');
+        $('#lastDate-input').val('');
+        $(this).fadeOut(300);
+    });
+
+    $('#first-date-del').click(function () {
+        $('#firstDate').removeClass('activated');
+        $('#firstDate-input').val('');
+        checkEmpty();
+    });
+
+    $('#last-date-del').click(function () {
+        $('#lastDate').removeClass('activated');
+        $('#lastDate-input').val('');
+        checkEmpty();
+    });
+
 
     var days = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
     var weeks = ['1 - 8 июня', '9 - 16 июня', '17 - 24 июня', '25 - 30 июня'];
@@ -131,7 +212,7 @@ $(document).ready(function () {
         }
     });
 
-    
+
 
     function addData(chart, label) {
         chart.data.labels = label;

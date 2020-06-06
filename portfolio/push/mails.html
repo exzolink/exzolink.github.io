@@ -5,12 +5,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Мои рассылки | Push.Gun</title>
-        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/select2.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/datepicker.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.css">
     </head>
 
-    <body>
+    <body class="mymailing">
         <header class="header">
             <div class="container">
                 <div class="header__inner">
@@ -108,27 +109,69 @@
         <main class="main">
             <div class="container">
                 <section class="mails">
+                    <div class="filter__popup">
+                        <div class="filter__popup__inner">
+                            <div class="filter__popup_block w-50">
+                                <label for="" class="filter__popup_label">Начальная дата</label>
+                                <input id="firstDate-input" class="datepicker-here filter__input" type="text">
+                            </div>
+                            <div class="filter__popup_block w-50">
+                                <label for="" class="filter__popup_label">Конечная дата</label>
+                                <input id="lastDate-input" class="datepicker-here filter__input" type="text">
+                            </div>
+                            <div class="filter__popup_block">
+                                <label for="" class="filter__popup_label">Текст</label>
+                                <input class="filter__input" type="text">
+                            </div>
+                            <div class="filter__popup_block">
+                                <label for="" class="filter__popup_label">Сайт</label>
+                                <select class="filter__input filter__selector" type="text">
+                                    <option value="1">Сайт</option>
+                                    <option value="2">Сайт 2</option>
+                                </select>
+                            </div>
+                            <div class="button_lb">
+                                <span class="lb_button_circle">
+                                </span>
+                                <a href="#" class="button_lb_inner">
+                                    <p class="lb_button_text_container">
+                                        Сброс
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="button_rb">
+                                <span class="rb_button_circle">
+                                </span>
+                                <a href="#" class="button_rb_inner">
+                                    <p class="rb_button_text_container">
+                                        Выбрать
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="mainpage__title">
                         <h1 class="title">Мои рассылки</h1>
                     </div>
                     <div class="mails__filter">
-                        <div class="button_green">
+                        <div class="mails__reset">
+                            <div class="mails__reset_inner">Сбросить фильтр</div>
+                        </div>
+                        <div id="filter" class="button_green">
                             <span class="green_button_circle">
                             </span>
-                            <a href="#" class="button_green_inner">
+                            <div class="button_green_inner mails__filter_btn">
                                 <p class="button_text_container">
                                     Фильтр
                                 </p>
-                            </a>
+                            </div>
                         </div>
                         <div class="mails__date">
-                            <p>Начальная дата: <span id="first-date">123</span><img id="first-date-del"
+                            <p id="firstDate">Начальная дата: <span id="first-date">123</span><img id="first-date-del"
                                     src="imgs/remove.svg" alt=""></p>
-                            <p>Конечная дата: <span id="last-date">123</span><img id="last-date-del"
+                            <p id="lastDate">Конечная дата: <span id="last-date">123</span><img id="last-date-del"
                                     src="imgs/remove.svg" alt=""></p>
-                            <div class="mails__reset">
-                                <div class="mails__reset_inner">Сбросить фильтр</div>
-                            </div>
+
                         </div>
                     </div>
                     <div class="mainpage__sites">
@@ -197,6 +240,7 @@
 
         <script src="js/jquery.js"></script>
         <script src="js/select2.min.js"></script>
+        <script src="js/datepicker.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.bundle.min.js"></script>
         <script src="js/main.js"></script>
     </body>
