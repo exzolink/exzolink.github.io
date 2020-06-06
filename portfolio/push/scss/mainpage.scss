@@ -1,3 +1,6 @@
+.main {
+    min-height: 700px;
+}
 .mainpage {
     &__title {
         display: flex;
@@ -136,10 +139,6 @@
                     justify-content: center;
                 }
 
-
-
-
-
                 &:first-child {
                     margin-top: 0;
                 }
@@ -160,8 +159,7 @@
 
             &-buttons {
                 display: flex;
-            }
-            
+            }   
 
             &__inner {
                 padding: 24px;
@@ -180,6 +178,46 @@
     }
 
 }
+
+.current {
+    &__stats {
+        display: flex;
+        justify-content: center;
+
+        &_desc {
+            color: $darkblue;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        &_item {
+            display: flex;
+            width: max-content;
+            flex-direction: column;
+            text-align: center;
+            padding-left: 48px;
+            padding-right: 48px;
+
+            &:nth-child(2) {
+                border-left: 1px solid #F3F3F3;
+                border-right: 1px solid #F3F3F3;
+            }
+
+            &:nth-child(3) {
+                border-right: 1px solid #F3F3F3;
+            }
+
+            & h3 {
+                font-size: 32px;
+                font-weight: 700;
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+
+
 
 .ml-24 {
     margin-left: 24px;

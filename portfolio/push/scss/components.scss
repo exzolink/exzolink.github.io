@@ -138,7 +138,6 @@ html {
     position: relative;
     display: inline-block;
     border-radius: 100px;
-    margin-bottom: 30px;
 }
 
 .green_button_circle {
@@ -234,7 +233,6 @@ html {
     position: relative;
     display: inline-block;
     border-radius: 100px;
-    margin-bottom: 30px;
     box-shadow: $shadow;
     color: $darkblue;
 }
@@ -366,4 +364,8 @@ html {
 
 .selected {
     color: #979797 !important;
+}
+
+.flex {
+    display: flex;
 }

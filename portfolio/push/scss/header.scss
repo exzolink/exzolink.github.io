@@ -38,34 +38,27 @@
                 height: 1px;
                 margin-bottom: -10px;
                 width: 0;
-
             }
-
             &:before {
                 transition: width 0s ease, background .4s ease;
                 left: 0;
                 right: 0;
                 bottom: 6px;
             }
-
             &:after {
-                right: 2.2%;
+                right: 0;
                 bottom: 6px;
                 background: $light-blue;
-                ;
                 transition: width .4s ease;
             }
-
             &:hover {
                 &:before {
-                    width: 97.8%;
+                    width: 100%;
                     background: $light-blue;
-                    ;
                     transition: width .4s ease;
                 }
-
                 &:after {
-                    width: 97.8%;
+                    width: 100%;
                     background: 0 0;
                     transition: all 0s ease;
                 }
@@ -179,7 +172,7 @@
             }
 
             &:after {
-                right: 2.2%;
+                right: 0;
                 bottom: 6px;
                 background: $darkblue;
                 transition: width .4s ease;
@@ -187,13 +180,13 @@
 
             &:hover {
                 &:before {
-                    width: 97.8%;
+                    width: 100%;
                     background: $darkblue;
                     transition: width .4s ease;
                 }
 
                 &:after {
-                    width: 97.8%;
+                    width: 100%;
                     background: 0 0;
                     transition: all 0s ease;
                 }
@@ -381,7 +374,7 @@
             }
 
             &:after {
-                right: 2.2%;
+                right: 0;
                 bottom: 6px;
                 background: $darkblue;
                 transition: width .4s ease;
@@ -389,13 +382,13 @@
 
             &:hover {
                 &:before {
-                    width: 97.8%;
+                    width: 100%;
                     background: $darkblue;
                     transition: width .4s ease;
                 }
 
                 &:after {
-                    width: 97.8%;
+                    width: 100%;
                     background: 0 0;
                     transition: all 0s ease;
                 }
@@ -427,7 +420,7 @@
             }
 
             &:after {
-                right: 2.2%;
+                right: 0;
                 bottom: 6px;
                 background: $green;
                 transition: width .4s ease;
@@ -435,13 +428,13 @@
 
             &:hover {
                 &:before {
-                    width: 97.8%;
+                    width: 100%;
                     background: $green;
                     transition: width .4s ease;
                 }
 
                 &:after {
-                    width: 97.8%;
+                    width: 100%;
                     background: 0 0;
                     transition: all 0s ease;
                 }

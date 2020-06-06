@@ -1,0 +1,167 @@
+.mails {
+
+    &__sites {
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+
+        &_stats {
+            display: flex;
+
+            &-item {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-left: 24px;
+                height: max-content;
+                padding-right: 24px;
+
+                &:nth-child(2) {
+                    border-left: 1px solid #F3F3F3;
+                    border-right: 1px solid #F3F3F3;
+                }
+
+                & h3 {
+                    font-weight: 500;
+                    font-size: 32px;
+                    margin-bottom: 6px;
+                }
+
+                & p {
+                    font-weight: 500;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        &_info {
+            & a {
+                color: $blue;
+                margin-bottom: 10px;
+                font-weight: 500;
+                position: relative;
+                text-decoration: none;
+                width: max-content;
+                
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                height: 1px;
+                margin-bottom: -10px;
+                width: 0;
+            }
+            &:before {
+                transition: width 0s ease, background .4s ease;
+                left: 0;
+                right: 0;
+                bottom: 6px;
+            }
+            &:after {
+                right: 0;
+                bottom: 6px;
+                background: $blue;
+                transition: width .4s ease;
+            }
+            &:hover {
+                &:before {
+                    width: 100%;
+                    background: $blue;
+                    transition: width .4s ease;
+                }
+                &:after {
+                    width: 100%;
+                    background: 0 0;
+                    transition: all 0s ease;
+                }
+            }
+            }
+            & p {
+                margin-bottom: 8px;
+                font-size: 14px;
+            }
+            & p img {
+                margin-right: 12px;
+            }
+        }
+    }
+
+    &__filter {
+        display: flex;
+        background-color: $white;
+        box-shadow: $shadow;
+        border-radius: 100px;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+
+    &__date {
+        display: flex;
+        font-weight: 500;
+        position: relative;
+        font-size: 14px;
+
+        & p {
+            display: flex;
+            align-items: center;
+            margin-left: 46px;
+
+            & img {
+                margin-left: 8px;
+                transition: opacity .3s ease;
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: .8;
+                }
+            }
+
+            & span {
+                margin-left: 6px;
+            }
+        }
+    }
+
+    &__reset {
+        background-color: $white;
+        box-shadow: $shadow;
+        position: absolute;
+        align-self: center;
+       text-align: center;
+       top: -60px;
+       left: 113%;
+       width: max-content;
+       border-radius: 4px;
+       transform: translate(-50%,-50%);
+
+     
+
+        &_inner {
+            position: relative;
+            padding: 10px 16px;
+            transition: all .3s ease;
+            border-radius: 4px;
+            &:hover {
+                cursor: pointer;
+                box-shadow: $shadow-inset;
+            }
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            border-color: transparent;
+            border-bottom-color: transparent;
+            border-style: solid;
+            bottom: -8px;
+            transform: rotate(180deg);
+            margin-left: -18px;
+            border-width: 0px 18px 18px;
+            border-bottom-color: $white;
+        }
+    }
+}

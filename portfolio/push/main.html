@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Push.Gun</title>
+        <title>Главная | Push.Gun</title>
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/select2.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.css">
@@ -158,16 +158,35 @@
                                         <h3>Статистика последних рассылок</h3>
                                         <div class="mainpage__stats_right-buttons">
                                             <div class="mainpage__stats_right-double_button">
-                                                <button class="button button_left-btn">По дням</button>
-                                                <button class="button button_right-btn selected">По неделям</button>
+                                                <button id="days" class="button button_left-btn selected">По
+                                                    дням</button>
+                                                <button id="weeks" class="button button_right-btn">По неделям</button>
                                             </div>
-                                            <select class="stats__selector">
-                                                <option value="week">За неделю</option>
-                                                <option value="month">За месяц</option>
+                                            <select id="selector" class="stats__selector">
+                                                <option value="1">За месяц</option>
+                                                <option value="2">За год</option>
                                             </select>
                                         </div>
                                     </div>
                                     <canvas id="myChart"></canvas>
+                                    <div class="current__stats">
+                                        <div class="current__stats_item">
+                                            <h3 style="color: #36C2CF;">3</h3>
+                                            <p class="current__stats_desc">рассылок</p>
+                                        </div>
+                                        <div class="current__stats_item">
+                                            <h3 style="color: #5BA4D7;">3</h3>
+                                            <p class="current__stats_desc">отправлено</p>
+                                        </div>
+                                        <div class="current__stats_item">
+                                            <h3 style="color: #9698D5;">3</h3>
+                                            <p class="current__stats_desc">15% доставлено</p>
+                                        </div>
+                                        <div class="current__stats_item">
+                                            <h3 style="color: #68B781;">3</h3>
+                                            <p class="current__stats_desc">10% переходов</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -213,6 +232,11 @@
                 </section>
             </div>
         </main>
+        <footer class="footer">
+            <a href="">База знаний</a>
+            <a href="">Тех. поддержка</a>
+            <a href="">Политика конфиденциальности</a>
+        </footer>
 
 
 
@@ -220,7 +244,7 @@
 
         <script src="js/jquery.js"></script>
         <script src="js/select2.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.bundle.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 

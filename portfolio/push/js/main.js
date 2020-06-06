@@ -2,7 +2,10 @@
 
 $('.stats__selector').select2({
     minimumResultsForSearch: -1,
-  });
+    placeholder: 'Выбрать'
+});
+
+
 
 $(document).ready(function () {
 
@@ -50,39 +53,71 @@ $(document).ready(function () {
         $(this).addClass('selected')
     });
 
-    new Chart(document.getElementById("myChart"), {
+    var days = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+    var weeks = ['1 - 8 июня', '9 - 16 июня', '17 - 24 июня', '25 - 30 июня'];
+    var months = ['Янв.', 'Фев.', 'Мар.', 'Апр.', 'Июн.', 'Июл.', 'Авг.', 'Сен.', 'Окт.', 'Ноя.', 'Дек.'];
+
+    var dataMailing = [1, 30, 45, 60, 90, 139, 12, 38, 3, 15];
+    var dataSent = [1, 30, 45, 60, 39, 87, 12, 38, 3, 15];
+    var dataDelivery = [1, 30, 45, 60, 55, 54, 12, 38, 3, 15];
+    var dataGo = [1, 22, 45, 39, 59, 12, 12, 38, 3, 15];
+
+
+    var myChart = new Chart(document.getElementById("myChart"), {
         type: 'line',
         data: {
-            labels: [1500, 1600, 1700, 1750, 1800, 1850, 1900, 1950, 1999, 2050],
+            labels: days,
             datasets: [{
-                data: [86, 114, 106, 106, 107, 111, 133, 221, 783, 2478],
+                data: dataMailing,
                 label: "рассылок",
                 borderColor: "#3e95cd",
-                fill: false
+                fill: false,
+                backgroundColor: 'transparent',
+                pointBackgroundColor: '#ffffff00'
             }, {
-                data: [282, 350, 411, 502, 635, 809, 947, 1402, 3700, 5267],
+                data: dataSent,
                 label: "отправлено",
                 borderColor: "#8e5ea2",
-                fill: false
+                fill: false,
+                backgroundColor: 'transparent',
+                pointBackgroundColor: '#ffffff00'
             }, {
-                data: [168, 170, 178, 190, 203, 276, 408, 547, 675, 734],
-                label: "15% доставлено",
+                data: dataDelivery,
+                label: "доставлено",
                 borderColor: "#3cba9f",
-                fill: false
+                fill: false,
+                backgroundColor: 'transparent',
+                pointBackgroundColor: '#ffffff00'
             }, {
-                data: [40, 20, 10, 16, 24, 38, 74, 167, 508, 784],
-                label: "10% переходов",
+                data: dataGo,
+                label: "переходов",
                 borderColor: "#e8c3b9",
-                fill: false
+                fill: false,
+                backgroundColor: 'transparent',
+                pointBackgroundColor: '#ffffff00'
             }
             ]
         },
         options: {
-            scaleShowLabels: false,
+            aspectRatio: '2.5',
             title: {
                 display: false
             },
-      layout: {
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        display: false,
+                        drawBorder: false
+                    },
+                }],
+                yAxes: [{
+                    gridLines: {
+                        display: true,
+                        drawBorder: false
+                    }
+                }]
+            },
+            layout: {
                 padding: {
                     left: 0,
                     right: 0,
@@ -94,5 +129,28 @@ $(document).ready(function () {
                 display: false,
             }
         }
+    });
+
+    
+
+    function addData(chart, label) {
+        chart.data.labels = label;
+        chart.update();
+    }
+
+    $("#days").click(function () {
+        addData(myChart, days);
+    });
+    $("#weeks").click(function () {
+        addData(myChart, weeks);
+    });
+    $('#selector').change(function () {
+        $('.button').removeClass('selected');
+        if ($("#selector").val() == 1) {
+            addData(myChart, weeks);
+        };
+        if ($("#selector").val() == 2) {
+            addData(myChart, months);
+        };
     });
 });
