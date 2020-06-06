@@ -90,7 +90,7 @@ $(document).ready(function () {
     $('#filter').click(function () {
         $('.filter__popup').fadeToggle(300);
     });
-    $('.button_rb').click(function () {
+    $('#btn_select').click(function () {
         $('.filter__popup').fadeToggle(300);
         if ($('#firstDate-input').val() !== '' && $('#lastDate-input').val() !== '') {
             var fD = $('#firstDate-input').val();

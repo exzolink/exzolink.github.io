@@ -1,0 +1,90 @@
+.mail {
+
+    &__button {
+        margin: 0;
+        &_inner {
+        padding: 15px 42px;
+        width: auto;
+        }
+    }
+
+    .progress_bar {
+        background-color: $lime;
+    }
+
+    &__go span {
+        color: $lime;
+
+    }
+
+    & .mainpage__stats_left {
+        flex-direction: row;
+        margin-right: 0;
+        justify-content: space-between;
+        margin-top: 26px;
+
+        &-item {
+            margin: 0;
+            flex-basis: 23.5%;
+            
+            & h3 {
+                height: 65%;
+            }
+        }
+    }
+
+    & .mb-10 {
+        height: 35%;
+    }
+
+    &__time-sent {
+        display: flex;
+        align-items: center;
+        margin-bottom: 26px;
+        & img {
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+        }
+        & p {
+            margin-left: 13px;
+            font-weight: 500;
+            color: $black;
+        }
+    }
+
+    &__info {
+        background-color: $white;
+        box-shadow: $shadow;
+        border-radius: 10px;
+        margin-top: 45px;
+
+
+        &_item {
+            font-weight: 500;
+            display: flex;
+            color: $black;
+            padding: 24px;
+
+            &:first-child {
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+
+            &:last-child {
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+
+            &:nth-child(odd) {
+                background-color: $light-blue;
+            }
+        }
+        &_title {
+            flex-basis: 30%;
+        }
+        &_desc {
+            flex-basis: 70%;
+        }
+    }
+}
