@@ -5,8 +5,6 @@ $('.stats__selector, .filter__selector').select2({
     placeholder: 'Выбрать'
 });
 
-
-
 $(document).ready(function () {
 
     $('.header__account').click(function (e) {
@@ -136,84 +134,258 @@ $(document).ready(function () {
         checkEmpty();
     });
 
-
-    var days = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+    var days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
     var weeks = ['1 - 8 июня', '9 - 16 июня', '17 - 24 июня', '25 - 30 июня'];
     var months = ['Янв.', 'Фев.', 'Мар.', 'Апр.', 'Июн.', 'Июл.', 'Авг.', 'Сен.', 'Окт.', 'Ноя.', 'Дек.'];
-
     var dataMailing = [1, 30, 45, 60, 90, 139, 12, 38, 3, 15];
     var dataSent = [1, 30, 45, 60, 39, 87, 12, 38, 3, 15];
     var dataDelivery = [1, 30, 45, 60, 55, 54, 12, 38, 3, 15];
     var dataGo = [1, 22, 45, 39, 59, 12, 12, 38, 3, 15];
 
 
-    var myChart = new Chart(document.getElementById("myChart"), {
-        type: 'line',
-        data: {
-            labels: days,
-            datasets: [{
-                data: dataMailing,
-                label: "рассылок",
-                borderColor: "#36C2CF",
-                fill: false,
-                backgroundColor: 'transparent',
-                pointBackgroundColor: '#ffffff00'
-            }, {
-                data: dataSent,
-                label: "отправлено",
-                borderColor: "#5BA4D7",
-                fill: false,
-                backgroundColor: 'transparent',
-                pointBackgroundColor: '#ffffff00'
-            }, {
-                data: dataDelivery,
-                label: "доставлено",
-                borderColor: "#9698D5",
-                fill: false,
-                backgroundColor: 'transparent',
-                pointBackgroundColor: '#ffffff00'
-            }, {
-                data: dataGo,
-                label: "переходов",
-                borderColor: "#68B781",
-                fill: false,
-                backgroundColor: 'transparent',
-                pointBackgroundColor: '#ffffff00'
-            }
-            ]
-        },
-        options: {
-            aspectRatio: '2.5',
-            title: {
-                display: false
-            },
-            scales: {
-                xAxes: [{
-                    gridLines: {
-                        display: false,
-                        drawBorder: false
-                    },
-                }],
-                yAxes: [{
-                    gridLines: {
-                        display: true,
-                        drawBorder: false
-                    }
-                }]
-            },
-            layout: {
-                padding: {
-                    left: 0,
-                    right: 0,
-                    top: 30,
-                    bottom: 30
+    if ($('#myChart').length !== 0) {
+        var myChart = new Chart(document.getElementById("myChart"), {
+            type: 'line',
+            data: {
+                labels: days,
+                datasets: [{
+                    data: dataMailing,
+                    label: "рассылок",
+                    borderColor: "#36C2CF",
+                    fill: false,
+                    pointBackgroundColor: '#ffffff00',
+                    pointBorderColor: '#ffffff00',
+                    pointHoverBackgroundColor: '#ffffff00',
+                    pointHoverBorderColor: '#ffffff00',
+                    pointBackgroundColor: '#ffffff00',
+                    backgroundColor: 'transparent',
+                    pointHitRadius: 32,
+                    pointBackgroundColor: '#ffffff00'
+                }, {
+                    data: dataSent,
+                    label: "отправлено",
+                    borderColor: "#5BA4D7",
+                    fill: false,
+                    pointBackgroundColor: '#ffffff00',
+                    pointBorderColor: '#ffffff00',
+                    pointHoverBackgroundColor: '#ffffff00',
+                    pointHoverBorderColor: '#ffffff00',
+                    pointBackgroundColor: '#ffffff00',
+                    pointHitRadius: 32,
+                    backgroundColor: 'transparent',
+                    pointBackgroundColor: '#ffffff00'
+                }, {
+                    data: dataDelivery,
+                    label: "доставлено",
+                    borderColor: "#9698D5",
+                    fill: false,
+                    pointBackgroundColor: '#ffffff00',
+                    pointBorderColor: '#ffffff00',
+                    pointHoverBackgroundColor: '#ffffff00',
+                    pointHoverBorderColor: '#ffffff00',
+                    pointHitRadius: 32,
+                    pointBackgroundColor: '#ffffff00',
+                    backgroundColor: 'transparent',
+                    pointBackgroundColor: '#ffffff00'
+                }, {
+                    data: dataGo,
+                    label: "переходов",
+                    borderColor: "#68B781",
+                    fill: false,
+                    pointBackgroundColor: '#ffffff00',
+                    pointBorderColor: '#ffffff00',
+                    pointHoverBackgroundColor: '#ffffff00',
+                    pointHoverBorderColor: '#ffffff00',
+                    pointBackgroundColor: '#ffffff00',
+                    pointHitRadius: 32,
+                    backgroundColor: 'transparent',
+                    pointBackgroundColor: '#ffffff00'
                 }
+                ]
             },
-            legend: {
-                display: false,
+            options: {
+                aspectRatio: '2.5',
+                title: {
+                    display: false
+                },
+                tooltips: {
+                    backgroundColor: '#fff',
+                    titleFontColor: '#323441',
+                    titleMarginBottom: 12,
+                    bodyFontColor: '#323441',
+                    titleAlign: 'center',
+                    titleSpacing: 12,
+                    borderColor: '#DFE0EB',
+                    titleFontStyle: '600',
+                    titleFontFamily: 'Gilroy',
+                    bodyFontStyle: '500',
+                    bodyFontFamily: 'Gilroy',
+                    borderWidth: '1',
+                    xPadding: 18,
+                    yPadding: 12
+                },
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            display: false,
+                            drawBorder: false,
+                            color: '#ffffff00'
+                        },
+                        ticks: {
+                            display: false
+                        },
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            display: true,
+                            drawBorder: false,
+                            color: '#f2f2f2'
+                        },
+                        ticks: {
+                            fontColor: '#979797',
+                            fontFamily: 'Gilroy',
+                            fontSize: 12,
+                            padding: 16,
+                            fontStyle: 'bold'
+                        },
+                    }]
+                },
+                layout: {
+                    padding: {
+                        left: 0,
+                        right: 0,
+                        top: 35,
+                        bottom: 35
+                    }
+                },
+                legend: {
+                    display: false,
+                }
             }
-        }
-    });
+        });
+    }
+    else {};
+
+    if ($('#myChart2').length !== 0) {
+        var myChart2 = new Chart(document.getElementById("myChart2"), {
+            type: 'line',
+            data: {
+                labels: days,
+                datasets: [{
+                    data: dataMailing,
+                    label: "рассылок",
+                    borderColor: "#36C2CF",
+                    fill: false,
+                    pointHitRadius: 32,
+                    backgroundColor: 'transparent',
+                    pointBackgroundColor: '#ffffff00',
+                    pointBorderColor: '#ffffff00',
+                    pointHoverBackgroundColor: '#ffffff00',
+                    pointHoverBorderColor: '#ffffff00',
+                    pointBackgroundColor: '#ffffff00'
+                }, {
+                    data: dataSent,
+                    label: "отправлено",
+                    borderColor: "#5BA4D7",
+                    pointHitRadius: 32,
+                    fill: false,
+                    backgroundColor: 'transparent',
+                    pointBackgroundColor: '#ffffff00',
+                    pointBorderColor: '#ffffff00',
+                    pointHoverBackgroundColor: '#ffffff00',
+                    pointHoverBorderColor: '#ffffff00',
+                    pointBackgroundColor: '#ffffff00'
+                }, {
+                    data: dataDelivery,
+                    pointHitRadius: 32,
+                    label: "доставлено",
+                    borderColor: "#9698D5",
+                    fill: false,
+                    pointBackgroundColor: '#ffffff00',
+                    pointBorderColor: '#ffffff00',
+                    pointHoverBackgroundColor: '#ffffff00',
+                    pointHoverBorderColor: '#ffffff00',
+                    backgroundColor: 'transparent'
+                }, {
+                    data: dataGo,
+                    label: "переходов",
+                    borderColor: "#68B781",
+                    pointHitRadius: 32,
+                    pointBackgroundColor: '#ffffff00',
+                    pointBorderColor: '#ffffff00',
+                    pointHoverBackgroundColor: '#ffffff00',
+                    pointHoverBorderColor: '#ffffff00',
+                    fill: false,
+                    backgroundColor: 'transparent'
+                }
+                ]
+            },
+            options: {
+                aspectRatio: '3.5',
+                title: {
+                    display: false
+                },
+                tooltips: {
+                    backgroundColor: '#fff',
+                    titleFontColor: '#323441',
+                    titleMarginBottom: 12,
+                    bodyFontColor: '#323441',
+                    titleAlign: 'center',
+                    titleSpacing: 12,
+                    borderColor: '#DFE0EB',
+                    titleFontStyle: '600',
+                    titleFontFamily: 'Gilroy',
+                    bodyFontStyle: '500',
+                    bodyFontFamily: 'Gilroy',
+                    borderWidth: '1',
+                    xPadding: 18,
+                    yPadding: 12
+                },
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            display: false,
+                            drawBorder: false,
+                            color: '#ffffff00'
+                        },
+                        ticks: {
+                            display: false
+                        },
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            display: true,
+                            drawBorder: false,
+                            color: '#f2f2f2'
+                        },
+                        ticks: {
+                            fontColor: '#979797',
+                            fontFamily: 'Gilroy',
+                            fontSize: 12,
+                            padding: 16,
+                            fontStyle: 'bold'
+                        },
+                    }]
+                },
+                layout: {
+                    padding: {
+                        left: 0,
+                        right: 0,
+                        top: 35,
+                        bottom: 30
+                    }
+                },
+                legend: {
+                    display: false,
+                },
+                point: {
+                    radius: 16
+                }
+            }
+        });
+    }
+    else {};
+
 
     function addData(chart, label) {
         chart.data.labels = label;
@@ -223,8 +395,14 @@ $(document).ready(function () {
     $("#days").click(function () {
         addData(myChart, days);
     });
+    $("#days-subs").click(function () {
+        addData(myChart2, days);
+    });
     $("#weeks").click(function () {
         addData(myChart, weeks);
+    });
+    $("#weeks-subs").click(function () {
+        addData(myChart2, weeks);
     });
     $('#selector').change(function () {
         $('.button').removeClass('selected');

@@ -2,12 +2,36 @@
     & .mail__time-sent p {
         margin: 0;
     }
-
+     & .mainpage__stats_right-double_button {
+         margin-right: 0;
+     }
     & .mainpage__title {
         justify-content: flex-start;
 
         & img {
             position: relative;
+            margin-top: 5px;
+            margin-left: 12px;
         }
     }
+    &__chart {
+        margin-top: 26px;
+        margin-bottom: 32px;
+        &_desc {
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            & p {
+                margin-left: 6px;
+                color: $black;
+                margin-right: 6px;
+                & span {
+                    font-weight: 700;
+                }
+            }
+        }
+
+    }
+    
 }
