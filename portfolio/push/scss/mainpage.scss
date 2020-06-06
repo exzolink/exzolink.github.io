@@ -1,13 +1,20 @@
 .main {
     min-height: 700px;
 }
+
 .mainpage {
     &__title {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 46px;
+        margin-top: 52px;
         margin-bottom: 24px;
+        position: relative;
+
+        & img {
+            position: absolute;
+            right: 0;
+        }
     }
 
     &__info {
@@ -111,7 +118,6 @@
         border-radius: 10px;
         display: flex;
 
-
         &_left {
             display: flex;
             flex-direction: column;
@@ -126,6 +132,7 @@
                 justify-content: space-between;
                 min-height: 120px;
                 color: $white;
+                height: 100%;
                 box-shadow: $shadow;
                 border-radius: 10px;
                 margin-top: 8px;
@@ -159,7 +166,7 @@
 
             &-buttons {
                 display: flex;
-            }   
+            }
 
             &__inner {
                 padding: 24px;
@@ -169,6 +176,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+
                 & h3 {
                     font-size: 16px;
                     font-weight: 600;
@@ -176,7 +184,6 @@
             }
         }
     }
-
 }
 
 .current {
@@ -215,9 +222,6 @@
         }
     }
 }
-
-
-
 
 .ml-24 {
     margin-left: 24px;

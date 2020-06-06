@@ -1,0 +1,13 @@
+.site {
+    & .mail__time-sent p {
+        margin: 0;
+    }
+
+    & .mainpage__title {
+        justify-content: flex-start;
+
+        & img {
+            position: relative;
+        }
+    }
+}
