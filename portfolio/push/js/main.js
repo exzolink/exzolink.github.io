@@ -413,4 +413,17 @@ $(document).ready(function () {
             addData(myChart, months);
         };
     });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.keyCode === 27) {
+          $('.account__popup').fadeOut(300);
+          $('.filter__popup').fadeOut(300);
+        };
+      });
+    
+      $(document).click(function (e) {
+        if (!$(e.target).closest('#filter, .header__account, .datepicker--cell, .datepicker, .datepicker--nav, .datepicker--nav-action, .datepicker--nav-title, .filter__popup, .account__popup').length) {
+          $(".filter__popup, .account__popup").fadeOut(250);
+        }
+      });
 });
