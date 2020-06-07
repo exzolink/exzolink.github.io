@@ -49,7 +49,7 @@ $(document).ready(function () {
     loop: true,
     slidesPerView: 1,
     autoplay: {
-      delay: 5000,
+      delay: 8000,
     },
     navigation: {
       nextEl: '.refs__next',
