@@ -655,9 +655,18 @@
 
 }
 
+@media screen and (max-width: 500px) {
+    .account__popup::before {
+        right: 53px;
+    }
+}
+
 @media screen and (max-width: 350px) {
     .account__popup {
         width: 310px;
         right: 5px;
+        &:before {
+            right: 63px;
+        }
     }
 }
