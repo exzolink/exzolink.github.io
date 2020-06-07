@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Рассылка | Push.Gun</title>
+        <title>Настройки сайта | Push.Gun</title>
         <link rel="stylesheet" href="css/select2.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/datepicker.min.css">
@@ -65,13 +65,13 @@
                         <a href="#" class="header__subscription_link">Повысить тариф</a>
                     </div>
                     <div class="header__menu_wrap">
-                    <a class="header__account">
-                        <img class="header__account_img" src="imgs/avatar.png" alt="">
-                    </a>
-                    <div class="header__burger">
-                        <img src="imgs/menu.svg" alt="">
+                        <a class="header__account">
+                            <img class="header__account_img" src="imgs/avatar.png" alt="">
+                        </a>
+                        <div class="header__burger">
+                            <img src="imgs/menu.svg" alt="">
+                        </div>
                     </div>
-                </div>
                 </div>
                 <div class="account__popup">
                     <div class="account__inner">
@@ -138,8 +138,76 @@
         <main class="main">
             <div class="container">
                 <section class="setgen">
+                    <div class="general__title">
+                        <h1 class="title">Настройки сайта</h1>
+                        <div class="button_rb mail__button setgen__button">
+                            <span class="rb_button_circle">
+                            </span>
+                            <button class="button_rb_inner mail__button_inner setgen__button_inner">
+                                <p class="rb_button_text_container">
+                                    Website.com →
+                                </p>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="setgen__buttons">
+                        <div class="setgen__buttons_active">
+                            Общие настройки
+                        </div>
+                        <div class="setgen__buttons_link">
+                            <a href="#">Интеграция с сайтом</a>
+                        </div>
+                        <div class="setgen__buttons_link">
+                            <a href="#">Запрос подписки</a>
+                        </div>
+                    </div>
+                    <div class="setgen__info">
+                        <dl class="setgen__info_block">
+                            <dt class="setgen__info_title">URL сайта:</dt>
+                            <dd class="setgen__info_desc">https://puzzlepro.ru <img class="checked" src="imgs/mark.svg"
+                                    alt=""></dd>
+                        </dl>
+                        <dl class="setgen__info_block">
+                            <dt class="setgen__info_title">Изображение сайта:</dt>
+                            <dd class="setgen__info_upload">
+                               
+                                <form action="" method="post">
+                                    <input type="file" name="siteAvatar" id="siteAvatar" required>
+                                    <label for="siteAvatar" class="setgen__form">
+                                        <img src="imgs/site.png" alt="">
+                                        <div class="setgen__form_block">
+                                            <p class="setgen__form_title">Выбрать изображение</p>
+                                            <p class="setgen__form_desc">Рекомендуемый размер: 128×128px
+                                                JPG, PNG до 200KB</p>
+                                        </div>
+                                    </label>
+                                    <div class="setgen__info_block">
+                                        <div class="setgen__info_desc">
+                                            <input type="checkbox" class="checkbox-input" name="getPush" id="getPush">
+                                            <label class="label-checkbox" for="getPush">Отправлять приветственное push-уведомление
+                                                после
+                                                подписки</label>
+                                        </div>
+                                    </div>
+                                    <div class="setgen__down-buttons">
+                                        <div class="button_green save__button">
+                                            <span class="green_button_circle">
+                                            </span>
+                                            <button type="submit" class="button_green_inner">
+                                                <p class="button_text_container">
+                                                    Сохранить
+                                                </p>
+                                            </button>
+                                        </div>
+                                        <button class="setgen__delete">Удалить веб-сайт</button>
+                                    </div>
+                                </form>
+                            </dd>
+                        </dl>
 
 
+                    </div>
+  
 
 
 

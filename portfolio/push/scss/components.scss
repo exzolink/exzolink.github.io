@@ -40,6 +40,7 @@ html {
     font-size: 16px;
     font-weight: 600;
     overflow-x: hidden;
+    letter-spacing: 0.25px;
     font-family: 'Gilroy', sans-serif;
 }
 
@@ -79,6 +80,56 @@ html {
             width: $i * 1%
         }
     }
+}
+
+input[type="checkbox"] {
+    position: relative;
+    width: 100%;
+    max-width: 16px;
+    min-width: 16px;
+    height: 16px;
+    color: $black;
+    border: 2px solid $green;
+    border-radius: 1px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: 0;
+    cursor: pointer;
+    &::before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: .5px;
+      left: 4px;
+      width: 2.5px;
+      height: 7px;
+      border-style: solid;
+      border-color: $green;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      opacity: 0;
+      transition: opacity .1s ease;
+    }
+    &:checked {
+      color: $white;
+      border-color: $green;
+      background: $white;
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+.label-checkbox {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    font-size: 12px;
+    color: $black;
+    font-weight: 500;
+    width: max-content;
+    margin-left: 8px;
 }
 
 .progress {
@@ -603,19 +654,24 @@ textarea {
 }
 
 @media screen and (max-width: 600px) {
-    .button_green, .button_white {
+
+    .button_green,
+    .button_white {
         width: 230px;
         display: block;
         margin: 12px auto !important;
     }
+
     .button_green_inner {
         padding: 14px 28px;
         display: block;
     }
+
     .button_white_inner {
         padding: 14px 28px;
         display: block;
     }
+
     .button_text_container {
         justify-content: center;
     }
@@ -623,9 +679,14 @@ textarea {
 
 @media screen and (max-width: 500px) {
     .container {
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
+
+    .label-checkbox {
+        width: auto;
+    }
+
     .title {
         font-size: 24px;
     }

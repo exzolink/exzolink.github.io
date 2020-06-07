@@ -58,6 +58,8 @@
     }
     .site {
         &__chart_desc {
+            text-align: center;
+            font-size: 14px;
             flex-direction: column;
             align-items: center;
             & p:last-child {
