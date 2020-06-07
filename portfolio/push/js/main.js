@@ -1,5 +1,8 @@
 'use strict';
 
+var hostname = window.location.hostname;
+console.log(hostname)
+
 $('.stats__selector, .filter__selector').select2({
     minimumResultsForSearch: -1,
     placeholder: 'Выбрать'
