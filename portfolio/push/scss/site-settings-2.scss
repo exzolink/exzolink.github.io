@@ -130,6 +130,9 @@
 
 @media screen and (max-width: 500px) {
     .setint {
+        & .general__title {
+            margin-bottom: 40px;
+        }
         & .setgen__buttons_link {
             margin: 0;
         }

@@ -316,7 +316,9 @@
 
 @media screen and (max-width: 500px) {
     .setgen {
-
+        & .general__title {
+            margin-bottom: 40px;
+        }
         &__buttons {
             flex-direction: column;
             width: max-content;
