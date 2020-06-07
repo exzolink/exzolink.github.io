@@ -39,24 +39,28 @@
                 margin-bottom: -10px;
                 width: 0;
             }
+
             &:before {
                 transition: width 0s ease, background .4s ease;
                 left: 0;
                 right: 0;
                 bottom: 6px;
             }
+
             &:after {
                 right: 0;
                 bottom: 6px;
                 background: $light-blue;
                 transition: width .4s ease;
             }
+
             &:hover {
                 &:before {
                     width: 100%;
                     background: $light-blue;
                     transition: width .4s ease;
                 }
+
                 &:after {
                     width: 100%;
                     background: 0 0;
@@ -147,7 +151,6 @@
         }
 
         &_link {
-
             display: inline-block;
             padding: 10px 0;
             padding-top: 0;
@@ -192,7 +195,6 @@
                 }
             }
         }
-
 
         &_item a {
             color: $darkblue;
@@ -269,7 +271,6 @@
     }
 }
 
-
 .account {
     &__link_wrapper {
         position: relative;
@@ -293,6 +294,7 @@
         border-radius: 4px;
         right: 15px;
         display: none;
+
         &:before {
             content: '';
             position: absolute;
@@ -307,7 +309,6 @@
             border-bottom-color: $blue;
         }
     }
-
 
     &__top {
         color: $white;
@@ -488,6 +489,7 @@
 
 .icon-support {
     margin-bottom: 0;
+
     &:before {
         background-image: url('../imgs/support.svg');
         width: 10px;
@@ -497,6 +499,7 @@
 
 .icon-exit {
     margin-bottom: 0;
+
     &:before {
         background-image: url('../imgs/exit.svg');
         width: 9px;

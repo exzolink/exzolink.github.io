@@ -372,12 +372,14 @@ html {
 button {
     border: 0;
     font-family: 'Gilroy', Arial, sans-serif;
+
     &:hover {
         cursor: pointer;
     }
 }
 
-input, textarea {
+input,
+textarea {
     font-family: 'Gilroy', Arial, sans-serif;
 }
 

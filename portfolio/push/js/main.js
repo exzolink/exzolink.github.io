@@ -264,7 +264,7 @@ $(document).ready(function () {
             }
         });
     }
-    else {};
+    else { };
 
     if ($('#myChart2').length !== 0) {
         var myChart2 = new Chart(document.getElementById("myChart2"), {
@@ -384,7 +384,7 @@ $(document).ready(function () {
             }
         });
     }
-    else {};
+    else { };
 
 
     function addData(chart, label) {
@@ -416,14 +416,14 @@ $(document).ready(function () {
 
     document.addEventListener('keydown', function (e) {
         if (e.keyCode === 27) {
-          $('.account__popup').fadeOut(300);
-          $('.filter__popup').fadeOut(300);
+            $('.account__popup').fadeOut(300);
+            $('.filter__popup').fadeOut(300);
         };
-      });
-    
-      $(document).click(function (e) {
+    });
+
+    $(document).click(function (e) {
         if (!$(e.target).closest('#filter, .header__account, .datepicker--cell, .datepicker, .datepicker--nav, .datepicker--nav-action, .datepicker--nav-title, .filter__popup, .account__popup').length) {
-          $(".filter__popup, .account__popup").fadeOut(250);
+            $(".filter__popup, .account__popup").fadeOut(250);
         }
-      });
+    });
 });
