@@ -2,10 +2,10 @@
     & .mail__time-sent p {
         margin: 0;
     }
-     & .mainpage__stats_right-double_button {
+     & .general__stats_right-double_button {
          margin-right: 0;
      }
-    & .mainpage__title {
+    & .general__title {
         justify-content: flex-start;
 
         & img {
@@ -33,5 +33,36 @@
         }
 
     }
-    
+}
+
+.canvas-container2 {
+    height: 325px;
+    position: relative;
+}
+
+
+@media screen and (max-width: 767px) {
+    .site {
+        & .general__stats_right-buttons {
+            margin-top: 6px;
+        }
+    }
+    .canvas-container2 {
+        height: 50vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .canvas-container2 {
+        height: 60vw;
+    }
+    .site {
+        &__chart_desc {
+            flex-direction: column;
+            align-items: center;
+            & p:last-child {
+                margin-top: 8px;
+            }
+        }
+    }
 }

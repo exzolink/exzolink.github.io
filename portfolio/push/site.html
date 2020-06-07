@@ -64,11 +64,14 @@
                         <h3 class="header__subscription_title">Подписка 1000</h3>
                         <a href="#" class="header__subscription_link">Повысить тариф</a>
                     </div>
+                    <div class="header__menu_wrap">
                     <a class="header__account">
-
                         <img class="header__account_img" src="imgs/avatar.png" alt="">
-
                     </a>
+                    <div class="header__burger">
+                        <img src="imgs/menu.svg" alt="">
+                    </div>
+                </div>
                 </div>
                 <div class="account__popup">
                     <div class="account__inner">
@@ -103,13 +106,38 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="header__popup">
+                    <div class="header__popup_inner">
+                        <div class="nav__item_wrap">
+                            <a href="#">Главная</a>
+                            <img class="nav__item_img" src="imgs/main.svg" alt="">
+                        </div>
+                        <div class="nav__item_wrap">
+                            <a href="#">Мои рассылки</a>
+                            <img class="nav__item_img" src="imgs/send.svg" alt="">
+                        </div>
+                        <div class="nav__item_wrap">
+                            <a href="#">Мои сайты</a>
+                            <img class="nav__item_img" src="imgs/sites.svg" alt="">
+                        </div>
+                        <div class="nav__item_wrap">
+                            <a href="#">Тарифы</a>
+                            <img class="nav__item_img" src="imgs/tarif.svg" alt="">
+                        </div>
+                        <div class="header__subscription header__mobile_sub">
+                            <h3 class="header__subscription_title">Подписка 1000</h3>
+                            <a href="#" class="header__subscription_link">Повысить тариф</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
 
         <main class="main">
             <div class="container">
                 <section class="mail site">
-                    <div class="mainpage__title">
+                    <div class="general__title">
                         <h1 class="title">puzzlepro.ru</h1>
                         <img src="imgs/mark.svg" alt="">
                     </div>
@@ -117,37 +145,37 @@
                         <p>Статистика</p>
                     </div>
 
-                    <div class="mainpage__stats_left">
-                        <div class="mainpage__stats_left-item" style="background: #3B8378;">
+                    <div class="general__stats_left">
+                        <div class="general__stats_left-item" style="background: #3B8378;">
                             <h3>2</h3>
                             <div class="mb-10">
                                 <p class="medium">активных подписчиков</p>
                             </div>
                         </div>
-                        <div class="mainpage__stats_left-item" style="background: #5BA4D7;">
+                        <div class="general__stats_left-item" style="background: #5BA4D7;">
                             <h3>2</h3>
                             <p class="medium mb-10"">100% доставлено</p>
                         </div>
-                        <div class=" mainpage__stats_left-item" style="background: #FF7226;">
+                        <div class=" general__stats_left-item" style="background: #FF7226;">
                             <h3>2</h3>
                             <div class="mb-10">
                                 <p class="medium">50% переходов</p>
                             </div>
                         </div>
-                        <div class="mainpage__stats_left-item" style="background: #36C2CF;">
+                        <div class="general__stats_left-item" style="background: #36C2CF;">
                             <h3>2</h3>
                             <p class="medium mb-10"">рассылок</p>
                         </div>
                     </div>
-                    <div class=" mainpage__stats_right site__chart">
-                            <div class="mainpage__stats_right__inner">
-                                <div class="mainpage__stats_right-top">
+                    <div class=" general__stats_right site__chart">
+                            <div class="general__stats_right__inner">
+                                <div class="general__stats_right-top">
                                     <select id="selector" class="stats__selector">
                                         <option value="1">Новых подписчиков</option>
                                         <option value="2">Доставлено</option>
                                     </select>
-                                    <div class="mainpage__stats_right-buttons">
-                                        <div class="mainpage__stats_right-double_button">
+                                    <div class="general__stats_right-buttons">
+                                        <div class="general__stats_right-double_button">
                                             <button id="days-subs" class="button button_left-btn selected">По
                                                 дням</button>
                                             <button id="weeks-subs" class="button button_right-btn">По неделям</button>
@@ -155,14 +183,14 @@
                                        
                                     </div>
                                 </div>
-                                <canvas id="myChart2"></canvas>
+                                <div class="canvas-container2"><canvas id="myChart2"></canvas></div>
                                 <div class="site__chart_desc">
                                     <p>Новых подписчиков за период: <span>1</span></p>
                                     <p>Отписанных: <span>1</span></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="button_green">
+                        <div class="button_green mr-24">
                             <span class="green_button_circle">
                             </span>
                             <a href="#" class="button_green_inner">
@@ -171,7 +199,7 @@
                                 </p>
                             </a>
                         </div>
-                        <div class="button_white ml-24">
+                        <div class="button_white">
                             <span class="white_button_circle">
                             </span>
                             <a href="#" class="button_white_inner">

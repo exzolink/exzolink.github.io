@@ -10,6 +10,11 @@ $(document).ready(function () {
     $('.header__account').click(function (e) {
         e.preventDefault();
         $('.account__popup').fadeToggle(300);
+        $('.header__popup').fadeOut(300);
+    });
+
+    $('.header__burger').click(function () {
+        $('.header__popup').fadeToggle(300);
     });
 
     $(".button_green_inner").mouseenter(function (e) {
@@ -204,7 +209,7 @@ $(document).ready(function () {
                 ]
             },
             options: {
-                aspectRatio: '2.5',
+                maintainAspectRatio: false,
                 title: {
                     display: false
                 },
@@ -321,7 +326,7 @@ $(document).ready(function () {
                 ]
             },
             options: {
-                aspectRatio: '3.5',
+                maintainAspectRatio: false,
                 title: {
                     display: false
                 },
@@ -426,4 +431,5 @@ $(document).ready(function () {
             $(".filter__popup, .account__popup").fadeOut(250);
         }
     });
+    
 });

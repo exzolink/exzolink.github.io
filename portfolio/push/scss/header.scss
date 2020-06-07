@@ -3,6 +3,14 @@
     height: 80px;
     width: 100%;
 
+    &__popup {
+        display: none;
+    }
+
+    &__burger {
+        display: none;
+    }
+
     &__inner {
         display: flex;
         align-items: center;
@@ -102,8 +110,16 @@
         }
     }
 
+    &__menu_wrap {
+        display: flex;
+        align-items: center;
+    }
+
 }
 
+
+
+// NAV block =============================
 .nav {
     display: flex;
     list-style: none;
@@ -271,6 +287,9 @@
     }
 }
 
+
+
+// ACCOUNT POPUP =============================
 .account {
     &__link_wrapper {
         position: relative;
@@ -285,7 +304,7 @@
     }
 
     &__popup {
-        z-index: 99999;
+        z-index: 999999;
         position: absolute;
         right: 0;
         top: 93px;
@@ -403,6 +422,7 @@
             font-weight: 600;
             text-decoration: none;
             font-size: 12px;
+            width: max-content;
 
             &:before,
             &:after {
@@ -505,5 +525,139 @@
         width: 9px;
         height: 12px;
         top: 2px;
+    }
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    body {
+        margin-top: 80px;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99999;
+
+        &__burger {
+            display: flex;
+            transition: opacity .3s ease;
+
+            &:hover {
+                cursor: pointer;
+                opacity: .8;
+            }
+
+            & img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        &__account {
+            margin-right: 16px;
+            padding-right: 0;
+
+            &:before {
+                content: none;
+            }
+        }
+
+        &__subscription {
+            display: none;
+        }
+
+
+        &__mobile_sub {
+            display: flex;
+            margin-top: 16px;
+        }
+
+        .nav {
+            display: none;
+
+            &__item_wrap a {
+                text-decoration: none;
+                color: $white;
+                font-size: 16px;
+                position: relative;
+                padding: 10px 0;
+
+                &:before,
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    height: 1px;
+                    width: 0;
+                    margin-bottom: -1px;
+                }
+
+                &:before {
+                    transition: width 0s ease, background .4s ease;
+                    left: 0;
+                    right: 0;
+                    bottom: 6px;
+                }
+
+                &:after {
+                    right: 0;
+                    bottom: 6px;
+                    background: $white;
+                    transition: width .4s ease;
+                }
+
+                &:hover {
+                    &:before {
+                        width: 100%;
+                        background: $white;
+                        transition: width .4s ease;
+                    }
+
+                    &:after {
+                        width: 100%;
+                        background: 0 0;
+                        transition: all 0s ease;
+                    }
+                }
+
+            }
+
+            &__item_img {
+                opacity: .6;
+            }
+        }
+
+        &__popup {
+            height: calc(100vh - 80px);
+            position: fixed;
+            top: 80px;
+            left: 0;
+            z-index: 99998;
+            background-color: $blue-hover;
+            width: 100vw;
+
+            &_inner {
+                padding: 32px;
+            }
+        }
+    }
+
+    .account {
+        &__popup {
+            &:before {
+                right: 62px;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    .account__popup {
+        width: 310px;
+        right: 5px;
     }
 }
