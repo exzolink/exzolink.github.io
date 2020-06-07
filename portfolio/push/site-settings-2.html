@@ -4,14 +4,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Статистика сайта | PUSH.GUN</title>
+        <title>Настройки сайта | PUSH.GUN</title>
         <link rel="stylesheet" href="css/select2.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/datepicker.min.css">
         <link rel="stylesheet" href="css/chart.min.css">
     </head>
 
-    <body class="mymail">
+    <body>
         <header class="header">
             <div class="container">
                 <div class="header__inner">
@@ -65,13 +65,13 @@
                         <a href="#" class="header__subscription_link">Повысить тариф</a>
                     </div>
                     <div class="header__menu_wrap">
-                    <a class="header__account">
-                        <img class="header__account_img" src="imgs/avatar.png" alt="">
-                    </a>
-                    <div class="header__burger">
-                        <img src="imgs/menu.svg" alt="">
+                        <a class="header__account">
+                            <img class="header__account_img" src="imgs/avatar.png" alt="">
+                        </a>
+                        <div class="header__burger">
+                            <img src="imgs/menu.svg" alt="">
+                        </div>
                     </div>
-                </div>
                 </div>
                 <div class="account__popup">
                     <div class="account__inner">
@@ -134,93 +134,86 @@
             </div>
         </header>
 
+
         <main class="main">
             <div class="container">
-                <section class="mail site">
+                <section class="setgen setint">
                     <div class="general__title">
-                        <h1 class="title">puzzlepro.ru</h1>
-                        <img src="imgs/mark.svg" alt="">
+                        <h1 class="title">Настройки сайта</h1>
+                        <div class="button_rb mail__button setgen__button">
+                            <span class="rb_button_circle">
+                            </span>
+                            <button class="button_rb_inner mail__button_inner setgen__button_inner">
+                                <p class="rb_button_text_container">
+                                    Website.com →
+                                </p>
+                            </button>
+                        </div>
                     </div>
-                    <div class="mail__time-sent">
-                        <p>Статистика</p>
+                    <div class="setgen__buttons setint__buttons">
+                        <div class="setgen__buttons_link">
+                            <a href="#">Общие настройки</a>
+                        </div>
+                        <div class="setgen__buttons_active">
+                            Интеграция с сайтом
+                        </div>
+                        <div class="setgen__buttons_link">
+                            <a href="#">Запрос подписки</a>
+                        </div>
+                    </div>
+                    <h3 class="setint__desc">Код PUSH.GUN для сайта</h3>
+                    <div class="setint__info">
+                        <p class="setint__info_title">Скопируйте и вставьте код на ваш сайт, перед закрывающим тегом
+                            <span>&lt;/head&gt;</span></p>
+                        <pre><code>&lt;script charset="UTF-8" src="//web.webpushs.com/js/push/68ec1949e6ad0b995e6095f9d61ad209_1.js" async&gt;&lt;/script&gt;</code></pre>
+                            <div class="setint__info_checked">
+                                <img src="imgs/mark.svg" width="16" height="16" alt="V">
+                                <p style="color: #3B8378">Код добавлен корректно</p>
+                            </div>
+
+                    </div>
+                    <h3 class="setint__desc">Установочные файлы Chrome</h3>
+                    <div class="setint__info">
+                        <p class="setint__info_title">Для поддержки Chrome, загрузите установочные файлы ниже. Распакуйте из архива и скопируйте файлы в каталог верхнего уровня (root , или '/') вашего сайта.</p>
+                            <div class="setint__info_download">
+                                <img src="imgs/download.svg" width="16" height="16" alt="">
+                                <a href="#">Скачать установочные файлы</a>
+                            </div>
+                            <div class="setint__info_checked">
+                                <img src="imgs/remove.svg" width="16" height="16" alt="X">
+                                <p style="color: #323441">Файлы sp-push-worker-fb.js, sp-push-manifest.json не установлены</p>
+                            </div>
+
+                    </div>
+                    <div class="button_green save__button setint__button">
+                        <span class="green_button_circle">
+                        </span>
+                        <button class="button_green_inner">
+                            <p class="button_text_container">
+                                <img src="imgs/reload.svg" alt="">Перепроверить
+                            </p>
+                        </button>
                     </div>
 
-                    <div class="general__stats_left">
-                        <div class="general__stats_left-item" style="background: #3B8378;">
-                            <h3>2</h3>
-                            <div class="mb-10">
-                                <p class="medium">активных подписчиков</p>
-                            </div>
-                        </div>
-                        <div class="general__stats_left-item" style="background: #5BA4D7;">
-                            <h3>2</h3>
-                            <p class="medium mb-10">100% доставлено</p>
-                        </div>
-                        <div class=" general__stats_left-item" style="background: #FF7226;">
-                            <h3>2</h3>
-                            <div class="mb-10">
-                                <p class="medium">50% переходов</p>
-                            </div>
-                        </div>
-                        <div class="general__stats_left-item" style="background: #36C2CF;">
-                            <h3>2</h3>
-                            <p class="medium mb-10"">рассылок</p>
-                        </div>
-                    </div>
-                    <div class=" general__stats_right site__chart">
-                            <div class="general__stats_right__inner">
-                                <div class="general__stats_right-top">
-                                    <select id="selector" class="stats__selector">
-                                        <option value="1">Новых подписчиков</option>
-                                        <option value="2">Доставлено</option>
-                                    </select>
-                                    <div class="general__stats_right-buttons">
-                                        <div class="general__stats_right-double_button">
-                                            <button id="days-subs" class="button button_left-btn selected">По
-                                                дням</button>
-                                            <button id="weeks-subs" class="button button_right-btn">По неделям</button>
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                                <div class="canvas-container2"><canvas id="myChart2"></canvas></div>
-                                <div class="site__chart_desc">
-                                    <p>Новых подписчиков за период: <span>1</span></p>
-                                    <p>Отписанных: <span>1</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="button_green mr-24">
-                            <span class="green_button_circle">
-                            </span>
-                            <a href="#" class="button_green_inner">
-                                <p class="button_text_container">
-                                    <img src="imgs/send.svg" alt="">Отправить PUSH
-                                </p>
-                            </a>
-                        </div>
-                        <div class="button_white">
-                            <span class="white_button_circle">
-                            </span>
-                            <a href="#" class="button_white_inner">
-                                <p class="button_text_container">
-                                    <img class="button-img" src="imgs/settingsDark.svg" alt="">Настройки сайта
-                                </p>
-                            </a>
-                        </div>
+
+
+
+
                 </section>
             </div>
         </main>
-
         <footer class="footer">
             <a href="">База знаний</a>
             <a href="">Тех. поддержка</a>
             <a href="">Политика конфиденциальности</a>
         </footer>
 
+
+
+
+
         <script src="js/jquery.js"></script>
         <script src="js/select2.min.js"></script>
-        <script src="js/datepicker.min.js"></script>
         <script src="js/chart.min.js"></script>
         <script src="js/main.js"></script>
     </body>

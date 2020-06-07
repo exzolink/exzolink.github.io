@@ -127,6 +127,7 @@
 
     &__form {
         display: flex;
+        user-select: none;
 
         & img {
             width: 64px;
@@ -306,6 +307,9 @@
                 align-items: flex-start;
                 text-align: left;
             }
+        }
+        &__down-buttons {
+            margin-top: 36px;
         }
     }
 }
