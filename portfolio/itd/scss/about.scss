@@ -20,7 +20,7 @@
             height: 2px;
             width: 60px;
             position: absolute;
-            top: 70px;
+            top: 90px;
             left: 50%;
             transform: translate(-50%,-50%);
         }
@@ -100,14 +100,14 @@
 }
 
 .pt-100 {
-    padding-top: 125px;
+    padding-top: 180px;
 }
 
 .bio {
 
     &__inner {
         flex-direction: row-reverse;
-        padding-top: 100px;
+        padding-top: 180px;
     }
     &__info {
         padding-left: 0;
