@@ -89,37 +89,82 @@ input[type="checkbox"] {
     min-width: 16px;
     height: 16px;
     color: $black;
-    border: 2px solid $green;
+    border: 2px solid #979797;
     border-radius: 1px;
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
     outline: 0;
     cursor: pointer;
+
     &::before {
-      position: absolute;
-      content: '';
-      display: block;
-      top: .5px;
-      left: 4px;
-      width: 2.5px;
-      height: 7px;
-      border-style: solid;
-      border-color: $green;
-      border-width: 0 2px 2px 0;
-      transform: rotate(45deg);
-      opacity: 0;
-      transition: opacity .1s ease;
+        position: absolute;
+        content: '';
+        display: block;
+        top: .5px;
+        left: 4px;
+        width: 2.5px;
+        height: 7px;
+        border-style: solid;
+        border-color: $green;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        opacity: 0;
+        transition: all .1s ease;
     }
+
     &:checked {
-      color: $white;
-      border-color: $green;
-      background: $white;
-      &::before {
-        opacity: 1;
-      }
+        color: $white;
+        border-color: $green;
+        background: $white;
+
+        &::before {
+            opacity: 1;
+        }
     }
-  }
+}
+
+input[type="radio"] {
+    position: relative;
+    width: 100%;
+    max-width: 16px;
+    min-width: 16px;
+    height: 16px;
+    color: $black;
+    border: 2px solid #979797;
+    border-radius: 100%;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: 0;
+    cursor: pointer;
+
+    &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 2px;
+        left: 2px;
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        border-color: $green;
+        background-color: $green;
+        transform: rotate(45deg);
+        opacity: 0;
+        transition: all .1s ease;
+    }
+
+    &:checked {
+        color: $white;
+        border-color: $green;
+        background: $white;
+
+        &::before {
+            opacity: 1;
+        }
+    }
+}
 
 .label-checkbox {
     position: relative;
@@ -129,7 +174,7 @@ input[type="checkbox"] {
     color: $black;
     font-weight: 500;
     width: max-content;
-    margin-left: 8px;
+    margin-left: 12px;
 }
 
 .progress {
