@@ -39,6 +39,11 @@
     &__btn {
         margin-bottom: 45px;
     }
+    &__btn_fixed {
+        position: fixed;
+        left: 24px;
+        top: 18px;
+    }
     &__img {
         width: 100%;
         border-radius: 6px;
@@ -77,6 +82,16 @@
     }
     .fb-50 {
         flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .page {
+        &__btn_fixed {
+            position: relative;
+            left: 0;
+            top: 0;
+        }
     }
 }
 

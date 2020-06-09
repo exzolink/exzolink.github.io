@@ -197,7 +197,14 @@
             font-size: 30px;
             letter-spacing: normal;
         }
+        &__bg {
+            filter: brightness(45%);
+        }
+        &__desc {
+            color: #ddd;
+        }
     }
+  
 }
 
 
