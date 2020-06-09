@@ -6,6 +6,12 @@ $('.stats__selector, .filter__selector').select2({
 });
 
 $(document).ready(function () {
+    $('.tooltip').tooltipster({
+        side: ['left', 'bottom'],
+        trigger: 'click',
+        contentCloning: false,
+        interactive: true
+    });
 
     $('.header__account').click(function (e) {
         e.preventDefault();
@@ -430,5 +436,11 @@ $(document).ready(function () {
             $(".filter__popup, .account__popup").fadeOut(250);
         }
     });
+
+    $('.setgen__buttons_link').click(function () {
+        let id = $(this).attr('id');
+        $('section').removeClass('choosen');
+        $('#' + id + '-sec').addClass('choosen');
+      });
     
 });

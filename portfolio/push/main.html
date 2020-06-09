@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Главная | PUSH.GUN</title>
+        <link rel="stylesheet" href="css/tooltipster.bundle.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/select2.min.css">
         <link rel="stylesheet" href="css/chart.min.css">
@@ -65,7 +66,7 @@
                     </div>
                     <div class="header__menu_wrap">
                     <a class="header__account">
-                        <img class="header__account_img" src="imgs/avatar.png" alt="">
+                        <img class="header__account_img" src="imgs/avatar.svg" alt="">
                     </a>
                     <div class="header__burger">
                         <img src="imgs/menu.svg" alt="">
@@ -137,7 +138,7 @@
                 <section class="general">
                     <div class="general__title">
                         <h1 class="title">Web Push рассылки</h1>
-                        <img class="general__info" src="imgs/info.svg" alt="">
+                        <img class="general__info tooltip" data-tooltip-content="#tooltip_content" src="imgs/info.svg" alt="">
                     </div>
                     <div class="general__status">
                         <div class="general__subs">
@@ -222,7 +223,7 @@
                         <div class="general__sites">
                             <div class="general__sites_item">
                                 <div class="general__sites_item-more"><img src="imgs/more.svg" alt=""></div>
-                                <a href="#"><img class="general__sites_item-img" src="imgs/site.png" alt=""></a>
+                                <a href="#"><img class="general__sites_item-img" src="imgs/site.svg" alt=""></a>
                                 <div class="general__sites_info checkmark">
                                     <a href="#"
                                         class="account__bottom_subscribe general__sites_title">https://hello.world</a>
@@ -231,7 +232,7 @@
                             </div>
                             <div class="general__sites_item">
                                 <div class="general__sites_item-more"><img src="imgs/more.svg" alt=""></div>
-                                <a href="#"><img class="general__sites_item-img" src="imgs/site.png" alt=""></a>
+                                <a href="#"><img class="general__sites_item-img" src="imgs/site.svg" alt=""></a>
                                 <div class="general__sites_info checkmark">
                                     <a href="#"
                                         class="account__bottom_subscribe general__sites_title">https://hello.world</a>
@@ -260,6 +261,13 @@
                 </section>
             </div>
         </main>
+        <div class="tooltip_templates">
+            <span id="tooltip_content" class="general__tooltip">
+                <p>Информация</p>
+                <a href="#">Как переподписать пользователей на SendPulse</a>
+                <a href="#">Как переподписать пользователей на SendPulse</a>
+            </span>
+        </div>
         <footer class="footer">
             <a href="">База знаний</a>
             <a href="">Тех. поддержка</a>
@@ -273,6 +281,7 @@
         <script src="js/jquery.js"></script>
         <script src="js/select2.min.js"></script>
         <script src="js/chart.min.js"></script>
+        <script src="js/tooltipster.bundle.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 

@@ -1,4 +1,7 @@
 .setgen {
+    & section {
+        display: none;
+    }
 
     &__button {
 
@@ -11,22 +14,11 @@
         display: flex;
         align-items: center;
 
-        &_active {
-            padding: 16px 40px;
-            color: $white;
-            background-color: $blue;
-            box-shadow: $shadow;
-            border-radius: 100px;
-            user-select: none;
-            width: max-content;
-        }
-
         &_link {
             padding: 0 60px;
 
-            & a {
-                text-decoration: none;
-                color: $darkblue;
+            & .new-tab {
+                cursor: pointer;
                 position: relative;
                 width: max-content;
 
@@ -67,9 +59,17 @@
                         transition: all 0s ease;
                     }
                 }
-
-
             }
+        }
+
+        &_active {
+            padding: 16px 40px;
+            color: $white;
+            background-color: $blue;
+            box-shadow: $shadow;
+            border-radius: 100px;
+            user-select: none;
+            width: max-content;
         }
     }
 
@@ -95,9 +95,11 @@
         &_block {
             display: flex;
             position: relative;
+
             & {
                 margin-bottom: 24px;
             }
+
             &:last-child {
                 margin-bottom: 0;
             }
@@ -142,43 +144,44 @@
             width: max-content;
 
             &:before,
-                &:after {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    height: 1px;
-                    margin-bottom: -10px;
-                    width: 0;
-                }
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                height: 1px;
+                margin-bottom: -10px;
+                width: 0;
+            }
+
+            &:before {
+                transition: width 0s ease, background .4s ease;
+                left: 0;
+                right: 0;
+                bottom: 6px;
+            }
+
+            &:after {
+                right: 0;
+                bottom: 6px;
+                background: $green;
+                transition: width .4s ease;
+            }
+
+            &:hover {
+                cursor: pointer;
 
                 &:before {
-                    transition: width 0s ease, background .4s ease;
-                    left: 0;
-                    right: 0;
-                    bottom: 6px;
-                }
-
-                &:after {
-                    right: 0;
-                    bottom: 6px;
+                    width: 100%;
                     background: $green;
                     transition: width .4s ease;
                 }
 
-                &:hover {
-                    cursor: pointer;
-                    &:before {
-                        width: 100%;
-                        background: $green;
-                        transition: width .4s ease;
-                    }
-
-                    &:after {
-                        width: 100%;
-                        background: 0 0;
-                        transition: all 0s ease;
-                    }
+                &:after {
+                    width: 100%;
+                    background: 0 0;
+                    transition: all 0s ease;
                 }
+            }
         }
 
         &_desc {
@@ -212,6 +215,7 @@
         position: relative;
         width: max-content;
         margin-left: 40px;
+
         &:before,
         &:after {
             content: '';
@@ -238,6 +242,7 @@
 
         &:hover {
             cursor: pointer;
+
             &:before {
                 width: 100%;
                 background: #F33657;
@@ -258,18 +263,21 @@
         &__delete {
             margin-left: 16px;
         }
+
         &__buttons {
-            &_active {
-                padding: 12px 24px;
-                font-size: 14px;
-            }
             &_link {
                 font-size: 14px;
                 padding: 0;
+
                 &:nth-child(2) {
                     padding-left: 16px;
                     padding-right: 16px;
                 }
+            }
+
+            &_active {
+                padding: 12px 24px;
+                font-size: 14px;
             }
         }
     }
@@ -280,7 +288,40 @@
     width: auto;
 }
 
+.choosen {
+    display: block !important;
+}
 
+.tooltip_templates { display: none; }
+
+.tooltipster-sidetip .tooltipster-box {
+    background-color: $white;
+    box-shadow: $shadow;
+    border: 0;
+    max-width: 375px;
+}
+.tooltipster-sidetip .tooltipster-content {
+    color: $darkblue;
+    font-size: 14px;
+    font-family: 'Gilroy';
+    font-weight: 500;
+}
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow-border {
+    border-left-color: transparent !important;
+}
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-border {
+    border-bottom-color: transparent !important;
+}
+.tooltipster-content span {
+    display: flex;
+    flex-direction: column;
+}
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow-background {
+    border-left-color: $white;
+}
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-background {
+    border-bottom-color: $white;
+}
 
 @media screen and (max-width: 767px) {
     .setgen {
@@ -302,12 +343,14 @@
                 margin-bottom: 8px;
                 margin-right: 0;
             }
+
             &_block {
                 flex-direction: column;
                 align-items: flex-start;
                 text-align: left;
             }
         }
+
         &__down-buttons {
             margin-top: 36px;
         }
@@ -319,25 +362,28 @@
         & .general__title {
             margin-bottom: 40px;
         }
+
         &__buttons {
             flex-direction: column;
             width: max-content;
             align-items: flex-start;
-            &_active {
-                padding: 12px 24px;
-            }
+
             &_link {
- 
                 margin-bottom: 12px;
                 margin-top: 12px;
 
                 &:nth-child(2) {
                     padding: 0;
                 }
+
                 &:last-child {
                     margin-top: 0;
                     margin-bottom: 0;
                 }
+            }
+
+            &_active {
+                padding: 12px 24px;
             }
         }
     }

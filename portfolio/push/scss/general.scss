@@ -17,6 +17,64 @@
         }
     }
 
+    &__tooltip {
+        & p {
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        & a {
+            cursor: pointer;
+            color: $green;
+            position: relative;
+            font-size: 12px;
+            margin-bottom: 4px;
+            text-decoration: none;
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                height: 1px;
+                margin-bottom: -10px;
+                width: 0;
+            }
+    
+            &:before {
+                transition: width 0s ease, background .4s ease;
+                left: 0;
+                right: 0;
+                bottom: 6px;
+            }
+    
+            &:after {
+                right: 0;
+                bottom: 6px;
+                background: $green;
+                transition: width .4s ease;
+            }
+    
+            &:hover {
+                cursor: pointer;
+    
+                &:before {
+                    width: 100%;
+                    background: $green;
+                    transition: width .4s ease;
+                }
+    
+                &:after {
+                    width: 100%;
+                    background: 0 0;
+                    transition: all 0s ease;
+                }
+            }
+            &:last-child {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
     &__info {
         &:hover {
             cursor: pointer;
