@@ -51,7 +51,7 @@ $mail->Body    = 'Name: ' .$name.
 '<br>A Location: ' .$aloc. 
 '<br>Z Location: ' .$zloc. 
 '<br>Description: ' .$desc. 
-'<br><br>Services: <br>' .$services[0].'<br>' .$services[1].'<br>' .$services[2].'<br>' .$services[3].'<br>' .$services[4].'<br>' .$services[5].'<br>' .$services[6].'<br>' .$services[7].'<br>' .$services[8].'<br> ' .$services[9].
+'<br><br>Services: <br>' .$services[0].'<br>' .$services[1].'<br>' .$services[2].'<br>' .$services[3].'<br>' .$services[4].'<br>' .$services[5].'<br>' .$services[6].'<br>' .$services[7].'<br>' .$services[8].
 
 
 $mail->AltBody = '';
