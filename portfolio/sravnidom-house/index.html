@@ -1,0 +1,1755 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=1200">
+
+    <meta name="description" content="Wave estate - future project">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:title" content="Wave estate">
+    <meta property="og:description" content="Wave estate - future project">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wave estate">
+    <meta name="twitter:description" content="Wave estate - future project">
+    <title>Сравни дом</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    
+	<link rel="stylesheet" href="libs/swiper-master/css/swiper.min.css">
+    <link rel="stylesheet" href="css/lib.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+
+</head>
+<body class="cabinet-page">
+<div class="main-wrapper">
+    <header class="header">
+        <div class="header-logo"><a class="header-logo__link" href="{% url 'main_url' %}"><img
+                src="images/logo.svg" Alt="Logo"></a></div>
+        <div class="header-toolbar">
+            <div class="header__container">
+                <div class="header-nav">
+                    <div class="theme-box">
+                        <div class="theme-box__title">Светлая тема</div>
+                        <label class="switch"><input class="switch__checkbox" type="checkbox"><span
+                                class="switch__slider"></span></label>
+                        <div class="theme-box__title theme-box__title_disabled">Темная тема</div>
+                    </div>
+                    <div class="user-box">
+                        <div class="user-box__info">
+                            <div class="user-box__title">Admin</div>
+                            <a class="user-box__link dashed-link" id="logout" href="{% url "logout_url" %}">Выйти</a>
+                        </div>
+                        <img class="user-box__avatar" src="images/user.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+
+        <nav class="sidebar">
+            <ul class="navbar-menu">
+                <li><a class="navbar-menu__link"
+                                                                               href="{% url 'main_url' %}">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.3243 0H1.67575C0.751759 0 9.54935e-05 0.748003 9.54935e-05 1.67201V6.31403H22V1.67201C22 0.748003 21.2483 0 20.3243 0Z"
+                              fill="#ffffff"/>
+                        <path d="M7.8797 22H20.3243C21.2483 22 22 21.252 22 20.328V7.90528H7.8797V22Z"
+                              fill="#ffffff"/>
+                        <path d="M0 20.328C0 21.252 0.751663 22 1.67566 22H6.32864V7.90528H0V20.328Z"
+                              fill="#ffffff"/>
+                    </svg>
+                    Главная</a>
+                </li>
+                <li><a
+                        class="navbar-menu__link" href="{% url 'apartments_url' %}">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.3951 7.32092L16.4194 2.6061L18.8614 0.162476L21.3951 2.69783V7.32092Z"
+                              fill="#ffffff"/>
+                        <path d="M20.3243 22H1.67567C0.751667 22 0 21.2515 0 20.3269V10.1744L11.2383 0L22 10.1744V20.3269C22 21.2515 21.2483 22 20.3243 22Z"
+                              fill="#ffffff"/>
+                    </svg>
+                    Жилые комплексы</a></li>
+                <li><a
+                        class="navbar-menu__link" href="{% url 'developers_url' %}">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.3816 0.272625C10.2492 1.04157 10.1098 1.76857 9.99827 2.50256C9.9704 2.71227 9.94949 2.9779 10.061 3.13169C10.1725 3.28548 10.4373 3.39034 10.6394 3.39733C10.9251 3.40432 11.0785 3.16664 11.1272 2.89402C11.2318 2.32081 11.3224 1.75459 11.4269 1.18138C11.4409 1.11846 11.4548 1.05555 11.4896 0.929721C12.8346 2.04119 13.4619 3.45325 13.6431 5.13793C10.4722 5.13793 7.30825 5.13793 4.1513 5.13793C4.08161 3.82374 5.12696 1.70565 6.19321 1.04856C6.29775 1.66371 6.40228 2.25789 6.50681 2.85907C6.5556 3.15266 6.72285 3.34839 7.02252 3.39034C7.28734 3.43228 7.51732 3.31344 7.61488 3.06179C7.6776 2.90101 7.6776 2.69829 7.64973 2.52353C7.53822 1.80352 7.40581 1.0905 7.26643 0.314567C7.66367 0.18874 8.03999 0 8.89717 0C9.75436 0 10.1655 0.18175 10.3816 0.272625Z"
+                              fill="#ffffff"/>
+                        <path d="M15.462 17.7346C15.1414 17.3991 14.8417 17.0705 14.5351 16.7629C13.5455 15.7843 12.089 15.7633 11.1482 16.7C10.2004 17.6437 10.2213 19.1047 11.19 20.0974C11.406 20.3211 11.636 20.5238 11.859 20.7405C11.8451 20.7754 11.8381 20.8174 11.8241 20.8523C11.0506 20.9292 10.277 21.0481 9.49651 21.076C6.41622 21.2018 3.50318 20.5657 0.785282 19.0838C0.248671 18.7902 0.0256637 18.3847 0.00475671 17.7696C-0.0440261 16.2666 0.276547 14.8895 1.23827 13.7081C2.1303 12.6107 3.28715 11.9605 4.67397 11.7159C4.90395 11.6739 5.04333 11.7299 5.18271 11.9466C5.88658 13.0371 6.81345 13.841 8.13059 14.0786C9.2735 14.2883 10.2979 13.9738 11.1691 13.2328C11.6151 12.8553 11.9705 12.373 12.3399 11.9186C12.4653 11.7648 12.5559 11.6879 12.758 11.7089C14.7581 11.9396 16.7373 13.6313 17.246 15.5746C17.2739 15.6724 17.2669 15.8262 17.2112 15.8891C16.6467 16.4903 16.0683 17.0915 15.462 17.7346Z"
+                              fill="#ffffff"/>
+                        <path d="M4.5555 7.10922C7.364 7.10922 10.1167 7.10922 12.9601 7.10922C12.8625 7.73137 12.7998 8.33254 12.6604 8.91973C12.3956 10.0801 11.8938 11.1287 11.0297 11.9745C9.64982 13.3307 7.83092 13.3377 6.45106 11.9815C5.41268 10.9539 4.91092 9.66071 4.67397 8.24866C4.62519 7.88516 4.60428 7.51467 4.5555 7.10922Z"
+                              fill="#ffffff"/>
+                        <path d="M15.5107 19.8387C15.7616 19.5731 15.9707 19.3494 16.1867 19.1257C17.5875 17.6437 18.9883 16.1618 20.3821 14.6728C20.619 14.4212 20.8838 14.2604 21.2392 14.3093C21.5877 14.3652 21.8386 14.561 21.9501 14.8965C22.0616 15.246 21.9849 15.5606 21.734 15.8262C21.0511 16.5462 20.3681 17.2732 19.6852 18.0002C18.5492 19.2026 17.4133 20.4119 16.2704 21.6143C15.7965 22.1106 15.3086 22.1316 14.8278 21.6562C13.9776 20.8034 13.1273 19.9506 12.2771 19.0977C11.8381 18.6573 11.8102 18.1261 12.2005 17.7486C12.5838 17.3781 13.0925 17.4131 13.5246 17.8395C14.1727 18.4896 14.8208 19.1467 15.5107 19.8387Z"
+                              fill="#ffffff"/>
+                        <path d="M8.81355 6.34727C7.11312 6.34727 5.41268 6.34727 3.70528 6.34727C3.44743 6.34727 3.2523 6.33329 3.24533 5.99076C3.23836 5.64823 3.42653 5.59231 3.70528 5.59231C7.13402 5.5993 10.5628 5.59231 13.9845 5.59231C14.2284 5.59231 14.4166 5.62027 14.4236 5.94183C14.4305 6.24241 14.319 6.35426 14.0194 6.35426C12.8068 6.34028 11.5872 6.34727 10.3746 6.34727C9.85889 6.34727 9.33622 6.34727 8.81355 6.34727Z"
+                              fill="#ffffff"/>
+                    </svg>
+
+                    Застройщики</a></li>
+                <li><a class="navbar-menu__link"
+                                                                               href="{% url 'analytics_url' %}">
+                    <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.7702 3.43511H2.25466V2.33588H19.8137V1.23664C19.8137 0.556489 19.2602 0 18.5839 0H2.73292C1.22298 0 0 1.22977 0 2.74809V15.2519C0 16.7702 1.22298 18 2.73292 18H19.2671C20.777 18 22 16.7702 22 15.2519V4.67176C22 3.98473 21.4534 3.43511 20.7702 3.43511ZM18.1056 12.2977C17.1969 12.2977 16.4658 11.5626 16.4658 10.6489C16.4658 9.73511 17.1969 9 18.1056 9C19.0143 9 19.7453 9.73511 19.7453 10.6489C19.7453 11.5626 19.0143 12.2977 18.1056 12.2977Z"
+                              fill="white"/>
+                    </svg>
+
+                    Аналитика продаж</a>
+                </li>
+                <li><a class="navbar-menu__link" href="#">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.9737 3.59229C18.7228 3.75809 17.7544 4.83166 17.7544 6.12711V6.46483H4.82458V6.12711C4.82458 4.83166 3.85619 3.75809 2.60529 3.59229V6.46483H0V14.1359H4.96932V18.8157H9.55264V10.6622H12.7369V21.9998H17.2237C17.65 21.9998 17.9956 21.6542 17.9956 21.2279V11.7718C17.9956 11.3455 18.3412 10.9999 18.7675 10.9999H21.228C21.6544 10.9999 22 10.6543 22 10.228V6.46483H19.9737V3.59229Z"
+                              fill="#ffffff"/>
+                        <path d="M20.0702 0H12.7369V5.78944H17.0965C17.2659 4.16516 18.643 2.89472 20.3115 2.89472H20.6492V5.78944H22V1.92981C22 0.864006 21.136 0 20.0702 0Z"
+                              fill="#ffffff"/>
+                        <path d="M12.0614 0H1.92983C0.864025 0 0 0.864006 0 1.92981V5.78944H1.92985V2.89472H2.26757C3.93594 2.89472 5.31315 4.16516 5.48249 5.78944H12.0614V0Z"
+                              fill="#ffffff"/>
+                        <path d="M12.0614 11.3378H10.2281V19.4913H4.29388V14.8115H0V20.0702C0 21.136 0.864025 22 1.92983 22H12.0614V11.3378Z"
+                              fill="#ffffff"/>
+                    </svg>
+
+                    Планировки</a></li>
+                <li><a class="navbar-menu__link" href="#">
+                    <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.8529e-09 7.73008C0 7.38406 0 7.03805 0 6.69203C0.0650577 6.35897 0.273468 6.16564 0.55407 6.00443C1.80997 5.2829 3.056 4.54294 4.30874 3.81544C4.42937 3.74539 4.47953 3.67265 4.47757 3.52414C4.46872 2.85253 4.47295 2.18073 4.47402 1.50901C4.47468 1.09629 4.65321 0.908947 5.04695 0.907764C5.52189 0.906338 5.99684 0.906845 6.47178 0.907575C6.89795 0.90823 7.06134 1.07938 7.06303 1.52582C7.06384 1.74116 7.06317 1.9565 7.06317 2.20032C7.16253 2.14449 7.22432 2.11093 7.28508 2.07547C8.37996 1.43655 9.47864 0.80446 10.5672 0.154167C10.9102 -0.0507461 11.213 -0.0512606 11.5581 0.151868C14.8412 2.08481 18.1285 4.01025 21.4176 5.93229C21.6704 6.07998 21.8882 6.24623 22 6.53233C22 6.85173 22 7.17113 22 7.49053C21.9915 7.53514 21.9796 7.57937 21.9749 7.62441C21.9214 8.1424 21.6699 8.37971 21.1675 8.38138C20.7246 8.38285 20.2817 8.38027 19.8388 8.38223C19.5111 8.38367 19.5471 8.34302 19.547 8.6754C19.5462 12.0212 19.5472 15.3669 19.546 18.7127C19.5457 19.5053 19.0733 19.9991 18.3131 19.9993C13.4347 20.0005 8.55624 20.0002 3.67779 19.9984C3.55685 19.9984 3.43201 19.9921 3.31563 19.9616C2.76136 19.8161 2.4399 19.3469 2.4398 18.693C2.43926 15.3473 2.43954 12.0015 2.43953 8.65571C2.43953 8.57156 2.43953 8.48741 2.43953 8.38175C2.34472 8.38175 2.27561 8.38176 2.2065 8.38175C1.72507 8.38166 1.24364 8.37975 0.762224 8.38223C0.52196 8.38347 0.316556 8.30088 0.17573 8.09938C0.0991443 7.98979 0.0574384 7.85403 3.8529e-09 7.73008ZM11.7128 7.03993C11.7128 6.75919 11.7143 6.48069 11.7123 6.20222C11.7106 5.97927 11.6353 5.89679 11.4277 5.89436C11.1581 5.89121 10.8885 5.891 10.6189 5.89449C10.4238 5.89702 10.3561 5.96801 10.3525 6.1739C10.3484 6.40663 10.3446 6.63977 10.3537 6.87218C10.3593 7.01403 10.3235 7.07603 10.1758 7.11175C9.10168 7.3715 8.39967 8.27651 8.3974 9.38412C8.39512 10.4944 9.10471 11.4355 10.1789 11.6766C10.562 11.7625 10.9681 11.7457 11.3642 11.7604C11.8682 11.7792 12.2698 12.1789 12.2694 12.6791C12.269 13.1992 11.896 13.5882 11.3775 13.6017C11.1209 13.6083 10.864 13.604 10.6073 13.6035C10.2352 13.6029 10.0616 13.4743 9.90771 13.1283C9.87164 13.0472 9.77028 12.9486 9.69395 12.9438C9.37427 12.9238 9.05248 12.9296 8.73188 12.9399C8.57807 12.9449 8.50814 13.044 8.52229 13.2097C8.59121 14.017 9.16637 14.7348 9.92802 14.9545C10.0558 14.9913 10.187 15.0158 10.3258 15.0482C10.3258 15.3442 10.3233 15.6296 10.3267 15.915C10.329 16.1144 10.4029 16.1908 10.5962 16.1933C10.8721 16.1968 11.1482 16.196 11.4242 16.1936C11.6407 16.1917 11.7105 16.1189 11.7122 15.8934C11.7144 15.6015 11.7127 15.3095 11.7127 15.0235C11.735 15.0112 11.7447 15.0023 11.7556 15.0002C12.7995 14.7997 13.6102 13.8443 13.6401 12.779C13.6728 11.6127 12.9727 10.6377 11.8777 10.3962C11.5008 10.3131 11.1002 10.3363 10.7101 10.3275C10.1747 10.3154 9.77081 9.91711 9.76876 9.38074C9.76691 8.89598 10.1781 8.4959 10.6955 8.48505C10.9586 8.47952 11.2219 8.48272 11.485 8.48385C11.8127 8.48526 11.9969 8.61076 12.1103 8.9353C12.1653 9.09282 12.2607 9.15481 12.4128 9.15385C12.6695 9.15223 12.9263 9.15434 13.183 9.15343C13.4926 9.15233 13.5798 9.05083 13.5148 8.73468C13.3466 7.91602 12.8779 7.37495 12.101 7.13093C11.9792 7.09268 11.8522 7.07211 11.7128 7.03993Z"
+                              fill="#ffffff"/>
+                    </svg>
+
+                    Ценообразование</a>
+                </li>
+                <li class="active"><a class="navbar-menu__link"
+                                                                                       href="{% url 'location_url' %}">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 12.4505C22 12.7228 22 12.9952 22 13.2675C21.9918 13.3831 21.9765 13.4987 21.9764 13.6143C21.975 16.1886 21.9754 18.763 21.975 21.3373C21.975 21.4215 21.9767 21.5065 21.9661 21.5897C21.9394 21.7996 21.7842 21.9582 21.574 21.9881C21.4847 22.0008 21.393 21.9996 21.3024 21.9996C14.4863 22.0001 7.67026 22.0001 0.854207 21.9996C0.757135 21.9996 0.65895 21.9999 0.563202 21.9864C0.273714 21.9457 0.0427833 21.7064 0.00899401 21.416C3.78443e-05 21.339 0.000373463 21.2607 0.000369327 21.183C8.62496e-06 14.4067 2.71981e-05 7.63046 0.000113347 0.854199C0.00011409 0.79585 -0.000773405 0.737384 0.00240644 0.679173C0.0196745 0.363056 0.205247 0.130657 0.509414 0.0414884C0.552278 0.0289227 0.594418 0.0138905 0.636893 3.89078e-09C0.688777 0 0.74066 0 0.792544 0C1.22089 0.14738 1.3933 0.457503 1.36955 0.897257C1.36222 1.03296 1.37028 1.16947 1.37029 1.30561C1.37057 5.80477 1.37072 10.3039 1.37089 14.8031C1.37089 14.8768 1.37089 14.9505 1.37089 15.0242C1.43754 14.9679 1.46777 14.9069 1.49584 14.845C1.86895 14.0218 2.2923 13.2294 2.90591 12.5545C3.27741 12.1459 3.69893 11.799 4.23568 11.6407C5.27092 11.3353 6.16073 11.6512 6.90749 12.3722C7.26838 12.7206 7.55277 13.1476 7.87733 13.5344C8.17257 13.8863 8.45181 14.2561 8.78029 14.5745C9.26025 15.0397 9.86141 15.2331 10.528 15.1696C11.0799 15.117 11.4565 14.77 11.7727 14.3503C12.1974 13.7866 12.4929 13.152 12.7398 12.4962C13.1751 11.3396 13.5859 10.1737 14.0269 9.01929C14.3142 8.26734 14.6663 7.54477 15.1911 6.92239C15.5494 6.4975 15.9734 6.16077 16.5261 6.03186C17.3327 5.84377 18.0349 6.09665 18.6717 6.58008C19.1306 6.92846 19.4977 7.36491 19.8302 7.83111C20.6268 8.948 21.1757 10.1895 21.6499 11.4677C21.7709 11.7937 21.8835 12.1228 22 12.4505Z"
+                              fill="#ffffff"/>
+                    </svg>
+
+                    Анализ локации</a>
+                </li>
+            </ul>
+            <a class="nav-link" href="#"></a>
+        </nav>
+
+        
+		
+		
+		<div class="content main-page house-2-page">
+			<div class="container">
+				<input type="hidden" id="house_id" value="461">
+				<div class="cards-wrapper">
+				
+					<div class="house-gallery">
+
+						<div class="house-gallery__badge">Галерея</div>
+
+						<div class="slider swiper-container">
+							<div class="swiper-wrapper house-gallery__list">
+								<div class="house-gallery__item swiper-slide"><img src="http://lk.sravnidom.com/media/gallery/06ba1fec-fefd-11e9-9921-002590c4895e.jpg"></div>
+								<div class="house-gallery__item swiper-slide"><img src="http://lk.sravnidom.com/media/gallery/06ba1fec-fefd-11e9-9921-002590c4895e.jpg"></div>
+								<div class="house-gallery__item swiper-slide"><img src="http://lk.sravnidom.com/media/gallery/06ba1fec-fefd-11e9-9921-002590c4895e.jpg"></div>
+							</div>
+
+							<div class="house-gallery__pagination swiper-pagination"></div>
+							<div class="swiper-button-next house-gallery__next"></div>
+							<div class="swiper-button-prev house-gallery__prev"></div>
+						  </div>
+
+					</div>
+					<div class="single-block">
+						<div class="single-header">
+							<div class="single-header__section">
+								<div class="single-header__caption caption">Молоко и Мед дом 1</div>
+								<div class="stars">
+									
+										
+											
+												<div class="star star--active"></div>
+											
+										
+									
+										
+											
+												<div class="star star--active"></div>
+											
+										
+									
+										
+											
+												<div class="star star--half"></div>
+											
+										
+									
+										
+											
+												<div class="star"></div>
+											
+										
+									
+										
+											
+												<div class="star"></div>
+											
+										
+									
+								</div>
+							</div>
+
+						</div>
+						<div class="single-product product-card">
+							<a href="#" class="product-content">
+								<div class="product-progress">
+									<div class="product-progress__title">Готовность</div>
+										
+											<div class="product-progress__container progress-bar_orange">
+										
+										<div class="product-progress__bar" style="height: 48%"></div>
+									</div>
+									<div class="product-progress__numbers">
+										<div class="product-progress__number product-progress__number_max">100%</div>
+										<div class="product-progress__number product-progress__number_mid">50%</div>
+										<div class="product-progress__number product-progress__number_min">0%</div>
+									</div>
+								</div>
+								<div class="product-info-wrap">
+									<div class="product-info-row">
+										<div class="product-info">
+											<div class="product-info__title">Продано:</div>
+											<div class="product-info__desc ">58</div>
+										</div>
+										<div class="product-info">
+											<div class="product-info__title">Свободно:</div>
+											<div class="product-info__desc ">61</div>
+										</div>
+									</div>
+									<div class="product-info-row">
+										<div class="product-info">
+											<div class="product-info__title">Старт продаж:</div>
+											<div class="product-info__desc">01.12.2018</div>
+										</div>
+										<div class="product-info">
+											<div class="product-info__title">Срок сдачи:</div>
+											<div class="product-info__desc">18.12.2020</div>
+										</div>
+										<div class="product-info">
+											<div class="product-info__title">Класс:</div>
+											<div class="product-info__desc">Стандарт</div>
+										</div>
+									</div>
+									<div class="product-info-row">
+										<div class="product-info">
+											<div class="product-info__title">Типы планировок:</div>
+											<div class="type-plan">
+											
+												<div class="type-plan__round tooltipstered" data-tooltip-content="#tooltip-wrap-1">
+													<div class="type-plan__round-title">СТ</div>
+													
+														<div class="tooltip-wrap">
+															<div class="tooltip-box" id="tooltip-wrap-1">
+																<div class="tooltip-box__column">
+																	<div class="tooltip-box__title">кол-во</div>
+																	<div class="tooltip-box__data">15</div>
+																</div>
+																<div class="tooltip-box__column">
+																	<div class="tooltip-box__title">продано</div>
+																	<div class="tooltip-box__data">7</div>
+																</div>
+																<div class="tooltip-box__column">
+																	<div class="tooltip-box__title">в рынке</div>
+																	<div class="tooltip-box__data">8</div>
+																</div>
+															</div>
+														</div>
+													
+												</div>
+											
+												<div class="type-plan__round tooltipstered" data-tooltip-content="#tooltip-wrap-2">
+													<div class="type-plan__round-title">1</div>
+													
+														<div class="tooltip-wrap">
+															<div class="tooltip-box" id="tooltip-wrap-2">
+																<div class="tooltip-box__column">
+																	<div class="tooltip-box__title">кол-во</div>
+																	<div class="tooltip-box__data">14</div>
+																</div>
+																<div class="tooltip-box__column">
+																	<div class="tooltip-box__title">продано</div>
+																	<div class="tooltip-box__data">5</div>
+																</div>
+																<div class="tooltip-box__column">
+																	<div class="tooltip-box__title">в рынке</div>
+																	<div class="tooltip-box__data">9</div>
+																</div>
+															</div>
+														</div>
+													
+												</div>
+											
+												<div class="type-plan__round tooltipstered" data-tooltip-content="#tooltip-wrap-3">
+													<div class="type-plan__round-title">1.5</div>
+													
+														<div class="tooltip-wrap">
+															<div class="tooltip-box" id="tooltip-wrap-3">
+																<div class="tooltip-box__column">
+																	<div class="tooltip-box__title">кол-во</div>
+																	<div class="tooltip-box__data">45</div>
+																</div>
+																<div class="tooltip-box__column">
+																	<div class="tooltip-box__title">продано</div>
+																	<div class="tooltip-box__data">14</div>
+																</div>
+																<div class="tooltip-box__column">
+																	<div class="tooltip-box__title">в рынке</div>
+																	<div class="tooltip-box__data">31</div>
+																</div>
+															</div>
+														</div>
+													
+												</div>
+											
+												<div class="type-plan__round tooltipstered" data-tooltip-content="#tooltip-wrap-4">
+													<div class="type-plan__round-title">2.5</div>
+													
+														<div class="tooltip-wrap">
+															<div class="tooltip-box" id="tooltip-wrap-4">
+																<div class="tooltip-box__column">
+																	<div class="tooltip-box__title">кол-во</div>
+																	<div class="tooltip-box__data">30</div>
+																</div>
+																<div class="tooltip-box__column">
+																	<div class="tooltip-box__title">продано</div>
+																	<div class="tooltip-box__data">20</div>
+																</div>
+																<div class="tooltip-box__column">
+																	<div class="tooltip-box__title">в рынке</div>
+																	<div class="tooltip-box__data">10</div>
+																</div>
+															</div>
+														</div>
+													
+												</div>
+											
+												<div class="type-plan__round tooltipstered" data-tooltip-content="#tooltip-wrap-5">
+													<div class="type-plan__round-title">3.5</div>
+													
+														<div class="tooltip-wrap">
+															<div class="tooltip-box" id="tooltip-wrap-5">
+																<div class="tooltip-box__column">
+																	<div class="tooltip-box__title">кол-во</div>
+																	<div class="tooltip-box__data">15</div>
+																</div>
+																<div class="tooltip-box__column">
+																	<div class="tooltip-box__title">продано</div>
+																	<div class="tooltip-box__data">12</div>
+																</div>
+																<div class="tooltip-box__column">
+																	<div class="tooltip-box__title">в рынке</div>
+																	<div class="tooltip-box__data">3</div>
+																</div>
+															</div>
+														</div>
+													
+												</div>
+											
+											</div>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="house-2-page__caption caption caption--icon1">Характеристики ЖК и Инфраструктура</div>
+				<div class="house-tabs tabs-wrapper">
+					<!--ul class="region-tabs tabs--small">
+						<li class="region-tabs__item region-tabs--active">Секция №1</li>
+						<li class="region-tabs__item">Секция №2</li>
+						<li class="region-tabs__item">Секция №3</li>
+						<li class="region-tabs__item">Секция №4</li>
+						<li class="region-tabs__item">Секция №5</li>
+					</ul-->
+					<div class="house-tabs__wrapper region-wrapper card">
+						
+						<div class="house-tabs__head">
+							<div class="house-tabs__caption">Характеристики ЖК</div>
+							<div class="house-tabs__caption">Инфраструктура</div>
+						</div>
+						<div class="house-tabs__content">
+							<div class="house-tabs__section">
+								<div class="house-tabs__item">
+									<div class="house-tabs__title">Концепция застройки:</div>
+									<div class="house-tabs__description">ТОЧЕЧНАЯ</div>
+								</div>
+								<div class="house-tabs__item">
+									<div class="house-tabs__title">Этажность:</div>
+									<div class="house-tabs__description">15 этажей</div>
+								</div>
+								<div class="house-tabs__item">
+									<div class="house-tabs__title">Количество квартир:</div>
+									<div class="house-tabs__description">119</div>
+								</div>
+							</div>
+							<div class="house-tabs__section house-tabs__border">
+								<div class="house-tabs__item">
+									<div class="house-tabs__title">Наружные стены:</div>
+									<div class="house-tabs__description">Вентилируемый</div>
+								</div>
+								<div class="house-tabs__item">
+									<div class="house-tabs__title">Внутренние стены :</div>
+									<div class="house-tabs__description">Керамзитобетонные и бетонные блоки</div>
+								</div>
+								<div class="house-tabs__item">
+									<div class="house-tabs__title">Межкомнатные перегородки:</div>
+									<div class="house-tabs__description">Пазогребневые плиты (гипсокартон)</div>
+								</div>
+							</div>
+							<div class="house-tabs__section house-tabs__border">
+								<div class="house-tabs__item">
+									<div class="house-tabs__title">Детские сады:</div>
+									<div class="house-tabs__description"> МБДОУ детский сад № 273 - 780 м (9 мин)/ МБДОУ детский сад № 274 - 820 м (10 мин)/ МБДОУ № 271 - 760 м (9 мин)/ МАДОУ детский сад № 269 - 1,2 км/ Детский сад № 260 - 1,2 км/ МБДОУ № 245 - 1,5 км/МБДОУ детский сад № 231 - 1,2 км/  БДОУ № 245 - 1,5 км/ МБДОУ детский сад № 226 - 1,3 км/ МБДОУ № 239 - 1,4 км/ МБДОУ Детский сад № 258 - 1,5 км/ МБДОУ детский сад № 14 - 1,9 км/ Детский сад № 262 - 1,8 км;      </div>
+								</div>
+							</div>
+							<div class="house-tabs__section">
+								<div class="house-tabs__item">
+									<div class="house-tabs__title">Школы:</div>
+									<div class="house-tabs__description">Средняя общеобразовательная школа № 54 - 1,4 км/ Средняя общеобразовательная школа № 53 - 1,5 км/ Средняя общеобразовательная школа № 32 с углубленным изучением отдельных предметов - 1,8 км/ Средняя Общеобразовательная школа № 50 - 1,5 км/ Муниципальное бюджетное общеобразовательное учреждение Лицей № 41 - 1,1 км/МБОУ Средняя общеобразовательная школа № 81 - 600 м (7 мин)/  Муниципальное бюджетное общеобразовательное учреждение Лицей № 41 - 1,1 км/ МБОУ СОШ № 78 - 1,1 км;      </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="house-2-page__caption caption caption--icon2">Планировки</div>
+				<div class="cards-wrapper">
+
+					<div class="pie-card card" style="height: 410px;">
+						
+						<div><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+						<div id="doughnut-labels"><ul class="doughnut-labels__list"><li class="doughnut-labels__item" style="background-color:#14d093c4">Студия</li><li class="doughnut-labels__item" style="background-color:#35f3b5c4">1 к.кв</li><li class="doughnut-labels__item" style="background-color:#9ef9b6c9">1.5 к.кв</li><li class="doughnut-labels__item" style="background-color:#b6fb78">2.5 к.кв</li><li class="doughnut-labels__item" style="background-color:#e8ea17c7">3.5 к.кв</li></ul></div>
+						<canvas id="doughnut" width="226" height="226" style="display: block; width: 226px; height: 226px;" class="chartjs-render-monitor"></canvas>
+							</div>
+					</div>
+
+					<div class="card result-plan" id="result-plan">
+						
+						<div class="card__title result-plan__title">Результаты продаж планировок:</div>
+						<table class="result-plan__table table">
+							<tbody><tr>
+								<th>Планировка:</th>
+								<th>Продано квартир:</th>
+								<th>Среднее число продаж в мес:</th>
+								<th>Средняя цена кв.м:</th>
+								<th>Прогнозный срок выбытия:</th>
+							</tr>
+							
+								<tr>
+									<td>Студия</td>
+									<td>
+										<div class="house-progress">
+											<div class="house-progress__scene"></div>
+											<div class="house-progress__scene" style="width: 46%"></div>
+											<div class="house-progress__scene"></div>
+											<span class="house-progress__num">7/15</span>
+										</div>
+									</td>
+									<td>0</td>
+									<td>0 ₽</td>
+									<td>0 месяцев
+										
+											<div class="result-plan__message tooltipstered" data-tooltip-content="#tooltip-wrap-201">
+												<div class="result-plan__table-notice notice"></div>
+														<div class="tooltip-wrap">
+															<div class="tooltip-box_message" id="tooltip-wrap-201">
+																Внимание: при сохранении динамики продаж часть квартир могут остаться нераспроданными до окончания строительства
+															</div>
+														</div>
+
+											</div>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>1 к.кв</td>
+									<td>
+										<div class="house-progress">
+											<div class="house-progress__scene"></div>
+											<div class="house-progress__scene" style="width: 35%"></div>
+											<div class="house-progress__scene"></div>
+											<span class="house-progress__num">5/14</span>
+										</div>
+									</td>
+									<td>0</td>
+									<td>58 073 ₽</td>
+									<td>0 месяцев
+										
+											<div class="result-plan__message tooltipstered" data-tooltip-content="#tooltip-wrap-202">
+												<div class="result-plan__table-notice notice"></div>
+														<div class="tooltip-wrap">
+															<div class="tooltip-box_message" id="tooltip-wrap-202">
+																Внимание: при сохранении динамики продаж часть квартир могут остаться нераспроданными до окончания строительства
+															</div>
+														</div>
+
+											</div>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>1.5 к.кв</td>
+									<td>
+										<div class="house-progress">
+											<div class="house-progress__scene"></div>
+											<div class="house-progress__scene" style="width: 31%"></div>
+											<div class="house-progress__scene"></div>
+											<span class="house-progress__num">14/45</span>
+										</div>
+									</td>
+									<td>0</td>
+									<td>57 265 ₽</td>
+									<td>0 месяцев
+										
+											<div class="result-plan__message tooltipstered" data-tooltip-content="#tooltip-wrap-203">
+												<div class="result-plan__table-notice notice"></div>
+														<div class="tooltip-wrap">
+															<div class="tooltip-box_message" id="tooltip-wrap-203">
+																Внимание: при сохранении динамики продаж часть квартир могут остаться нераспроданными до окончания строительства
+															</div>
+														</div>
+
+											</div>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>2.5 к.кв</td>
+									<td>
+										<div class="house-progress">
+											<div class="house-progress__scene"></div>
+											<div class="house-progress__scene" style="width: 66%"></div>
+											<div class="house-progress__scene"></div>
+											<span class="house-progress__num">20/30</span>
+										</div>
+									</td>
+									<td>0</td>
+									<td>55 287 ₽</td>
+									<td>0 месяцев
+										
+											<div class="result-plan__message tooltipstered" data-tooltip-content="#tooltip-wrap-204">
+												<div class="result-plan__table-notice notice"></div>
+														<div class="tooltip-wrap">
+															<div class="tooltip-box_message" id="tooltip-wrap-204">
+																Внимание: при сохранении динамики продаж часть квартир могут остаться нераспроданными до окончания строительства
+															</div>
+														</div>
+
+											</div>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>3.5 к.кв</td>
+									<td>
+										<div class="house-progress">
+											<div class="house-progress__scene"></div>
+											<div class="house-progress__scene" style="width: 80%"></div>
+											<div class="house-progress__scene"></div>
+											<span class="house-progress__num">12/15</span>
+										</div>
+									</td>
+									<td>0</td>
+									<td>0 ₽</td>
+									<td>0 месяцев
+										
+											<div class="result-plan__message tooltipstered" data-tooltip-content="#tooltip-wrap-205">
+												<div class="result-plan__table-notice notice"></div>
+														<div class="tooltip-wrap">
+															<div class="tooltip-box_message" id="tooltip-wrap-205">
+																Внимание: при сохранении динамики продаж часть квартир могут остаться нераспроданными до окончания строительства
+															</div>
+														</div>
+
+											</div>
+										
+									</td>
+								</tr>
+							
+							<tr>
+								<td colspan="2"><span class="result-plan__total">Итого:</span>
+									58 из 119</td>
+								<td>0</td>
+								<td>56 875 ₽</td>
+								<td></td>
+							</tr>
+						</tbody></table>
+						
+							<a href="#" class="result-plan__btn btn btn--green">Подробнее</a>
+						
+					</div>
+				</div>
+
+				<div class="house-2-page__caption caption caption--icon3">Итоговая таблица</div>
+				<div class="total card">
+					
+					<table class="total__table table">
+						<tbody><tr>
+							<th><span>Тип <br> планировки</span></th>
+							<th>Средняя<br>площадь</th>
+							<th>Средняя<br>стоимость</th>
+							<th>Всего <br> квартир</th>
+							<th>Продано</th>
+							<th>Остаток</th>
+							<th>% <br> проданных</th>
+							<th>Оплата <br> собств.ср</th>
+							<th>Оплата <br> ипотека</th>
+						</tr>
+						
+							<tr>
+								<td>Студия</td>
+								<td>25,27 м <sup><small>2</small></sup></td>
+								<td>0 ₽</td>
+								<td>15</td>
+								<td>7</td>
+								<td>8</td>
+								<td>46 %</td>
+								<td>42.86 %</td>
+								<td>57.14 %</td>
+							</tr>
+						
+							<tr>
+								<td>1 к.кв</td>
+								<td>35,36 м <sup><small>2</small></sup></td>
+								<td>2 050 000 ₽</td>
+								<td>14</td>
+								<td>5</td>
+								<td>9</td>
+								<td>35 %</td>
+								<td>40.00 %</td>
+								<td>60.00 %</td>
+							</tr>
+						
+							<tr>
+								<td>1.5 к.кв</td>
+								<td>37,24 м <sup><small>2</small></sup></td>
+								<td>2 130 000 ₽</td>
+								<td>45</td>
+								<td>14</td>
+								<td>31</td>
+								<td>31 %</td>
+								<td>7.14 %</td>
+								<td>92.86 %</td>
+							</tr>
+						
+							<tr>
+								<td>2.5 к.кв</td>
+								<td>53,0 м <sup><small>2</small></sup></td>
+								<td>2 980 000 ₽</td>
+								<td>30</td>
+								<td>20</td>
+								<td>10</td>
+								<td>66 %</td>
+								<td>10.00 %</td>
+								<td>90.00 %</td>
+							</tr>
+						
+							<tr>
+								<td>3.5 к.кв</td>
+								<td>72,1 м <sup><small>2</small></sup></td>
+								<td>0 ₽</td>
+								<td>15</td>
+								<td>12</td>
+								<td>3</td>
+								<td>80 %</td>
+								<td>25.00 %</td>
+								<td>75.00 %</td>
+							</tr>
+						
+
+					</tbody></table>
+					
+						<a href="#" class="total__btn btn btn--green">Посмотреть полный список квартир</a>
+					
+				</div>
+
+				<div class="house-2-page__caption caption caption--icon4">Востребованность этажей</div>
+				<div class="cards-wrapper">
+
+					<div class="heat-map card">
+						
+						<div class="result-flat__title card__title" style="padding-top: 30px">Тепловая карта:</div>
+						<ul class="heat-map__list">
+							
+								<li class="heat-map__item">
+									<div class="heat-map__item-num">1</div>
+									<div class="heat-map__item-line" style="background-color:
+										
+											#ff6335
+										
+									"></div>
+								</li>
+							
+								<li class="heat-map__item">
+									<div class="heat-map__item-num">2</div>
+									<div class="heat-map__item-line" style="background-color:
+										
+											#ffd335
+										
+									"></div>
+								</li>
+							
+								<li class="heat-map__item">
+									<div class="heat-map__item-num">3</div>
+									<div class="heat-map__item-line" style="background-color:
+										
+											#fdff5d
+										
+									"></div>
+								</li>
+							
+								<li class="heat-map__item">
+									<div class="heat-map__item-num">4</div>
+									<div class="heat-map__item-line" style="background-color:
+										
+											#fdff5d
+										
+									"></div>
+								</li>
+							
+								<li class="heat-map__item">
+									<div class="heat-map__item-num">5</div>
+									<div class="heat-map__item-line" style="background-color:
+										
+											#c0fc60
+										
+									"></div>
+								</li>
+							
+								<li class="heat-map__item">
+									<div class="heat-map__item-num">6</div>
+									<div class="heat-map__item-line" style="background-color:
+										
+											#b7ff76
+										
+									"></div>
+								</li>
+							
+								<li class="heat-map__item">
+									<div class="heat-map__item-num">7</div>
+									<div class="heat-map__item-line" style="background-color:
+										
+											#ff9b33
+										
+									"></div>
+								</li>
+							
+								<li class="heat-map__item">
+									<div class="heat-map__item-num">8</div>
+									<div class="heat-map__item-line" style="background-color:
+										
+											#fdff5d
+										
+									"></div>
+								</li>
+							
+								<li class="heat-map__item">
+									<div class="heat-map__item-num">9</div>
+									<div class="heat-map__item-line" style="background-color:
+										
+											#b7ff76
+										
+									"></div>
+								</li>
+							
+								<li class="heat-map__item">
+									<div class="heat-map__item-num">10</div>
+									<div class="heat-map__item-line" style="background-color:
+										
+											#ff9b33
+										
+									"></div>
+								</li>
+							
+								<li class="heat-map__item">
+									<div class="heat-map__item-num">11</div>
+									<div class="heat-map__item-line" style="background-color:
+										
+											#ff9b33
+										
+									"></div>
+								</li>
+							
+								<li class="heat-map__item">
+									<div class="heat-map__item-num">12</div>
+									<div class="heat-map__item-line" style="background-color:
+										
+											#ff9b33
+										
+									"></div>
+								</li>
+							
+								<li class="heat-map__item">
+									<div class="heat-map__item-num">13</div>
+									<div class="heat-map__item-line" style="background-color:
+										
+											#ff6335
+										
+									"></div>
+								</li>
+							
+								<li class="heat-map__item">
+									<div class="heat-map__item-num">14</div>
+									<div class="heat-map__item-line" style="background-color:
+										
+											#ffd335
+										
+									"></div>
+								</li>
+							
+								<li class="heat-map__item">
+									<div class="heat-map__item-num">15</div>
+									<div class="heat-map__item-line" style="background-color:
+										
+											#ff7d40
+										
+									"></div>
+								</li>
+							
+						</ul>
+					</div>
+					<div class="result-flat card">
+						
+						<div class="result-flat__title card__title">Результаты продаж квартир по этажам:</div>
+						<table class="result-flat__table table">
+							<tbody><tr>
+								<th>Этаж</th>
+								<th>Продано <br> квартир</th>
+								<th>Остаток</th>
+								<th>Средняя цена <br> кв.м</th>
+							</tr>
+							
+								<tr>
+									<td>1</td>
+									<td>
+										<div class="result-flat__progress house-progress">
+											<div class="house-progress__scene"></div>
+											<div class="house-progress__scene" style="width: 14%"></div>
+											<div class="house-progress__scene"></div>
+											<span class="house-progress__num">1/7</span>
+										</div>
+									</td>
+									<td>6</td>
+									<td>0 ₽</td>
+								</tr>
+							
+								<tr>
+									<td>2</td>
+									<td>
+										<div class="result-flat__progress house-progress">
+											<div class="house-progress__scene"></div>
+											<div class="house-progress__scene" style="width: 50%"></div>
+											<div class="house-progress__scene"></div>
+											<span class="house-progress__num">4/8</span>
+										</div>
+									</td>
+									<td>4</td>
+									<td>0 ₽</td>
+								</tr>
+							
+								<tr>
+									<td>3</td>
+									<td>
+										<div class="result-flat__progress house-progress">
+											<div class="house-progress__scene"></div>
+											<div class="house-progress__scene" style="width: 62%"></div>
+											<div class="house-progress__scene"></div>
+											<span class="house-progress__num">5/8</span>
+										</div>
+									</td>
+									<td>3</td>
+									<td>0 ₽</td>
+								</tr>
+							
+								<tr>
+									<td>4</td>
+									<td>
+										<div class="result-flat__progress house-progress">
+											<div class="house-progress__scene"></div>
+											<div class="house-progress__scene" style="width: 62%"></div>
+											<div class="house-progress__scene"></div>
+											<span class="house-progress__num">5/8</span>
+										</div>
+									</td>
+									<td>3</td>
+									<td>0 ₽</td>
+								</tr>
+							
+								<tr>
+									<td>5</td>
+									<td>
+										<div class="result-flat__progress house-progress">
+											<div class="house-progress__scene"></div>
+											<div class="house-progress__scene" style="width: 87%"></div>
+											<div class="house-progress__scene"></div>
+											<span class="house-progress__num">7/8</span>
+										</div>
+									</td>
+									<td>1</td>
+									<td>55 287 ₽</td>
+								</tr>
+							
+								<tr>
+									<td>6</td>
+									<td>
+										<div class="result-flat__progress house-progress">
+											<div class="house-progress__scene"></div>
+											<div class="house-progress__scene" style="width: 75%"></div>
+											<div class="house-progress__scene"></div>
+											<span class="house-progress__num">6/8</span>
+										</div>
+									</td>
+									<td>2</td>
+									<td>0 ₽</td>
+								</tr>
+							
+								<tr>
+									<td>7</td>
+									<td>
+										<div class="result-flat__progress house-progress">
+											<div class="house-progress__scene"></div>
+											<div class="house-progress__scene" style="width: 37%"></div>
+											<div class="house-progress__scene"></div>
+											<span class="house-progress__num">3/8</span>
+										</div>
+									</td>
+									<td>5</td>
+									<td>0 ₽</td>
+								</tr>
+							
+								<tr>
+									<td>8</td>
+									<td>
+										<div class="result-flat__progress house-progress">
+											<div class="house-progress__scene"></div>
+											<div class="house-progress__scene" style="width: 62%"></div>
+											<div class="house-progress__scene"></div>
+											<span class="house-progress__num">5/8</span>
+										</div>
+									</td>
+									<td>3</td>
+									<td>57 403 ₽</td>
+								</tr>
+							
+								<tr>
+									<td>9</td>
+									<td>
+										<div class="result-flat__progress house-progress">
+											<div class="house-progress__scene"></div>
+											<div class="house-progress__scene" style="width: 75%"></div>
+											<div class="house-progress__scene"></div>
+											<span class="house-progress__num">6/8</span>
+										</div>
+									</td>
+									<td>2</td>
+									<td>58 073 ₽</td>
+								</tr>
+							
+								<tr>
+									<td>10</td>
+									<td>
+										<div class="result-flat__progress house-progress">
+											<div class="house-progress__scene"></div>
+											<div class="house-progress__scene" style="width: 37%"></div>
+											<div class="house-progress__scene"></div>
+											<span class="house-progress__num">3/8</span>
+										</div>
+									</td>
+									<td>5</td>
+									<td>0 ₽</td>
+								</tr>
+							
+								<tr>
+									<td>11</td>
+									<td>
+										<div class="result-flat__progress house-progress">
+											<div class="house-progress__scene"></div>
+											<div class="house-progress__scene" style="width: 37%"></div>
+											<div class="house-progress__scene"></div>
+											<span class="house-progress__num">3/8</span>
+										</div>
+									</td>
+									<td>5</td>
+									<td>56 989 ₽</td>
+								</tr>
+							
+								<tr>
+									<td>12</td>
+									<td>
+										<div class="result-flat__progress house-progress">
+											<div class="house-progress__scene"></div>
+											<div class="house-progress__scene" style="width: 37%"></div>
+											<div class="house-progress__scene"></div>
+											<span class="house-progress__num">3/8</span>
+										</div>
+									</td>
+									<td>5</td>
+									<td>0 ₽</td>
+								</tr>
+							
+								<tr>
+									<td>13</td>
+									<td>
+										<div class="result-flat__progress house-progress">
+											<div class="house-progress__scene"></div>
+											<div class="house-progress__scene" style="width: 12%"></div>
+											<div class="house-progress__scene"></div>
+											<span class="house-progress__num">1/8</span>
+										</div>
+									</td>
+									<td>7</td>
+									<td>0 ₽</td>
+								</tr>
+							
+								<tr>
+									<td>14</td>
+									<td>
+										<div class="result-flat__progress house-progress">
+											<div class="house-progress__scene"></div>
+											<div class="house-progress__scene" style="width: 50%"></div>
+											<div class="house-progress__scene"></div>
+											<span class="house-progress__num">4/8</span>
+										</div>
+									</td>
+									<td>4</td>
+									<td>0 ₽</td>
+								</tr>
+							
+								<tr>
+									<td>15</td>
+									<td>
+										<div class="result-flat__progress house-progress">
+											<div class="house-progress__scene"></div>
+											<div class="house-progress__scene" style="width: 25%"></div>
+											<div class="house-progress__scene"></div>
+											<span class="house-progress__num">2/8</span>
+										</div>
+									</td>
+									<td>6</td>
+									<td>0 ₽</td>
+								</tr>
+							
+						</tbody></table>
+					</div>
+				</div>
+
+				
+            <div class="house-2-page__caption caption caption--icon5">Динамика продаж с момента старта</div>
+            <div class="dynamics card">
+                {% if apartment.has_access == False %}
+                    <div class="paid-access">
+                        <div class="paid-access__box">
+                            <div class="paid-access__title">Оплатить доступ</div>
+                            <div class="paid-access__desc">Что бы посмотреть график, вам нужно оплатить доступ</div>
+                            <a class="paid-access__btn btn btn--green" href="#">Оплатить доступ</a>
+                            <a class="paid-access__link" href="#">Тарифы</a>
+                        </div>
+                    </div>
+                {% endif %}
+                <div class="dynamics__title card__title">Динамика реализации квартир с момента продаж</div>
+                <div class="dynamics__wrapper">
+                    <div class="dynamics-chart__legends" id="dynamics-chart__legends1"></div>
+                    <canvas id="dynamic-chart-1" width="810px" height="400px"></canvas>
+                </div>
+            </div>
+
+            <div class="house-2-page__caption caption caption--icon5">Совокупная стоимость проданных квартир</div>
+            <div class="dynamics card">
+                <div class="dynamics__title card__title">Совокупная стоимость проданных квартир, со старта продаж (в млн. руб.)</div>
+                <div class="dynamics__wrapper">
+                    <div class="dynamics-chart__legends" id="dynamics-chart__legends2"></div>
+                    <canvas id="dynamic-chart-2" width="810px" height="400px"></canvas>
+                </div>
+            </div>
+
+            <div class="house-2-page__caption caption caption--icon5">Изменение средней стоимости квадратного метра квартир</div>
+            <div class="dynamics card">
+                
+                <div class="dynamics__title card__title">Изменение средней стоимости квадратного метра квартир с момента старта продаж</div>
+                <div class="dynamics__wrapper">
+                    <div class="dynamics-chart__legends" id="dynamics-chart__legends3"></div>
+                    <canvas id="dynamic-chart-3" width="810px" height="400px"></canvas>
+                </div>
+            </div>
+
+				
+
+				<!--div class="house-2-page__caption caption caption--icon6">Примеры хорошо продаваемых планировок</div>
+				<div class="example-good tabs-wrapper">
+					<ul class="example-tabs region-tabs tabs--small">
+						<li class="region-tabs__item region-tabs--active" data-attr="1">Студия</li>
+						<li class="region-tabs__item" data-attr="2">1 к.кв</li>
+						<li class="region-tabs__item" data-attr="3">1,5 к.кв</li>
+						<li class="region-tabs__item" data-attr="4">2 к.кв</li>
+						<li class="region-tabs__item">2,5 к.кв</li>
+						<li class="region-tabs__item">3 к.кв</li>
+						<li class="region-tabs__item">3,5 к.кв</li>
+					</ul>
+					<div class="example-wrapper region-wrapper card">
+						<div class="example-content slider swiper-container example-content--active" id="1">
+							<ul class="example-list swiper-wrapper">
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-1.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-2.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-3.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-4.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-1.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-2.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-3.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-4.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+							</ul>
+							<div class="example-slider__next swiper-button-next"></div>
+							<div class="example-slider__prev swiper-button-prev"></div>
+						</div>
+						<div class="example-content slider swiper-container" id="2">
+							<ul class="example-list swiper-wrapper">
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-1.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-2.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-3.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-4.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-1.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-2.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-3.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-4.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+							</ul>
+							<div class="example-slider__next swiper-button-next"></div>
+							<div class="example-slider__prev swiper-button-prev"></div>
+						</div>
+						<div class="example-content slider swiper-container" id="3">
+							<ul class="example-list swiper-wrapper">
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-1.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-2.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-3.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-4.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-1.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-2.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-3.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-4.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+							</ul>
+							<div class="example-slider__next swiper-button-next"></div>
+							<div class="example-slider__prev swiper-button-prev"></div>
+						</div>
+						<div class="example-content slider swiper-container" id="4">
+							<ul class="example-list swiper-wrapper">
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-1.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-2.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-3.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-4.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-1.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-2.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-3.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-4.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+							</ul>
+							<div class="example-slider__next swiper-button-next"></div>
+							<div class="example-slider__prev swiper-button-prev"></div>
+						</div>
+					</div>
+				</div-->
+
+				<!--div class="house-2-page__caption caption caption--icon7">Примеры плохо продаваемых планировок</div>
+				<div class="example-bad tabs-wrapper">
+					<ul class="example-tabs region-tabs tabs--small">
+						<li class="region-tabs__item region-tabs--active" data-attr="ex1">Студия</li>
+						<li class="region-tabs__item" data-attr="ex2">1 к.кв</li>
+						<li class="region-tabs__item" data-attr="ex3">1,5 к.кв</li>
+						<li class="region-tabs__item" data-attr="ex4">2 к.кв</li>
+						<li class="region-tabs__item">2,5 к.кв</li>
+						<li class="region-tabs__item">3 к.кв</li>
+						<li class="region-tabs__item">3,5 к.кв</li>
+					</ul>
+					<div class="example-wrapper region-wrapper card">
+						<div class="example-content slider swiper-container example-content--active" id="ex1">
+							<ul class="example-list swiper-wrapper">
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-1.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-2.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-3.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-4.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-1.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-2.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-3.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-4.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+							</ul>
+							<div class="example-slider__next swiper-button-next"></div>
+							<div class="example-slider__prev swiper-button-prev"></div>
+						</div>
+						<div class="example-content slider swiper-container" id="ex2">
+							<ul class="example-list swiper-wrapper">
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-1.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-2.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-3.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-4.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-1.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-2.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-3.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-4.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+							</ul>
+							<div class="example-slider__next swiper-button-next"></div>
+							<div class="example-slider__prev swiper-button-prev"></div>
+						</div>
+						<div class="example-content slider swiper-container" id="ex3">
+							<ul class="example-list swiper-wrapper">
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-1.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-2.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-3.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-4.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-1.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-2.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-3.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-4.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+							</ul>
+							<div class="example-slider__next swiper-button-next"></div>
+							<div class="example-slider__prev swiper-button-prev"></div>
+						</div>
+						<div class="example-content slider swiper-container" id="ex4">
+							<ul class="example-list swiper-wrapper">
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-1.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-2.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-3.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-4.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-1.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-2.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-3.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+								<li class="example-item swiper-slide">
+									<img class="example-item__img" src="/static/images/house_2/ex-4.png">
+									<div class="example-item__title">Студия 25 кв.м.
+										<span>(1 500 000 - 1 600 000 руб)</span>
+									</div>
+									<div class="example-item__desc">Продано: 9 из 10</div>
+								</li>
+							</ul>
+							<div class="example-slider__next swiper-button-next"></div>
+							<div class="example-slider__prev swiper-button-prev"></div>
+						</div>
+					</div>
+				</div>
+
+				<!--div class="house-2-page__caption caption caption--icon8">Ход строительства</div>
+				<div class="building-progress card">
+					<div class="building-progress__content slider swiper-container">
+						<ul class="building-progress__list swiper-wrapper">
+							<li class="building-progress__item swiper-slide">
+								<img class="building-progress__img" src="/static/images/house_2/build-1.png" alt="alt">
+								<div class="building-progress__title">Июль 2018</div>
+							</li>
+							<li class="building-progress__item swiper-slide">
+								<img class="building-progress__img" src="/static/images/house_2/build-2.png" alt="alt">
+								<div class="building-progress__title">Июль 2018</div>
+							</li>
+							<li class="building-progress__item swiper-slide">
+								<img class="building-progress__img" src="/static/images/house_2/build-3.png" alt="alt">
+								<div class="building-progress__title">Август 2018</div>
+							</li>
+							<li class="building-progress__item swiper-slide">
+								<img class="building-progress__img" src="/static/images/house_2/build-1.png" alt="alt">
+								<div class="building-progress__title">Июль 2018</div>
+							</li>
+							<li class="building-progress__item swiper-slide">
+								<img class="building-progress__img" src="/static/images/house_2/build-2.png" alt="alt">
+								<div class="building-progress__title">Сентябрь 2018</div>
+							</li>
+							<li class="building-progress__item swiper-slide">
+								<img class="building-progress__img" src="/static/images/house_2/build-3.png" alt="alt">
+								<div class="building-progress__title">Июль 2018</div>
+							</li>
+						</ul>
+						<div class="example-slider__next swiper-button-next"></div>
+						<div class="example-slider__prev swiper-button-prev"></div>
+					</div>
+
+					<div class="building-progress__slider">
+						<div class="building-slider__info">
+							<div class="building-slider__title  building-slider__title--start">Начало строительства</div>
+							<div class="building-slider__title building-slider__title--end">Сдача дома</div>
+						</div>
+						<input id="building-slider" type="text">
+						<div class="building-slider__info building-slider__info--bottom">
+							<div class="building-slider__title building-slider__title--start">1 квартал 2019 года</div>
+							<div class="building-slider__title building-slider__title--end">4 квартал 2020 года</div>
+						</div>
+					</div>
+
+				</div-->
+
+				<!--div class="house-2-page__caption caption caption--icon9">Документы</div>
+				<div class="card documents">
+					<div class="documents__wrapper">
+						<a href="#" class="documents__link">Проектная декларация</a>
+						<a href="#" class="documents__link">Права на земельный участок</a>
+						<a href="#" class="documents__link">Разрешение на строительство</a><br>
+						<a href="#" class="documents__link">Экспертиза</a>
+						<a href="#" class="documents__link">Проектная декларация № 78-000851 от 18.07.2019</a>
+						<a href="#" class="documents__link">Уведомление дольщиков об изменении способа обеспечения страхования</a>
+					</div>
+				</div-->
+
+				<div class="house-2-page__caption caption caption--icon10">Контактная информация</div>
+				<div class="contacts card">
+					<table class="contacts__table table">
+						<tbody><tr>
+							<th>Сайт застройщика</th>
+							<th>Телефон продаж</th>
+							<th>Страница VK</th>
+							<th>Страница Facebook</th>
+							<th>Страница Instagramm</th>
+						</tr>
+						<tr>
+							<td>
+								
+									<a target="_blank" href="https://наш.дом.рф">https://наш.дом.рф</a>
+								
+							</td>
+							<td>+7(341)265-10-11</td>
+							<td>
+								-
+
+							</td>
+							<td>
+								-
+
+							</td>
+							<td>
+								-
+
+							</td>
+						</tr>
+					</tbody></table>
+				</div>
+
+			</div>
+		</div>
+
+
+        <!-- Alerts -->
+        <div class="alert-box alert--info" id="info">
+            <div class="alert__title">Информация для юзера.</div>
+            <div class="alert__close">&times;</div>
+        </div>
+        <div class="alert-box alert--error" id="error">
+            <div class="alert__title">Ошибка! Введите данные заново!</div>
+            <div class="alert__close">&times;</div>
+        </div>
+        <div class="alert-box alert--success" id="success">
+            <div class="alert__title">Координаты сохранены!</div>
+            <div class="alert__close">&times;</div>
+        </div>
+        <div class="alert-box alert--info alert--dark" id="info-dark">
+            <div class="alert__title">Информация для юзера.</div>
+            <div class="alert__close">&times;</div>
+        </div>
+        <div class="alert-box alert--error alert--dark" id="error-dark">
+            <div class="alert__title">Ошибка! Введите данные заново!</div>
+            <div class="alert__close">&times;</div>
+        </div>
+        <div class="alert-box alert--success alert--dark" id="success-dark">
+            <div class="alert__title">Координаты сохранены!</div>
+            <div class="alert__close">&times;</div>
+        </div>
+        <!-- Alerts end-->
+    </div>
+</div>
+
+<script src="libs/jquery-3.4.1.min.js"></script>
+<script src="libs/tooltipster.bundle.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="libs/chartjs/Chart.min.js"></script>
+<script src="libs/chartjs/chartjs-plugin-labels.js"></script>
+<script src="libs/ion-rangeslider/ion.rangeSlider.min.js"></script>
+<script src="libs/swiper-master/js/swiper.min.js"></script>
+<script src="js/house.js"></script>
+
+</body>
+</html>
