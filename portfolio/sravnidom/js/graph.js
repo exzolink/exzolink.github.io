@@ -147,7 +147,7 @@ var config_1 = {
         tooltipEl.style.position = 'absolute';
         // tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
         // tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
-        var leftPos = tooltipModel.caretX + -34;
+        var leftPos = tooltipModel.caretX + -48;
         if (leftPos < +50) {
           tooltipEl.style.left = 50 + 'px';
         } else if (leftPos > 985) {
@@ -374,7 +374,7 @@ var config_2 = {
         tooltipEl.style.position = 'absolute';
         // tooltipEl.style.left = position.left + window.pageXOSelineSec1et + tooltipModel.caretX + 'px';
         // tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
-        var leftPos = tooltipModel.caretX + -34;
+        var leftPos = tooltipModel.caretX + -48;
         if (leftPos < +50) {
           tooltipEl.style.left = 50 + 'px';
         } else if (leftPos > 985) {
@@ -599,7 +599,7 @@ var config_3 = {
         tooltipEl.style.position = 'absolute';
         // tooltipEl.style.left = position.left + window.pageXOSelineSec1et + tooltipModel.caretX + 'px';
         // tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
-        var leftPos = tooltipModel.caretX + -34;
+        var leftPos = tooltipModel.caretX + -48;
         if (leftPos < +50) {
           tooltipEl.style.left = 50 + 'px';
         } else if (leftPos > 985) {
