@@ -24,6 +24,26 @@ $services-btn: #141414;
     color: $frontpage-color;
 }
 
+::-webkit-scrollbar {
+	display: block;
+	background: #181818;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #fff4;
+	border-left: 2px solid;
+	border-right: 2px solid;
+	border-color: #181818;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #fff5;
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: #fff6;
+}
+
 html {
     background-color: $frontpage-color;
 }
