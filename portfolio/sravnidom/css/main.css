@@ -196,7 +196,7 @@ p {
   border-radius: 30px;
   border: none;
   font-family: FuturaPTBook, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .btn--green {
@@ -4281,7 +4281,6 @@ input:-webkit-autofill {
 
 .heat-map__item-line {
   width: 100%;
-  opacity: .75;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -4292,8 +4291,8 @@ input:-webkit-autofill {
 
 .heat-map__floor {
   color: #000;
-  font-family: 'FuturaPTMedium', sans-serif;
-  font-size: 18px;
+  font-family: 'FuturaPTBook', sans-serif;
+  font-size: 16px;
 }
 
 .enter-icon {
@@ -4573,11 +4572,11 @@ input:-webkit-autofill {
   -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
-  width: 125px;
+  width: 130px;
   height: 46px;
   background-color: #6bb7b2;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 32px;
   letter-spacing: -0.06px;
@@ -5130,9 +5129,10 @@ input:-webkit-autofill {
   position: absolute;
   background-color: #fff;
   width: 100%;
-  height: 810px;
+  height: 700px;
   top: 0;
   display: none;
+  box-shadow: 0 2px 36px 2px rgba(0, 0, 0, 0.1);
   left: 0;
   border-radius: 10px;
   z-index: 100000;
@@ -5322,6 +5322,27 @@ input:-webkit-autofill {
   display: flex;
   align-items: center;
 }
+#interim tr td:first-child {
+  text-align: center;
+}
+table.dataTable thead .sorting_asc {
+  background-position-y: 20%;
+  background-position-x: calc(100% - 5px);
+  background-image: url('../images/arrowUp.svg');
+  background-size: 10px 7px;
+}
+table.dataTable thead .sorting_desc {
+  background-image: url('../images/arrowDown.svg');
+  background-size: 10px 6px;
+  background-position-y: 20%;
+  background-position-x: calc(100% - 5px);
+}
+table.dataTable thead .sorting {
+  background-image: url('../images/arrowDown.svg');
+  background-size: 10px 6px;
+  background-position-y: 20%;
+  background-position-x: calc(100% - 5px);
+}
 #interim_paginate {
   display: none;
 }
@@ -5444,7 +5465,9 @@ color: #808080;
 border-bottom: 0;
 padding: 12px 10px;
 padding-right: 24px;
-vertical-align: middle;
+padding-top: 0;
+padding-bottom: 4px;
+vertical-align: baseline;
 font-family: 'FuturaPTMedium', sans-serif;
 }
 table.dataTable tbody th, table.dataTable tbody td {
