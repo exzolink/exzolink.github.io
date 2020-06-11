@@ -4401,7 +4401,7 @@ input:-webkit-autofill {
 }
 
 .btn-more:hover {
-  opacity: .85;
+  background-color: #008f87;
 }
 
 .graph-tooltip {
