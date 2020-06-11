@@ -1,3 +1,12 @@
+$(document).ready(function () {
+
+
+$('#interim').dataTable({
+        scrollX:    '50000px',
+        paging:     false,
+        colReorder: true
+    });
+})
 let houseGallery = new Swiper('.house-gallery .slider', {
     slidesPerView: 1,
     loop: false,

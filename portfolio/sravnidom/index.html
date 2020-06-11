@@ -20,8 +20,9 @@
 		<link rel="stylesheet" href="css/lib.css">
 		<link rel="stylesheet" href="css/jquery-ui.css">
 		<link rel="stylesheet" href="css/select2.min.css">
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+		<link rel="stylesheet" href="https://cdn.datatables.net/colreorder/1.5.2/css/colReorder.dataTables.min.css">
 		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/datatables.min.css">
 		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 	</head>
 
@@ -1765,7 +1766,7 @@
 										</div>
 									</div>
 									<div class="interim__block search-input__block">
-										<input class="search-input" type="text" placeholder="Поиск">
+										<input id="interim_filter" class="search-input" type="text" placeholder="Поиск">
 										<img class="search-input-img" src="images/search.svg" alt="">
 										<img src="images/bold-close.svg" class="search-input-remove" alt="">
 									</div>
@@ -1778,7 +1779,9 @@
 									<div class="interim__info">
 										<p class="interim__info_title">Готовность, %</p>
 										<div class="table-progress table-progress-interim table-progress_sec">
-											<div class="table-progress__bar table-progress__bar-sec" data-progress="50%" style="width: 50%;"></div> <span class="table-progress__text-sec">50%</span>
+											<div class="table-progress__bar table-progress__bar-sec" data-progress="50%"
+												style="width: 50%;"></div> <span
+												class="table-progress__text-sec">50%</span>
 										</div>
 									</div>
 									<div class="interim__info">
@@ -1795,7 +1798,145 @@
 									</div>
 								</div>
 								<a href="#" class="total__btn btn btn--green">Выгрузить промежуточную таблицу
-									продаж</a>
+								</a>
+								<table id="interim" class="total__table table interim-table">
+									<thead><tr>
+										<th>№</th>
+										<th>Этаж</th>
+										<th>Секция</th>
+										<th>Планировка</th>
+										<th>Площадь,<br>
+											м2</th>
+										<th>Балкон</th>
+										<th>Лоджия</th>
+										<th>Стоимость,<br>
+											млн. руб.</th>
+										<th>Стоимость за м2,<br>руб</th>
+										<th>Стояк</th>
+										<th>Дата<br>
+											продажи</th>
+										<th>Период экспозиции<br>
+											объекта</th>
+										<th>Способ<br>
+											оплаты</th>
+										<th>Банк</th>
+									</tr></thead>
+									<tbody>
+										
+										<tr>
+											<td>Студия</td>
+											<td>25,27 м <sup><small>2</small></sup></td>
+											<td>0 ₽</td>
+											<td>15</td>
+											<td>7</td>
+											<td>8</td>
+											<td>46 %</td>
+											<td>42.86 %</td>
+											<td>57.14 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+										</tr>
+										<tr>
+											<td>1 к.кв</td>
+											<td>35,36 м <sup><small>2</small></sup></td>
+											<td>2 050 000 ₽</td>
+											<td>14</td>
+											<td>5</td>
+											<td>9</td>
+											<td>35 %</td>
+											<td>40.00 %</td>
+											<td>60.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+										</tr>
+										<tr>
+											<td>1.5 к.кв</td>
+											<td>37,24 м <sup><small>2</small></sup></td>
+											<td>2 130 000 ₽</td>
+											<td>45</td>
+											<td>14</td>
+											<td>31</td>
+											<td>31 %</td>
+											<td>7.14 %</td>
+											<td>92.86 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+										</tr>
+										<tr>
+											<td>2.5 к.кв</td>
+											<td>53,0 м <sup><small>2</small></sup></td>
+											<td>2 980 000 ₽</td>
+											<td>30</td>
+											<td>20</td>
+											<td>10</td>
+											<td>66 %</td>
+											<td>10.00 %</td>
+											<td>90.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+										</tr>
+										<tr>
+											<td>3.5 к.кв</td>
+											<td>72,1 м <sup><small>2</small></sup></td>
+											<td>0 ₽</td>
+											<td>15</td>
+											<td>12</td>
+											<td>3</td>
+											<td>80 %</td>
+											<td>25.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+										</tr>
+										<tr>
+											<td>3.5 к.кв</td>
+											<td>72,1 м <sup><small>2</small></sup></td>
+											<td>0 ₽</td>
+											<td>15</td>
+											<td>12</td>
+											<td>3</td>
+											<td>80 %</td>
+											<td>25.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+										</tr>
+										<tr>
+											<td>3.5 к.кв</td>
+											<td>72,1 м <sup><small>2</small></sup></td>
+											<td>0 ₽</td>
+											<td>15</td>
+											<td>12</td>
+											<td>3</td>
+											<td>80 %</td>
+											<td>25.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+											<td>75.00 %</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
 						<!--div class="house-2-page__caption caption caption--icon6">Примеры хорошо продаваемых планировок</div>
@@ -2443,7 +2584,8 @@
 		</div>
 		<script src="libs/jquery-3.4.1.min.js"></script>
 		<script src="libs/tooltipster.bundle.min.js"></script>
-		<script src="js/datatables.min.js"></script>
+		<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdn.datatables.net/colreorder/1.5.2/js/dataTables.colReorder.min.js"></script>
 		<script src="js/scripts.js"></script>
 		<script src="js/select2.min.js"></script>
 		<script src="libs/chartjs/Chart.min.js"></script>
