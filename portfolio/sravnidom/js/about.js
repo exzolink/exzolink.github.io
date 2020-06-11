@@ -28,6 +28,16 @@ var table1 = $('#interim').DataTable({
         }
     });
 
+    $('.plans__floor').click(function () {
+        if ($(this).hasClass('plans__floor_inactive')) {
+            return;
+        }
+        else {
+            $('.plans__floor').removeClass('plans__floor_active')
+            $(this).addClass('plans__floor_active');
+        }
+    });
+
     
 $('.table-progress__show').click(function () {
     if ($(this).hasClass('opened')) {
