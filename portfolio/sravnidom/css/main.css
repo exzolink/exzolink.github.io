@@ -196,7 +196,7 @@ p {
   border-radius: 30px;
   border: none;
   font-family: FuturaPTBook, sans-serif;
-  font-size: 17px;
+  font-size: 14px;
 }
 
 .btn--green {
@@ -5322,7 +5322,12 @@ input:-webkit-autofill {
   display: flex;
   align-items: center;
 }
-
+#interim_paginate {
+  display: none;
+}
+#interim_length {
+  display: none;
+}
 .interim__period img {
   margin-left: 12px;
 }
@@ -5459,7 +5464,6 @@ table.dataTable tbody th, table.dataTable tbody td {
 .dataTables_filter {
   display: none;
 }
-
 #interim_wrapper {
   margin-top: 34px;
 }

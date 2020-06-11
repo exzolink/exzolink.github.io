@@ -1,11 +1,21 @@
 $(document).ready(function () {
 
 
-$('#interim').dataTable({
-        scrollX:    '50000px',
-        paging:     false,
+var table1 = $('#interim').DataTable({
+        scrollX:    '500000px',
         colReorder: true
     });
+
+    $('#interim_filter_search').on( 'keyup', function () {
+        table1.search( this.value ).draw();
+    } );
+
+   
+    $('#rowsCount').on('change', function () {
+        table1.page.len( this.value ).draw();
+        
+    });
+    
 })
 let houseGallery = new Swiper('.house-gallery .slider', {
     slidesPerView: 1,
