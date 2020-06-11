@@ -47,7 +47,7 @@ body {
 
 .sidebar {
   position: fixed;
-  z-index: 9999;
+  z-index: 999999;
   top: 69px;
   left: 0;
   bottom: 0;
@@ -482,7 +482,7 @@ input:-webkit-autofill {
 -------------------------*/
 .header {
   position: fixed;
-  z-index: 9999;
+  z-index: 999999;
   top: 0;
   left: 0;
   right: 0;
@@ -5401,7 +5401,25 @@ input:-webkit-autofill {
   cursor: pointer;
   opacity: .8;
 }
-
+.interim__info {
+  display: flex;
+}
+.interim__info_title {
+  margin-right: 10px;
+  font-family: 'FuturaPTDemi', sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+.interim__info_desc {
+  color: #000;
+}
+.table-progress-interim {
+  width: 75px;
+  margin-right: 0;
+}
+.interim-info {
+  margin-top: 34px;
+}
 
 
 
