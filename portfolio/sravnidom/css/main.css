@@ -405,7 +405,9 @@ input:-webkit-autofill {
 .caption--icon22::before {
   background-image: url("../images/cost.svg");
 }
-
+.caption--icon23::before {
+  background-image: url("../images/plans.svg");
+}
 .caption--icon4::before {
   background-image: url("../images/top.svg");
 }
@@ -4981,6 +4983,231 @@ input:-webkit-autofill {
   height: 14px;
   border-radius: 4px;
 }
+
+/*----------------------------
+  Планировки (слайдер)
+------------------------------*/
+
+.plans__wrapper {
+  background-color: #fff;
+  margin-top: 48px;
+  position: relative;
+}
+.caption-plan {
+  justify-content: space-between;
+}
+.plans__inner {
+  padding: 28px 34px;
+  width: 100%;
+}
+.plans__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.plans__item img {
+  max-width: 220px;
+  margin-bottom: 20px;
+}
+.plans__container .swiper-button-prev, .plans__container .swiper-button-next {
+  background-size: 27px 20px;
+}
+.plans__desc {
+  max-width: 220px;
+}
+.plans__desc p {
+  color: #000;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.open-plan-popup {
+  cursor: pointer;
+}
+.plans__desc p:last-child {
+font-family: FuturaPTDemi;
+font-size: 16px;
+margin-top: 18px;
+}
+.graph-checkbox__wrap {
+  display: flex;
+  margin-left: auto;
+}
+.graph-checkbox__input {
+  opacity: 0;
+ display: none;
+  z-index: -1;
+}
+.graph-checkbox__label {
+  display: block;
+  width: 56px;
+  height: 26px;
+  -webkit-box-shadow: inset 2px 3px 7px 1px rgba(5, 2, 4, 0.3);
+  box-shadow: inset 2px 3px 7px 1px rgba(5, 2, 4, 0.3);
+  border-radius: 13px;
+  background-color: #f6f7fb;
+  position: relative;
+  cursor: pointer;
+}
+.graph-checkbox__label::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3), inset 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3), inset 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+  left: -1px;
+  top: -1px;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+  z-index: 8;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.graph-checkbox__label::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 4px;
+  left: 4px;
+  background-color: #6de7ae;
+  border-radius: 50%;
+  z-index: 5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.graph-checkbox__input:checked + .graph-checkbox__label::after {
+  background-color: #6de7ae;
+  left: 35px;
+}
+.graph-checkbox__title {
+  color: #2c3942;
+  font-family: FuturaPTMedium;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.06px;
+  padding-left: 10px;
+  text-transform: none;
+  white-space: nowrap;
+}
+.pad-right {
+  padding-right: 10px;
+  padding-left: 0;
+}
+.graph-checkbox__input:checked + .graph-checkbox__label::before {
+  left: 30px;
+}
+
+
+.plans__popup {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  height: 810px;
+  top: 0;
+  display: none;
+  left: 0;
+  border-radius: 10px;
+  z-index: 100;
+}
+
+.plans__popup_inner {
+  padding: 28px 34px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.close-btn {
+  position: absolute;
+  right: 32px;
+  transition: opacity .3s ease;
+}
+.close-btn:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+.plans__floor {
+  font-family: 'FuturaPTMedium';
+  margin-top: 8px;
+  padding: 0 6px;
+}
+.plans__popup_block {
+  margin-top: 45px;
+  display: flex;
+}
+.plans__block {
+  display: flex;
+}
+.plans__popup_floor {
+  display: flex;
+  width: max-content;
+  margin-right: 12px;
+  margin-top: 20px;
+  flex-direction: column;
+}
+.plans-wrapper {
+  margin-left: 45px;
+  height: max-content;
+  flex-direction: column;
+  width: 100%;
+}
+
+.plans__popup_info {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+}
+.plans__btn {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.plans__popup_info p {
+  flex-basis: 50%;
+  padding: 12px 20px;
+  color: #000;
+  font-family: 'FuturaPTDemi', sans-serif;
+}
+.plans__popup_desc {
+  font-family: 'FuturaPTMedium', sans-serif;
+  font-size: 16px;
+  color: #000;
+  padding: 12px 20px;
+}
+.plans__popup_img {
+  max-width: 420px;
+}
+.plans__floor_active {
+  background-color: #6CB7B2;
+  border-radius: 100px;
+  padding: 2px 6px;
+  color: #F2F3F7;
+}
+
+.plans__inner_title {
+  margin-top: 45px;
+  font-size: 22px;
+color: #000;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+align-items: center;
+font-family: 'FuturaPTMedium', sans-serif;
+background-position: center center;
+background-size: contain;
+background-repeat: no-repeat;
+margin-left: 0;
+}
+
+
+
+
+
+
+
+
 
 /*----------------------------
   Примеры хорошо продаваемых планировок

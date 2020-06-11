@@ -1,13 +1,19 @@
 let houseGallery = new Swiper('.house-gallery .slider', {
     slidesPerView: 1,
     loop: false,
-    pagination: {
-        el: '.house-gallery .swiper-pagination',
-        clickable: true,
-    },
     navigation: {
         nextEl: '.house-gallery .swiper-button-next',
         prevEl: '.house-gallery .swiper-button-prev',
+    },
+});
+
+let plans = new Swiper('.plans__container', {
+    slidesPerView: 3,
+    spaceBetween: 60,
+    loop: true,
+    navigation: {
+        nextEl: '.plans__container .swiper-button-next',
+        prevEl: '.plans__container .swiper-button-prev',
     },
 });
 
@@ -278,6 +284,14 @@ $('.btn-more').click(function () {
     $(this).toggleClass('btn-more_active');
     
     $(this).parents('.box').find('.box_sec').slideToggle(300);
+  });
+
+  $('.close-btn').click(function () {
+    $('.plans__popup').fadeToggle(300);
+  });
+
+  $('.open-plan-popup').click(function () {
+    $('.plans__popup').fadeToggle(300);
   });
 
 // Example sliders
