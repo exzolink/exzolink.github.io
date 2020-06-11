@@ -5205,6 +5205,64 @@ background-repeat: no-repeat;
 margin-left: 0;
 }
 
+/* Results Table ============================ */
+.table-checkbox {
+	position: relative;
+	width: 100%;
+	max-width: 16px;
+	min-width: 16px;
+	height: 16px;
+	color: #060607;
+	border: 1px solid #979797;
+	border-radius: 2px;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	outline: 0;
+	cursor: pointer;
+}
+.label-checkbox {
+  font-family: 'FuturaPTBook', sans-serif;
+  font-size: 16px;
+  text-transform: none;
+  cursor: pointer;
+  color: #000;
+  margin-left: 10px;
+}
+.dflex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px
+}
+.ml-auto {
+  margin-left: auto;
+}
+.table-checkbox:before {
+	position: absolute;
+	content: "";
+	display: block;
+	top: 1.5px;
+	left: 5px;
+  width: 4.5px;
+  height: 10px;
+	border-style: solid;
+	border-color: #6CB7B2;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+	opacity: 0;
+	transition: all 0.1s ease;
+}
+
+.table-checkbox:checked {
+	color: #fff;
+	border-color: #6CB7B2;
+	background: #fff;
+}
+
+.table-checkbox:checked:before {
+	opacity: 1;
+}
 
 
 
