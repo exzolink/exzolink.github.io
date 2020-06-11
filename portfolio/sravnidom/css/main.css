@@ -4582,14 +4582,11 @@ input:-webkit-autofill {
   font-family: FuturaPTBook;
 }
 
-.btn-more i {
-  display: inline-block;
-  margin-left: 5px;
-  color: #ffffff;
-  font-size: 11px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  margin-top: 2px;
+.btn-more img {
+  margin-left: 8px;
+  width: 11px;
+  height: 7.5px;
+  margin-top: 3px;
 }
 
 .bgTable1-1-0 {
@@ -5111,7 +5108,14 @@ margin-top: 18px;
   border-radius: 10px;
   z-index: 100;
 }
-
+.graph-slider .ui-slider-handle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}
 .plans__popup_inner {
   padding: 28px 34px;
   width: 100%;
