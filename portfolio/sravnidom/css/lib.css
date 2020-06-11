@@ -95,7 +95,8 @@
   src: url(../fonts/BebasNeueBook/BebasNeueBook.eot);
   src: url(../fonts/BebasNeueBook/BebasNeueBook.eot?#iefix) format("embedded-opentype"), url(../fonts/BebasNeueBook/BebasNeueBook.woff) format("woff"), url(../fonts/BebasNeueBook/BebasNeueBook.ttf) format("truetype");
   font-style: normal;
-  font-weight: 400
+  font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
@@ -111,7 +112,8 @@
   src: url(../fonts/FuturaPTBook/FuturaPT-Book.eot);
   src: url(../fonts/FuturaPTBook/FuturaPT-Book.eot?#iefix) format("embedded-opentype"), url(../fonts/FuturaPTBook/FuturaPT-Book.woff) format("woff"), url(../fonts/FuturaPTBook/FuturaPT-Book.ttf) format("truetype");
   font-style: normal;
-  font-weight: 400
+  font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
@@ -119,7 +121,8 @@
   src: url(../fonts/FuturaPTMedium/FuturaPT-Medium.eot);
   src: url(../fonts/FuturaPTMedium/FuturaPT-Medium.eot?#iefix) format("embedded-opentype"), url(../fonts/FuturaPTMedium/FuturaPT-Medium.woff) format("woff"), url(../fonts/FuturaPTMedium/FuturaPT-Medium.ttf) format("truetype");
   font-style: normal;
-  font-weight: 400
+  font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
@@ -127,7 +130,8 @@
   src: url(../fonts/FuturaPTDemi/FuturaPT-Demi.eot);
   src: url(../fonts/FuturaPTDemi/FuturaPT-Demi.eot?#iefix) format("embedded-opentype"), url(../fonts/FuturaPTDemi/FuturaPT-Demi.woff) format("woff"), url(../fonts/FuturaPTDemi/FuturaPT-Demi.ttf) format("truetype");
   font-style: normal;
-  font-weight: 400
+  font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
@@ -135,7 +139,8 @@
   src: url(../fonts/HelveticaNeueCyrBold/HelveticaNeueCyr-Bold.eot);
   src: url(../fonts/HelveticaNeueCyrBold/HelveticaNeueCyr-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/HelveticaNeueCyrBold/HelveticaNeueCyr-Bold.woff) format("woff"), url(../fonts/HelveticaNeueCyrBold/HelveticaNeueCyr-Bold.ttf) format("truetype");
   font-style: normal;
-  font-weight: 400
+  font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
@@ -143,7 +148,8 @@
   src: url(../fonts/HelveticaNeueCyrLight/HelveticaNeueCyr-Light.eot);
   src: url(../fonts/HelveticaNeueCyrLight/HelveticaNeueCyr-Light.eot?#iefix) format("embedded-opentype"), url(../fonts/HelveticaNeueCyrLight/HelveticaNeueCyr-Light.woff) format("woff"), url(../fonts/HelveticaNeueCyrLight/HelveticaNeueCyr-Light.ttf) format("truetype");
   font-style: normal;
-  font-weight: 400
+  font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
@@ -151,7 +157,8 @@
   src: url(../fonts/HelveticaNeueCyrRoman/HelveticaNeueCyr-Roman.eot);
   src: url(../fonts/HelveticaNeueCyrRoman/HelveticaNeueCyr-Roman.eot?#iefix) format("embedded-opentype"), url(../fonts/HelveticaNeueCyrRoman/HelveticaNeueCyr-Roman.woff) format("woff"), url(../fonts/HelveticaNeueCyrRoman/HelveticaNeueCyr-Roman.ttf) format("truetype");
   font-style: normal;
-  font-weight: 400
+  font-weight: 400;
+  font-display: swap;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */

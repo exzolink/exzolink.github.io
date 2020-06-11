@@ -294,6 +294,14 @@ $('.btn-more').click(function () {
     $('.plans__popup').fadeToggle(300);
   });
 
+  $('#rowsCount').select2({
+    minimumResultsForSearch: -1,
+  });
+
+  $('.search-input-remove').click(function () {
+    $('.search-input').val('');
+  });
+
 // Example sliders
 $('.example-bad .slider').each(function () {
     let exampleSlider = new Swiper(this, {

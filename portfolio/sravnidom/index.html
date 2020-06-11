@@ -19,6 +19,7 @@
 		<link rel="stylesheet" href="libs/swiper-master/css/swiper.min.css">
 		<link rel="stylesheet" href="css/lib.css">
 		<link rel="stylesheet" href="css/jquery-ui.css">
+		<link rel="stylesheet" href="css/select2.min.css">
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/datatables.min.css">
 		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
@@ -1725,18 +1726,53 @@
 								<div class="house-2-page__caption caption caption-plan caption--icon1">
 									<span>Промежуточная таблица результатов</span>
 									<div class="dflex ml-auto">
-									<div class="dflex">
-										<input class="table-checkbox" type="checkbox" name="" id="clear" checked>
-										<label class="label-checkbox" for="clear">Чистая площадь</label>
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name="" id="clear" checked>
+											<label class="label-checkbox" for="clear">Чистая площадь</label>
+										</div>
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name="" id="balcony">
+											<label class="label-checkbox" for="balcony">С балконом/лоджией</label>
+										</div>
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name="" id="ratio">
+											<label class="label-checkbox" for="ratio">С коэффициентом</label>
+										</div>
 									</div>
-									<div class="dflex">
-										<input class="table-checkbox" type="checkbox" name="" id="balcony">
-										<label class="label-checkbox" for="balcony">С балконом/лоджией</label>
+								</div>
+								<div class="flex-blocks">
+									<div class="interim__block">
+										<div class="interim__period">
+											<span class="interim__text">Период</span>
+											<input id="firstDate" type="text" class="interim__input"
+												placeholder="Выбрать">
+											<span class="divider"> — </span>
+											<input id="lastDate" type="text" class="interim__input"
+												placeholder="Выбрать">
+											<img src="images/contacts.svg" alt="">
+										</div>
 									</div>
-									<div class="dflex">
-										<input class="table-checkbox" type="checkbox" name="" id="ratio">
-										<label class="label-checkbox" for="ratio">С коэффициентом</label>
+									<div class="interim__block">
+										<div class="interim__period">
+											<span class="interim__text">Отображать по</span>
+											<select name="rowsCount" id="rowsCount">
+												<option value="10">10</option>
+												<option value="25">25</option>
+												<option value="50">50</option>
+												<option value="100">100</option>
+											</select>
+											<span class="interim__text reverse">записей</span>
+										</div>
 									</div>
+									<div class="interim__block search-input__block">
+										<input class="search-input" type="text" placeholder="Поиск">
+										<img class="search-input-img" src="images/search.svg" alt="">
+										<img src="images/bold-close.svg" class="search-input-remove" alt="">
+									</div>
+								</div>
+								<div class="flex-blocks">
+									<div class="interim__info">
+										
 									</div>
 								</div>
 							</div>
@@ -2388,6 +2424,7 @@
 		<script src="libs/tooltipster.bundle.min.js"></script>
 		<script src="js/datatables.min.js"></script>
 		<script src="js/scripts.js"></script>
+		<script src="js/select2.min.js"></script>
 		<script src="libs/chartjs/Chart.min.js"></script>
 		<script src="libs/chartjs/chartjs-plugin-labels.js"></script>
 		<script src="libs/ion-rangeslider/ion.rangeSlider.min.js"></script>

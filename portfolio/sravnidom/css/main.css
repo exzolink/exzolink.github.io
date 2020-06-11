@@ -399,15 +399,19 @@ input:-webkit-autofill {
 .caption--icon20::before {
   background-image: url("../images/dynamic.svg");
 }
+
 .caption--icon21::before {
   background-image: url("../images/change.svg");
 }
+
 .caption--icon22::before {
   background-image: url("../images/cost.svg");
 }
+
 .caption--icon23::before {
   background-image: url("../images/plans.svg");
 }
+
 .caption--icon4::before {
   background-image: url("../images/top.svg");
 }
@@ -443,7 +447,8 @@ input:-webkit-autofill {
   width: 100%;
 }
 
-.result-plan .table th, .contacts__table th {
+.result-plan .table th,
+.contacts__table th {
   padding: 5px 9px;
   font-size: 16px;
   line-height: normal;
@@ -4304,6 +4309,7 @@ input:-webkit-autofill {
   box-shadow: 2px 3px 73px 22px rgba(117, 141, 139, 0.15);
   margin-top: 48px;
 }
+
 .box:nth-child(1) {
   margin-top: 48px !important;
 }
@@ -4453,9 +4459,11 @@ input:-webkit-autofill {
   padding-bottom: 15px;
   background: transparent;
 }
+
 .no-mb {
   margin-bottom: 0;
 }
+
 .graph-tooltip__title:before {
   position: absolute;
   content: "";
@@ -4878,6 +4886,7 @@ input:-webkit-autofill {
 .bgTable2-4-8 {
   background: #e88cb4 !important;
 }
+
 .bgTable2-4-11 {
   background: #e26fa1 !important;
 }
@@ -4990,50 +4999,63 @@ input:-webkit-autofill {
   margin-top: 48px;
   position: relative;
 }
+
 .caption-plan {
   justify-content: space-between;
 }
+
 .plans__inner {
   padding: 28px 34px;
   width: 100%;
 }
+
 .plans__item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .plans__item img {
   max-width: 220px;
   margin-bottom: 20px;
 }
-.plans__container .swiper-button-prev, .plans__container .swiper-button-next {
+
+.plans__container .swiper-button-prev,
+.plans__container .swiper-button-next {
   background-size: 27px 20px;
 }
+
 .plans__desc {
   max-width: 220px;
 }
+
 .plans__desc p {
   color: #000;
   margin-top: 12px;
   margin-bottom: 12px;
 }
+
 .open-plan-popup {
   cursor: pointer;
 }
+
 .plans__desc p:last-child {
-font-family: FuturaPTDemi;
-font-size: 16px;
-margin-top: 18px;
+  font-family: FuturaPTDemi;
+  font-size: 16px;
+  margin-top: 18px;
 }
+
 .graph-checkbox__wrap {
   display: flex;
   margin-left: auto;
 }
+
 .graph-checkbox__input {
   opacity: 0;
- display: none;
+  display: none;
   z-index: -1;
 }
+
 .graph-checkbox__label {
   display: block;
   width: 56px;
@@ -5045,6 +5067,7 @@ margin-top: 18px;
   position: relative;
   cursor: pointer;
 }
+
 .graph-checkbox__label::before {
   content: "";
   position: absolute;
@@ -5060,6 +5083,7 @@ margin-top: 18px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
 .graph-checkbox__label::after {
   content: "";
   position: absolute;
@@ -5073,10 +5097,12 @@ margin-top: 18px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.graph-checkbox__input:checked + .graph-checkbox__label::after {
+
+.graph-checkbox__input:checked+.graph-checkbox__label::after {
   background-color: #6de7ae;
   left: 35px;
 }
+
 .graph-checkbox__title {
   color: #2c3942;
   font-family: FuturaPTMedium;
@@ -5088,11 +5114,13 @@ margin-top: 18px;
   text-transform: none;
   white-space: nowrap;
 }
+
 .pad-right {
   padding-right: 10px;
   padding-left: 0;
 }
-.graph-checkbox__input:checked + .graph-checkbox__label::before {
+
+.graph-checkbox__input:checked+.graph-checkbox__label::before {
   left: 30px;
 }
 
@@ -5106,43 +5134,52 @@ margin-top: 18px;
   display: none;
   left: 0;
   border-radius: 10px;
-  z-index: 100;
+  z-index: 100000;
 }
+
 .graph-slider .ui-slider-handle {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .rotate-180 {
   transform: rotate(180deg);
 }
+
 .plans__popup_inner {
   padding: 28px 34px;
   width: 100%;
   height: 100%;
   position: relative;
 }
+
 .close-btn {
   position: absolute;
   right: 32px;
   transition: opacity .3s ease;
 }
+
 .close-btn:hover {
   cursor: pointer;
   opacity: .8;
 }
+
 .plans__floor {
   font-family: 'FuturaPTMedium';
   margin-top: 8px;
   padding: 0 6px;
 }
+
 .plans__popup_block {
   margin-top: 45px;
   display: flex;
 }
+
 .plans__block {
   display: flex;
 }
+
 .plans__popup_floor {
   display: flex;
   width: max-content;
@@ -5150,6 +5187,7 @@ margin-top: 18px;
   margin-top: 20px;
   flex-direction: column;
 }
+
 .plans-wrapper {
   margin-left: 45px;
   height: max-content;
@@ -5162,25 +5200,30 @@ margin-top: 18px;
   width: 100%;
   margin-top: 10px;
 }
+
 .plans__btn {
   margin-left: 20px;
   margin-top: 20px;
 }
+
 .plans__popup_info p {
   flex-basis: 50%;
   padding: 12px 20px;
   color: #000;
   font-family: 'FuturaPTDemi', sans-serif;
 }
+
 .plans__popup_desc {
   font-family: 'FuturaPTMedium', sans-serif;
   font-size: 16px;
   color: #000;
   padding: 12px 20px;
 }
+
 .plans__popup_img {
   max-width: 420px;
 }
+
 .plans__floor_active {
   background-color: #6CB7B2;
   border-radius: 100px;
@@ -5191,36 +5234,37 @@ margin-top: 18px;
 .plans__inner_title {
   margin-top: 45px;
   font-size: 22px;
-color: #000;
-letter-spacing: 0.02em;
-text-transform: uppercase;
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
-align-items: center;
-font-family: 'FuturaPTMedium', sans-serif;
-background-position: center center;
-background-size: contain;
-background-repeat: no-repeat;
-margin-left: 0;
+  color: #000;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  font-family: 'FuturaPTMedium', sans-serif;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 0;
 }
 
 /* Results Table ============================ */
 .table-checkbox {
-	position: relative;
-	width: 100%;
-	max-width: 16px;
-	min-width: 16px;
-	height: 16px;
-	color: #060607;
-	border: 1px solid #979797;
-	border-radius: 2px;
-	appearance: none;
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	outline: 0;
-	cursor: pointer;
+  position: relative;
+  width: 100%;
+  max-width: 16px;
+  min-width: 16px;
+  height: 16px;
+  color: #060607;
+  border: 1px solid #979797;
+  border-radius: 2px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  outline: 0;
+  cursor: pointer;
 }
+
 .label-checkbox {
   font-family: 'FuturaPTBook', sans-serif;
   font-size: 16px;
@@ -5229,42 +5273,134 @@ margin-left: 0;
   color: #000;
   margin-left: 10px;
 }
+
 .dflex {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 20px
 }
+
 .ml-auto {
   margin-left: auto;
 }
+
 .table-checkbox:before {
-	position: absolute;
-	content: "";
-	display: block;
-	top: 1.5px;
-	left: 5px;
+  position: absolute;
+  content: "";
+  display: block;
+  top: 1.5px;
+  left: 5px;
   width: 4.5px;
   height: 10px;
-	border-style: solid;
-	border-color: #6CB7B2;
-	border-width: 0 2px 2px 0;
-	transform: rotate(45deg);
-	opacity: 0;
-	transition: all 0.1s ease;
+  border-style: solid;
+  border-color: #6CB7B2;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: all 0.1s ease;
 }
 
 .table-checkbox:checked {
-	color: #fff;
-	border-color: #6CB7B2;
-	background: #fff;
+  color: #fff;
+  border-color: #6CB7B2;
+  background: #fff;
 }
 
 .table-checkbox:checked:before {
-	opacity: 1;
+  opacity: 1;
 }
 
 
+
+/* Промежуточные результаты ==================== */
+.interim__period {
+  width: max-content;
+  display: flex;
+  align-items: center;
+}
+
+.interim__period img {
+  margin-left: 12px;
+}
+
+.interim__text {
+  font-size: 16px;
+  color: #000;
+  margin-right: 20px;
+}
+
+.flex-blocks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reverse {
+  margin-right: 0;
+  margin-left: 16px;
+}
+
+.interim__block {
+  display: flex;
+  align-items: center;
+}
+
+.search-input__block {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input::placeholder {
+  opacity: 1;
+  font-size: 16px;
+  color: #000;
+  font-family: 'FuturaPTBook';
+}
+
+.interim__period input {
+  background: #F2F3F7;
+  border-radius: 30px;
+  border: none;
+  max-width: 92px;
+  text-align: center;
+  font-family: 'FuturaPTBook';
+  padding: 4px 6px;
+}
+
+.search-input {
+  border: 0;
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  color: #000;
+  width: 260px;
+  font-size: 16px;
+  padding-right: 24px;
+  padding-bottom: 9px;
+  padding-left: 30px;
+  font-family: 'FuturaPTBook';
+}
+
+.search-input-img {
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+
+.divider {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.search-input-remove {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  transition: opacity .3s ease;
+}
+.search-input-remove:hover {
+  cursor: pointer;
+  opacity: .8;
+}
 
 
 
@@ -5583,6 +5719,7 @@ margin-left: 0;
   border-bottom: 1px solid #0090F4;
   font-family: 'FuturaPTBook', sans-serif;
 }
+
 .contacts__table tr:nth-child(even) {
   background-color: #F6F7FB;
 }
@@ -5590,6 +5727,7 @@ margin-left: 0;
 .contacts__table tr:first-child {
   background-color: #fff !important;
 }
+
 /*---------------------
   Media query
 -----------------------*/
