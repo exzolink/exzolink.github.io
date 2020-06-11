@@ -10,6 +10,21 @@
   padding: 0;
 }
 
+::-webkit-scrollbar {
+  display:block;
+  width:.75rem;
+  background:#fff
+ }
+ ::-webkit-scrollbar-thumb {
+  background:#bfbfbf
+ }
+ ::-webkit-scrollbar-thumb:hover {
+  background:#afafaf
+ }
+ ::-webkit-scrollbar-thumb:active {
+  background:#999
+ }
+
 html {
   overflow-x: hidden;
 }
@@ -137,17 +152,17 @@ table {
 
 input::-webkit-input-placeholder {
   color: #929292;
-  font-family: HelveticaNeueCyrLight, sans-serif;
+  font-family: FuturaPTBook, sans-serif;
 }
 
 input::-moz-placeholder {
   color: #929292;
-  font-family: HelveticaNeueCyrLight, sans-serif;
+  font-family: FuturaPTBook, sans-serif;
 }
 
 input::-ms-input-placeholder {
   color: #929292;
-  font-family: HelveticaNeueCyrLight, sans-serif;
+  font-family: FuturaPTBook, sans-serif;
 }
 
 h1,
@@ -355,7 +370,7 @@ input:-webkit-autofill {
 }
 
 .caption {
-  font-size: 22px;
+  font-size: 20px;
   color: #000;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -5331,6 +5346,17 @@ table.dataTable thead .sorting_asc {
   background-image: url('../images/arrowUp.svg');
   background-size: 10px 7px;
 }
+.btn-show {
+  color: #fff;
+  transition: all .3s ease;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 45px;
+}
+.btn-show img {
+  margin-top: 3px;
+  margin-left: 7px;
+}
 table.dataTable thead .sorting_desc {
   background-image: url('../images/arrowDown.svg');
   background-size: 10px 6px;
@@ -5384,7 +5410,7 @@ table.dataTable thead .sorting {
   opacity: 1;
   font-size: 16px;
   color: #000;
-  font-family: 'FuturaPTBook';
+  font-family: 'FuturaPTBook' !important;
 }
 
 .interim__period input {
@@ -5408,6 +5434,49 @@ table.dataTable thead .sorting {
   padding-bottom: 9px;
   padding-left: 30px;
   font-family: 'FuturaPTBook';
+}
+.table-progress__show {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #2d3a4333;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin: 0 auto;
+}
+.table-popup {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  padding-left: 8px;
+  display: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  max-height: 300px;
+  padding-right: 8px;
+  width: max-content;
+  top: 27px;
+  border-radius: 6px;
+  border: 1px solid #2d3a4310;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 3px 3px 6px rgba(117, 141, 139, 0.3);
+  z-index: 1;
+}
+.table-popup__item {
+  margin-bottom: 6px;
+}
+.table-popup .label-checkbox {
+  margin-left: 5px;
+}
+
+.table-popup .dflex {
+  margin-left: 0px;
+  justify-content: flex-start;
 }
 
 .search-input-img {
@@ -5490,8 +5559,34 @@ table.dataTable tbody th, table.dataTable tbody td {
 #interim_wrapper {
   margin-top: 34px;
 }
+.dataTables_scrollBody::-webkit-scrollbar {
+  display:block;
+  width:.75rem;
+  background:#fff;
+  height: 8px;
+ }
+ .dataTables_scrollBody::-webkit-scrollbar-thumb {
+  background:#6CB7B2;
+  border-radius: 30px;
+ }
+ .dataTables_scrollBody::-webkit-scrollbar-thumb:hover {
+  background:#61A4A0
+ }
+ .dataTables_scrollBody::-webkit-scrollbar-thumb:active {
+  background:#579390
+ }
 
-
+ .dataTables_scrollBody {
+   scrollbar-color: #6CB7B2 #fff;
+ }
+ .table-progress__show img {
+  margin-left: 0;
+}
+#interim tr:first-child td {
+  padding-top: 2px;
+  position: relative;
+  padding-bottom: 6px;
+}
 /*----------------------------
   Примеры хорошо продаваемых планировок
 ------------------------------*/
@@ -5594,7 +5689,9 @@ table.dataTable tbody th, table.dataTable tbody td {
   transform: rotate(45deg);
   left: 46%;
 }
-
+.rotate {
+  transform: rotate(180deg);
+}
 .example-slider__next::before {
   -webkit-transform: rotate(-135deg);
   transform: rotate(-135deg);

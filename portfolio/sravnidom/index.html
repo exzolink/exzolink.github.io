@@ -20,9 +20,11 @@
 		<link rel="stylesheet" href="css/lib.css">
 		<link rel="stylesheet" href="css/jquery-ui.css">
 		<link rel="stylesheet" href="css/select2.min.css">
+		<link rel="stylesheet" href="css/datepicker.min.css">
 		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
 		<link rel="stylesheet" href="https://cdn.datatables.net/colreorder/1.5.2/css/colReorder.dataTables.min.css">
 		<link rel="stylesheet" href="css/main.css">
+
 		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 	</head>
 
@@ -1745,17 +1747,17 @@
 									<div class="interim__block">
 										<div class="interim__period">
 											<span class="interim__text">Период</span>
-											<input id="firstDate" type="text" class="interim__input"
+											<input id="firstDate" type="text" class="datepicker-here interim__input"
 												placeholder="Выбрать">
 											<span class="divider"> — </span>
-											<input id="lastDate" type="text" class="interim__input"
+											<input id="lastDate" type="text" class="datepicker-here interim__input"
 												placeholder="Выбрать">
 											<img src="images/contacts.svg" alt="">
 										</div>
 									</div>
 									<div class="interim__block">
 										<div class="interim__period">
-											<span class="interim__text">Отображать по</span>
+											<span class="interim__text">Отобразить</span>
 											<select name="rowsCount" id="rowsCount">
 												<option value="10">10</option>
 												<option value="25">25</option>
@@ -1767,7 +1769,8 @@
 										</div>
 									</div>
 									<div class="interim__block search-input__block">
-										<input id="interim_filter_search" class="search-input" type="text" placeholder="Поиск">
+										<input id="interim_filter_search" class="search-input" type="text"
+											placeholder="Поиск">
 										<img class="search-input-img" src="images/search.svg" alt="">
 										<img src="images/bold-close.svg" class="search-input-remove" alt="">
 									</div>
@@ -1801,245 +1804,866 @@
 								<a href="#" class="total__btn btn btn--green">Выгрузить промежуточную таблицу
 								</a>
 								<table id="interim" class="total__table table interim-table">
-									<thead><tr>
-										<th>№</th>
-										<th>Этаж</th>
-										<th>Секция</th>
-										<th>Планировка</th>
-										<th>Площадь,<br>
-											м2</th>
-										<th>Балкон</th>
-										<th>Лоджия</th>
-										<th>Стоимость,<br>
-											млн. руб.</th>
-										<th>Стоимость за м2,<br>руб</th>
-										<th>Стояк</th>
-										<th>Дата<br>
-											продажи</th>
-										<th>Период экспозиции<br>
-											объекта</th>
-										<th>Способ<br>
-											оплаты</th>
-										<th>Банк</th>
-									</tr></thead>
+									<thead>
+										<tr>
+											<th>№</th>
+											<th>Этаж</th>
+											<th>Секция</th>
+											<th>Планировка</th>
+											<th>Площадь, 
+												м<sup>2</sup></th>
+											<th>Балкон</th>
+											<th>Лоджия</th>
+											<th>Стоимость, 
+												млн. руб.</th>
+											<th>Стоимость за м<sup>2</sup>, руб</th>
+											<th>Стояк</th>
+											<th>Дата 
+												продажи</th>
+											<th>Период экспозиции 
+												объекта</th>
+											<th>Способ 
+												оплаты</th>
+											<th>Банк</th>
+										</tr>
+									</thead>
 									<tbody>
-										
 										<tr>
-											<td>1</td>
-											<td>25,27 м <sup><small>2</small></sup></td>
-											<td>0 ₽</td>
-											<td>15</td>
-											<td>7</td>
-											<td>8</td>
-											<td>46 %</td>
-											<td>42.86 %</td>
-											<td>57.14 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-										</tr>
+											<td>
+												<div class="table-progress__show">
+													<img src="images/arrowDown.svg" alt="">
+												</div>
+												<div class="table-popup flex-col">
+													<div class="table-popup__item">
+														<div class="dflex">
+															<input class="table-checkbox" type="checkbox" name=""
+																id="clear">
+															<label class="label-checkbox" for="clear">1 этаж</label>
+														</div>
+													</div>
+													<div class="table-popup__item">
+														<div class="dflex">
+															<input class="table-checkbox" type="checkbox" name=""
+																id="clear">
+															<label class="label-checkbox" for="clear">1</label>
+														</div>
+													</div>
+													<div class="table-popup__item">
+														<div class="dflex">
+															<input class="table-checkbox" type="checkbox" name=""
+																id="clear">
+															<label class="label-checkbox" for="clear">1</label>
+														</div>
+													</div>
+													<div class="table-popup__item">
+														<div class="dflex">
+															<input class="table-checkbox" type="checkbox" name=""
+																id="clear">
+															<label class="label-checkbox" for="clear">1</label>
+														</div>
+													</div>
+													<div class="table-popup__item">
+														<div class="dflex">
+															<input class="table-checkbox" type="checkbox" name=""
+																id="clear">
+															<label class="label-checkbox" for="clear">1</label>
+														</div>
 
-										<tr>
-											<td>1</td>
-											<td>25,27 м <sup><small>2</small></sup></td>
-											<td>0 ₽</td>
-											<td>15</td>
-											<td>7</td>
-											<td>8</td>
-											<td>46 %</td>
-											<td>42.86 %</td>
-											<td>57.14 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-										</tr>
-
-										<tr>
-											<td>1</td>
-											<td>25,27 м <sup><small>2</small></sup></td>
-											<td>0 ₽</td>
-											<td>15</td>
-											<td>7</td>
-											<td>8</td>
-											<td>46 %</td>
-											<td>42.86 %</td>
-											<td>57.14 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-										</tr>
-
-										<tr>
-											<td>1</td>
-											<td>25,27 м <sup><small>2</small></sup></td>
-											<td>0 ₽</td>
-											<td>15</td>
-											<td>7</td>
-											<td>8</td>
-											<td>46 %</td>
-											<td>42.86 %</td>
-											<td>57.14 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-										</tr>
-										<tr>
-											<td>1</td>
-											<td>25,27 м <sup><small>2</small></sup></td>
-											<td>0 ₽</td>
-											<td>15</td>
-											<td>7</td>
-											<td>8</td>
-											<td>46 %</td>
-											<td>42.86 %</td>
-											<td>57.14 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-										</tr>
-										<tr>
-											<td>1</td>
-											<td>25,27 м <sup><small>2</small></sup></td>
-											<td>0 ₽</td>
-											<td>15</td>
-											<td>7</td>
-											<td>8</td>
-											<td>46 %</td>
-											<td>42.86 %</td>
-											<td>57.14 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-										</tr>
-										<tr>
-											<td>1</td>
-											<td>25,27 м <sup><small>2</small></sup></td>
-											<td>0 ₽</td>
-											<td>15</td>
-											<td>7</td>
-											<td>8</td>
-											<td>46 %</td>
-											<td>42.86 %</td>
-											<td>57.14 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-										</tr>
-										<tr>
-											<td>1</td>
-											<td>35,36 м <sup><small>2</small></sup></td>
-											<td>2 050 000 ₽</td>
-											<td>14</td>
-											<td>5</td>
-											<td>9</td>
-											<td>35 %</td>
-											<td>40.00 %</td>
-											<td>60.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-										</tr>
-										<tr>
-											<td>1</td>
-											<td>37,24 м <sup><small>2</small></sup></td>
-											<td>2 130 000 ₽</td>
-											<td>45</td>
-											<td>14</td>
-											<td>31</td>
-											<td>31 %</td>
-											<td>7.14 %</td>
-											<td>92.86 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td>53,0 м <sup><small>2</small></sup></td>
-											<td>2 980 000 ₽</td>
-											<td>30</td>
-											<td>20</td>
-											<td>10</td>
-											<td>66 %</td>
-											<td>10.00 %</td>
-											<td>90.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>72,1 м <sup><small>2</small></sup></td>
-											<td>0 ₽</td>
-											<td>15</td>
-											<td>12</td>
-											<td>3</td>
-											<td>80 %</td>
-											<td>25.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>72,1 м <sup><small>2</small></sup></td>
-											<td>0 ₽</td>
-											<td>15</td>
-											<td>12</td>
-											<td>3</td>
-											<td>80 %</td>
-											<td>25.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-										</tr>
-										<tr>
-											<td>30</td>
-											<td>72,1 м <sup><small>2</small></sup></td>
-											<td>0 ₽</td>
-											<td>15</td>
-											<td>12</td>
-											<td>3</td>
-											<td>80 %</td>
-											<td>25.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-											<td>75.00 %</td>
-										</tr>
-									</tbody>
-								</table>
+													</div>
+												</div>
 							</div>
+							</td>
+							<td>
+								<div class="table-progress__show">
+									<img src="images/arrowDown.svg" alt="">
+								</div>
+								<div class="table-popup flex-col">
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1 этаж</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+
+									</div>
+								</div>
+			</div>
+							</td>
+							<td>
+								<div class="table-progress__show">
+									<img src="images/arrowDown.svg" alt="">
+								</div>
+								<div class="table-popup flex-col">
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1 этаж</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+
+									</div>
+								</div>
+			</div>
+							</td>
+							<td>
+								<div class="table-progress__show">
+									<img src="images/arrowDown.svg" alt="">
+								</div>
+								<div class="table-popup flex-col">
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1 этаж</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+
+									</div>
+								</div>
+			</div>
+							</td>
+							<td>
+								<div class="table-progress__show">
+									<img src="images/arrowDown.svg" alt="">
+								</div>
+								<div class="table-popup flex-col">
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1 этаж</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+
+									</div>
+								</div>
+			</div>
+							</td>
+							<td>
+								<div class="table-progress__show">
+									<img src="images/arrowDown.svg" alt="">
+								</div>
+								<div class="table-popup flex-col">
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1 этаж</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+
+									</div>
+								</div>
+			</div>
+							</td>
+							<td>
+								<div class="table-progress__show">
+									<img src="images/arrowDown.svg" alt="">
+								</div>
+								<div class="table-popup flex-col">
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1 этаж</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+
+									</div>
+								</div>
+			</div>
+							</td>
+							<td>
+								<div class="table-progress__show">
+									<img src="images/arrowDown.svg" alt="">
+								</div>
+								<div class="table-popup flex-col">
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1 этаж</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+
+									</div>
+								</div>
+			</div>
+							</td>
+							<td>
+								<div class="table-progress__show">
+									<img src="images/arrowDown.svg" alt="">
+								</div>
+								<div class="table-popup flex-col">
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1 этаж</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+
+									</div>
+								</div>
+			</div>
+							</td>
+							<td>
+								<div class="table-progress__show">
+									<img src="images/arrowDown.svg" alt="">
+								</div>
+								<div class="table-popup flex-col">
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1 этаж</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+
+									</div>
+								</div>
+			</div>
+							</td>
+							<td>
+								<div class="table-progress__show">
+									<img src="images/arrowDown.svg" alt="">
+								</div>
+								<div class="table-popup flex-col">
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1 этаж</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+
+									</div>
+								</div>
+			</div>
+							</td>
+							<td>
+								<div class="table-progress__show">
+									<img src="images/arrowDown.svg" alt="">
+								</div>
+								<div class="table-popup flex-col">
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1 этаж</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+
+									</div>
+								</div>
+			</div>
+							</td>
+							<td>
+								<div class="table-progress__show">
+									<img src="images/arrowDown.svg" alt="">
+								</div>
+								<div class="table-popup flex-col">
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1 этаж</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+
+									</div>
+								</div>
+			</div>
+							</td>
+							<td>
+								<div class="table-progress__show">
+									<img src="images/arrowDown.svg" alt="">
+								</div>
+								<div class="table-popup flex-col">
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1 этаж</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+									</div>
+									<div class="table-popup__item">
+										<div class="dflex">
+											<input class="table-checkbox" type="checkbox" name=""
+												id="clear">
+											<label class="label-checkbox" for="clear">1</label>
+										</div>
+
+									</div>
+								</div>
+			</div>
+							</td>
+							</tr>
+
+							<tr>
+								<td>1</td>
+								<td>25,27 м <sup><small>2</small></sup></td>
+								<td>0 ₽</td>
+								<td>15</td>
+								<td>7</td>
+								<td>8</td>
+								<td>46 %</td>
+								<td>42.86 %</td>
+								<td>57.14 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+							</tr>
+
+							<tr>
+								<td>1</td>
+								<td>25,27 м <sup><small>2</small></sup></td>
+								<td>0 ₽</td>
+								<td>15</td>
+								<td>7</td>
+								<td>8</td>
+								<td>46 %</td>
+								<td>42.86 %</td>
+								<td>57.14 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+							</tr>
+
+							<tr>
+								<td>1</td>
+								<td>25,27 м <sup><small>2</small></sup></td>
+								<td>0 ₽</td>
+								<td>15</td>
+								<td>7</td>
+								<td>8</td>
+								<td>46 %</td>
+								<td>42.86 %</td>
+								<td>57.14 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+							</tr>
+
+							<tr>
+								<td>1</td>
+								<td>25,27 м <sup><small>2</small></sup></td>
+								<td>0 ₽</td>
+								<td>15</td>
+								<td>7</td>
+								<td>8</td>
+								<td>46 %</td>
+								<td>42.86 %</td>
+								<td>57.14 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>25,27 м <sup><small>2</small></sup></td>
+								<td>0 ₽</td>
+								<td>15</td>
+								<td>7</td>
+								<td>8</td>
+								<td>46 %</td>
+								<td>42.86 %</td>
+								<td>57.14 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>25,27 м <sup><small>2</small></sup></td>
+								<td>0 ₽</td>
+								<td>15</td>
+								<td>7</td>
+								<td>8</td>
+								<td>46 %</td>
+								<td>42.86 %</td>
+								<td>57.14 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>25,27 м <sup><small>2</small></sup></td>
+								<td>0 ₽</td>
+								<td>15</td>
+								<td>7</td>
+								<td>8</td>
+								<td>46 %</td>
+								<td>42.86 %</td>
+								<td>57.14 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>35,36 м <sup><small>2</small></sup></td>
+								<td>2,050,000₽</td>
+								<td>14</td>
+								<td>5</td>
+								<td>9</td>
+								<td>35 %</td>
+								<td>40.00 %</td>
+								<td>60.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>37,24 м <sup><small>2</small></sup></td>
+								<td>2 130 000 ₽</td>
+								<td>45</td>
+								<td>14</td>
+								<td>31</td>
+								<td>31 %</td>
+								<td>7.14 %</td>
+								<td>92.86 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>53,0 м <sup><small>2</small></sup></td>
+								<td>2 980 000 ₽</td>
+								<td>30</td>
+								<td>20</td>
+								<td>10</td>
+								<td>66 %</td>
+								<td>10.00 %</td>
+								<td>90.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>72,1 м <sup><small>2</small></sup></td>
+								<td>0 ₽</td>
+								<td>15</td>
+								<td>12</td>
+								<td>3</td>
+								<td>80 %</td>
+								<td>25.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>72,1 м <sup><small>2</small></sup></td>
+								<td>0 ₽</td>
+								<td>15</td>
+								<td>12</td>
+								<td>3</td>
+								<td>80 %</td>
+								<td>25.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+							</tr>
+							<tr>
+								<td>30</td>
+								<td>72,1 м <sup><small>2</small></sup></td>
+								<td>0 ₽</td>
+								<td>15</td>
+								<td>12</td>
+								<td>3</td>
+								<td>80 %</td>
+								<td>25.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+								<td>75.00 %</td>
+							</tr>
+							</tbody>
+							</table>
+							<div class="total__btn btn btn--green btn-show">Раскрыть<img src="images/showW.svg" alt=""></div>
 						</div>
-						<!--div class="house-2-page__caption caption caption--icon6">Примеры хорошо продаваемых планировок</div>
+					</div>
+					<!--div class="house-2-page__caption caption caption--icon6">Примеры хорошо продаваемых планировок</div>
 				<div class="example-good tabs-wrapper">
 					<ul class="example-tabs region-tabs tabs--small">
 						<li class="region-tabs__item region-tabs--active" data-attr="1">Студия</li>
@@ -2301,7 +2925,7 @@
 						</div>
 					</div>
 				</div-->
-						<!--div class="house-2-page__caption caption caption--icon7">Примеры плохо продаваемых планировок</div>
+					<!--div class="house-2-page__caption caption caption--icon7">Примеры плохо продаваемых планировок</div>
 				<div class="example-bad tabs-wrapper">
 					<ul class="example-tabs region-tabs tabs--small">
 						<li class="region-tabs__item region-tabs--active" data-attr="ex1">Студия</li>
@@ -2610,7 +3234,7 @@
 					</div>
 
 				</div-->
-						<!--div class="house-2-page__caption caption caption--icon9">Документы</div>
+					<!--div class="house-2-page__caption caption caption--icon9">Документы</div>
 				<div class="card documents">
 					<div class="documents__wrapper">
 						<a href="#" class="documents__link">Проектная декларация</a>
@@ -2622,65 +3246,65 @@
 					</div>
 				</div-->
 
-						<div class="contacts card">
-							<div class="house-2-page__caption caption caption--icon10">Контактная информация</div>
-							<table class="contacts__table table">
-								<tbody>
-									<tr>
-										<th>Сайт застройщика</th>
-										<th>Телефон продаж</th>
-										<th>Страница VK</th>
-										<th>Страница Facebook</th>
-										<th>Страница Instagram</th>
-									</tr>
-									<tr>
-										<td> <a target="_blank" href="https://наш.дом.рф">https://наш.дом.рф</a>
-										</td>
-										<td>+7(341)265-10-11</td>
-										<td> — </td>
-										<td> — </td>
-										<td> — </td>
-									</tr>
-									<tr>
-										<td> <a target="_blank" href="https://наш.дом.рф">https://наш.дом.рф</a>
-										</td>
-										<td>+7(341)265-10-11</td>
-										<td> — </td>
-										<td> — </td>
-										<td> — </td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
+					<div class="contacts card">
+						<div class="house-2-page__caption caption caption--icon10">Контактная информация</div>
+						<table class="contacts__table table">
+							<tbody>
+								<tr>
+									<th>Сайт застройщика</th>
+									<th>Телефон продаж</th>
+									<th>Страница VK</th>
+									<th>Страница Facebook</th>
+									<th>Страница Instagram</th>
+								</tr>
+								<tr>
+									<td> <a target="_blank" href="https://наш.дом.рф">https://наш.дом.рф</a>
+									</td>
+									<td>+7(341)265-10-11</td>
+									<td> — </td>
+									<td> — </td>
+									<td> — </td>
+								</tr>
+								<tr>
+									<td> <a target="_blank" href="https://наш.дом.рф">https://наш.дом.рф</a>
+									</td>
+									<td>+7(341)265-10-11</td>
+									<td> — </td>
+									<td> — </td>
+									<td> — </td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
-				<!-- Alerts -->
-				<div class="alert-box alert--info" id="info">
-					<div class="alert__title">Информация для юзера.</div>
-					<div class="alert__close">&times;</div>
-				</div>
-				<div class="alert-box alert--error" id="error">
-					<div class="alert__title">Ошибка! Введите данные заново!</div>
-					<div class="alert__close">&times;</div>
-				</div>
-				<div class="alert-box alert--success" id="success">
-					<div class="alert__title">Координаты сохранены!</div>
-					<div class="alert__close">&times;</div>
-				</div>
-				<div class="alert-box alert--info alert--dark" id="info-dark">
-					<div class="alert__title">Информация для юзера.</div>
-					<div class="alert__close">&times;</div>
-				</div>
-				<div class="alert-box alert--error alert--dark" id="error-dark">
-					<div class="alert__title">Ошибка! Введите данные заново!</div>
-					<div class="alert__close">&times;</div>
-				</div>
-				<div class="alert-box alert--success alert--dark" id="success-dark">
-					<div class="alert__title">Координаты сохранены!</div>
-					<div class="alert__close">&times;</div>
-				</div>
-				<!-- Alerts end-->
 			</div>
+			<!-- Alerts -->
+			<div class="alert-box alert--info" id="info">
+				<div class="alert__title">Информация для юзера.</div>
+				<div class="alert__close">&times;</div>
+			</div>
+			<div class="alert-box alert--error" id="error">
+				<div class="alert__title">Ошибка! Введите данные заново!</div>
+				<div class="alert__close">&times;</div>
+			</div>
+			<div class="alert-box alert--success" id="success">
+				<div class="alert__title">Координаты сохранены!</div>
+				<div class="alert__close">&times;</div>
+			</div>
+			<div class="alert-box alert--info alert--dark" id="info-dark">
+				<div class="alert__title">Информация для юзера.</div>
+				<div class="alert__close">&times;</div>
+			</div>
+			<div class="alert-box alert--error alert--dark" id="error-dark">
+				<div class="alert__title">Ошибка! Введите данные заново!</div>
+				<div class="alert__close">&times;</div>
+			</div>
+			<div class="alert-box alert--success alert--dark" id="success-dark">
+				<div class="alert__title">Координаты сохранены!</div>
+				<div class="alert__close">&times;</div>
+			</div>
+			<!-- Alerts end-->
+		</div>
 		</div>
 		<script src="libs/jquery-3.4.1.min.js"></script>
 		<script src="libs/tooltipster.bundle.min.js"></script>
@@ -2693,6 +3317,7 @@
 		<script src="libs/ion-rangeslider/ion.rangeSlider.min.js"></script>
 		<script src="libs/swiper-master/js/swiper.min.js"></script>
 		<script src="js/jquery-ui.js"></script>
+		<script src="js/datepicker.min.js"></script>
 		<script src="js/about.js"></script>
 		<script src="js/graph.js"></script>
 	</body>

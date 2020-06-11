@@ -2,8 +2,7 @@ $(document).ready(function () {
 
 
 var table1 = $('#interim').DataTable({
-        scrollX:    '500000px',
-        colReorder: true
+    scrollX: 50000,
     });
 
     $('#interim_filter_search').on( 'keyup', function () {
@@ -15,8 +14,37 @@ var table1 = $('#interim').DataTable({
         table1.page.len( this.value ).draw();
         
     });
+
+    $('.btn-show').click(function () {
+        if ($(this).hasClass('shows')) {
+            $(this).html('Раскрыть<img src="images/showW.svg" alt="">');
+            table1.page.len( 10 ).draw();
+            $(this).removeClass('shows');
+        }
+        else {
+            $(this).addClass('shows');
+            $(this).html('Скрыть<img class="rotate" src="images/showW.svg" alt="">');
+            table1.page.len( -1 ).draw();
+        }
+    });
+
+    
+$('.table-progress__show').click(function () {
+    if ($(this).hasClass('opened')) {
+        $(this).parent().find('.table-popup').slideUp(300);
+        $('.table-progress__show').removeClass('opened');
+    }
+    else {
+        $('.table-popup').slideUp(300);
+        $('.table-progress__show').removeClass('opened');
+        $(this).parent().find('.table-popup').slideDown(300);
+        $(this).addClass('opened');
+    }
+});
     
 })
+
+
 let houseGallery = new Swiper('.house-gallery .slider', {
     slidesPerView: 1,
     loop: false,
@@ -35,6 +63,7 @@ let plans = new Swiper('.plans__container', {
         prevEl: '.plans__container .swiper-button-prev',
     },
 });
+
 
 // Tooltip
 $('.type-plan__round, .result-plan__message').tooltipster({
