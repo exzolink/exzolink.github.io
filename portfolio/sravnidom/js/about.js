@@ -5,11 +5,10 @@ var table1 = $('#interim').DataTable({
     scrollX: 50000,
     });
 
-    $('#interim_filter_search').on( 'keyup', function () {
+    $('#interim_filter_search').on('keyup', function () {
         table1.search( this.value ).draw();
     } );
 
-   
     $('#rowsCount').on('change', function () {
         table1.page.len( this.value ).draw();
         
@@ -358,6 +357,7 @@ $('.btn-more').click(function () {
 
   $('.search-input-remove').click(function () {
     $('.search-input').val('');
+    $('.search-input').trigger('keyup');
   });
 
 // Example sliders
