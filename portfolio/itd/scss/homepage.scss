@@ -73,8 +73,9 @@
         margin-bottom: 20px;
         margin-top: 20px;
         letter-spacing: 6px;
+        max-width: 680px;
 
-        &:before {
+       /* &:before {
             content: "";
             background: $desc-color;
             height: 3px;
@@ -82,7 +83,7 @@
             width: 60px;
             margin-top: 18px;
             margin-right: 12px;
-        }
+        } */
     }
 
     &__btn {
