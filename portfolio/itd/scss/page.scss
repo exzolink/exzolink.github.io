@@ -10,6 +10,11 @@
     &__pd {
         padding-left: 25px;
     }
+    &__nopd {
+        margin-top: 12px;
+        font-weight: 500;
+        color: $title-color;
+    }
 
     &__divide {
         display: flex;
