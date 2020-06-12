@@ -477,7 +477,8 @@ input:-webkit-autofill {
 
 
 .result-plan .table td {
-  padding: 14px 9px;
+  padding: 11px 9px;
+  padding-bottom: 12px;
   font-size: 14px;
   color: #161616;
 }
@@ -3757,7 +3758,8 @@ input:-webkit-autofill {
 }
 
 .home__block_item {
-  padding: 9px 20px;
+  padding: 11px 20px;
+  padding-bottom: 12px;
   display: flex;
   align-items: center;
   transition: all .3s ease;
@@ -4200,7 +4202,8 @@ input:-webkit-autofill {
 
 .total__table td {
   font-family: 'FuturaPTBook', sans-serif;
-  padding: 14px 15px;
+  padding: 11px 15px;
+  padding-bottom: 12px;
   font-size: 14px;
   color: #161616;
 }
@@ -4272,6 +4275,8 @@ input:-webkit-autofill {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  width: 100%;
+  position: relative;
   align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -4281,17 +4286,38 @@ input:-webkit-autofill {
 .heat-map__item+.heat-map__item {
   margin-top: 12px;
 }
-
+.results-title {
+  margin-bottom: 58px;
+}
+.heat-map__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: .5;
+  width: 100%;
+  height: 100%;
+}
 .heat-map__list {
   padding: 0 35px;
-  padding-top: 50px;
-  margin: 0 30px;
+  padding-top: 10px;
+  margin: 0 65px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
   text-align: center;
-  background-image: url('../images/building.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  border-bottom: 2px solid #D1D1D1;
+  border: 2px solid #D1D1D1;
+}
+.heat-map__list::after {
+  content: '';
+  position: absolute;
+  top: -18px;
+  width: 80%;
+  border: 2px solid #D1D1D1;
+  height: 18px;
 }
 
 .heat-map__item-line {
@@ -4301,12 +4327,13 @@ input:-webkit-autofill {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 45px;
+  height: 30px;
   z-index: 100;
 }
 
 .heat-map__floor {
   color: #000;
+  z-index: 999;
   font-family: 'FuturaPTBook', sans-serif;
   font-size: 16px;
 }
@@ -5236,7 +5263,7 @@ input:-webkit-autofill {
   background-image: url('../images/windows.png');
   width: 100%;
 height: 100%;
-background-size: 240px 36px;
+background-size: 185px 25px;
 background-position: center;
 background-repeat: no-repeat;
 z-index: -1;
@@ -5912,7 +5939,8 @@ table.dataTable tbody th, table.dataTable tbody td {
 }
 
 .contacts__table td {
-  padding: 14px 9px;
+  padding: 11px 9px;
+  padding-bottom: 12px;
   font-size: 16px;
   color: #161616;
 }
