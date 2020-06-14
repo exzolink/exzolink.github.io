@@ -66,7 +66,7 @@ $('.graph-slider_1').slider({
 
 // GRAPH #1 
 
-var monthsLabels1 = ['Янв.18', 'Фев.18', 'Март.18', 'Апр.18', 'Май.18', 'Июнь.18', 'Июль.18', 'Авг.18', 'Сент.18', 'Окт.18', 'Нояб.18', 'Дек.18', 'Янв.19', 'Фев.19', 'Март 19', 'Апр.19', 'Май 19', 'Июнь 19', 'Июль 19', 'Авг.19', 'Сент.19', 'Окт.19', 'Нояб.19', 'Дек.19'];
+var monthsLabels1 = ['1 мес.', '2 мес.', '3 мес.', '4 мес.', '5 мес.', '6 мес.', '7 мес.', '8 мес.', '9 мес.', '10 мес.', '11 мес.', '12 мес.', '13 мес.', '14 мес.', '15 мес.', '16 мес.', '17 мес.', '18 мес.', '19 мес.', '20 мес.', '21 мес.', '22 мес.', '23 мес.', '24 мес.'];
 
 var lineFs = [0, 0.4, 2, 6, 3, 6, 5, 8, 4, 3, 4, 1, 0, 0.4, 2, 6, 3, 6, 5, 8, 4, 3, 4, 1];
 var lineFs_1 = lineFs.slice();
@@ -75,7 +75,7 @@ var lineFs_1 = lineFs.slice();
 var config_1 = {
   type: 'line',
   data: {
-    labels: ['Янв.18', 'Фев.18', 'Март.18', 'Апр.18', 'Май.18', 'Июнь.18', 'Июль.18', 'Авг.18', 'Сент.18', 'Окт.18', 'Нояб.18', 'Дек.18'],
+    labels: ['1 мес.', '2 мес.', '3 мес.', '4 мес.', '5 мес.', '6 мес.', '7 мес.', '8 мес.', '9 мес.', '10 мес.', '11 мес.', '12 мес.'],
     datasets: [{
       label: 'ЖК Скандинавия / дом 1',
       fill: true,
@@ -172,16 +172,36 @@ var config_1 = {
       xAxes: [{
         ticks: {
           suggestedMin: 5,
-          suggestedMax: 6
+          suggestedMax: 6,
+          fontColor: '#808080',
+          fontFamily: 'FuturaPTBook',
+          fontSize: 12,
+          padding: 5,
+          fontStyle: 400
         }
       }],
       yAxes: [{
         display: true,
+        ticks: {
+          fontColor: '#808080',
+          fontFamily: 'FuturaPTBook',
+          fontSize: 12,
+          padding: 5,
+          fontStyle: 400
+      },
         scaleLabel: {
           display: false
         }
       }]
     },
+    layout: {
+      padding: {
+          left: 23,
+          right: 0,
+          top: 0,
+          bottom: 0
+      }
+  },
     animation: {
       duration: 1500,
       easing: 'easeOutQuart'
@@ -399,16 +419,37 @@ var config_2 = {
       xAxes: [{
         ticks: {
           suggestedMin: 5,
-          suggestedMax: 6
+          suggestedMax: 6,
+          fontColor: '#808080',
+          fontFamily: 'FuturaPTBook',
+          fontSize: 12,
+          padding: 5,
+          fontStyle: 400
+          
         }
       }],
       yAxes: [{
         display: true,
         scaleLabel: {
           display: false
-        }
+        },
+        ticks: {
+          fontColor: '#808080',
+          fontFamily: 'FuturaPTBook',
+          fontSize: 12,
+          padding: 5,
+          fontStyle: 400
+      },
       }]
     },
+    layout: {
+      padding: {
+          left: 23,
+          right: 0,
+          top: 0,
+          bottom: 0
+      }
+  },
     animation: {
       duration: 1500,
       easing: 'easeOutQuart'
@@ -624,16 +665,36 @@ var config_3 = {
       xAxes: [{
         ticks: {
           suggestedMin: 5,
-          suggestedMax: 6
+          suggestedMax: 6,
+          fontColor: '#808080',
+          fontFamily: 'FuturaPTBook',
+          fontSize: 12,
+          padding: 5,
+          fontStyle: 400
         }
       }],
       yAxes: [{
         display: true,
         scaleLabel: {
           display: false
-        }
+        },
+        ticks: {
+          fontColor: '#808080',
+          fontFamily: 'FuturaPTBook',
+          fontSize: 12,
+          padding: 5,
+          fontStyle: 400
+      },
       }]
     },
+    layout: {
+      padding: {
+          left: 23,
+          right: 0,
+          top: 0,
+          bottom: 0
+      }
+  },
     animation: {
       duration: 1500,
       easing: 'easeOutQuart'

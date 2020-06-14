@@ -192,6 +192,7 @@ Chart.pluginService.register({
 $('.infra__show-more').click(function () {
     $(this).closest('.infra__block_wrapper').toggleClass('no-bg');
     $(this).parent().parent().next('.infra__hidden_block').slideToggle(300);
+    $(this).toggleClass('rotate-active');
 });
 
 $('.infra__button').click(function () {
@@ -339,7 +340,6 @@ $exampleGoodtabsItem.on('click', (event) => {
 });
 $('.btn-more').click(function () {
     $(this).toggleClass('btn-more_active');
-    
     $(this).parents('.box').find('.box_sec').slideToggle(300);
   });
 

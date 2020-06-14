@@ -11,19 +11,22 @@
 }
 
 ::-webkit-scrollbar {
-  display:block;
-  width:.75rem;
-  background:#fff
- }
- ::-webkit-scrollbar-thumb {
-  background:#bfbfbf
- }
- ::-webkit-scrollbar-thumb:hover {
-  background:#afafaf
- }
- ::-webkit-scrollbar-thumb:active {
-  background:#999
- }
+  display: block;
+  width: .75rem;
+  background: #fff
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bfbfbf
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #afafaf
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #999
+}
 
 html {
   overflow-x: hidden;
@@ -429,6 +432,8 @@ input:-webkit-autofill {
 
 .caption--icon4::before {
   background-image: url("../images/top.svg");
+  height: 15px;
+  width: 22px;
 }
 
 .caption--icon5::before {
@@ -480,7 +485,7 @@ input:-webkit-autofill {
   padding: 11px 9px;
   padding-bottom: 12px;
   font-size: 14px;
-  color: #161616;
+  color: #000;
 }
 
 /*-----------------------
@@ -1562,7 +1567,6 @@ input:-webkit-autofill {
   display: inline-block;
   text-align: center;
   border-radius: 30px;
-  text-transform: uppercase;
   font-size: 14px;
   font-family: FuturaPTBook, sans-serif;
   color: #fff;
@@ -3756,10 +3760,9 @@ input:-webkit-autofill {
 .home__block:first-child {
   border-right: 1px solid #E8E8E8;
 }
-
 .home__block_item {
-  padding: 11px 20px;
-  padding-bottom: 12px;
+  padding: 8px 40px;
+  padding-bottom: 9.4px;
   display: flex;
   align-items: center;
   transition: all .3s ease;
@@ -3784,6 +3787,7 @@ input:-webkit-autofill {
   font-weight: 400;
   margin: 0;
   font-size: 14px;
+  line-height: 1.4;
   margin-left: 5px;
 }
 
@@ -3800,6 +3804,7 @@ input:-webkit-autofill {
 -------------------------*/
 .infra__block_wrapper {
   padding: 9px 20px;
+  padding-left: 10px;
   display: flex;
   justify-content: center;
   background-color: #fff;
@@ -3843,7 +3848,8 @@ input:-webkit-autofill {
 }
 
 .infra__hidden_block {
-  margin-bottom: 32px;
+  margin-bottom: 20px;
+  margin-top: 6px;
   display: none;
 }
 
@@ -3856,7 +3862,8 @@ input:-webkit-autofill {
   border-radius: 30px;
   background-color: #fff;
   letter-spacing: 0.02em;
-  font-size: 16px;
+  font-size: 14px;
+  font-family: 'FuturaPTMedium', sans-serif;
   color: #000;
   margin-left: 24px;
   padding-top: 0;
@@ -3875,8 +3882,14 @@ input:-webkit-autofill {
 
 .infra__show-more img {
   margin-left: 6px;
+  transition: all .3s ease;
   transform: rotate(180deg);
   margin-right: 0 !important;
+}
+
+.rotate-active img {
+  transform: rotate(0deg);
+  margin-bottom: -6px;
 }
 
 .infra-bg {
@@ -3884,7 +3897,7 @@ input:-webkit-autofill {
 }
 
 .infra__buttons {
-  margin-left: 20px;
+  margin-left: 10px;
   margin-bottom: 10px;
   display: flex;
 }
@@ -4205,7 +4218,7 @@ input:-webkit-autofill {
   padding: 11px 15px;
   padding-bottom: 12px;
   font-size: 14px;
-  color: #161616;
+  color: #000;
 }
 
 .total__table tr td:first-child {
@@ -4220,11 +4233,17 @@ input:-webkit-autofill {
   padding: 8px 16px;
   padding-top: 6px;
   margin-top: 34px;
+  letter-spacing: 0.02em;
   height: auto;
+  font-family: 'FuturaPTBook';
+  font-size: 14px;
   border-radius: 30px;
   background-color: #6CB7B2;
 }
-
+.finish-table th, .finish-table td {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 /*----------------------------
   Востребованность этажей
 ------------------------------*/
@@ -4286,9 +4305,11 @@ input:-webkit-autofill {
 .heat-map__item+.heat-map__item {
   margin-top: 12px;
 }
+
 .results-title {
-  margin-bottom: 57px;
+  margin-bottom: 55px;
 }
+
 .heat-map__bg {
   position: absolute;
   top: 0;
@@ -4298,6 +4319,7 @@ input:-webkit-autofill {
   width: 100%;
   height: 100%;
 }
+
 .heat-map__list {
   padding: 0 35px;
   padding-top: 10px;
@@ -4309,14 +4331,15 @@ input:-webkit-autofill {
   justify-content: center;
   margin-top: 18px;
   text-align: center;
-  border: 2px solid #D1D1D1;
+  border: 1px solid #D1D1D1;
 }
+
 .heat-map__list::after {
   content: '';
   position: absolute;
   top: -18px;
   width: 80%;
-  border: 2px solid #D1D1D1;
+  border: 1px solid #D1D1D1;
   height: 18px;
 }
 
@@ -4339,10 +4362,10 @@ input:-webkit-autofill {
 }
 
 .enter-icon {
-  width: 102px;
+  width: 77px;
   margin-top: 30px;
-  margin-bottom: -4px;
-  height: 86px;
+  margin-bottom: -1px;
+  height: 65px;
 }
 
 /* BOX ============================================ */
@@ -4406,10 +4429,18 @@ input:-webkit-autofill {
 
 .table-text__sec {
   opacity: 0.5;
-  color: #2c3a43;
-  font-family: FuturaPTMedium !important;
+  color: #000;
+  font-family: FuturaPTBook !important;
   font-size: 14px;
   font-weight: 400;
+}
+.graph-table__desc {
+  font-size: 14px;
+  font-family: 'FuturaPTBook';
+  color: #000;
+  opacity: .5;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
 .table-text__th {
@@ -4443,7 +4474,7 @@ input:-webkit-autofill {
 }
 
 .graph-table__wrap {
-  padding-top: 52px;
+  padding-top: 48px;
   padding-bottom: 44px;
 }
 
@@ -4638,8 +4669,30 @@ input:-webkit-autofill {
   width: 11px;
   height: 7.5px;
   margin-top: 3px;
+  transition: all .3s ease;
 }
-
+.chars-wrapper .home__block_item {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.btn-more_active img {
+  transform: rotate(180deg);
+  margin-top: 1px;
+}
+.graph-text__left {
+  display: block;
+  position: absolute;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  bottom: 100px;
+  font-size: 12px;
+  color: #808080;
+  left: -60px;
+}
+.more-pos {
+  left: -78px;
+  bottom: 117px;
+}
 .bgTable1-1-0 {
   background: #e2fbd5 !important;
 }
@@ -5070,6 +5123,7 @@ input:-webkit-autofill {
 
 .plans__desc {
   max-width: 220px;
+  margin-right: 23px;
 }
 
 .plans__desc p {
@@ -5172,7 +5226,7 @@ input:-webkit-autofill {
   position: absolute;
   background-color: #fff;
   width: 100%;
-  height: 700px;
+  height: 750px;
   top: 0;
   display: none;
   box-shadow: 0 2px 36px 2px rgba(0, 0, 0, 0.1);
@@ -5192,7 +5246,7 @@ input:-webkit-autofill {
 }
 
 .plans__popup_inner {
-  padding: 28px 34px;
+  padding: 67px 34px;
   width: 100%;
   height: 100%;
   position: relative;
@@ -5200,7 +5254,7 @@ input:-webkit-autofill {
 
 .close-btn {
   position: absolute;
-  right: 32px;
+  right: 64px;
   transition: opacity .3s ease;
 }
 
@@ -5239,6 +5293,10 @@ input:-webkit-autofill {
   width: 100%;
 }
 
+.plans-table th:first-child{
+  padding-right: 40px;
+}
+
 .plans__popup_info {
   display: flex;
   width: 100%;
@@ -5257,23 +5315,25 @@ input:-webkit-autofill {
   color: #000;
   font-family: 'FuturaPTDemi', sans-serif;
 }
+
 .heat-map__item-line:before {
   content: '';
   position: absolute;
   background-image: url('../images/windows.png');
   width: 100%;
-height: 100%;
-background-size: 185px 25px;
-background-position: center;
-background-repeat: no-repeat;
-z-index: -1;
-opacity: 0.5;
+  height: 100%;
+  background-size: 185px 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0.5;
 }
 
 .plans__floor {
   cursor: pointer;
   transition: all .3s ease;
 }
+
 .plans__popup_desc {
   font-family: 'FuturaPTMedium', sans-serif;
   font-size: 14px;
@@ -5284,9 +5344,11 @@ opacity: 0.5;
 .plans__popup_img {
   max-width: 420px;
 }
+
 .dataTables_wrapper.no-footer .dataTables_scrollBody {
   border-bottom: 0;
 }
+
 .plans__floor_active {
   background-color: #6CB7B2;
   border-radius: 100px;
@@ -5294,10 +5356,12 @@ opacity: 0.5;
   cursor: default;
   color: #F2F3F7;
 }
+
 .plans__floor_inactive {
   opacity: .5;
   cursor: default;
 }
+
 .plans__inner_title {
   margin-top: 45px;
   font-size: 22px;
@@ -5386,15 +5450,18 @@ opacity: 0.5;
   display: flex;
   align-items: center;
 }
+
 #interim tr td:first-child {
   text-align: center;
 }
+
 table.dataTable thead .sorting_asc {
   background-position-y: 20%;
   background-position-x: calc(100% - 5px);
   background-image: url('../images/arrowUp.svg');
   background-size: 10px 7px;
 }
+
 .btn-show {
   color: #fff;
   transition: all .3s ease;
@@ -5402,28 +5469,34 @@ table.dataTable thead .sorting_asc {
   margin: 0 auto;
   margin-top: 45px;
 }
+
 .btn-show img {
   margin-top: 3px;
   margin-left: 7px;
 }
+
 table.dataTable thead .sorting_desc {
   background-image: url('../images/arrowDown.svg');
   background-size: 10px 6px;
   background-position-y: 20%;
   background-position-x: calc(100% - 5px);
 }
+
 table.dataTable thead .sorting {
   background-image: url('../images/arrowDown.svg');
   background-size: 10px 6px;
   background-position-y: 20%;
   background-position-x: calc(100% - 5px);
 }
+
 #interim_paginate {
   display: none;
 }
+
 #interim_length {
   display: none;
 }
+
 .interim__period img {
   margin-left: 12px;
 }
@@ -5484,6 +5557,7 @@ table.dataTable thead .sorting {
   padding-left: 30px;
   font-family: 'FuturaPTBook';
 }
+
 .table-progress__show {
   width: 20px;
   height: 20px;
@@ -5495,6 +5569,7 @@ table.dataTable thead .sorting {
   transition: 0.3s;
   margin: 0 auto;
 }
+
 .table-popup {
   overflow: hidden;
   display: -webkit-box;
@@ -5516,9 +5591,11 @@ table.dataTable thead .sorting {
   box-shadow: 3px 3px 6px rgba(117, 141, 139, 0.3);
   z-index: 1;
 }
+
 .table-popup__item {
   margin-bottom: 6px;
 }
+
 .table-popup .label-checkbox {
   margin-left: 5px;
 }
@@ -5538,104 +5615,131 @@ table.dataTable thead .sorting {
   margin-left: 4px;
   margin-right: 4px;
 }
+
 .search-input-remove {
   position: absolute;
   right: 0;
   top: 10px;
   transition: opacity .3s ease;
 }
+
 .search-input-remove:hover {
   cursor: pointer;
   opacity: .8;
 }
+
 .interim__info {
   display: flex;
 }
+
 .interim__info_title {
   margin-right: 10px;
   font-family: 'FuturaPTDemi', sans-serif;
   font-size: 16px;
   color: #000;
 }
+
 .interim__info_desc {
   color: #000;
 }
+
 .table-progress-interim {
   width: 75px;
   margin-right: 0;
 }
+
 .interim-table img {
   margin-left: 6px;
 }
+
 .interim-table th:nth-child(6)::before {
   display: none;
 }
-.interim-table th, .interim-table td{
+
+.interim-table th,
+.interim-table td {
   border-right: 1px solid #E8E8E8;
 
 }
-table.dataTable thead th, table.dataTable thead td {
-font-size: 14px;
-line-height: 1;
-font-weight: 400;
-text-align: left;
-color: #808080;
-border-bottom: 0;
-padding: 12px 10px;
-padding-right: 24px;
-padding-top: 0;
-padding-bottom: 4px;
-vertical-align: baseline;
-font-family: 'FuturaPTMedium', sans-serif;
+.btn-download {
+  margin-top: 24px;
 }
-table.dataTable tbody th, table.dataTable tbody td {
+table.dataTable thead th,
+table.dataTable thead td {
   font-size: 14px;
-  color: #161616;
+  line-height: 1;
+  font-weight: 400;
+  text-align: left;
+  color: #808080;
+  border-bottom: 0;
+  padding: 12px 10px;
+  padding-right: 24px;
+  padding-top: 0;
+  padding-bottom: 4px;
+  vertical-align: baseline;
+  font-family: 'FuturaPTMedium', sans-serif;
+}
+
+table.dataTable tbody th,
+table.dataTable tbody td {
+  font-size: 14px;
+  color: #000;
   text-align: center;
   font-family: 'FuturaPTBook';
   padding: 12px 10px;
 
 }
+
 .dataTables_info {
   display: none;
 }
+
 .interim-info {
   margin-top: 34px;
 }
+
 .dataTables_filter {
   display: none;
 }
+
 #interim_wrapper {
   margin-top: 34px;
 }
-.dataTables_scrollBody::-webkit-scrollbar {
-  display:block;
-  width:.75rem;
-  background:#fff;
-  height: 8px;
- }
- .dataTables_scrollBody::-webkit-scrollbar-thumb {
-  background:#6CB7B2;
-  border-radius: 30px;
- }
- .dataTables_scrollBody::-webkit-scrollbar-thumb:hover {
-  background:#61A4A0
- }
- .dataTables_scrollBody::-webkit-scrollbar-thumb:active {
-  background:#579390
- }
 
- .dataTables_scrollBody {
-   scrollbar-color: #6CB7B2 #fff;
- }
- .table-progress__show img {
+.dataTables_scrollBody::-webkit-scrollbar {
+  display: block;
+  width: .75rem;
+  background: #fff;
+  height: 8px;
+}
+
+.dataTables_scrollBody::-webkit-scrollbar-thumb {
+  background: #6CB7B2;
+  border-radius: 30px;
+}
+
+.dataTables_scrollBody::-webkit-scrollbar-thumb:hover {
+  background: #61A4A0
+}
+
+.dataTables_scrollBody::-webkit-scrollbar-thumb:active {
+  background: #579390
+}
+
+.dataTables_scrollBody {
+  scrollbar-color: #6CB7B2 #fff;
+}
+
+.table-progress__show img {
   margin-left: 0;
 }
+
 #interim tr:first-child td {
   padding-top: 2px;
   position: relative;
   padding-bottom: 6px;
 }
+
 /*----------------------------
   Примеры хорошо продаваемых планировок
 ------------------------------*/
@@ -5738,9 +5842,11 @@ table.dataTable tbody th, table.dataTable tbody td {
   transform: rotate(45deg);
   left: 46%;
 }
+
 .rotate {
   transform: rotate(180deg);
 }
+
 .example-slider__next::before {
   -webkit-transform: rotate(-135deg);
   transform: rotate(-135deg);
@@ -5938,15 +6044,18 @@ table.dataTable tbody th, table.dataTable tbody td {
   padding-bottom: 15px;
 }
 
+.contacts th:first-child, .contacts td:first-child {
+  padding-left: 22px;
+}
+
 .contacts__table td {
   padding: 11px 9px;
   padding-bottom: 12px;
-  font-size: 16px;
-  color: #161616;
+  font-size: 14px;
+  color: #000;
 }
-
 .contacts__table td a {
-  font-size: 16px;
+  font-size: 14px;
   color: #0090F4;
   border-bottom: 1px solid #0090F4;
   font-family: 'FuturaPTBook', sans-serif;
