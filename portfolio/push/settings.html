@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
     <head>
         <meta charset="UTF-8">
@@ -15,18 +15,18 @@
         <header class="header">
             <div class="container">
                 <div class="header__inner">
-                    <a href="#" class="header__logo">
+                    <a href="main.html" class="header__logo">
                         <img src="imgs/logo.svg" alt="" class="header__logo_img">
                     </a>
                     <nav class="nav">
-                        <a href="#" class="nav__item">
+                        <a href="main.html" class="nav__item">
                             <div class="nav__item_wrap">
                                 <span>Главная</span>
                                 <img class="nav__item_img" src="imgs/main.svg" alt="">
                             </div>
                         </a>
 
-                        <a href="#" class="nav__item">
+                        <a href="mails.html" class="nav__item">
                             <div class="nav__item_wrap">
                                 <span>Мои рассылки</span>
                                 <img class="nav__item_img" src="imgs/send.svg" alt="">
@@ -34,7 +34,7 @@
                         </a>
 
                         <div class="nav__wrapper">
-                            <a href="#" class="nav__item nav__arrow">
+                            <a class="nav__item nav__arrow">
                                 <div class="nav__item_wrap">
                                     <span>Мои сайты</span>
                                     <img class="nav__item_img" src="imgs/sites.svg" alt="">
@@ -43,10 +43,10 @@
                             <div class="nav__menu">
                                 <ul class="nav__menu_inner">
                                     <li class="nav__menu_item">
-                                        <a class="nav__menu_link" href="#">puzzle.pro</a>
+                                        <a class="nav__menu_link" href="site.html">puzzle.pro</a>
                                     </li>
                                     <li class="nav__menu_item">
-                                        <a class="nav__menu_link" href="#">puzzle.pro</a>
+                                        <a class="nav__menu_link" href="site.html">puzzle.pro</a>
                                     </li>
                                 </ul>
                             </div>
@@ -110,16 +110,22 @@
                 <div class="header__popup">
                     <div class="header__popup_inner">
                         <div class="nav__item_wrap">
-                            <a href="#">Главная</a>
+                            <a href="main.html">Главная</a>
                             <img class="nav__item_img" src="imgs/main.svg" alt="">
                         </div>
                         <div class="nav__item_wrap">
-                            <a href="#">Мои рассылки</a>
+                            <a href="mails.html">Мои рассылки</a>
                             <img class="nav__item_img" src="imgs/send.svg" alt="">
                         </div>
                         <div class="nav__item_wrap">
-                            <a href="#">Мои сайты</a>
+                            <a>Мои сайты</a>
                             <img class="nav__item_img" src="imgs/sites.svg" alt="">
+                        </div>
+                        <div class="nav__menu_item">
+                            <a class="nav__menu_link" href="site.html">puzzle.pro</a>
+                        </div>
+                        <div class="nav__menu_item">
+                            <a class="nav__menu_link" href="site.html">puzzle.pro</a>
                         </div>
                         <div class="nav__item_wrap">
                             <a href="#">Тарифы</a>
@@ -141,11 +147,11 @@
                     <div class="button_rb mail__button setgen__button">
                         <span class="rb_button_circle">
                         </span>
-                        <button class="button_rb_inner mail__button_inner setgen__button_inner">
+                        <a href="site.html" class="button_rb_inner mail__button_inner setgen__button_inner">
                             <p class="rb_button_text_container">
                                 Website.com →
                             </p>
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <section id="general-sec" class="choosen">
@@ -169,7 +175,7 @@
                         <dl class="setgen__info_block">
                             <dt class="setgen__info_title">Изображение сайта:</dt>
                             <dd class="setgen__info_upload">
-                               
+
                                 <form action="" method="post">
                                     <input type="file" name="siteAvatar" id="siteAvatar" required>
                                     <label for="siteAvatar" class="setgen__form">
@@ -183,7 +189,8 @@
                                     <div class="setgen__info_block">
                                         <div class="setgen__info_desc">
                                             <input type="checkbox" class="checkbox-input" name="getPush" id="getPush">
-                                            <label class="label-checkbox" for="getPush">Отправлять приветственное push-уведомление
+                                            <label class="label-checkbox" for="getPush">Отправлять приветственное
+                                                push-уведомление
                                                 после
                                                 подписки</label>
                                         </div>
@@ -222,23 +229,26 @@
                         <p class="setint__info_title">Скопируйте и вставьте код на ваш сайт, перед закрывающим тегом
                             <span>&lt;/head&gt;</span></p>
                         <pre><code>&lt;script charset="UTF-8" src="//web.webpushs.com/js/push/68ec1949e6ad0b995e6095f9d61ad209_1.js" async&gt;&lt;/script&gt;</code></pre>
-                            <div class="setint__info_checked">
-                                <img src="imgs/mark.svg" width="16" height="16" alt="V">
-                                <p style="color: #3B8378">Код добавлен корректно</p>
-                            </div>
+                        <div class="setint__info_checked">
+                            <img src="imgs/mark.svg" width="16" height="16" alt="V">
+                            <p style="color: #3B8378">Код добавлен корректно</p>
+                        </div>
 
                     </div>
                     <h3 class="setint__desc">Установочные файлы Chrome</h3>
                     <div class="setint__info">
-                        <p class="setint__info_title">Для поддержки Chrome, загрузите установочные файлы ниже. Распакуйте из архива и скопируйте файлы в каталог верхнего уровня (root , или '/') вашего сайта.</p>
-                            <div class="setint__info_download">
-                                <img src="imgs/download.svg" width="16" height="16" alt="">
-                                <a href="#">Скачать установочные файлы</a>
-                            </div>
-                            <div class="setint__info_checked">
-                                <img src="imgs/removeRed.svg" width="16" height="16" alt="X">
-                                <p style="color: #F33657">Файлы sp-push-worker-fb.js, sp-push-manifest.json не установлены</p>
-                            </div>
+                        <p class="setint__info_title">Для поддержки Chrome, загрузите установочные файлы ниже.
+                            Распакуйте из архива и скопируйте файлы в каталог верхнего уровня (root , или '/') вашего
+                            сайта.</p>
+                        <div class="setint__info_download">
+                            <img src="imgs/download.svg" width="16" height="16" alt="">
+                            <a href="#">Скачать установочные файлы</a>
+                        </div>
+                        <div class="setint__info_checked">
+                            <img src="imgs/removeRed.svg" width="16" height="16" alt="X">
+                            <p style="color: #F33657">Файлы sp-push-worker-fb.js, sp-push-manifest.json не установлены
+                            </p>
+                        </div>
 
                     </div>
                     <div class="button_green save__button setint__button">
@@ -314,7 +324,7 @@
         <footer class="footer">
             <a href="">База знаний</a>
             <a href="">Тех. поддержка</a>
-            <a href="">Политика конфиденциальности</a>
+            <a href="privacy.html">Политика конфиденциальности</a>
         </footer>
 
 

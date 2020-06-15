@@ -642,6 +642,61 @@
             &_inner {
                 padding: 32px;
             }
+
+            
+
+            & .nav__menu_item {
+                padding-left: 58px;
+                &:before {
+                    background-image: url('../imgs/linkW.svg');
+                    opacity: .6;
+                    left: 34px;
+                }
+                
+
+                & a {
+                    color: #fff;
+                    
+                &:before,
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    height: 1px;
+                    width: 0;
+                    margin-bottom: -1px;
+                }
+
+                &:before {
+                    transition: width 0s ease, background .4s ease;
+                    left: 0;
+                    right: 0;
+                    bottom: 6px;
+                }
+
+                &:after {
+                    right: 0;
+                    bottom: 6px;
+                    background: $white;
+                    transition: width .4s ease;
+                }
+
+                &:hover {
+                    &:before {
+                        width: 100%;
+                        background: $white;
+                        transition: width .4s ease;
+                    }
+
+                    &:after {
+                        width: 100%;
+                        background: 0 0;
+                        transition: all 0s ease;
+                    }
+                }
+
+                }
+            }
         }
     }
 

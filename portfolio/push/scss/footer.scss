@@ -52,6 +52,14 @@
     }
 }
 
+.privacy {
+    &-desc {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.4;
+    }
+}
+
 @media screen and (max-width: 510px) {
     .footer {
         flex-wrap: wrap;
