@@ -486,6 +486,7 @@ input:-webkit-autofill {
   padding-bottom: 12px;
   font-size: 14px;
   color: #000;
+  font-family: 'FuturaPTMedium', sans-serif;
 }
 
 /*-----------------------
@@ -3764,6 +3765,7 @@ input:-webkit-autofill {
   padding: 8px 40px;
   padding-bottom: 9.4px;
   display: flex;
+  font-family: 'FuturaPTMedium', sans-serif;
   align-items: center;
   transition: all .3s ease;
 }
@@ -3773,7 +3775,7 @@ input:-webkit-autofill {
 }
 
 .home__block_title {
-  font-family: 'FuturaPTBook', sans-serif;
+  font-family: 'FuturaPTMedium', sans-serif;
   color: #3D4D58;
   letter-spacing: -0.02em;
   font-weight: 400;
@@ -3781,7 +3783,7 @@ input:-webkit-autofill {
 }
 
 .home__block_desc {
-  font-family: 'FuturaPTMedium', sans-serif;
+  font-family: 'FuturaPTDemi', sans-serif;
   color: #3D4D58;
   letter-spacing: -0.02em;
   font-weight: 400;
@@ -4242,6 +4244,7 @@ input:-webkit-autofill {
 }
 .finish-table th, .finish-table td {
   padding-left: 20px;
+  font-family: 'FuturaPTMedium';
   padding-right: 20px;
 }
 /*----------------------------
@@ -4430,13 +4433,13 @@ input:-webkit-autofill {
 .table-text__sec {
   opacity: 0.5;
   color: #000;
-  font-family: FuturaPTBook !important;
+  font-family: FuturaPTMedium;
   font-size: 14px;
   font-weight: 400;
 }
 .graph-table__desc {
   font-size: 14px;
-  font-family: 'FuturaPTBook';
+  font-family: 'FuturaPTMedium';
   color: #000;
   opacity: .5;
   text-align: center;
@@ -4446,7 +4449,7 @@ input:-webkit-autofill {
 .table-text__th {
   display: block;
   color: #000000;
-  font-family: FuturaPTBook !important;
+  font-family: 'FuturaPTMedium';
   font-size: 14px;
   font-weight: 400;
 }
@@ -4686,6 +4689,7 @@ input:-webkit-autofill {
   transform: rotate(-90deg);
   bottom: 100px;
   font-size: 12px;
+  font-family: 'FuturaPTMedium';
   color: #808080;
   left: -60px;
 }
@@ -5129,7 +5133,11 @@ input:-webkit-autofill {
 .plans__desc p {
   color: #000;
   margin-top: 12px;
+  font-family: 'FuturaPTMedium';
   margin-bottom: 12px;
+}
+#interim td{
+  font-family: 'FuturaPTMedium';
 }
 
 .open-plan-popup {
@@ -6051,6 +6059,7 @@ table.dataTable tbody td {
 .contacts__table td {
   padding: 11px 9px;
   padding-bottom: 12px;
+  font-family: 'FuturaPTMedium';
   font-size: 14px;
   color: #000;
 }
@@ -6058,7 +6067,7 @@ table.dataTable tbody td {
   font-size: 14px;
   color: #0090F4;
   border-bottom: 1px solid #0090F4;
-  font-family: 'FuturaPTBook', sans-serif;
+  font-family: 'FuturaPTMedium', sans-serif;
 }
 
 .contacts__table tr:nth-child(even) {

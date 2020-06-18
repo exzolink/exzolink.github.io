@@ -174,7 +174,7 @@ var config_1 = {
           suggestedMin: 5,
           suggestedMax: 6,
           fontColor: '#808080',
-          fontFamily: 'FuturaPTBook',
+          fontFamily: 'FuturaPTMedium',
           fontSize: 12,
           padding: 5,
           fontStyle: 400
@@ -184,7 +184,7 @@ var config_1 = {
         display: true,
         ticks: {
           fontColor: '#808080',
-          fontFamily: 'FuturaPTBook',
+          fontFamily: 'FuturaPTMedium',
           fontSize: 12,
           padding: 5,
           fontStyle: 400
@@ -421,7 +421,7 @@ var config_2 = {
           suggestedMin: 5,
           suggestedMax: 6,
           fontColor: '#808080',
-          fontFamily: 'FuturaPTBook',
+          fontFamily: 'FuturaPTMedium',
           fontSize: 12,
           padding: 5,
           fontStyle: 400
@@ -435,7 +435,7 @@ var config_2 = {
         },
         ticks: {
           fontColor: '#808080',
-          fontFamily: 'FuturaPTBook',
+          fontFamily: 'FuturaPTMedium',
           fontSize: 12,
           padding: 5,
           fontStyle: 400
@@ -667,7 +667,7 @@ var config_3 = {
           suggestedMin: 5,
           suggestedMax: 6,
           fontColor: '#808080',
-          fontFamily: 'FuturaPTBook',
+          fontFamily: 'FuturaPTMedium',
           fontSize: 12,
           padding: 5,
           fontStyle: 400
@@ -680,7 +680,7 @@ var config_3 = {
         },
         ticks: {
           fontColor: '#808080',
-          fontFamily: 'FuturaPTBook',
+          fontFamily: 'FuturaPTMedium',
           fontSize: 12,
           padding: 5,
           fontStyle: 400
@@ -804,7 +804,7 @@ function sale_by_start(data) {
                     boxWidth: 29,
                     fontSize: 15,
                     fontcolor: '#2a2a2a',
-                    fontFamily: 'FuturaPTBook, sans-serif',
+                    fontFamily: 'FuturaPTMedium, sans-serif',
                     borderWidth: 0
                 },
                 onClick: function () {
@@ -861,11 +861,11 @@ function sale_by_start(data) {
                     scaleLabel: {
                         display: true,
                         labelString: 'Порядковый месяц со старта продаж',
-                        fontFamily: 'FuturaPTBook, sans-serif',
+                        fontFamily: 'FuturaPTMedium, sans-serif',
                         fontSize: 15
                     },
                     ticks: {
-                        fontFamily: 'FuturaPTBook, sans-serif',
+                        fontFamily: 'FuturaPTMedium, sans-serif',
                         fontSize: 15,
                     }
                 }],
@@ -877,13 +877,13 @@ function sale_by_start(data) {
                     scaleLabel: {
                         display: true,
                         labelString: 'Продано квартир, в месяц',
-                        fontFamily: 'FuturaPTBook, sans-serif',
+                        fontFamily: 'FuturaPTMedium, sans-serif',
                         fontSize: 15
                     },
                     ticks: {
                         min: 0,
                         // max: 25,
-                        fontFamily: 'FuturaPTBook, sans-serif',
+                        fontFamily: 'FuturaPTMedium, sans-serif',
                         fontSize: 15,
                     }
                 }]
@@ -947,7 +947,7 @@ function sale_cost(data) {
                     boxWidth: 29,
                     fontSize: 15,
                     fontcolor: '#2a2a2a',
-                    fontFamily: 'FuturaPTBook, sans-serif',
+                    fontFamily: 'FuturaPTMedium, sans-serif',
                     borderWidth: 0
                 },
                 onClick: function () {
@@ -1004,11 +1004,11 @@ function sale_cost(data) {
                     scaleLabel: {
                         display: true,
                         labelString: 'Порядковый месяц со старта продаж',
-                        fontFamily: 'FuturaPTBook, sans-serif',
+                        fontFamily: 'FuturaPTMedium, sans-serif',
                         fontSize: 15
                     },
                     ticks: {
-                        fontFamily: 'FuturaPTBook, sans-serif',
+                        fontFamily: 'FuturaPTMedium, sans-serif',
                         fontSize: 15,
                     }
                 }],
@@ -1020,12 +1020,12 @@ function sale_cost(data) {
                     scaleLabel: {
                         display: true,
                         labelString: 'Продажи в месяц, млн руб.',
-                        fontFamily: 'FuturaPTBook, sans-serif',
+                        fontFamily: 'FuturaPTMedium, sans-serif',
                         fontSize: 15
                     },
                     ticks: {
                         min: 0,
-                        fontFamily: 'FuturaPTBook, sans-serif',
+                        fontFamily: 'FuturaPTMedium, sans-serif',
                         fontSize: 15,
                     }
                 }]
@@ -1070,7 +1070,7 @@ function changes_cost(data) {
                     boxWidth: 29,
                     fontSize: 15,
                     fontcolor: '#2a2a2a',
-                    fontFamily: 'FuturaPTBook, sans-serif',
+                    fontFamily: 'FuturaPTMedium, sans-serif',
                     borderWidth: 0
                 },
                 onClick: function () {
@@ -1127,11 +1127,11 @@ function changes_cost(data) {
                     scaleLabel: {
                         display: true,
                         labelString: 'Порядковый месяц со старта продаж',
-                        fontFamily: 'FuturaPTBook, sans-serif',
+                        fontFamily: 'FuturaPTMedium, sans-serif',
                         fontSize: 15
                     },
                     ticks: {
-                        fontFamily: 'FuturaPTBook, sans-serif',
+                        fontFamily: 'FuturaPTMedium, sans-serif',
                         fontSize: 15,
                     }
                 }],
@@ -1143,12 +1143,12 @@ function changes_cost(data) {
                     scaleLabel: {
                         display: true,
                         labelString: 'Средняя стоимость за кв.м. (тыс. руб/кв.м.)',
-                        fontFamily: 'FuturaPTBook, sans-serif',
+                        fontFamily: 'FuturaPTMedium, sans-serif',
                         fontSize: 15
                     },
                     ticks: {
                         min: 0,
-                        fontFamily: 'FuturaPTBook, sans-serif',
+                        fontFamily: 'FuturaPTMedium, sans-serif',
                         fontSize: 15,
                     }
                 }]
