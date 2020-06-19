@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kite+One&family=Lato&family=Montserrat:ital,wght@0,900;1,600&family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@700&display=swap"
+      rel="stylesheet">
+
+    <title>TEP Technopreneur - Blog</title>
+
+
+
+  </head>
+
+  <body>
+
+    <header class="header py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-1 col-lg-2 col-md-2 col-6">
+            <img src="img/logo.png" alt="" class="logo">
+          </div>
+          <div
+            class="col-xl-11 col-lg-10 col-md-10 col-6 d-flex flex-col justify-content-md-end justify-content-center align-items-end">
+            <div class="header-nav-top d-md-flex align-items-center mb-xxl-3 d-none w-100">
+
+
+              <div class="header-banner ml-auto mx-xxl-auto d-flex">
+                <img src="img/covid-19.svg" alt="" class=" img1">
+                <img src="img/country.svg" alt="" class="img2">
+                <div class="flex-col w-100">
+                  <h3 class="d-block banner-title mt-0 mb-2">Check Corona Stats from all over the World !!!</h3>
+                  <div class="d-flex banner-text__wrap">
+                    <div class="flex-col px-1">
+                      <span class="banner-small__title">Confirmed</span>
+                      <span class="banner-small__val red">2,007,449</span>
+                    </div>
+                    <div class="flex-col px-1">
+                      <span class="banner-small__title">Dead</span>
+                      <span class="banner-small__val blue">112,469</span>
+                    </div>
+                    <div class="flex-col px-1">
+                      <span class="banner-small__title">Recovered</span>
+                      <span class="banner-small__val green">2,007,449</span>
+                    </div>
+                    <div class="flex-col px-1">
+                      <span class="banner-small__title">Cases today</span>
+                      <span class="banner-small__val red">1</span>
+                    </div>
+                    <div class="flex-col px-1">
+                      <span class="banner-small__title">Deaths today</span>
+                      <span class="banner-small__val red">2</span>
+                    </div>
+                    <div class="flex-col px-1">
+                      <span class="banner-small__title">Tests</span>
+                      <span class="banner-small__val red">21,291,677</span>
+                    </div>
+                    <div class="flex-col px-1">
+                      <span class="banner-small__title">Critical</span>
+                      <span class="banner-small__val light-blue">16,923</span>
+                    </div>
+                    <div class="flex-col px-1">
+                      <span class="banner-small__title">Active</span>
+                      <span class="banner-small__val green">1,133,272</span>
+                    </div>
+                    <div class="flex-col px-1">
+                      <span class="banner-small__title">Cases/IM</span>
+                      <span class="banner-small__val light-blue">6067</span>
+                    </div>
+                    <div class="flex-col px-1">
+                      <span class="banner-small__title">Deaths/IM</span>
+                      <span class="banner-small__val red">340</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="navbar p-0 header-search navbar-light justify-content-between d-xxl-flex d-none">
+                <form class="form-inline">
+                  <button class="btn btn-search my-2 my-sm-0" type="submit">
+                    <img src="img/search.svg" alt="icon">
+                  </button>
+                  <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search"
+                    aria-label="Search">
+                </form>
+              </div>
+              <a href="#" class="btn main-btn login d-xxl-flex d-none active justify-content-center">LOGIN</a>
+              <a href="#" class="btn main-btn signup d-xxl-flex d-none justify-content-center">SIGNUP</a>
+            </div>
+
+
+
+
+            <div class="nav-mobile bg-white p-4 shadow-lg">
+
+              <div class="header-nav-top d-flex flex-col align-items-center mb-3 d-md-none">
+
+                <!-- header-search-mobile -->
+                <div class="d-flex w-100 flex-nowrap align-items-center justify-content-end">
+
+                  <div class="navbar p-0 navbar-light justify-content-between">
+                    <form class="form-inline w-100 d-flex justify-content-between">
+                      <input class="form-control mr-0 search-input" type="search" placeholder="" aria-label="Search"
+                        style="width: 0 !important; margin-left: auto; transition: 0.3s;">
+                      <button class="btn btn-search p-0" type="submit">
+                        <img src="img/search.svg" alt="icon">
+                      </button>
+                    </form>
+                  </div>
+
+                  <img src="img/close.svg" alt="" class="navbar-mobile-btn navbar-mobile-btn-sec d-block active">
+
+
+                </div>
+
+
+
+                <div class="d-flex mb-3 mt-3">
+                  <a href="#" class="btn ml-0 main-btn login d-flex active justify-content-center">LOGIN</a>
+                  <a href="#" class="btn main-btn signup d-flex justify-content-center">SIGNUP</a>
+                </div>
+
+
+              </div>
+
+              <!-- header-menu-mobile -->
+              <nav class="header-nav d-flex w-100">
+                <ul class="p-0 m-0 d-flex w-100 flex-col">
+                  <li class="d-flex py-1">
+                    <a href="#" class="d-flex px-2 align-items-center nav-item active">
+                      <!-- <img src="img/home.svg" alt="icon"> -->
+                      <i class="fas fa-home"></i>
+                      <span class="ml-4">HOME</span>
+                    </a>
+                  </li>
+                  <li class="d-flex py-1">
+                    <a href="#" class="d-flex px-2 align-items-center nav-item">
+                      <!-- <img src="img/pen.svg" alt="icon"> -->
+                      <i class="fas fa-pencil-alt"></i>
+                      <span class="ml-4">BLOG</span>
+                    </a>
+                  </li>
+                  <li class="d-flex py-1">
+                    <a href="#" class="d-flex px-2 align-items-center nav-item">
+                      <!-- <img src="img/settings.svg" alt="icon"> -->
+                      <i class="fas fa-cog"></i>
+                      <span class="ml-4">ENGINEERING TOOLS</span>
+                    </a>
+                  </li>
+                  <li class="d-flex py-1">
+                    <a href="#" class="d-flex px-2 align-items-center nav-item">
+                      <!-- <img src="img/doublearrows.svg" alt="icon"> -->
+                      <i class="fas fa-random"></i>
+                      <span class="ml-4">JLPCB $2 PCBs </span>
+                    </a>
+                  </li>
+                  <li class="d-flex py-1">
+                    <a href="#" class="d-flex px-2 align-items-center nav-item">
+                      <!-- <img src="img/user.svg" alt="icon"> -->
+                      <i class="fas fa-user"></i>
+                      <span class="ml-4">FREE PBC</span>
+                    </a>
+                  </li>
+                  <li class="d-flex py-1">
+                    <a href="#" class="d-flex px-2 align-items-center nav-item">
+                      <!-- <img src="img/comment.svg" alt="icon"> -->
+                      <i class="far fa-comment-dots"></i>
+                      <span class="ml-4">TURN-KEY PCB Assembly</span>
+                    </a>
+                  </li>
+                  <li class="d-flex pt-1">
+                    <a href="#" class="d-flex px-2 align-items-center nav-item">
+                      <!-- <img src="img/pc.svg" alt="icon"> -->
+                      <i class="fas fa-desktop"></i>
+                      <span class="ml-4">PCBONLINE</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+
+
+
+            </div>
+
+
+            <div class="d-xxl-none d-flex mt-2 align-items-center">
+              <div class="d-md-flex d-none mx-auto">
+                <div class="navbar p-0 header-search navbar-light justify-content-between d-xxl-none d-flex">
+                  <form class="form-inline">
+                    <button class="btn btn-search my-2 my-sm-0" type="submit">
+                      <img src="img/search.svg" alt="icon">
+                    </button>
+                    <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search"
+                      aria-label="Search">
+                  </form>
+                </div>
+                <a href="#" class="btn main-btn login active justify-content-center d-xxl-none d-flex">LOGIN</a>
+                <a href="#" class="btn main-btn signup justify-content-center d-xxl-none d-flex">SIGNUP</a>
+              </div>
+
+              <button class="navbar-mobile-btn my-0 my-md-3 ml-3 d-block">
+                <span class=""></span>
+                <span class=""></span>
+                <span class=""></span>
+                <span class=""></span>
+              </button>
+            </div>
+
+            <nav class="header-nav header-nav-xxl-desktop d-flex w-100 mt-3 justify-content-between">
+              <ul class="p-0 m-0 d-flex justify-content-between w-100">
+                <li class="d-flex">
+                  <a href="#" class="d-flex px-2 align-items-center nav-item active">
+                    <!-- <img src="img/home.svg" alt="icon"> -->
+                    <i class="fas fa-home"></i>
+                    <span class="ml-3">HOME</span>
+                  </a>
+                </li>
+                <li class="d-flex">
+                  <a href="#" class="d-flex px-2 align-items-center nav-item">
+                    <!-- <img src="img/pen.svg" alt="icon"> -->
+                    <i class="fas fa-pencil-alt"></i>
+                    <span class="ml-3">BLOG</span>
+                  </a>
+                </li>
+                <li class="d-flex">
+                  <a href="#" class="d-flex px-2 align-items-center nav-item">
+                    <!-- <img src="img/settings.svg" alt="icon"> -->
+                    <i class="fas fa-cog"></i>
+                    <span class="ml-3">ENGINEERING TOOLS</span>
+                  </a>
+                </li>
+                <li class="d-flex">
+                  <a href="#" class="d-flex px-2 align-items-center nav-item">
+                    <!-- <img src="img/doublearrows.svg" alt="icon"> -->
+                    <i class="fas fa-random"></i>
+                    <span class="ml-3">JLPCB $2 PCBs </span>
+                  </a>
+                </li>
+                <li class="d-flex">
+                  <a href="#" class="d-flex px-2 align-items-center nav-item">
+                    <!-- <img src="img/user.svg" alt="icon"> -->
+                    <i class="fas fa-user"></i>
+                    <span class="ml-3">FREE PBC</span>
+                  </a>
+                </li>
+                <li class="d-flex">
+                  <a href="#" class="d-flex px-2 align-items-center nav-item">
+                    <!-- <img src="img/comment.svg" alt="icon"> -->
+                    <i class="far fa-comment-dots"></i>
+                    <span class="ml-3">TURN-KEY PCB Assembly</span>
+                  </a>
+                </li>
+                <li class="d-flex">
+                  <a href="#" class="d-flex px-2 align-items-center nav-item">
+                    <!-- <img src="img/pc.svg" alt="icon"> -->
+                    <i class="fas fa-desktop"></i>
+                    <span class="ml-3">PCBONLINE</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+          </div>
+          <nav class="header-nav header-nav-desktop d-flex w-100 mt-3 px-3 justify-content-between">
+            <ul class="p-0 m-0 d-flex justify-content-between w-100">
+              <li class="d-flex">
+                <a href="#" class="d-flex px-2 align-items-center nav-item active">
+                  <!-- <img src="img/home.svg" alt="icon"> -->
+                  <i class="fas fa-home"></i>
+                  <span class="ml-4">HOME</span>
+                </a>
+              </li>
+              <li class="d-flex">
+                <a href="#" class="d-flex px-2 align-items-center nav-item">
+                  <!-- <img src="img/pen.svg" alt="icon"> -->
+                  <i class="fas fa-pencil-alt"></i>
+                  <span class="ml-4">BLOG</span>
+                </a>
+              </li>
+              <li class="d-flex">
+                <a href="#" class="d-flex px-2 align-items-center nav-item">
+                  <!-- <img src="img/settings.svg" alt="icon"> -->
+                  <i class="fas fa-cog"></i>
+                  <span class="ml-4">ENGINEERING TOOLS</span>
+                </a>
+              </li>
+              <li class="d-flex">
+                <a href="#" class="d-flex px-2 align-items-center nav-item">
+                  <!-- <img src="img/doublearrows.svg" alt="icon"> -->
+                  <i class="fas fa-random"></i>
+                  <span class="ml-4">JLPCB $2 PCBs </span>
+                </a>
+              </li>
+              <li class="d-flex">
+                <a href="#" class="d-flex px-2 align-items-center nav-item">
+                  <!-- <img src="img/user.svg" alt="icon"> -->
+                  <i class="fas fa-user"></i>
+                  <span class="ml-4">FREE PBC</span>
+                </a>
+              </li>
+              <li class="d-flex">
+                <a href="#" class="d-flex px-2 align-items-center nav-item">
+                  <!-- <img src="img/comment.svg" alt="icon"> -->
+                  <i class="far fa-comment-dots"></i>
+                  <span class="ml-4">TURN-KEY PCB Assembly</span>
+                </a>
+              </li>
+              <li class="d-flex">
+                <a href="#" class="d-flex px-2 align-items-center nav-item">
+                  <!-- <img src="img/pc.svg" alt="icon"> -->
+                  <i class="fas fa-desktop"></i>
+                  <span class="ml-4">PCBONLINE</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+    </header>
+
+
+    <section class="blog">
+
+      <div class="page-title-wrap py-3 py-sm-3 text-center">
+
+        <div class="container container-articles">
+          <div class="row flex-wrap-reverse">
+            <div class="flex-col col-md-8 col-12">
+              <h2 class="page-title mt-4 mb-3">Blog - The Engineering Projects </h2>
+              <span class="page-subtitle">A lot of engineering projects & tutorials for engineering students &
+                professionals to help them in their final year & semester projects.</span>
+            </div>
+
+            <div class="col-md-4 col-12 d-flex justify-content-center">
+              <img src="img/pageTitleImg.png" alt="" class="mx-auto">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container container-articles">
+        <div class="row pt-5 mb-5">
+
+
+          <!-- articles-wrapper -->
+          <div class="col-12 col-lg-9 col-blog-content article">
+
+
+            <!-- article -->
+            <article>
+              <div class="article-meta__wrapper">
+                <div>
+                  <img src="img/lists.svg" alt="">
+                  <span>Posted at:</span>
+                  <a href="#">Friday May 8, 2020</a>
+                </div>
+                <div>
+                  <img src="img/categories.svg" alt="">
+                  <span>Category:</span>
+                  <a href="#">Tutorials</a>
+                </div>
+                <div>
+                  <img src="img/author.svg" alt="">
+                  <span>Author:</span>
+                  <a href="#">William Jones</a>
+                </div>
+                <div>
+                  <img src="img/comments.svg" alt="">
+                  <a href="#">No Comments</a>
+                </div>
+              </div>
+
+              <div class="advert__wrapper">
+                <div class="advert__block">
+                  <div>
+                    <img src="img/ads.png" alt="">
+                  </div>
+                  <div>
+                    <img src="img/ads.png" alt="">
+                  </div>
+                </div>
+                <div class="advert__block">
+                  <div class="advert__block_wide">
+                    <img src="img/ads_wide.jpg" alt="">
+                  </div>
+                </div>
+                <div class="advert__block">
+                  <div class="advert__block_wide">
+                  </div>
+                </div>
+              </div>
+
+              <div class="share__wrapper">
+                <div class="share__count">
+                  <span>500</span>
+                  <p>Shares</p>
+                </div>
+                <div class="share__buttons">
+                  <a href="#">
+                    <img src="img/facebook.svg" alt="">
+                    <span>Share</span>
+                  </a>
+                  <a href="#">
+                    <img src="img/pinterest.svg" alt="">
+                    <span>Share</span>
+                  </a>
+                  <a href="#">
+                    <img src="img/twit.svg" alt="">
+                    <span>Share</span>
+                  </a>
+                  <a href="#">
+                    <img src="img/youtub.svg" alt="">
+                    <span>Share</span>
+                  </a>
+                </div>
+                <div class="share__count">
+                  <span>500</span>
+                  <p>Likes</p>
+                </div>
+              </div>
+              <div class="article__text">
+                <img src="img/img1.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto dolores, minus sunt ullam dolorum
+                  aliquid molestiae vitae deserunt perferendis exercitationem distinctio voluptate modi architecto eos
+                  enim debitis fugiat in incidunt quaerat dolorem repellendus quasi perspiciatis earum? Velit tempora
+                  asperiores quo saepe facilis sint, amet ad voluptatibus nobis quae, maxime tenetur quod officiis nisi
+                  illo quisquam! Voluptates amet doloremque aspernatur! Eveniet delectus quasi labore sit tenetur a
+                  voluptates itaque quaerat blanditiis! A, nulla vero expedita qui praesentium soluta aliquid, eos totam
+                  minus, ratione iusto laudantium. Vel, unde animi culpa officiis ducimus impedit consequatur obcaecati
+                  non accusamus aliquid voluptatibus cupiditate <a href="#">some link</a> repellat dicta!
+                  <br><br>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis ex suscipit eius, repellendus
+                  dolor maiores, dignissimos corporis nisi repellat accusamus enim aliquam labore provident aperiam
+                  molestias est, quam nihil culpa!
+                </p>
+              </div>
+              <div class="advert__post">
+                <img src="img/ads_post.png" alt="">
+              </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto dolores, minus sunt ullam dolorum
+                  aliquid molestiae vitae deserunt perferendis exercitationem distinctio voluptate modi architecto eos
+                  enim debitis fugiat in incidunt quaerat dolorem repellendus quasi perspiciatis earum? Velit tempora
+                  asperiores quo saepe facilis sint, amet ad voluptatibus nobis quae, maxime tenetur quod officiis nisi
+                  illo quisquam! Voluptates amet doloremque aspernatur! Eveniet delectus quasi labore sit tenetur a
+                  voluptates itaque quaerat blanditiis! A, nulla vero expedita qui praesentium soluta aliquid, eos totam
+                  minus, ratione iusto laudantium. Vel, unde animi culpa officiis ducimus impedit consequatur obcaecati
+                  non accusamus aliquid voluptatibus cupiditate <a href="#">some link</a> repellat dicta!
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis ex suscipit eius, repellendus
+                  dolor maiores, dignissimos corporis nisi repellat accusamus enim aliquam labore provident aperiam
+                  molestias est, quam nihil culpa!
+                </p>
+
+
+              <ul class="article__linked">Rite now this Arduino Library for Proteus contains following boards in it in
+                it:
+                <li><a href="">Arduino UNO</a></li>
+                <li><a href="">Arduino UNO</a></li>
+                <li><a href="">Arduino UNO</a></li>
+                <li><a href="">Arduino UNO</a></li>
+              </ul>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto dolores, minus sunt ullam dolorum
+                  aliquid molestiae vitae deserunt perferendis
+                </p>
+
+
+              <div class="article__note">
+                <span><img src="img/noteitem.svg" alt=""></span>
+                <p><span>NOTE:</span> Other Proteus Libararies  are as follows :</p>
+                <ul class="article__linked">
+                  <li><a href="">Arduino UNO</a></li>
+                  <li><a href="">Arduino UNO</a></li>
+                  <li><a href="">Arduino UNO</a></li>
+                  <li><a href="">Ultrasonic Sansor Libarary for proteus </a></li>
+                  <li><a href="">Arduino UNO</a></li>
+                  <li><a href="">Arduino UNO</a></li>
+                  <li><a href="">Arduino UNO</a></li>
+                </ul>
+              </div>
+
+              <div class="article__title">
+                Arduino Libarary For Proteus
+              </div>
+
+            </article>
+
+
+
+          </div>
+
+
+          <!-- sidebar -->
+          <div class="col-12 col-lg-3 mx-auto sidebar-wrap">
+            <sidebar class="sidebar flex-col">
+
+
+              <!-- widget-1 -->
+              <div class="flex-col p-2 p-sm-3 p-md-4 shadow-lg rounded-2 bg-white mb-4">
+                <h2 class="sidebar-title d-block mt-0 mb-4">Top PCB Design Service</h2>
+                <div class="d-flex flex-wrap justify-content-between">
+                  <img src="img/sidebarImg1.gif" alt="" class="sidebar-img mb-2">
+                  <img src="img/sidebarImg2.gif" alt="" class="sidebar-img mb-2">
+                </div>
+              </div>
+
+
+              <div class="d-flex flex-wrap  justify-content-between W-100">
+
+
+                <div class="flex-col p-2 p-sm-3 p-md-4 shadow-lg rounded-2 bg-white mb-4 widget-1">
+
+
+
+                  <!-- widget-2 -->
+                  <!-- <h2 class="widget-title mb-3 d-block mt-0">Subscribe Now !!!</h2> -->
+                  <h2 class="sidebar-title d-block mt-0 mb-3">Subscribe Now !!!</h2>
+                  <div class="count">
+                    <span class="bigcount">
+                      Learn Free Pro Tricks
+                    </span>
+                  </div>
+                  <div class="d-flex justify-content-between widget1-items mt-2">
+                    <a href="#" class="widget1-item flex-col align-items-center mb-2">
+                      <img src="img/rss.svg" alt="" class="mb-1">
+                      <span class="b-block">RSS</span>
+                    </a>
+                    <a href="#" class="widget1-item flex-col align-items-center mb-2">
+                      <img src="img/youtube.svg" alt="" class="mb-1">
+                      <span class="b-block">YT</span>
+                    </a>
+                    <a href="#" class="widget1-item flex-col align-items-center mb-2">
+                      <img src="img/faceboock.svg" alt="" class="mb-1">
+                      <span class="b-block">FB</span>
+                    </a>
+                    <a href="#" class="widget1-item flex-col align-items-center mb-2 border-0">
+                      <img src="img/twitter.svg" alt="" class="mb-1">
+                      <span class="b-block">TW</span>
+                    </a>
+                  </div>
+                  <div class="d-flex my-3 widget1-email w-100">
+                    <span class="">Receive Quality Tutorials Straight in your<br>Inbox by submitting your Email ID
+                      below.</span>
+                  </div>
+                  <form class="subscribe-form pt-3">
+                    <input type="email" class="d-block py-3" placeholder="enter your email here...">
+                    <button type="submit" class="mt-2 subscribe-btn main-btn">SUBMIT</button>
+                  </form>
+                </div>
+
+
+
+                <!-- widget-3 -->
+                <div class="flex-col p-2 p-sm-3 p-md-4 shadow-lg rounded-2 bg-white mb-4 widget-2">
+                  <h2 class="sidebar-title d-block mt-0 mb-4">Join Us !!!</h2>
+                  <div class="d-flex flex-wrap justify-content-between">
+                    <a href="#" class="d-flex widget2-item px-1 pb-2 flex-center">
+                      <img src="img/fb.svg" alt="" class="">
+                    </a>
+                    <a href="#" class="d-flex widget2-item px-1 pb-2 flex-center">
+                      <img src="img/tw.svg" alt="" class="">
+                    </a>
+                    <a href="#" class="d-flex widget2-item px-1 pb-2 flex-center">
+                      <img src="img/inst.svg" alt="" class="">
+                    </a>
+                    <a href="#" class="d-flex widget2-item px-1 pb-2 flex-center">
+                      <img src="img/pint.svg" alt="" class="">
+                    </a>
+                    <a href="#" class="d-flex widget2-item px-1 pb-2 flex-center">
+                      <img src="img/wa.svg" alt="" class="">
+                    </a>
+                    <a href="#" class="d-flex widget2-item px-1 pb-2 flex-center">
+                      <img src="img/yt.svg" alt="" class="">
+                    </a>
+                    <a href="#" class="d-flex widget2-item px-1 pb-2 flex-center">
+                      <img src="img/gplus.svg" alt="" class="">
+                    </a>
+                    <a href="#" class="d-flex widget2-item px-1 pb-2 flex-center">
+                      <img src="img/in.svg" alt="" class="">
+                    </a>
+                    <a href="#" class="d-flex widget2-item px-1 pb-2 flex-center">
+                      <img src="img/snch.svg" alt="" class="">
+                    </a>
+                  </div>
+                </div>
+
+
+                <!-- widget-3 -->
+                <div class="flex-col p-2 p-sm-3 p-md-4 shadow-lg rounded-2 bg-white mb-4 widget-3">
+                  <h2 class="sidebar-title d-block mt-0 mb-4">Join Our Fb Groups !!!</h2>
+                  <div class="d-flex flex-wrap justify-content-between">
+                    <div class="d-flex flex-col followers-widget">
+                      <a href="#" class="d-flex flex-center">
+                        <i class="fab fa-facebook-square text-white mr-2 d-block"></i>
+                        <span class="text-white">ARDUINO</span>
+                      </a>
+                      <span class="followers-count">2K+</span>
+                    </div>
+                    <div class="d-flex flex-col followers-widget">
+                      <a href="#" class="d-flex flex-center">
+                        <i class="fab fa-facebook-square text-white mr-2 d-block"></i>
+                        <span class="text-white">PROTEUS</span>
+                      </a>
+                      <span class="followers-count">3K+</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- widget-4 -->
+                <div class="flex-col p-2 p-sm-3 p-md-4 shadow-lg rounded-2 bg-white mb-4 widget-4">
+                  <h2 class="sidebar-title d-block mt-0 mb-4">Categories</h2>
+                  <div class="d-flex flex-col">
+                    <a href="#" class="widget-category d-flex mb-3 align-items-center text-decoration-none">
+                      <span class="widget-category__num mr-3">01</span>
+                      <h4 class="widget-category__title">Arduino Projects</h4>
+                      <span class="widget-category__count ml-auto">10</span>
+                    </a>
+                    <a href="#" class="widget-category d-flex mb-3 align-items-center text-decoration-none">
+                      <span class="widget-category__num mr-3">02</span>
+                      <h4 class="widget-category__title">Proteus Projects</h4>
+                      <span class="widget-category__count ml-auto">10</span>
+                    </a>
+                    <a href="#" class="widget-category d-flex mb-3 align-items-center text-decoration-none">
+                      <span class="widget-category__num mr-3">03</span>
+                      <h4 class="widget-category__title">PIC Projects</h4>
+                      <span class="widget-category__count ml-auto">10</span>
+                    </a>
+                    <a href="#" class="widget-category d-flex mb-3 align-items-center text-decoration-none">
+                      <span class="widget-category__num mr-3">04</span>
+                      <h4 class="widget-category__title">Visual Studio Projects</h4>
+                      <span class="widget-category__count ml-auto">10</span>
+                    </a>
+                    <a href="#" class="widget-category d-flex mb-3 align-items-center text-decoration-none">
+                      <span class="widget-category__num mr-3">05</span>
+                      <h4 class="widget-category__title">8051 Projects</h4>
+                      <span class="widget-category__count ml-auto">10</span>
+                    </a>
+                    <a href="#" class="widget-category d-flex mb-3 align-items-center text-decoration-none">
+                      <span class="widget-category__num mr-3">06</span>
+                      <h4 class="widget-category__title">555 Timer Projects</h4>
+                      <span class="widget-category__count ml-auto">10</span>
+                    </a>
+                    <a href="#" class="widget-category d-flex mb-3 align-items-center text-decoration-none">
+                      <span class="widget-category__num mr-3">07</span>
+                      <h4 class="widget-category__title">MATLAB Projects</h4>
+                      <span class="widget-category__count ml-auto">10</span>
+                    </a>
+                    <a href="#" class="widget-category d-flex mb-3 align-items-center text-decoration-none">
+                      <span class="widget-category__num mr-3">08</span>
+                      <h4 class="widget-category__title">LabView Projects</h4>
+                      <span class="widget-category__count ml-auto">10</span>
+                    </a>
+                    <a href="#" class="widget-category d-flex mb-3 align-items-center text-decoration-none">
+                      <span class="widget-category__num mr-3">09</span>
+                      <h4 class="widget-category__title">PLC Projects</h4>
+                      <span class="widget-category__count ml-auto">10</span>
+                    </a>
+                    <a href="#" class="widget-category d-flex mb-3 align-items-center text-decoration-none">
+                      <span class="widget-category__num mr-3">10</span>
+                      <h4 class="widget-category__title">Electronics Projects</h4>
+                      <span class="widget-category__count ml-auto">10</span>
+                    </a>
+                    <a href="#" class="widget-category d-flex mb-3 align-items-center text-decoration-none">
+                      <span class="widget-category__num mr-3">11</span>
+                      <h4 class="widget-category__title">C# Tutorials</h4>
+                      <span class="widget-category__count ml-auto">10</span>
+                    </a>
+                    <a href="#" class="widget-category d-flex mb-3 align-items-center text-decoration-none">
+                      <span class="widget-category__num mr-3">12</span>
+                      <h4 class="widget-category__title">Embeded System Projects</h4>
+                      <span class="widget-category__count ml-auto">10</span>
+                    </a>
+                    <a href="#" class="widget-category d-flex mb-0 align-items-center text-decoration-none">
+                      <span class="widget-category__num mr-3">13</span>
+                      <h4 class="widget-category__title">SEO Tutorials </h4>
+                      <span class="widget-category__count ml-auto">10</span>
+                    </a>
+                  </div>
+                </div>
+
+
+
+                <!-- widget-5 -->
+                <div class="flex-col p-2 p-sm-3 p-md-4 shadow-lg rounded-2 bg-white mb-4 widget-5">
+                  <h2 class="sidebar-title d-block mt-0 mb-4 text-center">Engineering Book</h2>
+                  <div class="d-flex flex-center shadow-small px-2">
+                    <img src="img/sidebarImg5.jpg" alt="" class=" mw-100 d-block sidebar-img my-xl-4 my-2">
+                  </div>
+                </div>
+
+
+              </div>
+            </sidebar>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- footer -->
+
+    <footer class="footer">
+      <div class="footer-top px-sm-3">
+        <div class="container">
+          <div class="row mb-4 mb-xl-5">
+            <div class="col-xxl-6 col-12 footer-top__title">
+              <div class="d-flex">
+                <img src="img/logo.png" alt="" class="footer-logo mr-3 mr-xl-4">
+                <div class="flex-col">
+                  <h3 class="footer-title mb-2">THE ENGINEERING PROJECTS</h3>
+                  <span class="footer-subtitle">“A platform for engineers & technical professionals
+                    to share their engineering projects, solutions &
+                    experience with TEP Community & support open source.”</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-6 col-12 d-flex footer-top__news">
+              <div class="flex-col">
+                <h3 class="footer-title__small mb-2">Newsletter</h3>
+                <span class="footer-subtitle__small">Get a weekly notification of great articels</span>
+              </div>
+              <form action="" class="footer-follow d-flex align-items-center">
+                <input type="email" name="" id="" placeholder="Your email address">
+                <button class="footer-btn ml-2 text-white"><i class="fab fa-telegram-plane"></i></button>
+              </form>
+            </div>
+          </div>
+
+          <div class="row pt-3">
+            <div class="col-xxl-5 col-xl-7 col-lg-6 col-md-8 mx-auto flex-col pl-xl-5">
+              <strong class="footer-item__title mb-4">Recent Post</strong>
+              <div class="d-flex mb-4">
+                <img src="img/footerAutor.png" alt="" class="footer-autor__img mr-2">
+                <div class="flex-col">
+                  <a href="#" class="footer-post__title d-block mb-3 color-dark">Top PCB Designing software in 2020</a>
+                  <span class="footer-post__meta"><i class="pr-2 pl-1 fas fa-clipboard-list"></i>Oct 5,2020</span>
+                </div>
+              </div>
+              <div class="d-flex mb-4">
+                <img src="img/footerAutor.png" alt="" class="footer-autor__img mr-2">
+                <div class="flex-col">
+                  <a href="#" class="footer-post__title d-block mb-3 color-dark">Top PCB Designing software in 2020</a>
+                  <span class="footer-post__meta"><i class="pr-2 pl-1 fas fa-clipboard-list"></i>Oct 5,2020</span>
+                </div>
+              </div>
+              <div class="d-flex mb-4">
+                <img src="img/footerAutor.png" alt="" class="footer-autor__img mr-2">
+                <div class="flex-col">
+                  <a href="#" class="footer-post__title d-block mb-3 color-dark">Top PCB Designing software in 2020</a>
+                  <span class="footer-post__meta"><i class="pr-2 pl-1 fas fa-clipboard-list"></i>Oct 5,2020</span>
+                </div>
+              </div>
+              <div class="d-flex mb-4">
+                <img src="img/footerAutor.png" alt="" class="footer-autor__img mr-2">
+                <div class="flex-col">
+                  <a href="#" class="footer-post__title d-block mb-3 color-dark">Top PCB Designing software in 2020</a>
+                  <span class="footer-post__meta"><i class="pr-2 pl-1 fas fa-clipboard-list"></i>Oct 5,2020</span>
+                </div>
+              </div>
+              <div class="d-flex mb-4">
+                <img src="img/footerAutor.png" alt="" class="footer-autor__img mr-2">
+                <div class="flex-col">
+                  <a href="#" class="footer-post__title d-block mb-3 color-dark">Top PCB Designing software in 2020</a>
+                  <span class="footer-post__meta"><i class="pr-2 pl-1 fas fa-clipboard-list"></i>Oct 5,2020</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-5 col-lg-6 col-md-8 mx-auto pt-4 pt-lg-0 flex-col">
+              <strong class="footer-item__title mb-4">Popular Tutorials Series</strong>
+              <ul class="footer-list">
+                <li class="">
+                  <a href="#" class="d-flex align-items-center color-dark py-2">
+                    Arduino
+                  </a>
+                </li>
+                <li class="">
+                  <a href="#" class="d-flex align-items-center color-dark py-2">
+                    Respberry pi
+                  </a>
+                </li>
+                <li class="">
+                  <a href="#" class="d-flex align-items-center color-dark py-2">
+                    PIC microchip
+                  </a>
+                </li>
+                <li class="">
+                  <a href="#" class="d-flex align-items-center color-dark py-2">
+                    Atmel
+                  </a>
+                </li>
+                <li class="">
+                  <a href="#" class="d-flex align-items-center color-dark py-2">
+                    Matlab
+                  </a>
+                </li>
+                <li class="">
+                  <a href="#" class="d-flex align-items-center color-dark py-2">
+                    Solid Work
+                  </a>
+                </li>
+                <li class="">
+                  <a href="#" class="d-flex align-items-center color-dark py-2">
+                    Solid Edge
+                  </a>
+                </li>
+                <li class="">
+                  <a href="#" class="d-flex align-items-center color-dark py-2">
+                    FPGA Chip
+                  </a>
+                </li>
+                <li class="">
+                  <a href="#" class="d-flex align-items-center color-dark py-2">
+                    Proteus
+                  </a>
+                </li>
+                <li class="">
+                  <a href="#" class="d-flex align-items-center color-dark py-2">
+                    Mbed
+                  </a>
+                </li>
+                <li class="">
+                  <a href="#" class="d-flex align-items-center color-dark py-2">
+                    Comsol
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-xxl-3 col-xl-12 col-lg-12 col-md-8 mx-auto pt-4 pt-lg-0 flex-col footer-contact">
+              <div class="footer-contact__item">
+                <strong class="footer-item__title mb-0">Contact Us</strong>
+                <div class="d-flex align-items-center mb-2 pt-3">
+                  <div class="footer-icon flex-center d-flex mr-2">
+                    <i class="fab fa-skype"></i>
+                  </div>
+                  <span class="footer-contact__title clor-dark">Skype</span>
+                </div>
+                <a href="#" class="footer-link d-block">theengineeringprojects</a>
+              </div>
+              <div class="footer-contact__item mt-5">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="footer-icon flex-center d-flex mr-2">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <span class="footer-contact__title clor-dark">Email</span>
+                </div>
+                <a href="mailto:info@theengineeringprojects.com"
+                  class="footer-link d-block mb-3">info@theengineeringprojects.com</a>
+                <a href="mailto:help@theengineeringprojects.com"
+                  class="footer-link d-block mb-3">help@theengineeringprojects.com</a>
+                <a href="mailto:support@theengineeringprojects.com"
+                  class="footer-link d-block">support@theengineeringprojects.com</a>
+              </div>
+              <div class="footer-contact__item mt-5">
+                <div class="d-flex align-items-center mb-2">
+                  <div class="footer-icon flex-center d-flex mr-2">
+                    <i class="fas fa-plus-circle"></i>
+                  </div>
+                  <span class="footer-contact__title clor-dark">Follow us </span>
+                </div>
+                <span class="footer-link noHover d-block mb-3">Follow us on social media</span>
+                <div class="d-flex align-items-center">
+                  <a href="#" class="text-decoration-none">
+                    <div class="footer-icon flex-center d-flex mr-2">
+                      <i class="fab fa-twitter"></i>
+                    </div>
+                  </a>
+                  <a href="#" class="text-decoration-none">
+                    <div class="footer-icon flex-center d-flex mr-2">
+                      <i class="fab fa-facebook-squarefab fa-facebook-f"></i>
+                    </div>
+                  </a>
+                  <a href="#" class="text-decoration-none">
+                    <div class="footer-icon flex-center d-flex mr-2">
+                      <i class="fab fa-youtube"></i>
+                    </div>
+                  </a>
+                  <a href="#" class="text-decoration-none">
+                    <div class="footer-icon flex-center d-flex mr-2">
+                      <i class="fab fa-pinterest-p"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="footer-bottom py-3">
+        <div class="flex-col w-100 pr-4 pl-0 d-none d-md-flex">
+          <nav class="footer-nav ml-md-auto ml-5 pl-5">
+            <a href="#" class="footer-bottom__link ml-xl-5 ml-lg-4 ml-md-3 ml-sm-3">TERMS & CONDITIONS</a>
+            <a href="#" class="footer-bottom__link ml-xl-5 ml-lg-4 ml-md-3 ml-sm-3">PRIVACY & POLICY</a>
+            <a href="#" class="footer-bottom__link ml-xl-5 ml-lg-4 ml-md-3 ml-sm-3">DISCLAMIER</a>
+            <a href="#" class="footer-bottom__link ml-xl-5 ml-lg-4 ml-md-3 ml-sm-3">CONTACT US</a>
+          </nav>
+        </div>
+        <div class="container mt-md-n4">
+          <div class="row">
+            <div class="col-12 d-flex">
+              <div class="d-flex align-items-center footer-copyright__wrap">
+                <img src="img/logo.png" alt="" class="footer-logo mr-md-2 mb-3 mb-md-0">
+                <div class="flex-col d-flex d-md-none mb-3 mb-md-0">
+                  <nav class="footer-nav flex-col align-items-center">
+                    <a href="#" class="footer-bottom__link ml-xl-5 ml-lg-4 ml-md-3 mx-sm-0">TERMS & CONDITIONS</a>
+                    <a href="#" class="footer-bottom__link ml-xl-5 ml-lg-4 ml-md-3 mx-sm-0">PRIVACY & POLICY</a>
+                    <a href="#" class="footer-bottom__link ml-xl-5 ml-lg-4 ml-md-3 mx-sm-">DISCLAMIER</a>
+                    <a href="#" class="footer-bottom__link ml-xl-5 ml-lg-4 ml-md-3 mx-sm-0">CONTACT US</a>
+                  </nav>
+                </div>
+                <span class="footer-copyright d-block">Copyright © 2020 TheEngineeringProjects.com. All rights
+                  reserved.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <div class="overlay"></div>
+
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+
+</html>
