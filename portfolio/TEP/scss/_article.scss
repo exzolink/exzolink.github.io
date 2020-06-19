@@ -45,7 +45,7 @@
         &__block {
             display: flex;
             margin: 0 auto;
-            width: 65%;
+            width: 60%;
             justify-content: space-between;
 
             & div {
@@ -237,7 +237,7 @@
         &_sec {
             padding-left: 45px;
             padding-right: 45px;
-            margin-top: 15px;
+            margin-top: 30px;
             font-weight: 400;
 
             & span {
@@ -250,20 +250,33 @@
                 letter-spacing: 0.04px;
                 padding-left: 45px;
                 margin-left: -45px;
+                line-height: 2;
                 position: relative;
                 margin-top: 23px;
+
+                &:first-child {
+                    margin-top: 0;
+                }
 
                 &:before {
                     width: 28px;
                     height: 28px;
-                    top: 0;
+                    top: 5px;
                     position: absolute;
                     left: 0;
                     content: '';
                     background: url('../img/arrowRight.svg');
                     background-repeat: no-repeat;
                 }
+
+                & a {
+                    padding-left: 0;
+                    &:before {
+                        background: none;
+                    }
+                }
             }
+            
         }
     }
 
