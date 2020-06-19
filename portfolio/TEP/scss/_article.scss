@@ -277,12 +277,13 @@
 
                 & a {
                     padding-left: 0;
+
                     &:before {
                         background: none;
                     }
                 }
             }
-            
+
         }
     }
 
@@ -424,6 +425,7 @@
             cursor: pointer;
             opacity: .9;
         }
+
         & div:first-child {
             height: inherit;
             flex-basis: 20%;
@@ -435,6 +437,7 @@
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
         }
+
         & div:last-child {
             flex-basis: 80%;
             color: #fff;
@@ -447,6 +450,96 @@
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
             background-color: #4b81e3;
+        }
+    }
+
+    & .article__go {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0;
+        margin-top: 40px;
+        border-top: 1px dashed #1ebbf0;
+        border-bottom: 1px dashed #1ebbf0;
+
+        & div:first-child {
+            flex-basis: 50%;
+            display: flex;
+            flex-direction: column;
+
+            & a:first-child {
+                display: flex;
+                font-weight: 600;
+                color: #0080ff;
+                font-size: 20px;
+                align-items: center;
+
+                & img {
+                    margin-right: 20px;
+                }
+            }
+
+            & a:last-child {
+                width: 177px;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 20px;
+                height: 46px;
+                background: url('../img/arrowbg.svg');
+                font-size: 24px;
+                font-weight: 500;
+                letter-spacing: 0.05px;
+                margin-top: 20px;
+                text-decoration: none;
+                margin-left: 30px;
+
+                &:hover {
+                    opacity: .9;
+                }
+            }
+        }
+
+        & div:last-child {
+            flex-basis: 50%;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+
+            & a:first-child {
+                display: flex;
+                font-weight: 600;
+                color: #0080ff;
+                font-size: 20px;
+                align-items: center;
+                justify-content: flex-end;
+
+                & img {
+                    margin-left: 20px;
+                }
+            }
+
+            & a:last-child {
+                width: 177px;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-left: auto;
+                padding: 0 20px;
+                height: 46px;
+                text-decoration: none;
+                background: url('../img/arrowbg-right.svg');
+                font-size: 24px;
+                font-weight: 500;
+                letter-spacing: 0.05px;
+                margin-top: 20px;
+                margin-right: 30px;
+
+                &:hover {
+                    opacity: .9;
+                }
+            }
         }
     }
 }
