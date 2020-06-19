@@ -44,6 +44,7 @@
 
         &__block {
             display: flex;
+            margin: 0 auto;
             width: 65%;
             justify-content: space-between;
 
@@ -274,12 +275,11 @@
 
     & .article__note {
         padding-top: 40px;
-        min-height: 535px;
-        max-width: 745px;
+        min-height: 555px;
+        max-width: 765px;
         margin: 0 auto;
         margin-top: 40px;
         width: 100%;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
         background: url('../img/notelist.png') no-repeat;
         position: relative;
 
@@ -363,5 +363,43 @@
 
     & .article__labelled {
         max-width: 950px;
+    }
+
+    & .article__download {
+        display: flex;
+        height: 60px;
+        width: 100%;
+        max-width: 370px;
+        margin: 28px auto;
+        text-decoration: none;
+
+        &:hover {
+            cursor: pointer;
+            opacity: .9;
+        }
+        & div:first-child {
+            height: inherit;
+            flex-basis: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 6px;
+            background-color: #5491ec;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        & div:last-child {
+            flex-basis: 80%;
+            color: #fff;
+            height: 100%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: max-content;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: #4b81e3;
+        }
     }
 }
