@@ -232,6 +232,37 @@
                 background: url('../img/ulList.svg') no-repeat;
             }
         }
+
+        &_sec {
+            padding-left: 45px;
+            padding-right: 45px;
+            margin-top: 15px;
+            font-weight: 400;
+
+            & span {
+                font-weight: 600;
+            }
+
+            & li {
+                color: #1a1a1a;
+                font-size: 20px;
+                letter-spacing: 0.04px;
+                padding-left: 45px;
+                margin-left: -45px;
+                position: relative;
+
+                &:before {
+                    width: 28px;
+                    height: 28px;
+                    top: 0;
+                    position: absolute;
+                    left: 0;
+                    content: '';
+                    background: url('../img/arrowRight.svg');
+                    background-repeat: no-repeat;
+                }
+            }
+        }
     }
 
     & p {
@@ -291,5 +322,46 @@
         margin-bottom: 20px;
         margin-top: 70px;
         letter-spacing: 0.04px;
+    }
+
+    & .article__label {
+        width: 234px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: 600;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+        padding-left: 30px;
+        background: url('../img/layer.png');
+        letter-spacing: 0.05px;
+        background-repeat: no-repeat;
+
+        &_sec {
+            width: 238px;
+            height: 55px;
+            display: flex;
+            padding-left: 15px;
+            padding-bottom: 2px;
+            align-items: center;
+            color: #ffffff;
+            background: url('../img/layer2.png');
+            background-repeat: no-repeat;
+            color: #ffffff;
+            font-size: 19px;
+            font-weight: 600;
+            letter-spacing: 0.04px;
+        }
+
+        &_text {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+
+    & .article__labelled {
+        max-width: 950px;
     }
 }
