@@ -1,3 +1,7 @@
+.sidebar-wrap {
+    min-width: 380px;
+    max-width: 380px;
+}
 .container-articles {
     max-width: 1800px;
 }
@@ -983,6 +987,9 @@
 @media screen and (max-width: 1215px) {
     .article .article__note span:first-child {
         display: none;
+    }
+    .content-wrapper {
+        flex-direction: column;
     }
 
     .article .article__note p span {
