@@ -1216,6 +1216,9 @@
     .article .advert__block div:first-child {
         margin-bottom: 25px;
     }
+    .article .article-meta__wrapper {
+        padding-top: 0;
+    }
 }
 
 @media screen and (max-width: 450px) {
