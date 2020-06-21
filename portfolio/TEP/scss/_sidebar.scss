@@ -12,3 +12,20 @@
     padding-left: 30px;
   }
 }
+
+@media (max-width: 790px) {
+  .sidebar-wrapper {
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .w-fixed {
+    max-width: 100%;
+    width: 100%;
+    min-width: auto !important;
+  }
+  .sidebar-wrapper, .sidebar-wrap {
+    width: 100%;
+  }
+}

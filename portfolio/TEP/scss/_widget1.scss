@@ -17,7 +17,6 @@
 }
 
 .sidebar-img {
-  // width: calc(100% - 20px);
   display: block;
   padding: 10px;
   border: 1px solid #e6e6e6;
@@ -106,13 +105,12 @@
   .widget1-email span {
       font-size: 11px;
   }
+  .widget-1 {
+    order: 3;
+  }
 }
 
 @media (max-width: 991px) {
-  .widget-1 {
-    width: 50%;
-    max-width: calc(50% - 0.25rem);
-  }
   .widget1-items {
     justify-content: flex-start !important;
   }
@@ -134,11 +132,10 @@
 }
 
 @media (max-width: 690px) {
-  .widget-1 {
-    width: 100%;
-    max-width: 100%;
-  }
   .widget1-item {
     align-items: center;
   }
+    .widget-1 {
+      width: inherit;
+    }
 }

@@ -1,6 +1,7 @@
-.sidebar-wrap {
-    min-width: 380px;
-    max-width: 380px;
+.w-fixed {
+    min-width: 380px !important;
+    max-width: 380px !important;
+    height: max-content;
 }
 .container-articles {
     max-width: 1800px;

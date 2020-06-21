@@ -1,0 +1,29 @@
+
+
+.sidebar-img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1199px) {
+  .widget-6 {
+    order: 4;
+    height: inherit;
+  }
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 575px) {
+  .sidebar-title {
+    font-size: 16px;
+  }
+  .sidebar-img {
+    width: 100%;
+  }
+}
+@media (max-width: 690px) {
+  .widget-6 {
+    width: inherit;
+  }
+}

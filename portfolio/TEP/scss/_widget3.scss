@@ -36,8 +36,14 @@
     font-weight: 600;
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .widget-3 {
-
+    order: 2;
   } 
+}
+
+@media (max-width: 690px) {
+  .widget-3 {
+    width: inherit;
+  }
 }

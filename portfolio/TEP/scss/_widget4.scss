@@ -42,16 +42,15 @@
     }
   }
 }
-@media (max-width: 991px) {
+
+@media screen and (max-width: 1199px) {
   .widget-4 {
-    width: 50%;
-    max-width: calc(50% - 0.25rem);
-  } 
+    order: 5;
+  }
 }
 
 @media (max-width: 690px) {
   .widget-4 {
-    width: 100%;
-    max-width: 100%;
+    width: inherit;
   }
 }
