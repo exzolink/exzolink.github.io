@@ -327,6 +327,30 @@ input[type=checkbox]:checked + .checkbox-custom i {
 	font-size: 18px;
 }
 
+.page-breadcrumbs {
+	margin-top: 25px;
+	& a {
+		font-weight: 500;
+		font-size: 18px;
+		position: relative;
+		padding-right: 30px;
+		color: #fff;
+		&:before {
+			content: '>>';
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			right: 12px;
+		}
+		&:last-child {
+			&:before {
+				content: none;
+			}
+		}
+
+	}
+}
+
 .shadow-small {
 	box-shadow: 0 0 0.4rem rgba(0,0,0,.15)!important;
 }
@@ -407,5 +431,10 @@ input[type=checkbox]:checked + .checkbox-custom i {
 	}
 	.page-title {
 		font-size: 26px;
+	}
+	.page-breadcrumbs {
+		& a {
+			font-size: 16px;
+		}
 	}
 }
