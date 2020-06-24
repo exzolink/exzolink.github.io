@@ -39,14 +39,26 @@ $(document).ready(function () {
 
     $('.table-progress__show').click(function () {
         if ($(this).hasClass('opened')) {
-            $(this).parent().find('.table-popup').slideUp(300);
+            $(this).parent().parent().find('.table-popup').slideUp(300);
             $('.table-progress__show').removeClass('opened');
         }
         else {
             $('.table-popup').slideUp(300);
             $('.table-progress__show').removeClass('opened');
-            $(this).parent().find('.table-popup').slideDown(300);
+            $(this).parent().parent().find('.table-popup').slideDown(300);
             $(this).addClass('opened');
+        }
+    });
+
+    $('.graph-checkbox__label').click(function () {
+        if ($('#checkbox_1').is(':checked')) {
+            $('#floors').removeClass('opacity-full');
+            $('#flats').addClass('opacity-full');
+        }
+        else {
+            $('#flats').removeClass('opacity-full');
+            $('#floors').addClass('opacity-full');
+          
         }
     });
 
