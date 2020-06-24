@@ -1,29 +1,28 @@
 $(document).ready(function () {
 
-
-var table1 = $('#interim').DataTable({
-    scrollX: 50000,
+    var table1 = $('#interim').DataTable({
+        scrollX: 50000,
     });
 
     $('#interim_filter_search').on('keyup', function () {
-        table1.search( this.value ).draw();
-    } );
+        table1.search(this.value).draw();
+    });
 
     $('#rowsCount').on('change', function () {
-        table1.page.len( this.value ).draw();
-        
+        table1.page.len(this.value).draw();
+
     });
 
     $('.btn-show').click(function () {
         if ($(this).hasClass('shows')) {
             $(this).html('Раскрыть<img src="images/showW.svg" alt="">');
-            table1.page.len( 10 ).draw();
+            table1.page.len(10).draw();
             $(this).removeClass('shows');
         }
         else {
             $(this).addClass('shows');
             $(this).html('Скрыть<img class="rotate" src="images/showW.svg" alt="">');
-            table1.page.len( -1 ).draw();
+            table1.page.len(-1).draw();
         }
     });
 
@@ -37,20 +36,20 @@ var table1 = $('#interim').DataTable({
         }
     });
 
-    
-$('.table-progress__show').click(function () {
-    if ($(this).hasClass('opened')) {
-        $(this).parent().find('.table-popup').slideUp(300);
-        $('.table-progress__show').removeClass('opened');
-    }
-    else {
-        $('.table-popup').slideUp(300);
-        $('.table-progress__show').removeClass('opened');
-        $(this).parent().find('.table-popup').slideDown(300);
-        $(this).addClass('opened');
-    }
-});
-    
+
+    $('.table-progress__show').click(function () {
+        if ($(this).hasClass('opened')) {
+            $(this).parent().find('.table-popup').slideUp(300);
+            $('.table-progress__show').removeClass('opened');
+        }
+        else {
+            $('.table-popup').slideUp(300);
+            $('.table-progress__show').removeClass('opened');
+            $(this).parent().find('.table-popup').slideDown(300);
+            $(this).addClass('opened');
+        }
+    });
+
 })
 
 
@@ -66,6 +65,7 @@ let houseGallery = new Swiper('.house-gallery .slider', {
 let plans = new Swiper('.plans__container', {
     slidesPerView: 3,
     spaceBetween: 60,
+    centeredSlides: true,
     loop: true,
     navigation: {
         nextEl: '.plans__container .swiper-button-next',
@@ -202,110 +202,165 @@ $('.infra__button').click(function () {
 
 // График планировок
 
-    let doughnutChart = document.getElementById('doughnut').getContext('2d');
-    let gradient1 = doughnutChart.createLinearGradient(0, 0, 0, 100);
-    gradient1.addColorStop(0, '#A972DB');
-    gradient1.addColorStop(1, '#E06FBD');
-    let gradient2 = doughnutChart.createLinearGradient(0, 0, 0, 200);
-    gradient2.addColorStop(0, '#F8968A');
-    gradient2.addColorStop(1, '#EE2E33');
-    let gradient3 = doughnutChart.createLinearGradient(0, 0, 0, 300);
-    gradient3.addColorStop(0, '#F0FF00');
-    gradient3.addColorStop(1, '#FDA128');
-    let gradient4 = doughnutChart.createLinearGradient(0, 0, 0, 100);
-    gradient4.addColorStop(0, '#B3F08A');
-    gradient4.addColorStop(1, '#46D9B6');
-    
-  
-    let options = {
-        type: 'doughnut',
-        data: {
-            labels: ['Студия', '1 к.кв', '2 к.кв', '3 к.кв'],
-            datasets: [
-                {
-                    data: [23, 35, 29, 19],
-                    backgroundColor: [gradient1, gradient2, gradient3, gradient4],
-                    borderWidth: 0,
-                }
-            ]
+let doughnutChart = document.getElementById('doughnut').getContext('2d');
+let gradient1 = doughnutChart.createLinearGradient(0, 0, 0, 100);
+gradient1.addColorStop(0, '#A972DB');
+gradient1.addColorStop(1, '#E06FBD');
+let gradient2 = doughnutChart.createLinearGradient(0, 0, 0, 200);
+gradient2.addColorStop(0, '#F8968A');
+gradient2.addColorStop(1, '#EE2E33');
+let gradient3 = doughnutChart.createLinearGradient(0, 0, 0, 300);
+gradient3.addColorStop(0, '#F0FF00');
+gradient3.addColorStop(1, '#FDA128');
+let gradient4 = doughnutChart.createLinearGradient(0, 0, 0, 100);
+gradient4.addColorStop(0, '#B3F08A');
+gradient4.addColorStop(1, '#46D9B6');
+
+
+let options = {
+    type: 'doughnut',
+    data: {
+        labels: ['Студия', '1 к.кв', '2 к.кв', '3 к.кв'],
+        datasets: [
+            {
+                data: [23, 35, 29, 19],
+                backgroundColor: [gradient1, gradient2, gradient3, gradient4],
+                borderColor: ['#C970CA', '#EF383B', '#FDA128', '#7EE59F'],
+                borderWidth: 0,
+            }
+        ]
+    },
+    options: {
+        elements: {
+            center: {
+                text: '238',
+                color: '#000', // Default is #000000
+                fontStyle: 'FuturaPTMedium', // Default is Arial
+                sidePadding: 32, // Default is 20 (as a percentage)
+                minFontSize: 48, // Default is 20 (in px), set to false and text will not wrap.
+                lineHeight: 62 // Default is 25 (in px), used for when text wraps
+            }
         },
-        options: {
-            elements: {
-                center: {
-                    text: '238',
-                    color: '#000', // Default is #000000
-                    fontStyle: 'FuturaPTMedium', // Default is Arial
-                    sidePadding: 32, // Default is 20 (as a percentage)
-                    minFontSize: 48, // Default is 20 (in px), set to false and text will not wrap.
-                    lineHeight: 62 // Default is 25 (in px), used for when text wraps
-                }
+        // responsive: false,
+        legend: {
+            display: false,
+            position: 'top',
+            labels: {
+                padding: 0,
+                boxWidth: 70,
+                fontSize: 18,
+                fontColor: '#fff',
+                fontFamily: 'FuturaPTMedium, sans-serif',
             },
-            // responsive: false,
-            legend: {
+        },
+        legendCallback: function (chart) {
+            let text = [];
+            text.push('<ul class="doughnut-labels__list">');
+            for (let i = 0; i < chart.data.datasets[0].data.length; i++) {
+                text.push('<li class="doughnut-labels__item" style="background-color:' +
+                    chart.data.datasets[0].backgroundColor[i] + '">');
+                if (chart.data.labels[i]) {
+                    text.push(chart.data.labels[i]);
+                }
+                text.push('</li>');
+            }
+            text.push('</ul>');
+            return text.join("");
+        },
+        layout: {
+            padding: {
+                left: 40,
+                right: 40,
+                top: 0,
+                bottom: 30
+            }
+        },
+        tooltips: {
+            enabled: false,
+
+            custom: function (tooltip) {
+                var tooltipEl = document.getElementById('chartjs-tooltip-don');
+
+                // Hide if no tooltip
+                if (tooltip.opacity === 0) {
+                    tooltipEl.style.opacity = 0;
+                    return;
+                }
+
+                // Set caret Position
+                tooltipEl.classList.remove('above', 'below', 'no-transform');
+                if (tooltip.yAlign) {
+                    tooltipEl.classList.add(tooltip.yAlign);
+                } else {
+                    tooltipEl.classList.add('no-transform');
+                }
+
+                function getBody(bodyItem) {
+                    return bodyItem.lines;
+                }
+
+                // Set Text
+                if (tooltip.body) {
+                    var titleLines = tooltip.title || [];
+                    var bodyLines = tooltip.body.map(getBody);
+
+                    var innerHtml = '<thead>';
+
+                    titleLines.forEach(function (title) {
+                        innerHtml += '<tr><th>' + title + '</th></tr>';
+                    });
+                    innerHtml += '</thead><tbody>';
+                 
+                    bodyLines.forEach(function (body, i) {
+                        var colors = tooltip.labelColors[i];
+                        var style = 'border-color:' + colors.borderColor;
+                        style += '; color:' + colors.borderColor;
+                        var span = '<span class="chartjs-tooltip-key" style="' + style + '">'+ body + '</span>';
+                        innerHtml += '<tr><td>' + span + '</td></tr>';
+                    });
+                    innerHtml += '</tbody>';
+
+                    var tableRoot = tooltipEl.querySelector('table');
+                    tableRoot.innerHTML = innerHtml;
+                }
+
+                var positionY = this._chart.canvas.offsetTop;
+                var positionX = this._chart.canvas.offsetLeft;
+
+                // Display, position, and set styles for font
+                tooltipEl.style.opacity = 1;
+                tooltipEl.style.left = positionX + tooltip.caretX + 'px';
+                tooltipEl.style.top = positionY + tooltip.caretY + 'px';
+                tooltipEl.style.fontFamily = tooltip._bodyFontFamily;
+                tooltipEl.style.fontSize = tooltip.bodyFontSize;
+                tooltipEl.style.fontColor = tooltip.borderColor;
+                tooltipEl.style.fontStyle = tooltip._bodyFontStyle;
+                tooltipEl.style.padding = tooltip.yPadding + 'px ' + tooltip.xPadding + 'px';
+
+            }
+        },
+        scales: {
+            xAxes: [{
                 display: false,
-                position: 'top',
-                labels: {
-                    padding: 0,
-                    boxWidth: 70,
-                    fontSize: 18,
-                    fontColor: '#fff',
-                    fontFamily: 'FuturaPTMedium, sans-serif',
-                },
-            },
-            legendCallback: function (chart) {
-                let text = [];
-                text.push('<ul class="doughnut-labels__list">');
-                for (let i = 0; i < chart.data.datasets[0].data.length; i++) {
-                    text.push('<li class="doughnut-labels__item" style="background-color:' +
-                        chart.data.datasets[0].backgroundColor[i] + '">');
-                    if (chart.data.labels[i]) {
-                        text.push(chart.data.labels[i]);
-                    }
-                    text.push('</li>');
-                }
-                text.push('</ul>');
-                return text.join("");
-            },
-            layout: {
-                padding: {
-                    left: 40,
-                    right: 40,
-                    top: 0,
-                    bottom: 30
-                }
-            },
-            tooltips: {
-                backgroundColor: '#fff',
-                bodyFontColor: '#000',
-                bodyFontSize: 16,
-                borderColor: '#DFE0EB',
-                bodyFontFamily: 'FuturaPTDemi',
-                borderWidth: '1',
-                xPadding: 18,
-                yPadding: 12
-            },
-            scales: {
-                xAxes: [{
-                    display: false,
-                }],
-                yAxes: [{
-                    display: false
-                }]
-            },
-            cutoutPercentage: 60,
-            plugins: {
-                labels: {
-                    render: 'percentage',
-                    fontColor: 'white',
-                    fontSize: 18,
-                    fontFamily: 'FuturaPTMedium, sans-serif',
-                }
+            }],
+            yAxes: [{
+                display: false
+            }]
+        },
+        cutoutPercentage: 60,
+        plugins: {
+            labels: {
+                render: 'percentage',
+                fontColor: 'white',
+                fontSize: 18,
+                fontFamily: 'FuturaPTMedium, sans-serif',
             }
         }
-    };
+    }
+};
 
-  
-    let pie = new Chart(doughnutChart, options);
+
+let pie = new Chart(doughnutChart, options);
 
 
 // Example sliders
@@ -341,24 +396,24 @@ $exampleGoodtabsItem.on('click', (event) => {
 $('.btn-more').click(function () {
     $(this).toggleClass('btn-more_active');
     $(this).parents('.box').find('.box_sec').slideToggle(300);
-  });
+});
 
-  $('.close-btn').click(function () {
+$('.close-btn').click(function () {
     $('.plans__popup').fadeToggle(300);
-  });
+});
 
-  $('.open-plan-popup').click(function () {
+$('.open-plan-popup').click(function () {
     $('.plans__popup').fadeToggle(300);
-  });
+});
 
-  $('#rowsCount').select2({
+$('#rowsCount').select2({
     minimumResultsForSearch: -1,
-  });
+});
 
-  $('.search-input-remove').click(function () {
+$('.search-input-remove').click(function () {
     $('.search-input').val('');
     $('.search-input').trigger('keyup');
-  });
+});
 
 // Example sliders
 $('.example-bad .slider').each(function () {

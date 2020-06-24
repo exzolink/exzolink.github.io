@@ -89,6 +89,7 @@ body {
 .container {
   background-color: #f6f7fb;
   margin-left: 44px;
+  margin-right: 44px;
   padding-top: 3px;
 
 }
@@ -381,7 +382,7 @@ input:-webkit-autofill {
   display: -ms-flexbox;
   display: flex;
   align-items: center;
-  font-family: 'FuturaPTMedium', sans-serif;
+  font-family: 'FuturaPTDemi', sans-serif;
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -1880,7 +1881,7 @@ input:-webkit-autofill {
 }
 
 .table-progress {
-  height: 19px;
+  height: 20px;
   max-width: 75px;
   width: 100%;
   margin-right: 5px;
@@ -1894,12 +1895,12 @@ input:-webkit-autofill {
 }
 
 .table-progress__text-sec {
-  line-height: 19px;
+  line-height: 20px;
   display: block;
   width: 100%;
   text-align: center;
   opacity: 0.8;
-  color: #263038;
+  color: #000;
   font-family: FuturaPTMedium !important;
   font-size: 12px;
   font-weight: 400;
@@ -3511,9 +3512,57 @@ input:-webkit-autofill {
   Страница Жилищный комплекс
 ------------------------------------*/
 .house-2-page__caption {
-  margin-bottom: 28px;
+  margin-bottom: 36px;
+}
+.graph-table-wrapper {
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+}
+.graph-table-wrapper::-webkit-scrollbar {
+  display: block;
+  width: .75rem;
+  background: #fff;
+  height: 8px;
 }
 
+.graph-table-wrapper::-webkit-scrollbar-thumb {
+  background: #6CB7B2;
+  border-radius: 30px;
+}
+
+.graph-table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #61A4A0
+}
+
+.graph-table-wrapper::-webkit-scrollbar-thumb:active {
+  background: #579390
+}
+
+.graph-table-wrapper {
+  scrollbar-width: thin;
+  scrollbar-color: #6CB7B2 #fff;
+}
+.graph-table-wrap {
+  min-width: 1500px;
+  width: 100%;
+}
+.plans__container .swiper-button-prev, .plans__container .swiper-button-next {
+filter: brightness(0) saturate(100%) invert(73%) sepia(28%) saturate(505%) hue-rotate(127deg) brightness(89%) contrast(82%);
+top: 120px;
+}
+.plans__inner .swiper-slide-prev {
+  padding-right: 30px;
+}
+.plans__inner .swiper-slide-next {
+  padding-left: 30px;
+}
+.plans__container .swiper-button-prev {
+  left: -6px;
+}
+.plans__container .swiper-button-next {
+  right: -6px;
+}
 .tabs--small .region-tabs__item {
   padding: 12px 28px 12px 28px;
   font-size: 15px;
@@ -3537,7 +3586,7 @@ input:-webkit-autofill {
 }
 
 .house-gallery {
-  width: 55%;
+  width: 57%;
   max-height: 412px;
   position: relative;
 }
@@ -3691,7 +3740,7 @@ input:-webkit-autofill {
 }
 
 .single-product .product-content {
-  padding: 29px 54px 34px 54px;
+  padding: 29px 40px 34px 54px;
   max-width: 100%;
 }
 
@@ -3782,6 +3831,13 @@ input:-webkit-autofill {
   font-size: 14px;
 }
 
+.result-plan__title {
+  color: #000;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  font-family: 'FuturaPTDemi';
+}
+
 .home__block_desc {
   font-family: 'FuturaPTDemi', sans-serif;
   color: #3D4D58;
@@ -3793,8 +3849,14 @@ input:-webkit-autofill {
   margin-left: 5px;
 }
 
-.home__block_item:nth-child(odd) {
+.home__block_item:nth-child(2n+1) {
   background-color: #F6F7FB;
+}
+.bg-reverse .home__block_item:nth-child(2n) {
+  background-color: #F6F7FB;
+}
+.bg-reverse .home__block_item:nth-child(2n+1) {
+  background-color: transparent;
 }
 
 .mar-left {
@@ -3846,11 +3908,11 @@ input:-webkit-autofill {
   color: #000000;
   opacity: 0.7;
   font-size: 14px;
-  font-family: 'FuturaPTMedium';
+  font-family: 'FuturaPTDemi';
 }
 
 .infra__hidden_block {
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   margin-top: 6px;
   display: none;
 }
@@ -3867,9 +3929,11 @@ input:-webkit-autofill {
   font-size: 14px;
   font-family: 'FuturaPTMedium', sans-serif;
   color: #000;
-  margin-left: 24px;
+  margin-right: 60px;
+  margin-left: auto;
   padding-top: 0;
 }
+
 
 .infra__show-more:hover,
 .infra__button:hover {
@@ -3906,7 +3970,7 @@ input:-webkit-autofill {
 
 .infra__button {
   border-radius: 30px;
-  margin-right: 12px;
+  margin-right: 16px;
   letter-spacing: 0.02em;
   padding: 8px 18px;
   transition: all .2s ease;
@@ -3916,6 +3980,7 @@ input:-webkit-autofill {
   opacity: .7;
   font-size: 16px;
   padding-top: 7px;
+  font-family: 'FuturaPTMedium';
   display: flex;
   align-items: center;
 }
@@ -3954,7 +4019,7 @@ input:-webkit-autofill {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-basis: 40%;
+  width: 37%;
   margin-right: 8px;
   flex-direction: column;
   justify-content: space-between;
@@ -3995,7 +4060,7 @@ input:-webkit-autofill {
 }
 
 .result-plan {
-  width: 60%;
+  width: 63%;
   padding: 28px 34px;
   height: inherit;
   -webkit-box-shadow: 0 2px 36px 2px rgba(0, 0, 0, 0.1);
@@ -4247,6 +4312,21 @@ input:-webkit-autofill {
   font-family: 'FuturaPTMedium';
   padding-right: 20px;
 }
+.finish-table th:nth-child(2) {
+  padding-right: 0;
+}
+.total__table th:nth-child(5) {
+  padding-right: 5px;
+}
+.total__table th:nth-child(6) {
+  padding-right: 5px;
+}
+.total__table th:nth-child(9) {
+  padding-right: 0px;
+}
+.total__table th:nth-child(10) {
+  padding-right: 5px;
+}
 /*----------------------------
   Востребованность этажей
 ------------------------------*/
@@ -4255,9 +4335,13 @@ input:-webkit-autofill {
   margin-right: 8px;
   height: auto;
   padding: 28px 34px;
+  padding-bottom: 44px;
   /*overflow-y: auto;*/
   -webkit-box-shadow: 0 2px 36px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 36px 2px rgba(0, 0, 0, 0.1);
+}
+.fz-15 {
+  font-size: 15px;
 }
 
 .result-flat {
@@ -4324,7 +4408,7 @@ input:-webkit-autofill {
 }
 
 .heat-map__list {
-  padding: 0 35px;
+  padding: 0 27px;
   padding-top: 10px;
   margin: 0 65px;
   position: relative;
@@ -4376,11 +4460,11 @@ input:-webkit-autofill {
   background: #e7ebee;
   -webkit-box-shadow: 2px 3px 73px 22px rgba(117, 141, 139, 0.15);
   box-shadow: 2px 3px 73px 22px rgba(117, 141, 139, 0.15);
-  margin-top: 48px;
+  margin-top: 44px;
 }
 
 .box:nth-child(1) {
-  margin-top: 48px !important;
+  margin-top: 44px !important;
 }
 
 .box_fs {
@@ -4424,6 +4508,7 @@ input:-webkit-autofill {
 
 .graph-table thead td {
   padding-bottom: 20px;
+  min-width: 76px;
 }
 
 .graph-table td {
@@ -4464,13 +4549,23 @@ input:-webkit-autofill {
   line-height: 26px;
   letter-spacing: -0.06px;
 }
-
+#chartjs-tooltip-don {
+  font-family: 'FuturaPTDemi', sans-serif !important;
+  background-color: #fff;
+  padding: 8px 12px !important;
+  border-radius: 6px;
+  font-size: 16px !important;
+  transition: opacity .3s ease;
+  letter-spacing: 0.02em;
+  box-shadow: 0 0 8px 0 rgba(150,150,150,.25);
+}
 #chartjs-tooltip,
 #chartjs-tooltip_2,
 #chartjs-tooltip_3 {
   background: rgba(255, 255, 255, 0.8) !important;
   height: 332px !important;
   width: 95px;
+  transition: opacity .3s ease;
   top: 7px !important;
   -webkit-box-shadow: 0px 0px 73px 22px rgba(117, 141, 139, 0.15);
   box-shadow: 0px 0px 73px 22px rgba(117, 141, 139, 0.15);
@@ -4632,7 +4727,7 @@ input:-webkit-autofill {
 .graph-slider__title {
   color: #848484;
   font-family: FuturaPTBook;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 400;
   display: block;
 }
@@ -4689,7 +4784,7 @@ input:-webkit-autofill {
   transform: rotate(-90deg);
   bottom: 100px;
   font-size: 12px;
-  font-family: 'FuturaPTMedium';
+  font-family: 'FuturaPTBook';
   color: #808080;
   left: -60px;
 }
@@ -5143,11 +5238,14 @@ input:-webkit-autofill {
 .open-plan-popup {
   cursor: pointer;
 }
-
+.mt-x2 {
+  margin-top: 20px !important;
+}
 .plans__desc p:last-child {
   font-family: FuturaPTDemi;
   font-size: 16px;
-  margin-top: 18px;
+  margin-top: 16px;
+  margin-bottom: 0;
 }
 
 .graph-checkbox__wrap {
@@ -5172,7 +5270,9 @@ input:-webkit-autofill {
   position: relative;
   cursor: pointer;
 }
-
+.infra-pb {
+  padding-bottom: 44px !important;
+}
 .graph-checkbox__label::before {
   content: "";
   position: absolute;
@@ -5274,6 +5374,8 @@ input:-webkit-autofill {
 .plans__floor {
   font-family: 'FuturaPTMedium';
   margin-top: 8px;
+  font-size: 12px;
+  line-height: normal;
   padding: 0 6px;
 }
 
@@ -5301,8 +5403,21 @@ input:-webkit-autofill {
   width: 100%;
 }
 
-.plans-table th:first-child{
-  padding-right: 40px;
+.plans-table td {
+  padding: 10px 9px !important;
+  padding-bottom: 12px !important;
+}
+
+.plans-table th:first-child {
+  padding-right: 48px;
+}
+
+.plans-table th:nth-child(3) {
+  padding-right: 26px;
+}
+
+.plans-table th {
+  padding-bottom: 22px !important;
 }
 
 .plans__popup_info {
@@ -5736,6 +5851,7 @@ table.dataTable tbody td {
 
 .dataTables_scrollBody {
   scrollbar-color: #6CB7B2 #fff;
+  scrollbar-width: thin;
 }
 
 .table-progress__show img {
@@ -6084,7 +6200,7 @@ table.dataTable tbody td {
 @media screen and (max-width: 1550px) {
   .house-gallery {
     max-height: none;
-    width: 60%;
+    width: 57%;
   }
 
   .house-gallery__item img {
@@ -6094,10 +6210,21 @@ table.dataTable tbody td {
   .product-info__title {
     flex-basis: 50%;
   }
+  .single-header {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .single-product .product-content {
+    padding-left: 40px;
+  }
+  .type-plan__round-title {
+    padding: 3px 6px;
+    margin-top: 4px;
+  }
 }
 
 
-@media only screen and (max-width: 1450px) {
+@media only screen and (max-width: 1400px) {
   .sidebar {
     width: 230px;
   }

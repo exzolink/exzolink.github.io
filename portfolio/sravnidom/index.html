@@ -186,7 +186,7 @@
 														<div class="table-progress table-progress_sec">
 															<div class="table-progress__bar table-progress__bar-sec"
 																data-progress="20%" style="width: 80%;"></div> <span
-																class="table-progress__text-sec">20%</span>
+																class="table-progress__text-sec fz-15">20%</span>
 														</div>
 													</div>
 												</div>
@@ -347,7 +347,7 @@
 						</div>
 						<div class="house-tabs tabs-wrapper">
 							<div class="house-tabs__wrapper region-wrapper chars-wrapper card">
-								<div class="house-2-page__caption caption caption--icon1">Характеристики ЖК </div>
+								<div class="house-2-page__caption caption caption--icon1">Характеристики ЖК</div>
 								<div class="home__wrapper">
 									<div class="home__block">
 										<div class="home__block_item">
@@ -365,9 +365,9 @@
 										<div class="home__block_item">
 											<h3 class="home__block_title">Количество машиномест:</h3>
 											<p class="home__block_desc">438</p>
-											<h3 class="home__block_title mar-left">Надземных:</h3>
+											<h3 class="home__block_title mar-left">Надземные:</h3>
 											<p class="home__block_desc">438</p>
-											<h3 class="home__block_title mar-left">Подземных:</h3>
+											<h3 class="home__block_title mar-left">Подземные:</h3>
 											<p class="home__block_desc">438</p>
 										</div>
 										<div class="home__block_item">
@@ -401,8 +401,8 @@
 							</div>
 						</div>
 						<div class="house-tabs tabs-wrapper">
-							<div class="house-tabs__wrapper region-wrapper card">
-								<div class="house-2-page__caption caption caption--iconI">Инфраструктура </div>
+							<div class="house-tabs__wrapper region-wrapper card infra-pb">
+								<div class="house-2-page__caption caption caption--iconI">Инфраструктура</div>
 								<div class="home__wrapper">
 									<div class="infra__block">
 										<div class="infra__block_wrapper infra-bg">
@@ -445,11 +445,11 @@
 														alt=""></button>
 											</div>
 										</div>
-										<div class="home__block infra__hidden_block">
+										<div class="home__block infra__hidden_block bg-reverse">
 											<div class="infra__buttons">
 												<button class="infra__button infra__button_active">Все</button>
-												<button class="infra__button">Взрослые</button>
 												<button class="infra__button">Детские</button>
+												<button class="infra__button">Взрослые</button>
 											</div>
 											<div class="home__block_item">
 												<h3 class="home__block_title">АСПЭК-Медцентр - 1,3 км</h3>
@@ -494,7 +494,7 @@
 														alt=""></button>
 											</div>
 										</div>
-										<div class="home__block infra__hidden_block">
+										<div class="home__block infra__hidden_block bg-reverse">
 											<div class="infra__buttons">
 												<button class="infra__button infra__button_active"><img
 														src="images/metro.svg" alt=""></button>
@@ -562,7 +562,7 @@
 														alt=""></button>
 											</div>
 										</div>
-										<div class="home__block infra__hidden_block">
+										<div class="home__block infra__hidden_block bg-reverse">
 											<div class="infra__buttons">
 												<button class="infra__button infra__button_active">Все</button>
 												<button class="infra__button">Магазины</button>
@@ -615,10 +615,15 @@
 										</div>
 									</div>
 									<canvas id="doughnut" height="245" class="chartjs-render-monitor"></canvas>
+									<div id="chartjs-tooltip-don" class="top center"
+										style="opacity: 0; position: absolute; left: 783.364px; top: 7px; font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, &quot;Arial&quot;, sans-serif; font-size: 12px; font-style: normal; padding: 6px; pointer-events: none;">
+										<table></table>
+									</div>
 								</div>
 							</div>
 							<div class="card result-plan" id="result-plan">
-								<div class="card__title result-plan__title results-title">Результаты продаж планировок:</div>
+								<div class="card__title result-plan__title results-title">Результаты продаж планировок:
+								</div>
 								<table class="result-plan__table table">
 									<tbody>
 										<tr>
@@ -707,7 +712,7 @@
 								</table>
 							</div>
 						</div>
-						<div class="total total-card card">
+						<div class="total total-card card infra-pb">
 							<div class="house-2-page__caption caption caption--icon3">Итоговая таблица</div>
 							<table class="total__table finish-table table">
 								<tbody>
@@ -734,8 +739,8 @@
 									</tr>
 									<tr>
 										<td>Студия</td>
-										<td>25,27 м<sup>2</sup></td>
-										<td>25,27 м<sup>2</sup></td>
+										<td>25,27</td>
+										<td>25,27</td>
 										<td>2 000 000</td>
 										<td>7</td>
 										<td>8</td>
@@ -746,8 +751,8 @@
 									</tr>
 									<tr>
 										<td>1 к.кв</td>
-										<td>35,36 м<sup>2</sup></td>
-										<td>25,27 м<sup>2</sup></td>
+										<td>35,36</td>
+										<td>25,27</td>
 										<td>2 000 000</td>
 										<td>5</td>
 										<td>9</td>
@@ -758,8 +763,8 @@
 									</tr>
 									<tr>
 										<td>1.5 к.кв</td>
-										<td>35,36 м<sup>2</sup></td>
-										<td>25,27 м<sup>2</sup></td>
+										<td>35,36</td>
+										<td>25,27</td>
 										<td>2 000 000</td>
 										<td>14</td>
 										<td>31</td>
@@ -770,8 +775,8 @@
 									</tr>
 									<tr>
 										<td>2.5 к.кв</td>
-										<td>85,36 м<sup>2</sup></td>
-										<td>25,27 м<sup>2</sup></td>
+										<td>85,36</td>
+										<td>25,27</td>
 										<td>2 000 000</td>
 										<td>20</td>
 										<td>10</td>
@@ -782,8 +787,8 @@
 									</tr>
 									<tr>
 										<td>3.5 к.кв</td>
-										<td>35,36 м<sup>2</sup></td>
-										<td>25,27 м<sup>2</sup></td>
+										<td>35,36</td>
+										<td>25,27</td>
 										<td>2 000 000</td>
 										<td>12</td>
 										<td>3</td>
@@ -794,8 +799,8 @@
 									</tr>
 									<tr>
 										<td>3.5 к.кв</td>
-										<td>35,36 м<sup>2</sup></td>
-										<td>25,27 м<sup>2</sup></td>
+										<td>35,36</td>
+										<td>25,27</td>
 										<td>2 000 000</td>
 										<td>12</td>
 										<td>3</td>
@@ -806,8 +811,8 @@
 									</tr>
 									<tr>
 										<td>3.5 к.кв</td>
-										<td>35,36 м<sup>2</sup></td>
-										<td>25,27 м<sup>2</sup></td>
+										<td>35,36</td>
+										<td>25,27</td>
 										<td>2 000 000</td>
 										<td>12</td>
 										<td>3</td>
@@ -824,114 +829,150 @@
 							<div class="heat-map card">
 								<div class="house-2-page__caption caption caption--icon4">Востребованность этажей</div>
 								<div class="result-flat__title card__title"
-									style="padding-bottom: 10px; padding-top: 6px; margin-bottom:0">Тепловая карта: </div>
+									style="padding-bottom: 10px; padding-top: 6px; margin-bottom:0;">Тепловая карта:
+								</div>
 								<ul class="heat-map__list">
 									<li class="heat-map__item">
 										<div class="heat-map__item-line">
-											<div class="heat-map__bg" style="background: linear-gradient(270deg, #FB7832 0%, #FB9526 100%);"></div>
+											<div class="heat-map__bg"
+												style="background: linear-gradient(270deg, #FB7832 0%, #FB9526 100%);">
+											</div>
 											<span class="heat-map__floor">1 этаж</span>
 										</div>
 									</li>
 									<li class="heat-map__item">
 										<div class="heat-map__item-line">
-											<div class="heat-map__bg" style="background: linear-gradient(270deg, #11DDBA 0%, #97EC78 98.22%);"></div>
+											<div class="heat-map__bg"
+												style="background: linear-gradient(270deg, #11DDBA 0%, #97EC78 98.22%);">
+											</div>
 											<span class="heat-map__floor">1 этаж</span>
 										</div>
 									</li>
 									<li class="heat-map__item">
 										<div class="heat-map__item-line">
-											<div class="heat-map__bg" style="background: linear-gradient(270deg, #FA5623 0%, #FB9526 100%);"></div>
+											<div class="heat-map__bg"
+												style="background: linear-gradient(270deg, #FA5623 0%, #FB9526 100%);">
+											</div>
 											<span class="heat-map__floor">1 этаж</span>
 										</div>
 									</li>
 									<li class="heat-map__item">
 										<div class="heat-map__item-line">
-											<div class="heat-map__bg" style="background: linear-gradient(267.31deg, #11DDBA 0.41%, #97EC78 99.59%);"></div>
+											<div class="heat-map__bg"
+												style="background: linear-gradient(267.31deg, #11DDBA 0.41%, #97EC78 99.59%);">
+											</div>
 											<span class="heat-map__floor">1 этаж</span>
 										</div>
 									</li>
 									<li class="heat-map__item">
 										<div class="heat-map__item-line">
-											<div class="heat-map__bg" style="background: linear-gradient(270deg, #FECA2F 0%, #F5F263 100%);"></div>
+											<div class="heat-map__bg"
+												style="background: linear-gradient(270deg, #FECA2F 0%, #F5F263 100%);">
+											</div>
 											<span class="heat-map__floor">1 этаж</span>
 										</div>
 									</li>
 									<li class="heat-map__item">
 										<div class="heat-map__item-line">
-											<div class="heat-map__bg" style="background: linear-gradient(269.99deg, #11DDBA 0%, #97EC78 100%);"></div>
+											<div class="heat-map__bg"
+												style="background: linear-gradient(269.99deg, #11DDBA 0%, #97EC78 100%);">
+											</div>
 											<span class="heat-map__floor">1 этаж</span>
 										</div>
 									</li>
 									<li class="heat-map__item">
 										<div class="heat-map__item-line">
-											<div class="heat-map__bg" style="background: linear-gradient(269.99deg, #11DDBA 0%, #97EC78 100%);"></div>
+											<div class="heat-map__bg"
+												style="background: linear-gradient(269.99deg, #11DDBA 0%, #97EC78 100%);">
+											</div>
 											<span class="heat-map__floor">1 этаж</span>
 										</div>
 									</li>
 									<li class="heat-map__item">
 										<div class="heat-map__item-line">
-											<div class="heat-map__bg" style="background: linear-gradient(269.99deg, #11DDBA 0%, #97EC78 100%);"></div>
+											<div class="heat-map__bg"
+												style="background: linear-gradient(269.99deg, #11DDBA 0%, #97EC78 100%);">
+											</div>
 											<span class="heat-map__floor">1 этаж</span>
 										</div>
 									</li>
 									<li class="heat-map__item">
 										<div class="heat-map__item-line">
-											<div class="heat-map__bg" style="background: linear-gradient(270deg, #FECA2F 0%, #F5F263 100%);"></div>
+											<div class="heat-map__bg"
+												style="background: linear-gradient(270deg, #FECA2F 0%, #F5F263 100%);">
+											</div>
 											<span class="heat-map__floor">1 этаж</span>
 										</div>
 									</li>
 									<li class="heat-map__item">
 										<div class="heat-map__item-line">
-											<div class="heat-map__bg" style="background: linear-gradient(269.99deg, #11DDBA 0%, #97EC78 100%);"></div>
+											<div class="heat-map__bg"
+												style="background: linear-gradient(269.99deg, #11DDBA 0%, #97EC78 100%);">
+											</div>
 											<span class="heat-map__floor">1 этаж</span>
 										</div>
 									</li>
 									<li class="heat-map__item">
 										<div class="heat-map__item-line">
-											<div class="heat-map__bg" style="background: linear-gradient(270deg, #FA5623 0%, #FB9526 100%);"></div>
+											<div class="heat-map__bg"
+												style="background: linear-gradient(270deg, #FA5623 0%, #FB9526 100%);">
+											</div>
 											<span class="heat-map__floor">1 этаж</span>
 										</div>
 									</li>
 									<li class="heat-map__item">
 										<div class="heat-map__item-line">
-											<div class="heat-map__bg" style="background: linear-gradient(270deg, #FECA2F 0%, #F5F263 100%);"></div>
+											<div class="heat-map__bg"
+												style="background: linear-gradient(270deg, #FECA2F 0%, #F5F263 100%);">
+											</div>
 											<span class="heat-map__floor">1 этаж</span>
 										</div>
 									</li>
 									<li class="heat-map__item">
 										<div class="heat-map__item-line">
-											<div class="heat-map__bg" style="background: linear-gradient(269.99deg, #11DDBA 0%, #97EC78 100%);"></div>
+											<div class="heat-map__bg"
+												style="background: linear-gradient(269.99deg, #11DDBA 0%, #97EC78 100%);">
+											</div>
 											<span class="heat-map__floor">1 этаж</span>
 										</div>
 									</li>
 									<li class="heat-map__item">
 										<div class="heat-map__item-line">
-											<div class="heat-map__bg" style="background: linear-gradient(269.99deg, #11DDBA 0%, #97EC78 100%);"></div>
+											<div class="heat-map__bg"
+												style="background: linear-gradient(269.99deg, #11DDBA 0%, #97EC78 100%);">
+											</div>
 											<span class="heat-map__floor">1 этаж</span>
 										</div>
 									</li>
 									<li class="heat-map__item">
 										<div class="heat-map__item-line">
-											<div class="heat-map__bg" style="background: linear-gradient(269.99deg, #11DDBA 0%, #97EC78 100%);"></div>
+											<div class="heat-map__bg"
+												style="background: linear-gradient(269.99deg, #11DDBA 0%, #97EC78 100%);">
+											</div>
 											<span class="heat-map__floor">1 этаж</span>
 										</div>
 									</li>
 									<li class="heat-map__item">
 										<div class="heat-map__item-line">
-											<div class="heat-map__bg" style="background: linear-gradient(270deg, #EF5064 0%, #FA5623 100%);"></div>
+											<div class="heat-map__bg"
+												style="background: linear-gradient(270deg, #EF5064 0%, #FA5623 100%);">
+											</div>
 											<span class="heat-map__floor">1 этаж</span>
 										</div>
 									</li>
 									<li class="heat-map__item">
 										<div class="heat-map__item-line">
-											<div class="heat-map__bg" style="background: linear-gradient(270deg, #EF5064 0%, #FA5623 100%);"></div>
+											<div class="heat-map__bg"
+												style="background: linear-gradient(270deg, #EF5064 0%, #FA5623 100%);">
+											</div>
 											<span class="heat-map__floor">1 этаж</span>
 										</div>
 									</li> <img class="enter-icon" src="images/enter.svg" alt="">
 								</ul>
 							</div>
 							<div class="card result-plan" id="result-plan">
-								<div class="card__title result-plan__title results-title">Результаты продаж квартир по этажам:</div>
+								<div class="card__title result-plan__title results-title">Результаты продаж квартир по
+									этажам:</div>
 								<table class="result-plan__table plans-table table">
 									<tbody>
 										<tr>
@@ -1173,7 +1214,7 @@
 										<div class="chartjs-size-monitor-shrink">
 											<div class=""></div>
 										</div>
-									
+
 									</div>
 
 									<canvas id="myChart_1" style="display: block; width: 1134px; height: 377px;"
@@ -1215,99 +1256,133 @@
 							<div class="box_sec box_sec_show box_sec_show_3 box_sec_hidden">
 								<div class="graph-table__wrap">
 									<p class="graph-table__desc">Порядковый месяц со старта продаж</p>
-									<table class="graph-table" width="100%">
-										<thead>
-											<tr>
-												<td>
-													<span class="table-text__sec">ЖК</span>
-												</td>
-												<td>
-													<span class="table-text__sec">1 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">2 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">3 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">4 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">5 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">6 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">7 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">8 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">9 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">10 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">11 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">12 мес.</span>
-												</td>
-											</tr>
-										</thead>
-										<tbody>
-											<tr class="color-tr" data-color="rgba(163, 241, 111,">
-												<td>
-													<span class="table-text__th">ЖК Скандинавия/ дом 1</span>
-												</td>
-												<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
-													<span class="table-text__th">0</span>
-												</td>
-												<td class="color-td bgTable2-1-3" data-color-opacity="0.4">
-													<span class="table-text__th">-0.5</span>
-												</td>
-												<td class="color-td bgTable2-1-6" data-color-opacity="0.6">
-													<span class="table-text__th">0</span>
-												</td>
-												<td class="color-td bgTable2-1-5" data-color-opacity="0.5">
-													<span class="table-text__th">-0.2</span>
-												</td>
-												<td class="color-td bgTable2-1-8" data-color-opacity="0.8">
-													<span class="table-text__th">0.3</span>
-												</td>
-												<td class="color-td bgTable2-1-4" data-color-opacity="0.4">
-													<span class="table-text__th">-0.4</span>
-												</td>
-												<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
-													<span class="table-text__th">-0.55</span>
-												</td>
-												<td class="color-td bgTable2-1-4" data-color-opacity="0.4">
-													<span class="table-text__th">-0.35</span>
-												</td>
-												<td class="color-td bgTable2-2-8" data-color-opacity="0.1">
-													<span class="table-text__th">-0.8</span>
-												</td>
-												<td class="color-td bgTable2-5-30" data-color-opacity="0.4">
-													<span class="table-text__th">-0.35</span>
-												</td>
-												<td class="color-td bgTable2-1-4" data-color-opacity="0.4">
-													<span class="table-text__th">-0.35</span>
-												</td>
-												<td class="color-td bgTable2-4-0" data-color-opacity="0.4">
-													<span class="table-text__th">-0.35</span>
-												</td>
-											</tr>
+									<div class="graph-table-wrapper">
+										<div class="graph-table-wrap">
+											<table id="graph-table" class="graph-table" width="100%">
+												<thead>
+													<tr>
+														<td>
+															<span class="table-text__sec">ЖК</span>
+														</td>
+														<td>
+															<span class="table-text__sec">1 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">2 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">3 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">4 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">5 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">6 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">7 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">8 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">9 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">10 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">11 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">12 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">13 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">14 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">15 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">16 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">17 мес.</span>
+														</td>
+													</tr>
+												</thead>
+												<tbody>
+													<tr class="color-tr" data-color="rgba(163, 241, 111,">
+														<td>
+															<span class="table-text__th">ЖК Скандинавия/ дом 1</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+															<span class="table-text__th">0</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.4">
+															<span class="table-text__th">-0.5</span>
+														</td>
+														<td class="color-td bgTable2-1-6" data-color-opacity="0.6">
+															<span class="table-text__th">0</span>
+														</td>
+														<td class="color-td bgTable2-1-5" data-color-opacity="0.5">
+															<span class="table-text__th">-0.2</span>
+														</td>
+														<td class="color-td bgTable2-1-8" data-color-opacity="0.8">
+															<span class="table-text__th">0.3</span>
+														</td>
+														<td class="color-td bgTable2-1-4" data-color-opacity="0.4">
+															<span class="table-text__th">-0.4</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+															<span class="table-text__th">-0.55</span>
+														</td>
+														<td class="color-td bgTable2-1-4" data-color-opacity="0.4">
+															<span class="table-text__th">-0.35</span>
+														</td>
+														<td class="color-td bgTable2-2-8" data-color-opacity="0.1">
+															<span class="table-text__th">-0.8</span>
+														</td>
+														<td class="color-td bgTable2-5-30" data-color-opacity="0.4">
+															<span class="table-text__th">-0.35</span>
+														</td>
+														<td class="color-td bgTable2-1-4" data-color-opacity="0.4">
+															<span class="table-text__th">-0.35</span>
+														</td>
+														<td class="color-td bgTable2-4-0" data-color-opacity="0.4">
+															<span class="table-text__th">-0.35</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+															<span class="table-text__th">-0.55</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+															<span class="table-text__th">-0.55</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+															<span class="table-text__th">-0.55</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+															<span class="table-text__th">-0.55</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+															<span class="table-text__th">-0.55</span>
+														</td>
+													</tr>
 
-										</tbody>
-									</table>
+												</tbody>
+											</table>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-					
+
 						<div class="box">
 							<div class="box_fs box_fs_rounded">
 								<div class="flex space-between">
@@ -1327,7 +1402,7 @@
 										<div class="chartjs-size-monitor-shrink">
 											<div class=""></div>
 										</div>
-				
+
 									</div>
 
 									<canvas id="myChart_3" style="display: block; width: 1134px; height: 377px;"
@@ -1369,95 +1444,128 @@
 							<div class="box_sec box_sec_show box_sec_show_3 box_sec_hidden">
 								<div class="graph-table__wrap">
 									<p class="graph-table__desc">Порядковый месяц со старта продаж</p>
-									<table class="graph-table" width="100%">
-										<thead>
-											<tr>
-												<td>
-													<span class="table-text__sec">ЖК</span>
-												</td>
-												<td>
-													<span class="table-text__sec">1 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">2 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">3 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">4 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">5 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">6 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">7 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">8 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">9 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">10 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">11 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">12 мес.</span>
-												</td>
-											</tr>
-										</thead>
-										<tbody>
-											<tr class="color-tr" data-color="rgba(163, 241, 111,">
-												<td>
-													<span class="table-text__th">ЖК Скандинавия/ дом 1</span>
-												</td>
-												<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
-													<span class="table-text__th">0</span>
-												</td>
-												<td class="color-td bgTable2-1-3" data-color-opacity="0.4">
-													<span class="table-text__th">-0.5</span>
-												</td>
-												<td class="color-td bgTable2-1-6" data-color-opacity="0.6">
-													<span class="table-text__th">0</span>
-												</td>
-												<td class="color-td bgTable2-1-5" data-color-opacity="0.5">
-													<span class="table-text__th">-0.2</span>
-												</td>
-												<td class="color-td bgTable2-1-8" data-color-opacity="0.8">
-													<span class="table-text__th">0.3</span>
-												</td>
-												<td class="color-td bgTable2-1-4" data-color-opacity="0.4">
-													<span class="table-text__th">-0.4</span>
-												</td>
-												<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
-													<span class="table-text__th">-0.55</span>
-												</td>
-												<td class="color-td bgTable2-1-4" data-color-opacity="0.4">
-													<span class="table-text__th">-0.35</span>
-												</td>
-												<td class="color-td bgTable2-2-8" data-color-opacity="0.1">
-													<span class="table-text__th">-0.8</span>
-												</td>
-												<td class="color-td bgTable2-5-30" data-color-opacity="0.4">
-													<span class="table-text__th">-0.35</span>
-												</td>
-												<td class="color-td bgTable2-1-4" data-color-opacity="0.4">
-													<span class="table-text__th">-0.35</span>
-												</td>
-												<td class="color-td bgTable2-4-0" data-color-opacity="0.4">
-													<span class="table-text__th">-0.35</span>
-												</td>
-											</tr>
-
+									<div class="graph-table-wrapper">
+										<div class="graph-table-wrap">
+											<table id="graph-table" class="graph-table" width="100%">
+												<thead>
+													<tr>
+														<td>
+															<span class="table-text__sec">ЖК</span>
+														</td>
+														<td>
+															<span class="table-text__sec">1 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">2 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">3 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">4 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">5 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">6 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">7 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">8 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">9 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">10 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">11 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">12 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">13 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">14 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">15 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">16 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">17 мес.</span>
+														</td>
+													</tr>
+												</thead>
+												<tbody>
+													<tr class="color-tr" data-color="rgba(163, 241, 111,">
+														<td>
+															<span class="table-text__th">ЖК Скандинавия/ дом 1</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+															<span class="table-text__th">0</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.4">
+															<span class="table-text__th">-0.5</span>
+														</td>
+														<td class="color-td bgTable2-1-6" data-color-opacity="0.6">
+															<span class="table-text__th">0</span>
+														</td>
+														<td class="color-td bgTable2-1-5" data-color-opacity="0.5">
+															<span class="table-text__th">-0.2</span>
+														</td>
+														<td class="color-td bgTable2-1-8" data-color-opacity="0.8">
+															<span class="table-text__th">0.3</span>
+														</td>
+														<td class="color-td bgTable2-1-4" data-color-opacity="0.4">
+															<span class="table-text__th">-0.4</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+															<span class="table-text__th">-0.55</span>
+														</td>
+														<td class="color-td bgTable2-1-4" data-color-opacity="0.4">
+															<span class="table-text__th">-0.35</span>
+														</td>
+														<td class="color-td bgTable2-2-8" data-color-opacity="0.1">
+															<span class="table-text__th">-0.8</span>
+														</td>
+														<td class="color-td bgTable2-5-30" data-color-opacity="0.4">
+															<span class="table-text__th">-0.35</span>
+														</td>
+														<td class="color-td bgTable2-1-4" data-color-opacity="0.4">
+															<span class="table-text__th">-0.35</span>
+														</td>
+														<td class="color-td bgTable2-4-0" data-color-opacity="0.4">
+															<span class="table-text__th">-0.35</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+															<span class="table-text__th">-0.55</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+															<span class="table-text__th">-0.55</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+															<span class="table-text__th">-0.55</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+															<span class="table-text__th">-0.55</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+															<span class="table-text__th">-0.55</span>
+														</td>
+													</tr>
+										</div>
 										</tbody>
-									</table>
+										</table>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1495,7 +1603,8 @@
 											<div class="graph-tooltip__title">0</div>
 										</div>
 									</div>
-									<span class="graph-text__left more-pos">Средняя стоимость за м<sup>2</sup> (тыс. руб)</span>
+									<span class="graph-text__left more-pos">Средняя стоимость за м<sup>2</sup> (тыс.
+										руб)</span>
 								</div>
 								<div class="graph-slider__wrap">
 									<div
@@ -1522,95 +1631,120 @@
 							<div class="box_sec box_sec_show box_sec_show_3 box_sec_hidden">
 								<div class="graph-table__wrap">
 									<p class="graph-table__desc">Порядковый месяц со старта продаж</p>
-									<table class="graph-table" width="100%">
-										<thead>
-											<tr>
-												<td>
-													<span class="table-text__sec">ЖК</span>
-												</td>
-												<td>
-													<span class="table-text__sec">1 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">2 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">3 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">4 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">5 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">6 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">7 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">8 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">9 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">10 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">11 мес.</span>
-												</td>
-												<td>
-													<span class="table-text__sec">12 мес.</span>
-												</td>
-											</tr>
-										</thead>
-										<tbody>
-											<tr class="color-tr" data-color="rgba(163, 241, 111,">
-												<td>
-													<span class="table-text__th">ЖК Скандинавия/ дом 1</span>
-												</td>
-												<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
-													<span class="table-text__th">0</span>
-												</td>
-												<td class="color-td bgTable2-1-3" data-color-opacity="0.4">
-													<span class="table-text__th">-0.5</span>
-												</td>
-												<td class="color-td bgTable2-1-6" data-color-opacity="0.6">
-													<span class="table-text__th">0</span>
-												</td>
-												<td class="color-td bgTable2-1-5" data-color-opacity="0.5">
-													<span class="table-text__th">-0.2</span>
-												</td>
-												<td class="color-td bgTable2-1-8" data-color-opacity="0.8">
-													<span class="table-text__th">0.3</span>
-												</td>
-												<td class="color-td bgTable2-1-4" data-color-opacity="0.4">
-													<span class="table-text__th">-0.4</span>
-												</td>
-												<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
-													<span class="table-text__th">-0.55</span>
-												</td>
-												<td class="color-td bgTable2-1-4" data-color-opacity="0.4">
-													<span class="table-text__th">-0.35</span>
-												</td>
-												<td class="color-td bgTable2-2-8" data-color-opacity="0.1">
-													<span class="table-text__th">-0.8</span>
-												</td>
-												<td class="color-td bgTable2-5-30" data-color-opacity="0.4">
-													<span class="table-text__th">-0.35</span>
-												</td>
-												<td class="color-td bgTable2-1-4" data-color-opacity="0.4">
-													<span class="table-text__th">-0.35</span>
-												</td>
-												<td class="color-td bgTable2-4-0" data-color-opacity="0.4">
-													<span class="table-text__th">-0.35</span>
-												</td>
-											</tr>
+									<div class="graph-table-wrapper">
+										<div class="graph-table-wrap">
+											<table id="graph-table" class="graph-table" width="100%">
+												<thead>
+													<tr>
+														<td>
+															<span class="table-text__sec">ЖК</span>
+														</td>
+														<td>
+															<span class="table-text__sec">1 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">2 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">3 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">4 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">5 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">6 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">7 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">8 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">9 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">10 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">11 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">12 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">13 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">14 мес.</span>
+														</td>
+														<td>
+															<span class="table-text__sec">15 мес.</span>
+														</td>
 
-										</tbody>
-									</table>
+													</tr>
+												</thead>
+												<tbody>
+													<tr class="color-tr" data-color="rgba(163, 241, 111,">
+														<td>
+															<span class="table-text__th">ЖК Скандинавия/ дом 1</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+															<span class="table-text__th">0</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.4">
+															<span class="table-text__th">-0.5</span>
+														</td>
+														<td class="color-td bgTable2-1-6" data-color-opacity="0.6">
+															<span class="table-text__th">0</span>
+														</td>
+														<td class="color-td bgTable2-1-5" data-color-opacity="0.5">
+															<span class="table-text__th">-0.2</span>
+														</td>
+														<td class="color-td bgTable2-1-8" data-color-opacity="0.8">
+															<span class="table-text__th">0.3</span>
+														</td>
+														<td class="color-td bgTable2-1-4" data-color-opacity="0.4">
+															<span class="table-text__th">-0.4</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+															<span class="table-text__th">-0.55</span>
+														</td>
+														<td class="color-td bgTable2-1-4" data-color-opacity="0.4">
+															<span class="table-text__th">-0.35</span>
+														</td>
+														<td class="color-td bgTable2-2-8" data-color-opacity="0.1">
+															<span class="table-text__th">-0.8</span>
+														</td>
+														<td class="color-td bgTable2-5-30" data-color-opacity="0.4">
+															<span class="table-text__th">-0.35</span>
+														</td>
+														<td class="color-td bgTable2-1-4" data-color-opacity="0.4">
+															<span class="table-text__th">-0.35</span>
+														</td>
+														<td class="color-td bgTable2-4-0" data-color-opacity="0.4">
+															<span class="table-text__th">-0.35</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+															<span class="table-text__th">-0.55</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+															<span class="table-text__th">-0.55</span>
+														</td>
+														<td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+															<span class="table-text__th">-0.55</span>
+														</td>
+														
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1722,7 +1856,7 @@
 												<p>1-комнатная квартира</p>
 												<p>стояк: 1,5Б</p>
 												<p>Цена: 1 000 000 - 2 000 000</p>
-												<p>В продаже: 306 дней</p>
+												<p class="mt-x2">В продаже: 306 дней</p>
 												<p>Продано: 10 из 9</p>
 											</div>
 										</div>
@@ -1732,7 +1866,7 @@
 												<p>1-комнатная квартира</p>
 												<p>стояк: 1,5Б</p>
 												<p>Цена: 1 000 000 - 2 000 000</p>
-												<p>В продаже: 306 дней</p>
+												<p class="mt-x2">В продаже: 306 дней</p>
 												<p>Продано: 10 из 9</p>
 											</div>
 										</div>
@@ -1742,7 +1876,7 @@
 												<p>1-комнатная квартира</p>
 												<p>стояк: 1,5Б</p>
 												<p>Цена: 1 000 000 - 2 000 000</p>
-												<p>В продаже: 306 дней</p>
+												<p class="mt-x2">В продаже: 306 дней</p>
 												<p>Продано: 10 из 9</p>
 											</div>
 										</div>
@@ -1752,7 +1886,7 @@
 												<p>1-комнатная квартира</p>
 												<p>стояк: 1,5Б</p>
 												<p>Цена: 1 000 000 - 2 000 000</p>
-												<p>В продаже: 306 дней</p>
+												<p class="mt-x2">В продаже: 306 дней</p>
 												<p>Продано: 10 из 9</p>
 											</div>
 										</div>
@@ -1840,7 +1974,8 @@
 										<p class="interim__info_desc">50%</p>
 									</div>
 								</div>
-								<a href="#" class="total__btn btn-download btn btn--green">Выгрузить промежуточную таблицу
+								<a href="#" class="total__btn btn-download btn btn--green">Выгрузить промежуточную
+									таблицу
 								</a>
 								<table id="interim" class="total__table table interim-table">
 									<thead>
@@ -1849,19 +1984,19 @@
 											<th>Этаж</th>
 											<th>Секция</th>
 											<th>Планировка</th>
-											<th>Площадь, 
+											<th>Площадь,
 												м<sup>2</sup></th>
 											<th>Балкон</th>
 											<th>Лоджия</th>
-											<th>Стоимость, 
+											<th>Стоимость,
 												млн. руб.</th>
 											<th>Стоимость за м<sup>2</sup>, руб</th>
 											<th>Стояк</th>
-											<th>Дата 
+											<th>Дата
 												продажи</th>
-											<th>Период экспозиции 
+											<th>Период экспозиции
 												объекта</th>
-											<th>Способ 
+											<th>Способ
 												оплаты</th>
 											<th>Банк</th>
 										</tr>
@@ -1919,790 +2054,725 @@
 								<div class="table-popup flex-col">
 									<div class="table-popup__item">
 										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
+											<input class="table-checkbox" type="checkbox" name="" id="clear">
 											<label class="label-checkbox" for="clear">1 этаж</label>
 										</div>
 									</div>
 									<div class="table-popup__item">
 										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
+											<input class="table-checkbox" type="checkbox" name="" id="clear">
 											<label class="label-checkbox" for="clear">1</label>
 										</div>
 									</div>
 									<div class="table-popup__item">
 										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
+											<input class="table-checkbox" type="checkbox" name="" id="clear">
 											<label class="label-checkbox" for="clear">1</label>
 										</div>
 									</div>
 									<div class="table-popup__item">
 										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
+											<input class="table-checkbox" type="checkbox" name="" id="clear">
 											<label class="label-checkbox" for="clear">1</label>
 										</div>
 									</div>
 									<div class="table-popup__item">
 										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
+											<input class="table-checkbox" type="checkbox" name="" id="clear">
 											<label class="label-checkbox" for="clear">1</label>
 										</div>
 
 									</div>
 								</div>
-			</div>
-							</td>
-							<td>
-								<div class="table-progress__show">
-									<img src="images/arrowDown.svg" alt="">
+						</div>
+						</td>
+						<td>
+							<div class="table-progress__show">
+								<img src="images/arrowDown.svg" alt="">
+							</div>
+							<div class="table-popup flex-col">
+								<div class="table-popup__item">
+									<div class="dflex">
+										<input class="table-checkbox" type="checkbox" name="" id="clear">
+										<label class="label-checkbox" for="clear">1 этаж</label>
+									</div>
 								</div>
-								<div class="table-popup flex-col">
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1 этаж</label>
-										</div>
+								<div class="table-popup__item">
+									<div class="dflex">
+										<input class="table-checkbox" type="checkbox" name="" id="clear">
+										<label class="label-checkbox" for="clear">1</label>
 									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
+								</div>
+								<div class="table-popup__item">
+									<div class="dflex">
+										<input class="table-checkbox" type="checkbox" name="" id="clear">
+										<label class="label-checkbox" for="clear">1</label>
 									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
+								</div>
+								<div class="table-popup__item">
+									<div class="dflex">
+										<input class="table-checkbox" type="checkbox" name="" id="clear">
+										<label class="label-checkbox" for="clear">1</label>
 									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
+								</div>
+								<div class="table-popup__item">
+									<div class="dflex">
+										<input class="table-checkbox" type="checkbox" name="" id="clear">
+										<label class="label-checkbox" for="clear">1</label>
 									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
 
-									</div>
 								</div>
-			</div>
-							</td>
-							<td>
-								<div class="table-progress__show">
-									<img src="images/arrowDown.svg" alt="">
+							</div>
+					</div>
+					</td>
+					<td>
+						<div class="table-progress__show">
+							<img src="images/arrowDown.svg" alt="">
+						</div>
+						<div class="table-popup flex-col">
+							<div class="table-popup__item">
+								<div class="dflex">
+									<input class="table-checkbox" type="checkbox" name="" id="clear">
+									<label class="label-checkbox" for="clear">1 этаж</label>
 								</div>
-								<div class="table-popup flex-col">
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1 этаж</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
+							</div>
+							<div class="table-popup__item">
+								<div class="dflex">
+									<input class="table-checkbox" type="checkbox" name="" id="clear">
+									<label class="label-checkbox" for="clear">1</label>
+								</div>
+							</div>
+							<div class="table-popup__item">
+								<div class="dflex">
+									<input class="table-checkbox" type="checkbox" name="" id="clear">
+									<label class="label-checkbox" for="clear">1</label>
+								</div>
+							</div>
+							<div class="table-popup__item">
+								<div class="dflex">
+									<input class="table-checkbox" type="checkbox" name="" id="clear">
+									<label class="label-checkbox" for="clear">1</label>
+								</div>
+							</div>
+							<div class="table-popup__item">
+								<div class="dflex">
+									<input class="table-checkbox" type="checkbox" name="" id="clear">
+									<label class="label-checkbox" for="clear">1</label>
+								</div>
 
-									</div>
-								</div>
-			</div>
-							</td>
-							<td>
-								<div class="table-progress__show">
-									<img src="images/arrowDown.svg" alt="">
-								</div>
-								<div class="table-popup flex-col">
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1 этаж</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
+							</div>
+						</div>
+				</div>
+				</td>
+				<td>
+					<div class="table-progress__show">
+						<img src="images/arrowDown.svg" alt="">
+					</div>
+					<div class="table-popup flex-col">
+						<div class="table-popup__item">
+							<div class="dflex">
+								<input class="table-checkbox" type="checkbox" name="" id="clear">
+								<label class="label-checkbox" for="clear">1 этаж</label>
+							</div>
+						</div>
+						<div class="table-popup__item">
+							<div class="dflex">
+								<input class="table-checkbox" type="checkbox" name="" id="clear">
+								<label class="label-checkbox" for="clear">1</label>
+							</div>
+						</div>
+						<div class="table-popup__item">
+							<div class="dflex">
+								<input class="table-checkbox" type="checkbox" name="" id="clear">
+								<label class="label-checkbox" for="clear">1</label>
+							</div>
+						</div>
+						<div class="table-popup__item">
+							<div class="dflex">
+								<input class="table-checkbox" type="checkbox" name="" id="clear">
+								<label class="label-checkbox" for="clear">1</label>
+							</div>
+						</div>
+						<div class="table-popup__item">
+							<div class="dflex">
+								<input class="table-checkbox" type="checkbox" name="" id="clear">
+								<label class="label-checkbox" for="clear">1</label>
+							</div>
 
-									</div>
-								</div>
-			</div>
-							</td>
-							<td>
-								<div class="table-progress__show">
-									<img src="images/arrowDown.svg" alt="">
-								</div>
-								<div class="table-popup flex-col">
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1 этаж</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-
-									</div>
-								</div>
-			</div>
-							</td>
-							<td>
-								<div class="table-progress__show">
-									<img src="images/arrowDown.svg" alt="">
-								</div>
-								<div class="table-popup flex-col">
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1 этаж</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-
-									</div>
-								</div>
-			</div>
-							</td>
-							<td>
-								<div class="table-progress__show">
-									<img src="images/arrowDown.svg" alt="">
-								</div>
-								<div class="table-popup flex-col">
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1 этаж</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-
-									</div>
-								</div>
-			</div>
-							</td>
-							<td>
-								<div class="table-progress__show">
-									<img src="images/arrowDown.svg" alt="">
-								</div>
-								<div class="table-popup flex-col">
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1 этаж</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-
-									</div>
-								</div>
-			</div>
-							</td>
-							<td>
-								<div class="table-progress__show">
-									<img src="images/arrowDown.svg" alt="">
-								</div>
-								<div class="table-popup flex-col">
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1 этаж</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-
-									</div>
-								</div>
-			</div>
-							</td>
-							<td>
-								<div class="table-progress__show">
-									<img src="images/arrowDown.svg" alt="">
-								</div>
-								<div class="table-popup flex-col">
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1 этаж</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-
-									</div>
-								</div>
-			</div>
-							</td>
-							<td>
-								<div class="table-progress__show">
-									<img src="images/arrowDown.svg" alt="">
-								</div>
-								<div class="table-popup flex-col">
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1 этаж</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-
-									</div>
-								</div>
-			</div>
-							</td>
-							<td>
-								<div class="table-progress__show">
-									<img src="images/arrowDown.svg" alt="">
-								</div>
-								<div class="table-popup flex-col">
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1 этаж</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-
-									</div>
-								</div>
-			</div>
-							</td>
-							<td>
-								<div class="table-progress__show">
-									<img src="images/arrowDown.svg" alt="">
-								</div>
-								<div class="table-popup flex-col">
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1 этаж</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-									</div>
-									<div class="table-popup__item">
-										<div class="dflex">
-											<input class="table-checkbox" type="checkbox" name=""
-												id="clear">
-											<label class="label-checkbox" for="clear">1</label>
-										</div>
-
-									</div>
-								</div>
-			</div>
-							</td>
-							</tr>
-
-							<tr>
-								<td>1</td>
-								<td>25,27 м <sup><small>2</small></sup></td>
-								<td>0 ₽</td>
-								<td>15</td>
-								<td>7</td>
-								<td>8</td>
-								<td>46 %</td>
-								<td>42.86 %</td>
-								<td>57.14 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-							</tr>
-
-							<tr>
-								<td>1</td>
-								<td>25,27 м <sup><small>2</small></sup></td>
-								<td>0 ₽</td>
-								<td>15</td>
-								<td>7</td>
-								<td>8</td>
-								<td>46 %</td>
-								<td>42.86 %</td>
-								<td>57.14 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-							</tr>
-
-							<tr>
-								<td>1</td>
-								<td>25,27 м <sup><small>2</small></sup></td>
-								<td>0 ₽</td>
-								<td>15</td>
-								<td>7</td>
-								<td>8</td>
-								<td>46 %</td>
-								<td>42.86 %</td>
-								<td>57.14 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-							</tr>
-
-							<tr>
-								<td>1</td>
-								<td>25,27 м <sup><small>2</small></sup></td>
-								<td>0 ₽</td>
-								<td>15</td>
-								<td>7</td>
-								<td>8</td>
-								<td>46 %</td>
-								<td>42.86 %</td>
-								<td>57.14 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>25,27 м <sup><small>2</small></sup></td>
-								<td>0 ₽</td>
-								<td>15</td>
-								<td>7</td>
-								<td>8</td>
-								<td>46 %</td>
-								<td>42.86 %</td>
-								<td>57.14 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>25,27 м <sup><small>2</small></sup></td>
-								<td>0 ₽</td>
-								<td>15</td>
-								<td>7</td>
-								<td>8</td>
-								<td>46 %</td>
-								<td>42.86 %</td>
-								<td>57.14 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>25,27 м <sup><small>2</small></sup></td>
-								<td>0 ₽</td>
-								<td>15</td>
-								<td>7</td>
-								<td>8</td>
-								<td>46 %</td>
-								<td>42.86 %</td>
-								<td>57.14 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>35,36 м <sup><small>2</small></sup></td>
-								<td>2,050,000₽</td>
-								<td>14</td>
-								<td>5</td>
-								<td>9</td>
-								<td>35 %</td>
-								<td>40.00 %</td>
-								<td>60.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>37,24 м <sup><small>2</small></sup></td>
-								<td>2 130 000 ₽</td>
-								<td>45</td>
-								<td>14</td>
-								<td>31</td>
-								<td>31 %</td>
-								<td>7.14 %</td>
-								<td>92.86 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-							</tr>
-							<tr>
-								<td>2</td>
-								<td>53,0 м <sup><small>2</small></sup></td>
-								<td>2 980 000 ₽</td>
-								<td>30</td>
-								<td>20</td>
-								<td>10</td>
-								<td>66 %</td>
-								<td>10.00 %</td>
-								<td>90.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-							</tr>
-							<tr>
-								<td>3</td>
-								<td>72,1 м <sup><small>2</small></sup></td>
-								<td>0 ₽</td>
-								<td>15</td>
-								<td>12</td>
-								<td>3</td>
-								<td>80 %</td>
-								<td>25.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-							</tr>
-							<tr>
-								<td>3</td>
-								<td>72,1 м <sup><small>2</small></sup></td>
-								<td>0 ₽</td>
-								<td>15</td>
-								<td>12</td>
-								<td>3</td>
-								<td>80 %</td>
-								<td>25.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-							</tr>
-							<tr>
-								<td>30</td>
-								<td>72,1 м <sup><small>2</small></sup></td>
-								<td>0 ₽</td>
-								<td>15</td>
-								<td>12</td>
-								<td>3</td>
-								<td>80 %</td>
-								<td>25.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-								<td>75.00 %</td>
-							</tr>
-							</tbody>
-							</table>
-							<div class="total__btn btn btn--green btn-show">Раскрыть<img src="images/showW.svg" alt=""></div>
 						</div>
 					</div>
-					<!--div class="house-2-page__caption caption caption--icon6">Примеры хорошо продаваемых планировок</div>
+			</div>
+			</td>
+			<td>
+				<div class="table-progress__show">
+					<img src="images/arrowDown.svg" alt="">
+				</div>
+				<div class="table-popup flex-col">
+					<div class="table-popup__item">
+						<div class="dflex">
+							<input class="table-checkbox" type="checkbox" name="" id="clear">
+							<label class="label-checkbox" for="clear">1 этаж</label>
+						</div>
+					</div>
+					<div class="table-popup__item">
+						<div class="dflex">
+							<input class="table-checkbox" type="checkbox" name="" id="clear">
+							<label class="label-checkbox" for="clear">1</label>
+						</div>
+					</div>
+					<div class="table-popup__item">
+						<div class="dflex">
+							<input class="table-checkbox" type="checkbox" name="" id="clear">
+							<label class="label-checkbox" for="clear">1</label>
+						</div>
+					</div>
+					<div class="table-popup__item">
+						<div class="dflex">
+							<input class="table-checkbox" type="checkbox" name="" id="clear">
+							<label class="label-checkbox" for="clear">1</label>
+						</div>
+					</div>
+					<div class="table-popup__item">
+						<div class="dflex">
+							<input class="table-checkbox" type="checkbox" name="" id="clear">
+							<label class="label-checkbox" for="clear">1</label>
+						</div>
+
+					</div>
+				</div>
+		</div>
+		</td>
+		<td>
+			<div class="table-progress__show">
+				<img src="images/arrowDown.svg" alt="">
+			</div>
+			<div class="table-popup flex-col">
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1 этаж</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+
+				</div>
+			</div>
+			</div>
+		</td>
+		<td>
+			<div class="table-progress__show">
+				<img src="images/arrowDown.svg" alt="">
+			</div>
+			<div class="table-popup flex-col">
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1 этаж</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+
+				</div>
+			</div>
+			</div>
+		</td>
+		<td>
+			<div class="table-progress__show">
+				<img src="images/arrowDown.svg" alt="">
+			</div>
+			<div class="table-popup flex-col">
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1 этаж</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+
+				</div>
+			</div>
+			</div>
+		</td>
+		<td>
+			<div class="table-progress__show">
+				<img src="images/arrowDown.svg" alt="">
+			</div>
+			<div class="table-popup flex-col">
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1 этаж</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+
+				</div>
+			</div>
+			</div>
+		</td>
+		<td>
+			<div class="table-progress__show">
+				<img src="images/arrowDown.svg" alt="">
+			</div>
+			<div class="table-popup flex-col">
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1 этаж</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+
+				</div>
+			</div>
+			</div>
+		</td>
+		<td>
+			<div class="table-progress__show">
+				<img src="images/arrowDown.svg" alt="">
+			</div>
+			<div class="table-popup flex-col">
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1 этаж</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+
+				</div>
+			</div>
+			</div>
+		</td>
+		<td>
+			<div class="table-progress__show">
+				<img src="images/arrowDown.svg" alt="">
+			</div>
+			<div class="table-popup flex-col">
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1 этаж</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+
+				</div>
+			</div>
+			</div>
+		</td>
+		<td>
+			<div class="table-progress__show">
+				<img src="images/arrowDown.svg" alt="">
+			</div>
+			<div class="table-popup flex-col">
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1 этаж</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+				</div>
+				<div class="table-popup__item">
+					<div class="dflex">
+						<input class="table-checkbox" type="checkbox" name="" id="clear">
+						<label class="label-checkbox" for="clear">1</label>
+					</div>
+
+				</div>
+			</div>
+			</div>
+		</td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td>25,27 м <sup><small>2</small></sup></td>
+			<td>0 ₽</td>
+			<td>15</td>
+			<td>7</td>
+			<td>8</td>
+			<td>46 %</td>
+			<td>42.86 %</td>
+			<td>57.14 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td>25,27 м <sup><small>2</small></sup></td>
+			<td>0 ₽</td>
+			<td>15</td>
+			<td>7</td>
+			<td>8</td>
+			<td>46 %</td>
+			<td>42.86 %</td>
+			<td>57.14 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td>25,27 м <sup><small>2</small></sup></td>
+			<td>0 ₽</td>
+			<td>15</td>
+			<td>7</td>
+			<td>8</td>
+			<td>46 %</td>
+			<td>42.86 %</td>
+			<td>57.14 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td>25,27 м <sup><small>2</small></sup></td>
+			<td>0 ₽</td>
+			<td>15</td>
+			<td>7</td>
+			<td>8</td>
+			<td>46 %</td>
+			<td>42.86 %</td>
+			<td>57.14 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>25,27 м <sup><small>2</small></sup></td>
+			<td>0 ₽</td>
+			<td>15</td>
+			<td>7</td>
+			<td>8</td>
+			<td>46 %</td>
+			<td>42.86 %</td>
+			<td>57.14 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>25,27 м <sup><small>2</small></sup></td>
+			<td>0 ₽</td>
+			<td>15</td>
+			<td>7</td>
+			<td>8</td>
+			<td>46 %</td>
+			<td>42.86 %</td>
+			<td>57.14 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>25,27 м <sup><small>2</small></sup></td>
+			<td>0 ₽</td>
+			<td>15</td>
+			<td>7</td>
+			<td>8</td>
+			<td>46 %</td>
+			<td>42.86 %</td>
+			<td>57.14 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>35,36 м <sup><small>2</small></sup></td>
+			<td>2,050,000₽</td>
+			<td>14</td>
+			<td>5</td>
+			<td>9</td>
+			<td>35 %</td>
+			<td>40.00 %</td>
+			<td>60.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>37,24 м <sup><small>2</small></sup></td>
+			<td>2 130 000 ₽</td>
+			<td>45</td>
+			<td>14</td>
+			<td>31</td>
+			<td>31 %</td>
+			<td>7.14 %</td>
+			<td>92.86 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>53,0 м <sup><small>2</small></sup></td>
+			<td>2 980 000 ₽</td>
+			<td>30</td>
+			<td>20</td>
+			<td>10</td>
+			<td>66 %</td>
+			<td>10.00 %</td>
+			<td>90.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>72,1 м <sup><small>2</small></sup></td>
+			<td>0 ₽</td>
+			<td>15</td>
+			<td>12</td>
+			<td>3</td>
+			<td>80 %</td>
+			<td>25.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>72,1 м <sup><small>2</small></sup></td>
+			<td>0 ₽</td>
+			<td>15</td>
+			<td>12</td>
+			<td>3</td>
+			<td>80 %</td>
+			<td>25.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+		</tr>
+		<tr>
+			<td>30</td>
+			<td>72,1 м <sup><small>2</small></sup></td>
+			<td>0 ₽</td>
+			<td>15</td>
+			<td>12</td>
+			<td>3</td>
+			<td>80 %</td>
+			<td>25.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+			<td>75.00 %</td>
+		</tr>
+		</tbody>
+		</table>
+		<div class="total__btn btn btn--green btn-show">Раскрыть<img src="images/showW.svg" alt=""></div>
+		</div>
+		</div>
+		<!--div class="house-2-page__caption caption caption--icon6">Примеры хорошо продаваемых планировок</div>
 				<div class="example-good tabs-wrapper">
 					<ul class="example-tabs region-tabs tabs--small">
 						<li class="region-tabs__item region-tabs--active" data-attr="1">Студия</li>
@@ -2964,7 +3034,7 @@
 						</div>
 					</div>
 				</div-->
-					<!--div class="house-2-page__caption caption caption--icon7">Примеры плохо продаваемых планировок</div>
+		<!--div class="house-2-page__caption caption caption--icon7">Примеры плохо продаваемых планировок</div>
 				<div class="example-bad tabs-wrapper">
 					<ul class="example-tabs region-tabs tabs--small">
 						<li class="region-tabs__item region-tabs--active" data-attr="ex1">Студия</li>
@@ -3273,7 +3343,7 @@
 					</div>
 
 				</div-->
-					<!--div class="house-2-page__caption caption caption--icon9">Документы</div>
+		<!--div class="house-2-page__caption caption caption--icon9">Документы</div>
 				<div class="card documents">
 					<div class="documents__wrapper">
 						<a href="#" class="documents__link">Проектная декларация</a>
@@ -3285,64 +3355,64 @@
 					</div>
 				</div-->
 
-					<div class="contacts card">
-						<div class="house-2-page__caption caption caption--icon10">Контактная информация</div>
-						<table class="contacts__table table">
-							<tbody>
-								<tr>
-									<th>Сайт застройщика</th>
-									<th>Телефон продаж</th>
-									<th>Страница VK</th>
-									<th>Страница Facebook</th>
-									<th>Страница Instagram</th>
-								</tr>
-								<tr>
-									<td> <a target="_blank" href="https://наш.дом.рф">https://наш.дом.рф</a>
-									</td>
-									<td>+7(341)265-10-11</td>
-									<td> — </td>
-									<td> — </td>
-									<td> — </td>
-								</tr>
-								<tr>
-									<td> <a target="_blank" href="https://наш.дом.рф">https://наш.дом.рф</a>
-									</td>
-									<td>+7(341)265-10-11</td>
-									<td> — </td>
-									<td> — </td>
-									<td> — </td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-			<!-- Alerts -->
-			<div class="alert-box alert--info" id="info">
-				<div class="alert__title">Информация для юзера.</div>
-				<div class="alert__close">&times;</div>
-			</div>
-			<div class="alert-box alert--error" id="error">
-				<div class="alert__title">Ошибка! Введите данные заново!</div>
-				<div class="alert__close">&times;</div>
-			</div>
-			<div class="alert-box alert--success" id="success">
-				<div class="alert__title">Координаты сохранены!</div>
-				<div class="alert__close">&times;</div>
-			</div>
-			<div class="alert-box alert--info alert--dark" id="info-dark">
-				<div class="alert__title">Информация для юзера.</div>
-				<div class="alert__close">&times;</div>
-			</div>
-			<div class="alert-box alert--error alert--dark" id="error-dark">
-				<div class="alert__title">Ошибка! Введите данные заново!</div>
-				<div class="alert__close">&times;</div>
-			</div>
-			<div class="alert-box alert--success alert--dark" id="success-dark">
-				<div class="alert__title">Координаты сохранены!</div>
-				<div class="alert__close">&times;</div>
-			</div>
-			<!-- Alerts end-->
+		<div class="contacts card">
+			<div class="house-2-page__caption caption caption--icon10">Контактная информация</div>
+			<table class="contacts__table table">
+				<tbody>
+					<tr>
+						<th>Сайт застройщика</th>
+						<th>Телефон продаж</th>
+						<th>Страница VK</th>
+						<th>Страница Facebook</th>
+						<th>Страница Instagram</th>
+					</tr>
+					<tr>
+						<td> <a target="_blank" href="https://наш.дом.рф">https://наш.дом.рф</a>
+						</td>
+						<td>+7(341)265-10-11</td>
+						<td> — </td>
+						<td> — </td>
+						<td> — </td>
+					</tr>
+					<tr>
+						<td> <a target="_blank" href="https://наш.дом.рф">https://наш.дом.рф</a>
+						</td>
+						<td>+7(341)265-10-11</td>
+						<td> — </td>
+						<td> — </td>
+						<td> — </td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		</div>
+		<!-- Alerts -->
+		<div class="alert-box alert--info" id="info">
+			<div class="alert__title">Информация для юзера.</div>
+			<div class="alert__close">&times;</div>
+		</div>
+		<div class="alert-box alert--error" id="error">
+			<div class="alert__title">Ошибка! Введите данные заново!</div>
+			<div class="alert__close">&times;</div>
+		</div>
+		<div class="alert-box alert--success" id="success">
+			<div class="alert__title">Координаты сохранены!</div>
+			<div class="alert__close">&times;</div>
+		</div>
+		<div class="alert-box alert--info alert--dark" id="info-dark">
+			<div class="alert__title">Информация для юзера.</div>
+			<div class="alert__close">&times;</div>
+		</div>
+		<div class="alert-box alert--error alert--dark" id="error-dark">
+			<div class="alert__title">Ошибка! Введите данные заново!</div>
+			<div class="alert__close">&times;</div>
+		</div>
+		<div class="alert-box alert--success alert--dark" id="success-dark">
+			<div class="alert__title">Координаты сохранены!</div>
+			<div class="alert__close">&times;</div>
+		</div>
+		<!-- Alerts end-->
 		</div>
 		</div>
 		<script src="libs/jquery-3.4.1.min.js"></script>
