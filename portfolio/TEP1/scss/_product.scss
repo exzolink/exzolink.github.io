@@ -1,11 +1,13 @@
 .product-wrap {
-
-  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.12);
   background-color: #fff;
-  border-radius: .5em;
   width: 100%;
   padding-top: 40px !important;
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+}
 
+.product__inner {
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.12);
 }
 
 .product-wrapper {
