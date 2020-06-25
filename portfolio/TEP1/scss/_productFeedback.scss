@@ -24,6 +24,7 @@
     font-weight: 500;
     font-size: 18px;
     transition: opacity .3s ease;
+
     &:hover {
       opacity: .85;
     }
@@ -48,6 +49,11 @@
   }
 
   &-form {
+    &__wrap {
+      border-bottom-left-radius: .5em;
+      border-bottom-right-radius: .5em;
+    }
+
     &__title {
       color: #1a1a1a;
       font-size: 24px;
@@ -71,12 +77,15 @@
     color: #1a1a1a;
     font-size: 24px;
     font-weight: 400;
+
     & span {
       color: #fbb03b;
     }
   }
+
   &-label__form {
     margin-top: 72px;
+
     & strong {
       margin-bottom: 22px;
     }
@@ -96,9 +105,11 @@
     }
 
   }
+
   &-textarea {
     min-height: 168px;
   }
+
   &-rating i {
     opacity: 1 !important;
 
@@ -116,10 +127,11 @@
     color: #ffd54f;
     transition: 0.15s;
     margin-right: 6px;
-    cursor: pointer;
+
     &:last-child {
       margin-right: 0;
     }
+
     &.active {
       font-weight: 900 !important;
     }
@@ -128,6 +140,10 @@
   &-stars:hover i {
     opacity: 1;
   }
+}
+
+.feedback-form .feedback-stars i {
+  cursor: pointer;
 }
 
 @media (max-width: 991px) {

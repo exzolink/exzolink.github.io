@@ -10,11 +10,16 @@
   background: linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%);
   padding: 13px 0 13px 10px;
 }
+.sidebar-wrapper {
+  padding-left: 30px;
+}
 
 
-@media (min-width: 991px) {
-  .sidebar-wrap {
-    padding-left: 30px;
+@media (max-width: 1365px) {
+  .sidebar-wrapper {
+    flex-direction: row;
+    margin-top: 40px;
+    padding-left: 0;
   }
 }
 
