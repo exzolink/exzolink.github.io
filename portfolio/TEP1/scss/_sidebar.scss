@@ -1,0 +1,36 @@
+.w-fixed {
+  min-width: 380px !important;
+  max-width: 380px !important;
+  height: max-content;
+}
+.sidebar-title {
+  font-size: 20px;
+  color: white;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%);
+  padding: 13px 0 13px 10px;
+}
+
+
+@media (min-width: 991px) {
+  .sidebar-wrap {
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 790px) {
+  .sidebar-wrapper {
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .w-fixed {
+    max-width: 100%;
+    width: 100%;
+    min-width: auto !important;
+  }
+  .sidebar-wrapper, .sidebar-wrap {
+    width: 100%;
+  }
+}

@@ -1,0 +1,40 @@
+.sidebar-wrap {
+  max-width: 335px;
+  min-width: 335px;
+}
+
+@media (max-width: 1199px) {
+  .sidebar-wrap {
+    border-top: 1px solid #e6e6e6;
+    max-width: 100%;
+    min-width: 100%;
+    padding-top: 40px;
+  }
+  .sidebar {
+    justify-content: space-between;
+    flex-direction: row;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .widget {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(33% - 20px) !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    flex-wrap: wrap;
+  }
+  .widget {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(50% - 20px) !important;
+  }
+}
+@media (max-width: 546px) {
+  .widget {
+    width: calc(100% - 20px) !important;
+  }
+}

@@ -1,0 +1,297 @@
+.product-wrap {
+
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+  border-radius: .5em;
+  width: 100%;
+  padding-top: 40px !important;
+
+}
+
+.product-wrapper {
+  max-width: 1360px;
+  width: 100%;
+  padding-right: 30px;
+
+  border-right: 1px solid #e6e6e6;
+}
+
+.container-product {
+  max-width: 1800px;
+}
+
+.mh-img {
+  min-height: 177px;
+}
+
+.page-title-item {
+  text-transform: uppercase;
+}
+
+.product-offer__text {
+  & h4 {
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 0;
+    font-weight: 500;
+  }
+
+  & p {
+    color: #999999;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+.product {
+  margin-top: 167px;
+
+  &-title {
+    color: #1a1a1a;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: .4em;
+  }
+
+  &-desc {
+    color: #1a1a1a;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &-price {
+    color: #333333;
+    font-size: 22px;
+    margin-bottom: 1em;
+    font-weight: 500;
+  }
+
+  &-meta {
+    background-color: #edf5ff;
+
+    &__label {
+      color: #1a1a1a;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    &__links,
+    &__links a {
+      color: #808080;
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    &__links a {
+      &:hover {
+        color: $color-1;
+        text-decoration: none !important;
+      }
+    }
+    & a {
+      &:hover {
+        color: $color-1;
+        text-decoration: none !important;
+      }
+    }
+  }
+
+  &-related__title {
+    color: #1a1a1a;
+    margin-top: 42px;
+    font-size: 24px;
+    margin-bottom: 42px;
+    font-weight: bold;
+  }
+
+  &-btns {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 45px;
+  }
+
+  &-btn {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+    border-left: 1px solid #e6e6e6;
+    display: flex;
+    transition: opacity .2s ease;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    & a {
+      border: 0;
+      padding: 0;
+      box-shadow: none;
+      background-color: transparent;
+    }
+
+    &:last-child {
+      margin-left: 30px;
+    }
+
+    &-cart {
+      position: absolute;
+      background-color: #8cc63f;
+      border-radius: 50%;
+      width: 21px;
+      height: 21px;
+      display: flex;
+      font-size: 12px;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      top: 0px;
+      right: -8px;
+    }
+
+    &:hover {
+      opacity: .85;
+    }
+  }
+}
+
+.add-cart__input {
+  background: transparent;
+  display: block;
+  border: 1px solid rgb(218, 218, 218);
+  width: 117px;
+  padding: 7px 22px;
+  font-size: 24px;
+  font-weight: 400;
+  border-radius: 5px;
+  border: 1px solid #fbb03b;
+  transition: 0.3s;
+
+  &:focus {
+    border-color: $color-1;
+  }
+}
+
+.nav-link {
+  color: #00cdff !important;
+
+font-size: 24px !important;
+font-weight: 700 !important;
+}
+.nav-link.active {
+  color: #1a1a1a !important;
+}
+.product-desc__ful {
+color: #4d4d4d;
+font-size: 18px;
+font-weight: 400;
+line-height: 1.8;
+letter-spacing: 0.9px;
+}
+
+.add-wishlist {
+  border: 0;
+  background-color: #fff;
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+  transition: opacity .3s ease;
+  margin-top: 48px;
+
+  & img {
+    margin-right: 15px;
+  }
+
+  &:hover {
+    opacity: .85;
+  }
+}
+
+.add-cart__btn {
+  border-radius: 5px;
+  height: 52px;
+  padding: 46px;
+  background: #fbb03b !important;
+  border: 0 !important;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity .3s ease;
+
+  &:hover {
+    opacity: .85;
+  }
+
+  & img {
+    margin-right: 8px;
+  }
+}
+
+.product-offer {
+  &__icon {
+    width: 50px;
+    font-size: 2.4rem;
+    display: block;
+  }
+
+  &__text {
+    font-size: 1rem;
+
+  }
+}
+
+
+
+@media (max-width: 1199px) {
+  .product-wrap {
+    width: 100%;
+    max-width: 100%;
+    border-right: none;
+  }
+}
+
+
+
+
+@media (max-width: 460px) {
+
+  .product-title {
+    font-size: 1.5rem;
+  }
+
+  .product-price {
+    font-size: 1.9rem;
+    font-weight: 600;
+  }
+
+  .product-related__title {
+    font-size: 1.5rem;
+  }
+}
+
+.breadcrumbs-wrap {
+  display: flex;
+}
+
+.breadcrumbs-wrap a {
+  display: block;
+  padding-right: 10px;
+  position: relative;
+  color: #333;
+  transition: 0.3s;
+}
+
+.breadcrumbs-wrap a:hover {
+  color: $color-1;
+  text-decoration: none;
+}
+
+.breadcrumbs-wrap a::after {
+  content: "/";
+  padding-left: 10px;
+}
+
+.breadcrumbs-wrap a:last-child::after {
+  content: none !important;
+}
