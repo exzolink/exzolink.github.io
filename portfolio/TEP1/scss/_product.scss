@@ -441,6 +441,18 @@ letter-spacing: 0.9px;
       content: none !important;
     }
   }
+  .slider-lg__slide {
+    height: 250px !important;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .slider-lg__slide {
+    height: 210px !important;
+  }
+  .nav-link {
+    font-size: 14px !important;
+  }
 }
 
 

@@ -82,7 +82,17 @@
     ]
   });
 
-
+  $('.add-wishlist').click(function () {
+    if ($(this).hasClass('added')) {
+      $(this).removeClass('added');
+      $('.add-wishlist span').text('add to wishlist');
+    }
+    else {
+      $(this).addClass('added');
+      $('.add-wishlist span').text('added');
+    }
+    
+  });
 
   // overview slider 
   $('#slider-lg .slider-lg__item').on('click', function() {
