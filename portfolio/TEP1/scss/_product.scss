@@ -46,6 +46,10 @@
 .product {
   margin-top: 167px;
 
+  &-hero {
+    display: flex;
+  }
+
   &-title {
     color: #1a1a1a;
     font-size: 24px;

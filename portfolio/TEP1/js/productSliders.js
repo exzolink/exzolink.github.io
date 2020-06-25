@@ -1,4 +1,4 @@
-$(document).ready(function() {
+
 
   $('#slider-lg').slick({
     infinite: true,
@@ -85,5 +85,3 @@ $(document).ready(function() {
     }
   });
 
-
-});
