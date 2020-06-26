@@ -1,7 +1,7 @@
 .page {
 
     &__rightside {
-        width: 50%;
+        width: 100%;
         min-height: 565px;
         display: flex;
         flex-direction: column;
@@ -41,6 +41,7 @@
         margin-top: 20px;
         flex-direction: column;
         align-items: center;
+        font-weight: 300;
     }
     &__links {
         margin-top: 20px;
@@ -50,5 +51,67 @@
     }
     &__link img {
         height: 43px;
+    }
+}
+
+
+@media screen and (max-width: 1600px) {
+    .page {
+        &__rightside {
+            width: 100%;
+        }
+        &__download {
+            width: 65%;
+        }
+        &__info {
+            width: 65%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .page {
+        &__rightside {
+            width: 100%;
+            align-items: center;
+        }
+        &__download {
+            width: 80%;
+        }
+        &__info {
+            width: 80%;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .page {
+        &__rightside {
+            width: 100%;
+        }
+        &__download {
+            width: 90%;
+        }
+        &__info {
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .page {
+        &__info {
+            width: 100%;
+            padding: 5%;
+        }
+        &__links {
+            justify-content: center !important;
+        }
+        &__link {
+            &:first-child {
+                margin-right: 50px;
+            }
+        }
     }
 }

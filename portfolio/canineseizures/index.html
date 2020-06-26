@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>canineseizures</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/swiper.min.css">
         <link rel="stylesheet" href="css/styles.css">
     </head>
@@ -61,7 +61,13 @@
         </main>
 
         <footer class="footer">
-            © <span><script></script></span> My Dog's Epilepsy
+            <p>
+                ©
+                <span id="year">
+                    <script>document.getElementById("year").innerHTML = new Date().getFullYear()</script>
+                </span>
+                My Dog's Epilepsy
+            </p>
         </footer>
 
 

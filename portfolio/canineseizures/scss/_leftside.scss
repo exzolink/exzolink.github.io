@@ -6,7 +6,7 @@
     }
 
     &__leftside {
-        width: 50%;
+        width: 100%;
         position: relative;
         margin-right: 20px;
         user-select: none;
@@ -44,4 +44,55 @@
         right: 0;
     }
 
+}
+
+
+@media screen and (max-width: 1600px) {
+    .page {
+        &__leftside {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .page {
+        &__leftside {
+            margin-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .page {
+        &__container {
+            right: auto;
+        }
+
+        &__wrapper {
+            right: auto;
+        }
+
+        &__leftside {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            padding-left: 120px;
+            height: 600px;
+        }
+        &__fore {
+            right: auto;
+        }
+        &__back {
+            right: auto;
+            margin-right: 265px;
+        }
+        &__leftside {
+            height: 570px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
 }
