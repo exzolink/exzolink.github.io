@@ -4,7 +4,7 @@ var mySwiper = new Swiper ('.swiper-container', {
     grabCursor: true,
     preloadImages: false,
     autoplay: {
-        delay: 4000
+        delay: 3000
     },
     lazy: {
         loadOnTransitionStart: true
