@@ -1,0 +1,54 @@
+.page {
+
+    &__rightside {
+        width: 50%;
+        min-height: 565px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+    }
+    &__info {
+        background: white;
+        border: solid 1px rgb(214, 214, 214);
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 50%;
+        height: max-content;
+        align-items: center;
+
+        & img {
+            width: max-content;
+            margin-bottom: 30px;
+        }
+    }
+    &__slogan {
+        color: #00abbe;
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+    &__text {
+        color: #212529;
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin-top: 25px;
+    }
+
+    &__download {
+        width: 50%;
+        display: flex;
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__links {
+        margin-top: 20px;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+    &__link img {
+        height: 43px;
+    }
+}

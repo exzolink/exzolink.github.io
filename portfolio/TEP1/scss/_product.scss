@@ -429,6 +429,12 @@ letter-spacing: 0.9px;
   }
 }
 
+@media screen and (max-width: 410px) {
+  .product {
+    margin-top: 106px !important;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .card-related .card-related-img {
     height: 185px !important;
