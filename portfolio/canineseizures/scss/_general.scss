@@ -11,6 +11,26 @@ html, body {
     background-color: #f0f0f0;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    scrollbar-color: #bfbfbf #f0f0f0;
+	scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+	display: block;
+	width: 8px;
+	background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #bfbfbf;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #afafaf;
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: #999;
 }
 
 .main {
