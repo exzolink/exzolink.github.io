@@ -115,3 +115,26 @@
         }
     }
 }
+
+
+@media screen and (max-width: 400px) {
+    .page {
+        &__link:first-child {
+            margin-right: 15px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 350px) {
+    .page {
+        &__links {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__link:first-child {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+}

@@ -94,5 +94,19 @@
 }
 
 @media screen and (max-width: 500px) {
-    
+    .page {
+        &__back {
+            display: none;
+        }
+        &__leftside {
+            padding-left: 0;
+        }
+        &__fore {
+            position: relative;
+        }
+        &__wrapper {
+            max-width: 237px;
+            margin-left: 1px;
+        }
+    }
 }

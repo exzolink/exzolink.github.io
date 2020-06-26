@@ -54,6 +54,14 @@ img {
     }
 }
 
+@media screen and (max-width: 500px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 15px;
+    }
+}
+
 @media screen and (max-height: 899px) {
     .footer {
         padding-top: 100px;
