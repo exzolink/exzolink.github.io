@@ -1,6 +1,6 @@
 .w-fixed {
-  min-width: 350px !important;
-  max-width: 350px !important;
+  min-width: 320px !important;
+  max-width: 320px !important;
   height: max-content;
 }
 .sidebar-title {
@@ -12,6 +12,10 @@
 }
 .sidebar-wrapper {
   padding-left: 30px;
+  width: 350px;
+}
+.sidebar-wrap {
+  margin: 0 !important;
 }
 
 
@@ -20,6 +24,15 @@
     flex-direction: row;
     margin-top: 40px;
     padding-left: 0;
+    width: auto;
+  }
+  .sidebar-wrap {
+    margin: 0 auto !important;
+  }
+  .w-fixed {
+    min-width: 350px !important;
+    max-width: 350px !important;
+    height: max-content;
   }
 }
 

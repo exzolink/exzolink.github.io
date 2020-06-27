@@ -1,6 +1,6 @@
 .w-fixed {
-  min-width: 350px !important;
-  max-width: 350px !important;
+  min-width: 320px !important;
+  max-width: 320px !important;
   height: max-content;
 }
 
@@ -11,7 +11,36 @@
   background: linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%);
   padding: 13px 0 13px 10px;
 }
+.sidebar-wrapper {
+  width: 350px;
+}
+.sidebar-wrap {
+  margin: 0 !important;
+}
 
+
+@media screen and (min-width: 1439px) {
+  .sidebar-wrap {
+      max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .sidebar-wrapper {
+    flex-direction: row;
+    margin-top: 40px;
+    padding-left: 0;
+    width: auto;
+  }
+  .sidebar-wrap {
+    margin: 0 auto !important;
+  }
+  .w-fixed {
+    min-width: 350px !important;
+    max-width: 350px !important;
+    height: max-content;
+  }
+}
 
 @media (min-width: 991px) {
   .sidebar-wrap {

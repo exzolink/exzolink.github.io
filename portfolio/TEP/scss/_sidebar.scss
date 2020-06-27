@@ -5,7 +5,37 @@
   background: linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%);
   padding: 13px 0 13px 10px;
 }
+.w-fixed {
+  min-width: 320px !important;
+  max-width: 320px !important;
+  height: max-content;
+}
+.sidebar-wrapper {
+  width: 350px;
+}
+.sidebar-wrap {
+  max-width: 350px;
+  margin: 0 !important;
+}
 
+@media (max-width: 1215px) {
+  .sidebar-wrapper {
+    flex-direction: row;
+    margin-top: 40px;
+    padding-left: 0;
+    width: auto;
+  }
+  .sidebar-wrap {
+    padding-left: 0 !important;
+    max-width: none;
+    margin: 0 auto !important;
+  }
+  .w-fixed {
+    min-width: 350px !important;
+    max-width: 350px !important;
+    height: max-content;
+  }
+}
 
 @media (min-width: 991px) {
   .sidebar-wrap {
