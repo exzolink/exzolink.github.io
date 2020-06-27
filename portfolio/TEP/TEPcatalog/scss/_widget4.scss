@@ -1,0 +1,56 @@
+
+
+
+
+.widget-4 {
+  width: 100%;
+}
+
+.widget {
+  &-category {
+    &:hover {
+      color: #000;
+    }
+    &__num {
+      min-width: 35px;
+      height: 35px;
+      background-image: url(../img/categoryNum.svg);
+      background-repeat: no-repeat; 
+      background-position: center center;
+      background-size: 100% 100%;
+      font-family: "Rubik";
+      font-size: 7px;
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+      line-height: 35px;
+    }
+    &__title {
+      color: $color-1;
+      font-size: 17px;
+      font-weight: normal;
+      transition: 0.3s;
+    }
+    &__count {
+      border-radius: 50%;
+      min-width: 25px;
+      height: 25px;
+      background: $color-1;
+      color: #fff;
+      text-align: center;
+      line-height: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .widget-4 {
+    order: 5;
+  }
+}
+
+@media (max-width: 690px) {
+  .widget-4 {
+    width: inherit;
+  }
+}

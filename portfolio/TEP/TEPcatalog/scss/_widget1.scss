@@ -1,0 +1,141 @@
+.widget-title {
+  background: URL('../img/widget-title.gif') no-repeat;
+  background-size: contain;
+  height: 50px;
+  margin: 0;
+  padding: 0 20px 0 0;
+  font-size: 0;
+}
+
+.count {
+  color: #E5772E;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 39px;
+  vertical-align: middle;
+  margin: 0px;
+}
+
+.sidebar-img {
+  display: block;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+}
+
+
+.widget1-items {
+  border-bottom: 1px dashed #e6e6e6;
+}
+
+.widget1-item {
+  width: 25%;
+  border-right: 1px dashed #e6e6e6;
+  line-height: 21px;
+  font-weight: 500;
+  font-size: 15px;
+  vertical-align: middle;
+  float: left;
+  color: $color-1;
+  text-decoration: none !important;
+}
+
+.widget1-email {
+  font-size: 13px;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  background: url('../img/email.png') no-repeat 0 2px;
+  float: left;
+  padding: 0px 15px 0px 40px;
+  margin: 0 0 0 5px;
+  vertical-align: middle;
+  font-size: 14px;
+  color: #000;
+  & span {
+    color: #E5772E;
+    font-weight: 500;
+    font-size: 13px;
+  }
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+}
+.subscribe-form input {
+  background: #fff !important;
+  float: left;
+  border: 1px solid $color-1;
+  padding: 0px 24px;
+  color: #a19999;
+  font-size: 12px;
+  height: 43px;
+  width: 185px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 20px;
+}
+.subscribe-btn {
+  width: 100%;
+  margin-left: 0;
+  background: $color-1;
+  color: #ffffff;
+  height: 45px;
+  border-radius: 20px;
+}
+.widget-1 {
+  width: 100%;
+  max-width: 100%;
+}
+@media (max-width: 1440px) {
+  .widget1-email {
+    padding-right: 0;
+    & span {
+      font-size: 12px;
+    }
+}
+}
+
+@media (max-width: 1199px) {
+  .count {
+    font-size: 14px;
+  }
+  .widget1-email span {
+      font-size: 11px;
+  }
+  .widget-1 {
+    order: 3;
+  }
+}
+
+@media (max-width: 991px) {
+  .widget1-items {
+    justify-content: flex-start !important;
+  }
+  .widget1-item {
+    padding: 0px 10px 0px 35px;
+  }
+  .widget1-item-1 {
+    background-position: 0px 10px;
+  }
+  .widget1-item-2 {
+    background-position: 0px -30px;
+  }
+  .widget1-item-3 {
+    background-position: 0px -75px;
+  }
+  .widget1-item-4 {
+    background-position: 0px -115px;
+  }
+}
+
+@media (max-width: 690px) {
+  .widget1-item {
+    align-items: center;
+  }
+    .widget-1 {
+      width: inherit;
+    }
+}
