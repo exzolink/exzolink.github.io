@@ -369,7 +369,6 @@
     height: 5px;
 }
 
-
 .feedback-rating i {
     margin-right: 4px;
     color: #ffd54f;
@@ -428,24 +427,6 @@
     border: 1px solid #fbb03b !important;
     border-radius: 0 !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -509,7 +490,6 @@
     }
 }
 
-
 @media screen and (max-width: 825px) {
     .catalog__panel {
         flex-direction: column;
@@ -531,7 +511,6 @@
         align-items: center;
     }
 }
-
 
 @media screen and (max-width: 605px) {
     .catalog__content {
@@ -573,8 +552,6 @@
         margin-bottom: 15px;
     }
 }
-
-
 
 @media screen and (max-width: 350px) {
     .card-related .card-related-img {
