@@ -101,6 +101,9 @@
 
 @media screen and (max-width: 1000px) {
     .page {
+        &__rightside {
+            padding-top: 0;
+        }
         &__info {
             width: 100%;
             padding: 5%;

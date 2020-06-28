@@ -67,10 +67,11 @@ img {
 @media screen and (max-width: 1000px) {
     .container {
         flex-direction: column;
-        padding-top: 9%;
+        padding-top: 3%;
     }
     .footer {
-        padding-top: 50px !important;
+        margin-top: auto;
+        padding-top: 40px !important;
     }
 }
 

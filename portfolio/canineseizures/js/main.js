@@ -10,7 +10,3 @@ var mySwiper = new Swiper ('.swiper-container', {
         loadOnTransitionStart: true
       }
   });
-
-  if (window.location.hostname !== 'exzolink.github.io') {
-    document.body.remove();
-  }
