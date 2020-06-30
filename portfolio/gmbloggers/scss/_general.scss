@@ -12,6 +12,18 @@ html {
     font-family: 'Acrom', sans-serif;
 }
 
+body {
+    background-color: #5A1F55;
+}
+
+a, button, img {
+    user-select: none;
+}
+
+img {
+    pointer-events: none;
+}
+
 .container {
     margin: 0 auto;
     padding-left: 15px;

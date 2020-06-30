@@ -11,8 +11,24 @@
 }
 
 .header {
+ 
+
     &__wrapper {
         height: 100vh;
+        z-index: 1;
+        position: relative;
+
+        &:after {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            bottom: -100px;
+            left: 0;
+            width: 168px;
+            height: 287px;
+            background-repeat: no-repeat;
+            background-image: url('../imgs/particle2.svg');
+        }
     }
 
     &__container {
@@ -134,9 +150,25 @@
         font-size: 14px;
         line-height: 16px;
         color: #27AAE1;
+        margin-left: 38px;
 
         &:hover {
             text-decoration: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1439px) {
+    .header__wrapper {
+
+        &:after {
+            bottom: 250px;
+            width: 84px;
+            height: 143px;
+            background-size: cover;
+            opacity: .7;
+
         }
     }
 }
@@ -310,5 +342,14 @@
             line-height: 12px;
         }
 
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .nav {
+        &__phone a {
+            font-size: 11px;
+            line-height: 13px;
+        }
     }
 }

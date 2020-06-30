@@ -1,0 +1,110 @@
+.influence {
+    background-color: #1B1B1B;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__leftside {
+        flex-basis: 60%;
+        display: flex;
+        padding: 89px 0;
+        flex-direction: column;
+        margin-right: 20px;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 43px;
+        margin-bottom: 41px;
+
+        & span {
+            color: #C8459C;
+        }
+    }
+
+    &__tip {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        padding-top: 21px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 52px;
+    }
+
+    &__desc {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    &__rightside {
+        flex-basis: 40%;
+        display: flex;
+        position: relative;
+
+        & img {
+            position: absolute;
+            top: -40px;
+
+        }
+    }
+}
+
+
+@media screen and (max-width: 1365px) {
+    .influence {
+        &__inner {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        &__leftside {
+            padding-top: 10px;
+            padding-bottom: 40px;
+            flex-basis: 100%;
+        }
+
+        &__rightside {
+            flex-basis: 100%;
+            margin-top: -100px;
+
+            & img {
+                width: 100%;
+                position: initial;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .influence {
+        &__title {
+            font-weight: 500;
+            font-size: 20px;
+            margin-bottom: 16px;
+            line-height: 24px;
+        }
+
+        &__leftside {
+            padding-top: 0;
+            margin-top: -15px;
+        }
+
+        &__desc {
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        &__tip {
+            margin-top: 16px;
+            font-size: 11px;
+            line-height: 13px;
+        }
+
+        &__rightside {
+            margin-top: -80px;
+        }
+    }
+}
