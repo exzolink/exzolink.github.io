@@ -143,10 +143,12 @@
 
 
 @media screen and (max-width: 950px) {
-    .header {
-        &__wrapper {
-            background-position: 73% 16%;
-        }
+    .webp .header__wrapper {
+        background-position: 73% 16%;
+    }
+    
+    .no-webp .header__wrapper {
+        background-position: 73% 16%;
     }
 
     .nav {
@@ -247,6 +249,14 @@
 }
 
 @media screen and (max-width: 450px) {
+    .webp .header__wrapper {
+        background-position: 63% 16%;
+    }
+    
+    .no-webp .header__wrapper {
+        background-position: 63% 16%;
+    }
+
     .header {
         &__title {
             font-size: 38px;
