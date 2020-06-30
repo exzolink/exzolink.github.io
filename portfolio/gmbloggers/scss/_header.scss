@@ -1,8 +1,17 @@
+.webp .header__wrapper {
+    background: #5A1F55 url('../imgs/bg.webp') no-repeat;
+    background-size: cover;
+    background-position: 76% 16%;
+}
+
+.no-webp .header__wrapper {
+    background: #5A1F55 url('../imgs/bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: 76% 16%;
+}
+
 .header {
     &__wrapper {
-        background: #5A1F55 url('../imgs/bg.jpg') no-repeat;
-        background-size: cover;
-        background-position: 76% 16%;
         height: 100vh;
     }
 
@@ -201,6 +210,7 @@
                 line-height: 16px;
             }
         }
+
         &__footer {
             padding-bottom: 20px;
         }
@@ -210,6 +220,7 @@
         &__wrapper {
             padding-top: 20px;
         }
+
         &__slogan {
             font-size: 10px;
             line-height: 12px;
@@ -238,8 +249,8 @@
 @media screen and (max-width: 450px) {
     .header {
         &__title {
-            font-size: 36px;
-            line-height: 38px;
+            font-size: 38px;
+            line-height: 40px;
         }
 
         &__suptitle {
@@ -272,6 +283,12 @@
         }
 
         &__phone {
+            & img {
+                margin-right: 6px;
+                width: 13px;
+                height: 13px;
+            }
+
             & a {
                 font-size: 14px;
                 line-height: 16px;
