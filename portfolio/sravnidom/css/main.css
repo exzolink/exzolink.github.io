@@ -2515,8 +2515,18 @@ input:-webkit-autofill {
   transition: background .3s ease
 }
 
+
+
 .table tr:hover {
   background-color: #d2e9e8 !important
+}
+
+.interim-table thead tr {
+  background-color: #fff !important;
+}
+
+.interim-table thead tr:hover {
+  background-color: #fff !important;
 }
 
 .result-plan__table tr:last-child,
@@ -3644,7 +3654,7 @@ input:-webkit-autofill {
 }
 
 .home__block_title {
-  font-family: FuturaPTMedium, sans-serif;
+  font-family: FuturaPTBook, sans-serif;
   color: #3d4d58;
   letter-spacing: -.02em;
   font-weight: 400;
@@ -3659,7 +3669,7 @@ input:-webkit-autofill {
 }
 
 .home__block_desc {
-  font-family: FuturaPTDemi, sans-serif;
+  font-family: FuturaPTMedium, sans-serif;
   color: #3d4d58;
   letter-spacing: -.02em;
   font-weight: 400;
@@ -3680,6 +3690,12 @@ input:-webkit-autofill {
 
 .mar-left {
   margin-left: 20px
+}
+.mar-left-1 {
+  margin-left: 10px;
+}
+.mb-1 {
+  margin-bottom: 1px;
 }
 
 .infra__block_wrapper {
@@ -3722,13 +3738,14 @@ input:-webkit-autofill {
 
 .infra__block_desc {
   color: #000;
+  width: max-content;
   opacity: .7;
   font-size: 14px;
   font-family: FuturaPTDemi
 }
 
 .infra__hidden_block {
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   margin-top: 6px;
   display: none
 }
@@ -3758,7 +3775,8 @@ input:-webkit-autofill {
 .infra__block_number {
   font-family: FuturaPTDemi;
   color: #6cb7b2;
-  font-size: 14px
+  font-size: 14px;
+  margin-right: 10px;
 }
 
 .infra__show-more img {
@@ -3766,6 +3784,9 @@ input:-webkit-autofill {
   transition: all .3s ease;
   transform: rotate(180deg);
   margin-right: 0 !important
+}
+.flex-row {
+  display: flex;
 }
 
 .rotate-active img {
@@ -3791,11 +3812,10 @@ input:-webkit-autofill {
   transition: all .2s ease;
   background: #eff1f1;
   border: 1px solid rgba(0, 0, 0, .1);
-  color: #000;
-  opacity: .7;
+  color: #8F9191;
   font-size: 16px;
   padding-top: 7px;
-  font-family: FuturaPTMedium;
+  font-family: FuturaPTBook;
   display: flex;
   align-items: center
 }
@@ -3892,7 +3912,7 @@ input:-webkit-autofill {
 .result-plan__table tr:last-child td {
   padding-top: 22px;
   color: #2c3942;
-  font-size: 16px;
+  font-size: 14px;
   font-family: FuturaPTMedium, sans-serif
 }
 
@@ -4226,10 +4246,10 @@ input:-webkit-autofill {
 }
 
 .enter-icon {
-  width: 77px;
-  margin-top: 30px;
+  width: 55px;
+  margin-top: 12px;
   margin-bottom: -1px;
-  height: 65px
+  height: 47px;
 }
 
 .box {
@@ -4341,7 +4361,7 @@ input:-webkit-autofill {
 #chartjs-tooltip,
 #chartjs-tooltip_2,
 #chartjs-tooltip_3 {
-  background: rgba(255, 255, 255, .8) !important;
+  background: rgba(255, 255, 255, .5) !important;
   height: 332px !important;
   width: 95px;
   transition: opacity .3s ease;
@@ -4379,8 +4399,9 @@ input:-webkit-autofill {
   align-items: center;
   height: 100%;
   padding-top: 30px;
-  padding-bottom: 15px;
+  padding-bottom: 18px;
   text-align: center;
+  justify-content: flex-end;
   overflow: hidden
 }
 
@@ -5090,7 +5111,7 @@ input:-webkit-autofill {
   position: absolute;
   background-color: #fff;
   width: 100%;
-  height: 800px;
+  height: 670px;
   top: 0;
   display: none;
   box-shadow: 0 2px 36px 2px rgba(0, 0, 0, .1);
@@ -5151,6 +5172,7 @@ input:-webkit-autofill {
   width: max-content;
   margin-right: 12px;
   margin-top: 20px;
+  align-items: center;
   flex-direction: column
 }
 
@@ -5368,9 +5390,8 @@ table.dataTable .interim-head .sorting span:after {
   transition: all .3s ease;
   cursor: pointer;
   margin: 0 auto;
-  margin-top: 45px
+  margin-top: 53px
 }
-
 .btn-show img {
   margin-top: 3px;
   margin-left: 7px
@@ -5464,7 +5485,9 @@ table.dataTable .interim-head .sorting span:after {
   padding-bottom: 2px;
   padding-right: 2px;
 }
-
+.flex {
+  display: flex;
+}
 .table-popup {
   overflow: hidden;
   display: -webkit-box;
@@ -5478,12 +5501,10 @@ table.dataTable .interim-head .sorting span:after {
   max-height: 300px;
   padding-right: 8px;
   width: max-content;
-  top: 27px;
-  border-radius: 6px;
-  border: 1px solid #2d3a4333;
+  top: 0;
   left: 0;
   background-color: #fff;
-  box-shadow: 3px 3px 6px rgba(117, 141, 139, .3);
+  box-shadow: 1px 1px 3px rgba(117, 141, 139, .3);
   z-index: 1
 }
 
@@ -5547,6 +5568,10 @@ table.dataTable .interim-head .sorting span:after {
   margin-right: 0
 }
 
+.total__table tr:nth-child(2n) {
+  background-color: #f6f7fb;
+}
+
 .interim-table img {
   margin-left: 6px
 }
@@ -5559,6 +5584,13 @@ table.dataTable .interim-head .sorting span:after {
 .interim-table td {
   border-right: 1px solid #e8e8e8
 }
+
+.interim-table tr:nth-child(2n+1) {
+  background-color: #f6f7fb;
+}
+
+
+
 
 .btn-download {
   margin-top: 24px
@@ -5636,9 +5668,8 @@ table.dataTable tbody td {
 }
 
 #interim tr:first-child td {
-  padding-top: 2px;
+  padding: 11px 0;
   position: relative;
-  padding-bottom: 6px
 }
 
 .example-good {

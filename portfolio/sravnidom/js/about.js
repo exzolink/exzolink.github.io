@@ -1,7 +1,7 @@
 $(document).ready(function () {
-
+      
     var table1 = $('#interim').DataTable({
-        scrollX: 50000,
+        scrollX: 50000
     });
 
     $('#interim_filter_search').on('keyup', function () {
@@ -49,6 +49,14 @@ $(document).ready(function () {
             $(this).addClass('opened');
         }
     });
+
+    $(document).click(function (e) {
+        if (!$(e.target).closest('.table-popup, .table-progress__wrap, .table-popup__item, .flex-col, .flex, .dflex, .label-checkbox').length) {
+            $('.table-popup').slideUp(300);
+            $('.table-progress__show').removeClass('opened');
+        }
+    });
+
 
     $('.graph-checkbox__label').click(function () {
         if ($('#checkbox_1').is(':checked')) {

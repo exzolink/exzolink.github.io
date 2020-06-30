@@ -81,6 +81,12 @@ var config_1 = {
       fill: true,
       backgroundColor: gradientBg,
       borderColor: '#8deb7c',
+      pointBackgroundColor: '#ffffff',
+      pointRadius: 5,
+      pointHoverRadius: 8,
+      pointBorderWidth: 3,
+      pointHoverBorderWidth: 4,
+      pointHitRadius: 30,
       data: lineFs,
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: '#8deb7c'
@@ -129,9 +135,7 @@ var config_1 = {
             var style = 'background:' + colors.backgroundColor;
             style += '; color:' + colors.borderColor;
             style += '; border-width: 2px';
-            var span = '<span class="graph-tooltip__name" style="' + style + '">' + body + '</span>';
             var circle = '<div class="graph-tooltip__circle" style="background-color:' + colors.borderColor + ';"><div class="graph-tooltip__line" style="background-color:' + colors.borderColor + '";></div></div>';
-            innerHtml += span;
             // innerHtml += circle;
           });
           innerHtml += '';
@@ -330,6 +334,12 @@ var config_2 = {
       fill: true,
       backgroundColor: gradientBg,
       borderColor: '#8deb7c',
+      pointBackgroundColor: '#ffffff',
+      pointRadius: 5,
+      pointHoverRadius: 8,
+      pointBorderWidth: 3,
+      pointHoverBorderWidth: 4,
+      pointHitRadius: 30,
       data: lineSec1,
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: '#8deb7c'
@@ -378,8 +388,6 @@ var config_2 = {
             var style = 'background:' + colors.backgroundColor;
             style += '; color:' + colors.borderColor;
             style += '; border-width: 2px';
-            var span = '<span class="graph-tooltip__name" style="' + style + '">' + body + '"></span>';
-            innerHtml += span;
           });
           innerHtml += '';
           titleLines.forEach(function (title) {
@@ -576,6 +584,12 @@ var config_3 = {
       fill: true,
       backgroundColor: gradientBg,
       borderColor: '#8deb7c',
+      pointBackgroundColor: '#ffffff',
+      pointRadius: 5,
+      pointHoverRadius: 8,
+      pointBorderWidth: 3,
+      pointHoverBorderWidth: 4,
+      pointHitRadius: 30,
       data: lineTh1,
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: '#8deb7c'
@@ -624,8 +638,6 @@ var config_3 = {
             var style = 'background:' + colors.backgroundColor;
             style += '; color:' + colors.borderColor;
             style += '; border-width: 2px';
-            var span = '<span class="graph-tooltip__name" style="' + style + '">' + body + '"></span>';
-            innerHtml += span;
           });
           innerHtml += '';
           titleLines.forEach(function (title) {

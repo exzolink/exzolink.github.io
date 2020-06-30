@@ -308,7 +308,7 @@
         line-height: 2.5;
     }
 
-    & .article__note {
+    & .notice {
         max-width: 765px;
         margin: 0 auto;
         margin-top: 40px;
@@ -428,6 +428,7 @@
 
     & .article__download {
         display: flex;
+        border-bottom: 0 !important;
         height: 60px;
         min-width: 350px;
         width: max-content;
@@ -452,8 +453,9 @@
         }
 
         & div:last-child {
-            flex-basis: 80%;
+            flex-basis: 100%;
             color: #fff;
+            padding: 0 10px;
             height: 100%;
             text-align: center;
             display: flex;
@@ -983,7 +985,7 @@
 }
 
 @media screen and (max-width: 1215px) {
-    .article .article__note img {
+    .article .notice img {
         display: none;
     }
     .content-wrapper {
@@ -1018,7 +1020,7 @@
         font-size: 16px;
     }
 
-    .article .article__note .article__linked p {
+    .article .notice .article__linked p {
         font-size: 18px;
     }
     .article .article__text p {
@@ -1071,19 +1073,19 @@
 }
 
 @media screen and (max-width: 600px) {
-    .article .article__note {
+    .article .notice {
         padding-bottom: 20px;
         height: auto;
         background: linear-gradient(to bottom,#FFC853 25%,#fff 20%,#fff 20%,#fff 20%,#fff 20%);
     }
-    .article .article__note_small .article__linked {
+    .article .notice .article__linked {
         padding-left: 10px !important;
         padding-right: 10px !important;
     }
-    .article .article__note p {
+    .article .notice p {
         font-size: 20px;
     }
-    .article .article__note .article__linked {
+    .article .notice .article__linked {
         margin-left: 30px;
     }
     .article .article__label_text {
@@ -1096,7 +1098,7 @@
     .article .article__linked_sec li {
         margin-left: 0;
     }
-    .article .article__note p span {
+    .article .notice p span {
         margin-top: -25px;
     }
     .article .article__comments p {
@@ -1153,10 +1155,10 @@
     .article .article__linked li a {
         font-size: 16px;
     }
-    .article .article__note p {
+    .article .notice p {
         font-size: 16px;
     }
-    .article .article__note p span {
+    .article .notice p span {
         font-size: 20px;
     }
     .article .article__download {
@@ -1190,13 +1192,13 @@
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    .article .article__note .article__linked {
+    .article .notice .article__linked {
         margin-left: 20px;
         margin-right: 20px;
         padding-top: 0;
         margin-bottom: 0;
     }
-    .article .article__note p {
+    .article .notice p {
         margin-left: 0;
         padding-left: 10px;
         padding-right: 10px;
@@ -1207,7 +1209,7 @@
     .article .article__title {
         margin-top: 30px;
     }
-    .article .article__note p:nth-child(2) {
+    .article .notice p:nth-child(2) {
         font-size: 18px;
     }
     .article .advert__block div:first-child {
