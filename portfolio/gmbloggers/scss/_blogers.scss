@@ -4,6 +4,62 @@
     padding-top: 68px;
     padding-bottom: 84px;
 
+    &__inner {
+        position: relative;
+        z-index: 3;
+    }
+
+    .particle {
+        position: absolute;
+
+        &_1 {
+            top: 200px;
+            right: 0;
+        }
+
+        &_2 {
+            top: 500px;
+            left: 0;
+            transform: rotate(180deg);
+        }
+
+        &_3 {
+            right: 0;
+            bottom: -130px;
+            transform: rotate(180deg);
+        }
+
+        &_4 {
+            left: 360px;
+            top: 330px;
+        }
+
+        &_5 {
+            left: 630px;
+            top: 500px;
+        }
+
+        &_6 {
+            bottom: 150px;
+            left: 270px;
+        }
+
+        &_7 {
+            bottom: 430px;
+            right: 300px;
+        }
+
+        &_8 {
+            right: 0;
+            bottom: 500px;
+        }
+
+        &_9 {
+            left: 0;
+            bottom: 80px;
+        }
+    }
+
     &__title {
         font-weight: 700;
         font-size: 36px;
@@ -135,6 +191,44 @@
 
 @media screen and (max-width: 685px) {
     .blogers {
+
+        .particle {
+            &_1 {
+                max-width: 55px;
+            }
+
+            &_2 {
+                max-width: 65px;
+            }
+
+            &_3 {
+                max-width: 80px;
+                bottom: 60px;
+            }
+
+            &_6 {
+                left: 100px;
+                max-width: 150px;
+            }
+
+            &_9 {
+                max-width: 55px;
+            }
+
+            &_8 {
+                max-width: 75px;
+            }
+
+            &_7 {
+                max-width: 150px;
+            }
+
+            &_5 {
+                max-width: 150px;
+            }
+        }
+        
+
         &__item {
             margin-left: auto;
             margin-right: auto;
