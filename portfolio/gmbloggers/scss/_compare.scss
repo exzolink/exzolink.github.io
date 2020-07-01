@@ -231,8 +231,26 @@
     }
 }
 
+@media screen and (max-width: 415px) {
+    .pos-1 {
+        top: 21%;
+    }
 
-@media screen and (max-width: 380px) {
+    .pos-2 {
+        top: 42%;
+    }
+
+    .pos-3 {
+        top: 64%;
+    }
+
+    .pos-4 {
+        top: 86%;
+    }
+}
+
+
+@media screen and (max-width: 390px) {
     .compare {
         &__table {
 
@@ -251,22 +269,18 @@
         }
     }
     .pos-1 {
-        top: 24%;
-        left: -13px;
+        top: 22%;
     }
 
     .pos-2 {
-        top: 43%;
-        left: -33px;
+        top: 41.5%;
     }
 
     .pos-3 {
-        top: 64%;
-        left: -33px;
+        top: 62%;
     }
 
     .pos-4 {
         top: 85%;
-        left: -26px;
     }
 }
