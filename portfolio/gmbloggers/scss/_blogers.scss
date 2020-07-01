@@ -4,6 +4,20 @@
     padding-top: 68px;
     padding-bottom: 84px;
 
+    &__footer {
+        padding-bottom: 0;
+        margin-top: 50px;
+        justify-content: center;
+        z-index: 3;
+        position: relative;
+        font-family: 'Roboto';
+        align-items: center;
+
+        & .header__order_btn {
+            font-family: 'Acrom';
+        }
+    }
+
     &__inner {
         position: relative;
         z-index: 3;
@@ -40,12 +54,12 @@
         }
 
         &_6 {
-            bottom: 150px;
+            bottom: 200px;
             left: 270px;
         }
 
         &_7 {
-            bottom: 430px;
+            bottom: 520px;
             right: 300px;
         }
 
@@ -96,6 +110,7 @@
 
     &__info {
         width: 100%;
+        font-family: 'Roboto';
         height: inherit;
         padding-right: 12px;
         display: flex;
@@ -153,9 +168,9 @@
 
     &__btns {
         display: flex;
-        justify-content: space-between;
         margin-top: auto;
         align-items: center;
+        font-family: 'Acrom';
     }
 
     &__btn {
@@ -166,6 +181,7 @@
             background: #4B2C80;
             border: 1px solid #4B2C80;
             border-radius: 50px;
+            margin-right: 14px;
             transition: background .3s ease;
 
             &:hover {
@@ -189,9 +205,21 @@
     }
 }
 
+
+@media screen and (max-width: 815px) {
+    .blogers {
+        &__footer {
+            text-align: center;
+            & .header__order {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 685px) {
     .blogers {
-
+        padding-bottom: 60px;
         .particle {
             &_1 {
                 max-width: 55px;
