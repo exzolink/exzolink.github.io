@@ -11,9 +11,8 @@
 
     <body>
 
-        <header class="header__wrapper lazyload" data-bg="imgs/bg.jpg">
+        <header class="header__wrapper">
             <div class="container header__container">
-
                 <div class="nav__wrapper">
                     <div class="nav__logo">
                         <a href=""><img src="imgs/logo.svg" alt=""></a>
@@ -112,7 +111,8 @@
                                 <tr>
                                     <td></td>
                                     <td class="compare__table_header">«Мы как-нибудь сами...»</td>
-                                    <td class="compare__table_logo"><img data-src="imgs/logo.svg" class="lazyload" alt=""></td>
+                                    <td class="compare__table_logo"><img data-src="imgs/logo.svg" class="lazyload"
+                                            alt=""></td>
                                 </tr>
                                 <tr>
                                     <td class="pos-1">Поиск</td>
@@ -314,8 +314,8 @@
                     <div class="header__footer blogers__footer">
                         <p class="header__order">Оставьте заявку на бесплатную консультацию, и мы подберем блогеров
                             специально для вас</p>
-                        <a class="header__order_btn" href="#"><img class="header__order_icon lazyload" data-src="imgs/headphones.svg"
-                                alt="">Заказать консультацию</a>
+                        <a class="header__order_btn" href="#"><img class="header__order_icon lazyload"
+                                data-src="imgs/headphones.svg" alt="">Заказать консультацию</a>
                     </div>
                 </div>
             </section>
@@ -354,8 +354,10 @@
             </section>
         </main>
 
-        <script src="js/lazyload.js"></script>
+        <script src="js/lazyload.js" async=""></script>
         <script src="js/main.js"></script>
+        <script src="js/modernizr-custom.js"></script>
+
     </body>
 
 </html>

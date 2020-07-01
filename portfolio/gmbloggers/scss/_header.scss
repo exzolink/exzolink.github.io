@@ -1,13 +1,21 @@
+.webp .header__wrapper {
+    background: #5A1F55 url('../imgs/bg.webp') no-repeat;
+    background-size: cover;
+    background-position: 76% 16%;
+}
+
+.no-webp .header__wrapper {
+    background: #5A1F55 url('../imgs/bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: 76% 16%;
+}
+
 .header {
  
     &__wrapper {
         height: 100vh;
         z-index: 1;
-        background-color: #5A1F55;
-        background-repeat: no-repeat;
         position: relative;
-        background-size: cover;
-        background-position: 76% 16%;
 
         &:after {
             content: '';
@@ -165,8 +173,12 @@
 }
 
 
-@media screen and (max-width: 950px) {  
-    .header__wrapper {
+@media screen and (max-width: 950px) {
+    .webp .header__wrapper {
+        background-position: 73% 16%;
+    }
+    
+    .no-webp .header__wrapper {
         background-position: 73% 16%;
     }
 
@@ -267,8 +279,12 @@
     }
 }
 
-@media screen and (max-width: 450px) { 
-    .header__wrapper {
+@media screen and (max-width: 450px) {
+    .webp .header__wrapper {
+        background-position: 63% 16%;
+    }
+    
+    .no-webp .header__wrapper {
         background-position: 63% 16%;
     }
 
