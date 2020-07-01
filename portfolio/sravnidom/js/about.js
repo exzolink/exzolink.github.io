@@ -1,7 +1,8 @@
 $(document).ready(function () {
       
     var table1 = $('#interim').DataTable({
-        scrollX: 50000
+        scrollX: 50000,
+        "pageLength": 3
     });
 
     $('#interim_filter_search').on('keyup', function () {
@@ -16,7 +17,7 @@ $(document).ready(function () {
     $('.btn-show').click(function () {
         if ($(this).hasClass('shows')) {
             $(this).html('Раскрыть<img src="images/showW.svg" alt="">');
-            table1.page.len(10).draw();
+            table1.page.len(3).draw();
             $(this).removeClass('shows');
         }
         else {
@@ -37,23 +38,33 @@ $(document).ready(function () {
     });
 
 
-    $('.table-progress__show').click(function () {
+    $('.table-show-popup').click(function () {
         if ($(this).hasClass('opened')) {
             $(this).parent().parent().find('.table-popup').slideUp(300);
-            $('.table-progress__show').removeClass('opened');
+            $('.table-show-popup').removeClass('opened');
         }
         else {
             $('.table-popup').slideUp(300);
-            $('.table-progress__show').removeClass('opened');
+            $('.table-show-popup').removeClass('opened');
             $(this).parent().parent().find('.table-popup').slideDown(300);
             $(this).addClass('opened');
         }
     });
 
     $(document).click(function (e) {
-        if (!$(e.target).closest('.table-popup, .table-progress__wrap, .table-popup__item, .flex-col, .flex, .dflex, .label-checkbox').length) {
+        if (!$(e.target).closest('.label-checkbox, .table-show-popup, .dflex').length) {
             $('.table-popup').slideUp(300);
             $('.table-progress__show').removeClass('opened');
+        }
+    });
+
+
+    $('.all').click(function () {
+        if ($(this).is(':checked')) {
+        $(this).parent().parent().parent().find('#clear').prop('checked', true);
+        }
+        else {
+            $(this).parent().parent().parent().find('#clear').prop('checked', false);
         }
     });
 

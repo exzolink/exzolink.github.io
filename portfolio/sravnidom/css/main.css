@@ -3353,7 +3353,7 @@ input:-webkit-autofill {
   display: block;
   width: .75rem;
   background: #fff;
-  height: 8px
+  height: 4px
 }
 
 .graph-table-wrapper::-webkit-scrollbar-thumb {
@@ -3693,6 +3693,11 @@ input:-webkit-autofill {
 }
 .mar-left-1 {
   margin-left: 10px;
+  margin-right: 10px;
+  position: absolute;
+  right: -4px;
+  top: 11px;
+  min-width: 20px;
 }
 .mb-1 {
   margin-bottom: 1px;
@@ -3745,7 +3750,7 @@ input:-webkit-autofill {
 }
 
 .infra__hidden_block {
-  margin-bottom: 20px;
+  margin-bottom: 11px;
   margin-top: 6px;
   display: none
 }
@@ -5249,7 +5254,8 @@ input:-webkit-autofill {
 }
 
 .dataTables_wrapper.no-footer .dataTables_scrollBody {
-  border-bottom: 0
+  border-bottom: 0;
+  overflow-y: hidden !important;
 }
 
 .plans__floor_active {
@@ -5396,6 +5402,10 @@ table.dataTable .interim-head .sorting span:after {
   margin-top: 3px;
   margin-left: 7px
 }
+.interim-title {
+  width: max-content;
+  display: block;
+}
 
 #interim_paginate,
 #interim_length {
@@ -5489,31 +5499,42 @@ table.dataTable .interim-head .sorting span:after {
   display: flex;
 }
 .table-popup {
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  padding-left: 8px;
   display: none;
   padding-top: 8px;
   padding-bottom: 8px;
-  max-height: 300px;
-  padding-right: 8px;
   width: max-content;
   top: 0;
   left: 0;
   background-color: #fff;
-  box-shadow: 1px 1px 3px rgba(117, 141, 139, .3);
-  z-index: 1
+  box-shadow: 1px 1px 9px rgba(117, 141, 139, .3);
+  z-index: 1;
+  overflow-y: scroll;
+  max-height: 158px;
+  scrollbar-width: thin;
+  overflow-x: hidden;
 }
 
 .table-popup__item {
-  margin-bottom: 6px
+  margin-bottom: 6px;
+  padding-right: 48px;
+  padding-left: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  transition: background .3s ease;
+}
+
+
+.table-popup__item:hover {
+  background-color: #F6F7FB;
 }
 
 .table-popup .label-checkbox {
-  margin-left: 5px
+  margin-left: 5px;
+  cursor: default;
 }
 
 .table-popup .dflex {
@@ -5642,7 +5663,7 @@ table.dataTable tbody td {
   display: block;
   width: .75rem;
   background: #fff;
-  height: 8px
+  height: 4px
 }
 
 .dataTables_scrollBody::-webkit-scrollbar-thumb {
@@ -5658,9 +5679,12 @@ table.dataTable tbody td {
   background: #579390
 }
 
+
+
 .dataTables_scrollBody {
   scrollbar-color: #6cb7b2 #fff;
-  scrollbar-width: thin
+  scrollbar-width: thin;
+  padding-bottom: 34px;
 }
 
 .table-progress__show img {
@@ -5674,6 +5698,27 @@ table.dataTable tbody td {
 
 .example-good {
   margin-bottom: 30px
+}
+
+.table-popup::-webkit-scrollbar {
+  display: block;
+  width: .75rem;
+  background: #fff;
+  height: 4px;
+  width: 4px;
+}
+
+.table-popup::-webkit-scrollbar-thumb {
+  background: #6cb7b2;
+  border-radius: 30px
+}
+
+.table-popup::-webkit-scrollbar-thumb:hover {
+  background: #61a4a0
+}
+
+.table-popup::-webkit-scrollbar-thumb:active {
+  background: #579390
 }
 
 .example-wrapper {
