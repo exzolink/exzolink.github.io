@@ -273,14 +273,50 @@
     }
 
     .pos-2 {
-        top: 41.5%;
+        top: 40%;
     }
 
     .pos-3 {
-        top: 62%;
+        top: 63%;
     }
 
     .pos-4 {
         top: 85%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .pos-1 {
+        top: 21%;
+    }
+
+    .pos-2 {
+        top: 46%;
+    }
+
+    .pos-3 {
+        top: 68%;
+    }
+
+    .pos-4 {
+        top: 88%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .pos-1 {
+        top: 20%;
+    }
+
+    .pos-2 {
+        top: 42%;
+    }
+
+    .pos-3 {
+        top: 64%;
+    }
+
+    .pos-4 {
+        top: 86%;
     }
 }
