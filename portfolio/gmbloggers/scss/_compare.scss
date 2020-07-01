@@ -1,0 +1,272 @@
+.compare {
+    background-color: #4B2C80;
+
+    &__inner {
+        padding-top: 32px;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 43px;
+        margin-bottom: 32px;
+        text-align: center;
+
+        & span {
+            font-weight: 700;
+        }
+    }
+
+    &__table {
+        border-spacing: 0;
+        position: relative;
+
+        & img {
+            max-width: 150px;
+            margin-top: 5px;
+        }
+
+        & td:first-child {
+            font-weight: 500;
+            font-size: 24px;
+            vertical-align: top;
+            line-height: 29px;
+            padding-right: 48px;
+            padding-top: 24px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(89, 61, 138, .5);
+        }
+
+        & td:nth-child(2) {
+            font-size: 18px;
+            line-height: 22px;
+            padding-top: 24px;
+            padding-right: 28px;
+            vertical-align: top;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(89, 61, 138, .5);
+        }
+
+        & td:last-child {
+            font-size: 18px;
+            line-height: 22px;
+            padding-top: 24px;
+            padding-right: 28px;
+            padding-bottom: 30px;
+            padding-left: 40px;
+            vertical-align: top;
+            background-color: #fff;
+            background: #1F0F3C;
+            border-bottom: 1px solid rgba(89, 61, 138, .5);
+        }
+
+        &_header {
+            font-weight: 700;
+            font-size: 24px !important;
+            line-height: 29px !important;
+            padding-top: 24px !important;
+            padding-bottom: 24px !important;
+        }
+
+        &_logo {
+            padding-top: 24px !important;
+            padding-bottom: 24px !important;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .compare {
+        &__table {
+
+            &_header {
+                font-size: 18px !important;
+                line-height: 22px !important;
+                padding-bottom: 14px !important;
+                padding-top: 14px !important;
+            }
+
+            &_logo {
+                padding-bottom: 14px !important;
+                padding-top: 14px !important;
+            }
+
+            & td:first-child {
+                font-size: 18px;
+                padding-right: 20px;
+                padding-bottom: 14px;
+                padding-top: 14px;
+                line-height: 22px;
+            }
+
+            & td:nth-child(2) {
+                font-size: 16px;
+                line-height: 20px;
+                padding-bottom: 14px;
+                padding-top: 14px;
+                padding-right: 20px;
+            }
+
+            & td:last-child {
+                font-size: 16px;
+                line-height: 20px;
+                padding-left: 28px;
+                padding-bottom: 14px;
+                padding-right: 20px;
+                padding-top: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .compare {
+        &__table {
+
+            &_header {
+                font-size: 14px !important;
+                line-height: 17px !important;
+            }
+
+            & td:first-child {
+                font-size: 12px;
+                line-height: 14px;
+            }
+
+            & td:nth-child(2) {
+                font-size: 9px;
+                line-height: 11px;
+            }
+
+            & td:last-child {
+                font-size: 9px;
+                line-height: 11px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .compare {
+
+        & img {
+            max-width: 110px;
+        }
+
+        &__title {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        &__table {
+
+            &_header {
+                font-size: 13px !important;
+            }
+
+            & td:first-child {
+                padding: 0;
+                transform: rotate(-90deg);
+                border: 0;
+                position: absolute;
+            }
+
+            & td:nth-child(2) {
+                padding-top: 24px;
+                padding-right: 12px;
+                padding-bottom: 25px;
+                padding-left: 24px;
+            }
+
+            & td:last-child {
+                padding-top: 24px;
+                padding-left: 12px;
+                padding-right: 12px;
+                vertical-align: middle;
+                padding-bottom: 25px;
+            }
+        }
+    }
+
+    .pos-1 {
+        top: 21%;
+        left: -13px;
+    }
+
+    .pos-2 {
+        top: 42.5%;
+        left: -33px;
+    }
+
+    .pos-3 {
+        top: 64%;
+        left: -33px;
+    }
+
+    .pos-4 {
+        top: 87%;
+        left: -26px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .pos-1 {
+        top: 21%;
+    }
+
+    .pos-2 {
+        top: 42%;
+    }
+
+    .pos-3 {
+        top: 62%;
+    }
+
+    .pos-4 {
+        top: 85%;
+    }
+}
+
+
+@media screen and (max-width: 380px) {
+    .compare {
+        &__table {
+
+            & td:nth-child(2) {
+                padding-top: 12px;
+                padding-right: 10px;
+                padding-bottom: 14px;
+            }
+
+            & td:last-child {
+                padding-top: 12px;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-bottom: 14px;
+            }
+        }
+    }
+    .pos-1 {
+        top: 24%;
+        left: -13px;
+    }
+
+    .pos-2 {
+        top: 43%;
+        left: -33px;
+    }
+
+    .pos-3 {
+        top: 64%;
+        left: -33px;
+    }
+
+    .pos-4 {
+        top: 85%;
+        left: -26px;
+    }
+}
