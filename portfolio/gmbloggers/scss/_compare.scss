@@ -1,5 +1,20 @@
 .compare {
     background-color: #4B2C80;
+    position: relative;
+    z-index: 2;
+
+    
+    &:after {
+        content: '';
+        z-index: 0;
+        position: absolute;
+        bottom: 100px;
+        right: 0;
+        width: 134px;
+        height: 181px;
+        background-repeat: no-repeat;
+        background-image: url('../imgs/particle4.svg');
+    }
 
     &__inner {
         padding-top: 32px;
@@ -78,9 +93,29 @@
     }
 }
 
+@media screen and (max-width: 1365px) {
+    .compare {
+
+        &:after {
+            bottom: 0;
+            width: 67px;
+            height: 90px;
+            background-size: cover;
+        }
+    }
+}
+
 
 @media screen and (max-width: 768px) {
     .compare {
+        
+        &:after {
+            bottom: 0;
+            width: 44px;
+            height: 60px;
+            background-size: cover;
+        }
+
         &__table {
 
             &_header {
