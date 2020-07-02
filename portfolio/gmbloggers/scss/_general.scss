@@ -21,6 +21,24 @@ body {
     opacity: 1;
 }
 
+::-webkit-scrollbar {
+	display: block;
+	width: 8px;
+	background: #451C42;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #957A93;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #7A6279;
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: #5E4B5D;
+}
+
 a, button, img {
     user-select: none;
 }
