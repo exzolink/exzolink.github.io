@@ -3343,38 +3343,38 @@ input:-webkit-autofill {
   margin-bottom: 36px
 }
 
-.graph-table-wrapper {
+.card-page .graph-table-wrapper {
   display: flex;
   width: 100%;
   overflow-x: scroll
 }
 
-.graph-table-wrapper::-webkit-scrollbar {
+.card-page .graph-table-wrapper::-webkit-scrollbar {
   display: block;
   width: .75rem;
   background: #fff;
   height: 4px
 }
 
-.graph-table-wrapper::-webkit-scrollbar-thumb {
+.card-page .graph-table-wrapper::-webkit-scrollbar-thumb {
   background: #6cb7b2;
   border-radius: 30px
 }
 
-.graph-table-wrapper::-webkit-scrollbar-thumb:hover {
+.card-page .graph-table-wrapper::-webkit-scrollbar-thumb:hover {
   background: #61a4a0
 }
 
-.graph-table-wrapper::-webkit-scrollbar-thumb:active {
+.card-page .graph-table-wrapper::-webkit-scrollbar-thumb:active {
   background: #579390
 }
 
-.graph-table-wrapper {
+.card-page .graph-table-wrapper {
   scrollbar-width: thin;
   scrollbar-color: #6cb7b2 #fff
 }
 
-.graph-table-wrap {
+.card-page .graph-table-wrap {
   min-width: 1500px;
   width: 100%
 }
@@ -3691,6 +3691,7 @@ input:-webkit-autofill {
 .mar-left {
   margin-left: 20px
 }
+
 .mar-left-1 {
   margin-left: 10px;
   margin-right: 10px;
@@ -3699,6 +3700,7 @@ input:-webkit-autofill {
   top: 11px;
   min-width: 20px;
 }
+
 .mb-1 {
   margin-bottom: 1px;
 }
@@ -3790,6 +3792,7 @@ input:-webkit-autofill {
   transform: rotate(180deg);
   margin-right: 0 !important
 }
+
 .flex-row {
   display: flex;
 }
@@ -4123,8 +4126,8 @@ input:-webkit-autofill {
   padding-right: 0
 }
 
-.finish-table  th:nth-child(5),
-.finish-table  th:nth-child(6) {
+.finish-table th:nth-child(5),
+.finish-table th:nth-child(6) {
   padding-right: 5px
 }
 
@@ -4132,7 +4135,7 @@ input:-webkit-autofill {
   padding-right: 0
 }
 
-.finish-table  th:nth-child(10) {
+.finish-table th:nth-child(10) {
   padding-right: 5px
 }
 
@@ -4298,21 +4301,21 @@ input:-webkit-autofill {
   border-radius: 10px
 }
 
-.graph-table tbody tr:nth-child(2n+1) td {
+.card-page .graph-table tbody tr:nth-child(2n+1) td {
   background-color: #f6f7fb
 }
 
-.graph-table tr td:nth-child(1) {
+.card-page .graph-table tr td:nth-child(1) {
   text-align: left;
   width: 211px
 }
 
-.graph-table thead td {
+.card-page .graph-table thead td {
   padding-bottom: 20px;
   min-width: 76px
 }
 
-.graph-table td {
+.card-page .graph-table td {
   padding: 3px 5px
 }
 
@@ -4324,7 +4327,7 @@ input:-webkit-autofill {
   font-weight: 400
 }
 
-.graph-table__desc {
+.card-page .graph-table__desc {
   font-size: 14px;
   font-family: FuturaPTMedium;
   color: #000;
@@ -4363,9 +4366,9 @@ input:-webkit-autofill {
   box-shadow: 0 0 8px 0 rgba(150, 150, 150, .25)
 }
 
-#chartjs-tooltip,
-#chartjs-tooltip_2,
-#chartjs-tooltip_3 {
+.card-page #chartjs-tooltip,
+.card-page #chartjs-tooltip_2,
+.card-page #chartjs-tooltip_3 {
   background: rgba(255, 255, 255, .5) !important;
   height: 332px !important;
   width: 95px;
@@ -4375,12 +4378,12 @@ input:-webkit-autofill {
   box-shadow: 0 0 73px 22px rgba(117, 141, 139, .15)
 }
 
-.graph-table__wrap {
+.card-page .graph-table__wrap {
   padding-top: 48px;
   padding-bottom: 44px
 }
 
-.graph-table {
+.card-page .graph-table {
   text-align: center
 }
 
@@ -4388,7 +4391,7 @@ input:-webkit-autofill {
   background-color: #008f87
 }
 
-.graph-tooltip {
+.card-page .graph-tooltip {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4410,7 +4413,7 @@ input:-webkit-autofill {
   overflow: hidden
 }
 
-.graph-tooltip__name {
+.card-page .graph-tooltip__name {
   display: block;
   font-family: FuturaPTMedium;
   font-size: 14px;
@@ -4418,13 +4421,13 @@ input:-webkit-autofill {
   letter-spacing: -.4px
 }
 
-.graph-wrap {
+.card-page .graph-wrap {
   position: relative;
   width: 100%;
   padding-bottom: 12px
 }
 
-.graph-tooltip__title {
+.card-page .graph-tooltip__title {
   color: #6bb7b2;
   font-family: FuturaPTBook;
   font-size: 24px;
@@ -4441,7 +4444,7 @@ input:-webkit-autofill {
   margin-bottom: 0
 }
 
-.graph-tooltip__title:before {
+.card-page .graph-tooltip__title:before {
   position: absolute;
   content: "";
   height: 25px;
@@ -4455,7 +4458,7 @@ input:-webkit-autofill {
   margin-bottom: 48px
 }
 
-.graph-tooltip__title:after {
+.card-page .graph-tooltip__title:after {
   position: absolute;
   content: "";
   height: 35px;
@@ -4465,19 +4468,19 @@ input:-webkit-autofill {
   left: 50%
 }
 
-.graph-slider__wrap {
+.card-page .graph-slider__wrap {
   margin-left: 40px;
   padding-top: 18px;
   padding-bottom: 25px;
   max-width: 282px
 }
 
-.graph-slider__wrap .ui-slider-range {
+.card-page .graph-slider__wrap .ui-slider-range {
   background-color: rgba(107, 183, 178, .3);
   border-radius: 30px
 }
 
-.graph-slider__wrap .ui-slider {
+.card-page .graph-slider__wrap .ui-slider {
   width: 282px;
   height: 16px;
   position: relative;
@@ -4490,7 +4493,7 @@ input:-webkit-autofill {
   border-radius: 15px !important
 }
 
-.graph-slider .ui-slider-handle {
+.card-page .graph-slider .ui-slider-handle {
   cursor: pointer !important;
   top: -8px !important;
   width: 21px !important;
@@ -4504,12 +4507,12 @@ input:-webkit-autofill {
   text-align: center
 }
 
-.graph-slider .ui-slider-handle:nth-child(3) {
+.card-page .graph-slider .ui-slider-handle:nth-child(3) {
   background-position: right center !important;
   background-image: url(../images/next.png) !important
 }
 
-.graph-slider .ui-slider-handle i {
+.card-page .graph-slider .ui-slider-handle i {
   opacity: .3;
   color: #2c3942;
   font-size: 13px;
@@ -4517,19 +4520,19 @@ input:-webkit-autofill {
   letter-spacing: -.04px
 }
 
-.graph-slider__wrap .ui-slider-handle:last-child i {
+.card-page .graph-slider__wrap .ui-slider-handle:last-child i {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg)
 }
 
-.graph-slider__text {
+.card-page .graph-slider__text {
   padding-top: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center
 }
 
-.graph-slider__title {
+.card-page .graph-slider__title {
   color: #848484;
   font-family: FuturaPTBook;
   font-size: 10px;
@@ -4585,7 +4588,7 @@ input:-webkit-autofill {
   margin-top: 1px
 }
 
-.graph-text__left {
+.card-page .graph-text__left {
   display: block;
   position: absolute;
   -webkit-transform: rotate(-90deg);
@@ -4597,7 +4600,7 @@ input:-webkit-autofill {
   left: -60px
 }
 
-.more-pos {
+.card-page .more-pos {
   left: -78px;
   bottom: 117px
 }
@@ -5028,18 +5031,18 @@ input:-webkit-autofill {
   margin-bottom: 0
 }
 
-.graph-checkbox__wrap {
+.card-page .graph-checkbox__wrap {
   display: flex;
   margin-left: auto
 }
 
-.graph-checkbox__input {
+.card-page .graph-checkbox__input {
   opacity: 0;
   display: none;
   z-index: -1
 }
 
-.graph-checkbox__label {
+.card-page .graph-checkbox__label {
   display: block;
   width: 56px;
   height: 26px;
@@ -5124,10 +5127,12 @@ input:-webkit-autofill {
   border-radius: 10px;
   z-index: 100000
 }
+
 .opacity-full {
   opacity: 1;
 }
-.graph-slider .ui-slider-handle {
+
+.card-page .graph-slider .ui-slider-handle {
   display: flex;
   justify-content: center;
   align-items: center
@@ -5359,29 +5364,38 @@ input:-webkit-autofill {
 #interim tr td:first-child {
   text-align: center
 }
-table.dataTable thead .sorting_asc {
+
+.interim-table.dataTable thead .sorting_asc {
   background: none;
 }
-table.dataTable .interim-head .sorting_asc span:after {
+
+.interim-table.dataTable .interim-head .sorting_asc span:after {
   background: none;
   margin-left: 5px;
   content: url('../images/arrowUp.svg');
 }
-#inteim table.dataTable, #interim th, #interim td {
- white-space: nowrap;
+
+#inteim table.dataTable,
+#interim th,
+#interim td {
+  white-space: nowrap;
 }
-table.dataTable thead .sorting_desc {
+
+.interim-table.dataTable thead .sorting_desc {
   background: none;
 }
-table.dataTable .interim-head .sorting_desc span:after {
+
+.interim-table.dataTable .interim-head .sorting_desc span:after {
   background: none;
   margin-left: 5px;
   content: url('../images/arrowDown.svg');
 }
-table.dataTable thead .sorting {
+
+.interim-table.dataTable thead .sorting {
   background: none;
 }
-table.dataTable .interim-head .sorting span:after {
+
+.interim-table.dataTable .interim-head .sorting span:after {
   background: none;
   margin-left: 5px;
   content: url('../images/arrowDown.svg');
@@ -5398,10 +5412,12 @@ table.dataTable .interim-head .sorting span:after {
   margin: 0 auto;
   margin-top: 53px
 }
+
 .btn-show img {
   margin-top: 3px;
   margin-left: 7px
 }
+
 .interim-title {
   width: max-content;
   display: block;
@@ -5473,7 +5489,7 @@ table.dataTable .interim-head .sorting span:after {
   font-family: FuturaPTBook
 }
 
-.table-progress__show {
+.interim-table .table-progress__show {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -5484,7 +5500,7 @@ table.dataTable .interim-head .sorting span:after {
   transition: .3s;
 }
 
-.table-progress__wrap {
+.interim-table .table-progress__wrap {
   padding-left: 26px;
   width: 50px;
   margin: 0 auto;
@@ -5495,10 +5511,12 @@ table.dataTable .interim-head .sorting span:after {
   padding-bottom: 2px;
   padding-right: 2px;
 }
+
 .flex {
   display: flex;
 }
-.table-popup {
+
+.interim-table .table-popup {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5513,12 +5531,12 @@ table.dataTable .interim-head .sorting span:after {
   box-shadow: 1px 1px 9px rgba(117, 141, 139, .3);
   z-index: 1;
   overflow-y: scroll;
-  max-height: 158px;
+  max-height: 140px;
   scrollbar-width: thin;
   overflow-x: hidden;
 }
 
-.table-popup__item {
+.interim-table .table-popup__item {
   margin-bottom: 6px;
   padding-right: 48px;
   padding-left: 10px;
@@ -5528,16 +5546,16 @@ table.dataTable .interim-head .sorting span:after {
 }
 
 
-.table-popup__item:hover {
+.interim-table .table-popup__item:hover {
   background-color: #F6F7FB;
 }
 
-.table-popup .label-checkbox {
+.interim-table .table-popup .label-checkbox {
   margin-left: 5px;
   cursor: default;
 }
 
-.table-popup .dflex {
+.interim-table .table-popup .dflex {
   margin-left: 0;
   justify-content: flex-start
 }
@@ -5569,6 +5587,7 @@ table.dataTable .interim-head .sorting span:after {
   display: flex;
   margin-right: 24px;
 }
+
 .interim__info:last-child {
   margin-right: 0;
 }
