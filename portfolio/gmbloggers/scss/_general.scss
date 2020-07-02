@@ -55,6 +55,11 @@ img {
     pointer-events: none;
 }
 
+.open {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
 .container {
     margin: 0 auto;
     padding-left: 15px;
