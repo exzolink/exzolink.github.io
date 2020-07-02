@@ -1,0 +1,105 @@
+.contact {
+    padding: 85px 0;
+    background-color: #000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+
+    &__wrapper {
+        background-color: #fff;
+        background: #4B2C80;
+        border-radius: 4px;
+        max-width: 485px;
+        padding: 32px;
+        padding-bottom: 50px;
+        font-family: 'Roboto';
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        margin-bottom: 16px;
+    }
+
+    &__desc {
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 28px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        padding: 14px 34px;
+        border: 1px solid #fff;
+        background-color: transparent;
+        border-radius: 50px;
+        font-family: inherit;
+        font-size: 18px;
+        line-height: 21px;
+        color: #fff;
+        margin-bottom: 14px;
+    }
+
+    &__submit {
+        padding: 14px 34px;
+        background-color: #fff;
+        text-transform: uppercase;
+        color: #000;
+        margin-top: 16px;
+        border-radius: 50px;
+        border: 1px solid #fff;
+        font-family: inherit;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        transition: background .3s ease, color .3s ease;
+
+        &:hover {
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .contact {
+        &__wrapper {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contact {
+        padding-top: 10px;
+        padding-bottom: 60px;
+        &__wrapper {
+            margin-top: -210px;
+        }
+
+        &__title {
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+        }
+
+        &__desc {
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+        }
+
+        &__input {
+            text-align: center;
+        }
+    }
+}

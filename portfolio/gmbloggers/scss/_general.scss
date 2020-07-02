@@ -10,10 +10,15 @@ html {
     overflow-x: hidden;
     font-size: 16px;
     font-family: 'Acrom', sans-serif;
+    scrollbar-width: thin;
 }
 
 body {
     background-color: #5A1F55;
+}
+
+::placeholder {
+    opacity: 1;
 }
 
 a, button, img {
