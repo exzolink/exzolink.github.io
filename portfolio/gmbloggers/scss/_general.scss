@@ -12,6 +12,7 @@ html {
     font-size: 16px;
     font-family: 'Acrom', sans-serif;
     scrollbar-width: thin;
+    outline: none;
 }
 
 body {
@@ -19,6 +20,11 @@ body {
 }
 
 ::placeholder {
+    opacity: 1;
+    color: #fff;
+}
+
+input::-webkit-input-placeholder {
     opacity: 1;
     color: #fff;
 }
