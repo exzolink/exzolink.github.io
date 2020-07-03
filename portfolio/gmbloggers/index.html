@@ -520,14 +520,18 @@
         <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
         <script src="js/main.js"></script>
         <script>
-            mapboxgl.accessToken = 'pk.eyJ1IjoiZ21ibG9nZ2VycyIsImEiOiJja2M2aGZtdjUwYjN1MnlwODk4NDNuMGxtIn0._IIb-Ofy4fn2tJGzZoWgZA';
-            var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/dark-v10',
-            center: [71.437501, 51.158470],
-            zoom: 12
-            });
-            </script>
+            document.addEventListener('DOMContentLoaded', function () {
+                setTimeout(function () {
+                    mapboxgl.accessToken = 'pk.eyJ1IjoiZ21ibG9nZ2VycyIsImEiOiJja2M2aGZtdjUwYjN1MnlwODk4NDNuMGxtIn0._IIb-Ofy4fn2tJGzZoWgZA';
+                    var map = new mapboxgl.Map({
+                        container: 'map',
+                        style: 'mapbox://styles/mapbox/dark-v10',
+                        center: [71.437501, 51.158470],
+                        zoom: 12
+                    });
+                }, 200);
+            })
+        </script>
     </body>
 
 </html>
