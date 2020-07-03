@@ -211,6 +211,7 @@
     .blogers {
         &__footer {
             text-align: center;
+
             & .header__order {
                 margin-right: 0;
             }
@@ -221,6 +222,13 @@
 @media screen and (max-width: 685px) {
     .blogers {
         padding-bottom: 60px;
+
+        &__title {
+            width: 285px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .particle {
             &_1 {
                 max-width: 55px;
@@ -231,8 +239,11 @@
             }
 
             &_3 {
-                max-width: 80px;
-                bottom: 60px;
+                display: none;
+            }
+
+            &_4 {
+                display: none;
             }
 
             &_6 {
@@ -241,7 +252,7 @@
             }
 
             &_9 {
-                max-width: 55px;
+                display: none;
             }
 
             &_8 {
@@ -249,6 +260,8 @@
             }
 
             &_7 {
+                bottom: 300px;
+                left: -30px;
                 max-width: 150px;
             }
 
@@ -256,7 +269,7 @@
                 max-width: 150px;
             }
         }
-        
+
 
         &__item {
             margin-left: auto;
@@ -323,6 +336,24 @@
 
 @media screen and (max-width: 500px) {
     .blogers {
+        &__footer {
+            .header__order {
+                max-width: 250px;
+            }
+        }
+
+
+        .particle {
+            &_2 {
+                top: 431px;
+            }
+
+            &_5 {
+                left: -30px;
+                top: 54px;
+            }
+        }
+
         padding-top: 30px;
         padding-bottom: 40px;
 
@@ -335,6 +366,7 @@
             line-height: 26px;
             font-weight: 500;
             margin-bottom: 30px;
+            max-width: 220px;
         }
 
         &__btn {
@@ -351,6 +383,15 @@
 
 @media screen and (max-width: 359px) {
     .blogers {
+        .particle {
+            &_1 {
+                top: 272px;
+            }
+            &_2 {
+                top: 488px;
+            }
+        }
+
         &__btns {
             flex-direction: column;
             align-items: flex-start;

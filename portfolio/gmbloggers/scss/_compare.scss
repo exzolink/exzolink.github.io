@@ -59,6 +59,7 @@
             padding-right: 28px;
             vertical-align: top;
             padding-bottom: 30px;
+            width: 406px;
             border-bottom: 1px solid rgba(89, 61, 138, .5);
         }
 
@@ -66,10 +67,11 @@
             font-size: 18px;
             line-height: 22px;
             padding-top: 24px;
-            padding-right: 28px;
+            padding-right: 70px;
             padding-bottom: 30px;
             padding-left: 40px;
             vertical-align: top;
+            width: 480px;
             background-color: #fff;
             background: #1F0F3C;
             border-bottom: 1px solid rgba(89, 61, 138, .5);
@@ -97,10 +99,35 @@
     .compare {
 
         &:after {
-            bottom: 0;
+            bottom: -35px;
             width: 67px;
             height: 90px;
             background-size: cover;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .compare {
+        &__table {
+            & td:last-child {
+                padding-right: 28px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .compare {
+        &__table {
+            & td:last-child {
+                width: auto;
+            }
+
+            & td:nth-child(2) {
+                width: auto;
+            }
         }
     }
 }
@@ -110,7 +137,7 @@
     .compare {
         
         &:after {
-            bottom: 0;
+            bottom: -30px;
             width: 44px;
             height: 60px;
             background-size: cover;
@@ -293,11 +320,13 @@
                 padding-top: 12px;
                 padding-right: 10px;
                 padding-bottom: 14px;
+                width: 165px;
             }
 
             & td:last-child {
                 padding-top: 12px;
                 padding-left: 10px;
+                width: 165px;
                 padding-right: 10px;
                 padding-bottom: 14px;
             }
@@ -319,6 +348,7 @@
         top: 85%;
     }
 }
+
 
 @media screen and (max-width: 360px) {
     .pos-1 {

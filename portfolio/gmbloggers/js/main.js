@@ -7,14 +7,18 @@ document.addEventListener('lazybeforeunveil', function (e) {
   }
 });
 
-
 var closePrivacy = document.getElementById('close-privacy');
 var openPrivacy = document.getElementById('privacy');
 var Privacy = document.querySelector('.privacy');
 
-var closePopup = document.getElementById('close-popup');
-var openPopup = document.querySelectorAll('.blogers__btn_price, .blogers__btn_call');
-var Popup = document.querySelector('.popup');
+var closeCall = document.getElementById('close-call');
+var closeConsult = document.getElementById('close-consult');
+
+var openPopup = document.querySelectorAll('.blogers__btn_price, .blogers__btn_call, .nav__order, .footer__button');
+var callPopup = document.getElementById('call-popup');
+var consultPopup = document.getElementById('consult-popup');
+var openConsult = document.querySelectorAll('.header__order_btn');
+var Popup = document.querySelectorAll('.popup');
 
 closePrivacy.onclick = function () {
   Privacy.classList.toggle('open');
@@ -25,15 +29,28 @@ openPrivacy.onclick = function (e) {
   Privacy.classList.toggle('open');
 };
 
-
-closePopup.onclick = function () {
-  Popup.classList.toggle('open');
+closeCall.onclick = function (e) {
+  e.preventDefault();
+  callPopup.classList.remove('open');
 };
+
+closeConsult.onclick = function (e) {
+  e.preventDefault();
+  consultPopup.classList.remove('open');
+};
+
 
 [].forEach.call(openPopup, function (e) {
   e.addEventListener('click', function (e) {
     e.preventDefault();
-    Popup.classList.toggle('open');
+    callPopup.classList.toggle('open');
+  });
+});
+
+[].forEach.call(openConsult, function (e) {
+  e.addEventListener('click', function (e) {
+    e.preventDefault();
+    consultPopup.classList.toggle('open');
   });
 });
 

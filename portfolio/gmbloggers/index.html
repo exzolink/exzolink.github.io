@@ -60,7 +60,7 @@
                             <div class="know__item">
                                 <img data-src="imgs/item2.svg" class="lazyload" alt="">
                                 <p class="know__desc"><strong>30%</strong> пользователей покупают вещи, рекомендованные
-                                    блогером, не являющимся знаменитостью
+                                    блогером, не являющимся знаменитостью<br>
                                     (от 3 000 до 20 000 подписчиков).</p>
                             </div>
                         </div>
@@ -119,7 +119,7 @@
                                     <td>Кто знает, будет ли работа с найденными вами людьми эффективной, а бюджет не
                                         будет потрачен впустую?</td>
                                     <td>Полноценная база из 100+ блогеров, готовых к работе прямо сейчас, разделенная по
-                                        тематическим категориям.</td>
+                                        тематическим<br>категориям.</td>
                                 </tr>
                                 <tr>
                                     <td class="pos-2">Надежность</td>
@@ -467,11 +467,11 @@
         </section>
 
 
-        <!-- Form Popup -->
-        <div class="popup">
+        <!-- Call Popup -->
+        <div id="call-popup" class="popup">
             <div class="popup__inner">
                 <div class="popup__wrap">
-                    <img id="close-popup" src="imgs/closePopup.svg" alt="close">
+                    <img id="close-call" src="imgs/closePopup.svg" alt="close">
                     <h4>Оставьте заявку, мы вам перезвоним!</h4>
                     <form class="popup__form" action="">
                         <input type="text" name="name" placeholder="Имя">
@@ -482,6 +482,23 @@
                 </div>
             </div>
         </div>
+
+          <!-- Consult Popup -->
+          <div id="consult-popup" class="popup">
+            <div class="popup__inner">
+                <div class="popup__wrap">
+                    <img id="close-consult" src="imgs/closePopup.svg" alt="close">
+                    <h4>Оставьте заявку на бесплатную консультацию!</h4>
+                    <form class="popup__form" action="">
+                        <input type="text" name="name" placeholder="Имя">
+                        <input type="text" name="phone" placeholder="Телефон">
+                        <p>*Ваши данные в безопасности и не будут переданы третьим лицам</p>
+                        <button type="submit">Заказать консультацию</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
 
         <script src="js/lazyload.js"></script>
         <script src="js/main.js"></script>
