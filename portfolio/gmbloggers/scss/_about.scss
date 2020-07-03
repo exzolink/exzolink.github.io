@@ -38,13 +38,13 @@
     }
 
     &__projects {
-        background-image: url('../imgs/projects.png');
-        background-repeat: no-repeat;
-        background-size: cover;
         margin-top: 20px;
         height: 400px;
         width: 100%;
-        background-position: center;
+    }
+
+    &__wrapper {
+        transition-timing-function: linear !important;
     }
 }
 
@@ -103,7 +103,6 @@
         &__projects {
             margin-top: -100px;
             height: 300px;
-            background-image: url('../imgs/projects_sm.png');
         }
 
         &__title {

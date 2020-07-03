@@ -91,3 +91,16 @@ function submitHandler(e) {
 document.querySelectorAll("form").forEach(form =>
   form.addEventListener("submit", submitHandler)
 );
+
+
+var mySwiper = new Swiper ('.swiper-container', {
+  loop: true,
+  slidesPerView: 'auto',
+  speed: 30000,
+  freeMode: true,
+  onlyExternal:true,
+  centeredSlides: true,
+  autoplay: {
+    delay: 0
+  }
+});
