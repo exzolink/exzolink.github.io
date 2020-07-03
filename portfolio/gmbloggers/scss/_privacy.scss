@@ -45,6 +45,7 @@
         line-height: 19px;
         color: rgba(0, 0, 0, 0.8);
         padding-bottom: 30px;
+        max-height: calc(100vh - 150px);
 
         & span {
             color: #4B2A7B;
