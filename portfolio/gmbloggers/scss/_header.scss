@@ -352,3 +352,11 @@
         }
     }
 }
+
+@media screen and (max-height: 700px) {
+    .header {
+        &__wrapper {
+            min-height: 650px;
+        }
+    }
+}

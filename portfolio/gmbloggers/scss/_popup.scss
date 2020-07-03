@@ -4,9 +4,9 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 9999;
-    height: 100vh;
+    height: 100%;
     opacity: 0;
     visibility: collapse;
     transition: all .2s ease;
