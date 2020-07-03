@@ -95,9 +95,8 @@ document.querySelectorAll("form").forEach(form =>
 
 var mySwiper = new Swiper ('.swiper-container', {
   loop: true,
-  slidesPerView: 'auto',
+  slidesPerView: 1,
   speed: 30000,
-  freeMode: true,
   onlyExternal: true,
   simulateTouch: false,
   centeredSlides: true,
