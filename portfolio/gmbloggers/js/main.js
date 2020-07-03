@@ -98,7 +98,8 @@ var mySwiper = new Swiper ('.swiper-container', {
   slidesPerView: 'auto',
   speed: 30000,
   freeMode: true,
-  onlyExternal:true,
+  onlyExternal: true,
+  simulateTouch: false,
   centeredSlides: true,
   autoplay: {
     delay: 0
