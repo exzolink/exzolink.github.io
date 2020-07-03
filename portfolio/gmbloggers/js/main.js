@@ -63,7 +63,7 @@ window.onload = function () {
   var preloader = document.querySelector('.preloader');
   setTimeout(function () {
     preloader.classList.add('content-loaded');
-  }, 1000);
+  }, 500);
 };
 
 

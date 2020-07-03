@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/swiper.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css' rel='stylesheet' />
     </head>
 
     <body>
@@ -357,12 +358,15 @@
                 <div class="about__projects">
                     <div class="swiper-container about__container">
                         <div class="swiper-wrapper about__wrapper">
-                            <div class="swiper-slide about__slide"><div class="about__img" style="background-image: url('./imgs/projects.png');"></div></div>
+                            <div class="swiper-slide about__slide">
+                                <div class="about__img" style="background-image: url('./imgs/projects.png');"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="contact lazyload" data-bg="imgs/map.png">
+            <section class="contact">
+                <div id="map" class="contact__map"></div>
                 <div class="container">
                     <div class="contact__wrapper">
                         <h4 class="contact__title">Привлечем клиентов в ваш бизнес</h4>
@@ -511,9 +515,19 @@
 
 
         <script src="js/lazyload.js"></script>
-        <script src="js/swiper.min.js"></script>
-        <script src="js/main.js"></script>
         <script src="js/modernizr-custom.js"></script>
+        <script src="js/swiper.min.js"></script>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
+        <script src="js/main.js"></script>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoiZ21ibG9nZ2VycyIsImEiOiJja2M2aGZtdjUwYjN1MnlwODk4NDNuMGxtIn0._IIb-Ofy4fn2tJGzZoWgZA';
+            var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/dark-v10',
+            center: [71.437501, 51.158470],
+            zoom: 12
+            });
+            </script>
     </body>
 
 </html>
