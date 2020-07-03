@@ -54,11 +54,16 @@ closeConsult.onclick = function (e) {
   });
 });
 
-window.onload = function() {
+window.onload = function () {
   var Popups = document.querySelectorAll('.privacy, .popup');
   for (var i = 0; i < Popups.length; i++) {
     Popups[i].classList.add('page-loaded');
-}
+  }
+
+  var preloader = document.querySelector('.preloader');
+  setTimeout(function () {
+    preloader.classList.add('content-loaded');
+  }, 1000);
 };
 
 

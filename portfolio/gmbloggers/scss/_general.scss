@@ -71,3 +71,26 @@ img {
     color: #fff;
     max-width: 1125px;
 }
+
+.content-loaded {
+    visibility: collapse;
+    opacity: 0;
+}
+
+.preloader {
+    background-color: #1B1B1B;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+
+    & img {
+        width: 100px;
+    }
+}
