@@ -93,9 +93,14 @@
         &__rightside {
             flex-basis: 100%;
             margin-top: -100px;
+            width: 90%;
+            height: max-content;
 
             & img {
-                width: 100%;
+                width: inherit;
+                margin-left: auto;
+                margin-right: auto;
+                height: inherit;
                 position: initial;
             }
         }
