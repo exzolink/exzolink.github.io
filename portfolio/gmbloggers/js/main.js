@@ -88,5 +88,10 @@ var mySwiper = new Swiper('.swiper-container', {
   centeredSlides: true,
   autoplay: {
     delay: 0
+  },
+  breakpoints: {
+    650:{
+      speed: 20000
+    }
   }
 });
