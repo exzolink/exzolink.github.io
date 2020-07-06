@@ -90,7 +90,7 @@ var mySwiper = new Swiper('.swiper-container', {
     delay: 0
   },
   breakpoints: {
-    650:{
+    650: {
       speed: 10000
     }
   }
