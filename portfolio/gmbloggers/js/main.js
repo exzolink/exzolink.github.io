@@ -85,6 +85,7 @@ var mySwiper = new Swiper('.swiper-container', {
   onlyExternal: true,
   allowTouchMove: false,
   simulateTouch: false,
+  centeredSlides: true,
   autoplay: {
     delay: 0
   }
