@@ -56,10 +56,6 @@
         width: 100%;
         height: 100%;
     }
-
-    &__slide {
-        width: 2037px !important;
-    }
 }
 
 
@@ -111,7 +107,7 @@
 
 @media screen and (max-width: 650px) {
     .about {
-        &__slide {
+        .swiper-slide {
             width: 1360px !important;
         }
         &__projects {
