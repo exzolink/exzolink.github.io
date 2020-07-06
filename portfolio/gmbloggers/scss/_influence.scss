@@ -136,3 +136,11 @@
         }
     }
 }
+
+@media screen and (max-width: 379px) {
+    .influence {
+        &__title {
+            max-width: 325px;
+        }
+    }
+}
