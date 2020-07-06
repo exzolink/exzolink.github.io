@@ -65,17 +65,15 @@ window.onload = function () {
     preloader.classList.add('content-loaded');
   }, 500);
 
-  setTimeout(function () {
-    mapboxgl.accessToken = 'pk.eyJ1IjoiZ21ibG9nZ2VycyIsImEiOiJja2M2aGZtdjUwYjN1MnlwODk4NDNuMGxtIn0._IIb-Ofy4fn2tJGzZoWgZA';
-    var map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/dark-v10',
-      center: [71.437501, 51.158470],
-      zoom: 12
-    });
-  }, 500);
 };
 
+mapboxgl.accessToken = 'pk.eyJ1IjoiZ21ibG9nZ2VycyIsImEiOiJja2M2aGZtdjUwYjN1MnlwODk4NDNuMGxtIn0._IIb-Ofy4fn2tJGzZoWgZA';
+var map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mapbox/dark-v10',
+  center: [71.437501, 51.158470],
+  zoom: 12
+});
 
 var mySwiper = new Swiper('.swiper-container', {
   loop: true,
