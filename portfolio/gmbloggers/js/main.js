@@ -71,9 +71,13 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiZ21ibG9nZ2VycyIsImEiOiJja2M2aGZtdjUwYjN1MnlwO
 var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/dark-v10',
-  center: [71.437501, 51.158470],
+  center: [76.94, 43.230089],
   zoom: 12
 });
+
+var marker = new mapboxgl.Marker()
+.setLngLat([76.946597, 43.230089])
+.addTo(map);
 
 var mySwiper = new Swiper('.swiper-container', {
   loop: true,
