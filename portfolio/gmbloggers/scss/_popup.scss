@@ -86,8 +86,8 @@
             line-height: 21px;
             width: 100%;
 
-            &:first-child {
-                margin-bottom: 19px;
+            &:last-of-type {
+                margin-top: 19px;
             }
         }
 

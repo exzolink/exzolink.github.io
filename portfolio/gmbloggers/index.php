@@ -374,9 +374,19 @@
                     <div class="contact__wrapper">
                         <h4 class="contact__title">Привлечем клиентов в ваш бизнес</h4>
                         <p class="contact__desc">Отправьте заявку, и с вами свяжется персональный менеджер</p>
-                        <form action="" class="contact__form">
-                            <input class="contact__input" type="text" placeholder="Имя">
-                            <input class="contact__input" type="text" placeholder="Телефон">
+                        <form action="mail.php" method="POST" class="contact__form">
+                            <input type="hidden" name="utm_source"
+                                value="<?php $utm_source = $_GET['utm_source']; echo $utm_source; ?>">
+                            <input type="hidden" name="utm_medium"
+                                value="<?php $utm_medium = $_GET['utm_medium']; echo $utm_medium; ?>">
+                            <input type="hidden" name="utm_campaign"
+                                value="<?php $utm_campaign = $_GET['utm_campaign']; echo $utm_campaign; ?>">
+                            <input type="hidden" name="utm_content"
+                                value="<?php $utm_content = $_GET['utm_content']; echo $utm_content; ?>">
+                            <input type="hidden" name="utm_term"
+                                value="<?php $utm_term = $_GET['utm_term']; echo $utm_term; ?>">
+                            <input class="contact__input" type="text" name="name" placeholder="Имя" required>
+                            <input class="contact__input" type="text" name="phone" placeholder="Телефон" required>
                             <button class="contact__submit" type="submit">Хочу клиентов</button>
                         </form>
                     </div>
@@ -490,9 +500,19 @@
                 <div class="popup__wrap">
                     <img id="close-call" src="imgs/closePopup.svg" alt="close">
                     <h4>Оставьте заявку, мы вам перезвоним!</h4>
-                    <form class="popup__form" action="">
-                        <input type="text" name="name" placeholder="Имя">
-                        <input type="text" name="phone" placeholder="Телефон">
+                    <form class="popup__form" action="mail.php" method="POST">
+                        <input type="hidden" name="utm_source"
+                            value="<?php $utm_source = $_GET['utm_source']; echo $utm_source; ?>">
+                        <input type="hidden" name="utm_medium"
+                            value="<?php $utm_medium = $_GET['utm_medium']; echo $utm_medium; ?>">
+                        <input type="hidden" name="utm_campaign"
+                            value="<?php $utm_campaign = $_GET['utm_campaign']; echo $utm_campaign; ?>">
+                        <input type="hidden" name="utm_content"
+                            value="<?php $utm_content = $_GET['utm_content']; echo $utm_content; ?>">
+                        <input type="hidden" name="utm_term"
+                            value="<?php $utm_term = $_GET['utm_term']; echo $utm_term; ?>">
+                        <input type="text" name="name" placeholder="Имя" required>
+                        <input type="text" name="phone" placeholder="Телефон" required>
                         <p>*Ваши данные в безопасности и не будут переданы третьим лицам</p>
                         <button type="submit">Заказать звонок</button>
                     </form>
@@ -506,9 +526,19 @@
                 <div class="popup__wrap">
                     <img id="close-consult" src="imgs/closePopup.svg" alt="close">
                     <h4>Оставьте заявку на бесплатную консультацию!</h4>
-                    <form class="popup__form" action="">
-                        <input type="text" name="name" placeholder="Имя">
-                        <input type="text" name="phone" placeholder="Телефон">
+                    <form class="popup__form" action="mail.php" method="POST">
+                        <input type="hidden" name="utm_source"
+                            value="<?php $utm_source = $_GET['utm_source']; echo $utm_source; ?>">
+                        <input type="hidden" name="utm_medium"
+                            value="<?php $utm_medium = $_GET['utm_medium']; echo $utm_medium; ?>">
+                        <input type="hidden" name="utm_campaign"
+                            value="<?php $utm_campaign = $_GET['utm_campaign']; echo $utm_campaign; ?>">
+                        <input type="hidden" name="utm_content"
+                            value="<?php $utm_content = $_GET['utm_content']; echo $utm_content; ?>">
+                        <input type="hidden" name="utm_term"
+                            value="<?php $utm_term = $_GET['utm_term']; echo $utm_term; ?>">
+                        <input type="text" name="name" placeholder="Имя" required>
+                        <input type="text" name="phone" placeholder="Телефон" required>
                         <p>*Ваши данные в безопасности и не будут переданы третьим лицам</p>
                         <button type="submit">Заказать консультацию</button>
                     </form>
