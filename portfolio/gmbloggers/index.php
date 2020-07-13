@@ -386,7 +386,7 @@
                             <input type="hidden" name="utm_term"
                                 value="<?php $utm_term = $_GET['utm_term']; echo $utm_term; ?>">
                             <input class="contact__input" type="text" name="name" placeholder="Имя" required>
-                            <input class="contact__input" type="text" name="phone" placeholder="Телефон" required>
+                            <input id="phone" minlength="16" class="contact__input" type="text" name="phone" placeholder="Телефон" required>
                             <button class="contact__submit" type="submit">Хочу клиентов</button>
                         </form>
                     </div>
@@ -512,7 +512,7 @@
                         <input type="hidden" name="utm_term"
                             value="<?php $utm_term = $_GET['utm_term']; echo $utm_term; ?>">
                         <input type="text" name="name" placeholder="Имя" required>
-                        <input type="text" name="phone" placeholder="Телефон" required>
+                        <input id="phone-1" minlength="16" type="text" name="phone" placeholder="Телефон" required>
                         <p>*Ваши данные в безопасности и не будут переданы третьим лицам</p>
                         <button type="submit">Заказать звонок</button>
                     </form>
@@ -538,7 +538,7 @@
                         <input type="hidden" name="utm_term"
                             value="<?php $utm_term = $_GET['utm_term']; echo $utm_term; ?>">
                         <input type="text" name="name" placeholder="Имя" required>
-                        <input type="text" name="phone" placeholder="Телефон" required>
+                        <input id="phone-2" minlength="16" type="text" name="phone" placeholder="Телефон" required>
                         <p>*Ваши данные в безопасности и не будут переданы третьим лицам</p>
                         <button type="submit">Заказать консультацию</button>
                     </form>
@@ -551,6 +551,7 @@
         <script src="js/modernizr-custom.js"></script>
         <script src="js/swiper.min.js"></script>
         <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
+        <script src="js/mask.js"></script>
         <script src="js/main.js"></script>
     </body>
 

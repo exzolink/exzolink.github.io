@@ -79,6 +79,18 @@ var marker = new mapboxgl.Marker()
 .setLngLat([76.946597, 43.230089])
 .addTo(map);
 
+var phone = document.getElementById('phone');
+var phone1 = document.getElementById('phone-1');
+var phone2 = document.getElementById('phone-2');
+var maskOptions = {
+  mask: '+0 000 000-00-00',
+};
+var mask = IMask(phone, maskOptions);
+var mask1 = IMask(phone1, maskOptions);
+var mask2 = IMask(phone2, maskOptions);
+
+
+
 var mySwiper = new Swiper('.swiper-container', {
   loop: true,
   slidesPerView: 1,
