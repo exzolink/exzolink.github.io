@@ -1,7 +1,8 @@
-
 $(document).ready(function () {
     if (window.innerWidth > 1100) {
-        $("#app").fullpage({
-        })
+        $('#app').pagepiling({
+            scrollingSpeed: 200
+        });
     };
-})
+});
+

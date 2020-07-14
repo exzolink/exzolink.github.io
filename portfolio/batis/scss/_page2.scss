@@ -31,7 +31,6 @@
     &__container {
         border: 1px solid #50AC9C;
         display: flex;
-        max-height: 850px;
         flex-direction: column;
     }
 
@@ -47,6 +46,11 @@
     }
 }
 
+.page2__section .pp-tableCell {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
 @media screen and (max-width: 1366px) {
     .page2 {
         &__img {
@@ -55,6 +59,10 @@
         &__img img {
             width: auto;
         }
+    }
+    .page2__section .pp-tableCell {
+        padding-top: 40px;
+        padding-bottom: 50px;
     }
 }
 
@@ -80,6 +88,10 @@
         }
         &__cards {
             justify-content: space-between;
+        }
+        .page2__section .pp-tableCell {
+            padding-top: 50px;
+            padding-bottom: 50px;
         }
     }
 }
