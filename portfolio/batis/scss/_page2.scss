@@ -1,0 +1,128 @@
+.page2 {
+    &__cards {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-top: 25px;
+        width: 100%;
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        margin-top: auto;
+        & img {
+            margin-top: auto;
+            width: 100%;
+            max-width: 1000px;
+        }
+    }
+
+    &__title {
+        padding-top: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    &__container {
+        border: 1px solid #50AC9C;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        & p {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    }
+}
+
+.page2__section .pp-tableCell {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+@media screen and (max-width: 1366px) {
+    .page2 {
+        &__img {
+            margin-top: 15px;
+        }
+        &__img img {
+            width: auto;
+        }
+    }
+    .page2__section .pp-tableCell {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .page2 {
+        &__cards {
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .page2 {
+        &__img {
+            margin-top: 25px;
+            width: 100%;
+            & img {
+                width: inherit;
+            }
+        }
+        &__section {
+            margin-bottom: 90px;
+        }
+        &__cards {
+            justify-content: space-between;
+        }
+        .page2__section .pp-tableCell {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .page2 {
+        &__title {
+            font-size: 26px;
+        }
+        &__card {
+            & p {
+                font-size: 18px;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .page2 {
+        &__cards {
+            flex-direction: column;
+        }
+        &__title {
+            font-size: 22px;
+        }
+        &__card {
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
