@@ -1,6 +1,10 @@
 .header {
     background-color: #fff;
-    
+    display: table-cell;
+    vertical-align: middle;
+    width: 100vw;
+    height: 100vh;
+
     &__img img {
         width: 100%;
         max-width: 727px;
@@ -21,11 +25,21 @@
 }
 
 
+@media screen and (max-width: 1440px) {
+    .header {
+        &__inner {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
 @media screen and (max-width: 1200px) {
     .header {
         &__bg {
             width: 100%;
         }
+
         &__inner {
             padding-right: 50px;
             margin-bottom: 150px;
