@@ -48,7 +48,7 @@
                         </div>
                     </div>
                     <div class="page2__img">
-                        <img src="imgs/page2.jpg" alt="">
+                        <img class="lazyload" data-src="imgs/page2.jpg" alt="">
                     </div>
                 </div>
             </section>
@@ -94,11 +94,11 @@
             </section>
 
             <section class="section page4__section">
-                <img class="page4__bg" src="imgs/why.jpg" alt="">
+                <img class="page4__bg lazyload" data-src="imgs/why1.jpg" alt="">
                 <div class="container section__wrapper">
                     <h3 class="section__title">Почему мы?</h3>
                     <div class="page4__wrapper">
-                        <div class="page4__img"><img src="imgs/why.jpg" alt=""></div>
+                        <div class="page4__img"><img class="lazyload" data-src="imgs/why1.jpg" alt=""></div>
                         <div class="page4__info">
                             <p class="page4__desc">Итак, вы планируете осветить свой объект. Это может быть улица, парк,
                                 стадион, торговый зал, офис компании или фасад ресторана.</p>
@@ -117,19 +117,19 @@
                     <h3 class="section__title">1. Поставка от производителя</h3>
                     <div class="page5__wrapper">
                         <div class="page5__info">
-                            <img src="imgs/Philips-Logo.png" alt="">
+                            <img class="lazyload" data-src="imgs/Philips-Logo.png" alt="">
                             <p class="page5__desc page4__desc">Поставляем<br>
                                 светильники напрямую от производителя Philips
                                 по ценам российских
                                 аналогов</p>
                         </div>
-                        <div class="page5__img"><img src="imgs/page4.jpg" alt=""></div>
+                        <div class="page5__img"><img class="lazyload" data-src="imgs/page4.jpg" alt=""></div>
                     </div>
                 </div>
             </section>
 
             <section class="section">
-                <div class="pageForm__inner">
+                <div class="pageForm__inner lazyload" data-bg="imgs/bg_form.jpg">
                     <form action="mail.php" method="POST" class="pageForm__form">
                         <h3 class="pageForm__title">Закажите<br>проект освещения</h3>
                         <div class="pageForm__block">
@@ -147,6 +147,7 @@
 
         </div>
         <script src="js/jquery.js"></script>
+        <script src="js/lazyload.js"></script>
         <script src="js/jquery.pagepiling.min.js"></script>
         <script src="js/main.js"></script>
     </body>
