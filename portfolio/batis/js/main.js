@@ -3,6 +3,8 @@ $(document).ready(function () {
         $('#app').pagepiling({
             scrollingSpeed: 200
         });
+        window.lazySizesConfig = window.lazySizesConfig || {};
+        window.lazySizesConfig.loadMode = 1;
     };
 });
 
@@ -13,5 +15,3 @@ document.addEventListener('lazybeforeunveil', function (e) {
     }
 });
 
-window.lazySizesConfig = window.lazySizesConfig || {};
-window.lazySizesConfig.loadMode = 1;
