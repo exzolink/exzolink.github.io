@@ -109,10 +109,16 @@
         }
         &__wrapper {
             padding-top: 120px;
-            padding-bottom: 120px;
+            padding-bottom: 100px;
         }
+        
+    }
+    .page6__section::after {
+        height: 86%;
     }
 }
+
+
 
 @media screen and (max-width: 720px) {
     .page6 {

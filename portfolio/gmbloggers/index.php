@@ -375,6 +375,7 @@
                         <h4 class="contact__title">Привлечем клиентов в ваш бизнес</h4>
                         <p class="contact__desc">Отправьте заявку, и с вами свяжется персональный менеджер</p>
                         <form action="mail.php" method="POST" class="contact__form">
+                            <input id="source_form" type="hidden" name="source" value="Блок с формой (с картой)">
                             <input type="hidden" name="utm_source"
                                 value="<?php $utm_source = $_GET['utm_source']; echo $utm_source; ?>">
                             <input type="hidden" name="utm_medium"
@@ -386,7 +387,8 @@
                             <input type="hidden" name="utm_term"
                                 value="<?php $utm_term = $_GET['utm_term']; echo $utm_term; ?>">
                             <input class="contact__input" type="text" name="name" placeholder="Имя" required>
-                            <input id="phone" minlength="16" class="contact__input" type="text" name="phone" placeholder="Телефон" required>
+                            <input id="phone" minlength="16" class="contact__input" type="text" name="phone"
+                                placeholder="Телефон" required>
                             <button class="contact__submit" type="submit">Хочу клиентов</button>
                         </form>
                     </div>
@@ -501,6 +503,7 @@
                     <img id="close-call" src="imgs/closePopup.svg" alt="close">
                     <h4>Оставьте заявку, мы вам перезвоним!</h4>
                     <form class="popup__form" action="mail.php" method="POST">
+                        <input id="source" type="hidden" name="source" value="неизвестно">
                         <input type="hidden" name="utm_source"
                             value="<?php $utm_source = $_GET['utm_source']; echo $utm_source; ?>">
                         <input type="hidden" name="utm_medium"
@@ -527,6 +530,7 @@
                     <img id="close-consult" src="imgs/closePopup.svg" alt="close">
                     <h4>Оставьте заявку на бесплатную консультацию!</h4>
                     <form class="popup__form" action="mail.php" method="POST">
+                    <input id="source_consult" type="hidden" name="source" value="Заказ консультации">
                         <input type="hidden" name="utm_source"
                             value="<?php $utm_source = $_GET['utm_source']; echo $utm_source; ?>">
                         <input type="hidden" name="utm_medium"
@@ -552,6 +556,7 @@
         <script src="js/swiper.min.js"></script>
         <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
         <script src="js/mask.js"></script>
+        <script src="js/jquery.js"></script>
         <script src="js/main.js"></script>
     </body>
 

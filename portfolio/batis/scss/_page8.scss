@@ -1,0 +1,126 @@
+.page8 {
+    &__section {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            right: 270px;
+            bottom: 0;
+            width: 200px;
+            z-index: 1;
+            height: 150px;
+            background: linear-gradient(to bottom, #486DB2, #69C6A1);
+        }
+    }
+    &__bg {
+        z-index: 0;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+    }
+    &__wrapper {
+        height: 100%;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &:after {
+            left: 0;
+            content: '';
+            position: absolute;
+            bottom: 0;
+            background: url('../imgs/page8_lines.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 90%;
+            height: 100%;
+            margin-top: 100px;
+            z-index: 10;
+        }
+
+    }
+    &__info {
+        flex-basis: 50%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .page8 {
+        &__section {
+            &:before {
+                content: none;
+            }
+        }
+        &__bg {
+            display: none;
+        }
+        &__info {
+            flex-basis: 80%;
+            margin-top: 0 !important;
+        }
+        &__wrapper {
+            padding-top: 70px;
+            margin-top: 40px;
+            margin-bottom: 90px;
+            padding-bottom: 70px;
+            z-index: 10;
+            position: relative;
+            &:after {
+                content: '' !important;
+                position: absolute;
+                right: -15px !important;
+                bottom: 0;
+                left: auto;
+                width: 70% !important;
+                height: 100%;
+                z-index: 0;
+                background: linear-gradient(to bottom right, #fff, #f1f1f1, #f1f1f1, #848788);
+            }
+        }
+        &__info {
+            z-index: 10;
+        }
+    }
+
+}
+
+@media screen and (max-width: 1600px) {
+    .page8 {
+        &__wrapper {
+            &:before {
+                content: none;
+            }
+            &:after {
+                content: none;
+            }
+        }
+        &__section {
+            &:before {
+                right: 100px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1368px) {
+    .page8 {
+        &__section {
+            &:before {
+                right: 100px;
+                height: 100px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .page8 {
+        &__info {
+            flex-basis: 100%;
+        }
+    }
+}

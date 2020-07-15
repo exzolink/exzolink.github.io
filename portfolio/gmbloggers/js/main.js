@@ -76,8 +76,8 @@ var map = new mapboxgl.Map({
 });
 
 var marker = new mapboxgl.Marker()
-.setLngLat([76.946597, 43.230089])
-.addTo(map);
+  .setLngLat([76.946597, 43.230089])
+  .addTo(map);
 
 var phone = document.getElementById('phone');
 var phone1 = document.getElementById('phone-1');
@@ -89,7 +89,23 @@ var mask = IMask(phone, maskOptions);
 var mask1 = IMask(phone1, maskOptions);
 var mask2 = IMask(phone2, maskOptions);
 
+$('.blogers__btn_price').click(function () {
+  var name = $(this).parent().parent().find('.blogers__name').text();
+  $('#source').val('Блогер ' + name + ' (узнать стоимость)');
+});
 
+$('.blogers__btn_call').click(function () {
+  var name = $(this).parent().parent().find('.blogers__name').text();
+  $('#source').val('Блогер ' + name + ' (заказ звонка)');
+});
+
+$('.nav__order').click(function () {
+  $('#source').val('Первый экран (заказ звонка)');
+});
+
+$('.footer__button').click(function () {
+  $('#source').val('Футер (заказ звонка)');
+});
 
 var mySwiper = new Swiper('.swiper-container', {
   loop: true,

@@ -40,9 +40,6 @@ body {
 }
 
 
-
-
-
 .pp-section {
     height: 100vh !important;
 }
@@ -73,7 +70,15 @@ body {
     font-weight: 400;
 }
 
-
+@media screen and (min-width: 1100px) {
+    #app {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
 
 
 
