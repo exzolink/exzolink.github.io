@@ -89,6 +89,13 @@
         &__cards {
             justify-content: space-between;
         }
+        &__container {
+            border: 0;
+        }
+        &__title {
+           padding: 0;
+           margin: 0;
+        }
         .page2__section .pp-tableCell {
             padding-top: 50px;
             padding-bottom: 50px;

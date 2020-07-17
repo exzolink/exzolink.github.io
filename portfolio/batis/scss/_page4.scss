@@ -132,6 +132,10 @@
         &__quote img {
             max-height: 50px;
         }
+        &__wrapper {
+            border: 0;
+            padding: 0 !important;
+        }
     }
 }
 

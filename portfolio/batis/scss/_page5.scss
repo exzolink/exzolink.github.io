@@ -113,6 +113,12 @@
     .page5 {
         &__wrapper {
             margin-bottom: 50px;
+            border: 0;
+            padding: 0 !important;
+            margin-left: 0;
+        }
+        &__info {
+            margin-left: 0 !important;
         }
     }
 }
@@ -126,8 +132,6 @@
             max-height: none;
             margin-top: 40px;
             width: auto;
-            border-left: 1px solid #69C6A1;
-            padding: 15px !important;
         }
 
         &__info {

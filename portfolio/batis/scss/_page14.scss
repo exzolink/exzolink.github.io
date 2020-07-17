@@ -1,0 +1,125 @@
+.page14 {
+    &__section {
+        position: relative;
+        &:after {
+            z-index: 100;
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 204px;
+            background: linear-gradient(to right, #486DB2, #69C6A1);
+        }
+    }
+    &__logo {
+        max-width: 450px;
+    }
+    &__bg {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        max-width: 1000px;
+
+        &_sm {
+            display: none;
+        }
+    }
+    &__desc {
+        max-width: 550px;
+        font-size: 32px;
+    }
+    &__wrapper {
+        margin-top: 55px;
+        font-weight: 300;
+        line-height: 1.3;
+        height: 100%;
+        max-height: calc(100% - 400px);
+        padding: 60px;
+        padding-right: 0;
+        padding-left: 75px;
+        border: 1px solid #69C6A1;
+        border-right: 0;
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    .page14 {
+        &__bg {
+            max-width: 700px;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .page14 {
+        &__logo {
+            max-width: 400px;
+        }
+        &__bg {
+            max-width: 600px;
+        }
+        &__wrapper {
+            padding: 30px;
+            padding-left: 40px;
+            border-right: 1px solid #69C6A1;
+            max-height: calc(100% - 350px);
+        }
+        &__section {
+            &:after {
+                content: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .page14 {
+        &__bg {
+            display: none;
+            &_sm {
+                display: block;
+                width: 100%;
+            }
+        }
+        &__desc {
+            margin-top: 30px;
+        }
+        &__logo {
+            display: none;
+        }
+        &__wrapper {
+            border: 0;
+            padding: 0;
+        }
+        &__section {
+            margin-bottom: 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .page14 {
+        &__desc {
+            font-size: 26px;
+            line-height: 1.4;
+            max-width: none;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .page14 {
+        &__desc {
+            font-size: 22px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .page14 {
+        &__desc {
+            font-size: 20px;
+        }
+    }
+}
