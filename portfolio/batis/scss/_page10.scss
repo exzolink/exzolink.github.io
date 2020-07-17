@@ -80,6 +80,7 @@
         &__right {
             & img {
                 height: auto;
+                max-height: 100vh;
             }
         }
         &__left {
@@ -102,6 +103,11 @@
         &__left {
             padding-left: 15px;
             height: 100%;
+        }
+        &__right {
+            & img {
+                height: auto;
+            }
         }
         &__desc {
             margin-bottom: 0;

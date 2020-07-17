@@ -183,7 +183,8 @@
 @media screen and (max-height: 899px) {
     .page4 {
         &__wrapper {
-            max-height: calc(100% - 200px);
+           max-height: none;
+           height: auto;
         }
     }
 }

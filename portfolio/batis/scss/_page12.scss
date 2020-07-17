@@ -94,7 +94,7 @@
     .page12 {
         &__wrapper {
             flex-direction: column;
-            padding-top: 30px;
+            padding-top: 15px;
         }
     }
 }
@@ -114,6 +114,20 @@
     .page12 {
         &__desc {
             font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-height: 899px) {
+    .page12 {
+        &__wrapper {
+            height: auto;
+            max-height: none;
+        }
+        &__img {
+            & img {
+                max-height: 600px;
+            }
         }
     }
 }
