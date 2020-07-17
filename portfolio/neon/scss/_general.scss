@@ -1,0 +1,33 @@
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+}
+
+body, html {
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: 'Gotham', sans-serif;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    user-select: none;
+}
+
+img, button {
+    user-select: none;
+}
+
+.container {
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
