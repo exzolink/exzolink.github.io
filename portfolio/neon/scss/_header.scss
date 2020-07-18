@@ -157,6 +157,9 @@
 }
 
 @media screen and (max-width: 640px) {
+    .header {
+        background-color: #191919;
+    }
     .top {
         &__nav {
             background-color: #191919;
@@ -191,6 +194,62 @@
             }
             &_menu {
                 margin-left: 60px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .top {
+        &__nav {
+            &_link {
+                font-size: 10px;
+                &:last-child {
+                    margin-right: 76px;
+                }
+            }
+        }
+    }
+    .nav {
+        &__logo img {
+            max-width: 88px;
+        }
+        &__btn {
+            &_order {
+                font-size: 8px;
+                padding: 7px 12px;
+            }
+            &_menu {
+                margin-left: 36px;
+                & img {
+                    max-width: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 359px) {
+    .nav {
+        &__btn {
+            &_menu {
+                margin-left: 20px;
+                & img {
+                    max-width: 35px;
+                }
+            }
+        }
+        &__logo img {
+            max-width: 70px;
+        }
+    }
+
+    .top {
+        &__nav {
+            &_link {
+                &:last-child {
+                    margin-right: 55px;
+                }
             }
         }
     }
