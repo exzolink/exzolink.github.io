@@ -10,11 +10,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^9.7.6",
+    "alpinejs": "^2.4.1",
+    "autoprefixer": "^9.8.5",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "browser-sync": "^2.26.7",
-    "caniuse-lite": "^1.0.30001048",
+    "browser-sync": "^2.26.10",
+    "caniuse-lite": "^1.0.30001102",
     "cssnano": "^4.1.10",
     "cssnext": "^1.8.4",
     "gulp": "^4.0.2",
@@ -37,5 +38,7 @@
     "imagemin-jpegtran": "^6.0.0",
     "postcss-pxtorem": "^4.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@babel/core": "^7.0.0"
+  }
 }

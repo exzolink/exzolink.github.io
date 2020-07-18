@@ -1,0 +1,164 @@
+.welcome {
+    &__section {
+        background: url('../imgs/welcome_bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 650px;
+        position: relative;
+        background-color: #123B44;
+    }
+    &__title {
+        color: #fff;
+        font-weight: 900;
+        font-size: 65px;
+        line-height: 91%;
+        text-transform: uppercase;
+    }
+
+    &__slogan {
+        color: $blue;
+        font-size: 33px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        padding-left: 140px;
+        margin-top: 55px;
+        line-height: 20px;
+        position: relative;
+        &:after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 130px;
+            height: 3px;
+            background-color: $blue;
+        }
+    }
+
+    &__inner {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 10;
+        padding-left: 160px;
+        position: relative;
+    }
+    
+    &__particles {
+        position: absolute;
+        z-index: 1;
+        left: -50px;
+        margin-top: -25px;
+    }
+
+    &__label {
+        position: absolute;
+        right: 10px;
+        bottom: 105px;
+        padding: 28px 40px;
+        padding-right: 28px;
+        box-shadow: 20px 18px 0px rgba(0, 0, 0, 0.38);
+        background: linear-gradient(334.27deg, #89156F -82.68%, #FF00C7 -77.97%, #262626 46.65%, #262626 122.11%);
+
+        &_title {
+            font-weight: 900;
+            font-size: $fz25;
+            line-height: 1;
+            text-transform: uppercase;
+            color: $blue;
+        }
+        &_suptitle {
+            font-weight: 900;
+            font-size: $fz25;
+            line-height: 1;
+            text-transform: uppercase;
+            color: #fff;
+            margin-top: 5px;
+        }
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    .welcome {
+        &__inner {
+            padding-left: 80px;
+        }
+        &__particles {
+            left: -90px;
+        }
+
+        &__label {
+            bottom: 18px;
+        }
+    }
+}
+
+@media screen and (max-width: 940px) {
+    $fz25: 20px;
+
+    .welcome {
+        &__title {
+            font-size: 46px;
+        }
+        &__slogan {
+            font-size: 28px;
+
+            &:after {
+                top: 3px;
+            }
+        }
+        &__section {
+            height: 480px;
+        }
+        &__label {
+            bottom: 14px;
+            padding: 15px 23px;
+            &_title {
+                font-size: $fz25;
+            }
+            &_suptitle {
+                font-size: $fz25;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    $fz18: 14px;
+    .welcome {
+        &__section {
+            height: 350px;
+        }
+
+        &__title {
+            font-size: 33px;
+        }
+
+        &__slogan {
+            margin-top: 40px;
+            font-size: 17px;
+            padding-left: 75px;
+
+            &:after {
+                width: 65px;
+                top: 5px;
+            }
+        }
+
+        &__inner {
+            padding-left: 70px;
+        }
+
+        &__label {
+            &_title {
+                font-size: $fz18;
+            }
+            &_suptitle {
+                font-size: $fz18;
+            }
+        }
+    }
+}

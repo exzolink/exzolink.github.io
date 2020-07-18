@@ -24,7 +24,7 @@
             <nav class="nav">
                 <div class="container">
                     <div class="nav__inner">
-                        <a href=""><img src="imgs/logo.svg" alt=""></a>
+                        <a class="nav__logo" href=""><img src="imgs/logo.svg" alt=""></a>
                         <div class="nav__items">
                             <a href="" class="nav__link">Главная</a>
                             <a href="" class="nav__link">О нас</a>
@@ -34,16 +34,88 @@
                             <a href="" class="nav__link">Акции</a>
                             <a href="" class="nav__link">Контакты</a>
                         </div>
-                        <a href="" class="nav__btn_order">Забронировать место</a>
+                        <div class="flex">
+                            <a href="" class="nav__btn_order">Забронировать место</a>
+                            <button class="nav__btn_menu"><img src="imgs/menu.svg" alt=""></button>
+                        </div>
                     </div>
                 </div>
             </nav>
         </header>
 
+        <main class="main">
+            <section class="welcome__section">
+                <div class="container h-100">
+                    <div class="welcome__inner">
+                        <img class="welcome__particles" src="imgs/particles.svg" alt="">
+                        <h1 class="welcome__title">Киберспортивный <br>бар в Алматы</h1>
+                        <h2 class="welcome__slogan">Power On</h2>
+                    </div>
+                </div>
+
+                <div class="welcome__label">
+                    <h3 class="welcome__label_title">Официальное <br>открытие eSports</h3>
+                    <h3 class="welcome__label_suptitle">Bar & Gaming</h3>
+                </div>
+            </section>
+
+            <section class="info__section">
+                <div class="info__top_section">
+                    <div class="container">
+                        <h3 class="info__top_title">Игрокам приготовиться!</h3>
+                        <p class="info__top_desc">
+                            Neon eSports - единственное пространство, где проводятся и транслируются киберспортивные
+                            мероприятия.
+                            <br><br>
+                            В нашем заведении ты можешь отлично провести время с друзьями за играми, попивая вкуснейшее
+                            пиво
+                            с изысканными закусками; найти людей со схожими интересами; окунуться в динамичную и яркую
+                            атмосферу игрового сообщества.
+                            <br><br>
+                            <strong>Neon eSports - это центр киберспорта в Алматы!</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="info__bottom_section">
+                    <div class="container">
+                        <div class="info__bottom_header">
+                            <h3 class="info__bottom_title">Игровое <br>пространство</h3>
+                            <p class="info__bottom_desc">Дизайн компьютерных столов уникален и предоставляет
+                                максимальный комфорт во время игры</p>
+                        </div>
+                        <div class="info__specs">
+                            <div class="info__specs_item">
+                                <div class="info__specs_char">50 <span class="info__specs_desc">мощных</span></div>
+                                <span class="info__specs_desc">компьютеров</span>
+                            </div>
+                            <div class="info__specs_item">
+                                <span class="info__specs_desc">Мониторы</span>
+                                <span class="info__specs_char">280Гц</span>
+                            </div>
+                            <div class="info__specs_item">
+                                <span class="info__specs_desc">Процессоры</span>
+                                <span class="info__specs_char">i7-9700</span>
+                            </div>
+                            <div class="info__specs_item">
+                                <div class="info__specs_char">2 <span class="info__specs_desc">Bootcamp зоны на</span>
+                                </div>
+                                <div class="info__specs_char">5 <span class="info__specs_desc">человек</span></div>
+                            </div>
+                            <div class="info__specs_item">
+                                <span class="info__specs_char">PSP</span>
+                                <span class="info__specs_desc">Room</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
 
-
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
+        <script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+        <script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js"
+            defer></script>
         <script src="js/main.js"></script>
     </body>
 
