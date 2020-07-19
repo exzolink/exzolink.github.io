@@ -38,3 +38,45 @@
      
     }
 }
+
+@media screen and (max-width: 1050px) {
+    .kitchen__info p {
+        margin-bottom: 70px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .kitchen__info p {
+        font-size: 14px;
+        margin-bottom: 45px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .kitchen {
+        &__content {
+            flex-direction: column;
+        }
+        &__info {
+            padding: 30px 15px;
+        }
+        &__container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        &__inner {
+            padding-bottom: 45px;
+        }
+    }
+}
+
+@media screen and (max-width: 359px) {
+    .kitchen {
+        &__info {
+            & p {
+                line-height: 1.4;
+                font-size: 12px;
+            }
+        }
+    }
+}

@@ -1,3 +1,10 @@
+document.addEventListener('lazybeforeunveil', function (e) {
+    var bg = e.target.getAttribute('data-bg');
+    if (bg) {
+        e.target.style.backgroundImage = 'url(' + bg + ')';
+    }
+});
+
 var gallery = new Swiper('.zones__gallery_container', {
     slidesPerView: 4,
     spaceBetween: 6,
@@ -6,7 +13,7 @@ var gallery = new Swiper('.zones__gallery_container', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-      },
+    },
     breakpoints: {
         320: {
             slidesPerView: 1,
