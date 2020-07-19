@@ -62,6 +62,15 @@ img {
     font-weight: 700;
 }
 
+.lazyload,
+.lazyloading {
+	opacity: 0;
+}
+.lazyloaded {
+	opacity: 1;
+	transition: opacity .2s;
+}
+
 
 // Slider Arrows
 .slider-next {
