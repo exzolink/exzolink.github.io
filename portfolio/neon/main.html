@@ -121,7 +121,7 @@
                                 <div class="zones__tabs_item" :class="{ 'active': tab === 'tuf' }" @click="tab = 'tuf'">
                                     Tuf Zone</div>
                                 <div class="zones__tabs_item" :class="{ 'active': tab === 'steel' }"
-                                    @click="tab = 'steel'" @mouseenter.once="fetch('/partials/steelzoneHardware.html')
+                                    @click="tab = 'steel'" @mouseenter.once="fetch('../partials/steelzoneHardware.html')
                                 .then(response => response.text())
                                 .then(html => { $refs.steelHard.innerHTML = html })">Steel Zone</div>
                                 <div class="zones__tabs_item" :class="{ 'active': tab === 'asus' }"
