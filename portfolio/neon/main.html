@@ -124,14 +124,17 @@
                                     @click="tab = 'steel'" @mouseenter.once="fetch('./partials/steelzoneHardware.html')
                                 .then(response => response.text())
                                 .then(html => { $refs.steelHard.innerHTML = html })">Steel Zone</div>
+
                                 <div class="zones__tabs_item" :class="{ 'active': tab === 'asus' }"
                                     @click="tab = 'asus'" @mouseenter.once="fetch('./partials/asusrogHardware.html')
                                     .then(response => response.text())
                                     .then(html => { $refs.asusrogHard.innerHTML = html })">Bootcamp by Asus Rog</div>
+
                                 <div class="zones__tabs_item" :class="{ 'active': tab === 'zone' }"
                                     @click="tab = 'zone'" @mouseenter.once="fetch('./partials/bootcampHardware.html')
                                     .then(response => response.text())
                                     .then(html => { $refs.bootcampHard.innerHTML = html })">Bootcamp Zone</div>
+
                                 <div class="zones__tabs_item" :class="{ 'active': tab === 'psp' }" @click="tab = 'psp'"
                                     @mouseenter.once="fetch('./partials/psproomHardware.html')
                                 .then(response => response.text())
@@ -249,6 +252,123 @@
                             </div>
 
                             <div x-ref="steelHard" class="zones__hard_wrapper">
+                                <p class="loading">Загрузка...</p>
+                            </div>
+
+                            <div class="zones__price">
+                                <div class="zones__price_wrapper">
+                                    <span class="zones__price_text">Стоимость:</span>
+                                    <span class="zones__price_number">1000 тг/ч</span>
+                                </div>
+                                <button class="order-button">Забронировать место</button>
+                            </div>
+                        </div>
+
+                        <div x-show="tab === 'asus'" class="zones__content_wrapper">
+                            <div class="zones__gallery">
+                                <div class="swiper-container zones__gallery_container">
+                                    <div class="swiper-wrapper zones__gallery_wrapper">
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="steel" href="imgs/gamezone_img2.png"><img
+                                                    class="swiper-lazy" data-src="imgs/gamezone_img2.png" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="steel" href="imgs/gamezone_img.png"><img
+                                                    class="swiper-lazy" data-src="imgs/gamezone_img.png" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="steel" href="imgs/gamezone_img2.png"><img
+                                                    class="swiper-lazy" data-src="imgs/gamezone_img2.png" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="steel" href="imgs/gamezone_img.png"><img
+                                                    class="swiper-lazy" data-src="imgs/gamezone_img.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </div>
+
+                            <div x-ref="asusrogHard" class="zones__hard_wrapper">
+                                <p class="loading">Загрузка...</p>
+                            </div>
+
+                            <div class="zones__price">
+                                <div class="zones__price_wrapper">
+                                    <span class="zones__price_text">Стоимость:</span>
+                                    <span class="zones__price_number">1000 тг/ч</span>
+                                </div>
+                                <button class="order-button">Забронировать место</button>
+                            </div>
+                        </div>
+
+                        <div x-show="tab === 'bootcamp'" class="zones__content_wrapper">
+                            <div class="zones__gallery">
+                                <div class="swiper-container zones__gallery_container">
+                                    <div class="swiper-wrapper zones__gallery_wrapper">
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="steel" href="imgs/gamezone_img2.png"><img
+                                                    class="swiper-lazy" data-src="imgs/gamezone_img2.png" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="steel" href="imgs/gamezone_img.png"><img
+                                                    class="swiper-lazy" data-src="imgs/gamezone_img.png" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="steel" href="imgs/gamezone_img2.png"><img
+                                                    class="swiper-lazy" data-src="imgs/gamezone_img2.png" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="steel" href="imgs/gamezone_img.png"><img
+                                                    class="swiper-lazy" data-src="imgs/gamezone_img.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </div>
+
+                            <div x-ref="bootcampHard" class="zones__hard_wrapper">
+                                <p class="loading">Загрузка...</p>
+                            </div>
+
+                            <div class="zones__price">
+                                <div class="zones__price_wrapper">
+                                    <span class="zones__price_text">Стоимость:</span>
+                                    <span class="zones__price_number">1000 тг/ч</span>
+                                </div>
+                                <button class="order-button">Забронировать место</button>
+                            </div>
+                        </div>
+
+                        <div x-show="tab === 'psp'" class="zones__content_wrapper">
+                            <div class="zones__gallery">
+                                <div class="swiper-container zones__gallery_container">
+                                    <div class="swiper-wrapper zones__gallery_wrapper">
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="steel" href="imgs/gamezone_img2.png"><img
+                                                    class="swiper-lazy" data-src="imgs/gamezone_img2.png" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="steel" href="imgs/gamezone_img.png"><img
+                                                    class="swiper-lazy" data-src="imgs/gamezone_img.png" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="steel" href="imgs/gamezone_img2.png"><img
+                                                    class="swiper-lazy" data-src="imgs/gamezone_img2.png" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="steel" href="imgs/gamezone_img.png"><img
+                                                    class="swiper-lazy" data-src="imgs/gamezone_img.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </div>
+
+                            <div x-ref="pspHard" class="zones__hard_wrapper">
                                 <p class="loading">Загрузка...</p>
                             </div>
 
