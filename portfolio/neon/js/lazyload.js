@@ -8,3 +8,6 @@ document.addEventListener('lazybeforeunveil', function (e) {
         e.target.style.backgroundImage = 'url(' + bg + ')';
     }
 });
+
+window.lazySizesConfig = window.lazySizesConfig || {};
+lazySizesConfig.loadMode = 3;
