@@ -1,6 +1,8 @@
 var gallery = new Swiper('.zones__gallery_container', {
     slidesPerView: 4,
     spaceBetween: 6,
+    preloadImages: false,
+    lazy: true,
     breakpoints: {
         320: {
             slidesPerView: 1,
