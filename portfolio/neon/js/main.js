@@ -3,6 +3,10 @@ var gallery = new Swiper('.zones__gallery_container', {
     spaceBetween: 6,
     preloadImages: false,
     lazy: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     breakpoints: {
         320: {
             slidesPerView: 1,
@@ -10,11 +14,13 @@ var gallery = new Swiper('.zones__gallery_container', {
         360: {
             slidesPerView: 2,
         },
-        760: {
+        900: {
             slidesPerView: 3,
         },
         1100: {
             slidesPerView: 4,
+            allowTouchMove: false,
+            simulateTouch: false
         },
     }
 });

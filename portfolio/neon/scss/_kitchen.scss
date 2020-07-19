@@ -1,0 +1,39 @@
+.kitchen {
+    background-repeat: no-repeat;
+    background-position: 100% 20%;
+    background-size: cover;
+    background-color: #201F20;
+    background-image: url('../imgs/kitchen__bg.png');
+
+    &__inner {
+        padding-top: 45px;
+    }
+
+    &__content {
+        display: flex;
+        margin-top: 45px;
+    }
+
+    &__img {
+        display: flex;
+        height: max-content;
+        flex-basis: 50%;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    &__info {
+        flex-basis: 50%;
+        display: flex;
+        padding-left: 45px;
+        flex-direction: column;
+        & p {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 115px;
+        }
+     
+    }
+}

@@ -51,7 +51,23 @@ img {
 .h-100 {
     height: 100%;
 }
+.w-100 {
+    width: 100%;
+}
 
+
+// Slider Arrows
+.slider-next {
+    position: absolute;
+    right: 0;
+}
+.slider-prev {
+    left: 0;
+    position: absolute;
+}
+.swiper-button-disabled {
+    visibility: hidden;
+}
 
 
 // Component: Order Button
@@ -60,6 +76,7 @@ img {
 }
 .order-button {
     color: $blue;
+    display: block;
     transition: background .3s ease, color .3s ease;
     border: 2px solid $blue;
     box-shadow: 0 0 6px 0 $blue;
@@ -73,6 +90,11 @@ img {
         color: #191919;
         background: $blue;
         cursor: pointer;
+    }
+
+    &-link {
+        display: flex;
+        align-items: center;
     }
 }
 
