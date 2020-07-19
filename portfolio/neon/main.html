@@ -117,12 +117,12 @@
                     <div class="container">
                         <h3 class="zones__selector_title">5 игровых зон на твой выбор:</h3>
                         <div class="zones__tabs">
-                            <div class="zones__tabs_inner">
-                                <div class="zones__tabs_item active">Tuf Zone</div>
-                                <div class="zones__tabs_item">Steel Zone</div>
-                                <div class="zones__tabs_item">Bootcamp by Asus Rog</div>
-                                <div class="zones__tabs_item">Bootcamp Zone</div>
-                                <div class="zones__tabs_item">PSP Room</div>
+                            <div class="zones__tabs_inner" x-data="{ tab: 'tuf' }">
+                                <div class="zones__tabs_item" :class="{ 'active': tab === 'tuf' }" @click="tab = 'tuf'">Tuf Zone</div>
+                                <div class="zones__tabs_item" :class="{ 'active': tab === 'steel' }" @click="tab = 'steel'">Steel Zone</div>
+                                <div class="zones__tabs_item" :class="{ 'active': tab === 'asus' }" @click="tab = 'asus'">Bootcamp by Asus Rog</div>
+                                <div class="zones__tabs_item" :class="{ 'active': tab === 'zone' }" @click="tab = 'zone'">Bootcamp Zone</div>
+                                <div class="zones__tabs_item" :class="{ 'active': tab === 'psp' }" @click="tab = 'psp'">PSP Room</div>
                             </div>
                         </div>
                     </div>
@@ -134,19 +134,19 @@
                             <div class="swiper-container zones__gallery_container">
                                 <div class="swiper-wrapper zones__gallery_wrapper">
                                     <div class="swiper-slide zones__gallery_item">
-                                        <a data-fslightbox="gallery" href="imgs/gamezone_img.png"><img
+                                        <a data-fslightbox="tuf" href="imgs/gamezone_img.png"><img
                                                 class="swiper-lazy" data-src="imgs/gamezone_img.png" alt=""></a>
                                     </div>
                                     <div class="swiper-slide zones__gallery_item">
-                                        <a data-fslightbox="gallery" href="imgs/gamezone_img2.png"><img
+                                        <a data-fslightbox="tuf" href="imgs/gamezone_img2.png"><img
                                                 class="swiper-lazy" data-src="imgs/gamezone_img2.png" alt=""></a>
                                     </div>
                                     <div class="swiper-slide zones__gallery_item">
-                                        <a data-fslightbox="gallery" href="imgs/gamezone_img.png"><img
+                                        <a data-fslightbox="tuf" href="imgs/gamezone_img.png"><img
                                                 class="swiper-lazy" data-src="imgs/gamezone_img.png" alt=""></a>
                                     </div>
                                     <div class="swiper-slide zones__gallery_item">
-                                        <a data-fslightbox="gallery" href="imgs/gamezone_img2.png"><img
+                                        <a data-fslightbox="tuf" href="imgs/gamezone_img2.png"><img
                                                 class="swiper-lazy" data-src="imgs/gamezone_img2.png" alt=""></a>
                                     </div>
                                 </div>

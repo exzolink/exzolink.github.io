@@ -340,6 +340,7 @@
             &_desc {
                 font-size: 11px;
                 max-width: 70%;
+                line-height: 1.2;
             }
         }
 
@@ -418,6 +419,9 @@
         &__top {
             &_section {
                 background-position: 50px 100%;
+            }
+            &_desc {
+                max-width: 75%;
             }
         }
         &__specs {
