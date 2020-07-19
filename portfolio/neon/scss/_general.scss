@@ -55,6 +55,9 @@ img {
 
 
 // Component: Order Button
+.mx-auto {
+    margin: 0 auto;
+}
 .order-button {
     color: $blue;
     transition: background .3s ease, color .3s ease;
