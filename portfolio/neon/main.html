@@ -112,97 +112,148 @@
                 </div>
             </section>
 
-            <section class="zones">
+            <section class="zones" x-data="{ tab: 'tuf' }">
                 <div class="zones__selector">
                     <div class="container">
                         <h3 class="zones__selector_title">5 игровых зон на твой выбор:</h3>
                         <div class="zones__tabs">
-                            <div class="zones__tabs_inner" x-data="{ tab: 'tuf' }">
-                                <div class="zones__tabs_item" :class="{ 'active': tab === 'tuf' }" @click="tab = 'tuf'">Tuf Zone</div>
-                                <div class="zones__tabs_item" :class="{ 'active': tab === 'steel' }" @click="tab = 'steel'">Steel Zone</div>
-                                <div class="zones__tabs_item" :class="{ 'active': tab === 'asus' }" @click="tab = 'asus'">Bootcamp by Asus Rog</div>
-                                <div class="zones__tabs_item" :class="{ 'active': tab === 'zone' }" @click="tab = 'zone'">Bootcamp Zone</div>
-                                <div class="zones__tabs_item" :class="{ 'active': tab === 'psp' }" @click="tab = 'psp'">PSP Room</div>
+                            <div class="zones__tabs_inner">
+                                <div class="zones__tabs_item" :class="{ 'active': tab === 'tuf' }" @click="tab = 'tuf'">
+                                    Tuf Zone</div>
+                                <div class="zones__tabs_item" :class="{ 'active': tab === 'steel' }" @click="tab = 'steel'" @mouseenter.once="fetchSteel()">Steel Zone</div>
+                                <div class="zones__tabs_item" :class="{ 'active': tab === 'asus' }"
+                                    @click="tab = 'asus'">Bootcamp by Asus Rog</div>
+                                <div class="zones__tabs_item" :class="{ 'active': tab === 'zone' }"
+                                    @click="tab = 'zone'">Bootcamp Zone</div>
+                                <div class="zones__tabs_item" :class="{ 'active': tab === 'psp' }" @click="tab = 'psp'">
+                                    PSP Room</div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="zones__content">
                     <img class="zones__particles lazyload" data-src="imgs/purple-cloud2.png" alt="">
                     <div class="container">
-                        <div class="zones__gallery">
-                            <div class="swiper-container zones__gallery_container">
-                                <div class="swiper-wrapper zones__gallery_wrapper">
-                                    <div class="swiper-slide zones__gallery_item">
-                                        <a data-fslightbox="tuf" href="imgs/gamezone_img.png"><img
-                                                class="swiper-lazy" data-src="imgs/gamezone_img.png" alt=""></a>
-                                    </div>
-                                    <div class="swiper-slide zones__gallery_item">
-                                        <a data-fslightbox="tuf" href="imgs/gamezone_img2.png"><img
-                                                class="swiper-lazy" data-src="imgs/gamezone_img2.png" alt=""></a>
-                                    </div>
-                                    <div class="swiper-slide zones__gallery_item">
-                                        <a data-fslightbox="tuf" href="imgs/gamezone_img.png"><img
-                                                class="swiper-lazy" data-src="imgs/gamezone_img.png" alt=""></a>
-                                    </div>
-                                    <div class="swiper-slide zones__gallery_item">
-                                        <a data-fslightbox="tuf" href="imgs/gamezone_img2.png"><img
-                                                class="swiper-lazy" data-src="imgs/gamezone_img2.png" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                            </div>
-                        </div>
-                        <div class="zones__hard">
-                            <h3 class="zones__hard_title">Оборудование в <span>Tuf Zone</span></h3>
 
-                            <div class="zones__hard_list">
-                                <div class="zones__hard_left">
-                                    <div class="zones__hard_item">
-                                        <img class="lazyload" data-src="imgs/tufzone_2.png" alt="">
-                                        <p>ASUS TUF Gaming K7</p>
+                        <div x-show="tab === 'tuf'" class="zones__content_wrapper">
+                            <div class="zones__gallery">
+                                <div class="swiper-container zones__gallery_container">
+                                    <div class="swiper-wrapper zones__gallery_wrapper">
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="tuf" href="imgs/gamezone_img.png"><img
+                                                    class="swiper-lazy" data-src="imgs/gamezone_img.png" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="tuf" href="imgs/gamezone_img2.png"><img
+                                                    class="swiper-lazy" data-src="imgs/gamezone_img2.png" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="tuf" href="imgs/gamezone_img.png"><img
+                                                    class="swiper-lazy" data-src="imgs/gamezone_img.png" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="tuf" href="imgs/gamezone_img2.png"><img
+                                                    class="swiper-lazy" data-src="imgs/gamezone_img2.png" alt=""></a>
+                                        </div>
                                     </div>
-                                    <div class="zones__hard_item">
-                                        <img class="lazyload" data-src="imgs/tufzone_1.png" alt="">
-                                        <p>20хRTX2060 Super + RAM 16Гб</p>
-                                    </div>
-                                    <div class="zones__hard_item">
-                                        <img class="lazyload" data-src="imgs/tufzone_3.png" alt="">
-                                        <p>ASUS TUF Gaming K7</p>
-                                    </div>
-                                    <div class="zones__hard_item">
-                                        <img class="lazyload" data-src="imgs/tufzone_5.png" alt="">
-                                        <p>ASUS TUF Gaming M7</p>
-                                    </div>
-                                    <div class="zones__hard_item">
-                                        <img class="lazyload" data-src="imgs/tufzone_4.png" alt="">
-                                        <p>ASUS TUF Gaming</p>
-                                    </div>
-                                    <div class="zones__hard_item">
-                                        <img class="lazyload" data-src="imgs/tufzone_6.png" alt="">
-                                        <p>ASUS TUF Gaming M7</p>
-                                    </div>
-                                </div>
-                                <div class="zones__hard_right">
-                                    <div class="zones__hard_big">
-                                        <img class="lazyload" data-src="imgs/tufzone_chair.png" alt="">
-                                        <p>Cougar Armor One</p>
-                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
                                 </div>
                             </div>
+                            <div class="zones__hard_wrapper">
 
-                        </div>
-
-                        <div class="zones__price">
-                            <div class="zones__price_wrapper">
-                                <span class="zones__price_text">Стоимость:</span>
-                                <span class="zones__price_number">1000 тг/ч</span>
+                                <div class="zones__hard">
+                                    <h3 class="zones__hard_title">Оборудование в <span>Tuf Zone</span></h3>
+                                    <div class="zones__hard_list">
+                                        <div class="zones__hard_left">
+                                            <div class="zones__hard_item">
+                                                <img class="lazyload" data-src="imgs/tufzone_2.png" alt="">
+                                                <p>ASUS TUF Gaming K7</p>
+                                            </div>
+                                            <div class="zones__hard_item">
+                                                <img class="lazyload" data-src="imgs/tufzone_1.png" alt="">
+                                                <p>20хRTX2060 Super + RAM 16Гб</p>
+                                            </div>
+                                            <div class="zones__hard_item">
+                                                <img class="lazyload" data-src="imgs/tufzone_3.png" alt="">
+                                                <p>ASUS TUF Gaming K7</p>
+                                            </div>
+                                            <div class="zones__hard_item">
+                                                <img class="lazyload" data-src="imgs/tufzone_5.png" alt="">
+                                                <p>ASUS TUF Gaming M7</p>
+                                            </div>
+                                            <div class="zones__hard_item">
+                                                <img class="lazyload" data-src="imgs/tufzone_4.png" alt="">
+                                                <p>ASUS TUF Gaming</p>
+                                            </div>
+                                            <div class="zones__hard_item">
+                                                <img class="lazyload" data-src="imgs/tufzone_6.png" alt="">
+                                                <p>ASUS TUF Gaming M7</p>
+                                            </div>
+                                        </div>
+                                        <div class="zones__hard_right">
+                                            <div class="zones__hard_big">
+                                                <img class="lazyload" data-src="imgs/tufzone_chair.png" alt="">
+                                                <p>Cougar Armor One</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <button class="order-button">Забронировать место</button>
+
+                            <div class="zones__price">
+                                <div class="zones__price_wrapper">
+                                    <span class="zones__price_text">Стоимость:</span>
+                                    <span class="zones__price_number">1000 тг/ч</span>
+                                </div>
+                                <button class="order-button">Забронировать место</button>
+                            </div>
                         </div>
+
+
+                        <div x-show="tab === 'steel'" class="zones__content_wrapper">
+                            <div class="zones__gallery">
+                                <div class="swiper-container zones__gallery_container">
+                                    <div class="swiper-wrapper zones__gallery_wrapper">
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="steel" href="imgs/gamezone_img2.png"><img
+                                                    class="swiper-lazy" data-src="imgs/gamezone_img2.png" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="steel" href="imgs/gamezone_img.png"><img
+                                                    class="swiper-lazy" data-src="imgs/gamezone_img.png" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="steel" href="imgs/gamezone_img2.png"><img
+                                                    class="swiper-lazy" data-src="imgs/gamezone_img2.png" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="steel" href="imgs/gamezone_img.png"><img
+                                                    class="swiper-lazy" data-src="imgs/gamezone_img.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </div>
+
+                            <div x-ref="steelHard" class="zones__hard_wrapper">
+                                Загрузка...
+                            </div>
+
+                            <div class="zones__price">
+                                <div class="zones__price_wrapper">
+                                    <span class="zones__price_text">Стоимость:</span>
+                                    <span class="zones__price_number">1000 тг/ч</span>
+                                </div>
+                                <button class="order-button">Забронировать место</button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+
             </section>
 
             <section class="aura">
@@ -299,11 +350,13 @@
                         <div class="feedback__content">
                             <div class="feedback__item">
                                 <img class="lazyload" data-src="imgs/feedback_1.jpg" alt="">
-                                <a class="feedback__item_link" data-fslightbox="lightbox" href="https://www.youtube.com/watch?v=xshEZzpS4CQ"></a> 
+                                <a class="feedback__item_link" data-fslightbox="lightbox"
+                                    href="https://www.youtube.com/watch?v=xshEZzpS4CQ"></a>
                             </div>
                             <div class="feedback__item">
                                 <img class="lazyload" data-src="imgs/feedback_2.jpg" alt="">
-                                <a class="feedback__item_link" data-fslightbox="lightbox" href="https://www.youtube.com/watch?v=xshEZzpS4CQ"></a> 
+                                <a class="feedback__item_link" data-fslightbox="lightbox"
+                                    href="https://www.youtube.com/watch?v=xshEZzpS4CQ"></a>
                             </div>
                         </div>
                     </div>
@@ -311,11 +364,12 @@
             </section>
         </main>
 
-        <script src="js/lazyload.js" async></script>
+
         <script src="js/alpine.js" defer></script>
+        <script src="js/lazyload.js" async></script>
         <script src="js/fslightbox.js" async></script>
         <script src="js/swiper.min.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/app.js"></script>
     </body>
 
 </html>

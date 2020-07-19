@@ -79,6 +79,10 @@
         padding-bottom: 95px;
         position: relative;
 
+        &_wrapper {
+            min-height: 1245px;
+        }
+
         &:after {
             position: absolute;
             left: 0;
