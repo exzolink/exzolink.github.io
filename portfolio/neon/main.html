@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/swiper.min.css">
         <title>Neon</title>
     </head>
 
@@ -47,7 +48,7 @@
             <section class="welcome__section">
                 <div class="container h-100">
                     <div class="welcome__inner">
-                        <img class="welcome__particles" src="imgs/particles.svg" alt="">
+                        <img class="welcome__particles lazyload" data-src="imgs/particles.svg" alt="">
                         <h1 class="welcome__title">Киберспортивный <br>бар в Алматы</h1>
                         <h2 class="welcome__slogan">Power On</h2>
                     </div>
@@ -116,30 +117,37 @@
                     <div class="container">
                         <h3 class="zones__selector_title">5 игровых зон на твой выбор:</h3>
                         <div class="zones__tabs">
-                            <div class="zones__tabs_item active">Tuf Zone</div>
-                            <div class="zones__tabs_item">Steel Zone</div>
-                            <div class="zones__tabs_item">Bootcamp by Asus Rog</div>
-                            <div class="zones__tabs_item">Bootcamp Zone</div>
-                            <div class="zones__tabs_item">PSP Room</div>
+                            <div class="zones__tabs_inner">
+                                <div class="zones__tabs_item active">Tuf Zone</div>
+                                <div class="zones__tabs_item">Steel Zone</div>
+                                <div class="zones__tabs_item">Bootcamp by Asus Rog</div>
+                                <div class="zones__tabs_item">Bootcamp Zone</div>
+                                <div class="zones__tabs_item">PSP Room</div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="zones__content">
+                    <img class="zones__particles lazyload" data-src="imgs/purple-cloud2.png" alt="">
                     <div class="container">
                         <div class="zones__gallery">
                             <div class="swiper-container zones__gallery_container">
                                 <div class="swiper-wrapper zones__gallery_wrapper">
                                     <div class="swiper-slide zones__gallery_item">
-                                        <a data-fslightbox="gallery" href="imgs/gamezone_img.png"><img src="imgs/gamezone_img.png" alt=""></a>
+                                        <a data-fslightbox="gallery" href="imgs/gamezone_img.png"><img
+                                                src="imgs/gamezone_img.png" alt=""></a>
                                     </div>
                                     <div class="swiper-slide zones__gallery_item">
-                                        <a data-fslightbox="gallery" href="imgs/gamezone_img2.png"><img src="imgs/gamezone_img2.png" alt=""></a>
+                                        <a data-fslightbox="gallery" href="imgs/gamezone_img2.png"><img
+                                                src="imgs/gamezone_img2.png" alt=""></a>
                                     </div>
                                     <div class="swiper-slide zones__gallery_item">
-                                        <a data-fslightbox="gallery" href="imgs/gamezone_img.png"><img src="imgs/gamezone_img.png" alt=""></a>
+                                        <a data-fslightbox="gallery" href="imgs/gamezone_img.png"><img
+                                                src="imgs/gamezone_img.png" alt=""></a>
                                     </div>
                                     <div class="swiper-slide zones__gallery_item">
-                                        <a data-fslightbox="gallery" href="imgs/gamezone_img2.png"><img src="imgs/gamezone_img2.png" alt=""></a>
+                                        <a data-fslightbox="gallery" href="imgs/gamezone_img2.png"><img
+                                                src="imgs/gamezone_img2.png" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -150,49 +158,58 @@
                             <div class="zones__hard_list">
                                 <div class="zones__hard_left">
                                     <div class="zones__hard_item">
-                                        <img src="imgs/tufzone_2.png" alt="">
+                                        <img class="lazyload" data-src="imgs/tufzone_2.png" alt="">
                                         <p>ASUS TUF Gaming K7</p>
                                     </div>
                                     <div class="zones__hard_item">
-                                        <img src="imgs/tufzone_1.png" alt="">
+                                        <img class="lazyload" data-src="imgs/tufzone_1.png" alt="">
                                         <p>20хRTX2060 Super + RAM 16Гб</p>
                                     </div>
                                     <div class="zones__hard_item">
-                                        <img src="imgs/tufzone_3.png" alt="">
+                                        <img class="lazyload" data-src="imgs/tufzone_3.png" alt="">
                                         <p>ASUS TUF Gaming K7</p>
                                     </div>
                                     <div class="zones__hard_item">
-                                        <img src="imgs/tufzone_4.png" alt="">
-                                        <p>ASUS TUF Gaming</p>
-                                    </div>
-                                    <div class="zones__hard_item">
-                                        <img src="imgs/tufzone_5.png" alt="">
+                                        <img class="lazyload" data-src="imgs/tufzone_5.png" alt="">
                                         <p>ASUS TUF Gaming M7</p>
                                     </div>
                                     <div class="zones__hard_item">
-                                        <img src="imgs/tufzone_6.png" alt="">
+                                        <img class="lazyload" data-src="imgs/tufzone_4.png" alt="">
+                                        <p>ASUS TUF Gaming</p>
+                                    </div>
+                                    <div class="zones__hard_item">
+                                        <img class="lazyload" data-src="imgs/tufzone_6.png" alt="">
                                         <p>ASUS TUF Gaming M7</p>
                                     </div>
                                 </div>
                                 <div class="zones__hard_right">
                                     <div class="zones__hard_big">
-                                        <img src="imgs/tufzone_chair.png" alt="">
+                                        <img class="lazyload" data-src="imgs/tufzone_chair.png" alt="">
                                         <p>Cougar Armor One</p>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
 
+                        <div class="zones__price">
+                            <div class="zones__price_wrapper">
+                                <span class="zones__price_text">Стоимость:</span>
+                                <span class="zones__price_number">1000 тг/ч</span>
+                            </div>
+                            <button class="order-button">Забронировать место</button>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
 
-
+        <script src="js/lazyload.js" async></script>
         <script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
         <script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js"
             defer></script>
         <script src="js/fslightbox.js"></script>
+        <script src="js/swiper.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 
