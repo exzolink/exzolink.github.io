@@ -5,12 +5,6 @@ document.addEventListener('lazybeforeunveil', function (e) {
     }
 });
 
-function fetchSteel() {
-    fetch('/partials/steelzoneHardware.html')
-        .then(response => response.text())
-        .then(html => { $refs.steelHard.innerHTML = html })
-}
-
 var gallery = new Swiper('.zones__gallery_container', {
     slidesPerView: 4,
     spaceBetween: 6,
