@@ -2,6 +2,7 @@ var gallery = new Swiper('.zones__gallery_container', {
     slidesPerView: 4,
     spaceBetween: 6,
     observer: true,
+    observeParents: true,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
