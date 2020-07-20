@@ -65,7 +65,8 @@ img {
 
 .lazyload,
 .lazyloading {
-	opacity: 0;
+    opacity: 0;
+	transition: opacity .3s, transform .3s, filter .3s !important;
 }
 .lazyloaded {
 	opacity: 1;
