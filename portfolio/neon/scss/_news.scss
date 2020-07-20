@@ -1,0 +1,12 @@
+.news {
+    background: linear-gradient(to right bottom, #282828, #222222);
+
+    &__inner {
+        padding-top: 50px;
+        padding-bottom: 75px;
+    }
+    &__content {
+        display: flex;
+        margin-top: 50px;
+    }
+}

@@ -10,6 +10,7 @@
         display: flex;
         margin-top: 60px;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     &__item {
@@ -67,9 +68,11 @@
         &__item {
             height: 220px;
         }
+
         &__content {
             margin-top: 40px;
         }
+
         &__inner {
             padding-top: 40px;
             padding-bottom: 40px;
@@ -87,13 +90,14 @@
                 width: 60px;
 
             }
+
             &:hover {
 
                 &:after {
                     width: 70px;
                     height: 70px;
                 }
-               
+
             }
         }
     }
@@ -103,6 +107,10 @@
     .feedback {
         &__content {
             flex-direction: column;
+        }
+
+        &__item {
+            height: 220px;
         }
     }
 }
@@ -115,13 +123,14 @@
                 width: 50px;
 
             }
+
             &:hover {
 
                 &:after {
                     width: 60px;
                     height: 60px;
                 }
-               
+
             }
         }
     }

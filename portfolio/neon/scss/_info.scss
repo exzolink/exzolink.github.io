@@ -69,18 +69,6 @@
                 background-repeat: no-repeat;
             }
 
-            &:before {
-                position: absolute;
-                content: '';
-                right: 0;
-                bottom: 0;
-                background: url('../imgs/purple-cloud.png');
-                background-repeat: no-repeat;
-                width: 100%;
-                background-position: 100% 10%;
-                z-index: 0;
-                height: 100%;
-            }
         }
 
         &_header {
@@ -285,11 +273,6 @@
         }
 
         &__bottom {
-            &_section {
-                &:before {
-                    background-position: 0% 0%;
-                }
-            }
 
             &_header {
                 margin-bottom: 45px;
@@ -395,14 +378,6 @@
         &__top {
             &_section {
                 background-position: 70px 100%;
-            }
-        }
-
-        &__bottom {
-            &_section {
-                &:before {
-                    background-position: 30% 0%;
-                }
             }
         }
 
