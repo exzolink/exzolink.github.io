@@ -33,7 +33,6 @@ var games = new Swiper('.games__container', {
     breakpoints: {
         320: {
             slidesPerView: 1,
-            spaceBetween: 12
         },
         355: {
             slidesPerView: 2
