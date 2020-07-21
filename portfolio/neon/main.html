@@ -13,7 +13,7 @@
 
     <body>
         <div class="wrapper" x-data="{ BurgerOpen: false }">
-            <div x-show.transition="BurgerOpen" x-cloak
+            <div x-show.transition.in.duration.350ms.out.scale.0.duration.350ms.opacity.duration.350ms="BurgerOpen" x-cloak
                 class="header__menu">
                 <div class="header__inner">
                     <div class="header__controls">
