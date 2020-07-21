@@ -19,10 +19,32 @@ body, html {
     font-size: 14px;
     cursor: default;
     background-color: #191919;
+    scrollbar-color: $blue #222;
+    scrollbar-width: thin;
 }
 
 ::selection {
     text-shadow: 0 0 6px $blue;
+}
+
+::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+	background: #222;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $blue;
+    box-shadow: 0 0 4px 0 $blue;
+    border: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #0094C4;
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: #007499;
 }
 
 a {

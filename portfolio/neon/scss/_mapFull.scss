@@ -1,0 +1,81 @@
+.map {
+    height: 570px;
+
+    &__inner {
+        position: relative;
+    }
+
+    &__label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(328.9deg, #89156F -149.81%, #FF00C7 -143.59%, #262626 32.68%, #262626 120.7%);
+        max-width: 490px;
+
+        &_inner {
+            padding: 35px;
+        }
+    }
+
+    &__title {
+        font-weight: 900;
+        color: $blue;
+        text-transform: uppercase;
+        font-family: 'Gotham', sans-serif;
+        font-size: 25px;
+        font-weight: 900;
+        line-height: normal;
+        margin-bottom: 40px;
+    }
+
+    &__address {
+        font-size: 18px;
+        color: #fff;
+        line-height: normal;
+        font-weight: 400;
+        font-family: 'Gotham', sans-serif;
+        width: 77%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .map {
+        &__container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .map {
+        height: 470px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .map {
+        height: 310px;
+
+        &__label {
+            max-width: 230px;
+
+            &_inner {
+                padding: 18px;
+                padding-bottom: 28px;
+                padding-right: 28px;
+            }
+        }
+
+        &__title {
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        &__address {
+            font-size: 10px;
+            width: 100%;
+            max-width: 180px;
+        }
+    }
+}

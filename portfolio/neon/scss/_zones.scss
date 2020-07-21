@@ -106,7 +106,8 @@
             & a {
                 transition: border .3s ease;
                 border: 4px solid #ffffff00;
-                display: block;
+                display: flex;
+                margin: 0 !important;
                 height: 100%;
 
                 &:hover {
