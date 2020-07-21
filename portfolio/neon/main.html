@@ -11,64 +11,68 @@
         <title>Neon</title>
     </head>
 
-    <body x-data="{ BurgerOpen: false }">
-        <div x-show.transition.in.duration.350ms.out.duration.350ms.scale.0="BurgerOpen" x-cloak class="header__menu">
-            <div class="header__inner">
-                <div class="header__controls">
-                    <div><img src="imgs/logo.svg" alt=""></div>
-                    <div><img @click = "BurgerOpen = false" src="imgs/close.svg" alt="" class="header__close"></div>
-                </div>
-                <div class="header__links_wrapper">
-                    <div class="header__links">
-                        <a href="" class="header__link">Главная</a>
-                        <a href="" class="header__link">О нас</a>
-                        <a href="" class="header__link">Игровые зоны</a>
-                        <a href="" class="header__link">Меню</a>
-                        <a href="" class="header__link">Мероприятия</a>
-                        <a href="" class="header__link">Акции</a>
-                        <a href="" class="header__link">Контакты</a>
+    <body>
+        <div class="wrapper" x-data="{ BurgerOpen: false }">
+            <div x-show.transition.in.duration.350ms.out.duration.350ms.scale.0="BurgerOpen" x-cloak
+                class="header__menu">
+                <div class="header__inner">
+                    <div class="header__controls">
+                        <div><img src="imgs/logo.svg" alt=""></div>
+                        <div><img @click="BurgerOpen = false" src="imgs/close.svg" alt="" class="header__close"></div>
                     </div>
-                    <div class="header__links">
-                        <a class="header__link" href="">eSports Hub</a>
-                        <a class="header__link" href="">Рейтинг Dota 2</a>
-                        <a class="header__link" href="">Личный кабинет</a>
+                    <div class="header__links_wrapper">
+                        <div class="header__links">
+                            <a href="" class="header__link">Главная</a>
+                            <a href="" class="header__link">О нас</a>
+                            <a href="" class="header__link">Игровые зоны</a>
+                            <a href="" class="header__link">Меню</a>
+                            <a href="" class="header__link">Мероприятия</a>
+                            <a href="" class="header__link">Акции</a>
+                            <a href="" class="header__link">Контакты</a>
+                        </div>
+                        <div class="header__links">
+                            <a class="header__link" href="">eSports Hub</a>
+                            <a class="header__link" href="">Рейтинг Dota 2</a>
+                            <a class="header__link" href="">Личный кабинет</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <header class="header">
-            <div class="top__nav">
-                <div class="container">
-                    <div class="top__nav_inner">
-                        <a class="top__nav_link" href="">eSports Hub</a>
-                        <a class="top__nav_link" href="">Рейтинг Dota 2</a>
-                        <a class="top__nav_link" href="">Личный кабинет</a>
-                        <a class="top__nav_link" href="tel:+77777777777">+7 777 777 77 77</a>
-                    </div>
-                </div>
-            </div>
-            <nav class="nav">
-                <div class="container">
-                    <div class="nav__inner">
-                        <a class="nav__logo" href=""><img src="imgs/logo.svg" alt=""></a>
-                        <div class="nav__items">
-                            <a href="" class="nav__link">Главная</a>
-                            <a href="" class="nav__link">О нас</a>
-                            <a href="" class="nav__link">Игровые зоны</a>
-                            <a href="" class="nav__link">Меню</a>
-                            <a href="" class="nav__link">Мероприятия</a>
-                            <a href="" class="nav__link">Акции</a>
-                            <a href="" class="nav__link">Контакты</a>
-                        </div>
-                        <div class="flex">
-                            <a href="" class="nav__btn_order">Забронировать место</a>
-                            <button @click="BurgerOpen = true" class="nav__btn_menu"><img src="imgs/menu.svg" alt=""></button>
+            <header class="header">
+                <div class="top__nav">
+                    <div class="container">
+                        <div class="top__nav_inner">
+                            <a class="top__nav_link" href="">eSports Hub</a>
+                            <a class="top__nav_link" href="">Рейтинг Dota 2</a>
+                            <a class="top__nav_link" href="">Личный кабинет</a>
+                            <a class="top__nav_link" href="tel:+77777777777">+7 777 777 77 77</a>
                         </div>
                     </div>
                 </div>
-            </nav>
-        </header>
+                <nav class="nav">
+                    <div class="container">
+                        <div class="nav__inner">
+                            <a class="nav__logo" href=""><img src="imgs/logo.svg" alt=""></a>
+                            <div class="nav__items">
+                                <a href="" class="nav__link">Главная</a>
+                                <a href="" class="nav__link">О нас</a>
+                                <a href="" class="nav__link">Игровые зоны</a>
+                                <a href="" class="nav__link">Меню</a>
+                                <a href="" class="nav__link">Мероприятия</a>
+                                <a href="" class="nav__link">Акции</a>
+                                <a href="" class="nav__link">Контакты</a>
+                            </div>
+                            <div class="flex">
+                                <a href="" class="nav__btn_order">Забронировать место</a>
+                                <button @click="BurgerOpen = true" class="nav__btn_menu"><img src="imgs/menu.svg"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
 
         <main class="main">
             <section class="welcome__section lazyload" data-bg="imgs/welcome_bg.jpg">
