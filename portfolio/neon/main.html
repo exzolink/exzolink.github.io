@@ -11,7 +11,32 @@
         <title>Neon</title>
     </head>
 
-    <body>
+    <body x-data="{ BurgerOpen: false }">
+        <div x-show="BurgerOpen" x-cloak class="header__menu">
+            <div class="header__inner">
+                <div class="header__controls">
+                    <div><img src="imgs/logo.svg" alt=""></div>
+                    <div><img @click = "BurgerOpen = false" src="imgs/close.svg" alt="" class="header__close"></div>
+                </div>
+                <div class="header__links_wrapper">
+                    <div class="header__links">
+                        <a href="" class="header__link">Главная</a>
+                        <a href="" class="header__link">О нас</a>
+                        <a href="" class="header__link">Игровые зоны</a>
+                        <a href="" class="header__link">Меню</a>
+                        <a href="" class="header__link">Мероприятия</a>
+                        <a href="" class="header__link">Акции</a>
+                        <a href="" class="header__link">Контакты</a>
+                    </div>
+                    <div class="header__links">
+                        <a class="header__link" href="">eSports Hub</a>
+                        <a class="header__link" href="">Рейтинг Dota 2</a>
+                        <a class="header__link" href="">Личный кабинет</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <header class="header">
             <div class="top__nav">
                 <div class="container">
@@ -38,7 +63,7 @@
                         </div>
                         <div class="flex">
                             <a href="" class="nav__btn_order">Забронировать место</a>
-                            <button class="nav__btn_menu"><img src="imgs/menu.svg" alt=""></button>
+                            <button @click="BurgerOpen = true" class="nav__btn_menu"><img src="imgs/menu.svg" alt=""></button>
                         </div>
                     </div>
                 </div>
@@ -255,14 +280,7 @@
 
                             <div x-ref="steelHard" class="zones__hard_wrapper">
                                 <p class="loading">Загрузка...</p>
-                            </div>
-
-                            <div class="zones__price">
-                                <div class="zones__price_wrapper">
-                                    <span class="zones__price_text">Стоимость:</span>
-                                    <span class="zones__price_number">1000 тг/ч</span>
-                                </div>
-                                <button class="order-button">Забронировать место</button>
+                                
                             </div>
                         </div>
 
@@ -641,7 +659,7 @@
                             <p class="footer__hidden">Все права защищены</p>
                         </div>
                         <div class="footer__block">
-                           <p>Все права защищены</p>
+                            <p>Все права защищены</p>
                         </div>
                     </div>
                 </div>

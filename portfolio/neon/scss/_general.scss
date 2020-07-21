@@ -95,6 +95,8 @@ img {
 	transition: border .3s ease, opacity .3s, transform .3s, filter .3s !important;
 }
 
+[x-cloak] { display: none; }
+
 
 // Slider Arrows
 .slider-next {
