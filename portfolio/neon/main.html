@@ -12,7 +12,7 @@
     </head>
 
     <body x-data="{ BurgerOpen: false }">
-        <div x-show="BurgerOpen" x-cloak class="header__menu">
+        <div x-show.transition.in.duration.350ms.out.duration.350ms.scale.0="BurgerOpen" x-cloak class="header__menu">
             <div class="header__inner">
                 <div class="header__controls">
                     <div><img src="imgs/logo.svg" alt=""></div>
@@ -280,7 +280,6 @@
 
                             <div x-ref="steelHard" class="zones__hard_wrapper">
                                 <p class="loading">Загрузка...</p>
-                                
                             </div>
                         </div>
 
@@ -313,14 +312,6 @@
                             <div x-ref="asusrogHard" class="zones__hard_wrapper">
                                 <p class="loading">Загрузка...</p>
                             </div>
-
-                            <div class="zones__price">
-                                <div class="zones__price_wrapper">
-                                    <span class="zones__price_text">Стоимость:</span>
-                                    <span class="zones__price_number">1000 тг/ч</span>
-                                </div>
-                                <button class="order-button">Забронировать место</button>
-                            </div>
                         </div>
 
                         <div x-show="tab === 'zone'" class="zones__content_wrapper">
@@ -352,14 +343,6 @@
                             <div x-ref="bootcampHard" class="zones__hard_wrapper">
                                 <p class="loading">Загрузка...</p>
                             </div>
-
-                            <div class="zones__price">
-                                <div class="zones__price_wrapper">
-                                    <span class="zones__price_text">Стоимость:</span>
-                                    <span class="zones__price_number">1000 тг/ч</span>
-                                </div>
-                                <button class="order-button">Забронировать место</button>
-                            </div>
                         </div>
 
                         <div x-show="tab === 'psp'" class="zones__content_wrapper">
@@ -390,14 +373,6 @@
 
                             <div x-ref="pspHard" class="zones__hard_wrapper">
                                 <p class="loading">Загрузка...</p>
-                            </div>
-
-                            <div class="zones__price">
-                                <div class="zones__price_wrapper">
-                                    <span class="zones__price_text">Стоимость:</span>
-                                    <span class="zones__price_number">1000 тг/ч</span>
-                                </div>
-                                <button class="order-button">Забронировать место</button>
                             </div>
                         </div>
 
