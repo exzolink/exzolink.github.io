@@ -4,7 +4,7 @@
 
 window.lazySizesConfig = window.lazySizesConfig || {};
 lazySizesConfig.loadMode = 3;
-lazySizesConfig.expand = 500-700;
+lazySizesConfig.expand = 600-800;
 
 document.addEventListener('lazybeforeunveil', function (e) {
     var bg = e.target.getAttribute('data-bg');
