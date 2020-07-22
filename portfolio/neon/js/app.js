@@ -56,27 +56,45 @@ games.on('slideChange', function () {
     games.update();
 });
 
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function () {
+        var context = this, args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        }, wait);
+        if (immediate && !timeout) func.apply(context, args);
+    };
+}
+
 var mapOn = false;
-var getMap = document.getElementById('map');
 
-window.addEventListener('scroll', () => {
-    if (pageYOffset > 2000 && mapOn === false && getMap !== null) {
-        mapboxgl.accessToken = 'pk.eyJ1IjoiZ3JlZ29yeTEyMCIsImEiOiJja2N2NW1ld2UwMTMzMnFtc2ZoeWpiZHM3In0.97pEt9J1fujCDbmt-84mrw';
-        var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/dark-v10',
-            center: [76.9367, 43.243264],
-            zoom: 17
-        });
+if (document.getElementById('map') !== null) {
+    var mapRender = debounce(function () {
 
-        var marker = new mapboxgl.Marker()
-            .setLngLat([76.936931, 43.2429])
-            .addTo(map);
+        var getMap = document.getElementById('map');
+        var mapCoords = getMap.offsetTop;
+ 
+        if ((pageYOffset * 1.8) > mapCoords && mapOn === false) {
+            mapboxgl.accessToken = 'pk.eyJ1IjoiZ3JlZ29yeTEyMCIsImEiOiJja2N2NW1ld2UwMTMzMnFtc2ZoeWpiZHM3In0.97pEt9J1fujCDbmt-84mrw';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/dark-v10',
+                center: [76.9367, 43.243264],
+                zoom: 17
+            });
 
-        mapOn = true;
-    }
-});
+            var marker = new mapboxgl.Marker()
+                .setLngLat([76.936931, 43.2429])
+                .addTo(map);
 
+            mapOn = true;
+        }
+    }, 300);
+    window.addEventListener('scroll', mapRender);
+};
 
 
 
