@@ -70,7 +70,6 @@ function debounce(func, wait, immediate) {
 }
 
 var mapOn = false;
-
 if (document.getElementById('map') !== null) {
     var mapRender = debounce(function () {
 
