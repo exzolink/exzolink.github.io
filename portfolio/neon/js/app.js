@@ -43,7 +43,7 @@ games = new Swiper('.games__container', {
         },
         1100: {
             slidesPerView: 4,
-            spaceBetween: 24,
+            spaceBetween: 30,
             allowTouchMove: false,
             simulateTouch: false,
             slidesPerColumnFill: 'row',
