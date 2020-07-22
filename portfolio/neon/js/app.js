@@ -56,8 +56,11 @@ games.on('slideChange', function () {
     games.update();
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    setTimeout(function () {
+var mapOn = false;
+var getMap = document.getElementById('map');
+
+window.addEventListener('scroll', () => {
+    if (pageYOffset > 2000 && mapOn === false && getMap !== null) {
         mapboxgl.accessToken = 'pk.eyJ1IjoiZ3JlZ29yeTEyMCIsImEiOiJja2N2NW1ld2UwMTMzMnFtc2ZoeWpiZHM3In0.97pEt9J1fujCDbmt-84mrw';
         var map = new mapboxgl.Map({
             container: 'map',
@@ -69,5 +72,11 @@ document.addEventListener('DOMContentLoaded', function () {
         var marker = new mapboxgl.Marker()
             .setLngLat([76.936931, 43.2429])
             .addTo(map);
-    }, 1000);
+
+        mapOn = true;
+    }
 });
+
+
+
+
