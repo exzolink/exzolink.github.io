@@ -12,74 +12,422 @@
     </head>
 
     <body>
-
-        <section class="welcomeAbout">
-            <img data-src="imgs/about__bg_left.png" alt="" class="welcomeAbout__left lazyload">
-            <img data-src="imgs/about__bg_right.png" alt="" class="welcomeAbout__right lazyload">
-
-            <div class="container h-100">
-                <div class="welcome__inner welcomeAbout__inner">
-                    <h1 class="welcomeAbout__title"><span>О Neon eSports</span> Bar & Gaming</h1>
-                    <h2 class="welcomeAbout__desc">Neon eSports Bar & Gaming - многообещающий проект с душой, созданный
-                        любителями киберспорта.
-                        <br><br>
-                        Наша цель - создания пространства, объединяющего всех геймеров Алматы.</h2>
-                </div>
-            </div>
-        </section>
-
-        <section class="features">
-            <div class="container">
-                <div class="features__inner">
-                    <h4 class="features__title">У нас ты можешь:</h4>
-                    <div class="features__cards">
-                        <div class="features__card">
-                            <div class="features__img">
-                                <img class="lazyload" data-src="imgs/features1.jpg" alt="">
-                            </div>
-                            <p>собраться компанией друзей и устроить пару заходов в любимую игру</p>
+        <div class="wrapper" x-data="{ BurgerOpen: false }">
+            <div x-show.transition.in.duration.350ms.out.scale.0.duration.350ms.opacity.duration.350ms="BurgerOpen"
+                x-cloak class="header__menu">
+                <div class="header__inner">
+                    <div class="header__controls">
+                        <div><img src="imgs/logo.svg" alt=""></div>
+                        <div><img @click="BurgerOpen = false" src="imgs/close.svg" alt="" class="header__close"></div>
+                    </div>
+                    <div class="header__links_wrapper">
+                        <div class="header__links">
+                            <a href="" class="header__link">Главная</a>
+                            <a href="" class="header__link">О нас</a>
+                            <a href="" class="header__link">Игровые зоны</a>
+                            <a href="" class="header__link">Меню</a>
+                            <a href="" class="header__link">Мероприятия</a>
+                            <a href="" class="header__link">Акции</a>
+                            <a href="" class="header__link">Контакты</a>
                         </div>
-                        <div class="features__card">
-                            <div class="features__img">
-                                <img class="lazyload" data-src="imgs/features2.jpg" alt="">
-                            </div>
-                            <p>отведать вкуснейших блюд из нашего меню</p>
-                        </div>
-                        <div class="features__card">
-                            <div class="features__img">
-                                <img class="lazyload" data-src="imgs/features3.jpg" alt="">
-                            </div>
-                            <p>выпить пару кружек отборного крафтового пива или коктейлей</p>
-                        </div>
-                        <div class="features__card">
-                            <div class="features__img">
-                                <img class="lazyload" data-src="imgs/features4.jpg" alt="">
-                            </div>
-                            <p>посмотреть eSports трансляции любимой игры</p>
-                        </div>
-                        <div class="features__card">
-                            <div class="features__img">
-                                <img class="lazyload" data-src="imgs/features5.jpg" alt="">
-                            </div>
-                            <p>стать лучшим игроком бара и выиграть приз</p>
-                        </div>
-                        <div class="features__card">
-                            <div class="features__img">
-                                <img class="lazyload" data-src="imgs/features6.jpg" alt="">
-                            </div>
-                            <p>поучавствовать в турнире Dota2 с призовым фондом в
-                                <strong>1 600 000</strong> тг</p>
+                        <div class="header__links">
+                            <a class="header__link" href="">eSports Hub</a>
+                            <a class="header__link" href="">Рейтинг Dota 2</a>
+                            <a class="header__link" href="">Личный кабинет</a>
                         </div>
                     </div>
-                    <ul class="features__list">а также:
-                        <li><span>поиграть в beerpong;</span></li>
-                        <li><span>найти единомышленников;</span></li>
-                        <br>
-                        <li><span><strong>Просто провести отлично время в футуристичной атмосфере!</strong></span></li>
-                    </ul>
                 </div>
             </div>
-        </section>
+
+            <header class="header">
+                <div class="top__nav">
+                    <div class="container">
+                        <div class="top__nav_inner">
+                            <a class="top__nav_link" href="">eSports Hub</a>
+                            <a class="top__nav_link" href="">Рейтинг Dota 2</a>
+                            <a class="top__nav_link" href="">Личный кабинет</a>
+                            <a class="top__nav_link" href="tel:+77777777777">+7 777 777 77 77</a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <div class="container">
+                        <div class="nav__inner">
+                            <a class="nav__logo" href=""><img src="imgs/logo.svg" alt=""></a>
+                            <div class="nav__items">
+                                <a href="" class="nav__link">Главная</a>
+                                <a href="" class="nav__link">О нас</a>
+                                <a href="" class="nav__link">Игровые зоны</a>
+                                <a href="" class="nav__link">Меню</a>
+                                <a href="" class="nav__link">Мероприятия</a>
+                                <a href="" class="nav__link">Акции</a>
+                                <a href="" class="nav__link">Контакты</a>
+                            </div>
+                            <div class="flex">
+                                <a href="" class="nav__btn_order">Забронировать место</a>
+                                <button @click="BurgerOpen = true" class="nav__btn_menu"><img src="imgs/menu.svg"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+
+        <main class="main">
+            <section class="welcomeAbout">
+                <img data-src="imgs/about__bg_left.png" alt="" class="welcomeAbout__left lazyload">
+                <img data-src="imgs/about__bg_right.png" alt="" class="welcomeAbout__right lazyload">
+
+                <div class="container h-100">
+                    <div class="welcome__inner welcomeAbout__inner">
+                        <h1 class="welcomeAbout__title"><span>О Neon eSports</span> Bar & Gaming</h1>
+                        <h2 class="welcomeAbout__desc">Neon eSports Bar & Gaming - многообещающий проект с душой,
+                            созданный
+                            любителями киберспорта.
+                            <br><br>
+                            Наша цель - создания пространства, объединяющего всех геймеров Алматы.</h2>
+                    </div>
+                </div>
+            </section>
+
+            <section class="features">
+                <div class="container">
+                    <div class="features__inner">
+                        <h4 class="features__title">У нас ты можешь:</h4>
+                        <div class="features__cards">
+                            <div class="features__card">
+                                <div class="features__img">
+                                    <img class="lazyload" data-src="imgs/features1.jpg" alt="">
+                                </div>
+                                <p>собраться компанией друзей и устроить пару заходов в любимую игру</p>
+                            </div>
+                            <div class="features__card">
+                                <div class="features__img">
+                                    <img class="lazyload" data-src="imgs/features2.jpg" alt="">
+                                </div>
+                                <p>отведать вкуснейших блюд из нашего меню</p>
+                            </div>
+                            <div class="features__card">
+                                <div class="features__img">
+                                    <img class="lazyload" data-src="imgs/features3.jpg" alt="">
+                                </div>
+                                <p>выпить пару кружек отборного крафтового пива или коктейлей</p>
+                            </div>
+                            <div class="features__card">
+                                <div class="features__img">
+                                    <img class="lazyload" data-src="imgs/features4.jpg" alt="">
+                                </div>
+                                <p>посмотреть eSports трансляции любимой игры</p>
+                            </div>
+                            <div class="features__card">
+                                <div class="features__img">
+                                    <img class="lazyload" data-src="imgs/features5.jpg" alt="">
+                                </div>
+                                <p>стать лучшим игроком бара и выиграть приз</p>
+                            </div>
+                            <div class="features__card">
+                                <div class="features__img">
+                                    <img class="lazyload" data-src="imgs/features6.jpg" alt="">
+                                </div>
+                                <p>поучавствовать в турнире Dota2 с призовым фондом в
+                                    <strong>1 600 000</strong> тг</p>
+                            </div>
+                        </div>
+                        <ul class="features__list">а также:
+                            <li><span>поиграть в beerpong;</span></li>
+                            <li><span>найти единомышленников;</span></li>
+                            <br>
+                            <li><span><strong>Просто провести отлично время в футуристичной атмосфере!</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="team">
+                <div class="container">
+                    <div class="team__inner">
+                        <h3 class="zones__hard_title">Наша <span>команда</span></h3>
+                        <div class="team__founders">
+                            <p class="team__label">Создатели:</p>
+                            <div class="team__founders_wrapper">
+                                <div class="team__person">
+                                    <div class="team__person_wrapper">
+                                        <div class="team__person_img">
+                                            <img class="lazyload" data-src="imgs/team.jpg" alt="">
+                                        </div>
+                                        <div class="team__person_desc">
+                                            <h4>Асембек Бейбарыс Нурланулы</h4>
+                                            <p>
+                                                23 года
+                                                <br><br>
+                                                Любимая игра: Dota 2<br>
+                                                Любимый герой: Axe<br>
+                                                Рейтинг: Ancient 2<br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <blockquote class="team__person_quote">Для меня важна тема командного духа, так как
+                                        я
+                                        считаю, что, как и в игре Dota 2, без команды, ты никто.</blockquote>
+                                </div>
+
+                                <div class="team__person">
+                                    <div class="team__person_wrapper">
+                                        <div class="team__person_img">
+                                            <img class="lazyload" data-src="imgs/team.jpg" alt="">
+                                        </div>
+                                        <div class="team__person_desc">
+                                            <h4>Жанибек Дауыт Лесбекулы</h4>
+                                            <p>
+                                                23 года
+                                                <br><br>
+                                                Любимая игра: Dota 2<br>
+                                                Любимый герой: Axe<br>
+                                                Рейтинг: Ancient 2<br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <blockquote class="team__person_quote">Для меня важна тема командного духа, так как
+                                        я
+                                        считаю, что, как и в игре Dota 2, без команды, ты никто.</blockquote>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="team__workers">
+                            <p class="team__label">Сотрудники:</p>
+                            <div class="swiper-container team__container">
+                                <div class="swiper-wrapper team__wrapper">
+                                    <div class="swiper-slide team__item">
+                                        <img class="lazyload" data-src="imgs/team2.jpg" alt="">
+                                        <h4>Шеф-повар:</h4>
+                                        <p>Толстых Сергей Владимирович</p>
+                                    </div>
+                                    <div class="swiper-slide team__item">
+                                        <img class="lazyload" data-src="imgs/team2.jpg" alt="">
+                                        <h4>Шеф-повар:</h4>
+                                        <p>Толстых Сергей Владимирович</p>
+                                    </div>
+                                    <div class="swiper-slide team__item">
+                                        <img class="lazyload" data-src="imgs/team2.jpg" alt="">
+                                        <h4>Шеф-повар:</h4>
+                                        <p>Толстых Сергей Владимирович</p>
+                                    </div>
+                                    <div class="swiper-slide team__item">
+                                        <img class="lazyload" data-src="imgs/team2.jpg" alt="">
+                                        <h4>Шеф-повар:</h4>
+                                        <p>Толстых Сергей Владимирович</p>
+                                    </div>
+                                    <div class="swiper-slide team__item">
+                                        <img class="lazyload" data-src="imgs/team2.jpg" alt="">
+                                        <h4>Шеф-повар:</h4>
+                                        <p>Толстых Сергей Владимирович</p>
+                                    </div>
+                                    <div class="swiper-slide team__item">
+                                        <img class="lazyload" data-src="imgs/team2.jpg" alt="">
+                                        <h4>Шеф-повар:</h4>
+                                        <p>Толстых Сергей Владимирович</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="partners">
+                <div class="container">
+                    <div class="partners__inner">
+                        <h3 class="zones__hard_title">Наши <span>партнеры</span></h3>
+                        <div class="partners__wrapper">
+                            <div class="partners__item">
+                                <img class="lazyload" data-src="imgs/partner1.png" alt="">
+                            </div>
+                            <div class="partners__item">
+                                <img class="lazyload" data-src="imgs/partner2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="feedback">
+                <div class="container">
+                    <div class="feedback__inner">
+                        <h3 class="zones__hard_title">Отзывы</h3>
+                        <div class="feedback__content">
+                            <div class="feedback__item">
+                                <img class="lazyload" data-src="imgs/feedback_1.jpg" alt="">
+                                <a class="feedback__item_link" data-fslightbox="lightbox"
+                                    href="https://www.youtube.com/watch?v=xshEZzpS4CQ"></a>
+                            </div>
+                            <div class="feedback__item">
+                                <img class="lazyload" data-src="imgs/feedback_2.jpg" alt="">
+                                <a class="feedback__item_link" data-fslightbox="lightbox"
+                                    href="https://www.youtube.com/watch?v=xshEZzpS4CQ"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="games">
+                <img class="zones__particles games__particles lazyload" data-src="imgs/purple-cloud2.png" alt="">
+                <div class="container">
+                    <div class="games__inner">
+                        <h3 class="zones__hard_title"><span>Игры</span></h3>
+
+                        <div class="swiper-container games__container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide zones__gallery_item games__item lazyload"
+                                    data-bg="imgs/games_dota.jpg">
+                                    <a href="#"></a>
+                                </div>
+                                <div class="swiper-slide zones__gallery_item games__item lazyload"
+                                    data-bg="imgs/games_cs.jpg">
+                                    <a href="#"></a>
+                                </div>
+                                <div class="swiper-slide zones__gallery_item games__item lazyload"
+                                    data-bg="imgs/games_pubg.jpg">
+                                    <a href="#"></a>
+                                </div>
+                                <div class="swiper-slide zones__gallery_item games__item lazyload"
+                                    data-bg="imgs/games_fortnite.jpg">
+                                    <a href="#"></a>
+                                </div>
+                                <div class="swiper-slide zones__gallery_item games__item lazyload"
+                                    data-bg="imgs/games_fifa.jpg">
+                                    <a href="#"></a>
+                                </div>
+                                <div class="swiper-slide zones__gallery_item games__item lazyload"
+                                    data-bg="imgs/games_gta.jpg">
+                                    <a href="#"></a>
+                                </div>
+                                <div class="swiper-slide zones__gallery_item games__item lazyload"
+                                    data-bg="imgs/games_warzone.jpg">
+                                    <a href="#"></a>
+                                </div>
+                                <div class="swiper-slide zones__gallery_item games__item lazyload"
+                                    data-bg="imgs/games_ufc.jpg">
+                                    <a href="#"></a>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <button class="order-button mx-auto">Забронировать место</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="news">
+                <div class="container">
+                    <div class="news__inner">
+                        <h3 class="zones__hard_title">Последние <span>новости</span></h3>
+
+                        <div class="news__content">
+                            <a href="" class="news__item">
+                                <div class="news__item_img lazyload" data-bg="imgs/news.jpg"></div>
+                                <h3 class="news__item_title">Заголовок статьи</h3>
+                                <p class="news__item_excerpt">Вводный текст с описанием</p>
+                            </a>
+                            <a href="" class="news__item">
+                                <div class="news__item_img lazyload" data-bg="imgs/news.jpg"></div>
+                                <h3 class="news__item_title">Заголовок статьи</h3>
+                                <p class="news__item_excerpt">Вводный текст с описанием</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="map" id="map">
+                <div class="container map__container">
+                    <div class="map__inner">
+                        <div class="map__label">
+                            <div class="map__label_inner">
+                                <h4 class="map__title">Мы здесь</h4>
+                                <p class="map__address">Г. Алматы, ул. Наурызбай Батыра 111, н.п. 196/197, угол
+                                    Курмангазы
+                                    (ЖК
+                                    Exclusive Life)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="instagram">
+                <div class="container">
+                    <div class="instagram__inner">
+                        <h3 class="zones__hard_title">Мы в <span>Instagram</span></h3>
+
+                        <div class="instagram__content"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="navigation">
+                <div class="container">
+                    <div class="navigation__inner">
+                        <div class="navigation__block">
+                            <a href="">Основные разделы</a>
+                            <a href="">Главная</a>
+                            <a href="">О нас</a>
+                            <a href="">Игровые зоны</a>
+                            <a href="">Меню</a>
+                            <a href="">Мероприятия</a>
+                            <a href="">Акции</a>
+                            <a href="">Блог</a>
+                            <a href="">Контакты</a>
+                        </div>
+
+                        <div class="navigation__block">
+                            <a href="">eSports Hub</a>
+                            <a href="">Рейтинг Dota 2</a>
+                            <a href="">Как это было?</a>
+                            <a href="">Сообщество Neon eSports</a>
+                            <a href="">Новости мирового <br>киберспорта</a>
+                        </div>
+
+                        <div class="navigation__block">
+                            <a href="">Информация</a>
+                            <a href="">Сотрудничество</a>
+                            <a href="">Сотрудничество</a>
+                            <a href="">Конфиденциальность</a>
+                            <div class="navigation__socials">
+                                <a href=""><img class="navigation__img" src="imgs/yt.svg" alt=""></a>
+                                <a href=""><img class="navigation__img" src="imgs/inst.svg" alt=""></a>
+                                <a href=""><img class="navigation__img" src="imgs/tg.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__block">
+                        <a href=""><img src="imgs/logo.svg" alt=""></a>
+                    </div>
+                    <div class="footer__block">
+                        <p>Neon eSports 2020</p>
+                        <p class="footer__hidden">Все права защищены</p>
+                    </div>
+                    <div class="footer__block">
+                        <p>Все права защищены</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
 
 
 
@@ -88,7 +436,7 @@
         <script src="js/swiper.min.js"></script>
         <script src="js/lazyload.js" async></script>
         <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
-        <script src="js/app.js"></script>
+        <script src="js/app.min.js"></script>
     </body>
 
 </html>

@@ -52,6 +52,34 @@ games = new Swiper('.games__container', {
     }
 });
 
+workers = new Swiper('.team__container', {
+    slidesPerView: 4,
+    spaceBetween: 24,
+    grabCursor: true,
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+    breakpoints: {
+        320: {
+            slidesPerView: 1
+        },
+        360: {
+            slidesPerView: 2,
+            spaceBetween: 16
+        },
+        600: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        },
+        880: {
+            slidesPerView: 4,
+            spaceBetween: 24
+        }
+    }
+});
+
 games.on('slideChange', function () {
     games.update();
 });

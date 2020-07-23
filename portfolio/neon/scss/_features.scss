@@ -13,16 +13,12 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        counter-reset: section;
     }
 
     &__card {
         margin-bottom: 30px;
         flex-basis: 31.5%;
-
-        &__img {
-            width: 100%;
-            height: 100%;
-        }
 
         & img {
             max-height: 181px;
@@ -36,6 +32,24 @@
             margin-top: 10px;
             font-weight: 400;
             line-height: 22px;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        position: relative;
+
+        &:after {
+            counter-increment: section;
+            position: absolute;
+            left: 0;
+            content: counter(section);
+            bottom: 0;
+            font-size: 200px;
+            font-weight: 900;
+            font-style: italic;
+            color: #242424;
+            line-height: 150px;
         }
     }
 
@@ -69,6 +83,14 @@
 
 }
 
+@media screen and (min-width: 1200px) {
+    .features {
+        &__img {
+            min-height: 184px;
+        }
+    }
+}
+
 @media screen and (max-width: 1360px) {
     .features {
         &__inner {
@@ -84,10 +106,16 @@
                 font-size: 16px;
             }
         }
+        &__img {
+            &:after {
+                font-size: 100px;
+                line-height: 79px;
+            }
+        }
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
     .features {
         &__card {
             flex-basis: 48.5%;
@@ -125,5 +153,13 @@
             padding-left: 0;
             font-size: 12px;
         }
+
+        &__img {
+            &:after {
+                font-size: 70px;
+                line-height: 57px;
+            }
+        }
     }
+    
 }
