@@ -80,6 +80,10 @@ img {
     width: 100%;
 }
 
+.typed-cursor {
+    display: none;
+}
+
 .loading {
     font-size: 40px;
     color: #fff;
@@ -108,6 +112,8 @@ img {
     }
 }
 
+
+// Lazy Loading Animation
 .lazyload,
 .lazyloading {
     opacity: 0;
@@ -119,6 +125,8 @@ img {
     transition: border .3s ease, opacity .3s, transform .3s, filter .3s !important;
 }
 
+
+// Hide Elements before Init
 [x-cloak] {
     display: none;
 }
@@ -143,6 +151,10 @@ img {
 // Component: Order Button
 .mx-auto {
     margin: 0 auto;
+}
+
+.mt-auto {
+    margin-top: auto;
 }
 
 .order-button {

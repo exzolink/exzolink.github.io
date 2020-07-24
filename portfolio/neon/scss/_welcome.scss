@@ -8,6 +8,7 @@
         position: relative;
         background-color: #222222;
     }
+
     &__title {
         color: #fff;
         font-weight: 900;
@@ -99,6 +100,10 @@
     $fz25: 20px;
 
     .welcome {
+        &__section {
+            background-position: center !important;
+        }
+
         &__title {
             font-size: 46px;
         }

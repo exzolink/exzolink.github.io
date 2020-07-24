@@ -60,7 +60,7 @@ workers = new Swiper('.team__container', {
         el: '.swiper-pagination',
         type: 'bullets',
         clickable: true
-      },
+    },
     breakpoints: {
         320: {
             slidesPerView: 1
@@ -103,13 +103,13 @@ if (document.getElementById('map') !== null) {
 
         var getMap = document.getElementById('map');
         var mapCoords = getMap.offsetTop;
- 
+
         if ((pageYOffset * 1.8) > mapCoords && mapOn === false) {
             mapboxgl.accessToken = 'pk.eyJ1IjoiZ3JlZ29yeTEyMCIsImEiOiJja2N2NW1ld2UwMTMzMnFtc2ZoeWpiZHM3In0.97pEt9J1fujCDbmt-84mrw';
             var map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/dark-v10',
-                center: [76.9367, 43.243264],
+                center: [76.937, 43.243264],
                 zoom: 17
             });
 
@@ -122,6 +122,17 @@ if (document.getElementById('map') !== null) {
     }, 300);
     window.addEventListener('scroll', mapRender);
 };
+
+var options = {
+    strings: ['Power On', 'Game On'],
+    typeSpeed: 90,
+    fadeOut: true,
+    startDelay: 1000,
+    backSpeed: 500,
+    backDelay: 1000,
+    loop: true
+};
+var typed = new Typed('#fadeToggle', options);
 
 
 
