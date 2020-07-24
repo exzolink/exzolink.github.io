@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/swiper.min.css">
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css' rel='stylesheet' />
+        <title>Neon</title>
+    </head>
+
+    <body>
+        <div class="wrapper" x-data="{ BurgerOpen: false }">
+            <div x-show.transition.in.duration.350ms.out.scale.0.duration.350ms.opacity.duration.350ms="BurgerOpen"
+                x-cloak class="header__menu">
+                <div class="header__inner">
+                    <div class="header__controls">
+                        <div><img src="imgs/logo.svg" alt=""></div>
+                        <div><img @click="BurgerOpen = false" src="imgs/close.svg" alt="" class="header__close"></div>
+                    </div>
+                    <div class="header__links_wrapper">
+                        <div class="header__links">
+                            <a href="" class="header__link">Главная</a>
+                            <a href="" class="header__link">О нас</a>
+                            <a href="" class="header__link">Игровые зоны</a>
+                            <a href="" class="header__link">Меню</a>
+                            <a href="" class="header__link">Мероприятия</a>
+                            <a href="" class="header__link">Акции</a>
+                            <a href="" class="header__link">Контакты</a>
+                        </div>
+                        <div class="header__links">
+                            <a class="header__link" href="">eSports Hub</a>
+                            <a class="header__link" href="">Рейтинг Dota 2</a>
+                            <a class="header__link" href="">Личный кабинет</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <header class="header">
+                <div class="top__nav">
+                    <div class="container">
+                        <div class="top__nav_inner">
+                            <a class="top__nav_link" href="">eSports Hub</a>
+                            <a class="top__nav_link" href="">Рейтинг Dota 2</a>
+                            <a class="top__nav_link" href="">Личный кабинет</a>
+                            <a class="top__nav_link" href="tel:+77777777777">+7 777 777 77 77</a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <div class="container">
+                        <div class="nav__inner">
+                            <a class="nav__logo" href=""><img src="imgs/logo.svg" alt=""></a>
+                            <div class="nav__items">
+                                <a href="" class="nav__link">Главная</a>
+                                <a href="" class="nav__link">О нас</a>
+                                <a href="" class="nav__link">Игровые зоны</a>
+                                <a href="" class="nav__link">Меню</a>
+                                <a href="" class="nav__link">Мероприятия</a>
+                                <a href="" class="nav__link">Акции</a>
+                                <a href="" class="nav__link">Контакты</a>
+                            </div>
+                            <div class="flex">
+                                <a href="" class="nav__btn_order">Забронировать место</a>
+                                <button @click="BurgerOpen = true" class="nav__btn_menu"><img src="imgs/menu.svg"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+
+        <main class="main">
+            <section class="welcomeEvents lazyload" data-bg="imgs/welcomeEvents.jpg"></section>
+
+            <section class="events">
+                <img class="zones__particles events__particles lazyload" data-src="imgs/purple-cloud2.png" alt="">
+                <div class="container">
+                    <div class="events__inner">
+                        <h3 class="zones__hard_title"><span>Мероприятия</span></h3>
+
+                        <div class="events__content">
+                            <div class="events__item events__item_large lazyload" data-bg="imgs/eventsPost.jpg">
+                                <a href=""></a>
+                                <div class="events__item_inner">
+                                    <p class="events__item_date">24 июля</p>
+                                    <h3 class="events__item_title">International</h3>
+                                    <h4 class="events__item_desc">Турнир Dota2</h4>
+                                    <button class="events__item_btn">Зарегистрироваться</button>
+                                </div>
+                            </div>
+
+                            <div class="events__item lazyload" data-bg="imgs/eventsPost1.jpg">
+                                <a href=""></a>
+                                <div class="events__item_inner">
+                                    <p class="events__item_date">24 июля</p>
+                                    <h3 class="events__item_sm-title">Официальное открытие eSports <span>Bar & Gaming</span></h3>
+                                    <p class="events__item_label">Вход свободный</p>
+                                </div>
+                            </div>
+
+                            <div class="events__item lazyload" data-bg="imgs/eventsPost1.jpg">
+                                <a href=""></a>
+                                <div class="events__item_inner">
+                                    <p class="events__item_date">24 июля</p>
+                                    <h3 class="events__item_sm-title">Официальное открытие eSports <span>Bar & Gaming</span></h3>
+                                    <p class="events__item_label">Вход свободный</p>
+                                </div>
+                            </div>
+
+                            <div class="events__item lazyload" data-bg="imgs/eventsPost1.jpg">
+                                <a href=""></a>
+                                <div class="events__item_inner">
+                                    <p class="events__item_date">24 июля</p>
+                                    <h3 class="events__item_sm-title">Официальное открытие eSports <span>Bar & Gaming</span></h3>
+                                    <p class="events__item_label">Вход свободный</p>
+                                </div>
+                            </div>
+
+                            <div class="events__item lazyload" data-bg="imgs/eventsPost1.jpg">
+                                <a href=""></a>
+                                <div class="events__item_inner">
+                                    <p class="events__item_date">24 июля</p>
+                                    <h3 class="events__item_sm-title">Официальное открытие eSports <span>Bar & Gaming</span></h3>
+                                    <p class="events__item_label">Вход свободный</p>
+                                </div>
+                            </div>
+
+                            <div class="events__item events__item_large lazyload" data-bg="imgs/eventsPost.jpg">
+                                <a href=""></a>
+                                <div class="events__item_inner">
+                                    <p class="events__item_date">24 июля</p>
+                                    <h3 class="events__item_title">International</h3>
+                                    <h4 class="events__item_desc">Турнир Dota2</h4>
+                                    <button class="events__item_btn">Зарегистрироваться</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="zones__hard_title events__title"><span>Подпишитесь на рассылку</span> и будьте в курсе всех главных событий и акций</h3>
+                        
+                        <div class="subscribe">
+                            <form class="subscribe__form" action="">
+                                <div class="subscribe__checks">
+                                    <p class="subscribe__text">Куда тебе удобнее получать уведомления?</p>
+                                    <div class="subscribe__checkboxes">
+                                        <div class="subscribe__checkbox">
+                                            <input type="checkbox" name="email" id="email">
+                                            <label class="subscribe__label" for="email">E-mail</label>
+                                        </div>
+                                        <div class="subscribe__checkbox">
+                                            <input type="checkbox" name="whatsup" id="whatsup">
+                                            <label class="subscribe__label" for="whatsup"><img src="imgs/wussupForm.svg" alt=""></label>
+                                        </div>
+                                        <div class="subscribe__checkbox">
+                                            <input type="checkbox" name="tg" id="tg">
+                                            <label class="subscribe__label" for="tg"><img src="imgs/tgForm.svg" alt=""></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="subscribe__inputs">
+                                    <input type="text" placeholder="Имя" required>
+                                    <input type="text" placeholder="E-mail" required>
+                                    <button type="submit">Подписаться</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="news">
+                <div class="container">
+                    <div class="news__inner">
+                        <h3 class="zones__hard_title">Последние <span>новости</span></h3>
+
+                        <div class="news__content">
+                            <a href="" class="news__item">
+                                <div class="news__item_img lazyload" data-bg="imgs/news.jpg"></div>
+                                <h3 class="news__item_title">Заголовок статьи</h3>
+                                <p class="news__item_excerpt">Вводный текст с описанием</p>
+                            </a>
+                            <a href="" class="news__item">
+                                <div class="news__item_img lazyload" data-bg="imgs/news.jpg"></div>
+                                <h3 class="news__item_title">Заголовок статьи</h3>
+                                <p class="news__item_excerpt">Вводный текст с описанием</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="map mapHalf" id="map">
+                <div class="container map__container mapHalf__container">
+                    <div class="map__inner mapHalf__inner">
+                        <div class="map__label mapHalf__label">
+                            <div class="map__label_inner mapHalf__label_inner">
+                                <h4 class="map__title">Мы здесь</h4>
+                                <p class="map__address mapHalf__address">Г. Алматы, ул. Наурызбай Батыра 111, н.п.
+                                    196/197, угол
+                                    Курмангазы
+                                    (ЖК
+                                    Exclusive Life)</p>
+                                <div class="mapHalf__socials">
+                                    <a href=""><img class="mapHalf__img" src="imgs/yt.svg" alt=""></a>
+                                    <a href=""><img class="mapHalf__img" src="imgs/inst.svg" alt=""></a>
+                                    <a href=""><img class="mapHalf__img" src="imgs/tg.svg" alt=""></a>
+                                    <a href=""><img class="mapHalf__img" src="imgs/wassup.svg" alt=""></a>
+                                </div>
+                                <div class="order-button-link mt-auto mapHalf__btn"><a href=""
+                                        class="order-button">Забронировать место</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="instagram">
+                <div class="container">
+                    <div class="instagram__inner">
+                        <h3 class="zones__hard_title">Мы в <span>Instagram</span></h3>
+
+                        <div class="instagram__content"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="navigation">
+                <div class="container">
+                    <div class="navigation__inner">
+                        <div class="navigation__block">
+                            <a href="">Основные разделы</a>
+                            <a href="">Главная</a>
+                            <a href="">О нас</a>
+                            <a href="">Игровые зоны</a>
+                            <a href="">Меню</a>
+                            <a href="">Мероприятия</a>
+                            <a href="">Акции</a>
+                            <a href="">Блог</a>
+                            <a href="">Контакты</a>
+                        </div>
+
+                        <div class="navigation__block">
+                            <a href="">eSports Hub</a>
+                            <a href="">Рейтинг Dota 2</a>
+                            <a href="">Как это было?</a>
+                            <a href="">Сообщество Neon eSports</a>
+                            <a href="">Новости мирового <br>киберспорта</a>
+                        </div>
+
+                        <div class="navigation__block">
+                            <a href="">Информация</a>
+                            <a href="">Сотрудничество</a>
+                            <a href="">Вакансии</a>
+                            <a href="">Конфиденциальность</a>
+                            <div class="navigation__socials">
+                                <a href=""><img class="navigation__img" src="imgs/yt.svg" alt=""></a>
+                                <a href=""><img class="navigation__img" src="imgs/inst.svg" alt=""></a>
+                                <a href=""><img class="navigation__img" src="imgs/tg.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__block">
+                        <a href=""><img src="imgs/logo.svg" alt=""></a>
+                    </div>
+                    <div class="footer__block">
+                        <p>Neon eSports 2020</p>
+                        <p class="footer__hidden">Все права защищены</p>
+                    </div>
+                    <div class="footer__block">
+                        <p>Все права защищены</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+        <script src="js/alpine.js" defer></script>
+        <script src="js/fslightbox.js" async></script>
+        <script src="js/swiper.min.js"></script>
+        <script src="js/lazyload.js" async></script>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
+        <script src="js/app.min.js"></script>
+    </body>
+
+</html>

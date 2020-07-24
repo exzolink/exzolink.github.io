@@ -1,3 +1,6 @@
+// Dev by exzolink
+// exzolink.github.io
+
 photos = new Swiper('.zones__gallery_container', {
     slidesPerView: 4,
     spaceBetween: 6,
