@@ -56,19 +56,14 @@
             padding-bottom: 75px;
             position: relative;
 
-            &:after {
-                position: absolute;
-                content: '';
-                left: 0;
-                bottom: 0;
-                background: url('../imgs/swat.png');
-                height: 666px;
-                background-size: contain;
-                width: 525px;
-                z-index: 0;
-                background-repeat: no-repeat;
-            }
+        }
 
+        &_bg {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            max-width: 500px;
+            z-index: 0;
         }
 
         &_header {
@@ -137,12 +132,9 @@
         }
 
         &__bottom {
-            &_section {
-                &:after {
-                    left: -65px;
-                    width: 420px;
-                    height: 530px;
-                }
+            &_bg {
+                left: -65px;
+                max-width: 400px;
             }
         }
     }
@@ -234,11 +226,10 @@
             &_section {
                 padding: 35px 0;
                 padding-bottom: 45px;
-
-                &:after {
-                    width: 330px;
-                    height: 400px;
-                }
+            }
+            
+            &_bg {
+                max-width: 315px;
             }
         }
 
@@ -335,12 +326,11 @@
             &_section {
                 padding: 25px 0;
                 padding-bottom: 30px;
-                
-                &:after {
-                    width: 240px;
-                    height: 310px;
-                    left: 0;
-                }
+            }
+
+            &_bg {
+                max-width: 245px;
+                left: 0;
             }
         }
 
