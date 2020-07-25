@@ -140,8 +140,6 @@ if (document.getElementById('fadeToggle') !== null) {
     var typed = new Typed('#fadeToggle', options);
 };
 
-
-
 if (document.getElementById('parallax') !== null) {
 function parallax() {
     var $slider = document.getElementById("parallax");
@@ -164,4 +162,4 @@ window.addEventListener("scroll", function () {
 
 });
 parallax();
-}
+};
