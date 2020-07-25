@@ -117,6 +117,7 @@ img {
 .lazyload,
 .lazyloading {
     opacity: 0;
+    min-height: 200px;
     transition: border .3s ease, opacity .3s, transform .3s, filter .3s !important;
 }
 
