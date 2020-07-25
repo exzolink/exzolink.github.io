@@ -139,3 +139,18 @@ var typed = new Typed('#fadeToggle', options);
 
 
 
+function parallax() {
+	var $slider = document.getElementById("parallax");
+
+	var yPos = window.pageYOffset / $slider.dataset.speed;
+	yPos = -yPos;
+	
+	var coords = '50% '+ yPos + 'px';
+	
+	$slider.style.backgroundPosition = coords;
+}
+
+window.addEventListener("scroll", function(){
+	parallax();	
+});
+parallax();	
