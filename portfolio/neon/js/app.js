@@ -138,7 +138,6 @@ var options = {
 var typed = new Typed('#fadeToggle', options);
 
 
-
 function parallax() {
 	var $slider = document.getElementById("parallax");
 
@@ -151,6 +150,12 @@ function parallax() {
 }
 
 window.addEventListener("scroll", function(){
-	parallax();	
+    if (window.pageYOffset < 650) {
+        parallax();	
+    }
+    else {
+        return;
+    }
+	
 });
 parallax();	
