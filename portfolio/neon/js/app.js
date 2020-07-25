@@ -126,36 +126,42 @@ if (document.getElementById('map') !== null) {
     window.addEventListener('scroll', mapRender);
 };
 
-var options = {
-    strings: ['Power On', 'Game On'],
-    typeSpeed: 90,
-    fadeOut: true,
-    startDelay: 1000,
-    backSpeed: 500,
-    backDelay: 1000,
-    loop: true
+
+if (document.getElementById('fadeToggle') !== null) {
+    var options = {
+        strings: ['Power On', 'Game On'],
+        typeSpeed: 90,
+        fadeOut: true,
+        startDelay: 1000,
+        backSpeed: 500,
+        backDelay: 1000,
+        loop: true
+    };
+    var typed = new Typed('#fadeToggle', options);
 };
-var typed = new Typed('#fadeToggle', options);
 
 
+
+if (document.getElementById('parallax') !== null) {
 function parallax() {
-	var $slider = document.getElementById("parallax");
+    var $slider = document.getElementById("parallax");
 
-	var yPos = window.pageYOffset / $slider.dataset.speed;
-	yPos = -yPos;
-	
-	var coords = '50% '+ yPos + 'px';
-	
-	$slider.style.backgroundPosition = coords;
-}
+    var yPos = window.pageYOffset / $slider.dataset.speed;
+    yPos = -yPos;
 
-window.addEventListener("scroll", function(){
+    var coords = '50% ' + yPos + 'px';
+
+    $slider.style.backgroundPosition = coords;
+};
+
+window.addEventListener("scroll", function () {
     if (window.pageYOffset < 650) {
-        parallax();	
+        parallax();
     }
     else {
         return;
     }
-	
+
 });
-parallax();	
+parallax();
+}
