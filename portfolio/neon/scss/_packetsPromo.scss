@@ -1,0 +1,122 @@
+.packet {
+    display: none;
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: linear-gradient(to bottom left, #242424 41.63%, #242424 55.09%, #88096C 103.35%, #FF00C7 110.23%);
+
+    &__inner {
+        position: relative;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        max-height: calc(100vh - 160px);
+        margin-top: 130px;
+    }
+
+    &__form {
+        padding-bottom: 10px;
+    }
+
+    &__title {
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 72px;
+        text-align: center;
+        color: #fff;
+
+        & span {
+            color: $blue;
+        }
+    }
+
+    &__back {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        pointer-events: all;
+        transition: opacity .3s ease;
+
+        &:hover {
+            cursor: pointer;
+            opacity: .7;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        pointer-events: all;
+        transition: opacity .3s ease;
+
+        &:hover {
+            cursor: pointer;
+            opacity: .7;
+        }
+    }
+
+    &__desc {
+        color: #fff;
+        border-left: 3px solid $blue;
+        padding-left: 16px;
+        line-height: 1.2;
+        margin-top: 25px;
+        font-size: 18px;
+    }
+
+    &__container_sm {
+        max-width: 700px;
+    }
+
+    &__reqs {
+        list-style: decimal;
+        list-style-position: inside;
+        margin-top: 65px;
+        margin-left: 100px;
+        font-size: 22px;
+        font-weight: 700;
+        color: #fff;
+
+        & li {
+            font-weight: 400;
+            font-size: 18px;
+            margin-bottom: 28px;
+
+            &:first-child {
+                margin-top: 28px;
+            }
+        }
+        
+
+    }
+
+    &__alert {
+        margin-top: 100px;
+        font-size: 18px;
+        margin-bottom: 55px;
+        color: #fff;
+    }
+
+    &__questions {
+        font-size: 36px;
+        color: #fff;
+        font-weight: 700;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    &__img {
+        position: absolute;
+        bottom: 0;
+
+        &_left {
+            left: 0;
+        }
+
+        &_right {
+            right: 0;
+        }
+    }
+}

@@ -4,3 +4,24 @@
     background-position: 100% 50%;
     background-size: cover;
 }
+
+.welcomePromo {
+    background-color: #302F2F;
+    background-position: 50% 15%;
+    background-size: auto;
+}
+
+@media screen and (max-width: 900px) {
+    .welcomeEvents {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .welcomeEvents {
+        height: 250px;
+    }
+    .welcomePromo {
+        background-position: 34% 10%;
+    }
+}
