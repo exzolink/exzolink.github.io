@@ -108,7 +108,7 @@
                         <div x-show="tab === 'kitchen'" class="menu__content_wrapper">
                             <div class="menu__wrapper">
                                 <div class="menu__item">
-                                    <div class="menu__img"><img src="imgs/food1.png" alt=""></div>
+                                    <div class="menu__img"><img class="lazyload" data-src="imgs/food1.png" alt=""></div>
                                     <div class="menu__list">
                                         <h4 class="menu__header">Салаты:</h4>
 
@@ -135,7 +135,7 @@
                                     </div>
                                 </div>
                                 <div class="menu__item">
-                                    <div class="menu__img"><img src="imgs/food2.png" alt=""></div>
+                                    <div class="menu__img"><img class="lazyload" data-src="imgs/food2.png" alt=""></div>
                                     <div class="menu__list">
                                         <h4 class="menu__header">Супы:</h4>
 
@@ -154,7 +154,7 @@
                                     </div>
                                 </div>
                                 <div class="menu__item">
-                                    <div class="menu__img"><img src="imgs/food3.png" alt=""></div>
+                                    <div class="menu__img"><img class="lazyload" data-src="imgs/food3.png" alt=""></div>
                                     <div class="menu__list">
                                         <h4 class="menu__header">Основные блюда:</h4>
 
@@ -177,7 +177,7 @@
                                     </div>
                                 </div>
                                 <div class="menu__item">
-                                    <div class="menu__img"><img src="imgs/food4.png" alt=""></div>
+                                    <div class="menu__img"><img class="lazyload" data-src="imgs/food4.png" alt=""></div>
                                     <div class="menu__list">
                                         <h4 class="menu__header">Гарниры:</h4>
 
@@ -200,7 +200,7 @@
                                     </div>
                                 </div>
                                 <div class="menu__item">
-                                    <div class="menu__img"><img src="imgs/food5.png" alt=""></div>
+                                    <div class="menu__img"><img class="lazyload" data-src="imgs/food5.png" alt=""></div>
                                     <div class="menu__list">
                                         <h4 class="menu__header">Паста:</h4>
 
@@ -219,7 +219,7 @@
                                     </div>
                                 </div>
                                 <div class="menu__item">
-                                    <div class="menu__img"><img src="imgs/food6.png" alt=""></div>
+                                    <div class="menu__img"><img class="lazyload" data-src="imgs/food6.png" alt=""></div>
                                     <div class="menu__list">
                                         <h4 class="menu__header">Фастфуд:</h4>
 
@@ -250,7 +250,7 @@
                                     </div>
                                 </div>
                                 <div class="menu__item">
-                                    <div class="menu__img"><img src="imgs/food7.png" alt=""></div>
+                                    <div class="menu__img"><img class="lazyload" data-src="imgs/food7.png" alt=""></div>
                                     <div class="menu__list">
                                         <h4 class="menu__header">Пицца:</h4>
 
@@ -269,7 +269,7 @@
                                     </div>
                                 </div>
                                 <div class="menu__item">
-                                    <div class="menu__img"><img src="imgs/food8.png" alt=""></div>
+                                    <div class="menu__img"><img class="lazyload" data-src="imgs/food8.png" alt=""></div>
                                     <div class="menu__list">
                                         <h4 class="menu__header">Десерты:</h4>
 
@@ -288,7 +288,7 @@
                                     </div>
                                 </div>
                                 <div class="menu__item">
-                                    <div class="menu__img"><img src="imgs/food9.png" alt=""></div>
+                                    <div class="menu__img"><img class="lazyload" data-src="imgs/food9.png" alt=""></div>
                                     <div class="menu__list">
                                         <h4 class="menu__header">Закуски к пиву:</h4>
 
@@ -336,9 +336,9 @@
 
             <section class="team">
                 <div class="container">
-                    <div class="team__inner">
-                        <h3 class="zones__hard_title">Наша <span>команда</span></h3>
-                        <div class="team__founders">
+                    <div class="team__inner menu__inner">
+                        <h3 class="zones__hard_title">У нас <span>так вкусно</span> благодаря:</h3>
+                        <div class="team__founders mb-0">
                             <div class="team__founders_wrapper">
                                 <div class="team__person">
                                     <div class="team__person_wrapper">
@@ -346,19 +346,20 @@
                                             <img class="lazyload" data-src="imgs/team.jpg" alt="">
                                         </div>
                                         <div class="team__person_desc">
-                                            <h4>Асембек Бейбарыс Нурланулы</h4>
-                                            <p>
-                                                23 года
-                                                <br><br>
-                                                Любимая игра: Dota 2<br>
-                                                Любимый герой: Axe<br>
-                                                Рейтинг: Ancient 2<br>
-                                            </p>
+                                            <h4 class="menu__person_status">Шеф-повар:</h4>
+                                            <p class="menu__person_name">Толстых Сергей Владимирович</p>
                                         </div>
                                     </div>
-                                    <blockquote class="team__person_quote">Для меня важна тема командного духа, так как
-                                        я
-                                        считаю, что, как и в игре Dota 2, без команды, ты никто.</blockquote>
+                                    <p class="menu__person_desc">
+                                        - Член Ассоциации Поваров Р.К.<br>
+                                        - Стаж работы 25 лет,стаж работы Шеф-поваром 15 лет.<br>
+                                        - Участник и призер Международных конкурсов.<br>
+                                        - Золотой призер Шеф-баттл (chefs battle) 2016.<br>
+                                        - Серебряный призер Шеф-баттл (chefs battle)2015.<br>
+                                        - Серебряный призер Шеф-баттл (chefs battle) 2013.<br>
+                                        - Входит в «Книгу рекордов Гиннесса» (англ. The Guinness Book of Records,) в
+                                        номинации по приготовлению самого большого Лагмана в мире 2016г.
+                                    </p>
                                 </div>
 
                                 <div class="team__person">
@@ -367,19 +368,20 @@
                                             <img class="lazyload" data-src="imgs/team.jpg" alt="">
                                         </div>
                                         <div class="team__person_desc">
-                                            <h4>Жанибек Дауыт Лесбекулы</h4>
-                                            <p>
-                                                23 года
-                                                <br><br>
-                                                Любимая игра: Dota 2<br>
-                                                Любимый герой: Axe<br>
-                                                Рейтинг: Ancient 2<br>
-                                            </p>
+                                            <h4 class="menu__person_status">Шеф-повар:</h4>
+                                            <p class="menu__person_name">Толстых Сергей Владимирович</p>
                                         </div>
                                     </div>
-                                    <blockquote class="team__person_quote">Для меня важна тема командного духа, так как
-                                        я
-                                        считаю, что, как и в игре Dota 2, без команды, ты никто.</blockquote>
+                                    <p class="menu__person_desc">
+                                        - Член Ассоциации Поваров Р.К.<br>
+                                        - Стаж работы 25 лет,стаж работы Шеф-поваром 15 лет.<br>
+                                        - Участник и призер Международных конкурсов.<br>
+                                        - Золотой призер Шеф-баттл (chefs battle) 2016.<br>
+                                        - Серебряный призер Шеф-баттл (chefs battle)2015.<br>
+                                        - Серебряный призер Шеф-баттл (chefs battle) 2013.<br>
+                                        - Входит в «Книгу рекордов Гиннесса» (англ. The Guinness Book of Records,) в
+                                        номинации по приготовлению самого большого Лагмана в мире 2016г.
+                                    </p>
                                 </div>
                             </div>
                         </div>

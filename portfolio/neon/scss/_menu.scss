@@ -1,4 +1,8 @@
 .menu {
+    &__inner {
+        padding-bottom: 70px;
+    }
+
     &__content {
         padding: 100px 0;
         background-color: #242424;
@@ -73,6 +77,25 @@
         }
     }
 
+    &__person {
+        &_name {
+            font-size: 18px !important;
+            font-weight: 700;
+            margin-top: 25px;
+            color: #fff;
+        }
+
+        &_status {
+            font-size: 24px !important;
+        }
+
+        &_desc {
+            font-size: 18px;
+            line-height: 1.3;
+        }
+
+    }
+
 }
 
 
@@ -114,6 +137,22 @@
         &__list {
             flex-basis: 50%;
         }
+
+
+        &__person {
+            &_status {
+                font-size: 20px !important;
+            }
+
+            &_name {
+                font-size: 14px !important;
+                margin-top: 15px;
+            }
+
+            &_desc {
+                font-size: 14px;
+            }
+        }
     }
 }
 
@@ -138,6 +177,12 @@
             flex-direction: column !important;
             margin-bottom: 120px;
         }
+
+        &__person {
+            &_desc {
+                font-size: 12px;
+            }
+        }
     }
 }
 
@@ -150,6 +195,10 @@
 
         &__item {
             margin-bottom: 80px;
+        }
+
+        &__inner {
+            padding-bottom: 45px;
         }
     }
 }
@@ -168,6 +217,12 @@
 
         &__header {
             font-size: 20px;
+        }
+
+        &__person {
+            &_status {
+                font-size: 16px !important;
+            }
         }
     }
 }
