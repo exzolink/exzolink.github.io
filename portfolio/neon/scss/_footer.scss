@@ -1,5 +1,6 @@
 .footer {
     background-color: #292929;
+
     &__inner {
         padding-bottom: 50px;
         padding-top: 100px;
@@ -7,20 +8,34 @@
         justify-content: space-between;
         align-items: center;
     }
+
     &__block {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         flex-basis: 31.5%;
-        color: #fff;
+        flex-direction: column;
+        color: #616161;
         font-size: 18px;
         justify-content: space-between;
 
         & img {
             filter: grayscale(1) brightness(50%);
         }
-    }
-    &__hidden {
-        display: none;
+
+        &_center {
+            & p {
+                &:first-child {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+
+        &_last {
+            & p {
+                font-size: 9px;
+                margin-bottom: 5px;
+            }
+        }
     }
 }
 
@@ -28,6 +43,21 @@
     .footer {
         &__inner {
             padding-top: 80px;
+        }
+
+        &__block {
+            &:first-child {
+                align-items: flex-start;
+            }
+
+            &:nth-child(2) {
+                align-items: center;
+            }
+
+            &:last-child {
+                align-items: flex-end;
+            }
+
         }
     }
 }
@@ -37,29 +67,40 @@
         &__inner {
             padding-top: 38px;
             padding-bottom: 33px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         &__block {
             flex-basis: 48%;
-            &:nth-child(2) {
-                display: flex;
-                align-items: flex-end;
-                flex-direction: column;
 
-                & p {
-                    font-size: 16px;
-                }
+            &:nth-child(2) {
+                align-items: flex-end;
             }
 
             &:last-child {
-                display: none;
+                align-items: center;
+                margin-top: 35px;
+                & p {
+                    margin-right: 31px;
+                }
             }
         }
+    }
+}
 
-        &__hidden {
-            display: block;
-            font-size: 10px !important;
-            margin-top: 10px;
+@media screen and (max-width: 480px) {
+    .footer {
+        &__block {
+            &:nth-child(2) {
+                & p {
+                    font-size: 12px;
+
+                    &:first-child {
+                        margin-bottom: 8px;
+                    }
+                }
+            }
         }
     }
 }
@@ -70,7 +111,7 @@
             &:nth-child(2) {
 
                 & p {
-                    font-size: 14px;
+                    font-size: 10px;
                 }
             }
         }
