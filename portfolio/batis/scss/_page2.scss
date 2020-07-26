@@ -1,4 +1,5 @@
 .page2 {
+
     &__cards {
         display: flex;
         align-items: center;
@@ -26,6 +27,9 @@
         padding-top: 10px;
         padding-left: 15px;
         padding-right: 15px;
+        max-width: 1050px;
+        font-weight: 400;
+        background-color: transparent;
     }
 
     &__container {
@@ -36,11 +40,13 @@
 
     &__card {
         display: flex;
+        text-align: center;
         align-items: center;
         flex-direction: column;
 
         & p {
             font-size: 24px;
+            text-align: center;
             margin-top: 20px;
         }
     }
@@ -49,6 +55,11 @@
 .page2__section .pp-tableCell {
     padding-top: 50px;
     padding-bottom: 50px;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: 50% bottom;
+    background-size: contain;
+    background-image: url('../imgs/page2.jpg');
 }
 
 @media screen and (max-width: 1366px) {
