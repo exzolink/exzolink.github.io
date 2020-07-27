@@ -37,6 +37,19 @@
     }
 }
 
+
+
+@media screen and (max-height: 770px) {
+    .pageRepeat {
+        &__img img {
+            max-width: 450px;
+        }
+        &__last {
+            font-size: 20px;
+        }
+    }
+}
+
 @media screen and (max-width: 1100px) {
     .pageRepeat {
         &__info {
@@ -49,13 +62,19 @@
     }
 }
 
+
 @media screen and (max-width: 1100px) {
     .pageRepeat {
         &__img img {
            max-width: 400px;
         }
+        &__last {
+            font-size: 24px;
+        }
     }
 }
+
+
 
 @media screen and (max-width: 840px) {
     .pageRepeat {

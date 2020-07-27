@@ -29,6 +29,8 @@
     }
 }
 
+
+
 @media screen and (max-width: 1800px) {
     .page12 {
         &__info {
@@ -54,6 +56,9 @@
     }
 }
 
+
+
+
 @media screen and (max-width: 1368px) {
     .page12 {
         &__desc {
@@ -66,10 +71,23 @@
 }
 
 
+
 @media screen and (max-width: 1235px) {
     .page12 {
         &__desc {
             font-size: 18px;
+        }
+    }
+}
+
+@media screen and (max-height: 770px) {
+    .page12 {
+        &__desc {
+            font-size: 18px;
+        }
+        &__info {
+            padding-top: 25px;
+            align-self: flex-start;
         }
     }
 }

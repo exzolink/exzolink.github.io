@@ -92,6 +92,14 @@
     }
 }
 
+@media screen and (max-height: 770px) {
+    .page6 {
+        &__inner {
+            margin-bottom: 175px;
+        }
+    }
+}
+
 @media screen and (max-width: 1100px) {
     .page6 {
         &__inner {
@@ -150,3 +158,4 @@
         }
     }
 }
+

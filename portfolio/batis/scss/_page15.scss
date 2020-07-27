@@ -80,6 +80,14 @@
     }
 }
 
+@media screen and (max-height: 770px) {
+    .page15 {
+        &__desc {
+            font-size: 26px;
+        }
+    }
+}
+
 @media screen and (max-width: 1100px) {
     .page15 {
         &__bg {
