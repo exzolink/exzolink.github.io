@@ -56,7 +56,15 @@
 @media screen and (max-height: 900px) {
     .page15 {
         &__bg {
-            max-width: 750px;
+            max-width: 550px;
+        }
+    }
+}
+
+@media screen and (max-width: 1370px) {
+    .page15 {
+        &__bg {
+            max-width: 550px;
         }
     }
 }
