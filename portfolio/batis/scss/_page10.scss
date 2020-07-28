@@ -3,6 +3,7 @@
         display: flex;
         height: 100vh;
         position: relative;
+
         &:after {
             z-index: 100;
             content: '';
@@ -14,12 +15,15 @@
             background: linear-gradient(to right, #486DB2, #69C6A1);
         }
     }
+
     &__title {
         &_hidden {
             display: none;
         }
+
         width: max-content;
         position: relative;
+
         &:after {
             position: absolute;
             content: '';
@@ -30,6 +34,7 @@
             background: linear-gradient(to right, #486DB2, #69C6A1);
         }
     }
+
     &__left {
         display: flex;
         flex-direction: column;
@@ -39,6 +44,7 @@
         padding-left: 70px;
         justify-content: space-between;
     }
+
     &__desc {
         font-size: 32px;
         font-weight: 300;
@@ -48,6 +54,7 @@
         margin-bottom: 200px;
         max-width: 450px;
     }
+
     &__right {
         height: 100%;
         flex-basis: 55%;
@@ -58,14 +65,17 @@
         }
     }
 }
+
 @media screen and (min-width: 1100px) {
     .page11 {
         &__left {
             flex-basis: 55%;
         }
+
         &__right {
             flex-basis: 45%;
         }
+
         &__title {
             &:after {
                 content: none;
@@ -83,8 +93,26 @@
                 max-height: 100vh;
             }
         }
+
         &__left {
             margin-right: 30px;
+        }
+    }
+}
+
+@media screen and (max-height: 770px) {
+    .page10 {
+        &__desc {
+            font-size: 26px;
+        }
+
+        &__right {
+            display: flex;
+            justify-content: flex-end;
+
+            & img {
+                max-width: 600px;
+            }
         }
     }
 }
@@ -94,21 +122,26 @@
         &__section {
             margin-bottom: 60px;
         }
+
         &__inner {
             height: 100%;
+
             &:after {
                 content: none;
             }
         }
+
         &__left {
             padding-left: 15px;
             height: 100%;
         }
+
         &__right {
             & img {
                 height: auto;
             }
         }
+
         &__desc {
             margin-bottom: 0;
             margin-top: 100px;
@@ -132,18 +165,22 @@
             padding: 0;
             margin: 0 auto;
         }
+
         &__right {
             display: flex;
             flex-direction: column;
+
             & img {
                 width: 80%;
                 align-self: center;
             }
         }
+
         &__desc {
             max-width: none;
             margin-top: 40px;
         }
+
         &__title {
             display: none;
 
@@ -152,6 +189,7 @@
                 margin-bottom: 40px;
             }
         }
+
         &__inner {
             padding-left: 15px;
             padding-right: 15px;
@@ -165,11 +203,13 @@
         &__left {
             width: 100%;
         }
+
         &__right {
             & img {
                 width: 100%;
             }
         }
+
         &__desc {
             font-size: 22px;
             width: auto;

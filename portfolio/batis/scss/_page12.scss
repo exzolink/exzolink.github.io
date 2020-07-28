@@ -88,7 +88,13 @@
         &__info {
             padding-top: 25px;
             align-self: flex-start;
+            padding-bottom: 25px;
+            flex-basis: 100%;
         }
+        &__img {
+            display: none;
+        }
+
     }
 }
 
@@ -104,6 +110,9 @@
        }
        &__section {
            margin-bottom: 60px;
+       }
+       &__img {
+           display: flex;
        }
     }
     

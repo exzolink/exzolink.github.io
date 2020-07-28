@@ -24,11 +24,16 @@
             &:last-child {
                 margin-bottom: 0;
             }
+            &:first-child {
+                font-weight: 700;
+                color: #fff !important;
+            }
 
             &:hover {
                 color: $blue;
             }
         }
+        
     }
 
     &__socials {

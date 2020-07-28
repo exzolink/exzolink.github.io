@@ -105,6 +105,9 @@
     .page13 {
         &__info {
                 font-size: 16px;    
+                & p {
+                    font-size: 18px;
+                }
         }
     }
 }
