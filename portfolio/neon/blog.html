@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/swiper.min.css">
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css' rel='stylesheet' />
+        <title>Neon</title>
+    </head>
+
+    <body>
+        <div class="wrapper" x-data="{ BurgerOpen: false }">
+            <div x-show.transition.in.duration.350ms.out.scale.0.duration.350ms.opacity.duration.350ms="BurgerOpen"
+                x-cloak class="header__menu">
+                <div class="header__inner">
+                    <div class="header__controls">
+                        <div><img src="imgs/logo.svg" alt=""></div>
+                        <div><img @click="BurgerOpen = false" src="imgs/close.svg" alt="" class="header__close"></div>
+                    </div>
+                    <div class="header__links_wrapper">
+                        <div class="header__links">
+                            <a href="" class="header__link">Разделы сайта</a>
+                            <a href="" class="header__link">Как это было?</a>
+                            <a href="" class="header__link">Сообщество Neon eSports</a>
+                            <a href="" class="header__link">Новости мирового киберспорта</a>
+                        </div>
+                        <div class="header__links">
+                            <a class="header__link active" href="">eSports Hub</a>
+                            <a class="header__link" href="">Рейтинг Dota 2</a>
+                            <a class="header__link" href="">Личный кабинет</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <header class="header">
+                <div class="top__nav">
+                    <div class="container">
+                        <div class="top__nav_inner">
+                            <a class="top__nav_link active" href="">eSports Hub</a>
+                            <a class="top__nav_link" href="">Рейтинг Dota 2</a>
+                            <a class="top__nav_link" href="">Личный кабинет</a>
+                            <a class="top__nav_link" href="tel:+77777777777">+7 777 777 77 77</a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <div class="container">
+                        <div class="nav__inner">
+                            <a class="nav__logo" href=""><img src="imgs/logo.svg" alt=""></a>
+                            <div class="nav__items">
+                                <a href="" class="nav__link">Разделы сайта</a>
+                                <a href="" class="nav__link">Как это было?</a>
+                                <a href="" class="nav__link">Сообщество Neon eSports</a>
+                                <a href="" class="nav__link">Новости мирового киберспорта</a>
+                            </div>
+                            <div class="flex">
+                                <a href="" class="nav__btn_order">Вход / Регистрация</a>
+                                <button @click="BurgerOpen = true" class="nav__btn_menu"><img src="imgs/menu.svg"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+        <main class="main">
+            <section class="blog">
+                <img class="zones__particles events__particles lazyload" data-src="imgs/purple-cloud2.png" alt="">
+                <div class="container">
+                    <div class="blog__inner">
+                        <h3 class="zones__hard_title">eSports <span>Hub</span></h3>
+
+                        <div class="blog__slider">
+                            <div class="swiper-container blog__container">
+                                <div class="swiper-wrapper blog__wrapper">
+                                    <div class="swiper-slide blog__slide lazyload" data-bg="imgs/news__big.jpg">
+                                        <h3 class="blog__slide_title">
+                                            Заголовок ключевой статьи
+                                        </h3>
+                                        <a href=""></a>
+                                    </div>
+                                    <div class="swiper-slide blog__slide lazyload" data-bg="imgs/news__big.jpg">
+                                        <h3 class="blog__slide_title">
+                                            Заголовок ключевой статьи
+                                        </h3>
+                                        <a href=""></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next blog__arrow"></div>
+                                <div class="swiper-button-prev blog__arrow"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="blog__info_wrapper">
+                            <div class="blog__info">
+                                <h3 class="zones__hard_title blog__suptitle">Рейтинги игроков</h3>
+                                <a href="" class="blog__rating lazyload" data-bg="imgs/rating_bg.jpg">
+                                    <h3 class="blog__rating_title">Рейтинг</h3>
+                                    <h3 class="blog__rating_suptitle">Dota2</h3>
+                                </a>
+                            </div>
+
+                            <div class="blog__events">
+                                <h3 class="zones__hard_title blog__suptitle">Афиша</h3>
+
+                                <div class="events__content blog__events_content">
+                                    <div class="events__item events__item_large blog__item_large lazyload"
+                                        data-bg="imgs/eventsPost.jpg">
+                                        <a href=""></a>
+                                        <div class="events__item_inner">
+                                            <p class="events__item_date">24 июля</p>
+                                            <h3 class="events__item_title">International</h3>
+                                            <h4 class="events__item_desc">Турнир Dota2</h4>
+                                            <button class="events__item_btn">Зарегистрироваться</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="events__item blog__item lazyload" data-bg="imgs/eventsPost1.jpg">
+                                        <a href=""></a>
+                                        <div class="events__item_inner">
+                                            <p class="events__item_date">24 июля</p>
+                                            <h3 class="events__item_sm-title">Официальное открытие eSports <span>Bar &
+                                                    Gaming</span></h3>
+                                            <p class="events__item_label">Вход свободный</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="events__item blog__item lazyload" data-bg="imgs/eventsPost1.jpg">
+                                        <a href=""></a>
+                                        <div class="events__item_inner">
+                                            <p class="events__item_date">24 июля</p>
+                                            <h3 class="events__item_sm-title">Официальное открытие eSports <span>Bar &
+                                                    Gaming</span></h3>
+                                            <p class="events__item_label">Вход свободный</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="posts">
+                <div class="posts__inner">
+                    <div class="container">
+                        <a href="" class="posts__item">
+                            <div class="posts__item_img"><img class="lazyload" data-src="imgs/post.png" alt=""></div>
+
+                            <div class="posts__item_info">
+                                <div class="posts__item_wrap">
+                                    <p>Новости мирового киберспорта</p>
+                                    <p>27 июля</p>
+                                </div>
+
+                                <h3 class="posts__title">Заголовок статьи</h3>
+                                <p class="posts__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, necessitatibus.</p>
+                            </div>
+                        </a>
+
+                        <a href="" class="posts__item">
+                            <div class="posts__item_img"><img class="lazyload" data-src="imgs/post.png" alt=""></div>
+
+                            <div class="posts__item_info">
+                                <div class="posts__item_wrap">
+                                    <p>Новости мирового киберспорта</p>
+                                    <p>27 июля</p>
+                                </div>
+
+                                <h3 class="posts__title">Заголовок статьи</h3>
+                                <p class="posts__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, necessitatibus.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="instagram">
+                <div class="container">
+                    <div class="instagram__inner">
+                        <h3 class="zones__hard_title">Мы в <span>Instagram</span></h3>
+
+                        <div class="instagram__content"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="navigation">
+                <div class="container">
+                    <div class="navigation__inner">
+                        <div class="navigation__block">
+                            <a>Основные разделы</a>
+                            <a href="./">Главная</a>
+                            <a href="about.html">О нас</a>
+                            <a href="gamezones.html">Игровые зоны</a>
+                            <a href="menu.html">Меню</a>
+                            <a href="events.html">Мероприятия</a>
+                            <a href="promo.html">Акции</a>
+                            <a href="">Блог</a>
+                            <a href="contacts.html">Контакты</a>
+                        </div>
+
+                        <div class="navigation__block">
+                            <a>eSports Hub</a>
+                            <a href="">Рейтинг Dota 2</a>
+                            <a href="">Как это было?</a>
+                            <a href="">Сообщество Neon eSports</a>
+                            <a href="">Новости мирового <br>киберспорта</a>
+                        </div>
+
+                        <div class="navigation__block">
+                            <a>Информация</a>
+                            <a href="">Сотрудничество</a>
+                            <a href="">Вакансии</a>
+                            <a href="">Конфиденциальность</a>
+                            <div class="navigation__socials">
+                                <a href=""><img class="navigation__img" src="imgs/yt.svg" alt=""></a>
+                                <a href=""><img class="navigation__img" src="imgs/inst.svg" alt=""></a>
+                                <a href=""><img class="navigation__img" src="imgs/tg.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__block">
+                        <a href=""><img src="imgs/logo.svg" alt=""></a>
+                    </div>
+                    <div class="footer__block footer__block_center">
+                        <p>Neon eSports 2020</p>
+                        <p>Все права защищены</p>
+                    </div>
+                    <div class="footer__block footer__block_last">
+                        <p>Разработано командой</p>
+                        <a href=""><img src="imgs/gmglogo.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+        <script src="js/alpine.js" defer></script>
+        <script src="js/fslightbox.js" async></script>
+        <script src="js/swiper.min.js"></script>
+        <script src="js/lazyload.js" async></script>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
+        <script src="js/app.min.js"></script>
+    </body>
+
+</html>

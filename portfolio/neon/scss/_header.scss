@@ -10,6 +10,10 @@
             margin-left: 58px;
             transition: color .3s ease;
 
+            &.active {
+                color: $blue;
+            }
+
             &:first-child {
                 margin-left: 0;
                 font-style: italic;
@@ -188,6 +192,10 @@
         flex-basis: 48%;
         flex-direction: column;
 
+        &:first-child {
+            margin-right: 20px;
+        }
+
         &:last-child {
             & a {
                 &:first-child {
@@ -209,6 +217,10 @@
         color: #fff;
         font-size: 18px;
 
+        &.active {
+            color: $blue;
+        }
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -221,7 +233,7 @@
 
 }
 
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 1150px) {
     .nav {
         .flex {
             display: flex;
@@ -349,6 +361,14 @@
                 & img {
                     max-width: 40px;
                 }
+            }
+        }
+    }
+
+    .header {
+        &__links {
+            &:first-child {
+                margin-right: 0;
             }
         }
     }

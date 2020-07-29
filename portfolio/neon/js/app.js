@@ -83,6 +83,15 @@ workers = new Swiper('.team__container', {
     }
 });
 
+blog = new Swiper('.blog__container', {
+    slidesPerView: 1,
+    spaceBetween: 12,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+});
+
 games.on('slideChange', function () {
     games.update();
 });
@@ -126,6 +135,20 @@ if (document.getElementById('map') !== null) {
     window.addEventListener('scroll', mapRender);
 };
 
+if (document.getElementById('mapContacts') !== null) {
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZ3JlZ29yeTEyMCIsImEiOiJja2N2NW1ld2UwMTMzMnFtc2ZoeWpiZHM3In0.97pEt9J1fujCDbmt-84mrw';
+    var map = new mapboxgl.Map({
+        container: 'mapContacts',
+        style: 'mapbox://styles/mapbox/dark-v10',
+        center: [76.937, 43.243264],
+        zoom: 17
+    });
+
+    var marker = new mapboxgl.Marker()
+        .setLngLat([76.936931, 43.2429])
+        .addTo(map);
+};
+
 
 if (document.getElementById('fadeToggle') !== null) {
     var options = {
@@ -141,25 +164,25 @@ if (document.getElementById('fadeToggle') !== null) {
 };
 
 if (document.getElementById('parallax') !== null) {
-function parallax() {
-    var $slider = document.getElementById("parallax");
+    function parallax() {
+        var $slider = document.getElementById("parallax");
 
-    var yPos = window.pageYOffset / $slider.dataset.speed;
-    yPos = -yPos;
+        var yPos = window.pageYOffset / $slider.dataset.speed;
+        yPos = -yPos;
 
-    var coords = '50% ' + yPos + 'px';
+        var coords = '50% ' + yPos + 'px';
 
-    $slider.style.backgroundPosition = coords;
-};
+        $slider.style.backgroundPosition = coords;
+    };
 
-window.addEventListener("scroll", function () {
-    if (window.pageYOffset < 650) {
-        parallax();
-    }
-    else {
-        return;
-    }
+    window.addEventListener("scroll", function () {
+        if (window.pageYOffset < 650) {
+            parallax();
+        }
+        else {
+            return;
+        }
 
-});
-parallax();
+    });
+    parallax();
 };

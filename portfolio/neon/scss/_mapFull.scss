@@ -160,5 +160,20 @@
                 }
             }
         }
+
+        &__title {
+            padding: 45px 0;
+            &_inner {
+                background-color: #262626;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .mapHalf {
+        &__title_inner {
+            display: none;
+        }
     }
 }
