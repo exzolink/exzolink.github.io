@@ -80,10 +80,10 @@
     }
 }
 
-@media screen and (max-height: 770px) {
+@media screen and (max-height: 700px) {
     .page12 {
         &__desc {
-            font-size: 18px;
+            font-size: 16px;
         }
         &__info {
             padding-top: 25px;
@@ -92,7 +92,7 @@
             flex-basis: 100%;
         }
         &__img {
-            display: none;
+            flex-basis: 21%;
         }
 
     }

@@ -53,6 +53,7 @@
             & img {
                 display: block;
                 height: 90%;
+                width: auto;
             }
         }
         &__wrapper {
@@ -67,7 +68,7 @@
     }
 }
 
-@media screen and (max-height: 770px) {
+@media screen and (max-height: 700px) {
     .page11 {
         &__desc {
             max-width: 900px;
@@ -75,9 +76,12 @@
         }
         &__wrapper {
             margin-top: 65px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
         }
         &__img {
-            flex-basis: 39%;
+            flex-basis: 34%;
             & img {
                 max-width: 320px;
             }
@@ -97,6 +101,9 @@
         }
         &__wrapper {
             width: auto;
+            bottom: auto;
+            left: auto;
+            position: initial;
         }
         &__section {
             min-height: auto !important;
