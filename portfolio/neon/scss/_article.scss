@@ -1,0 +1,46 @@
+.article {
+
+    &__top {
+        background: #242424;
+        padding-bottom: 25px;
+        padding-top: 15px;
+        color: #fff;
+
+        & p {
+            font-size: 18px;
+        }
+
+        &_tag {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+    }
+
+    &__bg {
+        position: relative;
+        height: 660px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__body {
+        padding-top: 30px;
+        padding-bottom: 90px;
+        position: relative;
+        color: #fff;
+        font-size: 18px;
+        background: linear-gradient(230.31deg, #242424 41.63%, #242424 55.09%, #88096C 103.35%, #FF00C7 110.23%);
+    }
+
+    &__content {
+        padding-right: 90px;
+
+        & img {
+            margin: 30px 0;
+            max-width: 800px;
+        }
+    }
+
+}

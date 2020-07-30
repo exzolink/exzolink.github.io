@@ -152,7 +152,7 @@ if (document.getElementById('mapContacts') !== null) {
 
 if (document.getElementById('fadeToggle') !== null) {
     var options = {
-        strings: ['Power On', 'Game On'],
+        strings: ['Power On', 'Game On', 'Party On'],
         typeSpeed: 90,
         fadeOut: true,
         startDelay: 1000,
