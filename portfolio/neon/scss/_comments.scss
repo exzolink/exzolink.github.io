@@ -1,0 +1,156 @@
+.comments {
+    background-color: #343434;
+
+    &__inner {
+        padding: 45px 0;
+    }
+
+    &__item {
+        color: #fff;
+        margin: 45px 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &_inner {
+            padding: 25px 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &_main {
+            background-color: #242424;
+        }
+
+        &_reply {
+            margin-left: auto;
+            width: 80%;
+        }
+
+        &_info {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: center;
+
+            & img {
+                width: 80px;
+                height: 80px;
+                border-radius: 100%;
+            }
+        }
+
+        &_author {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            margin-left: 20px;
+            margin-right: 45px;
+        }
+
+        &_date {
+            font-size: 18px;
+        }
+
+        &_content {
+            font-size: 24px;
+        }
+
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .comments {
+        &__item {
+            margin: 20px 0;
+
+            &_inner {
+                padding: 15px 20px;
+            }
+
+            &_content {
+                font-size: 18px;
+            }
+
+            &_author {
+                font-size: 16px;
+                margin-right: 25px;
+            }
+
+            &_date {
+                font-size: 14px;
+            }
+
+            &_info {
+                & img {
+                    width: 65px;
+                    height: 65px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .comments {
+        &__item {
+
+            &_content {
+                font-size: 14px;
+            }
+
+            &_author {
+                font-size: 14px;
+                margin-right: 20px;
+            }
+
+            &_date {
+                font-size: 12px;
+            }
+
+            &_reply {
+                width: 95%;
+            }
+
+            &_info {
+                margin-bottom: 15px;
+                & img {
+                    width: 55px;
+                    height: 55px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .comments {
+        &__item {
+
+            &_content {
+                font-size: 12px;
+            }
+
+            &_author {
+                font-size: 10px;
+                margin-right: 10px;
+                margin-left: 15px;
+            }
+
+            &_date {
+                font-size: 8px;
+            }
+
+            &_reply {
+                width: 95%;
+            }
+
+            &_info {
+                & img {
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+        }
+    }
+}

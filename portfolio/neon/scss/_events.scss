@@ -269,6 +269,7 @@ input[type="checkbox"] {
     &__inputs {
         display: flex;
         margin-top: 60px;
+        align-items: center;
         justify-content: space-between;
 
         & input {
@@ -301,6 +302,7 @@ input[type="checkbox"] {
             font-family: 'Montserrat', sans-serif;
             font-size: 18px;
             align-items: center;
+            padding: 19px 0;
             justify-content: center;
             border: 2px solid #ffffff00;
             box-shadow: 0 0 6px 0 #00BBF7;
@@ -332,6 +334,7 @@ input[type="checkbox"] {
 
         &__inputs {
             flex-direction: column;
+            align-items: initial;
 
             & input {
                 margin-bottom: 16px;

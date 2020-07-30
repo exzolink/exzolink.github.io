@@ -1,0 +1,340 @@
+.register {
+    background-color: #262626;
+
+    &__inner {
+        padding-top: 30px;
+        padding-bottom: 80px;
+    }
+
+    &__selector {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &_btn {
+            background-color: transparent;
+            color: #fff;
+            font-size: 24px;
+            transition: color .3s ease;
+            font-family: 'Montserrat', sans-serif;
+
+            &.active {
+                color: $blue;
+            }
+        }
+
+        &_wrapper {
+            margin-bottom: 55px;
+        }
+    }
+
+    &__step {
+        color: #fff;
+
+        & h2 {
+            font-size: 28px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 100px;
+        }
+
+        & p {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            max-width: 970px;
+        }
+
+    }
+
+    &__welcome {
+        &_link {
+            display: block;
+            margin-top: 80px;
+            color: $blue;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: underline;
+            margin-bottom: 180px;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__button_wrapper {
+        display: flex;
+        user-select: none;
+        align-items: center;
+        align-self: flex-end;
+
+        &:hover {
+            cursor: pointer;
+
+            & span {
+                text-decoration: underline;
+            }
+        }
+
+        & span {
+            margin-right: 15px;
+            color: $blue;
+            user-select: none;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+
+    &__inputs {
+        margin-top: 45px;
+
+        & button {
+            text-transform: initial;
+        }
+    }
+
+
+    &__avatar {
+        margin-top: 20px;
+        display: flex;
+        & input {
+            display: none;
+        }
+    }
+
+    &__upload {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+            & span {
+                text-decoration: underline;
+            }
+        }
+
+        & img {
+            width: 90px;
+            height: 90px;
+            border-radius: 100%;
+        }
+
+        &_btn {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+
+            & img {
+                border-radius: 0;
+                width: 40px;
+                height: 29px;
+                margin-right: 10px;
+            }
+
+            & span {
+                font-size: 24px;
+                color: $blue;
+            }
+        }
+    }
+
+    &__form {
+        margin-bottom: 45px;
+    }
+
+
+
+    &__rating {
+
+        &_inputs {
+            margin-top: 75px;
+            max-width: 900px;
+            & img {
+                max-width: 115px;
+            }
+
+            & button {
+                flex-basis: auto;
+                padding: 19px 40px;
+            }
+
+            & input {
+                flex-basis: auto;
+            }
+        }
+    }
+
+    &__confirm {
+        & button {
+            margin-left: auto;
+            padding: 19px 35px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .register {
+        &__selector {
+            &_btn {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .register {
+        &__inner {
+            padding-top: 20px;
+            padding-bottom: 50px;
+        }
+        &__selector {
+            & img {
+                max-width: 55px;
+            }
+            &_btn {
+                font-size: 16px;
+            }
+        }
+
+        &__step h2 {
+            margin-bottom: 50px;
+        }
+
+        &__form {
+            flex-direction: column-reverse;
+            display: flex;
+            margin-top: 50px;
+        }
+        &__inputs {
+            margin-top: 25px;
+        }
+
+        &__rating_inputs {
+            margin-top: 60px;
+            & input {
+                margin-top: 25px;
+            }
+        }
+
+        &__confirm button {
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .register {
+        &__selector {
+            min-width: 100vh;
+
+            &_wrapper {
+                width: 100%;
+                overflow-x: scroll;
+            }
+
+            &_btn {
+                min-width: max-content;
+            }
+
+            & img {
+                margin: 0 15px;
+                min-width: 55px;
+            }
+        }
+
+        &__step p {
+            font-size: 16px;
+        }
+
+        &__welcome_link {
+            margin-top: 50px;
+            margin-bottom: 80px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .register {
+        &__step {
+            & h2 {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+            & p {
+                font-size: 14px;
+            }
+        }
+        &__selector_wrapper {
+            margin-bottom: 35px;
+        }
+        &__welcome_link {
+            font-size: 14px;
+            margin-bottom: 65px;
+        }
+        &__button_wrapper {
+            & span {
+                font-size: 16px;
+            }
+            & img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+        &__form {
+            margin-top: 25px;
+        }
+        &__rating_inputs {
+            margin-top: 35px;
+        }
+        &__inputs {
+            & button {
+                padding: 15px 60px;
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .register {
+        &__inputs {
+            & button {
+                width: 100%;
+            }
+        }
+        &__step h2 {
+            font-size: 20px;
+        }
+        &__upload {
+            & img {
+                width: 50px;
+                height: 50px;
+            }
+
+            &_btn {
+                & img {
+                    width: 25px;
+                    height: 15px;
+                    margin-right: 5px;
+                }
+
+                & span {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
