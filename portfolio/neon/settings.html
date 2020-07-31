@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/swiper.min.css">
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css' rel='stylesheet' />
+        <title>Neon</title>
+    </head>
+
+    <body>
+        <div class="wrapper" x-data="{ BurgerOpen: false }">
+            <div x-show.transition.in.duration.350ms.out.scale.0.duration.350ms.opacity.duration.350ms="BurgerOpen"
+                x-cloak class="header__menu">
+                <div class="header__inner">
+                    <div class="header__controls">
+                        <div><img src="imgs/logo.svg" alt=""></div>
+                        <div><img @click="BurgerOpen = false" src="imgs/close.svg" alt="" class="header__close"></div>
+                    </div>
+                    <div class="header__links_wrapper">
+                        <div class="header__links">
+                            <a href="" class="header__link">Разделы сайта</a>
+                            <a href="" class="header__link">Как это было?</a>
+                            <a href="" class="header__link">Сообщество Neon eSports</a>
+                            <a href="" class="header__link">Новости мирового киберспорта</a>
+                        </div>
+                        <div class="header__links">
+                            <a class="header__link active" href="">eSports Hub</a>
+                            <a class="header__link" href="">Рейтинг Dota 2</a>
+                            <a class="header__link" href="">Личный кабинет</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <header class="header">
+                <div class="top__nav">
+                    <div class="container">
+                        <div class="top__nav_inner">
+                            <a class="top__nav_link active" href="">eSports Hub</a>
+                            <a class="top__nav_link" href="">Рейтинг Dota 2</a>
+                            <a class="top__nav_link" href="">Личный кабинет</a>
+                            <a class="top__nav_link" href="tel:+77777777777">+7 777 777 77 77</a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <div class="container">
+                        <div class="nav__inner">
+                            <a class="nav__logo" href=""><img src="imgs/logo.svg" alt=""></a>
+                            <div class="nav__items">
+                                <a href="" class="nav__link">Разделы сайта</a>
+                                <a href="" class="nav__link">Как это было?</a>
+                                <a href="" class="nav__link">Сообщество Neon eSports</a>
+                                <a href="" class="nav__link">Новости мирового киберспорта</a>
+                            </div>
+                            <div class="flex">
+                                <a href="" class="nav__btn_order">Личный кабинет</a>
+                                <button @click="BurgerOpen = true" class="nav__btn_menu"><img src="imgs/menu.svg"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+        <main class="main">
+            <section class="register">
+                <div class="container">
+
+                    <div x-data="{ tab: 'cabinet' }" class="register__inner">
+                        <div class="register__selector_wrapper">
+                            <div class="register__selector">
+                                <button class="register__selector_btn" :class="{ 'active': tab === 'welcome' }">Добро
+                                    пожаловать</button>
+                                <img src="imgs/arrow.svg" alt="">
+                                <button class="register__selector_btn" :class="{ 'active': tab === 'cabinet' }"
+                                    @click="tab = 'cabinet'">Настройки
+                                    личного кабинета</button>
+                                <img src="imgs/arrow.svg" alt="">
+                                <button class="register__selector_btn" :class="{ 'active': tab === 'rating' }"
+                                    @click="tab = 'rating'">Рейтинг
+                                    игроков</button>
+                            </div>
+                        </div>
+
+
+                        <!-- Вкладка: Настройки ЛК -->
+                        <div x-show.transition.in.duration.300ms="tab === 'cabinet'"
+                            class="register__step register__cabinet">
+                            <h2>Настройки личного кабинета</h2>
+
+                            <div x-data="{ subTab: 'cabinetData' }" class="settings__wrapper">
+
+                                <div class="settings__buttons">
+                                    <button @click="subTab = 'cabinetData'"
+                                        :class="{ 'active': subTab === 'cabinetData' }">Данные</button>
+                                    <button @click="subTab = 'cabinetPass'"
+                                        :class="{ 'active': subTab === 'cabinetPass' }">Поменять пароль</button>
+                                </div>
+
+                                <form x-show.transition.in.opacity.duration.600ms="subTab === 'cabinetData'" class="register__form" action="">
+                                    <div class="subscribe__inputs register__inputs settings__inputs">
+                                        <input type="text" placeholder="Никнейм*" required="">
+                                        <input type="text" placeholder="E-mail*" required="">
+                                        <input type="text" placeholder="Телефон*" required="">
+                                    </div>
+
+                                    <div class="register__avatar">
+                                        <input type="file" name="avatar" id="avatar">
+                                        <label for="avatar" class="register__upload">
+                                            <img src="imgs/avatar.png" alt="">
+                                            <div class="register__upload_btn">
+                                                <img src="imgs/upload.svg" alt="">
+                                                <span>загрузить фото</span>
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                    <div class="subscribe__inputs settings__save">
+                                        <button type="submit">Сохранить</button>
+                                    </div>
+                                </form>
+
+                                <form x-show.transition.in.opacity.duration.600ms="subTab === 'cabinetPass'" x-cloak class="register__form" action="">
+                                    <div class="subscribe__inputs register__inputs settings__inputs">
+                                        <input type="text" placeholder="Старый пароль*" required="">
+                                        <input type="text" placeholder="Новый пароль*" required="">
+                                        <input type="text" placeholder="Повторите пароль*" required="">
+                                    </div>
+
+                                    <div class="subscribe__inputs settings__save_pass">
+                                        <button type="submit">Сохранить</button>
+                                    </div>
+                                </form>
+
+                                <a href="" class="register__welcome_link settings__link"><img src="imgs/arrowLeft.svg" alt=""> <span>Перейти в eSports Hub</span></a>
+                            </div>
+                        </div>
+
+
+                        <!-- Вкладка: Рейтинг -->
+                        <div x-show.transition.in.duration.300ms="tab === 'rating'" x-cloak
+                            class="register__step register__rating">
+                            <h2>Рейтинг игроков</h2>
+
+                            <p>
+                                Мы создали раздел с рейтингом лучших игроков нашего сообщества.<br>Выберите игру и
+                                поучаствуйте в рейтинге</p>
+
+                            <form action="">
+                                <div class="subscribe__inputs register__inputs register__rating_inputs">
+                                    <img src="imgs/gamelogo.png" alt="">
+                                    <input type="text" placeholder="Steam Account" required="">
+                                    <button type="submit">Участвовать в рейтинге</button>
+                                </div>
+                            </form>
+
+                            <form action="">
+                                <div class="subscribe__inputs register__inputs register__rating_inputs">
+                                    <img src="imgs/gamelogo2.png" alt="">
+                                    <input type="text" placeholder="Steam Account" required="">
+                                    <button type="submit">Участвовать в рейтинге</button>
+                                </div>
+                            </form>
+
+                            <div class="subscribe__inputs register__inputs register__rating_inputs register__confirm">
+                                <button>Завершить регистрацию</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="navigation">
+                <div class="container">
+                    <div class="navigation__inner">
+                        <div class="navigation__block">
+                            <a>Основные разделы</a>
+                            <a href="./">Главная</a>
+                            <a href="about.html">О нас</a>
+                            <a href="gamezones.html">Игровые зоны</a>
+                            <a href="menu.html">Меню</a>
+                            <a href="events.html">Мероприятия</a>
+                            <a href="promo.html">Акции</a>
+                            <a href="">Блог</a>
+                            <a href="contacts.html">Контакты</a>
+                        </div>
+
+                        <div class="navigation__block">
+                            <a>eSports Hub</a>
+                            <a href="">Рейтинг Dota 2</a>
+                            <a href="">Как это было?</a>
+                            <a href="">Сообщество Neon eSports</a>
+                            <a href="">Новости мирового <br>киберспорта</a>
+                        </div>
+
+                        <div class="navigation__block">
+                            <a>Информация</a>
+                            <a href="">Сотрудничество</a>
+                            <a href="">Вакансии</a>
+                            <a href="">Конфиденциальность</a>
+                            <div class="navigation__socials">
+                                <a href=""><img class="navigation__img" src="imgs/yt.svg" alt=""></a>
+                                <a href=""><img class="navigation__img" src="imgs/inst.svg" alt=""></a>
+                                <a href=""><img class="navigation__img" src="imgs/tg.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__block">
+                        <a href=""><img src="imgs/logo.svg" alt=""></a>
+                    </div>
+                    <div class="footer__block footer__block_center">
+                        <p>Neon eSports 2020</p>
+                        <p>Все права защищены</p>
+                    </div>
+                    <div class="footer__block footer__block_last">
+                        <p>Разработано командой</p>
+                        <a href=""><img src="imgs/gmglogo.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+        <script src="js/alpine.js" defer></script>
+        <script src="js/fslightbox.js" async></script>
+        <script src="js/swiper.min.js"></script>
+        <script src="js/lazyload.js" async></script>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
+        <script src="js/app.min.js"></script>
+    </body>
+
+</html>
