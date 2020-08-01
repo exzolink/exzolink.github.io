@@ -304,20 +304,6 @@
                 padding: 15px 60px;
             }
         }
-        
-    }
-}
-
-@media screen and (max-width: 415px) {
-    .register {
-        &__inputs {
-            & button {
-                width: 100%;
-            }
-        }
-        &__step h2 {
-            font-size: 20px;
-        }
         &__upload {
             & img {
                 width: 50px;
@@ -335,6 +321,19 @@
                     font-size: 16px;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .register {
+        &__inputs {
+            & button {
+                width: 100%;
+            }
+        }
+        &__step h2 {
+            font-size: 20px;
         }
     }
 }

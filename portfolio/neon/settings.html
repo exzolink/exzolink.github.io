@@ -103,7 +103,7 @@
                                         :class="{ 'active': subTab === 'cabinetPass' }">Поменять пароль</button>
                                 </div>
 
-                                <form x-show.transition.in.opacity.duration.600ms="subTab === 'cabinetData'" class="register__form" action="">
+                                <form x-show.transition.in.opacity.duration.600ms="subTab === 'cabinetData'" class="register__form settings__form" action="">
                                     <div class="subscribe__inputs register__inputs settings__inputs">
                                         <input type="text" placeholder="Никнейм*" required="">
                                         <input type="text" placeholder="E-mail*" required="">
@@ -126,7 +126,7 @@
                                     </div>
                                 </form>
 
-                                <form x-show.transition.in.opacity.duration.600ms="subTab === 'cabinetPass'" x-cloak class="register__form" action="">
+                                <form x-show.transition.in.opacity.duration.600ms="subTab === 'cabinetPass'" x-cloak class="register__form settings__form" action="">
                                     <div class="subscribe__inputs register__inputs settings__inputs">
                                         <input type="text" placeholder="Старый пароль*" required="">
                                         <input type="text" placeholder="Новый пароль*" required="">
@@ -241,7 +241,8 @@
         <script src="js/fslightbox.js" async></script>
         <script src="js/swiper.min.js"></script>
         <script src="js/lazyload.js" async></script>
-        <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
+        <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+        <script src="js/typed.js"></script>
         <script src="js/app.min.js"></script>
     </body>
 

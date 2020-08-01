@@ -10,7 +10,7 @@
             color: #fff;
             background-color: transparent;
             font-family: inherit;
-            transition: color .4s ease, opacity .2s ease;
+            transition: opacity .2s ease;
 
             &:hover {
                 cursor: pointer;
@@ -64,6 +64,81 @@
 
         & span {
             margin-left: 15px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .settings {
+        &__buttons {
+            margin-bottom: 50px;
+        }
+
+        &__form {
+            flex-direction: column;
+        }
+
+        &__save {
+            & button {
+                padding: 18px 60px;
+            }
+
+            &_pass {
+                margin-top: 10px;
+
+                & button {
+                    padding: 18px 60px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .settings {
+        &__buttons button {
+            font-size: 18px;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .settings {
+        &__buttons {
+            margin-top: 50px;
+            margin-bottom: 25px;
+
+            & button {
+                font-size: 16px;
+            }
+
+            & button:last-child {
+                margin-left: 60px;
+            }
+        }
+
+        &__link {
+            & img {
+                max-width: 55px;
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .settings {
+        &__save {
+            & button {
+                width: 100%;
+            }
+            &_pass {
+                & button {
+                    width: 100%;
+                }
+            }
         }
     }
 }

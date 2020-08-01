@@ -89,7 +89,7 @@ blog = new Swiper('.blog__container', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-      }
+    }
 });
 
 games.on('slideChange', function () {
