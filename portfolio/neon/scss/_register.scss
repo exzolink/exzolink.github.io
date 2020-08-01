@@ -15,11 +15,12 @@
             background-color: transparent;
             color: #fff;
             font-size: 24px;
-            transition: color .3s ease;
             font-family: 'Montserrat', sans-serif;
 
             &.active {
                 color: $blue;
+                cursor: default !important;
+                opacity: 1 !important;
             }
         }
 
@@ -154,10 +155,17 @@
 
 
     &__rating {
-
+        & p {
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
         &_inputs {
             margin-top: 75px;
+            margin-left: auto;
+            margin-right: auto;
             max-width: 900px;
+            justify-content: flex-end;
             & img {
                 max-width: 115px;
             }
@@ -168,15 +176,34 @@
             }
 
             & input {
+                margin-left: auto;
+                margin-right: 45px;
                 flex-basis: auto;
             }
         }
     }
 
+    &__btn-reverse {
+        background-color: transparent !important;
+        color: $blue !important;
+        border-color: $blue !important;
+
+        &:hover {
+            background-color: $blue !important;
+            color: #282828 !important;
+            border-color: #ffffff00 !important;
+        }
+    }
+
     &__confirm {
+        display: flex;
+        justify-content: flex-end;
         & button {
-            margin-left: auto;
             padding: 19px 35px;
+
+            &:last-child {
+                margin-left: 45px;
+            }
         }
     }
 }
@@ -223,13 +250,29 @@
 
         &__rating_inputs {
             margin-top: 60px;
+            margin-left: initial;
             & input {
                 margin-top: 25px;
+                margin-right: initial;
+                max-width: 260px;
+                margin-left: initial;
             }
         }
 
         &__confirm button {
             margin-left: 0;
+
+            &:last-child {
+                margin-left: 0;
+                margin-top: 30px;
+            }
+        }
+
+        &__rating {
+            & p {
+                margin-left: initial;
+                margin-right: initial;
+            }
         }
     }
 }
@@ -298,6 +341,10 @@
         }
         &__rating_inputs {
             margin-top: 35px;
+
+            & input {
+                max-width: 220px;
+            }
         }
         &__inputs {
             & button {
@@ -330,6 +377,11 @@
         &__inputs {
             & button {
                 width: 100%;
+            }
+        }
+        &__rating_inputs {
+            & input {
+                max-width: none;
             }
         }
         &__step h2 {

@@ -66,6 +66,21 @@
             margin-left: 15px;
         }
     }
+
+    &__selector {
+        justify-content: flex-start;
+        & img {
+            margin: 0 15px;
+        }
+
+        & button {
+            transition: opacity .2s ease;
+            &:hover {
+                cursor: pointer;
+                opacity: .7;
+            }
+        }
+    }
 }
 
 

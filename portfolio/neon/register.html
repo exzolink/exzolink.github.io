@@ -72,7 +72,7 @@
             <section class="register">
                 <div class="container">
 
-                    <div x-data="{ tab: 'welcome' }" class="register__inner">
+                    <div x-data="{ tab: 'rating' }" class="register__inner">
                         <div class="register__selector_wrapper">
                             <div class="register__selector">
                                 <button class="register__selector_btn" :class="{ 'active': tab === 'welcome' }">Добро
@@ -170,6 +170,7 @@
                             </form>
 
                             <div class="subscribe__inputs register__inputs register__rating_inputs register__confirm">
+                                <button class="register__btn-reverse">Пропустить и сохранить</button>
                                 <button>Завершить регистрацию</button>
                             </div>
                         </div>

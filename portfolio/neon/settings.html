@@ -74,10 +74,7 @@
 
                     <div x-data="{ tab: 'cabinet' }" class="register__inner">
                         <div class="register__selector_wrapper">
-                            <div class="register__selector">
-                                <button class="register__selector_btn" :class="{ 'active': tab === 'welcome' }">Добро
-                                    пожаловать</button>
-                                <img src="imgs/arrow.svg" alt="">
+                            <div class="register__selector settings__selector">
                                 <button class="register__selector_btn" :class="{ 'active': tab === 'cabinet' }"
                                     @click="tab = 'cabinet'">Настройки
                                     личного кабинета</button>
@@ -169,7 +166,7 @@
                             </form>
 
                             <div class="subscribe__inputs register__inputs register__rating_inputs register__confirm">
-                                <button>Завершить регистрацию</button>
+                                <button>Сохранить</button>
                             </div>
                         </div>
                     </div>
