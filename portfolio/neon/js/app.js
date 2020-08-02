@@ -1,6 +1,68 @@
 // Dev by exzolink
 // exzolink.github.io
 
+var slideUp = (target, duration = 500) => {
+    target.style.transitionProperty = 'height, margin, padding';
+    target.style.transitionDuration = duration + 'ms';
+    target.style.height = target.offsetHeight + 'px';
+    target.offsetHeight;
+    target.style.overflow = 'hidden';
+    target.style.height = 0;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    window.setTimeout(() => {
+        target.style.display = 'none';
+        target.style.removeProperty('height');
+        target.style.removeProperty('padding-top');
+        target.style.removeProperty('padding-bottom');
+        target.style.removeProperty('margin-top');
+        target.style.removeProperty('margin-bottom');
+        target.style.removeProperty('overflow');
+        target.style.removeProperty('transition-duration');
+        target.style.removeProperty('transition-property');
+    }, duration);
+}
+
+var slideDown = (target, duration = 500) => {
+    target.style.removeProperty('display');
+    var display = window.getComputedStyle(target).display;
+
+    if (display === 'none')
+        display = 'flex';
+
+    target.style.display = display;
+    var height = target.offsetHeight;
+    target.style.overflow = 'hidden';
+    target.style.height = 0;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    target.offsetHeight;
+    target.style.transitionProperty = "height, margin, padding";
+    target.style.transitionDuration = duration + 'ms';
+    target.style.height = height + 'px';
+    target.style.removeProperty('padding-top');
+    target.style.removeProperty('padding-bottom');
+    target.style.removeProperty('margin-top');
+    target.style.removeProperty('margin-bottom');
+    window.setTimeout(() => {
+        target.style.removeProperty('height');
+        target.style.removeProperty('overflow');
+        target.style.removeProperty('transition-duration');
+        target.style.removeProperty('transition-property');
+    }, duration);
+}
+var slideToggle = (target, duration = 500) => {
+    if (window.getComputedStyle(target).display === 'none') {
+        return slideDown(target, duration);
+    } else {
+        return slideUp(target, duration);
+    }
+}
+
 photos = new Swiper('.zones__gallery_container', {
     slidesPerView: 4,
     spaceBetween: 6,
@@ -61,7 +123,7 @@ workers = new Swiper('.team__container', {
     grabCursor: true,
     pagination: {
         el: '.swiper-pagination',
-        type: 'bullets',
+        type: 'bulvars',
         clickable: true
     },
     breakpoints: {
@@ -186,3 +248,14 @@ if (document.getElementById('parallax') !== null) {
     });
     parallax();
 };
+
+var vacButton = document.querySelectorAll('.vac__spoiler_button');
+
+[].forEach.call(vacButton, function (e) {
+    e.addEventListener('click', function (e) {
+        var target = this.closest('.vac__spoiler').querySelector('.vac__spoiler_content');
+        var targetArrow = this.querySelector('.vac__spoiler_arrow');
+        slideToggle(target, 350);
+        targetArrow.classList.toggle('active');
+    });
+});

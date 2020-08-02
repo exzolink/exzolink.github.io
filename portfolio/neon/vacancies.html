@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/swiper.min.css">
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css' rel='stylesheet' />
+        <title>Neon</title>
+    </head>
+
+    <body>
+        <div class="wrapper" x-data="{ BurgerOpen: false }">
+            <div x-show.transition.in.duration.350ms.out.scale.0.duration.350ms.opacity.duration.350ms="BurgerOpen"
+                x-cloak class="header__menu">
+                <div class="header__inner">
+                    <div class="header__controls">
+                        <div><img src="imgs/logo.svg" alt=""></div>
+                        <div><img @click="BurgerOpen = false" src="imgs/close.svg" alt="" class="header__close"></div>
+                    </div>
+                    <div class="header__links_wrapper">
+                        <div class="header__links">
+                            <a href="./" class="header__link">Главная</a>
+                            <a href="about.html" class="header__link">О нас</a>
+                            <a href="gamezones.html" class="header__link">Игровые зоны</a>
+                            <a href="menu.html" class="header__link">Меню</a>
+                            <a href="events.html" class="header__link">Мероприятия</a>
+                            <a href="promo.html" class="header__link">Акции</a>
+                            <a href="contacts.html" class="header__link">Контакты</a>
+                        </div>
+                        <div class="header__links">
+                            <a class="header__link" href="">eSports Hub</a>
+                            <a class="header__link" href="">Рейтинг Dota 2</a>
+                            <a class="header__link" href="">Личный кабинет</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <header class="header">
+                <div class="top__nav">
+                    <div class="container">
+                        <div class="top__nav_inner">
+                            <a class="top__nav_link" href="">eSports Hub</a>
+                            <a class="top__nav_link" href="">Рейтинг Dota 2</a>
+                            <a class="top__nav_link" href="">Личный кабинет</a>
+                            <a class="top__nav_link" href="tel:+77777777777">+7 777 777 77 77</a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <div class="container">
+                        <div class="nav__inner">
+                            <a class="nav__logo" href=""><img src="imgs/logo.svg" alt=""></a>
+                            <div class="nav__items">
+                                <a href="./" class="nav__link">Главная</a>
+                                <a href="about.html" class="nav__link">О нас</a>
+                                <a href="gamezones.html" class="nav__link">Игровые зоны</a>
+                                <a href="menu.html" class="nav__link">Меню</a>
+                                <a href="events.html" class="nav__link">Мероприятия</a>
+                                <a href="promo.html" class="nav__link">Акции</a>
+                                <a href="contacts.html" class="nav__link">Контакты</a>
+                            </div>
+                            <div class="flex">
+                                <a href="" class="nav__btn_order">Забронировать место</a>
+                                <button @click="BurgerOpen = true" class="nav__btn_menu"><img src="imgs/menu.svg"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+        <main class="main">
+            <section class="welcomeAbout coop welcomeVac lazyload" data-bg="imgs/coop_bg.jpg">
+                <div class="container h-100">
+                    <div class="welcome__inner welcomeAbout__inner coop__inner welcomeVac__inner">
+                        <h1 class="welcomeAbout__title vac__title">Присоединяйтесь к команде <span>Neon eSports Bar &
+                                Gaming</span>
+                        </h1>
+                    </div>
+                </div>
+            </section>
+
+            <section class="coop__features">
+                <div class="container">
+                    <h3 class="coop__title"><span>Мы - команда</span></h3>
+                    <div class="coop__features_content">
+                        <p class="coop__features_item vac__item">Которая всей душой стремится создать идеальное
+                            пространство для поклонников киберспорта.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="vac">
+                <div class="container">
+                    <div class="vac__inner">
+                        <h3 class="coop__title">Вакансии компании</h3>
+
+
+                        <div class="vac__spoiler_wrapper">
+
+                            <!-- Спойлер -->
+                            <div class="vac__spoiler">
+
+                                <!-- Контент спойлера -->
+                                <div class="vac__spoiler_content">
+                                    <p class="vac__content_profit">от 160 000 KZT до вычета налогов
+                                    </p>
+                                    <p>Требуемый опыт работы: 1–3 года
+                                        <br><br>
+                                        Полная занятость, полный день
+                                        <br><br>
+                                        <strong>Обязанности:</strong><br>
+                                        - Ведение бухгалтерского и налогового учета в ТОО на ОУР: Учет ОС,
+                                        товарно-материальных ценностей, учет в производстве, реализации продукции,
+                                        оказания услуг, расчеты с поставщиками и покупателями, банк, касса;<br>
+                                        - Полное ведение участка заработной платы;<br>
+                                        - Составление и сдача статистической и налоговой отчетности ф.200.00, ф.300.00,
+                                        ф.328, ф.100.00 (ежемесячная, квартальная, годовая).
+                                        <br><br>
+                                        <strong>Требования:</strong><br>
+                                        - Уверенный пользователь: 1С Бухгалтерия 8.3, MS Office (Excel, Word);<br>
+                                        - Знание налогового законодательства;<br>
+                                        - Высшее образование.
+                                        <br><br>
+                                        <strong>Условия:</strong><br>
+                                        - График работы- 5/2;<br>
+                                        - Оформление в соответствии с ТК РК.
+                                        <br><br>
+                                        <strong>Ключевые навыки:</strong><br>
+                                        - Бухгалтерская отчетность<br>
+                                        - Кассовые операции<br>
+                                        - Налоговая отчетность<br>
+                                        - Основные средства<br>
+                                        - 1С: Предприятие
+                                    </p>
+                                    <div class="subscribe__inputs vac__submit vac__send_popup"><button
+                                            type="submit">Отправить
+                                            резюме</button></div>
+                                </div>
+
+                                <!-- Переключатель спойлера -->
+                                <div class="vac__spoiler_button">
+                                    <span class="vac__spoiler_name">Повар</span>
+                                    <div class="vac__spoiler_wrap">
+                                        <span class="vac__spoiler_date">01.08.2020</span>
+                                        <img class="vac__spoiler_arrow" src="imgs/spoilerArrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="vac__spoiler">
+                                <div class="vac__spoiler_content">
+                                    <p class="vac__content_profit">от 160 000 KZT до вычета налогов
+                                    </p>
+                                    <p>Требуемый опыт работы: 1–3 года
+                                        <br><br>
+                                        Полная занятость, полный день
+                                        <br><br>
+                                        <strong>Обязанности:</strong><br>
+                                        - Ведение бухгалтерского и налогового учета в ТОО на ОУР: Учет ОС,
+                                        товарно-материальных ценностей, учет в производстве, реализации продукции,
+                                        оказания услуг, расчеты с поставщиками и покупателями, банк, касса;<br>
+                                        - Полное ведение участка заработной платы;<br>
+                                        - Составление и сдача статистической и налоговой отчетности ф.200.00, ф.300.00,
+                                        ф.328, ф.100.00 (ежемесячная, квартальная, годовая).
+                                        <br><br>
+                                        <strong>Требования:</strong><br>
+                                        - Уверенный пользователь: 1С Бухгалтерия 8.3, MS Office (Excel, Word);<br>
+                                        - Знание налогового законодательства;<br>
+                                        - Высшее образование.
+                                        <br><br>
+                                        <strong>Условия:</strong><br>
+                                        - График работы- 5/2;<br>
+                                        - Оформление в соответствии с ТК РК.
+                                        <br><br>
+                                        <strong>Ключевые навыки:</strong><br>
+                                        - Бухгалтерская отчетность<br>
+                                        - Кассовые операции<br>
+                                        - Налоговая отчетность<br>
+                                        - Основные средства<br>
+                                        - 1С: Предприятие
+                                    </p>
+                                    <div class="subscribe__inputs vac__submit vac__send_popup"><button
+                                            type="submit">Отправить
+                                            резюме</button></div>
+                                </div>
+
+                                <div class="vac__spoiler_button">
+                                    <span class="vac__spoiler_name">Бухгалтер</span>
+                                    <div class="vac__spoiler_wrap">
+                                        <span class="vac__spoiler_date">01.08.2020</span>
+                                        <img class="vac__spoiler_arrow" src="imgs/spoilerArrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="vac__spoiler">
+                                <div class="vac__spoiler_content">
+                                    <p class="vac__content_profit">от 160 000 KZT до вычета налогов
+                                    </p>
+                                    <p>Требуемый опыт работы: 1–3 года
+                                        <br><br>
+                                        Полная занятость, полный день
+                                        <br><br>
+                                        <strong>Обязанности:</strong><br>
+                                        - Ведение бухгалтерского и налогового учета в ТОО на ОУР: Учет ОС,
+                                        товарно-материальных ценностей, учет в производстве, реализации продукции,
+                                        оказания услуг, расчеты с поставщиками и покупателями, банк, касса;<br>
+                                        - Полное ведение участка заработной платы;<br>
+                                        - Составление и сдача статистической и налоговой отчетности ф.200.00, ф.300.00,
+                                        ф.328, ф.100.00 (ежемесячная, квартальная, годовая).
+                                        <br><br>
+                                        <strong>Требования:</strong><br>
+                                        - Уверенный пользователь: 1С Бухгалтерия 8.3, MS Office (Excel, Word);<br>
+                                        - Знание налогового законодательства;<br>
+                                        - Высшее образование.
+                                        <br><br>
+                                        <strong>Условия:</strong><br>
+                                        - График работы- 5/2;<br>
+                                        - Оформление в соответствии с ТК РК.
+                                        <br><br>
+                                        <strong>Ключевые навыки:</strong><br>
+                                        - Бухгалтерская отчетность<br>
+                                        - Кассовые операции<br>
+                                        - Налоговая отчетность<br>
+                                        - Основные средства<br>
+                                        - 1С: Предприятие
+                                    </p>
+                                    <div class="subscribe__inputs vac__submit vac__send_popup"><button
+                                            type="submit">Отправить
+                                            резюме</button></div>
+                                </div>
+
+                                <div class="vac__spoiler_button">
+                                    <span class="vac__spoiler_name">Бухгалтер</span>
+                                    <div class="vac__spoiler_wrap">
+                                        <span class="vac__spoiler_date">01.08.2020</span>
+                                        <img class="vac__spoiler_arrow" src="imgs/spoilerArrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="vac__list">
+                            <p class="vac__info_title">Не нашли подходящей вакансии?</p>
+                            <p class="vac__info_desc">Пришлите нам свое резюме, и с вами обязательно свяжутся как только
+                                появится подходящая вакансия</p>
+
+                            <form class="vac__form" action="">
+                                <input type="text" placeholder="Имя*" required>
+                                <input type="text" placeholder="Фамилия*" required>
+                                <input type="text" placeholder="Телефон*" required>
+                                <input type="text" placeholder="E-mail*" required>
+                                <input type="text" placeholder="Дата рождения*" required>
+                                <input type="text" placeholder="Образование*" required>
+                                <textarea name="" placeholder="Напишите немного о себе"></textarea>
+
+                                <div class="vac__upload">
+                                    <input type="file" name="resume" id="resume">
+                                    <label for="resume">
+                                        <img src="imgs/attach.svg" alt="">
+                                        <span>Прикрепите файл с резюме</span>
+                                    </label>
+                                </div>
+
+                                <p>*Отправляя анкету, я даю свое Согласие на сбор, обработку, хранение и использвоание
+                                    моих персональных данных данных</p>
+
+                                <div class="subscribe__inputs vac__submit"><button type="submit">Отправить
+                                        резюме</button></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="navigation">
+                <div class="container">
+                    <div class="navigation__inner">
+                        <div class="navigation__block">
+                            <a>Основные разделы</a>
+                            <a href="./">Главная</a>
+                            <a href="about.html">О нас</a>
+                            <a href="gamezones.html">Игровые зоны</a>
+                            <a href="menu.html">Меню</a>
+                            <a href="events.html">Мероприятия</a>
+                            <a href="promo.html">Акции</a>
+                            <a href="">Блог</a>
+                            <a href="contacts.html">Контакты</a>
+                        </div>
+
+                        <div class="navigation__block">
+                            <a>eSports Hub</a>
+                            <a href="">Рейтинг Dota 2</a>
+                            <a href="">Как это было?</a>
+                            <a href="">Сообщество Neon eSports</a>
+                            <a href="">Новости мирового <br>киберспорта</a>
+                        </div>
+
+                        <div class="navigation__block">
+                            <a>Информация</a>
+                            <a href="">Сотрудничество</a>
+                            <a href="">Вакансии</a>
+                            <a href="">Конфиденциальность</a>
+                            <div class="navigation__socials">
+                                <a href=""><img class="navigation__img" src="imgs/yt.svg" alt=""></a>
+                                <a href=""><img class="navigation__img" src="imgs/inst.svg" alt=""></a>
+                                <a href=""><img class="navigation__img" src="imgs/tg.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__block">
+                        <a href=""><img src="imgs/logo.svg" alt=""></a>
+                    </div>
+                    <div class="footer__block footer__block_center">
+                        <p>Neon eSports 2020</p>
+                        <p>Все права защищены</p>
+                    </div>
+                    <div class="footer__block footer__block_last">
+                        <p>Разработано командой</p>
+                        <a href=""><img src="imgs/gmglogo.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+        <script src="js/alpine.js" defer></script>
+        <script src="js/fslightbox.js" async></script>
+        <script src="js/swiper.min.js"></script>
+        <script src="js/lazyload.js" async></script>
+        <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+        <script src="js/typed.js"></script>
+        <script src="js/app.min.js"></script>
+    </body>
+
+</html>
