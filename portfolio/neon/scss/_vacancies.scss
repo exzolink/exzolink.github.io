@@ -1,24 +1,30 @@
 .vac {
     color: #fff;
+
     &__title {
         max-width: 600px;
     }
+
     &__item {
         flex-basis: 45%;
     }
+
     &__inner {
         padding: 45px 0;
     }
+
     &__list {
         max-width: 550px;
         margin: 0 auto;
     }
+
     &__no {
         font-family: 'Montserrat', sans-serif;
         font-size: 18px;
         margin: 100px 0;
         color: $blue;
     }
+
     &__info {
         &_title {
             font-family: 'Montserrat', sans-serif;
@@ -26,15 +32,19 @@
             font-weight: 700;
             margin-bottom: 25px;
         }
+
         &_desc {
             font-size: 18px;
             margin-bottom: 35px;
         }
     }
+
     &__form {
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 100px;
         justify-content: space-between;
+
         & input {
             flex-basis: 36%;
             background-color: #fff;
@@ -46,10 +56,18 @@
             margin-bottom: 12px;
             font-size: 14px;
             padding-left: 35px;
+            transition: box-shadow .3s ease, border .3s ease;
+
+            &:focus {
+                box-shadow: 0 0 6px 0 #00BBF7;
+                border-color: transparent;
+            }
         }
+
         & textarea {
             flex-basis: 100%;
             width: 100%;
+            transition: box-shadow .3s ease, border .3s ease;
             resize: none;
             background-color: #fff;
             border: 1px solid #828282;
@@ -61,6 +79,132 @@
             padding-left: 35px;
             padding-top: 25px;
             min-height: 115px;
+
+            &:focus {
+                box-shadow: 0 0 6px 0 #00BBF7;
+                border-color: transparent;
+            }
+        }
+
+        & p {
+            font-size: 12px;
+            margin-top: 25px;
+            margin-bottom: 35px;
+            max-width: 440px;
+        }
+    }
+
+    &__upload {
+        & input {
+            display: none;
+        }
+
+        margin-top: 15px;
+
+        & label {
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                cursor: pointer;
+
+                & span {
+                    text-decoration: none;
+                }
+            }
+
+
+            & img {
+                width: 30px;
+                height: 28px;
+            }
+
+            & span {
+                color: $blue;
+                margin-left: 10px;
+                font-size: 18px;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__submit {
+        margin-top: 0;
+
+        & button {
+            flex-basis: auto;
+            text-transform: initial;
+            padding: 16px 40px;
+        }
+    }
+}
+
+
+.welcomeVac {
+    &__inner {
+        justify-content: center !important;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .vac {
+        &__title {
+            font-size: 22px;
+            max-width: 320px;
+        }
+        &__form {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .vac {
+        &__item {
+            font-size: 14px;
+        }
+
+        &__no {
+            font-size: 14px;
+            margin: 45px 0;
+        }
+
+        &__info {
+            &_title {
+                font-size: 14px;
+            }
+
+            &_desc {
+                font-size: 14px;
+            }
+        }
+
+        &__upload label {
+
+            & img {
+                width: 21px;
+                height: 20px;
+            }
+
+            & span {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .vac {
+        &__form input {
+            flex-basis: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .vac {
+        &__title {
+            font-size: 20px;
         }
     }
 }

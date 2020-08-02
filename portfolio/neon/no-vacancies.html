@@ -75,9 +75,9 @@
         </div>
 
         <main class="main">
-            <section class="welcomeAbout coop lazyload" data-bg="imgs/coop_bg.jpg">
+            <section class="welcomeAbout coop welcomeVac lazyload" data-bg="imgs/coop_bg.jpg">
                 <div class="container h-100">
-                    <div class="welcome__inner welcomeAbout__inner coop__inner">
+                    <div class="welcome__inner welcomeAbout__inner coop__inner welcomeVac__inner">
                         <h1 class="welcomeAbout__title vac__title">Присоединяйтесь к команде <span>Neon eSports Bar &
                                 Gaming</span>
                         </h1>
@@ -109,12 +109,25 @@
 
                             <form class="vac__form" action="">
                                 <input type="text" placeholder="Имя*" required>
-                                <input type="text" placeholder="Имя*" required>
-                                <input type="text" placeholder="Имя*" required>
-                                <input type="text" placeholder="Имя*" required>
-                                <input type="text" placeholder="Имя*" required>
-                                <input type="text" placeholder="Имя*" required>
+                                <input type="text" placeholder="Фамилия*" required>
+                                <input type="text" placeholder="Телефон*" required>
+                                <input type="text" placeholder="E-mail*" required>
+                                <input type="text" placeholder="Дата рождения*" required>
+                                <input type="text" placeholder="Образование*" required>
                                 <textarea name="" placeholder="Напишите немного о себе"></textarea>
+
+                                <div class="vac__upload">
+                                    <input type="file" name="resume" id="resume">
+                                    <label for="resume">
+                                        <img src="imgs/attach.svg" alt="">
+                                        <span>Прикрепите файл с резюме</span>
+                                    </label>
+                                </div>
+
+                                <p>*Отправляя анкету, я даю свое Согласие на сбор, обработку, хранение и использвоание
+                                    моих персональных данных данных</p>
+
+                                    <div class="subscribe__inputs vac__submit"><button type="submit">Отправить резюме</button></div>
                             </form>
                         </div>
                     </div>

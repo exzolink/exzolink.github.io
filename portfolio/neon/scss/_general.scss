@@ -166,6 +166,10 @@ img {
     margin-left: auto;
 }
 
+input::-webkit-input-placeholder {opacity: 1}
+textarea::-webkit-input-placeholder {opacity: 1}
+::placeholder {opacity: 1}  
+
 .order-button {
     color: $blue;
     display: block;
