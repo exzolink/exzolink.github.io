@@ -124,7 +124,7 @@
 }
 
 
-input[type="checkbox"] {
+input[type="radio"] {
     position: relative;
     width: 100%;
     max-width: 25px;
@@ -381,7 +381,7 @@ input[type="checkbox"] {
         }
     }
 
-    input[type="checkbox"] {
+    input[type="radio"] {
         max-width: 18px;
         min-width: 18px;
         height: 18px;

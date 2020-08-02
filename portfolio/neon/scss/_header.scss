@@ -106,11 +106,13 @@
             color: $blue;
             border: 1px solid $blue;
             box-shadow: 0 0 4px 0 $blue;
+            background-color: transparent;
             transition: color .3s ease, background .3s ease;
 
             &:hover {
                 background-color: $blue;
                 color: #191919;
+                cursor: pointer;
             }
         }
 

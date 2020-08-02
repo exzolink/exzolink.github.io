@@ -99,8 +99,9 @@
                                     <button @click="subTab = 'cabinetPass'"
                                         :class="{ 'active': subTab === 'cabinetPass' }">Поменять пароль</button>
                                 </div>
-
-                                <form x-show.transition.in.opacity.duration.600ms="subTab === 'cabinetData'" class="register__form settings__form" action="">
+                                
+                                <!-- Суб-вкладка: Смена данных -->
+                                <form x-show="subTab === 'cabinetData'" class="register__form settings__form" action="">
                                     <div class="subscribe__inputs register__inputs settings__inputs">
                                         <input type="text" placeholder="Никнейм*" required="">
                                         <input type="text" placeholder="E-mail*" required="">
@@ -123,11 +124,13 @@
                                     </div>
                                 </form>
 
-                                <form x-show.transition.in.opacity.duration.600ms="subTab === 'cabinetPass'" x-cloak class="register__form settings__form" action="">
+                                <!-- Суб-вкладка: Смена пароля -->
+                                <form x-show="subTab === 'cabinetPass'" x-cloak class="register__form settings__form"
+                                    action="">
                                     <div class="subscribe__inputs register__inputs settings__inputs">
                                         <input type="text" placeholder="Старый пароль*" required="">
                                         <input type="text" placeholder="Новый пароль*" required="">
-                                        <input type="text" placeholder="Повторите пароль*" required="">
+                                        <input type="text" placeholder="Повтор пароля*" required="">
                                     </div>
 
                                     <div class="subscribe__inputs settings__save_pass">
@@ -135,7 +138,6 @@
                                     </div>
                                 </form>
 
-                                <a href="" class="register__welcome_link settings__link"><img src="imgs/arrowLeft.svg" alt=""> <span>Перейти в eSports Hub</span></a>
                             </div>
                         </div>
 
@@ -152,8 +154,13 @@
                             <form action="">
                                 <div class="subscribe__inputs register__inputs register__rating_inputs">
                                     <img src="imgs/gamelogo.png" alt="">
-                                    <input type="text" placeholder="Steam Account" required="">
-                                    <button type="submit">Участвовать в рейтинге</button>
+                                    <!-- Уже в рейтинге -->
+                                    <div class="settings__rating_exists">
+                                        <p>Вы участвуете в рейтинге под логином</p>
+                                        <span>Nickname</span>
+                                    </div>
+
+                                    <button type="submit">Изменить логин игрока</button>
                                 </div>
                             </form>
 
@@ -165,10 +172,13 @@
                                 </div>
                             </form>
 
-                            <div class="subscribe__inputs register__inputs register__rating_inputs register__confirm">
+                            <div
+                                class="subscribe__inputs register__inputs register__rating_inputs register__confirm settings__save_rating">
                                 <button>Сохранить</button>
                             </div>
                         </div>
+                        <a href="" class="register__welcome_link settings__link"><img src="imgs/arrowLeft.svg" alt="">
+                            <span>Перейти в eSports Hub</span></a>
                     </div>
                 </div>
             </section>

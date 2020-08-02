@@ -60,12 +60,12 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
+    margin-top: -60px;
 }
 
 .header__desc {
     text-transform: uppercase;
-    font-size: 32px;
+    font-size: 28px;
     text-align: center;
     max-width: var(--max-w);
     width: 100%;
@@ -75,8 +75,20 @@ body {
 .header__hidden {
     max-width: var(--max-w);
     width: 100%;
-    opacity: 0;
-    visibility: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.header__hidden img {
+    width: 32px;
+    transition: opacity .3s ease;
+    margin-left: 16px;
+}
+
+.header__hidden img:hover {
+    cursor: pointer;
+    opacity: .7;
 }
 
 .header__title {
@@ -106,6 +118,18 @@ body {
     position: relative;
 }
 
+.content__inner_language {
+    width: max-content;
+    padding: 70px;
+    padding-left: 0;
+    border-radius: 100%;
+    pointer-events: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    position: relative;
+}
+
 .logo_img {
     max-width: 440px;
     -moz-user-select: none;
@@ -121,6 +145,7 @@ body {
 
 .content__inner {
     position: relative;
+    transform: scale(.9);
     margin-left: 15px;
 }
 
@@ -153,6 +178,15 @@ body {
     width: 100%;
 }
 
+
+.rus .content__inner_item {
+    padding-right: 64px;
+}
+.rus .item_text {
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
 .content__inner_item:hover {
     cursor: pointer;
 }
@@ -177,6 +211,21 @@ body {
     padding-left: 50px;
     text-align: center;
     max-width: 453px;
+    font-size: 20px;
+    position: absolute;
+    display: none;
+    width: 100%;
+}
+
+.content__inner_item_otziv-desc {
+    background-color: rgba(0,0,0,.7);
+    padding: 15px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+    max-width: 553px;
+    max-height: 400px;
     font-size: 20px;
     position: absolute;
     display: none;
@@ -250,6 +299,13 @@ body {
     padding-right: 20px;
     padding-bottom: 40px;
 }
+.posd-10 {
+    top: 5px;
+    right: 5px;
+
+    text-align: right;
+
+}
 
 .content__inner_wrap {
     display: flex;
@@ -298,10 +354,14 @@ body {
     left: 390px;
 }
 
+
 .footer {
     text-align: center;
 }
 
+.footer img {
+    max-width: 180px;
+}
 
 @keyframes visible {
     0% {
@@ -322,6 +382,9 @@ body {
     .content__inner {
         transform: scale(.85);
         margin-left: -30px;
+    }
+    .header {
+        margin-top: 15px;
     }
 }
 
@@ -364,7 +427,7 @@ body {
 
 @media screen and (max-width: 1050px) {
     .header__desc {
-        font-size: 22px;
+        font-size: 20px;
     }
     .header__title {
         font-size: 48px;
@@ -388,6 +451,13 @@ body {
         flex-direction: column;
         background: none;
         width: max-content;
+    }
+    .rus .content__inner_item {
+        padding: 0px;
+    }
+    .rus .item_text {
+        margin-left: 0px;
+        margin-bottom: 0px;
     }
     .pos-2 {
         top: -65px;
@@ -427,6 +497,26 @@ body {
         background: rgba(0,0,0,.9);
         font-size: 22px;
     }
+    .rus .pos-1 {
+        top: -120px;
+        left: 145px;
+      }
+      
+      .rus .pos-2 {
+        top: -65px;
+        left: -75px;
+      }
+      .rus .pos-5 {
+          left: 167px;
+      }
+
+      .rus .pos-4 {
+          left: 382px;
+      }
+      
+      .rus .pos-6 {
+        left: -78px;
+      }
 }
 
 @media screen and (max-width: 850px) {
@@ -434,8 +524,17 @@ body {
         padding-left: 15px;
         padding-right: 15px;
     }
+    #fb-root {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
     .header__hidden {
-        display: none;
+        justify-content: flex-start;
+        margin-bottom: 5px;
+    }
+    .header__hidden img {
+        width: 22px;
     }
     .header {
         flex-direction: column-reverse;
@@ -491,7 +590,8 @@ body {
     .content__inner_inner {
         padding-left: 10px;
         padding-right: 10px;
-        max-height: 185px;
+        max-height: 300px;
+        max-width: 300;
     }
     .content__inner_wrap {
         padding-left: 10px;
@@ -500,6 +600,9 @@ body {
     }
     .pro {
         font-size: 24px;
+    }
+    .footer img {
+        max-width: 100px;
     }
 }
 

@@ -111,34 +111,47 @@
                         <h3 class="zones__hard_title events__title"><span>Подпишитесь на рассылку</span> и будьте в
                             курсе всех главных событий и акций</h3>
 
-                        <div class="subscribe">
-                            <form class="subscribe__form" action="">
+                        <div x-data="{ tab: 'email' }"  class="subscribe">
+                            <div class="subscribe__form">
                                 <div class="subscribe__checks">
                                     <p class="subscribe__text">Куда тебе удобнее получать уведомления?</p>
                                     <div class="subscribe__checkboxes">
                                         <div class="subscribe__checkbox">
-                                            <input type="checkbox" name="email" id="email">
-                                            <label class="subscribe__label" for="email">E-mail</label>
+                                            <input type="radio" name="sub" id="email" checked @click="tab = 'email'">
+                                            <label class="subscribe__label" for="email" @click="tab = 'email'">E-mail</label>
                                         </div>
                                         <div class="subscribe__checkbox">
-                                            <input type="checkbox" name="whatsup" id="whatsup">
-                                            <label class="subscribe__label" for="whatsup"><img src="imgs/wussupForm.svg"
+                                            <input type="radio" name="sub" id="whatsup" @click="tab = 'wh'">
+                                            <label class="subscribe__label" for="whatsup" @click="tab = 'wh'"><img src="imgs/wussupForm.svg"
                                                     alt=""></label>
                                         </div>
                                         <div class="subscribe__checkbox">
-                                            <input type="checkbox" name="tg" id="tg">
-                                            <label class="subscribe__label" for="tg"><img src="imgs/tgForm.svg"
+                                            <input type="radio" name="sub" id="tg" @click="tab = 'tg'">
+                                            <label class="subscribe__label" for="tg" @click="tab = 'tg'"><img src="imgs/tgForm.svg"
                                                     alt=""></label>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="subscribe__inputs">
+                                <form x-show="tab === 'email'" action="" class="subscribe__inputs">
                                     <input type="text" placeholder="Имя" required>
                                     <input type="text" placeholder="E-mail" required>
                                     <button type="submit">Подписаться</button>
-                                </div>
-                            </form>
+                                </form>
+
+                                <form x-show="tab === 'wh'" x-cloak action="" class="subscribe__inputs">
+                                    <input type="text" placeholder="Имя" required>
+                                    <input type="text" placeholder="Телефон" required>
+                                    <button type="submit">Подписаться</button>
+                                </form>
+
+                                <form x-show="tab === 'tg'" x-cloak action="" class="subscribe__inputs">
+                                    <input type="text" placeholder="Имя" required>
+                                    <input type="text" placeholder="Телефон" required>
+                                    <button type="submit">Подписаться</button>
+                                </form>
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
             </section>

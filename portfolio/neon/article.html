@@ -58,7 +58,7 @@
                                 <a href="" class="nav__link">Новости мирового киберспорта</a>
                             </div>
                             <div class="flex">
-                                <a href="" class="nav__btn_order">Вход / Регистрация</a>
+                                <button class="nav__btn_order">Вход / Регистрация</button>
                                 <button @click="BurgerOpen = true" class="nav__btn_menu"><img src="imgs/menu.svg"
                                         alt=""></button>
                             </div>
@@ -145,6 +145,59 @@
                     <div class="comments__inner">
                         <h3 class="zones__hard_title">Комментарии</h3>
 
+                        <!-- Блок для главного коммента и всех последующих ответов -->
+                        <div class="comments__item">
+
+                            <!-- Главный коммент -->
+                            <div class="comments__item_main">
+                                <div class="comments__item_inner">
+                                    <div class="comments__item_info">
+                                        <img src="imgs/articleAuthor.png" alt="">
+                                        <p class="comments__item_author">Асембек Бейбарыс</p>
+                                        <p class="comments__item_date">вчера в 16:17</p>
+                                    </div>
+                                    <div class="comments__item_body">
+                                        <p class="comments__item_content">текст текст текст Ответ на комментарий Ответ
+                                            на комментарий Ответ на комментарий Ответ на комментарий Ответ на
+                                            комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий
+                                        </p>
+                                        <div class="comments__button_reply"><button>Ответить</button></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ответ на комментарий -->
+                            <div class="comments__item_reply">
+                                <div class="comments__item_inner">
+                                    <div class="comments__item_info">
+                                        <img src="imgs/articleAuthor.png" alt="">
+                                        <p class="comments__item_author">Асембек Бейбарыс</p>
+                                        <p class="comments__item_date">вчера в 16:17</p>
+                                    </div>
+                                    <p class="comments__item_content">текст текст текст Ответ на комментарий Ответ на
+                                        комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ
+                                        на комментарий Ответ на комментарий Ответ на комментарий</p>
+                                    <div class="comments__button_reply"><button>Ответить</button></div>
+                                </div>
+                            </div>
+
+                            <!-- Ответ на комментарий -->
+                            <div class="comments__item_reply">
+                                <div class="comments__item_inner">
+                                    <div class="comments__item_info">
+                                        <img src="imgs/articleAuthor.png" alt="">
+                                        <p class="comments__item_author">Асембек Бейбарыс</p>
+                                        <p class="comments__item_date">вчера в 16:17</p>
+                                    </div>
+                                    <p class="comments__item_content">текст текст текст Ответ на комментарий Ответ на
+                                        комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ
+                                        на комментарий Ответ на комментарий Ответ на комментарий</p>
+                                    <div class="comments__button_reply"><button>Ответить</button></div>
+                                </div>
+                            </div>
+                        </div>
+
+
                         <div class="comments__item">
                             <div class="comments__item_main">
                                 <div class="comments__item_inner">
@@ -153,7 +206,13 @@
                                         <p class="comments__item_author">Асембек Бейбарыс</p>
                                         <p class="comments__item_date">вчера в 16:17</p>
                                     </div>
-                                    <p class="comments__item_content">текст текст текст Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий</p>
+                                    <div class="comments__item_body">
+                                        <p class="comments__item_content">текст текст текст Ответ на комментарий Ответ
+                                            на комментарий Ответ на комментарий Ответ на комментарий Ответ на
+                                            комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий
+                                        </p>
+                                        <div class="comments__button_reply"><button>Ответить</button></div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -164,45 +223,53 @@
                                         <p class="comments__item_author">Асембек Бейбарыс</p>
                                         <p class="comments__item_date">вчера в 16:17</p>
                                     </div>
-                                    <p class="comments__item_content">текст текст текст Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий</p>
+                                    <p class="comments__item_content">текст текст текст Ответ на комментарий Ответ на
+                                        комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ
+                                        на комментарий Ответ на комментарий Ответ на комментарий</p>
+                                    <div class="comments__button_reply"><button>Ответить</button></div>
                                 </div>
                             </div>
 
-                            <div class="comments__item_reply">
+                            <!-- Блок для ответа (маленький) -->
+                            <div class="comments__reply comments__item_reply">
                                 <div class="comments__item_inner">
                                     <div class="comments__item_info">
                                         <img src="imgs/articleAuthor.png" alt="">
                                         <p class="comments__item_author">Асембек Бейбарыс</p>
-                                        <p class="comments__item_date">вчера в 16:17</p>
                                     </div>
-                                    <p class="comments__item_content">текст текст текст Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий</p>
+                                    <form action="" class="comments__reply_body">
+                                        <textarea name="comment" placeholder="Введите текст"></textarea>
+                                        <div class="comments__send"><button type="submit"
+                                                class="nav__btn_order">Отправить</button></div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="comments__item">
-                            <div class="comments__item_main">
-                                <div class="comments__item_inner">
-                                    <div class="comments__item_info">
-                                        <img src="imgs/articleAuthor.png" alt="">
-                                        <p class="comments__item_author">Асембек Бейбарыс</p>
-                                        <p class="comments__item_date">вчера в 16:17</p>
-                                    </div>
-                                    <p class="comments__item_content">текст текст текст Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий</p>
+                        <!-- Блок для ответа -->
+                        <div class="comments__reply">
+                            <div class="comments__item_inner">
+                                <div class="comments__item_info">
+                                    <img src="imgs/articleAuthor.png" alt="">
+                                    <p class="comments__item_author">Асембек Бейбарыс</p>
                                 </div>
-                            </div>
-
-                            <div class="comments__item_reply">
-                                <div class="comments__item_inner">
-                                    <div class="comments__item_info">
-                                        <img src="imgs/articleAuthor.png" alt="">
-                                        <p class="comments__item_author">Асембек Бейбарыс</p>
-                                        <p class="comments__item_date">вчера в 16:17</p>
-                                    </div>
-                                    <p class="comments__item_content">текст текст текст Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий</p>
-                                </div>
+                                <form action="" class="comments__reply_body">
+                                    <textarea name="comment" placeholder="Введите текст"></textarea>
+                                    <div class="comments__send"><button type="submit"
+                                            class="nav__btn_order">Отправить</button></div>
+                                </form>
                             </div>
                         </div>
+
+                        <!-- Блок для неавторизованных -->
+                        <div class="comments__reply comments__notLogged">
+                            <div class="comments__item_inner comments__notLogged_inner">
+                                <p>Только зарегистрированные пользователи могут оставлять комментарии. Войдите,
+                                    пожалуйста.</p>
+                                <button class="nav__btn_order">Вход / Регистрация</button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>

@@ -45,6 +45,11 @@
             text-transform: none;
         }
 
+        &_rating button {
+            max-width: 318px;
+            width: 100%;
+        }
+
         &_pass {
             margin-top: 130px;
             justify-content: flex-end;
@@ -69,15 +74,39 @@
 
     &__selector {
         justify-content: flex-start;
+
         & img {
             margin: 0 15px;
         }
 
         & button {
             transition: opacity .2s ease;
+
             &:hover {
                 cursor: pointer;
                 opacity: .7;
+            }
+        }
+    }
+
+    &__rating {
+        &_exists {
+            margin-left: auto;
+            margin-right: 45px;
+            max-width: 325px;
+
+            & p {
+                font-size: 18px;
+                font-weight: 400;
+                font-family: 'Gotham', sans-serif;
+                margin-bottom: 12px;
+            }
+
+            & span {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                font-size: 18px;
+                color: $blue;
             }
         }
     }
@@ -95,8 +124,14 @@
             flex-direction: column;
         }
 
+        &__inputs input {
+            max-width: 260px;
+        }
+
         &__save {
             & button {
+                max-width: 320px;
+                width: 100%;
                 padding: 18px 60px;
             }
 
@@ -104,6 +139,8 @@
                 margin-top: 10px;
 
                 & button {
+                    max-width: 320px;
+                    width: 100%;
                     padding: 18px 60px;
                 }
             }
@@ -139,19 +176,46 @@
                 max-width: 55px;
             }
         }
-        
+        &__save_rating button {
+            max-width: 280px;
+        }
+        &__inputs input {
+            max-width: 220px;
+        }
+        &__save button {
+            max-width: 280px;
+            width: 100%;
+        }
+        &__save_pass button {
+            max-width: 280px;
+            width: 100%;
+        }
+        &_rating button {
+            max-width: 280px;
+        }
+
     }
 }
 
 @media screen and (max-width: 415px) {
     .settings {
+        &__inputs input {
+            max-width: none;
+        }
         &__save {
             & button {
+                max-width: none;
                 width: 100%;
+            }
+            &_rating {
+                & button {
+                    max-width: none;
+                }
             }
             &_pass {
                 & button {
                     width: 100%;
+                    max-width: none;
                 }
             }
         }

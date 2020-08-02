@@ -2,15 +2,6 @@
 <html lang="en">
 
     <head>
-        <script>
-            let lang = navigator.language || navigator.userLanguage; 
-            if (lang === "ru-RU") {
-                document.location.replace("../");
-            }
-            if (lang === "fr-FR") {
-                document.location.replace("../fr");
-            }
-            </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>genCLEANman</title>
@@ -19,10 +10,18 @@
     </head>
 
     <body>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous"
+            src="https://connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v7.0&appId=2240104009589850&autoLogAppEvents=1"
+            nonce="IASmdTQZ"></script>
         <header class="header">
             <h2 class="header__desc">field dry cleaning interior and exterior cleaning</h2>
             <h1 class="header__title">gen<span class="ttu">clean</span>man<span class="ttu pro">pro</span></h1>
-            <div class="header__hidden"></div>
+            <div class="header__hidden">
+                <a href="../en"><img src="../img/flagEn.svg" alt=""></a>
+                <a href="../"><img src="../img/flagFr.svg" alt=""></a>
+                <a href="../ru"><img src="../img/flagRu.svg" alt=""></a>
+            </div>
         </header>
         <main class="content">
             <div class="content__inner">
@@ -84,18 +83,15 @@
                     <div id="feedback" class="content__inner_item-desc posd-gen posd-5">
                         <p class="content__item-desc_title">Feedback</p>
                         <div class="content__inner_inner">
-                            <img class="feedback_img" src="../img/zaglushka.png" alt="">
-                            <img class="feedback_img" src="../img/zaglushka.png" alt="">
-                            <img class="feedback_img" src="../img/zaglushka.png" alt="">
-                            <img class="feedback_img" src="../img/zaglushka.png" alt="">
-                            <img class="feedback_img" src="../img/zaglushka.png" alt="">
+                            <div class="fb-comments" data-href="http://gencleanman.com/" data-numposts="5"
+                                data-width="350"></div>
                         </div>
                     </div>
                     <div id="photo" class="content__inner_item-desc posd-gen posd-6">
                         <p class="content__item-desc_title">Photo report</p>
                         <div class="content__inner_wrap">
-                            <a data-fancybox="gallery" href="../img/bg.jpg"><img class="photo_img"
-                                    src="../img/bg.jpg" alt=""></a>
+                            <a data-fancybox="gallery" href="../img/bg.jpg"><img class="photo_img" src="../img/bg.jpg"
+                                    alt=""></a>
                             <a data-fancybox="gallery" href="../img/zaglushka.png"> <img class="photo_img"
                                     src="../img/zaglushka.png" alt=""></a>
                             <a data-fancybox="gallery" href="../img/zaglushka.png"> <img class="photo_img"
@@ -115,6 +111,13 @@
         </main>
         <footer class="footer">
             <img src="../img/footer.png" alt="">
+            <img src="../img/edic.jpg" alt="">
+            <img src="../img/lind.jpg" alt="">
+            <img src="../img/numa.jpg" alt="">
+            <img src="../img/powr.jpg" alt="">
+
+
+
         </footer>
 
 

@@ -239,6 +239,15 @@
             margin-bottom: 50px;
         }
 
+        &__upload img {
+            width: 75px;
+            height: 75px;
+        }
+        &__upload_btn img {
+            width: 30px;
+            height: 19px;
+        }
+
         &__form {
             flex-direction: column-reverse;
             display: flex;

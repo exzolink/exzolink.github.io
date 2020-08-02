@@ -1,0 +1,22 @@
+.vac {
+    color: #fff;
+    &__title {
+        max-width: 600px;
+    }
+    &__item {
+        flex-basis: 45%;
+    }
+    &__inner {
+        padding: 45px 0;
+    }
+    &__list {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+    &__no {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        margin: 100px 0;
+        color: $blue;
+    }
+}
