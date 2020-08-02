@@ -12,7 +12,7 @@
     </head>
 
     <body>
-        <div class="wrapper" x-data="{ BurgerOpen: false }">
+        <header x-data="{ BurgerOpen: false }">
             <div x-show.transition.in.duration.350ms.out.scale.0.duration.350ms.opacity.duration.350ms="BurgerOpen"
                 x-cloak class="header__menu">
                 <div class="header__inner">
@@ -39,7 +39,7 @@
                 </div>
             </div>
 
-            <header class="header">
+            <div class="header">
                 <div class="top__nav">
                     <div class="container">
                         <div class="top__nav_inner">
@@ -71,8 +71,8 @@
                         </div>
                     </div>
                 </nav>
-            </header>
-        </div>
+            </div>
+        </header>
 
         <main class="main">
             <section class="welcomeAbout">
