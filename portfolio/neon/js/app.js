@@ -1,4 +1,4 @@
-// Dev by exzolink
+// FrontEnd by exzolink
 // exzolink.github.io
 
 var slideUp = (target, duration = 500) => {
@@ -55,6 +55,7 @@ var slideDown = (target, duration = 500) => {
         target.style.removeProperty('transition-property');
     }, duration);
 }
+
 var slideToggle = (target, duration = 500) => {
     if (window.getComputedStyle(target).display === 'none') {
         return slideDown(target, duration);
@@ -211,7 +212,6 @@ if (document.getElementById('mapContacts') !== null) {
         .addTo(map);
 };
 
-
 if (document.getElementById('fadeToggle') !== null) {
     var options = {
         strings: ['Power On', 'Game On', 'Party On'],
@@ -250,12 +250,20 @@ if (document.getElementById('parallax') !== null) {
 };
 
 var vacButton = document.querySelectorAll('.vac__spoiler_button');
-
 [].forEach.call(vacButton, function (e) {
     e.addEventListener('click', function (e) {
         var target = this.closest('.vac__spoiler').querySelector('.vac__spoiler_content');
         var targetArrow = this.querySelector('.vac__spoiler_arrow');
         slideToggle(target, 350);
         targetArrow.classList.toggle('active');
+    });
+});
+
+var registerButton = document.querySelectorAll('.registerButton');
+[].forEach.call(registerButton, function (e) {
+    e.addEventListener('click', function (e) {
+        e.preventDefault();
+        var registerPopup = document.querySelector('.popupRegister');
+        registerPopup.style.display = 'block';
     });
 });
