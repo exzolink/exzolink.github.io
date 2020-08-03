@@ -1,0 +1,218 @@
+.popupRegister {
+    position: fixed;
+    display: none;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    left: 0;
+    min-height: 100vh;
+    background-color: #242424;
+
+    &__inner {
+        position: relative;
+        min-height: 100vh;
+        padding-top: 120px;
+    }
+
+    &__selector {
+        padding: 0 60px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        &_item {
+            flex: initial;
+            min-width: 240px;
+
+            &.active {
+                background-color: #424141 !important;
+            }
+
+            &:hover {
+                background-color: #323232;
+            }
+        }
+    }
+
+    &__content {
+        background-color: #424241;
+        margin: 0 60px;
+        padding: 60px 90px;
+        padding-bottom: 0 !important;
+        overflow-y: auto;
+        height: calc(100vh - 280px);
+        max-height: calc(100vh - 280px);
+        scrollbar-width: thin;
+    }
+
+    &__form {
+        max-width: 350px;
+        margin: 0 auto;
+        margin-top: 85px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__inputs {
+        flex-direction: column;
+
+        & input {
+            margin-bottom: 16px;
+            max-width: 290px;
+            width: 100%;
+        }
+
+        & button {
+            width: 100%;
+            margin-top: 90px;
+            text-transform: initial;
+        }
+    }
+
+    &__login_wrapper {
+        padding-bottom: 75px;
+    }
+}
+
+.popup {
+    &__close {
+        position: absolute;
+        right: 60px;
+        top: 40px;
+    }
+
+    &__title {
+        max-width: 900px;
+    }
+}
+
+@media screen and (max-height: 901px) {
+    .popupRegister {
+        &__inner {
+            padding-top: 45px;
+        }
+
+        &__content {
+            margin: 0 30px;
+            padding: 30px 45px;
+            height: calc(100vh - 170px);
+            max-height: calc(100vh - 170px);
+        }
+
+        &__selector {
+            padding: 0 30px;
+        }
+
+        &__form {
+            margin-top: 35px;
+        }
+
+        &__login_wrapper {
+            padding-bottom: 45px;
+        }
+
+        &__inputs {
+            margin-top: 25px;
+
+            & button {
+                margin-top: 10px;
+            }
+        }
+
+    }
+
+    .popup {
+        &__close {
+            right: 30px;
+            top: 20px;
+            width: 34px;
+            height: 34px;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .popupRegister {
+        &__selector {
+            padding: 0 25px;
+
+            &_item {
+                flex: 1 auto;
+                min-width: auto;
+            }
+        }
+
+        &__inner {
+            padding-top: 55px;
+        }
+
+        &__form {
+            margin-top: 60px;
+        }
+
+        &__inputs button {
+            margin-top: 35px;
+        }
+
+        &__content {
+            margin: 0 25px;
+            padding: 20px 35px;
+            padding-top: 25px;
+        }
+    }
+
+    .popup {
+        &__close {
+            top: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .popupRegister {
+        &__selector {
+            padding: 0 15px;
+
+            &_item {
+                flex: 1 auto;
+                min-width: auto;
+            }
+        }
+
+        &__inner {
+            padding-top: 55px;
+        }
+
+        &__form {
+            margin-top: 60px;
+        }
+
+        &__inputs button {
+            margin-top: 35px;
+        }
+        &__inputs input {
+            width: auto;
+        }
+        &__checkboxes {
+            justify-content: space-between;
+
+            & .subscribe__checkbox:first-child {
+                margin-right: 25px;
+            }
+        }
+
+        &__content {
+            margin: 0 15px;
+            padding: 25px 15px;
+            height: calc(100vh - 150px);
+            max-height: calc(100vh - 150px);
+            padding-top: 20px;
+        }
+    }
+
+    .popup {
+        &__close {
+            right: 15px;
+        }
+    }
+}
