@@ -30,7 +30,7 @@ html {
 
 ::-webkit-scrollbar {
     display: block;
-    width: 8px;
+    width: 6px !important;
     background: #222;
 }
 
@@ -114,7 +114,7 @@ img {
 
 
 // Hide body scrollbar if popup opened
-.popup-is-open {
+.open {
     overflow-y: hidden;
 }
 

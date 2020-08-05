@@ -13,12 +13,13 @@
 
     <body>
         <header x-data="{ BurgerOpen: false }">
-            <div x-show.transition.in.duration.350ms.out.scale.0.duration.350ms.opacity.duration.350ms="BurgerOpen"
+            <div x-show.transition.in.duration.350ms.out.scale.50.duration.350ms.opacity.duration.350ms="BurgerOpen"
                 x-cloak class="header__menu">
                 <div class="header__inner">
                     <div class="header__controls">
                         <div><img src="imgs/logo.svg" alt=""></div>
-                        <div><img @click="BurgerOpen = false" src="imgs/close.svg" alt="" class="header__close"></div>
+                        <div><img @click="BurgerOpen = false; scrollbarToggle()" src="imgs/close.svg" alt=""
+                                class="header__close"></div>
                     </div>
                     <div class="header__links_wrapper">
                         <div class="header__links">
@@ -65,8 +66,8 @@
                             </div>
                             <div class="flex">
                                 <a href="" class="nav__btn_order">Забронировать место</a>
-                                <button @click="BurgerOpen = true" class="nav__btn_menu"><img src="imgs/menu.svg"
-                                        alt=""></button>
+                                <button @click="BurgerOpen = true; scrollbarToggle()" class="nav__btn_menu"><img
+                                        src="imgs/menu.svg" alt=""></button>
                             </div>
                         </div>
                     </div>
@@ -84,15 +85,16 @@
                     <div class="events__inner promo__inner">
                         <h3 class="zones__hard_title"><span>Акции</span> и спецпредложения</h3>
 
-                        <div class="features__cards promo__cards">
-                            <a href="" class="features__card promo__card">
+                        <div x-data="{}" x-subscribe class="features__cards promo__cards">
+                            <a @click.prevent="$store.modalPacketDay.open = 'true'; scrollbarToggle()" href=""
+                                class="features__card promo__card">
                                 <div class="features__img promo__img">
                                     <img class="lazyload" data-src="imgs/features1.jpg" alt="">
                                 </div>
                                 <h4>Пакет утренний</h4>
                                 <p>Краткое описание сути предложения</p>
                             </a>
-                            <a href="" class="features__card promo__card">
+                            <a @click.prevent="$store.modalPacketNight.open = 'true'; scrollbarToggle()" href="" class="features__card promo__card">
                                 <div class="features__img promo__img">
                                     <img class="lazyload" data-src="imgs/features1.jpg" alt="">
                                 </div>
@@ -111,24 +113,25 @@
                         <h3 class="zones__hard_title events__title"><span>Подпишитесь на рассылку</span> и будьте в
                             курсе всех главных событий и акций</h3>
 
-                        <div x-data="{ tab: 'email' }"  class="subscribe">
+                        <div x-data="{ tab: 'email' }" class="subscribe">
                             <div class="subscribe__form">
                                 <div class="subscribe__checks">
                                     <p class="subscribe__text">Куда тебе удобнее получать уведомления?</p>
                                     <div class="subscribe__checkboxes">
                                         <div class="subscribe__checkbox">
                                             <input type="radio" name="sub" id="email" checked @click="tab = 'email'">
-                                            <label class="subscribe__label" for="email" @click="tab = 'email'">E-mail</label>
+                                            <label class="subscribe__label" for="email"
+                                                @click="tab = 'email'">E-mail</label>
                                         </div>
                                         <div class="subscribe__checkbox">
                                             <input type="radio" name="sub" id="whatsup" @click="tab = 'wh'">
-                                            <label class="subscribe__label" for="whatsup" @click="tab = 'wh'"><img src="imgs/wussupForm.svg"
-                                                    alt=""></label>
+                                            <label class="subscribe__label" for="whatsup" @click="tab = 'wh'"><img
+                                                    src="imgs/wussupForm.svg" alt=""></label>
                                         </div>
                                         <div class="subscribe__checkbox">
                                             <input type="radio" name="sub" id="tg" @click="tab = 'tg'">
-                                            <label class="subscribe__label" for="tg" @click="tab = 'tg'"><img src="imgs/tgForm.svg"
-                                                    alt=""></label>
+                                            <label class="subscribe__label" for="tg" @click="tab = 'tg'"><img
+                                                    src="imgs/tgForm.svg" alt=""></label>
                                         </div>
                                     </div>
                                 </div>
@@ -151,7 +154,7 @@
                                 </form>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </section>
@@ -251,54 +254,116 @@
             </section>
 
 
-            <section class="popup">
-            <div class="packet packet__day">
-                <button><img class="popup__close" src="imgs/closePacket.svg" alt=""></button>
-                
-                <img class="packet__img packet__img_left lazyload" data-src="imgs/packet.png" alt="">
-                <img class="packet__img packet__img_right lazyload" data-src="imgs/promocs.png" alt="">
-                <div class="container">
-                    <div class="packet__inner">
-                        <div class="container packet__container_sm">
-                            <h3 class="packet__title">Пакет <span>утренний</span></h3>
-                            <p class="packet__desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                                enim
-                                ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-                                aliquip ex
-                                ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit
-                                esse
-                                molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan
-                                et
-                                iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te
-                                feugait nulla facilisi.</p>
+            <section x-data="{}" x-subscribe class="popup">
+                <div x-cloak
+                    x-show.transition.in.duration.350ms.out.scale.50.duration.350ms.opacity.duration.350ms="$store.modalPacketDay.open === 'true'"
+                    class="packet packet__day">
+                    <button><img class="popup__close" @click="$store.modalPacketDay.open = 'false'; scrollbarToggle()"
+                            src="imgs/closePacket.svg" alt=""></button>
 
-                            <ul class="packet__reqs">Условия:
-                                <li>Первое условие</li>
-                                <li>Второе условие</li>
-                                <li>Третье условие</li>
-                            </ul>
+                    <img class="packet__img packet__img_left lazyload" data-src="imgs/packet.png" alt="">
+                    <img class="packet__img packet__img_right lazyload" data-src="imgs/promocs.png" alt="">
+                        <div class="packet__inner">
+                            <div class="container packet__container_sm">
+                                <h3 class="packet__title">Пакет <span>утренний</span></h3>
+                                <p class="packet__desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                                    diam
+                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+                                    wisi
+                                    enim
+                                    ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                                    aliquip ex
+                                    ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                                    velit
+                                    esse
+                                    molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
+                                    accumsan
+                                    et
+                                    iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
+                                    te
+                                    feugait nulla facilisi.</p>
+
+                                <ul class="packet__reqs">Условия:
+                                    <li>Первое условие</li>
+                                    <li>Второе условие</li>
+                                    <li>Третье условие</li>
+                                </ul>
+                            </div>
+
+                            <div class="container">
+                                <p class="packet__alert">Для получения услуг необходимо обратиться к оператору или
+                                    официанту.
+                                </p>
+                                <h4 class="packet__questions">Есть вопросы?<br>
+                                    Оставьте заявку, и наш оператор свяжется с Вами!</h4>
+
+                                <form class="subscribe__form packet__form" action="">
+                                    <div class="subscribe__inputs packet__inputs">
+                                        <input type="text" placeholder="Имя">
+                                        <input type="text" placeholder="Телефон*" required>
+                                        <button type="submit">Оставить заявку</button>
+                                    </div>
+                                </form>
+                            </div>
+
                         </div>
-
-                        <div class="container">
-                            <p class="packet__alert">Для получения услуг необходимо обратиться к оператору или
-                                официанту.
-                            </p>
-                            <h4 class="packet__questions">Есть вопросы?<br>
-                                Оставьте заявку, и наш оператор свяжется с Вами!</h4>
-
-                            <form class="subscribe__form packet__form" action="">
-                                <div class="subscribe__inputs">
-                                    <input type="text" placeholder="Имя">
-                                    <input type="text" placeholder="Телефон*" required>
-                                    <button type="submit">Оставить заявку</button>
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
                 </div>
-            </div>
+            </section>
+
+            <section x-data="{}" x-subscribe class="popup">
+                <div x-cloak
+                    x-show.transition.in.duration.350ms.out.scale.50.duration.350ms.opacity.duration.350ms="$store.modalPacketNight.open === 'true'"
+                    class="packet packet__night">
+                    <button><img class="popup__close" @click="$store.modalPacketNight.open = 'false'; scrollbarToggle()"
+                            src="imgs/closePacket.svg" alt=""></button>
+
+                    <img class="packet__img packet__img_left lazyload" data-src="imgs/swat.png" alt="">
+                    <img class="packet__img packet__img_right lazyload" data-src="imgs/bearPopup.png" alt="">
+                        <div class="packet__inner">
+                            <div class="container packet__container_sm">
+                                <h3 class="packet__title">Пакет <span>вечерний</span></h3>
+                                <p class="packet__desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                                    diam
+                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+                                    wisi
+                                    enim
+                                    ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                                    aliquip ex
+                                    ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                                    velit
+                                    esse
+                                    molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
+                                    accumsan
+                                    et
+                                    iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
+                                    te
+                                    feugait nulla facilisi.</p>
+
+                                <ul class="packet__reqs">Условия:
+                                    <li>Первое условие</li>
+                                    <li>Второе условие</li>
+                                    <li>Третье условие</li>
+                                </ul>
+                            </div>
+
+                            <div class="container">
+                                <p class="packet__alert">Для получения услуг необходимо обратиться к оператору или
+                                    официанту.
+                                </p>
+                                <h4 class="packet__questions">Есть вопросы?<br>
+                                    Оставьте заявку, и наш оператор свяжется с Вами!</h4>
+
+                                <form class="subscribe__form packet__form" action="">
+                                    <div class="subscribe__inputs packet__inputs">
+                                        <input type="text" placeholder="Имя">
+                                        <input type="text" placeholder="Телефон*" required>
+                                        <button type="submit">Оставить заявку</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                </div>
             </section>
         </main>
 
@@ -330,6 +395,7 @@
         <script src="js/lazyload.js" async></script>
         <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
         <script src="js/app.min.js"></script>
+        <script>function scrollbarToggle() { document.documentElement.classList.toggle('open') }</script>
     </body>
 
 </html>

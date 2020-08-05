@@ -289,7 +289,7 @@
 @media screen and (max-width: 760px) {
     .register {
         &__selector {
-            min-width: 100vh;
+            min-width: 100vw;
 
             &_wrapper {
                 width: 100%;

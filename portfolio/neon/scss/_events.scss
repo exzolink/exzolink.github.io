@@ -399,3 +399,12 @@ input[type="radio"] {
         }
     }
 }
+
+@media screen and (max-width: 415px) {
+    .subscribe {
+        &__inputs button {
+            width: 100%;
+            max-width: auto;
+        }
+    }
+}

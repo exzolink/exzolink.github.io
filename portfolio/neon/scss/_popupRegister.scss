@@ -39,15 +39,15 @@
         padding: 60px 90px;
         padding-bottom: 0 !important;
         overflow-y: auto;
-        height: calc(100vh - 280px);
-        max-height: calc(100vh - 280px);
+        height: calc(100vh - 300px);
+        max-height: calc(100vh - 300px);
         scrollbar-width: thin;
     }
 
     &__form {
         max-width: 350px;
         margin: 0 auto;
-        margin-top: 85px;
+        margin-top: 80px;
         display: flex;
         flex-direction: column;
     }
@@ -63,7 +63,7 @@
 
         & button {
             width: 100%;
-            margin-top: 90px;
+            margin-top: 65px;
             text-transform: initial;
         }
     }

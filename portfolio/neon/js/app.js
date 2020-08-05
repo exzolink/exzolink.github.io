@@ -271,3 +271,11 @@ var vacButton = document.querySelectorAll('.vac__spoiler_button');
 Spruce.store('modalRegister', {
     open: 'false',
 });
+
+Spruce.store('modalPacketDay', {
+    open: 'false',
+});
+
+Spruce.store('modalPacketNight', {
+    open: 'false',
+});

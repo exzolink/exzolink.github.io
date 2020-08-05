@@ -58,7 +58,8 @@
                                 <a href="" class="nav__link">Новости мирового киберспорта</a>
                             </div>
                             <div class="flex">
-                                <a href="" class="nav__btn_order" @click.prevent="$store.modalRegister.open = 'true'">Вход /
+                                <a href="" class="nav__btn_order"
+                                    @click.prevent="$store.modalRegister.open = 'true'">Вход /
                                     Регистрация</a>
                                 <button @click="BurgerOpen = true" class="nav__btn_menu"><img src="imgs/menu.svg"
                                         alt=""></button>
@@ -233,8 +234,11 @@
             </section>
 
             <section x-data="{}" x-subscribe class="popup">
-                <div x-cloak x-show.transition.in.duration.350ms.out.scale.50.duration.350ms.opacity.duration.350ms="$store.modalRegister.open === 'true'" class="popupRegister">
-                    <button><img @click="$store.modalRegister.open = 'false'" class="popup__close" src="imgs/closePacket.svg" alt=""></button>
+                <div x-cloak
+                    x-show.transition.in.duration.350ms.out.scale.50.duration.350ms.opacity.duration.350ms="$store.modalRegister.open === 'true'"
+                    class="popupRegister">
+                    <button><img @click="$store.modalRegister.open = 'false'" class="popup__close"
+                            src="imgs/closePacket.svg" alt=""></button>
                     <div x-data="{ regTab: 'login' }" class="popupRegister__inner">
 
                         <div class="popupRegister__selector">
@@ -354,6 +358,7 @@
         <script src="js/lazyload.js" async></script>
         <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
         <script src="js/app.min.js"></script>
+        <script>function scrollbarToggle() { document.documentElement.classList.toggle('open') }</script>
     </body>
 
 </html>
