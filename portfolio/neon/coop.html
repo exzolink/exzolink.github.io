@@ -18,7 +18,8 @@
                 <div class="header__inner">
                     <div class="header__controls">
                         <div><img src="imgs/logo.svg" alt=""></div>
-                        <div><img @click="BurgerOpen = false; scrollbarToggle()" src="imgs/close.svg" alt="" class="header__close"></div>
+                        <div><img @click="BurgerOpen = false; scrollbarToggle()" src="imgs/close.svg" alt=""
+                                class="header__close"></div>
                     </div>
                     <div class="header__links_wrapper">
                         <div class="header__links">
@@ -65,8 +66,8 @@
                             </div>
                             <div class="flex">
                                 <a href="" class="nav__btn_order">Забронировать место</a>
-                                <button @click="BurgerOpen = true; scrollbarToggle()" class="nav__btn_menu"><img src="imgs/menu.svg"
-                                        alt=""></button>
+                                <button @click="BurgerOpen = true; scrollbarToggle()" class="nav__btn_menu"><img
+                                        src="imgs/menu.svg" alt=""></button>
                             </div>
                         </div>
                     </div>
@@ -82,7 +83,8 @@
                         <h2 class="welcomeAbout__desc coop__desc">Открыты к сотрудничеству на партнерской и спонсорской
                             основе</h2>
 
-                        <button @click="$store.modalCoop.open = 'true'; scrollbarToggle()" class="order-button coop__button_popup">Обсудить сотрудничество</button>
+                        <button @click="$store.modalCoop.open = 'true'; scrollbarToggle()"
+                            class="order-button coop__button_popup">Обсудить сотрудничество</button>
                     </div>
                 </div>
             </section>
@@ -109,20 +111,23 @@
                             <h4 class="coop__vars_title">Партнерство на турнирах</h4>
                             <p class="coop__vars_desc">Люди увлекающееся киберспортом, имеющие возможность стать нашими
                                 партнерами на разных турнирах</p>
-                            <button @click="$store.modalCoop.open = 'true'; scrollbarToggle()" class="coop__vars_button">Обсудить сотрудничество</button>
+                            <button @click="$store.modalCoop.open = 'true'; scrollbarToggle()"
+                                class="coop__vars_button">Обсудить сотрудничество</button>
                         </div>
 
                         <div class="coop__vars_item">
                             <h4 class="coop__vars_title">Реклама на спонсорской основе</h4>
                             <p class="coop__vars_desc">Реклама своего бизнеса посредством спонсорства нашего турнира</p>
-                            <button @click="$store.modalCoop.open = 'true'; scrollbarToggle()" class="coop__vars_button">Обсудить сотрудничество</button>
+                            <button @click="$store.modalCoop.open = 'true'; scrollbarToggle()"
+                                class="coop__vars_button">Обсудить сотрудничество</button>
                         </div>
 
                         <div class="coop__vars_item">
                             <h4 class="coop__vars_title">Проведение турниров</h4>
                             <p class="coop__vars_desc">Предоставим в аренду помещение нашего киберспортивного бара для
                                 проведения Вашего турнира</p>
-                            <button @click="$store.modalCoop.open = 'true'; scrollbarToggle()" class="coop__vars_button">Обсудить сотрудничество</button>
+                            <button @click="$store.modalCoop.open = 'true'; scrollbarToggle()"
+                                class="coop__vars_button">Обсудить сотрудничество</button>
                         </div>
                     </div>
                 </div>
@@ -182,11 +187,15 @@
                 </div>
             </section>
 
+            
+            <!-- Модальное окно: Предложение сотрудничества -->
             <section x-data="{}" x-subscribe class="popup">
                 <div x-cloak
-                x-show.transition.in.duration.350ms.out.scale.50.duration.350ms.opacity.duration.350ms="$store.modalCoop.open === 'true'" class="popupRegister popupCoop">
-                    <button><img class="popup__close popupCoop__close" @click="$store.modalCoop.open = 'false'; scrollbarToggle()"
-                            src="imgs/closePacket.svg" alt=""></button>
+                    x-show.transition.in.duration.350ms.out.scale.50.duration.350ms.opacity.duration.350ms="$store.modalCoop.open === 'true'"
+                    class="popupRegister popupCoop">
+                    <button><img class="popup__close popupCoop__close"
+                            @click="$store.modalCoop.open = 'false'; scrollbarToggle()" src="imgs/closePacket.svg"
+                            alt=""></button>
                     <div class="packet__inner">
                         <div class="container coop__container_sm">
                             <h4 class="zones__hard_title popupCoop__title">Интересует сотрудничество?<br>
@@ -198,7 +207,8 @@
                                 <input type="text" placeholder="Телефон*" required="">
                                 <textarea name="" placeholder="Комментарий"></textarea>
 
-                                <div class="subscribe__inputs vac__submit popupCoop__submit"><button type="submit">Обсудить
+                                <div class="subscribe__inputs vac__submit popupCoop__submit"><button
+                                        type="submit">Обсудить
                                         сотрудничество</button></div>
                             </form>
 

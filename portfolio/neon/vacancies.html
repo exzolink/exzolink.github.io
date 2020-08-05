@@ -101,7 +101,7 @@
                         <h3 class="coop__title">Вакансии компании</h3>
 
 
-                        <div class="vac__spoiler_wrapper">
+                        <div x-data="{}" x-subscribe class="vac__spoiler_wrapper">
 
                             <!-- Спойлер -->
                             <div class="vac__spoiler">
@@ -139,7 +139,7 @@
                                         - 1С: Предприятие
                                     </p>
                                     <div class="subscribe__inputs vac__submit vac__send_popup"><button
-                                            type="submit">Отправить
+                                            @click="$store.modalVac.open = 'true'; scrollbarToggle()">Отправить
                                             резюме</button></div>
                                 </div>
 
@@ -187,7 +187,7 @@
                                         - 1С: Предприятие
                                     </p>
                                     <div class="subscribe__inputs vac__submit vac__send_popup"><button
-                                            type="submit">Отправить
+                                            @click="$store.modalVac.open = 'true'; scrollbarToggle()">Отправить
                                             резюме</button></div>
                                 </div>
 
@@ -234,7 +234,7 @@
                                         - 1С: Предприятие
                                     </p>
                                     <div class="subscribe__inputs vac__submit vac__send_popup"><button
-                                            type="submit">Отправить
+                                            @click="$store.modalVac.open = 'true'; scrollbarToggle()">Отправить
                                             резюме</button></div>
                                 </div>
 
@@ -274,7 +274,8 @@
                                 <p>*Отправляя анкету, я даю свое Согласие на сбор, обработку, хранение и использвоание
                                     моих персональных данных данных</p>
 
-                                <div class="subscribe__inputs vac__submit"><button type="submit">Отправить
+                                <div @click="$store.modalVac.open = 'true'; scrollbarToggle()"
+                                    class="subscribe__inputs vac__submit"><button type="submit">Отправить
                                         резюме</button></div>
                             </form>
                         </div>
@@ -319,6 +320,53 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Модальное окно: Отправка резюме -->
+            <section x-data="{}" x-subscribe class="popup">
+                <div x-cloak
+                    x-show.transition.in.duration.350ms.out.scale.50.duration.350ms.opacity.duration.350ms="$store.modalVac.open === 'true'"
+                    class="popupRegister popupCoop">
+                    <button><img class="popup__close popupCoop__close"
+                            @click="$store.modalVac.open = 'false'; scrollbarToggle()" src="imgs/closePacket.svg"
+                            alt=""></button>
+                    <div class="packet__inner">
+                        <div class="container coop__container_sm">
+                            <h4 class="zones__hard_title popupCoop__title popupVac__title">Присоединяйтесь к команде
+                                <span>Neon eSports Bar & Gaming</span></h4>
+
+                            <form class="vac__form popupVac__form" action="">
+                                <input type="text" placeholder="Имя*" required>
+                                <input type="text" placeholder="Фамилия*" required>
+                                <input type="text" placeholder="Телефон*" required>
+                                <input type="email" placeholder="E-mail*" required>
+                                <input type="text" placeholder="Дата рождения*" required>
+                                <input type="text" placeholder="Образование*" required>
+                                <textarea name="" placeholder="Напишите немного о себе"></textarea>
+
+                                <div class="popupVac__file_wrap">
+                                    <div class="vac__upload">
+                                        <input type="file" name="resume" id="resume">
+                                        <label for="resume">
+                                            <img src="imgs/attach.svg" alt="">
+                                            <span>Прикрепите файл с резюме</span>
+                                        </label>
+                                    </div>
+
+                                    <p>*Отправляя анкету, я даю свое Согласие на сбор, обработку, хранение и
+                                        использвоание
+                                        моих персональных данных данных</p>
+                                </div>
+
+                                <div class="subscribe__inputs vac__submit popupVac__submit"><button
+                                        type="submit">Отправить
+                                        резюме</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <footer class="footer">
@@ -342,14 +390,15 @@
 
 
 
-
-        <script src="js/alpine.js" defer></script>
+        <script src="js/spruce.js"></script>
+        <script src="js/alpine.js"></script>
         <script src="js/fslightbox.js" async></script>
         <script src="js/swiper.min.js"></script>
         <script src="js/lazyload.js" async></script>
         <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
         <script src="js/typed.js"></script>
         <script src="js/app.min.js"></script>
+        <script>function scrollbarToggle() { document.documentElement.classList.toggle('open') }</script>
     </body>
 
 </html>
