@@ -99,7 +99,8 @@
                                 <a href=""></a>
                                 <div class="events__item_inner">
                                     <p class="events__item_date">24 июля</p>
-                                    <h3 class="events__item_sm-title">Официальное открытие eSports <span>Bar & Gaming</span></h3>
+                                    <h3 class="events__item_sm-title">Официальное открытие eSports <span>Bar &
+                                            Gaming</span></h3>
                                     <p class="events__item_label">Вход свободный</p>
                                 </div>
                             </div>
@@ -108,7 +109,8 @@
                                 <a href=""></a>
                                 <div class="events__item_inner">
                                     <p class="events__item_date">24 июля</p>
-                                    <h3 class="events__item_sm-title">Официальное открытие eSports <span>Bar & Gaming</span></h3>
+                                    <h3 class="events__item_sm-title">Официальное открытие eSports <span>Bar &
+                                            Gaming</span></h3>
                                     <p class="events__item_label">Вход свободный</p>
                                 </div>
                             </div>
@@ -117,7 +119,8 @@
                                 <a href=""></a>
                                 <div class="events__item_inner">
                                     <p class="events__item_date">24 июля</p>
-                                    <h3 class="events__item_sm-title">Официальное открытие eSports <span>Bar & Gaming</span></h3>
+                                    <h3 class="events__item_sm-title">Официальное открытие eSports <span>Bar &
+                                            Gaming</span></h3>
                                     <p class="events__item_label">Вход свободный</p>
                                 </div>
                             </div>
@@ -126,7 +129,8 @@
                                 <a href=""></a>
                                 <div class="events__item_inner">
                                     <p class="events__item_date">24 июля</p>
-                                    <h3 class="events__item_sm-title">Официальное открытие eSports <span>Bar & Gaming</span></h3>
+                                    <h3 class="events__item_sm-title">Официальное открытие eSports <span>Bar &
+                                            Gaming</span></h3>
                                     <p class="events__item_label">Вход свободный</p>
                                 </div>
                             </div>
@@ -142,41 +146,49 @@
                             </div>
                         </div>
 
-                        <h3 class="zones__hard_title events__title"><span>Подпишитесь на рассылку</span> и будьте в курсе всех главных событий и акций</h3>
-                        
-                        <div x-data="{ tab: 'email' }"  class="subscribe">
+                        <h3 class="zones__hard_title events__title"><span>Подпишитесь на рассылку</span> и будьте в
+                            курсе всех главных событий и акций</h3>
+
+                        <!-- Выбор способа получения рассылки -->
+                        <div x-data="{ tab: 'email' }" class="subscribe">
                             <div class="subscribe__form">
                                 <div class="subscribe__checks">
                                     <p class="subscribe__text">Куда тебе удобнее получать уведомления?</p>
                                     <div class="subscribe__checkboxes">
+
                                         <div class="subscribe__checkbox">
                                             <input type="radio" name="sub" id="email" checked @click="tab = 'email'">
-                                            <label class="subscribe__label" for="email" @click="tab = 'email'">E-mail</label>
+                                            <label class="subscribe__label" for="email"
+                                                @click="tab = 'email'">E-mail</label>
                                         </div>
+
                                         <div class="subscribe__checkbox">
                                             <input type="radio" name="sub" id="whatsup" @click="tab = 'wh'">
-                                            <label class="subscribe__label" for="whatsup" @click="tab = 'wh'"><img src="imgs/wussupForm.svg"
-                                                    alt=""></label>
+                                            <label class="subscribe__label" for="whatsup" @click="tab = 'wh'"><img
+                                                    src="imgs/wussupForm.svg" alt=""></label>
                                         </div>
+
                                         <div class="subscribe__checkbox">
                                             <input type="radio" name="sub" id="tg" @click="tab = 'tg'">
-                                            <label class="subscribe__label" for="tg" @click="tab = 'tg'"><img src="imgs/tgForm.svg"
-                                                    alt=""></label>
+                                            <label class="subscribe__label" for="tg" @click="tab = 'tg'"><img
+                                                    src="imgs/tgForm.svg" alt=""></label>
                                         </div>
+
                                     </div>
                                 </div>
+                                <!-- Рассылка через Email -->
                                 <form x-show="tab === 'email'" action="" class="subscribe__inputs">
                                     <input type="text" placeholder="Имя" required>
                                     <input type="text" placeholder="E-mail" required>
                                     <button type="submit">Подписаться</button>
                                 </form>
-
+                                <!-- Рассылка через WhatsUp -->
                                 <form x-show="tab === 'wh'" x-cloak action="" class="subscribe__inputs">
                                     <input type="text" placeholder="Имя" required>
                                     <input type="text" placeholder="Телефон" required>
                                     <button type="submit">Подписаться</button>
                                 </form>
-
+                                <!-- Рассылка через Telegram -->
                                 <form x-show="tab === 'tg'" x-cloak action="" class="subscribe__inputs">
                                     <input type="text" placeholder="Имя" required>
                                     <input type="text" placeholder="Телефон" required>
@@ -184,7 +196,7 @@
                                 </form>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </section>

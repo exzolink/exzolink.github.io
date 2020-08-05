@@ -94,7 +94,8 @@
                                 <h4>Пакет утренний</h4>
                                 <p>Краткое описание сути предложения</p>
                             </a>
-                            <a @click.prevent="$store.modalPacketNight.open = 'true'; scrollbarToggle()" href="" class="features__card promo__card">
+                            <a @click.prevent="$store.modalPacketNight.open = 'true'; scrollbarToggle()" href=""
+                                class="features__card promo__card">
                                 <div class="features__img promo__img">
                                     <img class="lazyload" data-src="imgs/features1.jpg" alt="">
                                 </div>
@@ -113,40 +114,46 @@
                         <h3 class="zones__hard_title events__title"><span>Подпишитесь на рассылку</span> и будьте в
                             курсе всех главных событий и акций</h3>
 
+                        <!-- Выбор способа получения рассылки -->
                         <div x-data="{ tab: 'email' }" class="subscribe">
                             <div class="subscribe__form">
                                 <div class="subscribe__checks">
                                     <p class="subscribe__text">Куда тебе удобнее получать уведомления?</p>
                                     <div class="subscribe__checkboxes">
+
                                         <div class="subscribe__checkbox">
                                             <input type="radio" name="sub" id="email" checked @click="tab = 'email'">
                                             <label class="subscribe__label" for="email"
                                                 @click="tab = 'email'">E-mail</label>
                                         </div>
+
                                         <div class="subscribe__checkbox">
                                             <input type="radio" name="sub" id="whatsup" @click="tab = 'wh'">
                                             <label class="subscribe__label" for="whatsup" @click="tab = 'wh'"><img
                                                     src="imgs/wussupForm.svg" alt=""></label>
                                         </div>
+
                                         <div class="subscribe__checkbox">
                                             <input type="radio" name="sub" id="tg" @click="tab = 'tg'">
                                             <label class="subscribe__label" for="tg" @click="tab = 'tg'"><img
                                                     src="imgs/tgForm.svg" alt=""></label>
                                         </div>
+
                                     </div>
                                 </div>
+                                <!-- Рассылка через Email -->
                                 <form x-show="tab === 'email'" action="" class="subscribe__inputs">
                                     <input type="text" placeholder="Имя" required>
                                     <input type="text" placeholder="E-mail" required>
                                     <button type="submit">Подписаться</button>
                                 </form>
-
+                                <!-- Рассылка через WhatsUp -->
                                 <form x-show="tab === 'wh'" x-cloak action="" class="subscribe__inputs">
                                     <input type="text" placeholder="Имя" required>
                                     <input type="text" placeholder="Телефон" required>
                                     <button type="submit">Подписаться</button>
                                 </form>
-
+                                <!-- Рассылка через Telegram -->
                                 <form x-show="tab === 'tg'" x-cloak action="" class="subscribe__inputs">
                                     <input type="text" placeholder="Имя" required>
                                     <input type="text" placeholder="Телефон" required>
@@ -263,50 +270,50 @@
 
                     <img class="packet__img packet__img_left lazyload" data-src="imgs/packet.png" alt="">
                     <img class="packet__img packet__img_right lazyload" data-src="imgs/promocs.png" alt="">
-                        <div class="packet__inner">
-                            <div class="container packet__container_sm">
-                                <h3 class="packet__title">Пакет <span>утренний</span></h3>
-                                <p class="packet__desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                    diam
-                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                                    wisi
-                                    enim
-                                    ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-                                    aliquip ex
-                                    ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
-                                    velit
-                                    esse
-                                    molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
-                                    accumsan
-                                    et
-                                    iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
-                                    te
-                                    feugait nulla facilisi.</p>
+                    <div class="packet__inner">
+                        <div class="container packet__container_sm">
+                            <h3 class="packet__title">Пакет <span>утренний</span></h3>
+                            <p class="packet__desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                                diam
+                                nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+                                wisi
+                                enim
+                                ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                                aliquip ex
+                                ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                                velit
+                                esse
+                                molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
+                                accumsan
+                                et
+                                iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
+                                te
+                                feugait nulla facilisi.</p>
 
-                                <ul class="packet__reqs">Условия:
-                                    <li>Первое условие</li>
-                                    <li>Второе условие</li>
-                                    <li>Третье условие</li>
-                                </ul>
-                            </div>
-
-                            <div class="container">
-                                <p class="packet__alert">Для получения услуг необходимо обратиться к оператору или
-                                    официанту.
-                                </p>
-                                <h4 class="packet__questions">Есть вопросы?<br>
-                                    Оставьте заявку, и наш оператор свяжется с Вами!</h4>
-
-                                <form class="subscribe__form packet__form" action="">
-                                    <div class="subscribe__inputs packet__inputs">
-                                        <input type="text" placeholder="Имя">
-                                        <input type="text" placeholder="Телефон*" required>
-                                        <button type="submit">Оставить заявку</button>
-                                    </div>
-                                </form>
-                            </div>
-
+                            <ul class="packet__reqs">Условия:
+                                <li>Первое условие</li>
+                                <li>Второе условие</li>
+                                <li>Третье условие</li>
+                            </ul>
                         </div>
+
+                        <div class="container">
+                            <p class="packet__alert">Для получения услуг необходимо обратиться к оператору или
+                                официанту.
+                            </p>
+                            <h4 class="packet__questions">Есть вопросы?<br>
+                                Оставьте заявку, и наш оператор свяжется с Вами!</h4>
+
+                            <form class="subscribe__form packet__form" action="">
+                                <div class="subscribe__inputs packet__inputs">
+                                    <input type="text" placeholder="Имя">
+                                    <input type="text" placeholder="Телефон*" required>
+                                    <button type="submit">Оставить заявку</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
                 </div>
             </section>
 
@@ -319,50 +326,50 @@
 
                     <img class="packet__img packet__img_left lazyload" data-src="imgs/swat.png" alt="">
                     <img class="packet__img packet__img_right lazyload" data-src="imgs/bearPopup.png" alt="">
-                        <div class="packet__inner">
-                            <div class="container packet__container_sm">
-                                <h3 class="packet__title">Пакет <span>вечерний</span></h3>
-                                <p class="packet__desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                    diam
-                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                                    wisi
-                                    enim
-                                    ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-                                    aliquip ex
-                                    ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
-                                    velit
-                                    esse
-                                    molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
-                                    accumsan
-                                    et
-                                    iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
-                                    te
-                                    feugait nulla facilisi.</p>
+                    <div class="packet__inner">
+                        <div class="container packet__container_sm">
+                            <h3 class="packet__title">Пакет <span>вечерний</span></h3>
+                            <p class="packet__desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                                diam
+                                nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+                                wisi
+                                enim
+                                ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                                aliquip ex
+                                ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+                                velit
+                                esse
+                                molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
+                                accumsan
+                                et
+                                iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
+                                te
+                                feugait nulla facilisi.</p>
 
-                                <ul class="packet__reqs">Условия:
-                                    <li>Первое условие</li>
-                                    <li>Второе условие</li>
-                                    <li>Третье условие</li>
-                                </ul>
-                            </div>
-
-                            <div class="container">
-                                <p class="packet__alert">Для получения услуг необходимо обратиться к оператору или
-                                    официанту.
-                                </p>
-                                <h4 class="packet__questions">Есть вопросы?<br>
-                                    Оставьте заявку, и наш оператор свяжется с Вами!</h4>
-
-                                <form class="subscribe__form packet__form" action="">
-                                    <div class="subscribe__inputs packet__inputs">
-                                        <input type="text" placeholder="Имя">
-                                        <input type="text" placeholder="Телефон*" required>
-                                        <button type="submit">Оставить заявку</button>
-                                    </div>
-                                </form>
-                            </div>
-
+                            <ul class="packet__reqs">Условия:
+                                <li>Первое условие</li>
+                                <li>Второе условие</li>
+                                <li>Третье условие</li>
+                            </ul>
                         </div>
+
+                        <div class="container">
+                            <p class="packet__alert">Для получения услуг необходимо обратиться к оператору или
+                                официанту.
+                            </p>
+                            <h4 class="packet__questions">Есть вопросы?<br>
+                                Оставьте заявку, и наш оператор свяжется с Вами!</h4>
+
+                            <form class="subscribe__form packet__form" action="">
+                                <div class="subscribe__inputs packet__inputs">
+                                    <input type="text" placeholder="Имя">
+                                    <input type="text" placeholder="Телефон*" required>
+                                    <button type="submit">Оставить заявку</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
                 </div>
             </section>
         </main>

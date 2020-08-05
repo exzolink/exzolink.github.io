@@ -1,0 +1,99 @@
+.popupCoop {
+    &__title {
+        max-width: 900px;
+    }
+
+    &__form {
+        margin-bottom: 0;
+        margin-top: 60px;
+
+        & input {
+            flex-basis: 25.5%;
+            margin-bottom: 30px;
+        }
+
+        & textarea {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__submit {
+        width: 100%;
+        padding-bottom: 30px;
+        justify-content: flex-end;
+    }
+}
+
+.coop {
+    &__container {
+        &_sm {
+            max-width: 1000px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .popupCoop {
+        &__close {
+            right: 16px;
+            top: 16px;
+            width: 36px;
+            height: 36px;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .popupCoop {
+        &__title {
+            font-size: 32px;
+        }
+        &__form {
+            & input {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .popupCoop {
+        &__title {
+            font-size: 28px;
+        }
+        &__form {
+            & input {
+                flex-basis: 100%;
+                max-width: 350px;
+            }
+            & textarea {
+                flex-basis: 100%;
+                max-width: 350px;
+                margin-bottom: 30px;
+            }
+        }
+        &__submit button {
+            max-width: 397px;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .popupCoop {
+        &__title {
+            font-size: 22px;
+        }
+        &__form {
+            margin-top: 35px;
+
+            & input {
+                margin-bottom: 10px;
+            }
+            & textarea {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

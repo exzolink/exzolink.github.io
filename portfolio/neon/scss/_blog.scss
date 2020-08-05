@@ -135,7 +135,7 @@
         }
 
         &__events {
-            flex-basis: 55%;
+            flex-basis: 53%;
         }
     }
 }
@@ -148,6 +148,7 @@
         }
 
         &__rating {
+            margin-top: 15px;
             &_title {
                 font-size: 36px;
             }

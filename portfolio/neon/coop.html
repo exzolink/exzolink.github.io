@@ -13,12 +13,12 @@
 
     <body>
         <header x-data="{ BurgerOpen: false }">
-            <div x-show.transition.in.duration.350ms.out.scale.0.duration.350ms.opacity.duration.350ms="BurgerOpen"
+            <div x-show.transition.in.duration.350ms.out.scale.50.duration.350ms.opacity.duration.350ms="BurgerOpen"
                 x-cloak class="header__menu">
                 <div class="header__inner">
                     <div class="header__controls">
                         <div><img src="imgs/logo.svg" alt=""></div>
-                        <div><img @click="BurgerOpen = false" src="imgs/close.svg" alt="" class="header__close"></div>
+                        <div><img @click="BurgerOpen = false; scrollbarToggle()" src="imgs/close.svg" alt="" class="header__close"></div>
                     </div>
                     <div class="header__links_wrapper">
                         <div class="header__links">
@@ -65,7 +65,7 @@
                             </div>
                             <div class="flex">
                                 <a href="" class="nav__btn_order">Забронировать место</a>
-                                <button @click="BurgerOpen = true" class="nav__btn_menu"><img src="imgs/menu.svg"
+                                <button @click="BurgerOpen = true; scrollbarToggle()" class="nav__btn_menu"><img src="imgs/menu.svg"
                                         alt=""></button>
                             </div>
                         </div>
@@ -74,7 +74,7 @@
             </div>
         </header>
 
-        <main class="main">
+        <main x-data="{}" x-subscribe class="main">
             <section class="welcomeAbout coop lazyload" data-bg="imgs/coop_bg.jpg">
                 <div class="container h-100">
                     <div class="welcome__inner welcomeAbout__inner coop__inner">
@@ -82,7 +82,7 @@
                         <h2 class="welcomeAbout__desc coop__desc">Открыты к сотрудничеству на партнерской и спонсорской
                             основе</h2>
 
-                        <button class="order-button coop__button_popup">Обсудить сотрудничество</button>
+                        <button @click="$store.modalCoop.open = 'true'; scrollbarToggle()" class="order-button coop__button_popup">Обсудить сотрудничество</button>
                     </div>
                 </div>
             </section>
@@ -109,20 +109,20 @@
                             <h4 class="coop__vars_title">Партнерство на турнирах</h4>
                             <p class="coop__vars_desc">Люди увлекающееся киберспортом, имеющие возможность стать нашими
                                 партнерами на разных турнирах</p>
-                            <button class="coop__vars_button">Обсудить сотрудничество</button>
+                            <button @click="$store.modalCoop.open = 'true'; scrollbarToggle()" class="coop__vars_button">Обсудить сотрудничество</button>
                         </div>
 
                         <div class="coop__vars_item">
                             <h4 class="coop__vars_title">Реклама на спонсорской основе</h4>
                             <p class="coop__vars_desc">Реклама своего бизнеса посредством спонсорства нашего турнира</p>
-                            <button class="coop__vars_button">Обсудить сотрудничество</button>
+                            <button @click="$store.modalCoop.open = 'true'; scrollbarToggle()" class="coop__vars_button">Обсудить сотрудничество</button>
                         </div>
 
                         <div class="coop__vars_item">
                             <h4 class="coop__vars_title">Проведение турниров</h4>
                             <p class="coop__vars_desc">Предоставим в аренду помещение нашего киберспортивного бара для
                                 проведения Вашего турнира</p>
-                            <button class="coop__vars_button">Обсудить сотрудничество</button>
+                            <button @click="$store.modalCoop.open = 'true'; scrollbarToggle()" class="coop__vars_button">Обсудить сотрудничество</button>
                         </div>
                     </div>
                 </div>
@@ -181,6 +181,31 @@
                     </div>
                 </div>
             </section>
+
+            <section x-data="{}" x-subscribe class="popup">
+                <div x-cloak
+                x-show.transition.in.duration.350ms.out.scale.50.duration.350ms.opacity.duration.350ms="$store.modalCoop.open === 'true'" class="popupRegister popupCoop">
+                    <button><img class="popup__close popupCoop__close" @click="$store.modalCoop.open = 'false'; scrollbarToggle()"
+                            src="imgs/closePacket.svg" alt=""></button>
+                    <div class="packet__inner">
+                        <div class="container coop__container_sm">
+                            <h4 class="zones__hard_title popupCoop__title">Интересует сотрудничество?<br>
+                                <span>Отправьте свое предложение, и с Вами свяжутся!</span></h4>
+
+                            <form class="vac__form popupCoop__form" action="">
+                                <input type="text" placeholder="Имя*" required="">
+                                <input type="email" placeholder="E-mail*" required="">
+                                <input type="text" placeholder="Телефон*" required="">
+                                <textarea name="" placeholder="Комментарий"></textarea>
+
+                                <div class="subscribe__inputs vac__submit popupCoop__submit"><button type="submit">Обсудить
+                                        сотрудничество</button></div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <footer class="footer">
@@ -204,14 +229,15 @@
 
 
 
-
-        <script src="js/alpine.js" defer></script>
+        <script src="js/spruce.js"></script>
+        <script src="js/alpine.js"></script>
         <script src="js/fslightbox.js" async></script>
         <script src="js/swiper.min.js"></script>
         <script src="js/lazyload.js" async></script>
         <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
         <script src="js/typed.js"></script>
         <script src="js/app.min.js"></script>
+        <script>function scrollbarToggle() { document.documentElement.classList.toggle('open') }</script>
     </body>
 
 </html>
