@@ -1,6 +1,5 @@
 .popupRegister {
     position: fixed;
-    display: none;
     width: 100%;
     top: 0;
     z-index: 9999;
@@ -79,6 +78,14 @@
         position: absolute;
         right: 60px;
         top: 40px;
+        transition: opacity .3s ease;
+        pointer-events: all;
+        z-index: 999;
+
+        &:hover {
+            cursor: pointer;
+            opacity: .7;
+        }
     }
 
     &__title {

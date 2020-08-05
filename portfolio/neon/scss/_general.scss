@@ -113,6 +113,11 @@ img {
 }
 
 
+// Hide body scrollbar if popup opened
+.popup-is-open {
+    overflow-y: hidden;
+}
+
 // Lazy Loading Animation
 .lazyload,
 .lazyloading {

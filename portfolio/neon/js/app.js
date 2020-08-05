@@ -259,11 +259,15 @@ var vacButton = document.querySelectorAll('.vac__spoiler_button');
     });
 });
 
-var registerButton = document.querySelectorAll('.registerButton');
+/*var registerButton = document.querySelectorAll('.registerButton');
 [].forEach.call(registerButton, function (e) {
     e.addEventListener('click', function (e) {
         e.preventDefault();
         var registerPopup = document.querySelector('.popupRegister');
         registerPopup.style.display = 'block';
     });
+}); */
+
+Spruce.store('modalRegister', {
+    open: 'false',
 });
