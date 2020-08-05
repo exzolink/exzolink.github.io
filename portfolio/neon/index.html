@@ -163,6 +163,11 @@
                                     .then(response => response.text())
                                     .then(html => { $refs.asusrogHard.innerHTML = html })">Bootcamp by Asus Rog</div>
 
+                                <div class="zones__tabs_item" :class="{ 'active': tab === 'zone2' }"
+                                    @click="tab = 'zone2'" @mouseenter.once="fetch('./partials/bootcamp2Hardware.html')
+                                    .then(response => response.text())
+                                    .then(html => { $refs.bootcamp2Hard.innerHTML = html })">Bootcamp Zone 2</div>
+
                                 <div class="zones__tabs_item" :class="{ 'active': tab === 'psp' }" @click="tab = 'psp'"
                                     @mouseenter.once="fetch('./partials/psproomHardware.html')
                                 .then(response => response.text())
@@ -315,6 +320,37 @@
                             </div>
                         </div>
 
+                        <div x-show="tab === 'zone2'" class="zones__content_wrapper">
+                            <div class="zones__gallery">
+                                <div class="swiper-container zones__gallery_container">
+                                    <div class="swiper-wrapper zones__gallery_wrapper">
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="zone2" href="imgs/gamezone_img2.png"><img
+                                                    class="lazyload" data-src="imgs/gamezone_img2.png" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="zone2" href="imgs/gamezone_img.png"><img class="lazyload"
+                                                    data-src="imgs/gamezone_img.png" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="zone2" href="imgs/gamezone_img2.png"><img
+                                                    class="lazyload" data-src="imgs/gamezone_img2.png" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide zones__gallery_item">
+                                            <a data-fslightbox="zone2" href="imgs/gamezone_img.png"><img class="lazyload"
+                                                    data-src="imgs/gamezone_img.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </div>
+
+                            <div x-ref="bootcamp2Hard" class="zones__hard_wrapper">
+                                <p class="loading">Загрузка...</p>
+                            </div>
+                        </div>
+
                         <div x-show="tab === 'psp'" class="zones__content_wrapper">
                             <div class="zones__gallery">
                                 <div class="swiper-container zones__gallery_container">
@@ -348,7 +384,6 @@
 
                     </div>
                 </div>
-
             </section>
 
             <section class="aura">
