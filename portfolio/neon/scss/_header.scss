@@ -184,6 +184,10 @@
         }
     }
 
+    &__logo {
+        flex-basis: auto !important;
+    }
+
     &__inner {
         height: calc(100% - 95px);
         padding: 50px;
