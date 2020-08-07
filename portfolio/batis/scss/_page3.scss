@@ -72,13 +72,13 @@
     .page3 {
         &__wrapper {
             &:after {
-                height: 150px;
+                height: 100px;
             }
         }
     }
 }
 
-@media screen and (max-height: 899px) {
+@media screen and (max-height: 700px) {
     .page3 {
         &__wrapper {
             &:after {
@@ -88,9 +88,9 @@
     }
 }
 
-@media screen and (max-width: 1368px) {
+@media screen and (max-width: 1550px) {
     .section__title {
-        font-size: 38px;
+        font-size: 32px;
     }
 
     .page3 {

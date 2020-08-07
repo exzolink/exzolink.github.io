@@ -52,7 +52,6 @@
         &__img {
             & img {
                 display: block;
-                height: 90%;
                 width: auto;
             }
         }
@@ -83,7 +82,7 @@
         &__img {
             flex-basis: 34%;
             & img {
-                max-width: 320px;
+                max-width: 380px;
             }
            
         }

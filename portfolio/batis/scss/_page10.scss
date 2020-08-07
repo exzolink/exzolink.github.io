@@ -58,6 +58,7 @@
     &__right {
         height: 100%;
         flex-basis: 55%;
+        align-items: flex-end;
 
         & img {
             width: 100%;
@@ -137,6 +138,7 @@
         }
 
         &__right {
+            align-items: flex-start;
             & img {
                 height: auto;
             }
