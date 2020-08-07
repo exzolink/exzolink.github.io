@@ -309,3 +309,6 @@ Spruce.store('modalOrder', {
 Spruce.store('modalOrderTab', {
     tab: 'tuf',
 });
+Spruce.store('modalPrivacy', {
+    open: 'true',
+});
