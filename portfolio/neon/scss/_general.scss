@@ -132,6 +132,13 @@ img {
     transition: border .3s ease, opacity .3s, transform .3s, filter .3s !important;
 }
 
+@media screen and (max-width: 800px) {
+    .lazyload,
+    .lazyloading {
+        min-height: 100px;
+    }
+}
+
 
 // Hide Elements before Init
 [x-cloak] {
@@ -172,9 +179,19 @@ img {
     margin-left: auto;
 }
 
-input::-webkit-input-placeholder {opacity: 1; color: inherit;}
-textarea::-webkit-input-placeholder {opacity: 1; color: inherit;}
-::placeholder {opacity: 1}  
+input::-webkit-input-placeholder {
+    opacity: 1;
+    color: inherit;
+}
+
+textarea::-webkit-input-placeholder {
+    opacity: 1;
+    color: inherit;
+}
+
+::placeholder {
+    opacity: 1
+}
 
 .order-button {
     color: $blue;
