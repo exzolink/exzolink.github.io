@@ -126,17 +126,16 @@ img {
     min-height: 200px;
     transition: border .3s ease, opacity .3s, transform .3s, filter .3s !important;
 }
-
-.lazyloaded {
-    opacity: 1;
-    transition: border .3s ease, opacity .3s, transform .3s, filter .3s !important;
-}
-
 @media screen and (max-width: 800px) {
     .lazyload,
     .lazyloading {
         min-height: 100px;
     }
+}
+
+.lazyloaded {
+    opacity: 1;
+    transition: border .3s ease, opacity .3s, transform .3s, filter .3s !important;
 }
 
 
