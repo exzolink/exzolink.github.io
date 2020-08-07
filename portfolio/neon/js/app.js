@@ -310,5 +310,5 @@ Spruce.store('modalOrderTab', {
     tab: 'tuf',
 });
 Spruce.store('modalPrivacy', {
-    open: 'true',
+    open: 'false',
 });

@@ -1,0 +1,41 @@
+.popupPrivacy {
+    &__content {
+        margin-top: 70px;
+        padding-bottom: 25px;
+
+        & p {
+            font-size: 18px;
+            color: #fff;
+        }
+    }
+
+    &__inner {
+        height: calc(100vh - 180px);
+        max-height: calc(100vh - 180px);
+    }
+}
+
+@media screen and (max-width: 1000px),
+screen and (max-height: 900px) {
+    .popupPrivacy {
+        &__inner {
+            margin-top: 65px;
+            height: calc(100vh - 100px);
+            max-height: calc(100vh - 100px);
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .popupPrivacy {
+        &__inner {
+            margin-top: 55px;
+        }
+        &__content p {
+            font-size: 14px;
+        }
+        &__content {
+            margin-top: 40px;
+        }
+    }
+}
