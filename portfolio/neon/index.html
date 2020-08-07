@@ -627,6 +627,24 @@
                     </div>
                 </div>
             </section>
+
+               <!-- Модальное окно: Политика конфиденциальности -->
+               <section x-data="{}" x-subscribe class="popup">
+                <div x-cloak
+                    x-show.transition.in.duration.350ms.out.scale.50.duration.350ms.opacity.duration.350ms="$store.modalPrivacy.open === 'true'"
+                    class="popupRegister popupCoop">
+                    <button><img class="popup__close popupCoop__close"
+                            @click="$store.modalPrivacy.open = 'false'; scrollbarToggle()" src="imgs/closePacket.svg"
+                            alt=""></button>
+                    <div class="packet__inner">
+                        <div class="container">
+                           
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <footer class="footer">
