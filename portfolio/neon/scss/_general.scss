@@ -31,6 +31,7 @@ html {
 ::-webkit-scrollbar {
     display: block;
     width: 6px !important;
+    height: 6px;
     background: #222;
 }
 
@@ -171,8 +172,8 @@ img {
     margin-left: auto;
 }
 
-input::-webkit-input-placeholder {opacity: 1}
-textarea::-webkit-input-placeholder {opacity: 1}
+input::-webkit-input-placeholder {opacity: 1; color: inherit;}
+textarea::-webkit-input-placeholder {opacity: 1; color: inherit;}
 ::placeholder {opacity: 1}  
 
 .order-button {

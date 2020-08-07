@@ -1,4 +1,4 @@
-// FrontEnd by exzolink
+// Frontend by exzolink
 // exzolink.github.io
 
 var slideUp = (target, duration = 500) => {
@@ -259,6 +259,35 @@ var vacButton = document.querySelectorAll('.vac__spoiler_button');
     });
 });
 
+window.onload = function () {
+    var timePicker = document.querySelectorAll('.js-time-picker');
+    for (var i = 0; i < timePicker.length; i++) {
+       var picker = new Picker(timePicker[i], {
+            format: 'HH:mm',
+            headers: false,
+            controls: true
+        });
+    }
+}
+
+var nextButton = document.querySelectorAll('.popupOrder__button_next');
+[].forEach.call(nextButton, function (e) {
+    e.addEventListener('click', function (e) {
+        var startTime = this.closest('.popupOrder__zone_inner').querySelector('.startTime').value;
+        var endTime = this.closest('.popupOrder__zone_inner').querySelector('.endTime').value;
+        var selectedPlaces = this.closest('.popupOrder__zone_inner').querySelectorAll('.popupOrder__places_item.active').length;
+        var selectedTime = this.closest('.popupOrder__zone_inner').querySelector('.selectedTime').value = (startTime + ' - ' + endTime);
+        var countPlaces = this.closest('.popupOrder__zone_inner').querySelector('.selectedPlaces').value = (selectedPlaces); 
+    });
+});
+
+var place = document.querySelectorAll('.popupOrder__places_item:not(.busy)');
+[].forEach.call(place, function (e) {
+    e.addEventListener('click', function (e) {
+        var selectPlace = this.classList.toggle('active');
+    });
+});
+
 Spruce.store('modalRegister', {
     open: 'false',
 });
@@ -273,4 +302,10 @@ Spruce.store('modalCoop', {
 });
 Spruce.store('modalVac', {
     open: 'false',
+});
+Spruce.store('modalOrder', {
+    open: 'false',
+});
+Spruce.store('modalOrderTab', {
+    tab: 'tuf',
 });

@@ -7,13 +7,14 @@
         <link rel="stylesheet" href="css/styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/swiper.min.css">
+        <link rel="stylesheet" href="css/picker.min.css">
         <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css' rel='stylesheet' />
         <title>Neon</title>
     </head>
 
     <body>
         <header x-data="{ BurgerOpen: false }">
-            <div x-show.transition.in.duration.350ms.out.scale.0.duration.350ms.opacity.duration.350ms="BurgerOpen"
+            <div x-show.transition.in.duration.350ms.out.scale.50.duration.350ms.opacity.duration.350ms="BurgerOpen"
                 x-cloak class="header__menu">
                 <div class="header__inner">
                     <div class="header__controls">
@@ -64,7 +65,7 @@
                                 <a href="contacts.html" class="nav__link">Контакты</a>
                             </div>
                             <div class="flex">
-                                <a href="" class="nav__btn_order">Забронировать место</a>
+                                <a href="" class="nav__btn_order" @click.prevent="$store.modalOrder.open = 'true'; scrollbarToggle()">Забронировать место</a>
                                 <button @click="BurgerOpen = true" class="nav__btn_menu"><img src="imgs/menu.svg"
                                         alt=""></button>
                             </div>
@@ -75,7 +76,7 @@
         </header>
 
 
-        <main class="main">
+        <main x-data="{}" x-subscribe class="main">
             <section class="zones" x-data="{ tab: 'tuf' }">
                 <div class="zones__selector">
                     <div class="container">
@@ -184,7 +185,7 @@
                                     <span class="zones__price_text">Стоимость:</span>
                                     <span class="zones__price_number">1000 тг/ч</span>
                                 </div>
-                                <button class="order-button">Забронировать место</button>
+                                <button class="order-button" @click="$store.modalOrder.open = 'true'; scrollbarToggle(); $store.modalOrderTab.tab = 'tuf'">Забронировать место</button>
                             </div>
                         </div>
 
@@ -260,16 +261,16 @@
                                                     class="lazyload" data-src="imgs/gamezone_img2.png" alt=""></a>
                                         </div>
                                         <div class="swiper-slide zones__gallery_item">
-                                            <a data-fslightbox="zone2" href="imgs/gamezone_img.png"><img class="lazyload"
-                                                    data-src="imgs/gamezone_img.png" alt=""></a>
+                                            <a data-fslightbox="zone2" href="imgs/gamezone_img.png"><img
+                                                    class="lazyload" data-src="imgs/gamezone_img.png" alt=""></a>
                                         </div>
                                         <div class="swiper-slide zones__gallery_item">
                                             <a data-fslightbox="zone2" href="imgs/gamezone_img2.png"><img
                                                     class="lazyload" data-src="imgs/gamezone_img2.png" alt=""></a>
                                         </div>
                                         <div class="swiper-slide zones__gallery_item">
-                                            <a data-fslightbox="zone2" href="imgs/gamezone_img.png"><img class="lazyload"
-                                                    data-src="imgs/gamezone_img.png" alt=""></a>
+                                            <a data-fslightbox="zone2" href="imgs/gamezone_img.png"><img
+                                                    class="lazyload" data-src="imgs/gamezone_img.png" alt=""></a>
                                         </div>
                                     </div>
                                     <div class="swiper-button-next"></div>
@@ -360,7 +361,7 @@
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
                         </div>
-                        <button class="order-button mx-auto">Забронировать место</button>
+                        <button class="order-button mx-auto" @click.prevent="$store.modalOrder.open = 'true'; scrollbarToggle()">Забронировать место</button>
                     </div>
                 </div>
             </section>
@@ -403,7 +404,7 @@
                                     <a href=""><img class="mapHalf__img" src="imgs/wassup.svg" alt=""></a>
                                 </div>
                                 <div class="order-button-link mt-auto mapHalf__btn"><a href=""
-                                        class="order-button">Забронировать место</a></div>
+                                        class="order-button" @click.prevent="$store.modalOrder.open = 'true'; scrollbarToggle()">Забронировать место</a></div>
                             </div>
                         </div>
                     </div>
@@ -447,6 +448,900 @@
                     </div>
                 </div>
             </section>
+
+            <section x-data="{}" x-subscribe class="popup">
+                <div x-cloak
+                    x-show.transition.in.duration.350ms.out.scale.50.duration.350ms.opacity.duration.350ms="$store.modalOrder.open === 'true'"
+                    class="popupRegister popupOrder">
+                    <button><img @click="$store.modalOrder.open = 'false'; scrollbarToggle()"
+                            class="popup__close popupCoop__close" src="imgs/closePacket.svg" alt=""></button>
+                    <img src="imgs/logo.svg" alt="" class="popupOrder__logo">
+
+                    <div class="popupOrder__inner">
+                        <h3 class="zones__hard_title popupOrder__title">Забронировать лучшее место</h3>
+                        <div class="popupOrder__selector_wrapper">
+                            <div class="popupRegister__selector popupOrder__selector">
+                                <div class="zones__tabs_item popupRegister__selector_item"
+                                    :class="{ 'active': $store.modalOrderTab.tab === 'tuf' }" @click="$store.modalOrderTab.tab = 'tuf'">Tuf Zone</div>
+                                <div class="zones__tabs_item popupRegister__selector_item"
+                                    :class="{ 'active': $store.modalOrderTab.tab === 'steel' }" @click="$store.modalOrderTab.tab = 'steel'">Steel Zone
+                                </div>
+                                <div class="zones__tabs_item popupRegister__selector_item"
+                                    :class="{ 'active': $store.modalOrderTab.tab === 'asus' }" @click="$store.modalOrderTab.tab = 'asus'">Bootcamp by Asus
+                                    Rog
+                                </div>
+                                <div class="zones__tabs_item popupRegister__selector_item"
+                                    :class="{ 'active': $store.modalOrderTab.tab === 'zone2' }" @click="$store.modalOrderTab.tab = 'zone2'">Bootcamp Zone
+                                    2
+                                </div>
+                                <div class="zones__tabs_item popupRegister__selector_item"
+                                    :class="{ 'active': $store.modalOrderTab.tab === 'ps4' }" @click="$store.modalOrderTab.tab = 'ps4'">PS4 Room
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="popupRegister__content popupOrder__content">
+
+                            <!-- Вкладка: Tuf Zone -->
+                            <div x-show.transition.in.opacity.duration.350ms="$store.modalOrderTab.tab === 'tuf'"
+                                class="popupOrder__zone">
+
+                                <!-- Вкладка: Tuf Zone / Wrapper для окон -->
+                                <div x-data="{ zoneSubTab: 'windowOne', date: 'none' }" class="popupOrder__zone_inner">
+
+                                    <!-- Вкладка: Tuf Zone / Суб-вкладка: Окно 1 -->
+                                    <div x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowOne'"
+                                        class="popupOrder__zone_item">
+                                        <div class="popupOrder__zone_wrap">
+                                            <div>
+                                                <h3 class="zones__hard_title popupOrder__zone_title">Tuf Zone</h3>
+                                                <p class="popupOrder__zone_desc">20xRTX2070Super + RAM 16Гб</p>
+                                            </div>
+                                            <h3 class="zones__hard_title popupOrder__zone_price"><span>1500 тг/ч</span>
+                                            </h3>
+                                        </div>
+
+                                        <p class="popupOrder__zone_desc-large">Выберите дату и время посещения:</p>
+                                        <div class="popupOrder__zone_date-wrap">
+                                            <div><button
+                                                    @click="date = 'today'; $refs.dateTuf.value = $event.target.innerText"
+                                                    :class="{ 'active': date === 'today' }">04.08.2020</button></div>
+                                            <div><button
+                                                    @click="date = 'tomorrow'; $refs.dateTuf.value = $event.target.innerText"
+                                                    :class="{ 'active': date === 'tomorrow' }">05.08.2020</button></div>
+                                        </div>
+                                        <div class="popupOrder__zone_time-wrap">
+                                            <div class="popupOrder__zone_time">
+                                                <span>с</span>
+                                                <div class="popupOrder__zone_time-select">
+                                                    <button id="startMinus">-</button>
+                                                    <input id="startTime" type="text" autocomplete="off"
+                                                        class="form-control js-time-picker startTime" value="09:00">
+                                                    <button id="startPlus">+</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="popupOrder__zone_time">
+                                                <span>до</span>
+                                                <div class="popupOrder__zone_time-select">
+                                                    <button id="endMinus">-</button>
+                                                    <input id="endTime" type="text" autocomplete="off"
+                                                        class="form-control js-time-picker endTime" value="10:00">
+                                                    <button id="endPlus">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div @click="zoneSubTab = 'windowTwo'"
+                                            class="popupOrder__button popupOrder__button_next">
+                                            <span>Дальше</span>
+                                            <img src="imgs/arrowNext.svg" alt="">
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Вкладка: Tuf Zone / Суб-вкладка: Окно 2 -->
+                                    <div x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowTwo'"
+                                        class="popupOrder__zone_item">
+                                        <div class="popupOrder__zone_wrap">
+                                            <div>
+                                                <h3 class="zones__hard_title popupOrder__zone_title">Tuf Zone</h3>
+                                                <p class="popupOrder__zone_desc">20xRTX2070Super + RAM 16Гб</p>
+                                            </div>
+                                            <h3 class="zones__hard_title popupOrder__zone_price"><span>1500 тг/ч</span>
+                                            </h3>
+                                        </div>
+
+                                        <p class="popupOrder__zone_desc-large">Выберите свободные места</p>
+                                        <div class="popupOrder__places popupOrder__places_tufzone">
+
+                                            <div class="popupOrder__legend">
+                                                <div class="popupOrder__legend_free">
+                                                    <span></span>
+                                                    <span>свободно</span>
+                                                </div>
+                                                <div class="popupOrder__legend_busy">
+                                                    <span></span>
+                                                    <span>забронировано</span>
+                                                </div>
+                                                <div class="popupOrder__legend_active">
+                                                    <span></span>
+                                                    <span>ваш выбор</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="popupOrder__places_inner popupOrder__places_tufzone_inner">
+
+                                                <div class="popupOrder__places_tufzone_wrapper">
+                                                    <div class="popupOrder__up">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                    </div>
+
+                                                    <div class="popupOrder__down">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="popupOrder__places_tufzone_wrapper">
+                                                    <div class="popupOrder__up">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                    </div>
+
+                                                    <div class="popupOrder__down">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div @click="zoneSubTab = 'windowThree'"
+                                            class="popupOrder__button popupOrder__button_next">
+                                            <span>Дальше</span>
+                                            <img src="imgs/arrowNext.svg" alt="">
+                                        </div>
+
+                                        <div @click="zoneSubTab = 'windowOne'"
+                                            class="popupOrder__button popupOrder__button_prev">
+                                            <img src="imgs/arrowPrev.svg" alt="">
+                                            <span>Назад</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Вкладка: Tuf Zone / Суб-вкладка: Окно 3 -->
+                                    <div x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowThree'"
+                                        class="popupOrder__zone_item">
+                                        <div class="popupOrder__zone_wrap">
+                                            <div>
+                                                <h3 class="zones__hard_title popupOrder__zone_title">Tuf Zone</h3>
+                                                <p class="popupOrder__zone_desc">20xRTX2070Super + RAM 16Гб</p>
+                                            </div>
+                                            <h3 class="zones__hard_title popupOrder__zone_price"><span>1500 тг/ч</span>
+                                            </h3>
+                                        </div>
+
+                                        <p class="popupOrder__zone_desc-large">Введите контактные данные</p>
+
+                                        <!-- Форма передачи данных -->
+                                        <form action="" class="popupOrder__zone_info">
+                                            <p>Ваше посещение: <input class="zone-info" type="text" autocomplete="off"
+                                                    value="Tuf Zone" required readonly></p>
+                                            <div class="zone-info-block">
+                                                <p>Дата: <input class="zone-info" type="text" x-ref="dateTuf"
+                                                        autocomplete="off" minlength="6" placeholder="не выбрана"
+                                                        required readonly></p>
+                                                <p>Время: <input class="zone-info selectedTime" type="text"
+                                                        autocomplete="off" minlength="4" placeholder="не выбрано"
+                                                        required readonly></p>
+                                                <p>Количество компьютеров: <input class="zone-info selectedPlaces"
+                                                        type="text" autocomplete="off" placeholder="не выбрано" required
+                                                        readonly></p>
+                                            </div>
+
+                                            <div class="register__form settings__form popupOrder__contact">
+                                                <div class="subscribe__inputs register__inputs settings__inputs">
+                                                    <input type="text" placeholder="Имя">
+                                                    <input type="text" placeholder="Телефон*" required>
+                                                </div>
+
+                                                <div class="subscribe__inputs settings__save_pass popupOrder__submit">
+                                                    <button type="submit">Забронировать</button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                        <div @click="zoneSubTab = 'windowTwo'"
+                                            class="popupOrder__button popupOrder__button_prev">
+                                            <img src="imgs/arrowPrev.svg" alt="">
+                                            <span>Назад</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <!-- Вкладка: Steel Zone -->
+                            <div x-show.transition.in.opacity.duration.350ms="$store.modalOrderTab.tab === 'steel'"
+                                class="popupOrder__zone">
+
+                                <!-- Вкладка: Steel Zone / Wrapper для окон -->
+                                <div x-data="{ zoneSubTab: 'windowOne', date: 'none' }" class="popupOrder__zone_inner">
+
+                                    <!-- Вкладка: Steel Zone / Суб-вкладка: Окно 1 -->
+                                    <div x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowOne'"
+                                        class="popupOrder__zone_item">
+                                        <div class="popupOrder__zone_wrap">
+                                            <div>
+                                                <h3 class="zones__hard_title popupOrder__zone_title">Steel Zone</h3>
+                                                <p class="popupOrder__zone_desc">20xRTX2070Super + RAM 16Гб</p>
+                                            </div>
+                                            <h3 class="zones__hard_title popupOrder__zone_price"><span>1500 тг/ч</span>
+                                            </h3>
+                                        </div>
+
+                                        <p class="popupOrder__zone_desc-large">Выберите дату и время посещения:</p>
+                                        <div class="popupOrder__zone_date-wrap">
+                                            <div><button
+                                                    @click="date = 'today'; $refs.dateTuf.value = $event.target.innerText"
+                                                    :class="{ 'active': date === 'today' }">04.08.2020</button></div>
+                                            <div><button
+                                                    @click="date = 'tomorrow'; $refs.dateTuf.value = $event.target.innerText"
+                                                    :class="{ 'active': date === 'tomorrow' }">05.08.2020</button></div>
+                                        </div>
+                                        <div class="popupOrder__zone_time-wrap">
+                                            <div class="popupOrder__zone_time">
+                                                <span>с</span>
+                                                <div class="popupOrder__zone_time-select">
+                                                    <button id="startMinus">-</button>
+                                                    <input id="startTime" type="text" autocomplete="off"
+                                                        class="form-control js-time-picker startTime" value="09:00">
+                                                    <button id="startPlus">+</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="popupOrder__zone_time">
+                                                <span>до</span>
+                                                <div class="popupOrder__zone_time-select">
+                                                    <button id="endMinus">-</button>
+                                                    <input id="endTime" type="text" autocomplete="off"
+                                                        class="form-control js-time-picker endTime" value="10:00">
+                                                    <button id="endPlus">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div @click="zoneSubTab = 'windowTwo'"
+                                            class="popupOrder__button popupOrder__button_next">
+                                            <span>Дальше</span>
+                                            <img src="imgs/arrowNext.svg" alt="">
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Вкладка: Steel Zone / Суб-вкладка: Окно 2 -->
+                                    <div x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowTwo'"
+                                        class="popupOrder__zone_item">
+                                        <div class="popupOrder__zone_wrap">
+                                            <div>
+                                                <h3 class="zones__hard_title popupOrder__zone_title">Steel Zone</h3>
+                                                <p class="popupOrder__zone_desc">20xRTX2070Super + RAM 16Гб</p>
+                                            </div>
+                                            <h3 class="zones__hard_title popupOrder__zone_price"><span>1500 тг/ч</span>
+                                            </h3>
+                                        </div>
+
+                                        <p class="popupOrder__zone_desc-large">Выберите свободные места</p>
+                                        <div class="popupOrder__places popupOrder__places_tufzone">
+
+                                            <div class="popupOrder__legend">
+                                                <div class="popupOrder__legend_free">
+                                                    <span></span>
+                                                    <span>свободно</span>
+                                                </div>
+                                                <div class="popupOrder__legend_busy">
+                                                    <span></span>
+                                                    <span>забронировано</span>
+                                                </div>
+                                                <div class="popupOrder__legend_active">
+                                                    <span></span>
+                                                    <span>ваш выбор</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="popupOrder__places_inner popupOrder__places_tufzone_inner">
+
+                                                <div class="popupOrder__places_tufzone_wrapper">
+                                                    <div class="popupOrder__up">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                    </div>
+
+                                                    <div class="popupOrder__down">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="popupOrder__places_tufzone_wrapper">
+                                                    <div class="popupOrder__up">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                    </div>
+
+                                                    <div class="popupOrder__down">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div @click="zoneSubTab = 'windowThree'"
+                                            class="popupOrder__button popupOrder__button_next">
+                                            <span>Дальше</span>
+                                            <img src="imgs/arrowNext.svg" alt="">
+                                        </div>
+
+                                        <div @click="zoneSubTab = 'windowOne'"
+                                            class="popupOrder__button popupOrder__button_prev">
+                                            <img src="imgs/arrowPrev.svg" alt="">
+                                            <span>Назад</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Вкладка: Steel Zone / Суб-вкладка: Окно 3 -->
+                                    <div x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowThree'"
+                                        class="popupOrder__zone_item">
+                                        <div class="popupOrder__zone_wrap">
+                                            <div>
+                                                <h3 class="zones__hard_title popupOrder__zone_title">Steel Zone</h3>
+                                                <p class="popupOrder__zone_desc">20xRTX2070Super + RAM 16Гб</p>
+                                            </div>
+                                            <h3 class="zones__hard_title popupOrder__zone_price"><span>1500 тг/ч</span>
+                                            </h3>
+                                        </div>
+
+                                        <p class="popupOrder__zone_desc-large">Введите контактные данные</p>
+
+                                        <!-- Форма передачи данных -->
+                                        <form action="" class="popupOrder__zone_info">
+                                            <p>Ваше посещение: <input class="zone-info" type="text" autocomplete="off"
+                                                    value="Steel Zone" required readonly></p>
+                                            <div class="zone-info-block">
+                                                <p>Дата: <input class="zone-info" type="text" x-ref="dateTuf"
+                                                        autocomplete="off" minlength="6" placeholder="не выбрана"
+                                                        required readonly></p>
+                                                <p>Время: <input class="zone-info selectedTime" type="text"
+                                                        autocomplete="off" minlength="4" placeholder="не выбрано"
+                                                        required readonly></p>
+                                                <p>Количество компьютеров: <input class="zone-info selectedPlaces"
+                                                        type="text" autocomplete="off" placeholder="не выбрано" required
+                                                        readonly></p>
+                                            </div>
+
+                                            <div class="register__form settings__form popupOrder__contact">
+                                                <div class="subscribe__inputs register__inputs settings__inputs">
+                                                    <input type="text" placeholder="Имя">
+                                                    <input type="text" placeholder="Телефон*" required>
+                                                </div>
+
+                                                <div class="subscribe__inputs settings__save_pass popupOrder__submit">
+                                                    <button type="submit">Забронировать</button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                        <div @click="zoneSubTab = 'windowTwo'"
+                                            class="popupOrder__button popupOrder__button_prev">
+                                            <img src="imgs/arrowPrev.svg" alt="">
+                                            <span>Назад</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Вкладка: Bootcamp by Asus Rog -->
+                            <div x-show.transition.in.opacity.duration.350ms="$store.modalOrderTab.tab === 'asus'"
+                                class="popupOrder__zone">
+
+                                <!-- Вкладка: Bootcamp by Asus Rog / Wrapper для окон -->
+                                <div x-data="{ zoneSubTab: 'windowOne', date: 'none' }" class="popupOrder__zone_inner">
+
+                                    <!-- Вкладка: Bootcamp by Asus Rog / Суб-вкладка: Окно 1 -->
+                                    <div x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowOne'"
+                                        class="popupOrder__zone_item">
+                                        <div class="popupOrder__zone_wrap">
+                                            <div>
+                                                <h3 class="zones__hard_title popupOrder__zone_title">Bootcamp by Asus
+                                                    Rog</h3>
+                                                <p class="popupOrder__zone_desc">20xRTX2070Super + RAM 16Гб</p>
+                                            </div>
+                                            <h3 class="zones__hard_title popupOrder__zone_price"><span>1500 тг/ч</span>
+                                            </h3>
+                                        </div>
+
+                                        <p class="popupOrder__zone_desc-large">Выберите дату и время посещения:</p>
+                                        <div class="popupOrder__zone_date-wrap">
+                                            <div><button
+                                                    @click="date = 'today'; $refs.dateTuf.value = $event.target.innerText"
+                                                    :class="{ 'active': date === 'today' }">04.08.2020</button></div>
+                                            <div><button
+                                                    @click="date = 'tomorrow'; $refs.dateTuf.value = $event.target.innerText"
+                                                    :class="{ 'active': date === 'tomorrow' }">05.08.2020</button></div>
+                                        </div>
+                                        <div class="popupOrder__zone_time-wrap">
+                                            <div class="popupOrder__zone_time">
+                                                <span>с</span>
+                                                <div class="popupOrder__zone_time-select">
+                                                    <button id="startMinus">-</button>
+                                                    <input id="startTime" type="text" autocomplete="off"
+                                                        class="form-control js-time-picker startTime" value="09:00">
+                                                    <button id="startPlus">+</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="popupOrder__zone_time">
+                                                <span>до</span>
+                                                <div class="popupOrder__zone_time-select">
+                                                    <button id="endMinus">-</button>
+                                                    <input id="endTime" type="text" autocomplete="off"
+                                                        class="form-control js-time-picker endTime" value="10:00">
+                                                    <button id="endPlus">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div @click="zoneSubTab = 'windowTwo'"
+                                            class="popupOrder__button popupOrder__button_next">
+                                            <span>Дальше</span>
+                                            <img src="imgs/arrowNext.svg" alt="">
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Вкладка: Bootcamp by Asus Rog / Суб-вкладка: Окно 2 -->
+                                    <div x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowTwo'"
+                                        class="popupOrder__zone_item">
+                                        <div class="popupOrder__zone_wrap">
+                                            <div>
+                                                <h3 class="zones__hard_title popupOrder__zone_title">Bootcamp by Asus
+                                                    Rog</h3>
+                                                <p class="popupOrder__zone_desc">20xRTX2070Super + RAM 16Гб</p>
+                                            </div>
+                                            <h3 class="zones__hard_title popupOrder__zone_price"><span>1500 тг/ч</span>
+                                            </h3>
+                                        </div>
+
+                                        <p class="popupOrder__zone_desc-large">Выберите свободные места</p>
+                                        <div class="popupOrder__places popupOrder__places_tufzone">
+
+                                            <div class="popupOrder__legend">
+                                                <div class="popupOrder__legend_free">
+                                                    <span></span>
+                                                    <span>свободно</span>
+                                                </div>
+                                                <div class="popupOrder__legend_busy">
+                                                    <span></span>
+                                                    <span>забронировано</span>
+                                                </div>
+                                                <div class="popupOrder__legend_active">
+                                                    <span></span>
+                                                    <span>ваш выбор</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="popupOrder__places_inner popupOrder__places_tufzone_inner">
+
+                                                <div class="popupOrder__places_tufzone_wrapper">
+                                                    <div class="popupOrder__up">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                    </div>
+
+                                                    <div class="popupOrder__down">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="popupOrder__places_tufzone_wrapper">
+                                                    <div class="popupOrder__up">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                    </div>
+
+                                                    <div class="popupOrder__down">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div @click="zoneSubTab = 'windowThree'"
+                                            class="popupOrder__button popupOrder__button_next">
+                                            <span>Дальше</span>
+                                            <img src="imgs/arrowNext.svg" alt="">
+                                        </div>
+
+                                        <div @click="zoneSubTab = 'windowOne'"
+                                            class="popupOrder__button popupOrder__button_prev">
+                                            <img src="imgs/arrowPrev.svg" alt="">
+                                            <span>Назад</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Вкладка: Bootcamp by Asus Rog / Суб-вкладка: Окно 3 -->
+                                    <div x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowThree'"
+                                        class="popupOrder__zone_item">
+                                        <div class="popupOrder__zone_wrap">
+                                            <div>
+                                                <h3 class="zones__hard_title popupOrder__zone_title">Bootcamp by Asus
+                                                    Rog</h3>
+                                                <p class="popupOrder__zone_desc">20xRTX2070Super + RAM 16Гб</p>
+                                            </div>
+                                            <h3 class="zones__hard_title popupOrder__zone_price"><span>1500 тг/ч</span>
+                                            </h3>
+                                        </div>
+
+                                        <p class="popupOrder__zone_desc-large">Введите контактные данные</p>
+
+                                        <!-- Форма передачи данных -->
+                                        <form action="" class="popupOrder__zone_info">
+                                            <p>Ваше посещение: <input class="zone-info" type="text" autocomplete="off"
+                                                    value="Bootcamp by Asus Rog" required readonly></p>
+                                            <div class="zone-info-block">
+                                                <p>Дата: <input class="zone-info" type="text" x-ref="dateTuf"
+                                                        autocomplete="off" minlength="6" placeholder="не выбрана"
+                                                        required readonly></p>
+                                                <p>Время: <input class="zone-info selectedTime" type="text"
+                                                        autocomplete="off" minlength="4" placeholder="не выбрано"
+                                                        required readonly></p>
+                                                <p>Количество компьютеров: <input class="zone-info selectedPlaces"
+                                                        type="text" autocomplete="off" placeholder="не выбрано" required
+                                                        readonly></p>
+                                            </div>
+
+                                            <div class="register__form settings__form popupOrder__contact">
+                                                <div class="subscribe__inputs register__inputs settings__inputs">
+                                                    <input type="text" placeholder="Имя">
+                                                    <input type="text" placeholder="Телефон*" required>
+                                                </div>
+
+                                                <div class="subscribe__inputs settings__save_pass popupOrder__submit">
+                                                    <button type="submit">Забронировать</button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                        <div @click="zoneSubTab = 'windowTwo'"
+                                            class="popupOrder__button popupOrder__button_prev">
+                                            <img src="imgs/arrowPrev.svg" alt="">
+                                            <span>Назад</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Вкладка: Bootcamp Zone 2 -->
+                            <div x-show.transition.in.opacity.duration.350ms="$store.modalOrderTab.tab === 'zone2'"
+                                class="popupOrder__zone">
+
+                                <!-- Вкладка: Bootcamp Zone 2 / Wrapper для окон -->
+                                <div x-data="{ zoneSubTab: 'windowOne', date: 'none' }" class="popupOrder__zone_inner">
+
+                                    <!-- Вкладка: Bootcamp Zone 2 / Суб-вкладка: Окно 1 -->
+                                    <div x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowOne'"
+                                        class="popupOrder__zone_item">
+                                        <div class="popupOrder__zone_wrap">
+                                            <div>
+                                                <h3 class="zones__hard_title popupOrder__zone_title">Bootcamp Zone 2
+                                                </h3>
+                                                <p class="popupOrder__zone_desc">20xRTX2070Super + RAM 16Гб</p>
+                                            </div>
+                                            <h3 class="zones__hard_title popupOrder__zone_price"><span>1500 тг/ч</span>
+                                            </h3>
+                                        </div>
+
+                                        <p class="popupOrder__zone_desc-large">Выберите дату и время посещения:</p>
+                                        <div class="popupOrder__zone_date-wrap">
+                                            <div><button
+                                                    @click="date = 'today'; $refs.dateTuf.value = $event.target.innerText"
+                                                    :class="{ 'active': date === 'today' }">04.08.2020</button></div>
+                                            <div><button
+                                                    @click="date = 'tomorrow'; $refs.dateTuf.value = $event.target.innerText"
+                                                    :class="{ 'active': date === 'tomorrow' }">05.08.2020</button></div>
+                                        </div>
+                                        <div class="popupOrder__zone_time-wrap">
+                                            <div class="popupOrder__zone_time">
+                                                <span>с</span>
+                                                <div class="popupOrder__zone_time-select">
+                                                    <button id="startMinus">-</button>
+                                                    <input id="startTime" type="text" autocomplete="off"
+                                                        class="form-control js-time-picker startTime" value="09:00">
+                                                    <button id="startPlus">+</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="popupOrder__zone_time">
+                                                <span>до</span>
+                                                <div class="popupOrder__zone_time-select">
+                                                    <button id="endMinus">-</button>
+                                                    <input id="endTime" type="text" autocomplete="off"
+                                                        class="form-control js-time-picker endTime" value="10:00">
+                                                    <button id="endPlus">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div @click="zoneSubTab = 'windowTwo'"
+                                            class="popupOrder__button popupOrder__button_next">
+                                            <span>Дальше</span>
+                                            <img src="imgs/arrowNext.svg" alt="">
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Вкладка: Bootcamp Zone 2 / Суб-вкладка: Окно 2 -->
+                                    <div x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowTwo'"
+                                        class="popupOrder__zone_item">
+                                        <div class="popupOrder__zone_wrap">
+                                            <div>
+                                                <h3 class="zones__hard_title popupOrder__zone_title">Bootcamp Zone 2
+                                                </h3>
+                                                <p class="popupOrder__zone_desc">20xRTX2070Super + RAM 16Гб</p>
+                                            </div>
+                                            <h3 class="zones__hard_title popupOrder__zone_price"><span>1500 тг/ч</span>
+                                            </h3>
+                                        </div>
+
+                                        <p class="popupOrder__zone_desc-large">Выберите свободные места</p>
+                                        <div class="popupOrder__places popupOrder__places_tufzone">
+
+                                            <div class="popupOrder__legend">
+                                                <div class="popupOrder__legend_free">
+                                                    <span></span>
+                                                    <span>свободно</span>
+                                                </div>
+                                                <div class="popupOrder__legend_busy">
+                                                    <span></span>
+                                                    <span>забронировано</span>
+                                                </div>
+                                                <div class="popupOrder__legend_active">
+                                                    <span></span>
+                                                    <span>ваш выбор</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="popupOrder__places_inner popupOrder__places_tufzone_inner">
+
+                                                <div class="popupOrder__places_tufzone_wrapper">
+                                                    <div class="popupOrder__up">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                    </div>
+
+                                                    <div class="popupOrder__down">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="popupOrder__places_tufzone_wrapper">
+                                                    <div class="popupOrder__up">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                    </div>
+
+                                                    <div class="popupOrder__down">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                        <img class="popupOrder__places_item busy" src="imgs/upPlace.svg"
+                                                            alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div @click="zoneSubTab = 'windowThree'"
+                                            class="popupOrder__button popupOrder__button_next">
+                                            <span>Дальше</span>
+                                            <img src="imgs/arrowNext.svg" alt="">
+                                        </div>
+
+                                        <div @click="zoneSubTab = 'windowOne'"
+                                            class="popupOrder__button popupOrder__button_prev">
+                                            <img src="imgs/arrowPrev.svg" alt="">
+                                            <span>Назад</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Вкладка: Bootcamp Zone 2 / Суб-вкладка: Окно 3 -->
+                                    <div x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowThree'"
+                                        class="popupOrder__zone_item">
+                                        <div class="popupOrder__zone_wrap">
+                                            <div>
+                                                <h3 class="zones__hard_title popupOrder__zone_title">Bootcamp Zone 2
+                                                </h3>
+                                                <p class="popupOrder__zone_desc">20xRTX2070Super + RAM 16Гб</p>
+                                            </div>
+                                            <h3 class="zones__hard_title popupOrder__zone_price"><span>1500 тг/ч</span>
+                                            </h3>
+                                        </div>
+
+                                        <p class="popupOrder__zone_desc-large">Введите контактные данные</p>
+
+
+                                        <!-- Форма передачи данных -->
+                                        <form action="" class="popupOrder__zone_info">
+                                            <p>Ваше посещение: <input class="zone-info" type="text" autocomplete="off"
+                                                    value="Bootcamp Zone 2" required readonly></p>
+                                            <div class="zone-info-block">
+                                                <p>Дата: <input class="zone-info" type="text" x-ref="dateTuf"
+                                                        autocomplete="off" minlength="6" placeholder="не выбрана"
+                                                        required readonly></p>
+                                                <p>Время: <input class="zone-info selectedTime" type="text"
+                                                        autocomplete="off" minlength="4" placeholder="не выбрано"
+                                                        required readonly></p>
+                                                <p>Количество компьютеров: <input class="zone-info selectedPlaces"
+                                                        type="text" autocomplete="off" placeholder="не выбрано" required
+                                                        readonly></p>
+                                            </div>
+
+                                            <div class="register__form settings__form popupOrder__contact">
+                                                <div class="subscribe__inputs register__inputs settings__inputs">
+                                                    <input type="text" placeholder="Имя">
+                                                    <input type="text" placeholder="Телефон*" required>
+                                                </div>
+
+                                                <div class="subscribe__inputs settings__save_pass popupOrder__submit">
+                                                    <button type="submit">Забронировать</button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                        <div @click="zoneSubTab = 'windowTwo'"
+                                            class="popupOrder__button popupOrder__button_prev">
+                                            <img src="imgs/arrowPrev.svg" alt="">
+                                            <span>Назад</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <footer class="footer">
@@ -476,7 +1371,9 @@
         <script src="js/swiper.min.js"></script>
         <script src="js/lazyload.js" async></script>
         <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
+        <script src="js/picker.min.js"></script>
         <script src="js/app.min.js"></script>
+        <script>function scrollbarToggle() { document.documentElement.classList.toggle('open') }</script>
     </body>
 
 </html>
