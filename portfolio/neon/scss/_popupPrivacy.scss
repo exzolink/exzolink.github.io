@@ -10,8 +10,8 @@
     }
 
     &__inner {
-        height: calc(100vh - 180px);
-        max-height: calc(100vh - 180px);
+        height: calc((var(--vh, 1vh) * 100) - 180px);
+        max-height: calc((var(--vh, 1vh) * 100) - 180px);
     }
 }
 
@@ -20,8 +20,8 @@ screen and (max-height: 900px) {
     .popupPrivacy {
         &__inner {
             margin-top: 65px;
-            height: calc(100vh - 100px);
-            max-height: calc(100vh - 100px);
+            height: calc((var(--vh, 1vh) * 100) - 100px);
+            max-height: calc((var(--vh, 1vh) * 100) - 100px);
         }
     }
 }

@@ -1,7 +1,8 @@
 .packet {
     position: fixed;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
+    height: (var(--vh, 1vh) * 100);
     top: 0;
     left: 0;
     z-index: 999;
@@ -15,8 +16,8 @@
         position: relative;
         overflow-y: auto;
         scrollbar-width: thin;
-        height: calc(100vh - 160px);
-        max-height: calc(100vh - 160px);
+        height: calc((var(--vh, 1vh) * 100) - 160px);
+        max-height: calc((var(--vh, 1vh) * 100) - 160px);
         margin-top: 130px;
     }
 
@@ -128,8 +129,8 @@
     .packet {
         &__inner {
             margin-top: 70px;
-            height: calc(100vh - 100px);
-            max-height: calc(100vh - 100px);
+            height: calc((var(--vh, 1vh) * 100) - 100px);
+            max-height: calc((var(--vh, 1vh) * 100) - 100px);
         }
 
         &__title {
@@ -190,8 +191,8 @@
     .packet {
         &__inner {
             margin-top: 70px;
-            height: calc(100vh - 100px);
-            max-height: calc(100vh - 100px);
+            height: calc((var(--vh, 1vh) * 100) - 100px);
+            max-height: calc((var(--vh, 1vh) * 100) - 100px);
         }
 
         &__img_right {

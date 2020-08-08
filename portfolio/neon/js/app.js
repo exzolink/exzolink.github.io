@@ -1,6 +1,16 @@
 // Frontend by exzolink
 // exzolink.github.io
 
+var vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+if (window.innerWidth < 800) {
+window.addEventListener('resize', () => {
+    var vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  });
+};
+
 var slideUp = (target, duration = 500) => {
     target.style.transitionProperty = 'height, margin, padding';
     target.style.transitionDuration = duration + 'ms';
@@ -312,11 +322,3 @@ Spruce.store('modalOrderTab', {
 Spruce.store('modalPrivacy', {
     open: 'false',
 });
-
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-window.addEventListener('resize', () => {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-  });
