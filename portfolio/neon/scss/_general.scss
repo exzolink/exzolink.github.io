@@ -41,6 +41,16 @@ html {
     border: 0;
 }
 
+.zones__tabs::-webkit-scrollbar, .popupOrder__selector_wrapper::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.popupRegister__content::-webkit-scrollbar {
+    width: 2px !important;
+    height: 2px;
+}
+
 ::-webkit-scrollbar-thumb:hover {
     background: #0094C4;
 }
@@ -126,7 +136,9 @@ img {
     min-height: 200px;
     transition: border .3s ease, opacity .3s, transform .3s, filter .3s !important;
 }
+
 @media screen and (max-width: 800px) {
+
     .lazyload,
     .lazyloading {
         min-height: 100px;
