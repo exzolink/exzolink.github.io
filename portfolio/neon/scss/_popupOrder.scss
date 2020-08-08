@@ -16,8 +16,8 @@
     &__content {
         margin: 0;
         padding: 0;
-        height: calc(100vh - 440px);
-        max-height: calc(100vh - 440px);
+        height: calc((var(--vh, 1vh) * 100) - 440px);
+        max-height: calc((var(--vh, 1vh) * 100) - 440px);
     }
 
     &__logo {
@@ -393,8 +393,8 @@ screen and (max-width: 1370px) {
         }
 
         &__content {
-            max-height: calc(100vh - 315px);
-            height: calc(100vh - 315px);
+            max-height: calc((var(--vh, 1vh) * 100) - 315px);
+            height: calc((var(--vh, 1vh) * 100) - 315px);
         }
 
         &__zone {
@@ -602,8 +602,8 @@ screen and (max-width: 1370px) {
         }
 
         &__content {
-            max-height: calc(100vh - 290px);
-            height: calc(100vh - 290px);
+            max-height: calc((var(--vh, 1vh) * 100) - 290px);
+            height: calc((var(--vh, 1vh) * 100) - 290px);
         }
 
         &__zone_title {
