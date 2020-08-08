@@ -41,8 +41,8 @@
         padding: 60px 90px;
         padding-bottom: 0 !important;
         overflow-y: auto;
-        height: calc(100% - 300px);
-        max-height: calc(100% - 300px);
+        height: calc((var(--vh, 1vh) * 100) - 300px);
+        max-height: calc((var(--vh, 1vh) * 100) - 300px);
         scrollbar-width: thin;
     }
 
@@ -104,8 +104,8 @@
         &__content {
             margin: 0 30px;
             padding: 30px 45px;
-            height: calc(100% - 170px);
-            max-height: calc(100% - 170px);
+            height: calc((var(--vh, 1vh) * 100) - 170px);
+            max-height: calc((var(--vh, 1vh) * 100) - 170px);
         }
 
         &__selector {
@@ -213,8 +213,8 @@
         &__content {
             margin: 0 15px;
             padding: 25px 15px;
-            height: calc(100% - 150px);
-            max-height: calc(100% - 150px);
+            height: calc((var(--vh, 1vh) * 100) - 150px);
+            max-height: calc((var(--vh, 1vh) * 100) - 150px);
             padding-top: 20px;
         }
     }
