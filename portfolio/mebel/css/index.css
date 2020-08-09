@@ -1,10 +1,3 @@
-@font-face {
-	font-display:swap;font-family:'PlayfairDisplayBold';src:url('../fonts/PlayfairDisplay/PlayfairDisplayBold/PlayfairDisplayBold.woff2') format('woff2');
-}
-
-@font-face {
-	font-display:swap;font-family:'PlayfairDisplayRegular';src:url('../fonts/PlayfairDisplay/PlayfairDisplayRegular/PlayfairDisplayRegular.woff2') format('woff2');
-}
 
 @font-face {
 	font-display:swap;font-family:'SegoeUIRegular';src:url('../fonts/SegoeUIRegular.woff2') format('woff2');
@@ -270,6 +263,12 @@
 
 .middle .mid-flex .bag .img-wrap {
 	position: relative;
+}
+
+@media screen and (max-width: 425px) {
+	.seo__container {
+		padding: 0 16px;
+	}
 }
 
 .middle .mid-flex .bag .img-wrap::after {
@@ -4188,4 +4187,16 @@
 
 .wds_filter_header {
 	font-size: 18px !important;
+}
+
+@media screen and (max-width: 550px) {
+	.footer {
+		padding-bottom: 0;
+	}
+	.footer .footer-list__flex {
+		display: none;
+	}
+	.footer .copyright-flex {
+		display: none;
+	}
 }

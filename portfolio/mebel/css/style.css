@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'SegoeUISemiBold';
-    src: url('../fonts/ofont-ru-segoe-ui-semibold.woff2') format('woff2');
+    src: url('../fonts/SegoeUISemiBold.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap
@@ -8,7 +8,7 @@
 
 .categ {
     position: relative;
-    font-family: "SegoeUISemiBold", Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+    font-family: "SegoeUISemiBold", sans-serif;
     font-size: 14px;
     color: #fff;
     background-color: #4a505f
