@@ -1,55 +1,13 @@
-@font-face {
-    font-family: "Open Sans";
-    font-display: swap;
-    src: url("../fonts/opensans/opensans-regular.eot");
-    src: url("../fonts/opensans/opensans-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans/opensans-regular.woff") format("woff"), url("../fonts/opensans/opensans-regular.woff2") format("woff2"), url("../fonts/opensans/opensans-regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 400
+a:hover {
+    opacity: .85;
 }
 
-@font-face {
-    font-family: "Open Sans";
-    font-display: swap;
-    src: url("../fonts/opensans/opensans-bold.eot");
-    src: url("../fonts/opensans/opensans-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans/opensans-bold.woff") format("woff"), url("../fonts/opensans/opensans-bold.woff2") format("woff2"), url("../fonts/opensans/opensans-bold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 700
+.top-product__link--img:hover {
+    opacity: 1;
 }
 
-@font-face {
-    font-family: "PT Sans";
-    font-display: swap;
-    src: url("../fonts/ptsans/pts55f.eot");
-    src: url("../fonts/ptsans/pts55f.eot?#iefix") format("embedded-opentype"), url("../fonts/ptsans/pts55f.woff") format("woff"), url("../fonts/ptsans/pts55f.woff2") format("woff2"), url("../fonts/ptsans/pts55f.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 400
-}
-
-@font-face {
-    font-family: "PT Sans";
-    font-display: swap;
-    src: url("../fonts/ptsans/pts75f.eot");
-    src: url("../fonts/ptsans/pts75f.eot?#iefix") format("embedded-opentype"), url("../fonts/ptsans/pts75f.woff") format("woff"), url("../fonts/ptsans/pts75f.woff2") format("woff2"), url("../fonts/ptsans/pts75f.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 700
-}
-
-@font-face {
-    font-family: "PT Sans Narrow";
-    font-display: swap;
-    src: url("../fonts/ptsansnarrow/ptsansnarrow-regular.eot");
-    src: url("../fonts/ptsansnarrow/ptsansnarrow-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ptsansnarrow/ptsansnarrow-regular.woff") format("woff"), url("../fonts/ptsansnarrow/ptsansnarrow-regular.woff2") format("woff2"), url("../fonts/ptsansnarrow/ptsansnarrow-regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 400
-}
-
-@font-face {
-    font-family: "PT Sans Narrow";
-    font-display: swap;
-    src: url("../fonts/ptsansnarrow/ptsansnarrow-bold.eot");
-    src: url("../fonts/ptsansnarrow/ptsansnarrow-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ptsansnarrow/ptsansnarrow-bold.woff") format("woff"), url("../fonts/ptsansnarrow/ptsansnarrow-bold.woff2") format("woff2"), url("../fonts/ptsansnarrow/ptsansnarrow-bold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 700
+.swiper-link:hover {
+    opacity: 1;
 }
 
 .section__front-page {
@@ -61,6 +19,10 @@
 .section__categories {
     margin-right: -16px;
     margin-left: -16px
+}
+
+.review__item a {
+    color: #3E85DC;
 }
 
 .section__categories .section__title {
@@ -89,6 +51,9 @@
 
 .category__item {
     position: relative;
+}
+.category__img:hover {
+    cursor: pointer;
 }
 
 main {
@@ -370,7 +335,8 @@ main {
         border-top-right-radius: 0px;
         max-height: 180px;
         height: 100%;
-        border-top-left-radius: 20px
+        border-top-left-radius: 20px;
+        object-fit: unset;
     }
 
     .subcategory__list {
@@ -446,7 +412,16 @@ main {
 }
 
 .top-product__item:not(:last-child) {
-    margin-bottom: 24px
+    margin-bottom: 48px
+}
+
+@media screen and (max-width: 550px) {
+    .top-product__item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    .latest-news__img {
+        object-fit: cover;
+    }
 }
 
 .top-product__img {
@@ -481,7 +456,7 @@ main {
         max-width: unset;
         width: calc((100% - 24px) / 2);
         margin-right: 24px;
-        margin-bottom: 80px
+        margin-bottom: 80px;
     }
 
     .top-product__item:nth-child(2n) {
@@ -491,9 +466,13 @@ main {
     .top-product__item:nth-last-child(-n+2) {
         margin-bottom: 0
     }
-
+    .top-product__price {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
     .top-product__img {
-        width: 100%
+        width: 100%;
+        max-height: 395px;
     }
 
     .top-product__text {
@@ -688,7 +667,6 @@ main {
     flex-direction: column;
     padding: 28px 16px;
     background-color: #F5F6F9;
-    height: 210px
 }
 
 .review__author {
@@ -748,13 +726,12 @@ main {
     color: #68788E;
     font-size: 1rem;
     line-height: 1.375rem;
-    height: 88px;
-    overflow: hidden
+    overflow: hidden;
+    margin-bottom: 8px;
 }
 
 @media (min-width: 576px) {
     .review__item {
-        height: 184px;
         padding: 36px 32px;
         border-radius: 16px
     }
@@ -803,6 +780,28 @@ main {
     margin-bottom: 24px
 }
 
+@media screen and (min-width: 500px) {
+    .btn-hidden {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section-hidden {
+        display: none;
+    }
+}
+
+
+.latest-news__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
 .latest-news__item:before {
     content: '';
     position: absolute;
@@ -810,6 +809,7 @@ main {
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 40;
     background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%)
 }
 
@@ -819,10 +819,11 @@ main {
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 50;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 16px
+    padding: 20px
 }
 
 .latest-news__title {
@@ -836,7 +837,7 @@ main {
 .latest-news__icon--more {
     width: 24px;
     height: 19px;
-    background-image: url(../imgs/arrow-right-2.svg);
+    background-image: url('../imgs/arrowR.svg');
     background-position: left center;
     background-repeat: no-repeat;
     background-size: 24px 19px
@@ -846,7 +847,7 @@ main {
     .latest-news__item {
         width: 600px;
         margin: 0 auto 24px;
-        border-radius: 16px;
+        border-radius: 20px;
         overflow: hidden
     }
 }
@@ -883,4 +884,19 @@ main {
     }
 }
 
+@media screen and (max-width: 992px) {
+    .brands__item {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .top-product__img {
+        max-height: 230px;
+    }
+    .top-product__text {
+        display: flex;
+        flex-direction: column;
+    }
+}
 /*# sourceMappingURL=front-style.css.map */

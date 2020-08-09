@@ -1,15 +1,13 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap);
-
 @font-face {
-	font-display:swap;font-family:'PlayfairDisplayBold';src:url('../fonts/PlayfairDisplay/PlayfairDisplayBold/PlayfairDisplayBold.woff') format('woff');
+	font-display:swap;font-family:'PlayfairDisplayBold';src:url('../fonts/PlayfairDisplay/PlayfairDisplayBold/PlayfairDisplayBold.woff2') format('woff2');
 }
 
 @font-face {
-	font-display:swap;font-family:'PlayfairDisplayRegular';src:url('../fonts/PlayfairDisplay/PlayfairDisplayRegular/PlayfairDisplayRegular.woff') format('woff');
+	font-display:swap;font-family:'PlayfairDisplayRegular';src:url('../fonts/PlayfairDisplay/PlayfairDisplayRegular/PlayfairDisplayRegular.woff2') format('woff2');
 }
 
 @font-face {
-	font-display:swap;font-family:'SegoeUIRegular';src:url('../fonts/SegoeUIRegular.woff') format('woff');
+	font-display:swap;font-family:'SegoeUIRegular';src:url('../fonts/SegoeUIRegular.woff2') format('woff2');
 }
 
 * {
