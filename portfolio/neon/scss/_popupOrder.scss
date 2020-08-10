@@ -270,6 +270,10 @@
             }
         }
 
+        &_steelzone {
+            background-image: url('../imgs/steelZone.svg');
+        }
+
         &_item {
             transition: opacity .2s ease;
             pointer-events: all;
