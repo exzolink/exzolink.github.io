@@ -1,235 +1,231 @@
 .settings {
-    &__buttons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 100px;
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
 
-        & button {
-            font-size: 24px;
-            color: #fff;
-            background-color: transparent;
-            font-family: inherit;
-            transition: opacity .2s ease;
+    & button {
+      font-size: 24px;
+      color: #fff;
+      background-color: transparent;
+      font-family: inherit;
+      transition: opacity 0.2s ease;
 
-            &:hover {
-                cursor: pointer;
-                opacity: .7;
-            }
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
 
-            &.active {
-                font-weight: 700;
-                color: $blue;
-                opacity: 1;
-                cursor: default;
-            }
+      &.active {
+        font-weight: 700;
+        color: $blue;
+        opacity: 1;
+        cursor: default;
+      }
 
-            &:last-child {
-                margin-left: 140px;
-            }
-        }
+      &:last-child {
+        margin-left: 140px;
+      }
+    }
+  }
+
+  &__inputs {
+    & input {
+      flex-basis: 26%;
+    }
+  }
+
+  &__save {
+    margin-top: 20px;
+    justify-content: flex-end;
+
+    & button {
+      flex-basis: 31%;
+      text-transform: none;
     }
 
-    &__inputs {
-        & input {
-            flex-basis: 26%;
-        }
+    &_rating button {
+      max-width: 318px;
+      width: 100%;
+    }
+
+    &_pass {
+      margin-top: 130px;
+      justify-content: flex-end;
+
+      & button {
+        text-transform: none;
+        flex-basis: 31%;
+      }
+    }
+  }
+
+  &__link {
+    align-items: center;
+    display: flex;
+    margin-bottom: 0;
+
+    & span {
+      margin-left: 15px;
+    }
+  }
+
+  &__selector {
+    justify-content: flex-start;
+
+    & img {
+      margin: 0 15px;
+    }
+
+    & button {
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__rating {
+    &_exists {
+      margin-left: auto;
+      margin-right: 45px;
+      max-width: 325px;
+
+      & p {
+        font-size: 18px;
+        font-weight: 400;
+        font-family: "Gotham", sans-serif;
+        margin-bottom: 12px;
+      }
+
+      & span {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        color: $blue;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .settings {
+    &__buttons {
+      margin-bottom: 50px;
+    }
+    &__rating_exists {
+      margin-left: 0;
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+    &__form {
+      flex-direction: column;
+    }
+
+    &__inputs input {
+      max-width: 260px;
     }
 
     &__save {
-        margin-top: 20px;
-        justify-content: flex-end;
+      & button {
+        max-width: 320px;
+        width: 100%;
+        padding: 18px 60px;
+      }
+
+      &_pass {
+        margin-top: 10px;
 
         & button {
-            flex-basis: 31%;
-            text-transform: none;
+          max-width: 320px;
+          width: 100%;
+          padding: 18px 60px;
         }
-
-        &_rating button {
-            max-width: 318px;
-            width: 100%;
-        }
-
-        &_pass {
-            margin-top: 130px;
-            justify-content: flex-end;
-
-            & button {
-                text-transform: none;
-                flex-basis: 31%;
-            }
-        }
-
+      }
     }
-
-    &__link {
-        align-items: center;
-        display: flex;
-        margin-bottom: 0;
-
-        & span {
-            margin-left: 15px;
-        }
-    }
-
-    &__selector {
-        justify-content: flex-start;
-
-        & img {
-            margin: 0 15px;
-        }
-
-        & button {
-            transition: opacity .2s ease;
-
-            &:hover {
-                cursor: pointer;
-                opacity: .7;
-            }
-        }
-    }
-
-    &__rating {
-        &_exists {
-            margin-left: auto;
-            margin-right: 45px;
-            max-width: 325px;
-
-            & p {
-                font-size: 18px;
-                font-weight: 400;
-                font-family: 'Gotham', sans-serif;
-                margin-bottom: 12px;
-            }
-
-            & span {
-                font-family: 'Montserrat', sans-serif;
-                font-weight: 700;
-                font-size: 18px;
-                color: $blue;
-            }
-        }
-    }
-}
-
-
-
-@media screen and (max-width: 1000px) {
-    .settings {
-        &__buttons {
-            margin-bottom: 50px;
-        }
-        &__rating_exists {
-            margin-left: 0;
-            margin-top: 25px;
-            margin-bottom: 15px;
-        }
-        &__form {
-            flex-direction: column;
-        }
-
-        &__inputs input {
-            max-width: 260px;
-        }
-
-        &__save {
-            & button {
-                max-width: 320px;
-                width: 100%;
-                padding: 18px 60px;
-            }
-
-            &_pass {
-                margin-top: 10px;
-
-                & button {
-                    max-width: 320px;
-                    width: 100%;
-                    padding: 18px 60px;
-                }
-            }
-        }
-    }
+  }
 }
 
 @media screen and (max-width: 800px) {
-    .settings {
-        &__buttons button {
-            font-size: 18px;
-        }
+  .settings {
+    &__buttons button {
+      font-size: 18px;
     }
+  }
 }
 
 @media screen and (max-width: 550px) {
-    .settings {
-        &__buttons {
-            margin-top: 50px;
-            margin-bottom: 25px;
+  .settings {
+    &__buttons {
+      margin-top: 50px;
+      margin-bottom: 25px;
 
-            & button {
-                font-size: 16px;
-            }
+      & button {
+        font-size: 16px;
+      }
 
-            & button:last-child {
-                margin-left: 60px;
-            }
-        }
-
-        &__link {
-            & img {
-                max-width: 55px;
-            }
-        }
-        &__save_rating button {
-            max-width: 280px;
-        }
-        &__inputs input {
-            max-width: 220px;
-        }
-        &__save button {
-            max-width: 280px;
-            width: 100%;
-        }
-        &__save_pass button {
-            max-width: 280px;
-            width: 100%;
-        }
-        &_rating button {
-            max-width: 280px;
-        }
-        &__rating_exists {
-            & p {
-                font-size: 14px;
-            }
-            & span {
-                font-size: 14px;
-            }
-        }
-
+      & button:last-child {
+        margin-left: 60px;
+      }
     }
+
+    &__link {
+      & img {
+        max-width: 55px;
+      }
+    }
+    &__save_rating button {
+      max-width: 280px;
+    }
+    &__inputs input {
+      max-width: 220px;
+    }
+    &__save button {
+      max-width: 280px;
+      width: 100%;
+    }
+    &__save_pass button {
+      max-width: 280px;
+      width: 100%;
+    }
+    &_rating button {
+      max-width: 280px;
+    }
+    &__rating_exists {
+      & p {
+        font-size: 14px;
+      }
+      & span {
+        font-size: 14px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 415px) {
-    .settings {
-        &__inputs input {
-            max-width: none;
-        }
-        &__save {
-            & button {
-                max-width: none;
-                width: 100%;
-            }
-            &_rating {
-                & button {
-                    max-width: none;
-                }
-            }
-            &_pass {
-                & button {
-                    width: 100%;
-                    max-width: none;
-                }
-            }
-        }
+  .settings {
+    &__inputs input {
+      max-width: none;
     }
+    &__save {
+      & button {
+        max-width: none;
+        width: 100%;
+      }
+      &_rating {
+        & button {
+          max-width: none;
+        }
+      }
+      &_pass {
+        & button {
+          width: 100%;
+          max-width: none;
+        }
+      }
+    }
+  }
 }

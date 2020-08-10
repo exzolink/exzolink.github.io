@@ -1,116 +1,115 @@
 .navigation {
-    background-color: #222;
+  background-color: #222;
 
-    &__inner {
-        flex-wrap: wrap;
-        display: flex;
-        padding: 65px 0;
-        justify-content: space-between;
+  &__inner {
+    flex-wrap: wrap;
+    display: flex;
+    padding: 65px 0;
+    justify-content: space-between;
+  }
+  &__block {
+    flex-basis: 31.5%;
+    display: flex;
+    flex-direction: column;
+
+    & a {
+      color: #fff;
+      font-size: 20px;
+      line-height: normal;
+      font-weight: 400;
+      margin-bottom: 25px;
+      width: max-content;
+      transition: color 0.3s ease;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:first-child {
+        font-weight: 700;
+        color: #fff !important;
+      }
+
+      &:hover {
+        color: $blue;
+      }
     }
-    &__block {
-        flex-basis: 31.5%;
-        display: flex;
-        flex-direction: column;
-        
-        & a {
-            color: #fff;
-            font-size: 20px;
-            line-height: normal;
-            font-weight: 400;
-            margin-bottom: 25px;
-            width: max-content;
-            transition: color .3s ease;
+  }
 
-            &:last-child {
-                margin-bottom: 0;
-            }
-            &:first-child {
-                font-weight: 700;
-                color: #fff !important;
-            }
+  &__socials {
+    display: flex;
+    margin-top: auto;
 
-            &:hover {
-                color: $blue;
-            }
+    & a {
+      margin-right: 28px;
+      margin-bottom: 0;
+
+      &:hover {
+        .navigation__img {
+          border-radius: 100%;
+          filter: invert(62%) sepia(24%) saturate(4630%) hue-rotate(155deg)
+            brightness(94%) contrast(107%);
         }
-        
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
-
-    &__socials {
-        display: flex;
-        margin-top: auto;
-
-        & a {
-            margin-right: 28px;
-            margin-bottom: 0;
-
-            &:hover {
-                .navigation__img {
-                    border-radius: 100%;
-                    filter: invert(62%) sepia(24%) saturate(4630%) hue-rotate(155deg) brightness(94%) contrast(107%);
-                }
-            }
-
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-    }
+  }
 }
 
 @media screen and (max-width: 850px) {
-    .navigation {
-        &__block {
-            flex-basis: 27.5%;
-        }
+  .navigation {
+    &__block {
+      flex-basis: 27.5%;
     }
+  }
 }
 
-
 @media screen and (max-width: 760px) {
-    .navigation {
-        &__block {
-            flex-basis: 48%;
+  .navigation {
+    &__block {
+      flex-basis: 48%;
 
-            &:last-child {
-                margin-top: 25px;
-            }
-        }
-
-        &__socials {
-            margin-top: 50px;
-        }
+      &:last-child {
+        margin-top: 25px;
+      }
     }
+
+    &__socials {
+      margin-top: 50px;
+    }
+  }
 }
 
 @media screen and (max-width: 560px) {
-    .navigation {
-        &__inner {
-            padding: 36px 0;
-            justify-content: center;
-            align-items: center;
-        }
-
-        &__block {
-            display: none;
-            margin: 0 !important;
-
-            & a {
-                display: none;
-            }
-
-            &:last-child {
-                display: flex;
-            }
-        }
-        &__socials {
-            width: max-content;
-            margin-top: 0;
-
-            & a {
-                display: flex;
-                margin-right: 35px;
-            }
-        }
+  .navigation {
+    &__inner {
+      padding: 36px 0;
+      justify-content: center;
+      align-items: center;
     }
+
+    &__block {
+      display: none;
+      margin: 0 !important;
+
+      & a {
+        display: none;
+      }
+
+      &:last-child {
+        display: flex;
+      }
+    }
+    &__socials {
+      width: max-content;
+      margin-top: 0;
+
+      & a {
+        display: flex;
+        margin-right: 35px;
+      }
+    }
+  }
 }

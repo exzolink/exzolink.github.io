@@ -1,82 +1,81 @@
 .kitchen {
-    background-repeat: no-repeat;
-    background-position: 100% 20%;
-    background-size: cover;
-    background-color: #201F20;
+  background-repeat: no-repeat;
+  background-position: 100% 20%;
+  background-size: cover;
+  background-color: #201f20;
 
-    &__inner {
-        padding-top: 45px;
-        padding-bottom: 60px;
+  &__inner {
+    padding-top: 45px;
+    padding-bottom: 60px;
+  }
+
+  &__content {
+    display: flex;
+    margin-top: 45px;
+  }
+
+  &__img {
+    display: flex;
+    height: max-content;
+    flex-basis: 50%;
+    background-color: #222;
+
+    & img {
+      width: 100%;
     }
+  }
 
-    &__content {
-        display: flex;
-        margin-top: 45px;
+  &__info {
+    flex-basis: 50%;
+    display: flex;
+    padding-left: 45px;
+    flex-direction: column;
+    & p {
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 115px;
     }
-
-    &__img {
-        display: flex;
-        height: max-content;
-        flex-basis: 50%;
-        background-color: #222;
-
-        & img {
-            width: 100%;
-        }
-    }
-
-    &__info {
-        flex-basis: 50%;
-        display: flex;
-        padding-left: 45px;
-        flex-direction: column;
-        & p {
-            color: #fff;
-            font-size: 18px;
-            margin-bottom: 115px;
-        }
-     
-    }
+  }
 }
 
 @media screen and (max-width: 1050px) {
-    .kitchen__info p {
-        margin-bottom: 70px;
-    }
+  .kitchen__info p {
+    margin-bottom: 70px;
+  }
 }
 
 @media screen and (max-width: 850px) {
-    .kitchen__info p {
-        font-size: 14px;
-        margin-bottom: 45px;
-    }
+  .kitchen__info p {
+    font-size: 14px;
+    margin-bottom: 45px;
+  }
 }
 
 @media screen and (max-width: 700px) {
-    .kitchen {
-        &__content {
-            flex-direction: column;
-        }
-        &__info {
-            padding: 30px 15px;
-        }
-        &__container {
-            padding-left: 0;
-            padding-right: 0;
-        }
-        &__inner {
-            padding-bottom: 45px;
-        }
+  .kitchen {
+    &__content {
+      flex-direction: column;
     }
+    &__info {
+      padding: 30px 15px;
+    }
+    &__container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__inner {
+      padding-bottom: 45px;
+    }
+  }
 }
 
 @media screen and (max-width: 415px) {
-    .kitchen {
-        &__info {
-            & p {
-                line-height: 1.4;
-                font-size: 12px;
-            }
-        }
+  .kitchen {
+    &__info {
+      & p {
+        line-height: 1.4;
+        font-size: 12px;
+      }
     }
+  }
 }

@@ -1,392 +1,513 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <title>Neon</title>
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/swiper.min.css">
-        <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css' rel='stylesheet' />
-        <title>Neon</title>
-    </head>
+  <body>
+    <header x-data="{ BurgerOpen: false }">
+      <div
+        x-show.transition.in.duration.350ms.out.scale.50.duration.350ms.opacity.duration.350ms="BurgerOpen"
+        x-cloak
+        class="header__menu"
+      >
+        <div class="header__inner">
+          <div class="header__controls">
+            <div><img decoding="async" src="imgs/logo.svg" alt="" /></div>
+            <div>
+              <img
+                decoding="async"
+                @click="BurgerOpen = false"
+                src="imgs/close.svg"
+                alt=""
+                class="header__close"
+              />
+            </div>
+          </div>
+          <div class="header__links_wrapper">
+            <div class="header__links">
+              <a href="" class="header__link">Разделы сайта</a>
+              <a href="" class="header__link">Как это было?</a>
+              <a href="" class="header__link">Сообщество Neon eSports</a>
+              <a href="" class="header__link">Новости мирового киберспорта</a>
+            </div>
+            <div class="header__links">
+              <a class="header__link active" href="">eSports Hub</a>
+              <a class="header__link" href="">Рейтинг Dota 2</a>
+              <a class="header__link" href="">Личный кабинет</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <body>
-        <header x-data="{ BurgerOpen: false }">
-            <div x-show.transition.in.duration.350ms.out.scale.0.duration.350ms.opacity.duration.350ms="BurgerOpen"
-                x-cloak class="header__menu">
-                <div class="header__inner">
-                    <div class="header__controls">
-                        <div><img src="imgs/logo.svg" alt=""></div>
-                        <div><img @click="BurgerOpen = false" src="imgs/close.svg" alt="" class="header__close"></div>
-                    </div>
-                    <div class="header__links_wrapper">
-                        <div class="header__links">
-                            <a href="" class="header__link">Разделы сайта</a>
-                            <a href="" class="header__link">Как это было?</a>
-                            <a href="" class="header__link">Сообщество Neon eSports</a>
-                            <a href="" class="header__link">Новости мирового киберспорта</a>
-                        </div>
-                        <div class="header__links">
-                            <a class="header__link active" href="">eSports Hub</a>
-                            <a class="header__link" href="">Рейтинг Dota 2</a>
-                            <a class="header__link" href="">Личный кабинет</a>
-                        </div>
-                    </div>
-                </div>
+      <div class="header">
+        <div class="top__nav">
+          <div class="container">
+            <div class="top__nav_inner">
+              <a class="top__nav_link active" href="">eSports Hub</a>
+              <a class="top__nav_link" href="">Рейтинг Dota 2</a>
+              <a class="top__nav_link" href="">Личный кабинет</a>
+              <a class="top__nav_link" href="tel:+77777777777"
+                >+7 777 777 77 77</a
+              >
+            </div>
+          </div>
+        </div>
+        <nav class="nav">
+          <div class="container">
+            <div class="nav__inner">
+              <a class="nav__logo" href=""
+                ><img decoding="async" src="imgs/logo.svg" alt=""
+              /></a>
+              <div class="nav__items">
+                <a href="" class="nav__link">Разделы сайта</a>
+                <a href="" class="nav__link">Как это было?</a>
+                <a href="" class="nav__link">Сообщество Neon eSports</a>
+                <a href="" class="nav__link">Новости мирового киберспорта</a>
+              </div>
+              <div class="flex">
+                <button class="nav__btn_order">Вход / Регистрация</button>
+                <button @click="BurgerOpen = true" class="nav__btn_menu">
+                  <img decoding="async" src="imgs/menu.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="article">
+        <div class="article__top">
+          <div class="container">
+            <p class="article__top_date">27 июля</p>
+            <p class="article__top_tag">Как это было?</p>
+
+            <h3 class="zones__hard_title"><span>Заголовок статьи</span></h3>
+          </div>
+        </div>
+
+        <div
+          class="article__bg welcome__section lazyload"
+          data-bg="imgs/news__big.jpg"
+        >
+          <div class="welcome__label">
+            <h3 class="welcome__label_title">
+              Официальное <br />открытие eSports
+            </h3>
+            <h3 class="welcome__label_suptitle">Bar &amp; Gaming</h3>
+          </div>
+        </div>
+
+        <div class="article__body">
+          <img
+            decoding="async"
+            class="zones__particles events__particles lazyload"
+            data-src="imgs/purple-cloud2.png"
+            alt=""
+          />
+          <div class="container">
+            <div class="article__content">
+              <p>
+                Текст статьи текст статьи Текст статьи текст статьи Текст статьи
+                текст статьи Текст статьи текст статьи Текст статьи текст статьи
+                Текст статьи текст статьи Текст статьи текст статьи Текст статьи
+                текст статьи Текст статьи текст статьи
+              </p>
+
+              <img decoding="async" src="imgs/features1.jpg" alt="" />
+
+              <p>
+                Текст статьи текст статьи Текст статьи текст статьи Текст статьи
+                текст статьи Текст статьи текст статьи Текст статьи текст статьи
+                Текст статьи текст статьи Текст статьи текст статьи Текст статьи
+                текст статьи Текст статьи текст статьи
+              </p>
+
+              <img decoding="async" src="imgs/feedback_2.jpg" alt="" />
+
+              <p>
+                Текст статьи текст статьи Текст статьи текст статьи Текст статьи
+                текст статьи Текст статьи текст статьи Текст статьи текст статьи
+                Текст статьи текст статьи Текст статьи текст статьи Текст статьи
+                текст статьи Текст статьи текст статьи
+              </p>
             </div>
 
-            <div class="header">
-                <div class="top__nav">
-                    <div class="container">
-                        <div class="top__nav_inner">
-                            <a class="top__nav_link active" href="">eSports Hub</a>
-                            <a class="top__nav_link" href="">Рейтинг Dota 2</a>
-                            <a class="top__nav_link" href="">Личный кабинет</a>
-                            <a class="top__nav_link" href="tel:+77777777777">+7 777 777 77 77</a>
-                        </div>
-                    </div>
-                </div>
-                <nav class="nav">
-                    <div class="container">
-                        <div class="nav__inner">
-                            <a class="nav__logo" href=""><img src="imgs/logo.svg" alt=""></a>
-                            <div class="nav__items">
-                                <a href="" class="nav__link">Разделы сайта</a>
-                                <a href="" class="nav__link">Как это было?</a>
-                                <a href="" class="nav__link">Сообщество Neon eSports</a>
-                                <a href="" class="nav__link">Новости мирового киберспорта</a>
-                            </div>
-                            <div class="flex">
-                                <button class="nav__btn_order">Вход / Регистрация</button>
-                                <button @click="BurgerOpen = true" class="nav__btn_menu"><img src="imgs/menu.svg"
-                                        alt=""></button>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
+            <div class="article__author">
+              <img decoding="async" src="imgs/articleAuthor.png" alt="" />
+              <div class="article__author_info">
+                <p>Автор:</p>
+                <p>Асембек Бейбарыс</p>
+                <p>Создатель Neon eSports</p>
+              </div>
             </div>
-        </header>
+          </div>
+        </div>
+      </section>
 
-        <main class="main">
-            <section class="article">
-                <div class="article__top">
-                    <div class="container">
-                        <p class="article__top_date">27 июля</p>
-                        <p class="article__top_tag">Как это было?</p>
+      <section class="news">
+        <div class="container">
+          <div class="news__inner">
+            <h3 class="zones__hard_title"><span>Читай еще</span></h3>
 
-                        <h3 class="zones__hard_title"><span>Заголовок статьи</span></h3>
-                    </div>
-                </div>
-
-                <div class="article__bg welcome__section lazyload" data-bg="imgs/news__big.jpg">
-                    <div class="welcome__label">
-                        <h3 class="welcome__label_title">Официальное <br>открытие eSports</h3>
-                        <h3 class="welcome__label_suptitle">Bar &amp; Gaming</h3>
-                    </div>
-                </div>
-
-                <div class="article__body">
-                    <img class="zones__particles events__particles lazyload" data-src="imgs/purple-cloud2.png" alt="">
-                    <div class="container">
-                        <div class="article__content">
-                            <p>Текст статьи текст статьи Текст статьи текст статьи Текст статьи текст статьи Текст
-                                статьи текст статьи Текст статьи текст статьи Текст статьи текст статьи Текст статьи
-                                текст статьи Текст статьи текст статьи Текст статьи текст статьи</p>
-
-                            <img src="imgs/features1.jpg" alt="">
-
-                            <p>Текст статьи текст статьи Текст статьи текст статьи Текст статьи текст статьи Текст
-                                статьи текст статьи Текст статьи текст статьи Текст статьи текст статьи Текст статьи
-                                текст статьи Текст статьи текст статьи Текст статьи текст статьи</p>
-
-                            <img src="imgs/feedback_2.jpg" alt="">
-
-                            <p>Текст статьи текст статьи Текст статьи текст статьи Текст статьи текст статьи Текст
-                                статьи текст статьи Текст статьи текст статьи Текст статьи текст статьи Текст статьи
-                                текст статьи Текст статьи текст статьи Текст статьи текст статьи</p>
-                        </div>
-
-                        <div class="article__author">
-                            <img src="imgs/articleAuthor.png" alt="">
-                            <div class="article__author_info">
-                                <p>Автор:</p>
-                                <p>Асембек Бейбарыс</p>
-                                <p>Создатель Neon eSports</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="news">
-                <div class="container">
-                    <div class="news__inner">
-                        <h3 class="zones__hard_title"><span>Читай еще</span></h3>
-
-                        <div class="news__content">
-                            <a href="" class="news__item">
-                                <div class="news__item_img lazyload" data-bg="imgs/news.jpg"></div>
-                                <h3 class="news__item_title">Заголовок статьи</h3>
-                                <p class="news__item_excerpt">Вводный текст с описанием</p>
-                            </a>
-                            <a href="" class="news__item">
-                                <div class="news__item_img lazyload" data-bg="imgs/news.jpg"></div>
-                                <h3 class="news__item_title">Заголовок статьи</h3>
-                                <p class="news__item_excerpt">Вводный текст с описанием</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="comments">
-                <div class="container">
-                    <div class="comments__inner">
-                        <h3 class="zones__hard_title">Комментарии</h3>
-
-                        <!-- Блок для главного коммента и всех последующих ответов -->
-                        <div class="comments__item">
-
-                            <!-- Главный коммент -->
-                            <div class="comments__item_main">
-                                <div class="comments__item_inner">
-                                    <div class="comments__item_info">
-                                        <img src="imgs/articleAuthor.png" alt="">
-                                        <p class="comments__item_author">Асембек Бейбарыс</p>
-                                        <p class="comments__item_date">вчера в 16:17</p>
-                                    </div>
-                                    <div class="comments__item_body">
-                                        <p class="comments__item_content">текст текст текст Ответ на комментарий Ответ
-                                            на комментарий Ответ на комментарий Ответ на комментарий Ответ на
-                                            комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий
-                                        </p>
-                                        <div class="comments__button_reply"><button>Ответить</button></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Ответ на комментарий -->
-                            <div class="comments__item_reply">
-                                <div class="comments__item_inner">
-                                    <div class="comments__item_info">
-                                        <img src="imgs/articleAuthor.png" alt="">
-                                        <p class="comments__item_author">Асембек Бейбарыс</p>
-                                        <p class="comments__item_date">вчера в 16:17</p>
-                                    </div>
-                                    <p class="comments__item_content">текст текст текст Ответ на комментарий Ответ на
-                                        комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ
-                                        на комментарий Ответ на комментарий Ответ на комментарий</p>
-                                    <div class="comments__button_reply"><button>Ответить</button></div>
-                                </div>
-                            </div>
-
-                            <!-- Ответ на комментарий -->
-                            <div class="comments__item_reply">
-                                <div class="comments__item_inner">
-                                    <div class="comments__item_info">
-                                        <img src="imgs/articleAuthor.png" alt="">
-                                        <p class="comments__item_author">Асембек Бейбарыс</p>
-                                        <p class="comments__item_date">вчера в 16:17</p>
-                                    </div>
-                                    <p class="comments__item_content">текст текст текст Ответ на комментарий Ответ на
-                                        комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ
-                                        на комментарий Ответ на комментарий Ответ на комментарий</p>
-                                    <div class="comments__button_reply"><button>Ответить</button></div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="comments__item">
-                            <div class="comments__item_main">
-                                <div class="comments__item_inner">
-                                    <div class="comments__item_info">
-                                        <img src="imgs/articleAuthor.png" alt="">
-                                        <p class="comments__item_author">Асембек Бейбарыс</p>
-                                        <p class="comments__item_date">вчера в 16:17</p>
-                                    </div>
-                                    <div class="comments__item_body">
-                                        <p class="comments__item_content">текст текст текст Ответ на комментарий Ответ
-                                            на комментарий Ответ на комментарий Ответ на комментарий Ответ на
-                                            комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий
-                                        </p>
-                                        <div class="comments__button_reply"><button>Ответить</button></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="comments__item_reply">
-                                <div class="comments__item_inner">
-                                    <div class="comments__item_info">
-                                        <img src="imgs/articleAuthor.png" alt="">
-                                        <p class="comments__item_author">Асембек Бейбарыс</p>
-                                        <p class="comments__item_date">вчера в 16:17</p>
-                                    </div>
-                                    <p class="comments__item_content">текст текст текст Ответ на комментарий Ответ на
-                                        комментарий Ответ на комментарий Ответ на комментарий Ответ на комментарий Ответ
-                                        на комментарий Ответ на комментарий Ответ на комментарий</p>
-                                    <div class="comments__button_reply"><button>Ответить</button></div>
-                                </div>
-                            </div>
-
-                            <!-- Блок для ответа (маленький) -->
-                            <div class="comments__reply comments__item_reply">
-                                <div class="comments__item_inner">
-                                    <div class="comments__item_info">
-                                        <img src="imgs/articleAuthor.png" alt="">
-                                        <p class="comments__item_author">Асембек Бейбарыс</p>
-                                    </div>
-                                    <form action="" class="comments__reply_body">
-                                        <textarea name="comment" placeholder="Введите текст"></textarea>
-                                        <div class="comments__send"><button type="submit"
-                                                class="nav__btn_order">Отправить</button></div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Блок для ответа -->
-                        <div class="comments__reply">
-                            <div class="comments__item_inner">
-                                <div class="comments__item_info">
-                                    <img src="imgs/articleAuthor.png" alt="">
-                                    <p class="comments__item_author">Асембек Бейбарыс</p>
-                                </div>
-                                <form action="" class="comments__reply_body">
-                                    <textarea name="comment" placeholder="Введите текст"></textarea>
-                                    <div class="comments__send"><button type="submit"
-                                            class="nav__btn_order">Отправить</button></div>
-                                </form>
-                            </div>
-                        </div>
-
-                        <!-- Блок для неавторизованных -->
-                        <div class="comments__reply comments__notLogged">
-                            <div class="comments__item_inner comments__notLogged_inner">
-                                <p>Только зарегистрированные пользователи могут оставлять комментарии. Войдите,
-                                    пожалуйста.</p>
-                                <button class="nav__btn_order">Вход / Регистрация</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <section class="posts">
-                <div class="posts__inner">
-                    <div class="container">
-                        <a href="" class="posts__item">
-                            <div class="posts__item_img"><img class="lazyload" data-src="imgs/post.png" alt=""></div>
-
-                            <div class="posts__item_info">
-                                <div class="posts__item_wrap">
-                                    <p>Новости мирового киберспорта</p>
-                                    <p>27 июля</p>
-                                </div>
-
-                                <h3 class="posts__title">Заголовок статьи</h3>
-                                <p class="posts__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Deleniti, necessitatibus.</p>
-                            </div>
-                        </a>
-
-                        <a href="" class="posts__item">
-                            <div class="posts__item_img"><img class="lazyload" data-src="imgs/post.png" alt=""></div>
-
-                            <div class="posts__item_info">
-                                <div class="posts__item_wrap">
-                                    <p>Новости мирового киберспорта</p>
-                                    <p>27 июля</p>
-                                </div>
-
-                                <h3 class="posts__title">Заголовок статьи</h3>
-                                <p class="posts__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Deleniti, necessitatibus.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="instagram">
-                <div class="container">
-                    <div class="instagram__inner">
-                        <h3 class="zones__hard_title">Мы в <span>Instagram</span></h3>
-
-                        <div class="instagram__content"></div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="navigation">
-                <div class="container">
-                    <div class="navigation__inner">
-                        <div class="navigation__block">
-                            <a>Основные разделы</a>
-                            <a href="./">Главная</a>
-                            <a href="about.html">О нас</a>
-                            <a href="gamezones.html">Игровые зоны</a>
-                            <a href="menu.html">Меню</a>
-                            <a href="events.html">Мероприятия</a>
-                            <a href="promo.html">Акции</a>
-                            <a href="">Блог</a>
-                            <a href="contacts.html">Контакты</a>
-                        </div>
-
-                        <div class="navigation__block">
-                            <a>eSports Hub</a>
-                            <a href="">Рейтинг Dota 2</a>
-                            <a href="">Как это было?</a>
-                            <a href="">Сообщество Neon eSports</a>
-                            <a href="">Новости мирового <br>киберспорта</a>
-                        </div>
-
-                        <div class="navigation__block">
-                            <a>Информация</a>
-                            <a href="">Сотрудничество</a>
-                            <a href="">Вакансии</a>
-                            <a href="">Конфиденциальность</a>
-                            <div class="navigation__socials">
-                                <a href=""><img class="navigation__img" src="imgs/yt.svg" alt=""></a>
-                                <a href=""><img class="navigation__img" src="imgs/inst.svg" alt=""></a>
-                                <a href=""><img class="navigation__img" src="imgs/tg.svg" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="container">
-                <div class="footer__inner">
-                    <div class="footer__block">
-                        <a href=""><img src="imgs/logo.svg" alt=""></a>
-                    </div>
-                    <div class="footer__block footer__block_center">
-                        <p>Neon eSports 2020</p>
-                        <p>Все права защищены</p>
-                    </div>
-                    <div class="footer__block footer__block_last">
-                        <p>Разработано командой</p>
-                        <a href=""><img src="imgs/gmglogo.png" alt=""></a>
-                    </div>
-                </div>
+            <div class="news__content">
+              <a href="" class="news__item">
+                <div
+                  class="news__item_img lazyload"
+                  data-bg="imgs/news.jpg"
+                ></div>
+                <h3 class="news__item_title">Заголовок статьи</h3>
+                <p class="news__item_excerpt">Вводный текст с описанием</p>
+              </a>
+              <a href="" class="news__item">
+                <div
+                  class="news__item_img lazyload"
+                  data-bg="imgs/news.jpg"
+                ></div>
+                <h3 class="news__item_title">Заголовок статьи</h3>
+                <p class="news__item_excerpt">Вводный текст с описанием</p>
+              </a>
             </div>
-        </footer>
+          </div>
+        </div>
+      </section>
 
+      <section class="comments">
+        <div class="container">
+          <div class="comments__inner">
+            <h3 class="zones__hard_title">Комментарии</h3>
 
+            <!-- Блок для главного коммента и всех последующих ответов -->
+            <div class="comments__item">
+              <!-- Главный коммент -->
+              <div class="comments__item_main">
+                <div class="comments__item_inner">
+                  <div class="comments__item_info">
+                    <img decoding="async" src="imgs/articleAuthor.png" alt="" />
+                    <p class="comments__item_author">Асембек Бейбарыс</p>
+                    <p class="comments__item_date">вчера в 16:17</p>
+                  </div>
+                  <div class="comments__item_body">
+                    <p class="comments__item_content">
+                      текст текст текст Ответ на комментарий Ответ на
+                      комментарий Ответ на комментарий Ответ на комментарий
+                      Ответ на комментарий Ответ на комментарий Ответ на
+                      комментарий Ответ на комментарий
+                    </p>
+                    <div class="comments__button_reply">
+                      <button>Ответить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
+              <!-- Ответ на комментарий -->
+              <div class="comments__item_reply">
+                <div class="comments__item_inner">
+                  <div class="comments__item_info">
+                    <img decoding="async" src="imgs/articleAuthor.png" alt="" />
+                    <p class="comments__item_author">Асембек Бейбарыс</p>
+                    <p class="comments__item_date">вчера в 16:17</p>
+                  </div>
+                  <p class="comments__item_content">
+                    текст текст текст Ответ на комментарий Ответ на комментарий
+                    Ответ на комментарий Ответ на комментарий Ответ на
+                    комментарий Ответ на комментарий Ответ на комментарий Ответ
+                    на комментарий
+                  </p>
+                  <div class="comments__button_reply">
+                    <button>Ответить</button>
+                  </div>
+                </div>
+              </div>
 
+              <!-- Ответ на комментарий -->
+              <div class="comments__item_reply">
+                <div class="comments__item_inner">
+                  <div class="comments__item_info">
+                    <img decoding="async" src="imgs/articleAuthor.png" alt="" />
+                    <p class="comments__item_author">Асембек Бейбарыс</p>
+                    <p class="comments__item_date">вчера в 16:17</p>
+                  </div>
+                  <p class="comments__item_content">
+                    текст текст текст Ответ на комментарий Ответ на комментарий
+                    Ответ на комментарий Ответ на комментарий Ответ на
+                    комментарий Ответ на комментарий Ответ на комментарий Ответ
+                    на комментарий
+                  </p>
+                  <div class="comments__button_reply">
+                    <button>Ответить</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        <script src="js/alpine.js" defer></script>
-        <script src="js/fslightbox.js" async></script>
-        <script src="js/swiper.min.js"></script>
-        <script src="js/lazyload.js" async></script>
-        <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
-        <script src="js/app.min.js"></script>
-    </body>
+            <div class="comments__item">
+              <div class="comments__item_main">
+                <div class="comments__item_inner">
+                  <div class="comments__item_info">
+                    <img decoding="async" src="imgs/articleAuthor.png" alt="" />
+                    <p class="comments__item_author">Асембек Бейбарыс</p>
+                    <p class="comments__item_date">вчера в 16:17</p>
+                  </div>
+                  <div class="comments__item_body">
+                    <p class="comments__item_content">
+                      текст текст текст Ответ на комментарий Ответ на
+                      комментарий Ответ на комментарий Ответ на комментарий
+                      Ответ на комментарий Ответ на комментарий Ответ на
+                      комментарий Ответ на комментарий
+                    </p>
+                    <div class="comments__button_reply">
+                      <button>Ответить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
+              <div class="comments__item_reply">
+                <div class="comments__item_inner">
+                  <div class="comments__item_info">
+                    <img decoding="async" src="imgs/articleAuthor.png" alt="" />
+                    <p class="comments__item_author">Асембек Бейбарыс</p>
+                    <p class="comments__item_date">вчера в 16:17</p>
+                  </div>
+                  <p class="comments__item_content">
+                    текст текст текст Ответ на комментарий Ответ на комментарий
+                    Ответ на комментарий Ответ на комментарий Ответ на
+                    комментарий Ответ на комментарий Ответ на комментарий Ответ
+                    на комментарий
+                  </p>
+                  <div class="comments__button_reply">
+                    <button>Ответить</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Блок для ответа (маленький) -->
+              <div class="comments__reply comments__item_reply">
+                <div class="comments__item_inner">
+                  <div class="comments__item_info">
+                    <img decoding="async" src="imgs/articleAuthor.png" alt="" />
+                    <p class="comments__item_author">Асембек Бейбарыс</p>
+                  </div>
+                  <form action="" class="comments__reply_body">
+                    <textarea
+                      name="comment"
+                      placeholder="Введите текст"
+                    ></textarea>
+                    <div class="comments__send">
+                      <button type="submit" class="nav__btn_order">
+                        Отправить
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- Блок для ответа -->
+            <div class="comments__reply">
+              <div class="comments__item_inner">
+                <div class="comments__item_info">
+                  <img decoding="async" src="imgs/articleAuthor.png" alt="" />
+                  <p class="comments__item_author">Асембек Бейбарыс</p>
+                </div>
+                <form action="" class="comments__reply_body">
+                  <textarea
+                    name="comment"
+                    placeholder="Введите текст"
+                  ></textarea>
+                  <div class="comments__send">
+                    <button type="submit" class="nav__btn_order">
+                      Отправить
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Блок для неавторизованных -->
+            <div class="comments__reply comments__notLogged">
+              <div class="comments__item_inner comments__notLogged_inner">
+                <p>
+                  Только зарегистрированные пользователи могут оставлять
+                  комментарии. Войдите, пожалуйста.
+                </p>
+                <button class="nav__btn_order">Вход / Регистрация</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="posts">
+        <div class="posts__inner">
+          <div class="container">
+            <a href="" class="posts__item">
+              <div class="posts__item_img">
+                <img
+                  decoding="async"
+                  class="lazyload"
+                  data-src="imgs/post.png"
+                  alt=""
+                />
+              </div>
+
+              <div class="posts__item_info">
+                <div class="posts__item_wrap">
+                  <p>Новости мирового киберспорта</p>
+                  <p>27 июля</p>
+                </div>
+
+                <h3 class="posts__title">Заголовок статьи</h3>
+                <p class="posts__desc">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Deleniti, necessitatibus.
+                </p>
+              </div>
+            </a>
+
+            <a href="" class="posts__item">
+              <div class="posts__item_img">
+                <img
+                  decoding="async"
+                  class="lazyload"
+                  data-src="imgs/post.png"
+                  alt=""
+                />
+              </div>
+
+              <div class="posts__item_info">
+                <div class="posts__item_wrap">
+                  <p>Новости мирового киберспорта</p>
+                  <p>27 июля</p>
+                </div>
+
+                <h3 class="posts__title">Заголовок статьи</h3>
+                <p class="posts__desc">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Deleniti, necessitatibus.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="instagram">
+        <div class="container">
+          <div class="instagram__inner">
+            <h3 class="zones__hard_title">Мы в <span>Instagram</span></h3>
+
+            <div class="instagram__content"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="navigation">
+        <div class="container">
+          <div class="navigation__inner">
+            <div class="navigation__block">
+              <a>Основные разделы</a>
+              <a href="./">Главная</a>
+              <a href="about.html">О нас</a>
+              <a href="gamezones.html">Игровые зоны</a>
+              <a href="menu.html">Меню</a>
+              <a href="events.html">Мероприятия</a>
+              <a href="promo.html">Акции</a>
+              <a href="">Блог</a>
+              <a href="contacts.html">Контакты</a>
+            </div>
+
+            <div class="navigation__block">
+              <a>eSports Hub</a>
+              <a href="">Рейтинг Dota 2</a>
+              <a href="">Как это было?</a>
+              <a href="">Сообщество Neon eSports</a>
+              <a href="">Новости мирового <br />киберспорта</a>
+            </div>
+
+            <div class="navigation__block">
+              <a>Информация</a>
+              <a href="">Сотрудничество</a>
+              <a href="">Вакансии</a>
+              <a href="">Конфиденциальность</a>
+              <div class="navigation__socials">
+                <a href=""
+                  ><img
+                    decoding="async"
+                    class="navigation__img"
+                    src="imgs/yt.svg"
+                    alt=""
+                /></a>
+                <a href=""
+                  ><img
+                    decoding="async"
+                    class="navigation__img"
+                    src="imgs/inst.svg"
+                    alt=""
+                /></a>
+                <a href=""
+                  ><img
+                    decoding="async"
+                    class="navigation__img"
+                    src="imgs/tg.svg"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__block">
+            <a href=""><img decoding="async" src="imgs/logo.svg" alt="" /></a>
+          </div>
+          <div class="footer__block footer__block_center">
+            <p>Neon eSports 2020</p>
+            <p>Все права защищены</p>
+          </div>
+          <div class="footer__block footer__block_last">
+            <p>Разработано командой</p>
+            <a href=""
+              ><img decoding="async" src="imgs/gmglogo.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/spruce.js"></script>
+    <script src="js/alpine.js"></script>
+    <script src="js/fslightbox.js" async></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/lazyload.js" async></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+    <script src="js/typed.js"></script>
+    <script src="js/picker.min.js"></script>
+    <script src="js/app.min.js"></script>
+    <script>
+      function scrollbarToggle() {
+        document.documentElement.classList.toggle("open");
+      }
+    </script>
+  </body>
 </html>

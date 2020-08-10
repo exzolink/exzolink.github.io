@@ -1,78 +1,33 @@
-// Frontend by exzolink
-// exzolink.github.io
+/* Frontend by exzolink
+exzolink.github.io */
 
-var vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty("--vh", `${vh}px`);
+// Хранение начальных значений модальных окон
+Spruce.store("modalRegister", {
+  open: "false",
+});
+Spruce.store("modalPacketDay", {
+  open: "false",
+});
+Spruce.store("modalPacketNight", {
+  open: "false",
+});
+Spruce.store("modalCoop", {
+  open: "false",
+});
+Spruce.store("modalVac", {
+  open: "false",
+});
+Spruce.store("modalOrder", {
+  open: "false",
+});
+Spruce.store("modalOrderTab", {
+  tab: "tuf",
+});
+Spruce.store("modalPrivacy", {
+  open: "false",
+});
 
-if (window.innerWidth < 800) {
-  window.addEventListener("resize", () => {
-    var vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
-  });
-}
-
-var slideUp = (target, duration = 500) => {
-  target.style.transitionProperty = "height, margin, padding";
-  target.style.transitionDuration = duration + "ms";
-  target.style.height = target.offsetHeight + "px";
-  target.offsetHeight;
-  target.style.overflow = "hidden";
-  target.style.height = 0;
-  target.style.paddingTop = 0;
-  target.style.paddingBottom = 0;
-  target.style.marginTop = 0;
-  target.style.marginBottom = 0;
-  window.setTimeout(() => {
-    target.style.display = "none";
-    target.style.removeProperty("height");
-    target.style.removeProperty("padding-top");
-    target.style.removeProperty("padding-bottom");
-    target.style.removeProperty("margin-top");
-    target.style.removeProperty("margin-bottom");
-    target.style.removeProperty("overflow");
-    target.style.removeProperty("transition-duration");
-    target.style.removeProperty("transition-property");
-  }, duration);
-};
-
-var slideDown = (target, duration = 500) => {
-  target.style.removeProperty("display");
-  var display = window.getComputedStyle(target).display;
-
-  if (display === "none") display = "flex";
-
-  target.style.display = display;
-  var height = target.offsetHeight;
-  target.style.overflow = "hidden";
-  target.style.height = 0;
-  target.style.paddingTop = 0;
-  target.style.paddingBottom = 0;
-  target.style.marginTop = 0;
-  target.style.marginBottom = 0;
-  target.offsetHeight;
-  target.style.transitionProperty = "height, margin, padding";
-  target.style.transitionDuration = duration + "ms";
-  target.style.height = height + "px";
-  target.style.removeProperty("padding-top");
-  target.style.removeProperty("padding-bottom");
-  target.style.removeProperty("margin-top");
-  target.style.removeProperty("margin-bottom");
-  window.setTimeout(() => {
-    target.style.removeProperty("height");
-    target.style.removeProperty("overflow");
-    target.style.removeProperty("transition-duration");
-    target.style.removeProperty("transition-property");
-  }, duration);
-};
-
-var slideToggle = (target, duration = 500) => {
-  if (window.getComputedStyle(target).display === "none") {
-    return slideDown(target, duration);
-  } else {
-    return slideUp(target, duration);
-  }
-};
-
+// Инициализация слайдеров
 photos = new Swiper(".zones__gallery_container", {
   slidesPerView: 4,
   spaceBetween: 6,
@@ -133,7 +88,7 @@ workers = new Swiper(".team__container", {
   grabCursor: true,
   pagination: {
     el: ".swiper-pagination",
-    type: "bulvars",
+    type: "bullets",
     clickable: true,
   },
   breakpoints: {
@@ -164,111 +119,194 @@ blog = new Swiper(".blog__container", {
   },
 });
 
-games.on("slideChange", function () {
-  games.update();
-});
+document.addEventListener("DOMContentLoaded", function () {
+  // Фикс попапов на мобильных устройствах
+  var vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
 
-function debounce(func, wait, immediate) {
-  var timeout;
-  return function () {
-    var context = this,
-      args = arguments;
-    clearTimeout(timeout);
-    timeout = setTimeout(function () {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    }, wait);
-    if (immediate && !timeout) func.apply(context, args);
-  };
-}
-
-var mapOn = false;
-if (document.getElementById("map") !== null) {
-  var mapRender = debounce(function () {
-    var getMap = document.getElementById("map");
-    var mapCoords = getMap.offsetTop;
-
-    if (pageYOffset * 1.8 > mapCoords && mapOn === false) {
-      mapboxgl.accessToken =
-        "pk.eyJ1IjoiZ3JlZ29yeTEyMCIsImEiOiJja2N2NW1ld2UwMTMzMnFtc2ZoeWpiZHM3In0.97pEt9J1fujCDbmt-84mrw";
-      var map = new mapboxgl.Map({
-        container: "map",
-        style: "mapbox://styles/mapbox/dark-v10",
-        center: [76.937, 43.243264],
-        zoom: 17,
-      });
-
-      var marker = new mapboxgl.Marker()
-        .setLngLat([76.936931, 43.2429])
-        .addTo(map);
-
-      mapOn = true;
-    }
-  }, 300);
-  window.addEventListener("scroll", mapRender);
-}
-
-if (document.getElementById("mapContacts") !== null) {
-  mapboxgl.accessToken =
-    "pk.eyJ1IjoiZ3JlZ29yeTEyMCIsImEiOiJja2N2NW1ld2UwMTMzMnFtc2ZoeWpiZHM3In0.97pEt9J1fujCDbmt-84mrw";
-  var map = new mapboxgl.Map({
-    container: "mapContacts",
-    style: "mapbox://styles/mapbox/dark-v10",
-    center: [76.937, 43.243264],
-    zoom: 17,
-  });
-
-  var marker = new mapboxgl.Marker().setLngLat([76.936931, 43.2429]).addTo(map);
-}
-
-if (document.getElementById("fadeToggle") !== null) {
-  var options = {
-    strings: ["Power On", "Game On", "Party On"],
-    typeSpeed: 90,
-    fadeOut: true,
-    startDelay: 1000,
-    backSpeed: 500,
-    backDelay: 1000,
-    loop: true,
-  };
-  var typed = new Typed("#fadeToggle", options);
-}
-
-if (document.getElementById("parallax") !== null) {
-  function parallax() {
-    var $slider = document.getElementById("parallax");
-
-    var yPos = window.pageYOffset / $slider.dataset.speed;
-    yPos = -yPos;
-
-    var coords = "50% " + yPos + "px";
-
-    $slider.style.backgroundPosition = coords;
+  if (window.innerWidth < 800) {
+    window.addEventListener("resize", () => {
+      var vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    });
   }
 
-  window.addEventListener("scroll", function () {
-    if (window.pageYOffset < 650) {
-      parallax();
+  // Плавное открытие/скрытие для спойлера вакансий
+  var slideUp = (target, duration = 500) => {
+    target.style.transitionProperty = "height, margin, padding";
+    target.style.transitionDuration = duration + "ms";
+    target.style.height = target.offsetHeight + "px";
+    target.offsetHeight;
+    target.style.overflow = "hidden";
+    target.style.height = 0;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    window.setTimeout(() => {
+      target.style.display = "none";
+      target.style.removeProperty("height");
+      target.style.removeProperty("padding-top");
+      target.style.removeProperty("padding-bottom");
+      target.style.removeProperty("margin-top");
+      target.style.removeProperty("margin-bottom");
+      target.style.removeProperty("overflow");
+      target.style.removeProperty("transition-duration");
+      target.style.removeProperty("transition-property");
+    }, duration);
+  };
+
+  var slideDown = (target, duration = 500) => {
+    target.style.removeProperty("display");
+    var display = window.getComputedStyle(target).display;
+
+    if (display === "none") display = "flex";
+
+    target.style.display = display;
+    var height = target.offsetHeight;
+    target.style.overflow = "hidden";
+    target.style.height = 0;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    target.offsetHeight;
+    target.style.transitionProperty = "height, margin, padding";
+    target.style.transitionDuration = duration + "ms";
+    target.style.height = height + "px";
+    target.style.removeProperty("padding-top");
+    target.style.removeProperty("padding-bottom");
+    target.style.removeProperty("margin-top");
+    target.style.removeProperty("margin-bottom");
+    window.setTimeout(() => {
+      target.style.removeProperty("height");
+      target.style.removeProperty("overflow");
+      target.style.removeProperty("transition-duration");
+      target.style.removeProperty("transition-property");
+    }, duration);
+  };
+
+  var slideToggle = (target, duration = 500) => {
+    if (window.getComputedStyle(target).display === "none") {
+      return slideDown(target, duration);
     } else {
-      return;
+      return slideUp(target, duration);
     }
-  });
-  parallax();
-}
+  };
 
-var vacButton = document.querySelectorAll(".vac__spoiler_button");
-[].forEach.call(vacButton, function (e) {
-  e.addEventListener("click", function (e) {
-    var target = this.closest(".vac__spoiler").querySelector(
-      ".vac__spoiler_content"
-    );
-    var targetArrow = this.querySelector(".vac__spoiler_arrow");
-    slideToggle(target, 350);
-    targetArrow.classList.toggle("active");
+  games.on("slideChange", function () {
+    games.update();
   });
-});
 
-window.onload = function () {
+  // Декоратор
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function () {
+      var context = this,
+        args = arguments;
+      clearTimeout(timeout);
+      timeout = setTimeout(function () {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      }, wait);
+      if (immediate && !timeout) func.apply(context, args);
+    };
+  }
+
+  // Инициализация карты на всех страницах (кроме контакты)
+  var mapOn = false;
+  if (document.getElementById("map") !== null) {
+    var mapRender = debounce(function () {
+      var getMap = document.getElementById("map");
+      var mapCoords = getMap.offsetTop;
+
+      if (pageYOffset * 1.8 > mapCoords && mapOn === false) {
+        mapboxgl.accessToken =
+          "pk.eyJ1IjoiZ3JlZ29yeTEyMCIsImEiOiJja2N2NW1ld2UwMTMzMnFtc2ZoeWpiZHM3In0.97pEt9J1fujCDbmt-84mrw";
+        var map = new mapboxgl.Map({
+          container: "map",
+          style: "mapbox://styles/mapbox/dark-v10",
+          center: [76.937, 43.243264],
+          zoom: 17,
+        });
+
+        var marker = new mapboxgl.Marker()
+          .setLngLat([76.936931, 43.2429])
+          .addTo(map);
+
+        mapOn = true;
+      }
+    }, 300);
+    window.addEventListener("scroll", mapRender);
+  }
+
+  // Инициализация карты на странице "Контакты"
+  if (document.getElementById("mapContacts") !== null) {
+    mapboxgl.accessToken =
+      "pk.eyJ1IjoiZ3JlZ29yeTEyMCIsImEiOiJja2N2NW1ld2UwMTMzMnFtc2ZoeWpiZHM3In0.97pEt9J1fujCDbmt-84mrw";
+    var map = new mapboxgl.Map({
+      container: "mapContacts",
+      style: "mapbox://styles/mapbox/dark-v10",
+      center: [76.937, 43.243264],
+      zoom: 17,
+    });
+
+    var marker = new mapboxgl.Marker()
+      .setLngLat([76.936931, 43.2429])
+      .addTo(map);
+  }
+
+  // Печатающийся текст на главной странице
+  if (document.getElementById("fadeToggle") !== null) {
+    var options = {
+      strings: ["Power On", "Game On", "Party On"],
+      typeSpeed: 90,
+      fadeOut: true,
+      startDelay: 1000,
+      backSpeed: 500,
+      backDelay: 1000,
+      loop: true,
+    };
+    var typed = new Typed("#fadeToggle", options);
+  }
+
+  // Параллакс на главной странице
+  if (document.getElementById("parallax") !== null) {
+    function parallax() {
+      var $slider = document.getElementById("parallax");
+
+      var yPos = window.pageYOffset / $slider.dataset.speed;
+      yPos = -yPos;
+
+      var coords = "50% " + yPos + "px";
+
+      $slider.style.backgroundPosition = coords;
+    }
+
+    window.addEventListener("scroll", function () {
+      if (window.pageYOffset < 650) {
+        parallax();
+      } else {
+        return;
+      }
+    });
+    parallax();
+  }
+
+  // Toggle спойлера на странице вакансий
+  var vacButton = document.querySelectorAll(".vac__spoiler_button");
+  [].forEach.call(vacButton, function (e) {
+    e.addEventListener("click", function (e) {
+      var target = this.closest(".vac__spoiler").querySelector(
+        ".vac__spoiler_content"
+      );
+      var targetArrow = this.querySelector(".vac__spoiler_arrow");
+      slideToggle(target, 350);
+      targetArrow.classList.toggle("active");
+    });
+  });
+
+  // Инициализация попапа для выбора времени в попапе с бронированием
   var timePicker = document.querySelectorAll(".js-time-picker");
   for (var i = 0; i < timePicker.length; i++) {
     var picker = new Picker(timePicker[i], {
@@ -277,57 +315,132 @@ window.onload = function () {
       controls: true,
     });
   }
-};
 
-var nextButton = document.querySelectorAll(".popupOrder__button_next");
-[].forEach.call(nextButton, function (e) {
-  e.addEventListener("click", function (e) {
-    var startTime = this.closest(".popupOrder__zone_inner").querySelector(
-      ".startTime"
-    ).value;
-    var endTime = this.closest(".popupOrder__zone_inner").querySelector(
-      ".endTime"
-    ).value;
-    var selectedPlaces = this.closest(
-      ".popupOrder__zone_inner"
-    ).querySelectorAll(".popupOrder__places_item.active").length;
-    var selectedTime = (this.closest(".popupOrder__zone_inner").querySelector(
-      ".selectedTime"
-    ).value = startTime + " - " + endTime);
-    var countPlaces = (this.closest(".popupOrder__zone_inner").querySelector(
-      ".selectedPlaces"
-    ).value = selectedPlaces);
+  // Обработка данных при клике на кнопку "Дальше" во всех
+  // вкладках попапа с бронированием (кроме PS4)
+  var nextButton = document.querySelectorAll(".popupOrder__next");
+  [].forEach.call(nextButton, function (e) {
+    e.addEventListener("click", function (e) {
+      var startTime = this.closest(".popupOrder__zone_inner").querySelector(
+        ".startTime"
+      ).value;
+      var endTime = this.closest(".popupOrder__zone_inner").querySelector(
+        ".endTime"
+      ).value;
+      var selectedPlaces = this.closest(
+        ".popupOrder__zone_inner"
+      ).querySelectorAll(".popupOrder__places_item.active").length;
+      var selectedTime = (this.closest(".popupOrder__zone_inner").querySelector(
+        ".selectedTime"
+      ).value = startTime + " - " + endTime);
+      var countPlaces = (this.closest(".popupOrder__zone_inner").querySelector(
+        ".selectedPlaces"
+      ).value = selectedPlaces);
+    });
   });
-});
 
-var place = document.querySelectorAll(".popupOrder__places_item:not(.busy)");
-[].forEach.call(place, function (e) {
-  e.addEventListener("click", function (e) {
-    var selectPlace = this.classList.toggle("active");
+  // Выбор компьютеров во всех вкладках попапа с бронированием (кроме PS4)
+  var place = document.querySelectorAll(".popupOrder__places_item:not(.busy)");
+  [].forEach.call(place, function (e) {
+    e.addEventListener("click", function (e) {
+      var selectPlace = this.classList.toggle("active");
+    });
   });
-});
 
-Spruce.store("modalRegister", {
-  open: "false",
-});
-Spruce.store("modalPacketDay", {
-  open: "false",
-});
-Spruce.store("modalPacketNight", {
-  open: "false",
-});
-Spruce.store("modalCoop", {
-  open: "false",
-});
-Spruce.store("modalVac", {
-  open: "false",
-});
-Spruce.store("modalOrder", {
-  open: "true",
-});
-Spruce.store("modalOrderTab", {
-  tab: "steel",
-});
-Spruce.store("modalPrivacy", {
-  open: "false",
+  // Выбор времени PS4 Room (попап)
+  var timePS4 = document.querySelectorAll(
+    ".popupOrder__ps4_time-item:not(.busy)"
+  );
+  [].forEach.call(timePS4, function (e) {
+    e.addEventListener("click", function (e) {
+      var selectTime = this.classList.toggle("active");
+    });
+  });
+
+  // Обработка данных при клике на кнопку "Дальше" в PS4 Room (попап)
+  var nextPS4 = document.querySelectorAll(".popupOrder__ps4_next");
+  var prevPS4 = document.querySelectorAll(".popupOrder__ps4_prev");
+  [].forEach.call(nextPS4, function (e) {
+    e.addEventListener("click", function (e) {
+      var selectedTimes = this.closest(
+        ".popupOrder__zone_inner"
+      ).querySelectorAll(".popupOrder__ps4_time-item.active");
+      var getTimesInput = this.closest(".popupOrder__zone_inner").querySelector(
+        ".selectedTimes"
+      );
+
+      for (var i = 0; i < selectedTimes.length; i++) {
+        getTimesInput.value += selectedTimes[i].innerHTML + "\n";
+      }
+
+      if (window.innerWidth > 1200) {
+        if (selectedTimes.length > 0) {
+          getTimesInput.style.height = selectedTimes.length * 27 + "px";
+        } else {
+          getTimesInput.style.height = 27 + "px";
+        }
+      } else {
+        if (selectedTimes.length > 0) {
+          getTimesInput.style.height = selectedTimes.length * 19 + "px";
+        } else {
+          getTimesInput.style.height = 19 + "px";
+        }
+      }
+    });
+  });
+
+  [].forEach.call(prevPS4, function (e) {
+    e.addEventListener("click", function (e) {
+      var getTimesInput = (this.closest(
+        ".popupOrder__zone_inner"
+      ).querySelector(".selectedTimes").value = "");
+    });
+  });
+
+  // Кнопки + / - в попапе с бронированием
+  var minusBtn = document.querySelectorAll("#startMinus, #endMinus");
+  var plusBtn = document.querySelectorAll("#startPlus, #endPlus");
+
+  // Обработка минуса
+  [].forEach.call(minusBtn, function (e) {
+    e.addEventListener("click", function (e) {
+      var selectTimeInput = this.closest(
+        ".popupOrder__zone_time-select"
+      ).querySelector("input");
+      var startHour = selectTimeInput.value.split(":");
+      if (startHour[0] >= 10 && startHour[0] <= 23) {
+        selectTimeInput.value = startHour[0] - 1 + ":" + startHour[1];
+      }
+      if (startHour[0] !== "00" && startHour[0] <= 10) {
+        selectTimeInput.value = "0" + (startHour[0] - 1) + ":" + startHour[1];
+      }
+      if (startHour[0] === '00') {
+        selectTimeInput.value = "23:" + startHour[1];
+      }
+    });
+  });
+  // Обработка плюса
+  [].forEach.call(plusBtn, function (e) {
+    e.addEventListener("click", function (e) {
+      var selectTimeInput = this.closest(
+        ".popupOrder__zone_time-select"
+      ).querySelector("input");
+      var endHour = selectTimeInput.value.split(":");
+      if (endHour[0] >= 10 && endHour[0] < 23) {
+        selectTimeInput.value = +endHour[0] + 1 + ":" + endHour[1];
+      }
+      if (endHour[0] !== "00" && endHour[0] < 10) {
+        selectTimeInput.value = "0" + (+endHour[0] + 1) + ":" + endHour[1];
+      }
+      if (endHour[0] === "00") {
+        selectTimeInput.value = "0" + (+endHour[0] + 1) + ":" + endHour[1];
+      }
+      if (endHour[0] === "09") {
+        selectTimeInput.value = 10 + ":" + endHour[1];
+      }
+      if (endHour[0] === "23") {
+        selectTimeInput.value = "00:" + endHour[1];
+      }
+    });
+  });
 });

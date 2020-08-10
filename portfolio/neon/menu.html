@@ -1,505 +1,685 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <title>Neon</title>
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/swiper.min.css">
-        <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css' rel='stylesheet' />
-        <title>Neon</title>
-    </head>
-
-    <body>
-        <header x-data="{ BurgerOpen: false }">
-            <div x-show.transition.in.duration.350ms.out.scale.0.duration.350ms.opacity.duration.350ms="BurgerOpen"
-                x-cloak class="header__menu">
-                <div class="header__inner">
-                    <div class="header__controls">
-                        <div><img src="imgs/logo.svg" alt=""></div>
-                        <div><img @click="BurgerOpen = false" src="imgs/close.svg" alt="" class="header__close"></div>
-                    </div>
-                    <div class="header__links_wrapper">
-                        <div class="header__links">
-                            <a href="./" class="header__link">Главная</a>
-                            <a href="about.html" class="header__link">О нас</a>
-                            <a href="gamezones.html" class="header__link">Игровые зоны</a>
-                            <a href="menu.html" class="header__link">Меню</a>
-                            <a href="events.html" class="header__link">Мероприятия</a>
-                            <a href="promo.html" class="header__link">Акции</a>
-                            <a href="contacts.html" class="header__link">Контакты</a>
-                        </div>
-                        <div class="header__links">
-                            <a class="header__link" href="">eSports Hub</a>
-                            <a class="header__link" href="">Рейтинг Dota 2</a>
-                            <a class="header__link" href="">Личный кабинет</a>
-                        </div>
-                    </div>
-                </div>
+  <body>
+    <header x-data="{ BurgerOpen: false }">
+      <div
+        x-show.transition.in.duration.350ms.out.scale.50.duration.350ms.opacity.duration.350ms="BurgerOpen"
+        x-cloak
+        class="header__menu"
+      >
+        <div class="header__inner">
+          <div class="header__controls">
+            <div><img decoding="async" src="imgs/logo.svg" alt="" /></div>
+            <div>
+              <img
+                decoding="async"
+                @click="BurgerOpen = false"
+                src="imgs/close.svg"
+                alt=""
+                class="header__close"
+              />
             </div>
-
-            <div class="header">
-                <div class="top__nav">
-                    <div class="container">
-                        <div class="top__nav_inner">
-                            <a class="top__nav_link" href="">eSports Hub</a>
-                            <a class="top__nav_link" href="">Рейтинг Dota 2</a>
-                            <a class="top__nav_link" href="">Личный кабинет</a>
-                            <a class="top__nav_link" href="tel:+77777777777">+7 777 777 77 77</a>
-                        </div>
-                    </div>
-                </div>
-                <nav class="nav">
-                    <div class="container">
-                        <div class="nav__inner">
-                            <a class="nav__logo" href=""><img src="imgs/logo.svg" alt=""></a>
-                            <div class="nav__items">
-                                <a href="./" class="nav__link">Главная</a>
-                                <a href="about.html" class="nav__link">О нас</a>
-                                <a href="gamezones.html" class="nav__link">Игровые зоны</a>
-                                <a href="menu.html" class="nav__link">Меню</a>
-                                <a href="events.html" class="nav__link">Мероприятия</a>
-                                <a href="promo.html" class="nav__link">Акции</a>
-                                <a href="contacts.html" class="nav__link">Контакты</a>
-                            </div>
-                            <div class="flex">
-                                <a href="" class="nav__btn_order">Забронировать место</a>
-                                <button @click="BurgerOpen = true" class="nav__btn_menu"><img src="imgs/menu.svg"
-                                        alt=""></button>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
+          </div>
+          <div class="header__links_wrapper">
+            <div class="header__links">
+              <a href="./" class="header__link">Главная</a>
+              <a href="about.html" class="header__link">О нас</a>
+              <a href="gamezones.html" class="header__link">Игровые зоны</a>
+              <a href="menu.html" class="header__link">Меню</a>
+              <a href="events.html" class="header__link">Мероприятия</a>
+              <a href="promo.html" class="header__link">Акции</a>
+              <a href="contacts.html" class="header__link">Контакты</a>
             </div>
-        </header>
+            <div class="header__links">
+              <a class="header__link" href="">eSports Hub</a>
+              <a class="header__link" href="">Рейтинг Dota 2</a>
+              <a class="header__link" href="">Личный кабинет</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <main class="main">
-            <section class="welcomeEvents lazyload" data-bg="imgs/welcomeFood.jpg"></section>
+      <div class="header">
+        <div class="top__nav">
+          <div class="container">
+            <div class="top__nav_inner">
+              <a class="top__nav_link" href="">eSports Hub</a>
+              <a class="top__nav_link" href="">Рейтинг Dota 2</a>
+              <a class="top__nav_link" href="">Личный кабинет</a>
+              <a class="top__nav_link" href="tel:+77777777777"
+                >+7 777 777 77 77</a
+              >
+            </div>
+          </div>
+        </div>
+        <nav class="nav">
+          <div class="container">
+            <div class="nav__inner">
+              <a class="nav__logo" href=""
+                ><img decoding="async" src="imgs/logo.svg" alt=""
+              /></a>
+              <div class="nav__items">
+                <a href="./" class="nav__link">Главная</a>
+                <a href="about.html" class="nav__link">О нас</a>
+                <a href="gamezones.html" class="nav__link">Игровые зоны</a>
+                <a href="menu.html" class="nav__link">Меню</a>
+                <a href="events.html" class="nav__link">Мероприятия</a>
+                <a href="promo.html" class="nav__link">Акции</a>
+                <a href="contacts.html" class="nav__link">Контакты</a>
+              </div>
+              <div class="flex">
+                <a href="" class="nav__btn_order">Забронировать место</a>
+                <button @click="BurgerOpen = true" class="nav__btn_menu">
+                  <img decoding="async" src="imgs/menu.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-            <section class="zones" x-data="{ tab: 'kitchen' }">
-                <div class="zones__selector">
-                    <div class="container">
-                        <h3 class="zones__selector_title">Меню</h3>
-                        <div class="zones__tabs">
-                            <div class="zones__tabs_inner">
-                                <div class="zones__tabs_item" :class="{ 'active': tab === 'kitchen' }"
-                                    @click="tab = 'kitchen'">
-                                    Кухня</div>
-                                <div class="zones__tabs_item" :class="{ 'active': tab === 'drinks' }"
-                                    @click="tab = 'drinks'" @mouseenter.once="fetch('./partials/menuDrinks.html')
+    <main class="main">
+      <section
+        class="welcomeEvents lazyload"
+        data-bg="imgs/welcomeFood.jpg"
+      ></section>
+
+      <section class="zones" x-data="{ tab: 'kitchen' }">
+        <div class="zones__selector">
+          <div class="container">
+            <h3 class="zones__selector_title">Меню</h3>
+            <div class="zones__tabs">
+              <div class="zones__tabs_inner">
+                <div
+                  class="zones__tabs_item"
+                  :class="{ 'active': tab === 'kitchen' }"
+                  @click="tab = 'kitchen'"
+                >
+                  Кухня
+                </div>
+                <div
+                  class="zones__tabs_item"
+                  :class="{ 'active': tab === 'drinks' }"
+                  @click="tab = 'drinks'"
+                  @mouseenter.once="fetch('./partials/menuDrinks.html')
                                     .then(response => response.text())
-                                    .then(html => { $refs.menuDrinks.innerHTML = html })">Напитки</div>
+                                    .then(html => { $refs.menuDrinks.innerHTML = html })"
+                >
+                  Напитки
+                </div>
 
-                                <div class="zones__tabs_item" :class="{ 'active': tab === 'bar' }" @click="tab = 'bar'"
-                                    @mouseenter.once="fetch('./partials/menuBar.html')
+                <div
+                  class="zones__tabs_item"
+                  :class="{ 'active': tab === 'bar' }"
+                  @click="tab = 'bar'"
+                  @mouseenter.once="fetch('./partials/menuBar.html')
                                 .then(response => response.text())
-                                .then(html => { $refs.menuBar.innerHTML = html })">
-                                    Бар</div>
-                            </div>
-                        </div>
-                    </div>
+                                .then(html => { $refs.menuBar.innerHTML = html })"
+                >
+                  Бар
                 </div>
-
-                <div class="menu__content">
-                    <div class="container">
-
-                        <div x-show="tab === 'kitchen'" class="menu__content_wrapper">
-                            <div class="menu__wrapper">
-                                <div class="menu__item">
-                                    <div class="menu__img"><img class="lazyload" data-src="imgs/food1.png" alt=""></div>
-                                    <div class="menu__list">
-                                        <h4 class="menu__header">Салаты:</h4>
-
-                                        <div class="menu__desc">
-                                            <p>- Малибу</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Цезарь с курицей</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Теплый салат с кониной</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Оливье</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Салат с малосоленым лососем</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="menu__item">
-                                    <div class="menu__img"><img class="lazyload" data-src="imgs/food2.png" alt=""></div>
-                                    <div class="menu__list">
-                                        <h4 class="menu__header">Супы:</h4>
-
-                                        <div class="menu__desc">
-                                            <p>- Рамен с курицей</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Крем суп чечевичный</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Суп охотничий</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="menu__item">
-                                    <div class="menu__img"><img class="lazyload" data-src="imgs/food3.png" alt=""></div>
-                                    <div class="menu__list">
-                                        <h4 class="menu__header">Основные блюда:</h4>
-
-                                        <div class="menu__desc">
-                                            <p>- Фахитос</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Терияки курица</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Медальоны из телятины в грибном соусе</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Мини кебабы на овощах луизиана</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="menu__item">
-                                    <div class="menu__img"><img class="lazyload" data-src="imgs/food4.png" alt=""></div>
-                                    <div class="menu__list">
-                                        <h4 class="menu__header">Гарниры:</h4>
-
-                                        <div class="menu__desc">
-                                            <p>- Фри</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Пюре</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Рис</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Гречка с грибами</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="menu__item">
-                                    <div class="menu__img"><img class="lazyload" data-src="imgs/food5.png" alt=""></div>
-                                    <div class="menu__list">
-                                        <h4 class="menu__header">Паста:</h4>
-
-                                        <div class="menu__desc">
-                                            <p>- Болоньезе</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Альфредо</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Карбонара</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="menu__item">
-                                    <div class="menu__img"><img class="lazyload" data-src="imgs/food6.png" alt=""></div>
-                                    <div class="menu__list">
-                                        <h4 class="menu__header">Фастфуд:</h4>
-
-                                        <div class="menu__desc">
-                                            <p>- Чизбургер</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Бургер цезарь</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Хот-дог</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Френч-дог</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Наггетсы</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Сырные палочки</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="menu__item">
-                                    <div class="menu__img"><img class="lazyload" data-src="imgs/food7.png" alt=""></div>
-                                    <div class="menu__list">
-                                        <h4 class="menu__header">Пицца:</h4>
-
-                                        <div class="menu__desc">
-                                            <p>- Болоньезе</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Салями</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Маргарита</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="menu__item">
-                                    <div class="menu__img"><img class="lazyload" data-src="imgs/food8.png" alt=""></div>
-                                    <div class="menu__list">
-                                        <h4 class="menu__header">Десерты:</h4>
-
-                                        <div class="menu__desc">
-                                            <p>- Сырники под ягодным соусом</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Neon</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Шоколадные роллы с фруктами</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="menu__item">
-                                    <div class="menu__img"><img class="lazyload" data-src="imgs/food9.png" alt=""></div>
-                                    <div class="menu__list">
-                                        <h4 class="menu__header">Закуски к пиву:</h4>
-
-                                        <div class="menu__desc">
-                                            <p>- Курт</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Чечил</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Фисташки</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Арахис с раксы</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                        <div class="menu__desc">
-                                            <p>- Чипсы</p>
-                                            <p>100 тг.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div x-show="tab === 'drinks'" class="menu__content_wrapper">
-                            <div x-ref="menuDrinks" class="menu__wrapper">
-                                <p class="loading menu-loading">Загрузка...</p>
-                            </div>
-                        </div>
-
-                        <div x-show="tab === 'bar'" class="menu__content_wrapper">
-                            <div x-ref="menuBar" class="menu__wrapper">
-                                <p class="loading menu-loading">Загрузка...</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </section>
-
-            <section class="team">
-                <div class="container">
-                    <div class="team__inner menu__inner">
-                        <h3 class="zones__hard_title">У нас <span>так вкусно</span> благодаря:</h3>
-                        <div class="team__founders mb-0">
-                            <div class="team__founders_wrapper">
-                                <div class="team__person">
-                                    <div class="team__person_wrapper">
-                                        <div class="team__person_img">
-                                            <img class="lazyload" data-src="imgs/team.jpg" alt="">
-                                        </div>
-                                        <div class="team__person_desc">
-                                            <h4 class="menu__person_status">Шеф-повар:</h4>
-                                            <p class="menu__person_name">Толстых Сергей Владимирович</p>
-                                        </div>
-                                    </div>
-                                    <p class="menu__person_desc">
-                                        - Член Ассоциации Поваров Р.К.<br>
-                                        - Стаж работы 25 лет,стаж работы Шеф-поваром 15 лет.<br>
-                                        - Участник и призер Международных конкурсов.<br>
-                                        - Золотой призер Шеф-баттл (chefs battle) 2016.<br>
-                                        - Серебряный призер Шеф-баттл (chefs battle)2015.<br>
-                                        - Серебряный призер Шеф-баттл (chefs battle) 2013.<br>
-                                        - Входит в «Книгу рекордов Гиннесса» (англ. The Guinness Book of Records,) в
-                                        номинации по приготовлению самого большого Лагмана в мире 2016г.
-                                    </p>
-                                </div>
-
-                                <div class="team__person">
-                                    <div class="team__person_wrapper">
-                                        <div class="team__person_img">
-                                            <img class="lazyload" data-src="imgs/team.jpg" alt="">
-                                        </div>
-                                        <div class="team__person_desc">
-                                            <h4 class="menu__person_status">Шеф-повар:</h4>
-                                            <p class="menu__person_name">Толстых Сергей Владимирович</p>
-                                        </div>
-                                    </div>
-                                    <p class="menu__person_desc">
-                                        - Член Ассоциации Поваров Р.К.<br>
-                                        - Стаж работы 25 лет,стаж работы Шеф-поваром 15 лет.<br>
-                                        - Участник и призер Международных конкурсов.<br>
-                                        - Золотой призер Шеф-баттл (chefs battle) 2016.<br>
-                                        - Серебряный призер Шеф-баттл (chefs battle)2015.<br>
-                                        - Серебряный призер Шеф-баттл (chefs battle) 2013.<br>
-                                        - Входит в «Книгу рекордов Гиннесса» (англ. The Guinness Book of Records,) в
-                                        номинации по приготовлению самого большого Лагмана в мире 2016г.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="feedback">
-                <div class="container">
-                    <div class="feedback__inner">
-                        <h3 class="zones__hard_title">Отзывы</h3>
-                        <div class="feedback__content">
-                            <div class="feedback__item">
-                                <img class="lazyload" data-src="imgs/feedback_1.jpg" alt="">
-                                <a class="feedback__item_link" data-fslightbox="lightbox"
-                                    href="https://www.youtube.com/watch?v=xshEZzpS4CQ"></a>
-                            </div>
-                            <div class="feedback__item">
-                                <img class="lazyload" data-src="imgs/feedback_2.jpg" alt="">
-                                <a class="feedback__item_link" data-fslightbox="lightbox"
-                                    href="https://www.youtube.com/watch?v=xshEZzpS4CQ"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="map mapHalf" id="map">
-                <div class="container map__container mapHalf__container">
-                    <div class="map__inner mapHalf__inner">
-                        <div class="map__label mapHalf__label">
-                            <div class="map__label_inner mapHalf__label_inner">
-                                <h4 class="map__title">Мы здесь</h4>
-                                <p class="map__address mapHalf__address">Г. Алматы, ул. Наурызбай Батыра 111, н.п.
-                                    196/197, угол
-                                    Курмангазы
-                                    (ЖК
-                                    Exclusive Life)</p>
-                                <div class="mapHalf__socials">
-                                    <a href=""><img class="mapHalf__img" src="imgs/yt.svg" alt=""></a>
-                                    <a href=""><img class="mapHalf__img" src="imgs/inst.svg" alt=""></a>
-                                    <a href=""><img class="mapHalf__img" src="imgs/tg.svg" alt=""></a>
-                                    <a href=""><img class="mapHalf__img" src="imgs/wassup.svg" alt=""></a>
-                                </div>
-                                <div class="order-button-link mt-auto mapHalf__btn"><a href=""
-                                        class="order-button">Забронировать место</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="navigation">
-                <div class="container">
-                    <div class="navigation__inner">
-                        <div class="navigation__block">
-                            <a>Основные разделы</a>
-                            <a href="./">Главная</a>
-                            <a href="about.html">О нас</a>
-                            <a href="gamezones.html">Игровые зоны</a>
-                            <a href="menu.html">Меню</a>
-                            <a href="events.html">Мероприятия</a>
-                            <a href="promo.html">Акции</a>
-                            <a href="">Блог</a>
-                            <a href="contacts.html">Контакты</a>
-                        </div>
-
-                        <div class="navigation__block">
-                            <a>eSports Hub</a>
-                            <a href="">Рейтинг Dota 2</a>
-                            <a href="">Как это было?</a>
-                            <a href="">Сообщество Neon eSports</a>
-                            <a href="">Новости мирового <br>киберспорта</a>
-                        </div>
-
-                        <div class="navigation__block">
-                            <a>Информация</a>
-                            <a href="">Сотрудничество</a>
-                            <a href="">Вакансии</a>
-                            <a href="">Конфиденциальность</a>
-                            <div class="navigation__socials">
-                                <a href=""><img class="navigation__img" src="imgs/yt.svg" alt=""></a>
-                                <a href=""><img class="navigation__img" src="imgs/inst.svg" alt=""></a>
-                                <a href=""><img class="navigation__img" src="imgs/tg.svg" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="container">
-                <div class="footer__inner">
-                    <div class="footer__block">
-                        <a href=""><img src="imgs/logo.svg" alt=""></a>
-                    </div>
-                    <div class="footer__block footer__block_center">
-                        <p>Neon eSports 2020</p>
-                        <p>Все права защищены</p>
-                    </div>
-                    <div class="footer__block footer__block_last">
-                        <p>Разработано командой</p>
-                        <a href=""><img src="imgs/gmglogo.png" alt=""></a>
-                    </div>
-                </div>
+              </div>
             </div>
-        </footer>
+          </div>
+        </div>
 
+        <div class="menu__content">
+          <div class="container">
+            <div x-show="tab === 'kitchen'" class="menu__content_wrapper">
+              <div class="menu__wrapper">
+                <div class="menu__item">
+                  <div class="menu__img">
+                    <img
+                      decoding="async"
+                      class="lazyload"
+                      data-src="imgs/food1.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="menu__list">
+                    <h4 class="menu__header">Салаты:</h4>
 
+                    <div class="menu__desc">
+                      <p>- Малибу</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Цезарь с курицей</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Теплый салат с кониной</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Оливье</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Салат с малосоленым лососем</p>
+                      <p>100 тг.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu__item">
+                  <div class="menu__img">
+                    <img
+                      decoding="async"
+                      class="lazyload"
+                      data-src="imgs/food2.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="menu__list">
+                    <h4 class="menu__header">Супы:</h4>
 
+                    <div class="menu__desc">
+                      <p>- Рамен с курицей</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Крем суп чечевичный</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Суп охотничий</p>
+                      <p>100 тг.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu__item">
+                  <div class="menu__img">
+                    <img
+                      decoding="async"
+                      class="lazyload"
+                      data-src="imgs/food3.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="menu__list">
+                    <h4 class="menu__header">Основные блюда:</h4>
 
+                    <div class="menu__desc">
+                      <p>- Фахитос</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Терияки курица</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Медальоны из телятины в грибном соусе</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Мини кебабы на овощах луизиана</p>
+                      <p>100 тг.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu__item">
+                  <div class="menu__img">
+                    <img
+                      decoding="async"
+                      class="lazyload"
+                      data-src="imgs/food4.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="menu__list">
+                    <h4 class="menu__header">Гарниры:</h4>
 
-        <script src="js/alpine.js" defer></script>
-        <script src="js/fslightbox.js" async></script>
-        <script src="js/swiper.min.js"></script>
-        <script src="js/lazyload.js" async></script>
-        <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
-        <script src="js/app.min.js"></script>
-    </body>
+                    <div class="menu__desc">
+                      <p>- Фри</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Пюре</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Рис</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Гречка с грибами</p>
+                      <p>100 тг.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu__item">
+                  <div class="menu__img">
+                    <img
+                      decoding="async"
+                      class="lazyload"
+                      data-src="imgs/food5.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="menu__list">
+                    <h4 class="menu__header">Паста:</h4>
 
+                    <div class="menu__desc">
+                      <p>- Болоньезе</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Альфредо</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Карбонара</p>
+                      <p>100 тг.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu__item">
+                  <div class="menu__img">
+                    <img
+                      decoding="async"
+                      class="lazyload"
+                      data-src="imgs/food6.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="menu__list">
+                    <h4 class="menu__header">Фастфуд:</h4>
+
+                    <div class="menu__desc">
+                      <p>- Чизбургер</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Бургер цезарь</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Хот-дог</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Френч-дог</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Наггетсы</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Сырные палочки</p>
+                      <p>100 тг.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu__item">
+                  <div class="menu__img">
+                    <img
+                      decoding="async"
+                      class="lazyload"
+                      data-src="imgs/food7.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="menu__list">
+                    <h4 class="menu__header">Пицца:</h4>
+
+                    <div class="menu__desc">
+                      <p>- Болоньезе</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Салями</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Маргарита</p>
+                      <p>100 тг.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu__item">
+                  <div class="menu__img">
+                    <img
+                      decoding="async"
+                      class="lazyload"
+                      data-src="imgs/food8.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="menu__list">
+                    <h4 class="menu__header">Десерты:</h4>
+
+                    <div class="menu__desc">
+                      <p>- Сырники под ягодным соусом</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Neon</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Шоколадные роллы с фруктами</p>
+                      <p>100 тг.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu__item">
+                  <div class="menu__img">
+                    <img
+                      decoding="async"
+                      class="lazyload"
+                      data-src="imgs/food9.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="menu__list">
+                    <h4 class="menu__header">Закуски к пиву:</h4>
+
+                    <div class="menu__desc">
+                      <p>- Курт</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Чечил</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Фисташки</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Арахис с раксы</p>
+                      <p>100 тг.</p>
+                    </div>
+                    <div class="menu__desc">
+                      <p>- Чипсы</p>
+                      <p>100 тг.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div x-show="tab === 'drinks'" class="menu__content_wrapper">
+              <div x-ref="menuDrinks" class="menu__wrapper">
+                <p class="loading menu-loading">Загрузка...</p>
+              </div>
+            </div>
+
+            <div x-show="tab === 'bar'" class="menu__content_wrapper">
+              <div x-ref="menuBar" class="menu__wrapper">
+                <p class="loading menu-loading">Загрузка...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="team">
+        <div class="container">
+          <div class="team__inner menu__inner">
+            <h3 class="zones__hard_title">
+              У нас <span>так вкусно</span> благодаря:
+            </h3>
+            <div class="team__founders mb-0">
+              <div class="team__founders_wrapper">
+                <div class="team__person">
+                  <div class="team__person_wrapper">
+                    <div class="team__person_img">
+                      <img
+                        decoding="async"
+                        class="lazyload"
+                        data-src="imgs/team.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="team__person_desc">
+                      <h4 class="menu__person_status">Шеф-повар:</h4>
+                      <p class="menu__person_name">
+                        Толстых Сергей Владимирович
+                      </p>
+                    </div>
+                  </div>
+                  <p class="menu__person_desc">
+                    - Член Ассоциации Поваров Р.К.<br />
+                    - Стаж работы 25 лет,стаж работы Шеф-поваром 15 лет.<br />
+                    - Участник и призер Международных конкурсов.<br />
+                    - Золотой призер Шеф-баттл (chefs battle) 2016.<br />
+                    - Серебряный призер Шеф-баттл (chefs battle)2015.<br />
+                    - Серебряный призер Шеф-баттл (chefs battle) 2013.<br />
+                    - Входит в «Книгу рекордов Гиннесса» (англ. The Guinness
+                    Book of Records,) в номинации по приготовлению самого
+                    большого Лагмана в мире 2016г.
+                  </p>
+                </div>
+
+                <div class="team__person">
+                  <div class="team__person_wrapper">
+                    <div class="team__person_img">
+                      <img
+                        decoding="async"
+                        class="lazyload"
+                        data-src="imgs/team.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="team__person_desc">
+                      <h4 class="menu__person_status">Шеф-повар:</h4>
+                      <p class="menu__person_name">
+                        Толстых Сергей Владимирович
+                      </p>
+                    </div>
+                  </div>
+                  <p class="menu__person_desc">
+                    - Член Ассоциации Поваров Р.К.<br />
+                    - Стаж работы 25 лет,стаж работы Шеф-поваром 15 лет.<br />
+                    - Участник и призер Международных конкурсов.<br />
+                    - Золотой призер Шеф-баттл (chefs battle) 2016.<br />
+                    - Серебряный призер Шеф-баттл (chefs battle)2015.<br />
+                    - Серебряный призер Шеф-баттл (chefs battle) 2013.<br />
+                    - Входит в «Книгу рекордов Гиннесса» (англ. The Guinness
+                    Book of Records,) в номинации по приготовлению самого
+                    большого Лагмана в мире 2016г.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feedback">
+        <div class="container">
+          <div class="feedback__inner">
+            <h3 class="zones__hard_title">Отзывы</h3>
+            <div class="feedback__content">
+              <div class="feedback__item">
+                <img
+                  decoding="async"
+                  class="lazyload"
+                  data-src="imgs/feedback_1.jpg"
+                  alt=""
+                />
+                <a
+                  class="feedback__item_link"
+                  data-fslightbox="lightbox"
+                  href="https://www.youtube.com/watch?v=xshEZzpS4CQ"
+                ></a>
+              </div>
+              <div class="feedback__item">
+                <img
+                  decoding="async"
+                  class="lazyload"
+                  data-src="imgs/feedback_2.jpg"
+                  alt=""
+                />
+                <a
+                  class="feedback__item_link"
+                  data-fslightbox="lightbox"
+                  href="https://www.youtube.com/watch?v=xshEZzpS4CQ"
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="map mapHalf" id="map">
+        <div class="container map__container mapHalf__container">
+          <div class="map__inner mapHalf__inner">
+            <div class="map__label mapHalf__label">
+              <div class="map__label_inner mapHalf__label_inner">
+                <h4 class="map__title">Мы здесь</h4>
+                <p class="map__address mapHalf__address">
+                  Г. Алматы, ул. Наурызбай Батыра 111, н.п. 196/197, угол
+                  Курмангазы (ЖК Exclusive Life)
+                </p>
+                <div class="mapHalf__socials">
+                  <a href=""
+                    ><img
+                      decoding="async"
+                      class="mapHalf__img"
+                      src="imgs/yt.svg"
+                      alt=""
+                  /></a>
+                  <a href=""
+                    ><img
+                      decoding="async"
+                      class="mapHalf__img"
+                      src="imgs/inst.svg"
+                      alt=""
+                  /></a>
+                  <a href=""
+                    ><img
+                      decoding="async"
+                      class="mapHalf__img"
+                      src="imgs/tg.svg"
+                      alt=""
+                  /></a>
+                  <a href=""
+                    ><img
+                      decoding="async"
+                      class="mapHalf__img"
+                      src="imgs/wassup.svg"
+                      alt=""
+                  /></a>
+                </div>
+                <div class="order-button-link mt-auto mapHalf__btn">
+                  <a href="" class="order-button">Забронировать место</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="navigation">
+        <div class="container">
+          <div class="navigation__inner">
+            <div class="navigation__block">
+              <a>Основные разделы</a>
+              <a href="./">Главная</a>
+              <a href="about.html">О нас</a>
+              <a href="gamezones.html">Игровые зоны</a>
+              <a href="menu.html">Меню</a>
+              <a href="events.html">Мероприятия</a>
+              <a href="promo.html">Акции</a>
+              <a href="">Блог</a>
+              <a href="contacts.html">Контакты</a>
+            </div>
+
+            <div class="navigation__block">
+              <a>eSports Hub</a>
+              <a href="">Рейтинг Dota 2</a>
+              <a href="">Как это было?</a>
+              <a href="">Сообщество Neon eSports</a>
+              <a href="">Новости мирового <br />киберспорта</a>
+            </div>
+
+            <div class="navigation__block">
+              <a>Информация</a>
+              <a href="">Сотрудничество</a>
+              <a href="">Вакансии</a>
+              <a href="">Конфиденциальность</a>
+              <div class="navigation__socials">
+                <a href=""
+                  ><img
+                    decoding="async"
+                    class="navigation__img"
+                    src="imgs/yt.svg"
+                    alt=""
+                /></a>
+                <a href=""
+                  ><img
+                    decoding="async"
+                    class="navigation__img"
+                    src="imgs/inst.svg"
+                    alt=""
+                /></a>
+                <a href=""
+                  ><img
+                    decoding="async"
+                    class="navigation__img"
+                    src="imgs/tg.svg"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__block">
+            <a href=""><img decoding="async" src="imgs/logo.svg" alt="" /></a>
+          </div>
+          <div class="footer__block footer__block_center">
+            <p>Neon eSports 2020</p>
+            <p>Все права защищены</p>
+          </div>
+          <div class="footer__block footer__block_last">
+            <p>Разработано командой</p>
+            <a href=""
+              ><img decoding="async" src="imgs/gmglogo.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/spruce.js"></script>
+    <script src="js/alpine.js"></script>
+    <script src="js/fslightbox.js" async></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/lazyload.js" async></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+    <script src="js/typed.js"></script>
+    <script src="js/picker.min.js"></script>
+    <script src="js/app.min.js"></script>
+    <script>
+      function scrollbarToggle() {
+        document.documentElement.classList.toggle("open");
+      }
+    </script>
+  </body>
 </html>

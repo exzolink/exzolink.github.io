@@ -1,236 +1,232 @@
-$blue: #00BBF7;
+$blue: #00bbf7;
 $fz18: 18px;
 $fz25: 25px;
 
 *,
 *:after,
 *:before {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-shadow: none;
-    outline: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  outline: none;
 }
 
 body,
 html {
-    overflow-x: hidden;
-    box-sizing: border-box;
-    font-family: 'Gotham', sans-serif;
-    font-size: 14px;
-    cursor: default;
-    background-color: #191919;
-    scrollbar-color: $blue #222;
-    scrollbar-width: thin;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: "Gotham", sans-serif;
+  font-size: 14px;
+  cursor: default;
+  background-color: #191919;
+  scrollbar-color: $blue #222;
+  scrollbar-width: thin;
 }
 
 ::selection {
-    text-shadow: 0 0 6px $blue;
+  text-shadow: 0 0 6px $blue;
 }
 
 ::-webkit-scrollbar {
-    display: block;
-    width: 6px !important;
-    height: 6px;
-    background: #222;
+  display: block;
+  width: 6px !important;
+  height: 6px;
+  background: #222;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: $blue;
-    box-shadow: 0 0 4px 0 $blue;
-    border: 0;
+  background: $blue;
+  box-shadow: 0 0 4px 0 $blue;
+  border: 0;
 }
 
-.zones__tabs::-webkit-scrollbar, .popupOrder__selector_wrapper::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+.zones__tabs::-webkit-scrollbar,
+.popupOrder__selector_wrapper::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .popupRegister__content::-webkit-scrollbar {
-    width: 2px !important;
-    height: 2px;
+  width: 2px !important;
+  height: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #0094C4;
+  background: #0094c4;
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background: #007499;
+  background: #007499;
 }
 
 a {
-    text-decoration: none;
-    user-select: none;
-    color: #fff;
+  text-decoration: none;
+  user-select: none;
+  color: #fff;
 }
 
 img,
 button {
-    user-select: none;
+  user-select: none;
 }
 
 img {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 .container {
-    max-width: 1170px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
-    z-index: 100;
-    position: relative;
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  z-index: 100;
+  position: relative;
 }
 
 .h-100 {
-    height: 100%;
+  height: 100%;
 }
 
 .w-100 {
-    width: 100%;
+  width: 100%;
 }
 
 .typed-cursor {
-    display: none;
+  display: none;
 }
 
 .loading {
-    font-size: 40px;
-    color: #fff;
-    padding-top: 85px;
-    text-transform: uppercase;
-    padding-bottom: 85px;
-    font-weight: 900;
+  font-size: 40px;
+  color: #fff;
+  padding-top: 85px;
+  text-transform: uppercase;
+  padding-bottom: 85px;
+  font-weight: 900;
 }
 
 @media screen and (max-width: 850px) {
-    .loading {
-        padding-top: 50px;
-        padding-bottom: 0;
-    }
+  .loading {
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 640px) {
-    .loading {
-        font-size: 28px;
-    }
+  .loading {
+    font-size: 28px;
+  }
 }
 
 @media screen and (max-width: 495px) {
-    .loading {
-        font-size: 21px;
-    }
+  .loading {
+    font-size: 21px;
+  }
 }
-
 
 // Hide body scrollbar if popup opened
 .open {
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
 
 // Lazy Loading Animation
 .lazyload,
 .lazyloading {
-    opacity: 0;
-    min-height: 200px;
-    transition: border .3s ease, opacity .3s, transform .3s, filter .3s !important;
+  opacity: 0;
+  min-height: 200px;
+  transition: border 0.3s ease, opacity 0.3s, transform 0.3s, filter 0.3s !important;
 }
 
 @media screen and (max-width: 800px) {
-
-    .lazyload,
-    .lazyloading {
-        min-height: 100px;
-    }
+  .lazyload,
+  .lazyloading {
+    min-height: 100px;
+  }
 }
 
 .lazyloaded {
-    opacity: 1;
-    transition: border .3s ease, opacity .3s, transform .3s, filter .3s !important;
+  opacity: 1;
+  transition: border 0.3s ease, opacity 0.3s, transform 0.3s, filter 0.3s !important;
 }
-
 
 // Hide Elements before Init
 [x-cloak] {
-    display: none;
+  display: none;
 }
-
 
 // Slider Arrows
 .slider-next {
-    position: absolute;
-    right: 0;
+  position: absolute;
+  right: 0;
 }
 
 .slider-prev {
-    left: 0;
-    position: absolute;
+  left: 0;
+  position: absolute;
 }
 
 .swiper-button-disabled {
-    visibility: hidden;
+  visibility: hidden;
 }
-
 
 // Component: Order Button
 .mx-auto {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .mt-auto {
-    margin-top: auto;
+  margin-top: auto;
 }
 
 .mb-0 {
-    margin-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .ml-auto {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 input::-webkit-input-placeholder {
-    opacity: 1;
-    color: inherit;
+  opacity: 1;
+  color: inherit;
 }
 
 textarea::-webkit-input-placeholder {
-    opacity: 1;
-    color: inherit;
+  opacity: 1;
+  color: inherit;
 }
 
 ::placeholder {
-    opacity: 1
+  opacity: 1;
 }
 
 .order-button {
-    color: $blue;
-    display: block;
-    transition: background .3s ease, color .3s ease;
-    border: 2px solid $blue;
-    box-shadow: 0 0 6px 0 $blue;
-    padding: 27px 46px;
-    font-size: 18px;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    background: transparent;
+  color: $blue;
+  display: block;
+  transition: background 0.3s ease, color 0.3s ease;
+  border: 2px solid $blue;
+  box-shadow: 0 0 6px 0 $blue;
+  padding: 27px 46px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  background: transparent;
 
-    &:hover {
-        color: #191919;
-        background: $blue;
-        cursor: pointer;
-    }
+  &:hover {
+    color: #191919;
+    background: $blue;
+    cursor: pointer;
+  }
 
-    &-link {
-        display: flex;
-        align-items: center;
-    }
+  &-link {
+    display: flex;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 640px) {
-    .order-button {
-        font-size: 14px;
-        padding: 19px 36px;
-    }
+  .order-button {
+    font-size: 14px;
+    padding: 19px 36px;
+  }
 }

@@ -1,48 +1,47 @@
 .popupVac {
-    &__form {
-        margin-top: 60px;
-        margin-bottom: 0;
-        & input {
-            margin-bottom: 15px;
-        }
-        & textarea {
-            margin-bottom: 0;
-        }
-        & p {
-            font-size: 12px;
-            margin-top: 35px;
-            margin-bottom: 45px;
-            color: #fff;
-        }
+  &__form {
+    margin-top: 60px;
+    margin-bottom: 0;
+    & input {
+      margin-bottom: 15px;
     }
-    &__file_wrap {
-        margin-top: 30px;
+    & textarea {
+      margin-bottom: 0;
     }
-    &__title {
-        max-width: 800px;
+    & p {
+      font-size: 12px;
+      margin-top: 35px;
+      margin-bottom: 45px;
+      color: #fff;
     }
-    &__submit {
-        padding-bottom: 30px;
-        width: 100%;
-    }
-
+  }
+  &__file_wrap {
+    margin-top: 30px;
+  }
+  &__title {
+    max-width: 800px;
+  }
+  &__submit {
+    padding-bottom: 30px;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 550px) {
-    .popupVac {
-        &__form {
-            margin-top: 35px;
+  .popupVac {
+    &__form {
+      margin-top: 35px;
 
-            & input {
-                margin-bottom: 10px;
-            }
-            & p {
-                margin-bottom: 30px;
-                margin-top: 20px;
-            }
-        }
-        &__file_wrap {
-            margin-top: 10px;
-        }
+      & input {
+        margin-bottom: 10px;
+      }
+      & p {
+        margin-bottom: 30px;
+        margin-top: 20px;
+      }
     }
+    &__file_wrap {
+      margin-top: 10px;
+    }
+  }
 }

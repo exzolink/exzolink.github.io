@@ -1,24 +1,24 @@
 .instagram {
-    background-color: #343434;
+  background-color: #343434;
 
-    &__inner {
-        padding-top: 50px;
-        padding-bottom: 90px;
-    }
-    &__content {
-        margin-top: 50px;
-    }
+  &__inner {
+    padding-top: 50px;
+    padding-bottom: 90px;
+  }
+  &__content {
+    margin-top: 50px;
+  }
 }
 
 @media screen and (max-width: 650px) {
-    .instagram {
-        &__inner {
-            padding-top: 40px;
-            padding-bottom: 40px;
-        }
-
-        &__content {
-            margin-top: 40px;
-        }
+  .instagram {
+    &__inner {
+      padding-top: 40px;
+      padding-bottom: 40px;
     }
+
+    &__content {
+      margin-top: 40px;
+    }
+  }
 }
