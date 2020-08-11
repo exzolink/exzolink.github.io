@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="описание сайта">
-    <meta name="keywords" content="тег1, тег2">
-    <meta property="og:title" content="заголовок сайта">
-    <meta property="og:description" content="описание сайта">
-    <meta name="twitter:title" content="заголовок сайта">
-    <meta name="twitter:description" content="описание сайта">
+    <meta name="description" content="описание сайта" />
+    <meta name="keywords" content="тег1, тег2" />
+    <meta property="og:title" content="заголовок сайта" />
+    <meta property="og:description" content="описание сайта" />
+    <meta name="twitter:title" content="заголовок сайта" />
+    <meta name="twitter:description" content="описание сайта" />
 
     <link rel="stylesheet" href="css/styles.css" />
     <link
@@ -20,6 +20,7 @@
       href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/picker.min.css" />
     <title>Neon eSports</title>
   </head>
 
@@ -89,7 +90,12 @@
                 <a href="contacts.html" class="nav__link">Контакты</a>
               </div>
               <div class="flex">
-                <a href="" class="nav__btn_order">Забронировать место</a>
+                <a
+                  href=""
+                  class="nav__btn_order"
+                  @click.prevent="$store.modalOrder.open = 'true'; scrollbarToggle()"
+                  >Забронировать место</a
+                >
                 <button @click="BurgerOpen = true" class="nav__btn_menu">
                   <img decoding="async" src="imgs/menu.svg" alt="" />
                 </button>
