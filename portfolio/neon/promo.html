@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="описание сайта">
+    <meta name="keywords" content="тег1, тег2">
+    <meta property="og:title" content="заголовок сайта">
+    <meta property="og:description" content="описание сайта">
+    <meta name="twitter:title" content="заголовок сайта">
+    <meta name="twitter:description" content="описание сайта">
+
     <link rel="stylesheet" href="css/styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
@@ -13,7 +20,7 @@
       href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css"
       rel="stylesheet"
     />
-    <title>Neon</title>
+    <title>Neon eSports</title>
   </head>
 
   <body>
@@ -29,7 +36,7 @@
             <div>
               <img
                 decoding="async"
-                @click="BurgerOpen = false; scrollbarToggle()"
+                @click="BurgerOpen = false"
                 src="imgs/close.svg"
                 alt=""
                 class="header__close"
@@ -47,9 +54,8 @@
               <a href="contacts.html" class="header__link">Контакты</a>
             </div>
             <div class="header__links">
-              <a class="header__link" href="">eSports Hub</a>
-              <a class="header__link" href="">Рейтинг Dota 2</a>
-              <a class="header__link" href="">Личный кабинет</a>
+              <a class="header__link italic" href="blog.html">eSports Hub</a>
+              <a class="header__link" href="rating.html">Рейтинг Dota 2</a>
             </div>
           </div>
         </div>
@@ -59,9 +65,8 @@
         <div class="top__nav">
           <div class="container">
             <div class="top__nav_inner">
-              <a class="top__nav_link" href="">eSports Hub</a>
-              <a class="top__nav_link" href="">Рейтинг Dota 2</a>
-              <a class="top__nav_link" href="">Личный кабинет</a>
+              <a class="top__nav_link italic" href="blog.html">eSports Hub</a>
+              <a class="top__nav_link" href="rating.html">Рейтинг Dota 2</a>
               <a class="top__nav_link" href="tel:+77777777777"
                 >+7 777 777 77 77</a
               >
@@ -85,10 +90,7 @@
               </div>
               <div class="flex">
                 <a href="" class="nav__btn_order">Забронировать место</a>
-                <button
-                  @click="BurgerOpen = true; scrollbarToggle()"
-                  class="nav__btn_menu"
-                >
+                <button @click="BurgerOpen = true" class="nav__btn_menu">
                   <img decoding="async" src="imgs/menu.svg" alt="" />
                 </button>
               </div>
@@ -365,22 +367,22 @@
               <a href="menu.html">Меню</a>
               <a href="events.html">Мероприятия</a>
               <a href="promo.html">Акции</a>
-              <a href="">Блог</a>
               <a href="contacts.html">Контакты</a>
             </div>
 
             <div class="navigation__block">
               <a>eSports Hub</a>
-              <a href="">Рейтинг Dota 2</a>
-              <a href="">Как это было?</a>
+              <a href="blog.html">eSports Hub</a>
+              <a href="rating.html">Рейтинг Dota 2</a>
+              <a href="section.html">Как это было?</a>
               <a href="">Сообщество Neon eSports</a>
               <a href="">Новости мирового <br />киберспорта</a>
             </div>
 
             <div class="navigation__block">
               <a>Информация</a>
-              <a href="">Сотрудничество</a>
-              <a href="">Вакансии</a>
+              <a href="coop.html">Сотрудничество</a>
+              <a href="vacancies.html">Вакансии</a>
               <a href="">Конфиденциальность</a>
               <div class="navigation__socials">
                 <a href=""

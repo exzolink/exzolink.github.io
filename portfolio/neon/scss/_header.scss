@@ -6,21 +6,21 @@
     color: #fff;
 
     &_link {
-      color: #fff;
+      color: #E1E1E1;
       margin-left: 58px;
       transition: color 0.3s ease;
 
-      &.active {
-        color: $blue;
+      &.italic {
+       font-style: italic;
       }
 
       &:first-child {
         margin-left: 0;
-        font-style: italic;
       }
 
       &:last-child {
         font-weight: 500;
+        color: #fff;
       }
 
       &:hover {
