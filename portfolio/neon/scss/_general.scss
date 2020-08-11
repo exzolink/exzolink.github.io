@@ -22,6 +22,7 @@ html {
   background-color: #191919;
   scrollbar-color: $blue #222;
   scrollbar-width: thin;
+  min-height: -webkit-fill-available;
 }
 
 ::selection {
