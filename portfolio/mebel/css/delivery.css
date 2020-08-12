@@ -1,0 +1,115 @@
+.delivery {
+  padding-top: 80px;
+}
+.delivery__title {
+  font-size: 54px;
+  text-align: center;
+  color: #4a5160;
+}
+.delivery__desc {
+  font-size: 20px;
+  text-align: center;
+  color: #68788e;
+  margin-top: 24px;
+  margin-bottom: 80px;
+}
+.delivery__selector {
+  display: flex;
+  width: 100%;
+  border-radius: 24px;
+}
+.delivery__selector_item {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  background: #f5f6f9;
+  padding: 24px 0;
+  justify-content: center;
+}
+.delivery__item_fixed {
+    border-top: 1px solid #C7CAD1;
+    padding-top: 65px;
+}
+.delivery__selector_item:first-child {
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+}
+.delivery__selector_item:last-child {
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+.delivery__selector_item span {
+    color: #68788E;
+    margin-left: 24px;
+    font-size: 20px;
+}
+.delivery__selector_item.active {
+  background: #6c7385 !important;
+  cursor: default !important;
+}
+.delivery__selector_item img {
+    width: 32px;
+    height: 32px;
+}
+.delivery__selector_item.active img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(364%) hue-rotate(50deg) brightness(117%) contrast(100%);
+}
+.delivery__selector_item.active span {
+    color: #fff;
+}
+.delivery__selector_item:hover {
+    background: #E9EBEF;
+    cursor: pointer;
+}
+
+
+.delivery__wrapper {
+    margin-top: 50px;
+}
+.delivery__item {
+    display: flex;
+}
+.delivery__item p {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: 80px;
+
+}
+.delivery__item:not(:first-child) {
+    margin-top: 110px;
+}
+.delivery__subtitle {
+    margin-right: 150px;
+    min-width: 300px;
+    max-width: 300px;
+    color: #4a5160;
+}
+.delivery__subtitle span {
+    font-size: 24px;
+}
+.delivery__subdesc {
+    line-height: 32px;
+}
+.delivery__subdesc span {
+    color: #4A5160;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.delivery__content {
+    display: none;
+}
+.delivery__content.active {
+    display: block;
+}
+.delivery__desc_small {
+    color: #68788E;
+    font-size: 20px;
+    font-weight: 400;
+}
+.delivery__desc_large {
+    font-size: 22px !important;
+    display: block;
+    line-height: normal;
+}
