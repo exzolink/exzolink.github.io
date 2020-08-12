@@ -559,7 +559,7 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   .popupOrder {
     &__selector {
       min-width: 100vw;
@@ -572,9 +572,14 @@
       &_wrapper {
         width: 100%;
         overflow-x: scroll;
+        scrollbar-width: none;
       }
     }
+  }
+}
 
+@media screen and (max-width: 1200px) {
+  .popupOrder {
     &__contact input {
       max-width: 320px;
     }

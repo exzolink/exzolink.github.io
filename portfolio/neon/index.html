@@ -234,29 +234,29 @@
                                     .then(response => response.text())
                                     .then(html => { $refs.asusrogHard.innerHTML = html })"
                 >
-                  Bootcamp by Asus Rog
+                  Bootcamp by Asus Rog 1
                 </div>
 
                 <div
                   class="zones__tabs_item"
                   :class="{ 'active': tab === 'zone2' }"
                   @click="tab = 'zone2'"
-                  @mouseenter.once="fetch('./partials/bootcamp2Hardware.html')
+                  @mouseenter.once="fetch('./partials/asusrog2Hardware.html')
                                     .then(response => response.text())
                                     .then(html => { $refs.bootcamp2Hard.innerHTML = html })"
                 >
-                  Bootcamp Zone 2
+                  Bootcamp by Asus Rog 2
                 </div>
 
                 <div
                   class="zones__tabs_item"
                   :class="{ 'active': tab === 'psp' }"
                   @click="tab = 'psp'"
-                  @mouseenter.once="fetch('./partials/psproomHardware.html')
+                  @mouseenter.once="fetch('./partials/ps4roomHardware.html')
                                 .then(response => response.text())
                                 .then(html => { $refs.pspHard.innerHTML = html })"
                 >
-                  PSP Room
+                  PS4 Room
                 </div>
               </div>
             </div>

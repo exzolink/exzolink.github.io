@@ -139,29 +139,29 @@
                                     .then(response => response.text())
                                     .then(html => { $refs.asusrogHard.innerHTML = html })"
                 >
-                  Bootcamp by Asus Rog
+                  Bootcamp by Asus Rog 1
                 </div>
 
                 <div
                   class="zones__tabs_item"
                   :class="{ 'active': tab === 'zone2' }"
                   @click="tab = 'zone2'"
-                  @mouseenter.once="fetch('./partials/bootcamp2Hardware.html')
+                  @mouseenter.once="fetch('./partials/asusrog2Hardware.html')
                                     .then(response => response.text())
                                     .then(html => { $refs.bootcamp2Hard.innerHTML = html })"
                 >
-                  Bootcamp Zone 2
+                Bootcamp by Asus Rog 2
                 </div>
 
                 <div
                   class="zones__tabs_item"
                   :class="{ 'active': tab === 'psp' }"
                   @click="tab = 'psp'"
-                  @mouseenter.once="fetch('./partials/psproomHardware.html')
+                  @mouseenter.once="fetch('./partials/ps4roomHardware.html')
                                 .then(response => response.text())
                                 .then(html => { $refs.pspHard.innerHTML = html })"
                 >
-                  PSP Room
+                  PS4 Room
                 </div>
               </div>
             </div>
@@ -782,14 +782,14 @@
                   :class="{ 'active': $store.modalOrderTab.tab === 'asus' }"
                   @click="$store.modalOrderTab.tab = 'asus'"
                 >
-                  Bootcamp by Asus Rog
+                Bootcamp by Asus Rog 1
                 </div>
                 <div
                   class="zones__tabs_item popupRegister__selector_item"
                   :class="{ 'active': $store.modalOrderTab.tab === 'zone2' }"
                   @click="$store.modalOrderTab.tab = 'zone2'"
                 >
-                  Bootcamp Zone 2
+                Bootcamp by Asus Rog 2
                 </div>
                 <div
                   class="zones__tabs_item popupRegister__selector_item"
@@ -1601,17 +1601,17 @@
                 </div>
               </div>
 
-              <!-- Вкладка: Bootcamp by Asus Rog -->
+              <!-- Вкладка: Bootcamp by Asus Rog 1 -->
               <div
                 x-show.transition.in.opacity.duration.350ms="$store.modalOrderTab.tab === 'asus'"
                 class="popupOrder__zone"
               >
-                <!-- Вкладка: Bootcamp by Asus Rog / Wrapper для окон -->
+                <!-- Вкладка: Bootcamp by Asus Rog 1 / Wrapper для окон -->
                 <div
                   x-data="{ zoneSubTab: 'windowOne', date: 'none' }"
                   class="popupOrder__zone_inner"
                 >
-                  <!-- Вкладка: Bootcamp by Asus Rog / Суб-вкладка: Окно 1 -->
+                  <!-- Вкладка: Bootcamp by Asus Rog 1 / Суб-вкладка: Окно 1 -->
                   <div
                     x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowOne'"
                     class="popupOrder__zone_item"
@@ -1619,7 +1619,7 @@
                     <div class="popupOrder__zone_wrap">
                       <div>
                         <h3 class="zones__hard_title popupOrder__zone_title">
-                          Bootcamp by Asus Rog
+                          Bootcamp by Asus Rog 1
                         </h3>
                         <p class="popupOrder__zone_desc">
                           20xRTX2070Super + RAM 16Гб
@@ -1694,7 +1694,7 @@
                     </div>
                   </div>
 
-                  <!-- Вкладка: Bootcamp by Asus Rog / Суб-вкладка: Окно 2 -->
+                  <!-- Вкладка: Bootcamp by Asus Rog 1 / Суб-вкладка: Окно 2 -->
                   <div
                     x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowTwo'"
                     class="popupOrder__zone_item"
@@ -1702,7 +1702,7 @@
                     <div class="popupOrder__zone_wrap">
                       <div>
                         <h3 class="zones__hard_title popupOrder__zone_title">
-                          Bootcamp by Asus Rog
+                          Bootcamp by Asus Rog 1
                         </h3>
                         <p class="popupOrder__zone_desc">
                           20xRTX2070Super + RAM 16Гб
@@ -1789,7 +1789,7 @@
                     </div>
                   </div>
 
-                  <!-- Вкладка: Bootcamp by Asus Rog / Суб-вкладка: Окно 3 -->
+                  <!-- Вкладка: Bootcamp by Asus Rog 1 / Суб-вкладка: Окно 3 -->
                   <div
                     x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowThree'"
                     class="popupOrder__zone_item"
@@ -1797,7 +1797,7 @@
                     <div class="popupOrder__zone_wrap">
                       <div>
                         <h3 class="zones__hard_title popupOrder__zone_title">
-                          Bootcamp by Asus Rog
+                          Bootcamp by Asus Rog 1
                         </h3>
                         <p class="popupOrder__zone_desc">
                           20xRTX2070Super + RAM 16Гб
@@ -1820,7 +1820,7 @@
                           class="zone-info"
                           type="text"
                           autocomplete="off"
-                          value="Bootcamp by Asus Rog"
+                          value="Bootcamp by Asus Rog 1"
                           required
                           readonly
                         />
@@ -1899,17 +1899,17 @@
                 </div>
               </div>
 
-              <!-- Вкладка: Bootcamp Zone 2 -->
+              <!-- Вкладка: Bootcamp by Asus Rog 2 -->
               <div
                 x-show.transition.in.opacity.duration.350ms="$store.modalOrderTab.tab === 'zone2'"
                 class="popupOrder__zone"
               >
-                <!-- Вкладка: Bootcamp Zone 2 / Wrapper для окон -->
+                <!-- Вкладка: Bootcamp by Asus Rog 2 / Wrapper для окон -->
                 <div
                   x-data="{ zoneSubTab: 'windowOne', date: 'none' }"
                   class="popupOrder__zone_inner"
                 >
-                  <!-- Вкладка: Bootcamp Zone 2 / Суб-вкладка: Окно 1 -->
+                  <!-- Вкладка: Bootcamp by Asus Rog 2 / Суб-вкладка: Окно 1 -->
                   <div
                     x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowOne'"
                     class="popupOrder__zone_item"
@@ -1917,7 +1917,7 @@
                     <div class="popupOrder__zone_wrap">
                       <div>
                         <h3 class="zones__hard_title popupOrder__zone_title">
-                          Bootcamp Zone 2
+                          Bootcamp by Asus Rog 2
                         </h3>
                         <p class="popupOrder__zone_desc">
                           20xRTX2070Super + RAM 16Гб
@@ -1992,7 +1992,7 @@
                     </div>
                   </div>
 
-                  <!-- Вкладка: Bootcamp Zone 2 / Суб-вкладка: Окно 2 -->
+                  <!-- Вкладка: Bootcamp by Asus Rog 2 / Суб-вкладка: Окно 2 -->
                   <div
                     x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowTwo'"
                     class="popupOrder__zone_item"
@@ -2000,7 +2000,7 @@
                     <div class="popupOrder__zone_wrap">
                       <div>
                         <h3 class="zones__hard_title popupOrder__zone_title">
-                          Bootcamp Zone 2
+                          Bootcamp by Asus Rog 2
                         </h3>
                         <p class="popupOrder__zone_desc">
                           20xRTX2070Super + RAM 16Гб
@@ -2089,7 +2089,7 @@
                     </div>
                   </div>
 
-                  <!-- Вкладка: Bootcamp Zone 2 / Суб-вкладка: Окно 3 -->
+                  <!-- Вкладка: Bootcamp by Asus Rog 2 / Суб-вкладка: Окно 3 -->
                   <div
                     x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowThree'"
                     class="popupOrder__zone_item"
@@ -2097,7 +2097,7 @@
                     <div class="popupOrder__zone_wrap">
                       <div>
                         <h3 class="zones__hard_title popupOrder__zone_title">
-                          Bootcamp Zone 2
+                          Bootcamp by Asus Rog 2
                         </h3>
                         <p class="popupOrder__zone_desc">
                           20xRTX2070Super + RAM 16Гб
@@ -2120,7 +2120,7 @@
                           class="zone-info"
                           type="text"
                           autocomplete="off"
-                          value="Bootcamp Zone 2"
+                          value="Bootcamp by Asus Rog 2"
                           required
                           readonly
                         />
