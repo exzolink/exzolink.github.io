@@ -4,9 +4,10 @@
   top: 0;
   z-index: 9999;
   left: 0;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-  min-height: -webkit-fill-available;
+  height: 100%;
+  // height: 100vh;
+  // height: calc(var(--vh, 1vh) * 100);
+  // min-height: -webkit-fill-available;
   background-color: #242424;
 
   &__inner {
