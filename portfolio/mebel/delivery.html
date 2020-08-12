@@ -658,7 +658,7 @@
     </header>
 
     <main class="delivery">
-      <div class="container">
+      <div class="container delivery__container">
         <div class="delivery__inner">
           <h1 class="delivery__title">Информация о доставке</h1>
           <p class="delivery__desc">
@@ -670,20 +670,9 @@
             <div data-tab="moscow" class="delivery__selector_item active">
               <img src="imgs/del1.svg" alt="" />
               <span>Доставка по Москве и МО</span>
+              <img class="arrowdown" src="imgs/arrowDown.svg" alt="">
             </div>
 
-            <div data-tab="self" class="delivery__selector_item">
-              <img src="imgs/del2.svg" alt="" />
-              <span>Самовывоз</span>
-            </div>
-
-            <div data-tab="russia" class="delivery__selector_item">
-              <img src="imgs/del3.svg" alt="" />
-              <span>Доставка по России</span>
-            </div>
-          </div>
-
-          <div class="delivery__wrapper">
             <div id="moscow" class="delivery__content active">
               <div class="delivery__item">
                 <h2 class="delivery__subtitle">Доставка по Москве и МО</h2>
@@ -772,6 +761,12 @@
               </div>
             </div>
 
+            <div data-tab="self" class="delivery__selector_item">
+              <img src="imgs/del2.svg" alt="" />
+              <span>Самовывоз</span>
+              <img class="arrowdown" src="imgs/arrowDown.svg" alt="">
+            </div>
+
             <div id="self" class="delivery__content">
               <div class="delivery__item">
                 <h2 class="delivery__subtitle">Самовывоз</h2>
@@ -791,6 +786,12 @@
                 </h2>
                 <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A59dd265e9582cf7095b84fe12929e4e69fead91fd956c0f489e3b60eb94dfc3a&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
               </div>
+            </div>
+
+            <div data-tab="russia" class="delivery__selector_item">
+              <img src="imgs/del3.svg" alt="" />
+              <span>Доставка по России</span>
+              <img class="arrowdown" src="imgs/arrowDown.svg" alt="">
             </div>
 
             <div id="russia" class="delivery__content">
@@ -856,7 +857,10 @@
                 </p>
               </div>
             </div>
+          </div>
 
+
+  
             <!-- Фиксированный блок -->
             <div class="delivery__item delivery__item_fixed">
               <h2 class="delivery__subtitle">Гарантия при доставке</h2>
