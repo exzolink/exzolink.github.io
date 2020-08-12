@@ -789,6 +789,10 @@
       max-width: none;
     }
 
+    &__selector_wrapper {
+      scrollbar-width: thin;
+    }
+
     &__zone_desc {
       font-size: 16px;
     }
