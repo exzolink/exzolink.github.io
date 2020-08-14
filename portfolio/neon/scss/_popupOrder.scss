@@ -1,4 +1,6 @@
 .popupOrder {
+  z-index: 9999;
+
   &__selector {
     padding: 0;
     justify-content: flex-start;

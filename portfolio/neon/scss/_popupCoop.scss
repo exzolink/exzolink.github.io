@@ -1,4 +1,6 @@
 .popupCoop {
+  z-index: 9999;
+  
   &__title {
     max-width: 900px;
   }

@@ -12,6 +12,10 @@ $fz25: 25px;
   outline: none;
 }
 
+body {
+  margin-top: 127px;
+}
+
 body,
 html {
   overflow-x: hidden;
@@ -230,5 +234,18 @@ textarea::-webkit-input-placeholder {
   .order-button {
     font-size: 14px;
     padding: 19px 36px;
+  }
+  body {
+    margin-top: 90px;
+  }
+}
+@media screen and (max-width: 480px) {
+  body {
+    margin-top: 76px;
+  }
+}
+@media screen and (max-width: 359px) {
+  body {
+    margin-top: 68px;
   }
 }
