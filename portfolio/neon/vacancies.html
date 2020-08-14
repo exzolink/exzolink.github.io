@@ -323,7 +323,7 @@
                 только появится подходящая вакансия
               </p>
 
-              <form class="vac__form" action="">
+              <form data-success="vacThanks" class="vac__form" method="POST" action="test.php">
                 <input type="text" placeholder="Имя*" required />
                 <input type="text" placeholder="Фамилия*" required />
                 <input type="text" placeholder="Телефон*" required />
@@ -331,7 +331,7 @@
                 <input type="text" placeholder="Дата рождения*" required />
                 <input type="text" placeholder="Образование*" required />
                 <textarea
-                  name=""
+                  name="about"
                   placeholder="Напишите немного о себе"
                 ></textarea>
 
@@ -439,7 +439,7 @@
                 Присоединяйтесь к команде <span>Neon eSports Bar & Gaming</span>
               </h4>
 
-              <form class="vac__form popupVac__form" action="">
+              <form data-success="vacThanks" class="vac__form popupVac__form" method="POST" action="test.php">
                 <input type="text" placeholder="Имя*" required />
                 <input type="text" placeholder="Фамилия*" required />
                 <input type="text" placeholder="Телефон*" required />
@@ -447,7 +447,7 @@
                 <input type="text" placeholder="Дата рождения*" required />
                 <input type="text" placeholder="Образование*" required />
                 <textarea
-                  name=""
+                  name="about"
                   placeholder="Напишите немного о себе"
                 ></textarea>
 
@@ -474,6 +474,35 @@
           </div>
         </div>
       </section>
+
+      <!-- Модальное окно: Спасибо за заявку (вакансия) -->
+			<section class="popup">
+				<div id="vacThanks" class="popupRegister popupCoop popupThanks">
+					<button>
+						<img
+							id="closeThanks"
+							decoding="async"
+							class="popup__close popupCoop__close"
+							src="imgs/closePacket.svg"
+							alt=""
+						/>
+					</button>
+
+					<div class="packet__inner popupPrivacy__inner popupThanks__inner">
+						<div class="container">
+							<h4 class="zones__hard_title popupThanks__title">
+								Спасибо!
+							</h4>
+
+							<div class="popupThanks__content">
+								<p>
+									Ваше резюме на рассмотрении
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
     </main>
 
     <footer class="footer">

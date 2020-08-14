@@ -1,6 +1,7 @@
 .popupThanks {
   visibility: hidden;
   opacity: 0;
+  transition: opacity .35s ease, visibility .35s ease;
 
   &__title {
     color: $blue;
@@ -23,9 +24,34 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 100%;
+    max-height: none;
   }
   &.active {
     opacity: 1;
     visibility: visible;
   }
+}
+
+@media screen and (max-width: 767px) {
+    .popupThanks {
+        &__title {
+            font-size: 36px;
+        }
+        &__content {
+            font-size: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .popupThanks {
+        &__title {
+            font-size: 24px;
+        }
+        &__content {
+            margin-top: 50px;
+            font-size: 20px;
+        }
+    }
 }
