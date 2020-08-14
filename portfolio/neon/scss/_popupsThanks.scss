@@ -1,0 +1,31 @@
+.popupThanks {
+  visibility: hidden;
+  opacity: 0;
+
+  &__title {
+    color: $blue;
+    font-size: 42px;
+    text-align: center;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+  }
+  &__content {
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 70px;
+    font-family: "Montserrat", sans-serif;
+  }
+  &__inner {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}

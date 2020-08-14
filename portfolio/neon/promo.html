@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="описание сайта">
-    <meta name="keywords" content="тег1, тег2">
-    <meta property="og:title" content="заголовок сайта">
-    <meta property="og:description" content="описание сайта">
-    <meta name="twitter:title" content="заголовок сайта">
-    <meta name="twitter:description" content="описание сайта">
+    <meta name="description" content="описание сайта" />
+    <meta name="keywords" content="тег1, тег2" />
+    <meta property="og:title" content="заголовок сайта" />
+    <meta property="og:description" content="описание сайта" />
+    <meta name="twitter:title" content="заголовок сайта" />
+    <meta name="twitter:description" content="описание сайта" />
 
     <link rel="stylesheet" href="css/styles.css" />
     <link
@@ -235,34 +235,55 @@
                 </div>
                 <!-- Рассылка через Email -->
                 <form
+                  method="POST"
+                  data-success-popup="subscribeThanks"
                   x-show="tab === 'email'"
-                  action=""
+                  action="test.php"
                   class="subscribe__inputs"
                 >
-                  <input type="text" placeholder="Имя" required />
-                  <input type="text" placeholder="E-mail" required />
+                  <input type="text" name="name" placeholder="Имя" required />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="E-mail"
+                    required
+                  />
                   <button type="submit">Подписаться</button>
                 </form>
                 <!-- Рассылка через WhatsUp -->
                 <form
-                  x-show="tab === 'wh'"
                   x-cloak
-                  action=""
+                  method="POST"
+                  data-success-popup="subscribeThanks"
+                  x-show="tab === 'wh'"
+                  action="test.php"
                   class="subscribe__inputs"
                 >
-                  <input type="text" placeholder="Имя" required />
-                  <input type="text" placeholder="Телефон" required />
+                  <input type="text" name="name" placeholder="Имя" required />
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="Телефон"
+                    required
+                  />
                   <button type="submit">Подписаться</button>
                 </form>
                 <!-- Рассылка через Telegram -->
                 <form
-                  x-show="tab === 'tg'"
                   x-cloak
-                  action=""
+                  method="POST"
+                  data-success-popup="subscribeThanks"
+                  x-show="tab === 'tg'"
+                  action="test.php"
                   class="subscribe__inputs"
                 >
-                  <input type="text" placeholder="Имя" required />
-                  <input type="text" placeholder="Телефон" required />
+                  <input type="text" name="name" placeholder="Имя" required />
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="Телефон"
+                    required
+                  />
                   <button type="submit">Подписаться</button>
                 </form>
               </div>
@@ -560,6 +581,37 @@
           </div>
         </div>
       </section>
+
+      <!-- Модальное окно: Спасибо за подписку -->
+      <section class="popup">
+        <div id="subscribeThanks" class="popupRegister popupCoop popupThanks">
+          <button>
+            <img
+              id="closeThanks"
+              decoding="async"
+              class="popup__close popupCoop__close"
+              src="imgs/closePacket.svg"
+              alt=""
+            />
+          </button>
+
+          <div class="packet__inner popupPrivacy__inner popupThanks__inner">
+            <div class="container">
+              <h4 class="zones__hard_title popupThanks__title">
+                Спасибо!
+              </h4>
+
+              <div class="popupThanks__content">
+                <p>
+                  Теперь вы будете в курсе всех
+                  <br />
+                  главных событий и акций.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -574,7 +626,10 @@
           </div>
           <div class="footer__block footer__block_last">
             <p>Разработано командой</p>
-            <a href="https://promo.gradmedia.kz/digital" target="_blank" rel="noopener noreferrer"
+            <a
+              href="https://promo.gradmedia.kz/digital"
+              target="_blank"
+              rel="noopener noreferrer"
               ><img decoding="async" src="imgs/gmglogo.png" alt=""
             /></a>
           </div>

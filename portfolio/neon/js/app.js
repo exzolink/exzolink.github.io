@@ -414,7 +414,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (startHour[0] !== "00" && startHour[0] <= 10) {
         selectTimeInput.value = "0" + (startHour[0] - 1) + ":" + startHour[1];
       }
-      if (startHour[0] === '00') {
+      if (startHour[0] === "00") {
         selectTimeInput.value = "23:" + startHour[1];
       }
     });
@@ -444,3 +444,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+function submitHandler(e) {
+  e.preventDefault();
+
+  var request = new XMLHttpRequest();
+  request.onreadystatechange = function () {
+    console.log("readyState=", this.readyState, "statis=", this.status);
+    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+      var getAttr = this.getAttribute("data-success-popup");
+      var getPopup = document.querySelector("#" + getAttr);
+      getPopup.classList.add("active");
+    }
+  };
+
+  request.open(this.method, this.action, true);
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+  var data = new FormData(this);
+  for (var key of data.keys()) console.log(key, data.get(key));
+
+  request.send(data);
+}
+
+document
+  .querySelectorAll("form")
+  .forEach((form) => form.addEventListener("submit", submitHandler));

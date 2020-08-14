@@ -156,7 +156,7 @@ img {
 
 // Hide Elements before Init
 [x-cloak] {
-  display: none;
+  display: none !important;
 }
 
 // Slider Arrows
