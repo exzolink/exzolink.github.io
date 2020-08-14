@@ -298,11 +298,35 @@
 								<span>Отправьте свое предложение, и с Вами свяжутся!</span>
 							</h4>
 
-							<form data-success="coopThanks" class="vac__form popupCoop__form" action="test.php" method="POST">
-								<input type="text" placeholder="Имя*" required="" />
-								<input type="email" placeholder="E-mail*" required="" />
-								<input type="text" placeholder="Телефон*" required="" />
-								<textarea name="" placeholder="Комментарий"></textarea>
+							<form
+								data-success="coopThanks"
+								class="vac__form popupCoop__form"
+								action="test.php"
+								method="POST"
+							>
+								<input
+									type="text"
+									autocomplete="off"
+									placeholder="Имя*"
+									required
+								/>
+								<input
+									type="email"
+									autocomplete="off"
+									placeholder="E-mail*"
+									required
+								/>
+								<input
+									type="text"
+									autocomplete="off"
+									placeholder="Телефон*"
+									required
+								/>
+								<textarea
+									name="comment"
+									autocomplete="off"
+									placeholder="Комментарий"
+								></textarea>
 
 								<div class="subscribe__inputs vac__submit popupCoop__submit">
 									<button type="submit">Обсудить сотрудничество</button>
