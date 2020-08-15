@@ -497,4 +497,19 @@ document.addEventListener("DOMContentLoaded", function () {
 			document.documentElement.classList.remove("open");
 		});
 	});
+
+
+	// Ждем загрузку виджета инстаграм и удаляем лейбл
+	setTimeout(() => {
+		if (
+			document.querySelector(
+				".instagram__content #eapps-instagram-feed-1 > a"
+			) !== null
+		) {
+			var getLabel = document.querySelector(
+				".instagram__content #eapps-instagram-feed-1 > a"
+			);
+			getLabel.remove();
+		}
+	}, 4000);
 });
