@@ -450,13 +450,14 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	var orderFetched = false;
-	setInterval(() => {
+	var init = setInterval(() => {
 		if (
 			orderFetched === false &&
 			document.querySelector(".popupOrder") !== null
 		) {
 			initOrderBtns();
 			orderFetched = true;
+			clearTimeout(init);
 		} else {
 			return;
 		}
