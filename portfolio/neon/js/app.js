@@ -307,7 +307,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 
-	window.addEventListener("onload", function () {
+
+		setTimeout(() => {
+
 		// Инициализация попапа для выбора времени в попапе с бронированием
 		var timePicker = document.querySelectorAll(".js-time-picker");
 		for (var i = 0; i < timePicker.length; i++) {
@@ -446,8 +448,8 @@ document.addEventListener("DOMContentLoaded", function () {
 					selectTimeInput.value = "00:" + endHour[1];
 				}
 			});
-		});
-	});
+		});			
+}, 500);
 
 	// Обработчик форм
 	function submitHandler(e) {
