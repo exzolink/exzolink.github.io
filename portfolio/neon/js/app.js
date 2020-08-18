@@ -2,6 +2,7 @@
 exzolink.github.io */
 
 "use strict";
+
 // Хранение начальных значений модальных окон
 Spruce.store("modalRegister", {
 	open: "false",
@@ -495,7 +496,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		.querySelectorAll("form")
 		.forEach((form) => form.addEventListener("submit", submitHandler));
 
-	// Функция для закрытия всех существующих попапов
+	// Функция для возврата всех попапов в начальное состояние
 	function closeAllPopups() {
 		Spruce.store("modalRegister").open = "false";
 		Spruce.store("modalPacketDay").open = "false";
