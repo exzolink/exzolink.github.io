@@ -358,6 +358,11 @@ document.addEventListener("DOMContentLoaded", function () {
 			});
 		});
 
+		// Выбор форм в попапе брони
+		document
+			.querySelectorAll("form")
+			.forEach((form) => form.addEventListener("submit", submitHandler));
+
 		// Обработка данных при клике на кнопку "Дальше" в PS4 Room (попап)
 		var nextPS4 = document.querySelectorAll(".popupOrder__ps4_next");
 		var prevPS4 = document.querySelectorAll(".popupOrder__ps4_prev");
@@ -478,6 +483,11 @@ document.addEventListener("DOMContentLoaded", function () {
 				var getPopup = document.querySelector("#" + getAttr);
 				getPopup.classList.add("active");
 				closeAllPopups();
+
+				var closestInputs = e.target.querySelectorAll("input:not(.zone-info)");
+				for (i = 0; i < closestInputs.length; i++) {
+					closestInputs.value = "";
+				}
 			}
 		};
 
