@@ -359,7 +359,7 @@
                   Только зарегистрированные пользователи могут оставлять
                   комментарии. Войдите, пожалуйста.
                 </p>
-                <button class="nav__btn_order">Вход / Регистрация</button>
+                <button @click.prevent="$store.modalRegister.open = 'true'; scrollbarToggle()" class="nav__btn_order">Вход / Регистрация</button>
               </div>
             </div>
           </div>
@@ -487,6 +487,18 @@
           </div>
         </div>
       </section>
+
+
+      <!-- Модальное окно: Регистрация/вход -->
+      <section
+      x-data="{}"
+      x-init="fetch('./partials/popupRegister.html')
+    .then(response => response.text())
+    .then(html => { $refs.popupRegister.innerHTML = html })"
+      x-ref="popupRegister"
+      x-subscribe
+      class="popup"
+    ></section>
     </main>
 
     <footer class="footer">

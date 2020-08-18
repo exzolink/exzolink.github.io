@@ -1,0 +1,171 @@
+<div
+	x-cloak
+	x-show.transition.in.duration.350ms.out.scale.50.duration.350ms.opacity.duration.350ms="$store.modalRegister.open === 'true'"
+	class="popupRegister"
+>
+	<button>
+		<img
+			decoding="async"
+			@click="$store.modalRegister.open = 'false'; scrollbarToggle()"
+			class="popup__close"
+			src="imgs/closePacket.svg"
+			alt=""
+		/>
+	</button>
+
+	<div x-data="{ regTab: 'login' }" class="popupRegister__inner">
+		<div class="popupRegister__selector">
+			<div
+				class="zones__tabs_item popupRegister__selector_item"
+				:class="{ 'active': regTab === 'login' }"
+				@click="regTab = 'login'"
+			>
+				Вход
+			</div>
+			<div
+				class="zones__tabs_item popupRegister__selector_item"
+				:class="{ 'active': regTab === 'register' }"
+				@click="regTab = 'register'"
+			>
+				Регистрация
+			</div>
+		</div>
+
+		<div class="popupRegister__content">
+			<div
+				x-show.transition.in.duration.350ms="regTab === 'login'"
+				class="popupRegister__login_wrapper"
+			>
+				<h4 class="zones__hard_title popup__title">Вход<br /><br /></h4>
+
+				<div
+					x-data="{ logSubTab: 'email' }"
+					action=""
+					class="popupRegister__form"
+				>
+					<div class="subscribe__checkboxes popupRegister__checkboxes">
+						<div class="subscribe__checkbox">
+							<input
+								type="radio"
+								name="logSubTab"
+								id="email"
+								checked=""
+								@click="logSubTab = 'email'"
+							/>
+							<label
+								class="subscribe__label"
+								for="email"
+								@click="logSubTab = 'email'"
+								>E-mail</label
+							>
+						</div>
+						<div class="subscribe__checkbox">
+							<input
+								type="radio"
+								name="logSubTab"
+								id="phone"
+								@click="logSubTab = 'phone'"
+							/>
+							<label
+								class="subscribe__label"
+								for="phone"
+								@click="logSubTab = 'phone'"
+								>Телефон</label
+							>
+						</div>
+					</div>
+
+					<form
+						action=""
+						x-show="logSubTab === 'email'"
+						class="subscribe__inputs popupRegister__inputs"
+					>
+						<input type="text" placeholder="E-mail*" required="" />
+						<input type="text" placeholder="Пароль*" required="" />
+						<button type="submit">Зарегистрироваться</button>
+					</form>
+
+					<form
+						action=""
+						x-cloak
+						x-show="logSubTab === 'phone'"
+						class="subscribe__inputs popupRegister__inputs"
+					>
+						<input type="text" placeholder="Телефон*" required="" />
+						<input type="text" placeholder="Пароль*" required="" />
+						<button type="submit">Зарегистрироваться</button>
+					</form>
+				</div>
+			</div>
+
+			<div
+				x-cloak
+				x-show.transition.in.duration.350ms="regTab === 'register'"
+				class="popupRegister__login_wrapper"
+			>
+				<h4 class="zones__hard_title popup__title">
+					Зарегистрируйтесь в сообществе <span>Neon eSports</span>
+				</h4>
+
+				<div
+					x-data="{ regSubTab: 'email' }"
+					action=""
+					class="popupRegister__form"
+				>
+					<div class="subscribe__checkboxes popupRegister__checkboxes">
+						<div class="subscribe__checkbox">
+							<input
+								type="radio"
+								name="regSubTab"
+								id="email2"
+								checked=""
+								@click="regSubTab = 'email'"
+							/>
+							<label
+								class="subscribe__label"
+								for="email2"
+								@click="regSubTab = 'email'"
+								>E-mail</label
+							>
+						</div>
+						<div class="subscribe__checkbox">
+							<input
+								type="radio"
+								name="regSubTab"
+								id="phone2"
+								@click="regSubTab = 'phone'"
+							/>
+							<label
+								class="subscribe__label"
+								for="phone2"
+								@click="regSubTab = 'phone'"
+								>Телефон</label
+							>
+						</div>
+					</div>
+
+					<form
+						action=""
+						x-show="regSubTab === 'email'"
+						class="subscribe__inputs popupRegister__inputs"
+					>
+						<input type="text" placeholder="E-mail*" required="" />
+						<input type="text" placeholder="Пароль*" required="" />
+						<button type="submit">Зарегистрироваться</button>
+					</form>
+
+					<form
+						action=""
+						x-cloak
+						x-show="regSubTab === 'phone'"
+						class="subscribe__inputs popupRegister__inputs"
+					>
+						<input type="text" placeholder="Телефон*" required="" />
+						<input type="text" placeholder="Пароль*" required="" />
+						<button type="submit">Зарегистрироваться</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

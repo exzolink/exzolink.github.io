@@ -1,340 +1,354 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="описание сайта">
-    <meta name="keywords" content="тег1, тег2">
-    <meta property="og:title" content="заголовок сайта">
-    <meta property="og:description" content="описание сайта">
-    <meta name="twitter:title" content="заголовок сайта">
-    <meta name="twitter:description" content="описание сайта">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="описание сайта" />
+		<meta name="keywords" content="тег1, тег2" />
+		<meta property="og:title" content="заголовок сайта" />
+		<meta property="og:description" content="описание сайта" />
+		<meta name="twitter:title" content="заголовок сайта" />
+		<meta name="twitter:description" content="описание сайта" />
 
-    <link rel="stylesheet" href="css/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/swiper.min.css" />
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/picker.min.css" />
-    <title>Neon eSports</title>
-  </head>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link
+			href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/picker.min.css" />
+		<title>Neon eSports</title>
+	</head>
 
-  <body>
-    <header x-data="{ BurgerOpen: false }">
-      <div
-        x-show.transition.in.duration.350ms.out.scale.50.duration.350ms.opacity.duration.350ms="BurgerOpen"
-        x-cloak
-        class="header__menu"
-      >
-        <div class="header__inner">
-          <div class="header__controls">
-            <div><img decoding="async" src="imgs/logo.svg" alt="" /></div>
-            <div>
-              <img
-                decoding="async"
-                @click="BurgerOpen = false; scrollbarToggle()"
-                src="imgs/close.svg"
-                alt=""
-                class="header__close"
-              />
-            </div>
-          </div>
-          <div class="header__links_wrapper">
-            <div class="header__links">
-              <a href="./" class="header__link">Главная</a>
-              <a href="" class="header__link">Как это было?</a>
-              <a href="" class="header__link">Сообщество Neon eSports</a>
-              <a href="" class="header__link">Новости мирового киберспорта</a>
-            </div>
-            <div class="header__links">
-              <a class="header__link" href="rating.html">Рейтинг Dota 2</a>
-            </div>
-          </div>
-        </div>
-      </div>
+	<body>
+		<header x-data="{ BurgerOpen: false }">
+			<div
+				x-show.transition.in.duration.350ms.out.scale.50.duration.350ms.opacity.duration.350ms="BurgerOpen"
+				x-cloak
+				class="header__menu"
+			>
+				<div class="header__inner">
+					<div class="header__controls">
+						<div><img decoding="async" src="imgs/logo.svg" alt="" /></div>
+						<div>
+							<img
+								decoding="async"
+								@click="BurgerOpen = false; scrollbarToggle()"
+								src="imgs/close.svg"
+								alt=""
+								class="header__close"
+							/>
+						</div>
+					</div>
+					<div class="header__links_wrapper">
+						<div class="header__links">
+							<a href="./" class="header__link">Главная</a>
+							<a href="" class="header__link">Как это было?</a>
+							<a href="" class="header__link">Сообщество Neon eSports</a>
+							<a href="" class="header__link">Новости мирового киберспорта</a>
+						</div>
+						<div class="header__links">
+							<a class="header__link" href="rating.html">Рейтинг Dota 2</a>
+						</div>
+					</div>
+				</div>
+			</div>
 
-      <div class="header">
-        <div class="top__nav">
-          <div class="container">
-            <div class="top__nav_inner">
-              <a class="top__nav_link" href="rating.html">Рейтинг Dota 2</a>
-              <a class="top__nav_link" href="tel:+77777777777"
-                >+7 777 777 77 77</a
-              >
-            </div>
-          </div>
-        </div>
-        <nav class="nav">
-          <div class="container">
-            <div class="nav__inner">
-              <a class="nav__logo" href="./"
-                ><img decoding="async" src="imgs/logo.svg" alt=""
-              /></a>
-              <div class="nav__items">
-                <a href="./" class="nav__link">Главная</a>
-                <a href="section.html" class="nav__link">Как это было?</a>
-                <a href="" class="nav__link">Сообщество Neon eSports</a>
-                <a href="" class="nav__link">Новости мирового киберспорта</a>
-              </div>
-              <div class="flex">
-                <a
-                  href=""
-                  class="nav__btn_order"
-                  @click.prevent="$store.modalRegister.open = 'true'; scrollbarToggle()"
-                  >Вход / Регистрация</a
-                >
-                <button
-                  @click="BurgerOpen = true; scrollbarToggle()"
-                  class="nav__btn_menu"
-                >
-                  <img decoding="async" src="imgs/menu.svg" alt="" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
+			<div class="header">
+				<div class="top__nav">
+					<div class="container">
+						<div class="top__nav_inner">
+							<a class="top__nav_link" href="rating.html">Рейтинг Dota 2</a>
+							<a class="top__nav_link" href="tel:+77777777777"
+								>+7 777 777 77 77</a
+							>
+						</div>
+					</div>
+				</div>
+				<nav class="nav">
+					<div class="container">
+						<div class="nav__inner">
+							<a class="nav__logo" href="./"
+								><img decoding="async" src="imgs/logo.svg" alt=""
+							/></a>
+							<div class="nav__items">
+								<a href="./" class="nav__link">Главная</a>
+								<a href="section.html" class="nav__link">Как это было?</a>
+								<a href="" class="nav__link">Сообщество Neon eSports</a>
+								<a href="" class="nav__link">Новости мирового киберспорта</a>
+							</div>
+							<div class="flex">
+								<a
+									href=""
+									class="nav__btn_order"
+									@click.prevent="$store.modalRegister.open = 'true'; scrollbarToggle()"
+									>Вход / Регистрация</a
+								>
+								<button
+									@click="BurgerOpen = true; scrollbarToggle()"
+									class="nav__btn_menu"
+								>
+									<img decoding="async" src="imgs/menu.svg" alt="" />
+								</button>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
 
-    <main x-data="{}" x-subscribe class="main">
-      <section class="rating">
-        <img
-          decoding="async"
-          class="zones__particles events__particles lazyload"
-          data-src="imgs/purple-cloud2.png"
-          alt=""
-        />
-        <img
-          decoding="async"
-          class="zones__particles promo__particles lazyload"
-          data-src="imgs/rikimaru.png"
-          alt=""
-        />
-        <div class="container">
-          <div class="rating__inner">
-            <div class="rating__logo">
-              <img decoding="async" src="imgs/dota2logo.png" alt="" />
-            </div>
+		<main x-data="{}" x-subscribe class="main">
+			<section class="rating">
+				<img
+					decoding="async"
+					class="zones__particles events__particles lazyload"
+					data-src="imgs/purple-cloud2.png"
+					alt=""
+				/>
+				<img
+					decoding="async"
+					class="zones__particles promo__particles lazyload"
+					data-src="imgs/rikimaru.png"
+					alt=""
+				/>
+				<div class="container">
+					<div class="rating__inner">
+						<div class="rating__logo">
+							<img decoding="async" src="imgs/dota2logo.png" alt="" />
+						</div>
 
-            <h3 class="zones__hard_title">Рейтинг <span>Dota 2</span></h3>
+						<h3 class="zones__hard_title">Рейтинг <span>Dota 2</span></h3>
 
-            <div class="rating__content">
-              <div class="rating__block">
-                <table class="rating__table">
-                  <thead>
-                    <tr>
-                      <th>Место</th>
-                      <th>Игрок</th>
-                    </tr>
-                  </thead>
+						<div class="rating__content">
+							<div class="rating__block">
+								<table class="rating__table">
+									<thead>
+										<tr>
+											<th>Место</th>
+											<th>Игрок</th>
+										</tr>
+									</thead>
 
-                  <tbody>
-                    <tr>
-                      <td>
-                        <img
-                          decoding="async"
-                          src="imgs/rating_prize.png"
-                          alt=""
-                        />
-                        <span>1</span>
-                      </td>
-                      <td>Логин игрока</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <img
-                          decoding="async"
-                          src="imgs/rating_prize.png"
-                          alt=""
-                        />
-                        <span>1</span>
-                      </td>
-                      <td>Логин игрока</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <img
-                          decoding="async"
-                          src="imgs/rating_prize.png"
-                          alt=""
-                        />
-                        <span>1</span>
-                      </td>
-                      <td>Логин игрока</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <img
-                          decoding="async"
-                          src="imgs/rating_prize2.png"
-                          alt=""
-                        />
-                        <span>1</span>
-                      </td>
-                      <td>Логин игрока</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+									<tbody>
+										<tr>
+											<td>
+												<img
+													decoding="async"
+													src="imgs/rating_prize.png"
+													alt=""
+												/>
+												<span>1</span>
+											</td>
+											<td>Логин игрока</td>
+										</tr>
+										<tr>
+											<td>
+												<img
+													decoding="async"
+													src="imgs/rating_prize.png"
+													alt=""
+												/>
+												<span>1</span>
+											</td>
+											<td>Логин игрока</td>
+										</tr>
+										<tr>
+											<td>
+												<img
+													decoding="async"
+													src="imgs/rating_prize.png"
+													alt=""
+												/>
+												<span>1</span>
+											</td>
+											<td>Логин игрока</td>
+										</tr>
+										<tr>
+											<td>
+												<img
+													decoding="async"
+													src="imgs/rating_prize2.png"
+													alt=""
+												/>
+												<span>1</span>
+											</td>
+											<td>Логин игрока</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 
-              <div class="rating__block">
-                <table class="rating__table">
-                  <thead>
-                    <tr>
-                      <th>Место</th>
-                      <th>Игрок</th>
-                    </tr>
-                  </thead>
+							<div class="rating__block">
+								<table class="rating__table">
+									<thead>
+										<tr>
+											<th>Место</th>
+											<th>Игрок</th>
+										</tr>
+									</thead>
 
-                  <tbody>
-                    <tr>
-                      <td>
-                        <img
-                          decoding="async"
-                          src="imgs/rating_prize.png"
-                          alt=""
-                        />
-                        <span>10</span>
-                      </td>
-                      <td>Логин игрока</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <img
-                          decoding="async"
-                          src="imgs/rating_prize.png"
-                          alt=""
-                        />
-                        <span>1</span>
-                      </td>
-                      <td>Логин игрока</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <img
-                          decoding="async"
-                          src="imgs/rating_prize.png"
-                          alt=""
-                        />
-                        <span>2</span>
-                      </td>
-                      <td>Логин игрока</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <img
-                          decoding="async"
-                          src="imgs/rating_prize2.png"
-                          alt=""
-                        />
-                        <span>1</span>
-                      </td>
-                      <td>Логин игрока</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+									<tbody>
+										<tr>
+											<td>
+												<img
+													decoding="async"
+													src="imgs/rating_prize.png"
+													alt=""
+												/>
+												<span>10</span>
+											</td>
+											<td>Логин игрока</td>
+										</tr>
+										<tr>
+											<td>
+												<img
+													decoding="async"
+													src="imgs/rating_prize.png"
+													alt=""
+												/>
+												<span>1</span>
+											</td>
+											<td>Логин игрока</td>
+										</tr>
+										<tr>
+											<td>
+												<img
+													decoding="async"
+													src="imgs/rating_prize.png"
+													alt=""
+												/>
+												<span>2</span>
+											</td>
+											<td>Логин игрока</td>
+										</tr>
+										<tr>
+											<td>
+												<img
+													decoding="async"
+													src="imgs/rating_prize2.png"
+													alt=""
+												/>
+												<span>1</span>
+											</td>
+											<td>Логин игрока</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-      <section class="navigation">
-        <div class="container">
-          <div class="navigation__inner">
-            <div class="navigation__block">
-              <a>Основные разделы</a>
-              <a href="./">Главная</a>
-              <a href="about.html">О нас</a>
-              <a href="gamezones.html">Игровые зоны</a>
-              <a href="menu.html">Меню</a>
-              <a href="events.html">Мероприятия</a>
-              <a href="promo.html">Акции</a>
-              <a href="contacts.html">Контакты</a>
-            </div>
+			<section class="navigation">
+				<div class="container">
+					<div class="navigation__inner">
+						<div class="navigation__block">
+							<a>Основные разделы</a>
+							<a href="./">Главная</a>
+							<a href="about.html">О нас</a>
+							<a href="gamezones.html">Игровые зоны</a>
+							<a href="menu.html">Меню</a>
+							<a href="events.html">Мероприятия</a>
+							<a href="promo.html">Акции</a>
+							<a href="contacts.html">Контакты</a>
+						</div>
 
-            <div class="navigation__block">
-              <a>eSports Hub</a>
-              <a href="blog.html">eSports Hub</a>
-              <a href="rating.html">Рейтинг Dota 2</a>
-              <a href="section.html">Как это было?</a>
-              <a href="">Сообщество Neon eSports</a>
-              <a href="">Новости мирового <br />киберспорта</a>
-            </div>
+						<div class="navigation__block">
+							<a>eSports Hub</a>
+							<a href="blog.html">eSports Hub</a>
+							<a href="rating.html">Рейтинг Dota 2</a>
+							<a href="section.html">Как это было?</a>
+							<a href="">Сообщество Neon eSports</a>
+							<a href="">Новости мирового <br />киберспорта</a>
+						</div>
 
-            <div class="navigation__block">
-              <a>Информация</a>
-              <a href="coop.html">Сотрудничество</a>
-              <a href="vacancies.html">Вакансии</a>
-              <a href="">Конфиденциальность</a>
-              <div class="navigation__socials">
-                <a href=""
-                  ><img
-                    decoding="async"
-                    class="navigation__img"
-                    src="imgs/yt.svg"
-                    alt=""
-                /></a>
-                <a href=""
-                  ><img
-                    decoding="async"
-                    class="navigation__img"
-                    src="imgs/inst.svg"
-                    alt=""
-                /></a>
-                <a href=""
-                  ><img
-                    decoding="async"
-                    class="navigation__img"
-                    src="imgs/tg.svg"
-                    alt=""
-                /></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+						<div class="navigation__block">
+							<a>Информация</a>
+							<a href="coop.html">Сотрудничество</a>
+							<a href="vacancies.html">Вакансии</a>
+							<a href="">Конфиденциальность</a>
+							<div class="navigation__socials">
+								<a href=""
+									><img
+										decoding="async"
+										class="navigation__img"
+										src="imgs/yt.svg"
+										alt=""
+								/></a>
+								<a href=""
+									><img
+										decoding="async"
+										class="navigation__img"
+										src="imgs/inst.svg"
+										alt=""
+								/></a>
+								<a href=""
+									><img
+										decoding="async"
+										class="navigation__img"
+										src="imgs/tg.svg"
+										alt=""
+								/></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <div class="footer__block">
-            <a href=""><img decoding="async" src="imgs/logo.svg" alt="" /></a>
-          </div>
-          <div class="footer__block footer__block_center">
-            <p>Neon eSports 2020</p>
-            <p>Все права защищены</p>
-          </div>
-          <div class="footer__block footer__block_last">
-            <p>Разработано командой</p>
-            <a href="https://promo.gradmedia.kz/digital" target="_blank" rel="noopener noreferrer"
-              ><img decoding="async" src="imgs/gmglogo.png" alt=""
-            /></a>
-          </div>
-        </div>
-      </div>
-    </footer>
+			<!-- Модальное окно: Регистрация/вход -->
+			<section
+				x-data="{}"
+				x-init="fetch('./partials/popupRegister.html')
+        .then(response => response.text())
+        .then(html => { $refs.popupRegister.innerHTML = html })"
+				x-ref="popupRegister"
+				x-subscribe
+				class="popup"
+			></section>
+		</main>
 
-    <script src="js/spruce.js"></script>
-    <script src="js/alpine.js"></script>
-    <script src="js/fslightbox.js" async></script>
-    <script src="js/swiper.min.js"></script>
-    <script src="js/lazyload.js" async></script>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
-    <script src="js/typed.js"></script>
-    <script src="https://apps.elfsight.com/p/platform.js" async></script>
-    <script src="js/picker.min.js"></script>
-    <script src="js/app.min.js"></script>
-    <script>
-      function scrollbarToggle() {
-        document.documentElement.classList.toggle("open");
-      }
-    </script>
-  </body>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="footer__block">
+						<a href=""><img decoding="async" src="imgs/logo.svg" alt="" /></a>
+					</div>
+					<div class="footer__block footer__block_center">
+						<p>Neon eSports 2020</p>
+						<p>Все права защищены</p>
+					</div>
+					<div class="footer__block footer__block_last">
+						<p>Разработано командой</p>
+						<a
+							href="https://promo.gradmedia.kz/digital"
+							target="_blank"
+							rel="noopener noreferrer"
+							><img decoding="async" src="imgs/gmglogo.png" alt=""
+						/></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/spruce.js"></script>
+		<script src="js/alpine.js"></script>
+		<script src="js/fslightbox.js" async></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/lazyload.js" async></script>
+		<script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+		<script src="js/typed.js"></script>
+		<script src="https://apps.elfsight.com/p/platform.js" async></script>
+		<script src="js/picker.min.js"></script>
+		<script src="js/app.min.js"></script>
+		<script>
+			function scrollbarToggle() {
+				document.documentElement.classList.toggle("open");
+			}
+		</script>
+	</body>
 </html>
