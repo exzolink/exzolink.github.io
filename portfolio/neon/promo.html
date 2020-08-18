@@ -90,7 +90,7 @@
 								<a href="contacts.html" class="nav__link">Контакты</a>
 							</div>
 							<div class="flex">
-								<a href="" class="nav__btn_order">Забронировать место</a>
+								<a href="" @click.prevent="$store.modalOrder.open = 'true'; scrollbarToggle()" class="nav__btn_order">Забронировать место</a>
 								<button @click="BurgerOpen = true" class="nav__btn_menu">
 									<img decoding="async" src="imgs/menu.svg" alt="" />
 								</button>
@@ -101,7 +101,7 @@
 			</div>
 		</header>
 
-		<main class="main">
+		<main x-data="{}" x-subscribe class="main">
 			<section
 				class="welcomeEvents welcomePromo lazyload"
 				data-bg="imgs/welcomePromo.png"
@@ -378,7 +378,7 @@
 									/></a>
 								</div>
 								<div class="order-button-link mt-auto mapHalf__btn">
-									<a href="" class="order-button">Забронировать место</a>
+									<a href="" @click.prevent="$store.modalOrder.open = 'true'; scrollbarToggle()" class="order-button">Забронировать место</a>
 								</div>
 							</div>
 						</div>
@@ -392,8 +392,10 @@
 						<h3 class="zones__hard_title">Мы в <span>Instagram</span></h3>
 
 						<div class="instagram__content">
-							<div class="elfsight-app-a03c70e1-53ee-4bf5-ba3d-4e4e1d3b149e"></div>
-						  </div>
+							<div
+								class="elfsight-app-a03c70e1-53ee-4bf5-ba3d-4e4e1d3b149e"
+							></div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -667,6 +669,48 @@
 									Ваша заявка обрабатывается.
 									<br />
 									В ближайшее время с вами свяжутся
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Модальное окно: Бронирование места -->
+			<section
+				x-data="{}"
+				x-init="fetch('./partials/popupOrder.html')
+			.then(response => response.text())
+			.then(html => { $refs.popupOrder.innerHTML = html })"
+				x-ref="popupOrder"
+				x-subscribe
+				class="popup"
+			></section>
+
+			<!-- Модальное окно: Спасибо за заявку (бронирование) -->
+			<section class="popup">
+				<div id="orderThanks" class="popupRegister popupCoop popupThanks">
+					<button>
+						<img
+							id="closeThanks"
+							decoding="async"
+							class="popup__close popupCoop__close"
+							src="imgs/closePacket.svg"
+							alt=""
+						/>
+					</button>
+
+					<div class="packet__inner popupPrivacy__inner popupThanks__inner">
+						<div class="container">
+							<h4 class="zones__hard_title popupThanks__title">
+								Спасибо!
+							</h4>
+
+							<div class="popupThanks__content">
+								<p>
+									В течение 10 минут с вами свяжется
+									<br />
+									оператор для подтверждения!
 								</p>
 							</div>
 						</div>
