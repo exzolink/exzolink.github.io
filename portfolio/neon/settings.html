@@ -82,12 +82,20 @@
                 <a href="" class="nav__link">Новости мирового киберспорта</a>
               </div>
               <div class="flex">
-                <a
-                  href=""
-                  class="nav__btn_order"
-                  @click.prevent="$store.modalRegister.open = 'true'; scrollbarToggle()"
-                  >Вход / Регистрация</a
-                >
+                <div
+                  x-data="{ cabOpen: false }"
+                  class="nav__btn_order reverse"
+                  @click.prevent="cabOpen = !cabOpen"
+                  >@exzolink
+                  
+                  <div @click.prevent="cabOpen = !cabOpen" x-cloak x-show.transition.duration.350ms="cabOpen === true" class="cab__dropdown">
+                      <span @click.prevent="cabOpen = !cabOpen">@exzolink</span>
+
+                      <a href="settings.html">Настройки</a>
+                      <a href="rating.html">Рейтинг</a>
+                      <a href="">Выход</a>
+                  </div>
+                </div>
                 <button
                   @click="BurgerOpen = true; scrollbarToggle()"
                   class="nav__btn_menu"

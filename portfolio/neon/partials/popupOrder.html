@@ -1,0 +1,1719 @@
+<div
+	x-cloak
+	x-show.transition.in.duration.350ms.out.scale.50.duration.350ms.opacity.duration.350ms="$store.modalOrder.open === 'true'"
+	class="popupRegister popupOrder"
+>
+	<button>
+		<img
+			decoding="async"
+			@click="$store.modalOrder.open = 'false'; scrollbarToggle()"
+			class="popup__close popupCoop__close"
+			src="imgs/closePacket.svg"
+			alt=""
+		/>
+	</button>
+
+	<img decoding="async" src="imgs/logo.svg" alt="" class="popupOrder__logo" />
+
+	<div class="popupOrder__inner">
+		<h3 class="zones__hard_title popupOrder__title">
+			Забронировать лучшее место
+		</h3>
+		<div class="popupOrder__selector_wrapper">
+			<div class="popupRegister__selector popupOrder__selector">
+				<div
+					class="zones__tabs_item popupRegister__selector_item"
+					:class="{ 'active': $store.modalOrderTab.tab === 'tuf' }"
+					@click="$store.modalOrderTab.tab = 'tuf'"
+				>
+					Tuf Zone
+				</div>
+				<div
+					class="zones__tabs_item popupRegister__selector_item"
+					:class="{ 'active': $store.modalOrderTab.tab === 'steel' }"
+					@click="$store.modalOrderTab.tab = 'steel'"
+				>
+					Steel Zone
+				</div>
+				<div
+					class="zones__tabs_item popupRegister__selector_item"
+					:class="{ 'active': $store.modalOrderTab.tab === 'asus' }"
+					@click="$store.modalOrderTab.tab = 'asus'"
+				>
+					Bootcamp by Asus Rog 1
+				</div>
+				<div
+					class="zones__tabs_item popupRegister__selector_item"
+					:class="{ 'active': $store.modalOrderTab.tab === 'zone2' }"
+					@click="$store.modalOrderTab.tab = 'zone2'"
+				>
+					Bootcamp by Asus Rog 2
+				</div>
+				<div
+					class="zones__tabs_item popupRegister__selector_item"
+					:class="{ 'active': $store.modalOrderTab.tab === 'ps4' }"
+					@click="$store.modalOrderTab.tab = 'ps4'"
+				>
+					PS4 Room
+				</div>
+			</div>
+		</div>
+
+		<div class="popupRegister__content popupOrder__content">
+			<!-- Вкладка: Tuf Zone -->
+			<div
+				x-show.transition.in.opacity.duration.350ms="$store.modalOrderTab.tab === 'tuf'"
+				class="popupOrder__zone"
+			>
+				<!-- Вкладка: Tuf Zone / Wrapper для окон -->
+				<div
+					x-data="{ zoneSubTab: 'windowOne', date: 'none' }"
+					class="popupOrder__zone_inner"
+				>
+					<!-- Вкладка: Tuf Zone / Суб-вкладка: Окно 1 -->
+					<div
+						x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowOne'"
+						class="popupOrder__zone_item"
+					>
+						<div class="popupOrder__zone_wrap">
+							<div>
+								<h3 class="zones__hard_title popupOrder__zone_title">
+									Tuf Zone
+								</h3>
+								<p class="popupOrder__zone_desc">
+									20xRTX2070Super + RAM 16Гб
+								</p>
+							</div>
+							<h3 class="zones__hard_title popupOrder__zone_price">
+								<span>1500 тг/ч</span>
+							</h3>
+						</div>
+
+						<p class="popupOrder__zone_desc-large">
+							Выберите дату и время посещения:
+						</p>
+						<div class="popupOrder__zone_date-wrap">
+							<div>
+								<button
+									@click="date = 'today'; $refs.selectedDate.value = $event.target.innerText"
+									:class="{ 'active': date === 'today' }"
+								>
+									04.08.2020
+								</button>
+							</div>
+							<div>
+								<button
+									@click="date = 'tomorrow'; $refs.selectedDate.value = $event.target.innerText"
+									:class="{ 'active': date === 'tomorrow' }"
+								>
+									05.08.2020
+								</button>
+							</div>
+						</div>
+						<div class="popupOrder__zone_time-wrap">
+							<div class="popupOrder__zone_time">
+								<span>с</span>
+								<div class="popupOrder__zone_time-select">
+									<button id="startMinus">-</button>
+									<input
+										id="startTime"
+										type="text"
+										autocomplete="off"
+										class="form-control js-time-picker startTime"
+										value="09:00"
+										readonly
+									/>
+									<button id="startPlus">+</button>
+								</div>
+							</div>
+
+							<div class="popupOrder__zone_time">
+								<span>до</span>
+								<div class="popupOrder__zone_time-select">
+									<button id="endMinus">-</button>
+									<input
+										id="endTime"
+										type="text"
+										autocomplete="off"
+										class="form-control js-time-picker endTime"
+										value="10:00"
+										readonly
+									/>
+									<button id="endPlus">+</button>
+								</div>
+							</div>
+						</div>
+
+						<div
+							@click="zoneSubTab = 'windowTwo'"
+							class="popupOrder__button popupOrder__button_next popupOrder__next"
+						>
+							<span>Дальше</span>
+							<img decoding="async" src="imgs/arrowNext.svg" alt="" />
+						</div>
+					</div>
+
+					<!-- Вкладка: Tuf Zone / Суб-вкладка: Окно 2 -->
+					<div
+						x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowTwo'"
+						class="popupOrder__zone_item"
+					>
+						<div class="popupOrder__zone_wrap">
+							<div>
+								<h3 class="zones__hard_title popupOrder__zone_title">
+									Tuf Zone
+								</h3>
+								<p class="popupOrder__zone_desc">
+									20xRTX2070Super + RAM 16Гб
+								</p>
+							</div>
+							<h3 class="zones__hard_title popupOrder__zone_price">
+								<span>1500 тг/ч</span>
+							</h3>
+						</div>
+
+						<p class="popupOrder__zone_desc-large">
+							Выберите свободные места
+						</p>
+						<div class="popupOrder__places popupOrder__places_tufzone">
+							<div class="popupOrder__legend">
+								<div class="popupOrder__legend_free">
+									<span></span>
+									<span>свободно</span>
+								</div>
+								<div class="popupOrder__legend_busy">
+									<span></span>
+									<span>забронировано</span>
+								</div>
+								<div class="popupOrder__legend_active">
+									<span></span>
+									<span>ваш выбор</span>
+								</div>
+							</div>
+
+							<div
+								class="popupOrder__places_inner popupOrder__places_tufzone_inner"
+							>
+								<div class="popupOrder__places_tufzone_wrapper">
+									<div class="popupOrder__up">
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item busy"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item busy"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+									</div>
+
+									<div class="popupOrder__down">
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item busy"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item busy"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+									</div>
+								</div>
+								<div class="popupOrder__places_tufzone_wrapper">
+									<div class="popupOrder__up">
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+									</div>
+
+									<div class="popupOrder__down">
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item busy"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item busy"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							@click="zoneSubTab = 'windowThree'"
+							class="popupOrder__button popupOrder__button_next popupOrder__next"
+						>
+							<span>Дальше</span>
+							<img decoding="async" src="imgs/arrowNext.svg" alt="" />
+						</div>
+
+						<div
+							@click="zoneSubTab = 'windowOne'"
+							class="popupOrder__button popupOrder__button_prev"
+						>
+							<img decoding="async" src="imgs/arrowPrev.svg" alt="" />
+							<span>Назад</span>
+						</div>
+					</div>
+
+					<!-- Вкладка: Tuf Zone / Суб-вкладка: Окно 3 -->
+					<div
+						x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowThree'"
+						class="popupOrder__zone_item"
+					>
+						<div class="popupOrder__zone_wrap">
+							<div>
+								<h3 class="zones__hard_title popupOrder__zone_title">
+									Tuf Zone
+								</h3>
+								<p class="popupOrder__zone_desc">
+									20xRTX2070Super + RAM 16Гб
+								</p>
+							</div>
+							<h3 class="zones__hard_title popupOrder__zone_price">
+								<span>1500 тг/ч</span>
+							</h3>
+						</div>
+
+						<p class="popupOrder__zone_desc-large">
+							Введите контактные данные
+						</p>
+
+						<!-- Форма передачи данных -->
+						<form
+							action="test.php"
+							method="POST"
+							data-success="orderThanks"
+							class="popupOrder__zone_info"
+						>
+							<p>
+								Ваше посещение:
+								<input
+									class="zone-info"
+									type="text"
+									autocomplete="off"
+									value="Tuf Zone"
+									required
+									readonly
+								/>
+							</p>
+
+							<div class="zone-info-block">
+								<p>
+									Дата:
+									<input
+										class="zone-info"
+										type="text"
+										x-ref="selectedDate"
+										autocomplete="off"
+										minlength="6"
+										placeholder="не выбрана"
+										value="не выбрана"
+										required
+										readonly
+									/>
+								</p>
+
+								<p>
+									Время:
+									<input
+										class="zone-info selectedTime"
+										type="text"
+										autocomplete="off"
+										minlength="4"
+										placeholder="не выбрано"
+										value="не выбрано"
+										required
+										readonly
+									/>
+								</p>
+
+								<p>
+									Количество компьютеров:
+									<input
+										class="zone-info selectedPlaces"
+										type="text"
+										autocomplete="off"
+										placeholder="не выбрано"
+										value="не выбрано"
+										required
+										readonly
+									/>
+								</p>
+							</div>
+
+							<div class="register__form settings__form popupOrder__contact">
+								<div
+									class="subscribe__inputs register__inputs settings__inputs"
+								>
+									<input type="text" autocomplete="off" placeholder="Имя" />
+									<input
+										type="text"
+										autocomplete="off"
+										placeholder="Телефон*"
+										required
+									/>
+								</div>
+
+								<div
+									class="subscribe__inputs settings__save_pass popupOrder__submit"
+								>
+									<button type="submit">Забронировать</button>
+								</div>
+							</div>
+						</form>
+
+						<div
+							@click="zoneSubTab = 'windowTwo'"
+							class="popupOrder__button popupOrder__button_prev"
+						>
+							<img decoding="async" src="imgs/arrowPrev.svg" alt="" />
+							<span>Назад</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Вкладка: Steel Zone -->
+			<div
+				x-show.transition.in.opacity.duration.350ms="$store.modalOrderTab.tab === 'steel'"
+				class="popupOrder__zone"
+			>
+				<!-- Вкладка: Steel Zone / Wrapper для окон -->
+				<div
+					x-data="{ zoneSubTab: 'windowOne', date: 'none' }"
+					class="popupOrder__zone_inner"
+				>
+					<!-- Вкладка: Steel Zone / Суб-вкладка: Окно 1 -->
+					<div
+						x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowOne'"
+						class="popupOrder__zone_item"
+					>
+						<div class="popupOrder__zone_wrap">
+							<div>
+								<h3 class="zones__hard_title popupOrder__zone_title">
+									Steel Zone
+								</h3>
+								<p class="popupOrder__zone_desc">
+									20xRTX2070Super + RAM 16Гб
+								</p>
+							</div>
+							<h3 class="zones__hard_title popupOrder__zone_price">
+								<span>1500 тг/ч</span>
+							</h3>
+						</div>
+
+						<p class="popupOrder__zone_desc-large">
+							Выберите дату и время посещения:
+						</p>
+						<div class="popupOrder__zone_date-wrap">
+							<div>
+								<button
+									@click="date = 'today'; $refs.selectedDate.value = $event.target.innerText"
+									:class="{ 'active': date === 'today' }"
+								>
+									04.08.2020
+								</button>
+							</div>
+							<div>
+								<button
+									@click="date = 'tomorrow'; $refs.selectedDate.value = $event.target.innerText"
+									:class="{ 'active': date === 'tomorrow' }"
+								>
+									05.08.2020
+								</button>
+							</div>
+						</div>
+						<div class="popupOrder__zone_time-wrap">
+							<div class="popupOrder__zone_time">
+								<span>с</span>
+								<div class="popupOrder__zone_time-select">
+									<button id="startMinus">-</button>
+									<input
+										id="startTime"
+										type="text"
+										autocomplete="off"
+										class="form-control js-time-picker startTime"
+										value="09:00"
+										readonly
+									/>
+									<button id="startPlus">+</button>
+								</div>
+							</div>
+
+							<div class="popupOrder__zone_time">
+								<span>до</span>
+								<div class="popupOrder__zone_time-select">
+									<button id="endMinus">-</button>
+									<input
+										id="endTime"
+										type="text"
+										autocomplete="off"
+										class="form-control js-time-picker endTime"
+										value="10:00"
+										readonly
+									/>
+									<button id="endPlus">+</button>
+								</div>
+							</div>
+						</div>
+
+						<div
+							@click="zoneSubTab = 'windowTwo'"
+							class="popupOrder__button popupOrder__button_next popupOrder__next"
+						>
+							<span>Дальше</span>
+							<img decoding="async" src="imgs/arrowNext.svg" alt="" />
+						</div>
+					</div>
+
+					<!-- Вкладка: Steel Zone / Суб-вкладка: Окно 2 -->
+					<div
+						x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowTwo'"
+						class="popupOrder__zone_item"
+					>
+						<div class="popupOrder__zone_wrap">
+							<div>
+								<h3 class="zones__hard_title popupOrder__zone_title">
+									Steel Zone
+								</h3>
+								<p class="popupOrder__zone_desc">
+									20xRTX2070Super + RAM 16Гб
+								</p>
+							</div>
+							<h3 class="zones__hard_title popupOrder__zone_price">
+								<span>1500 тг/ч</span>
+							</h3>
+						</div>
+
+						<p class="popupOrder__zone_desc-large">
+							Выберите свободные места
+						</p>
+						<div class="popupOrder__places popupOrder__places_steelzone">
+							<div class="popupOrder__legend">
+								<div class="popupOrder__legend_free">
+									<span></span>
+									<span>свободно</span>
+								</div>
+								<div class="popupOrder__legend_busy">
+									<span></span>
+									<span>забронировано</span>
+								</div>
+								<div class="popupOrder__legend_active">
+									<span></span>
+									<span>ваш выбор</span>
+								</div>
+							</div>
+
+							<div
+								class="popupOrder__places_inner popupOrder__places_steelzone_inner"
+							>
+								<div class="popupOrder__places_steelzone_wrapper">
+									<div class="popupOrder__up">
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item busy"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item busy"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+									</div>
+
+									<div class="popupOrder__down">
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item busy"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item busy"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+									</div>
+								</div>
+
+								<div class="popupOrder__places_steelzone_wrapper">
+									<div class="popupOrder__up">
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+									</div>
+
+									<div class="popupOrder__down">
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item busy"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item busy"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							@click="zoneSubTab = 'windowThree'"
+							class="popupOrder__button popupOrder__button_next popupOrder__next"
+						>
+							<span>Дальше</span>
+							<img decoding="async" src="imgs/arrowNext.svg" alt="" />
+						</div>
+
+						<div
+							@click="zoneSubTab = 'windowOne'"
+							class="popupOrder__button popupOrder__button_prev"
+						>
+							<img decoding="async" src="imgs/arrowPrev.svg" alt="" />
+							<span>Назад</span>
+						</div>
+					</div>
+
+					<!-- Вкладка: Steel Zone / Суб-вкладка: Окно 3 -->
+					<div
+						x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowThree'"
+						class="popupOrder__zone_item"
+					>
+						<div class="popupOrder__zone_wrap">
+							<div>
+								<h3 class="zones__hard_title popupOrder__zone_title">
+									Steel Zone
+								</h3>
+								<p class="popupOrder__zone_desc">
+									20xRTX2070Super + RAM 16Гб
+								</p>
+							</div>
+							<h3 class="zones__hard_title popupOrder__zone_price">
+								<span>1500 тг/ч</span>
+							</h3>
+						</div>
+
+						<p class="popupOrder__zone_desc-large">
+							Введите контактные данные
+						</p>
+
+						<!-- Форма передачи данных -->
+						<form
+							action="test.php"
+							method="POST"
+							data-success="orderThanks"
+							class="popupOrder__zone_info"
+						>
+							<p>
+								Ваше посещение:
+								<input
+									class="zone-info"
+									type="text"
+									autocomplete="off"
+									value="Steel Zone"
+									required
+									readonly
+								/>
+							</p>
+
+							<div class="zone-info-block">
+								<p>
+									Дата:
+									<input
+										class="zone-info"
+										type="text"
+										x-ref="selectedDate"
+										autocomplete="off"
+										minlength="6"
+										placeholder="не выбрана"
+										value="не выбрана"
+										required
+										readonly
+									/>
+								</p>
+
+								<p>
+									Время:
+									<input
+										class="zone-info selectedTime"
+										type="text"
+										autocomplete="off"
+										minlength="4"
+										placeholder="не выбрано"
+										value="не выбрано"
+										required
+										readonly
+									/>
+								</p>
+
+								<p>
+									Количество компьютеров:
+									<input
+										class="zone-info selectedPlaces"
+										type="text"
+										autocomplete="off"
+										placeholder="не выбрано"
+										value="не выбрано"
+										required
+										readonly
+									/>
+								</p>
+							</div>
+
+							<div class="register__form settings__form popupOrder__contact">
+								<div
+									class="subscribe__inputs register__inputs settings__inputs"
+								>
+									<input type="text" autocomplete="off" placeholder="Имя" />
+									<input
+										type="text"
+										autocomplete="off"
+										placeholder="Телефон*"
+										required
+									/>
+								</div>
+
+								<div
+									class="subscribe__inputs settings__save_pass popupOrder__submit"
+								>
+									<button type="submit">Забронировать</button>
+								</div>
+							</div>
+						</form>
+
+						<div
+							@click="zoneSubTab = 'windowTwo'"
+							class="popupOrder__button popupOrder__button_prev"
+						>
+							<img decoding="async" src="imgs/arrowPrev.svg" alt="" />
+							<span>Назад</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Вкладка: Bootcamp by Asus Rog 1 -->
+			<div
+				x-show.transition.in.opacity.duration.350ms="$store.modalOrderTab.tab === 'asus'"
+				class="popupOrder__zone"
+			>
+				<!-- Вкладка: Bootcamp by Asus Rog 1 / Wrapper для окон -->
+				<div
+					x-data="{ zoneSubTab: 'windowOne', date: 'none' }"
+					class="popupOrder__zone_inner"
+				>
+					<!-- Вкладка: Bootcamp by Asus Rog 1 / Суб-вкладка: Окно 1 -->
+					<div
+						x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowOne'"
+						class="popupOrder__zone_item"
+					>
+						<div class="popupOrder__zone_wrap">
+							<div>
+								<h3 class="zones__hard_title popupOrder__zone_title">
+									Bootcamp by Asus Rog 1
+								</h3>
+								<p class="popupOrder__zone_desc">
+									20xRTX2070Super + RAM 16Гб
+								</p>
+							</div>
+							<h3 class="zones__hard_title popupOrder__zone_price">
+								<span>1500 тг/ч</span>
+							</h3>
+						</div>
+
+						<p class="popupOrder__zone_desc-large">
+							Выберите дату и время посещения:
+						</p>
+						<div class="popupOrder__zone_date-wrap">
+							<div>
+								<button
+									@click="date = 'today'; $refs.selectedDate.value = $event.target.innerText"
+									:class="{ 'active': date === 'today' }"
+								>
+									04.08.2020
+								</button>
+							</div>
+							<div>
+								<button
+									@click="date = 'tomorrow'; $refs.selectedDate.value = $event.target.innerText"
+									:class="{ 'active': date === 'tomorrow' }"
+								>
+									05.08.2020
+								</button>
+							</div>
+						</div>
+						<div class="popupOrder__zone_time-wrap">
+							<div class="popupOrder__zone_time">
+								<span>с</span>
+								<div class="popupOrder__zone_time-select">
+									<button id="startMinus">-</button>
+									<input
+										id="startTime"
+										type="text"
+										autocomplete="off"
+										class="form-control js-time-picker startTime"
+										value="09:00"
+										readonly
+									/>
+									<button id="startPlus">+</button>
+								</div>
+							</div>
+
+							<div class="popupOrder__zone_time">
+								<span>до</span>
+								<div class="popupOrder__zone_time-select">
+									<button id="endMinus">-</button>
+									<input
+										id="endTime"
+										type="text"
+										autocomplete="off"
+										class="form-control js-time-picker endTime"
+										value="10:00"
+										readonly
+									/>
+									<button id="endPlus">+</button>
+								</div>
+							</div>
+						</div>
+
+						<div
+							@click="zoneSubTab = 'windowTwo'"
+							class="popupOrder__button popupOrder__button_next popupOrder__next"
+						>
+							<span>Дальше</span>
+							<img decoding="async" src="imgs/arrowNext.svg" alt="" />
+						</div>
+					</div>
+
+					<!-- Вкладка: Bootcamp by Asus Rog 1 / Суб-вкладка: Окно 2 -->
+					<div
+						x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowTwo'"
+						class="popupOrder__zone_item"
+					>
+						<div class="popupOrder__zone_wrap">
+							<div>
+								<h3 class="zones__hard_title popupOrder__zone_title">
+									Bootcamp by Asus Rog 1
+								</h3>
+								<p class="popupOrder__zone_desc">
+									20xRTX2070Super + RAM 16Гб
+								</p>
+							</div>
+							<h3 class="zones__hard_title popupOrder__zone_price">
+								<span>1500 тг/ч</span>
+							</h3>
+						</div>
+
+						<p class="popupOrder__zone_desc-large">
+							Выберите свободные места
+						</p>
+						<div class="popupOrder__places popupOrder__places_bootcamp">
+							<div class="popupOrder__legend">
+								<div class="popupOrder__legend_free">
+									<span></span>
+									<span>свободно</span>
+								</div>
+								<div class="popupOrder__legend_busy">
+									<span></span>
+									<span>забронировано</span>
+								</div>
+								<div class="popupOrder__legend_active">
+									<span></span>
+									<span>ваш выбор</span>
+								</div>
+							</div>
+
+							<div
+								class="popupOrder__places_inner popupOrder__places_bootcamp_inner"
+							>
+								<div class="popupOrder__places_bootcamp_wrapper">
+									<div class="popupOrder__down">
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item busy"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item busy"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							@click="zoneSubTab = 'windowThree'"
+							class="popupOrder__button popupOrder__button_next popupOrder__next"
+						>
+							<span>Дальше</span>
+							<img decoding="async" src="imgs/arrowNext.svg" alt="" />
+						</div>
+
+						<div
+							@click="zoneSubTab = 'windowOne'"
+							class="popupOrder__button popupOrder__button_prev"
+						>
+							<img decoding="async" src="imgs/arrowPrev.svg" alt="" />
+							<span>Назад</span>
+						</div>
+					</div>
+
+					<!-- Вкладка: Bootcamp by Asus Rog 1 / Суб-вкладка: Окно 3 -->
+					<div
+						x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowThree'"
+						class="popupOrder__zone_item"
+					>
+						<div class="popupOrder__zone_wrap">
+							<div>
+								<h3 class="zones__hard_title popupOrder__zone_title">
+									Bootcamp by Asus Rog 1
+								</h3>
+								<p class="popupOrder__zone_desc">
+									20xRTX2070Super + RAM 16Гб
+								</p>
+							</div>
+							<h3 class="zones__hard_title popupOrder__zone_price">
+								<span>1500 тг/ч</span>
+							</h3>
+						</div>
+
+						<p class="popupOrder__zone_desc-large">
+							Введите контактные данные
+						</p>
+
+						<!-- Форма передачи данных -->
+						<form
+							action="test.php"
+							method="POST"
+							data-success="orderThanks"
+							class="popupOrder__zone_info"
+						>
+							<p>
+								Ваше посещение:
+								<input
+									class="zone-info"
+									type="text"
+									autocomplete="off"
+									value="Bootcamp by Asus Rog 1"
+									required
+									readonly
+								/>
+							</p>
+
+							<div class="zone-info-block">
+								<p>
+									Дата:
+									<input
+										class="zone-info"
+										type="text"
+										x-ref="selectedDate"
+										autocomplete="off"
+										minlength="6"
+										placeholder="не выбрана"
+										value="не выбрана"
+										required
+										readonly
+									/>
+								</p>
+
+								<p>
+									Время:
+									<input
+										class="zone-info selectedTime"
+										type="text"
+										autocomplete="off"
+										minlength="4"
+										placeholder="не выбрано"
+										value="не выбрано"
+										required
+										readonly
+									/>
+								</p>
+
+								<p>
+									Количество компьютеров:
+									<input
+										class="zone-info selectedPlaces"
+										type="text"
+										autocomplete="off"
+										placeholder="не выбрано"
+										value="не выбрано"
+										required
+										readonly
+									/>
+								</p>
+							</div>
+
+							<div class="register__form settings__form popupOrder__contact">
+								<div
+									class="subscribe__inputs register__inputs settings__inputs"
+								>
+									<input type="text" autocomplete="off" placeholder="Имя" />
+									<input
+										type="text"
+										autocomplete="off"
+										placeholder="Телефон*"
+										required
+									/>
+								</div>
+
+								<div
+									class="subscribe__inputs settings__save_pass popupOrder__submit"
+								>
+									<button type="submit">Забронировать</button>
+								</div>
+							</div>
+						</form>
+
+						<div
+							@click="zoneSubTab = 'windowTwo'"
+							class="popupOrder__button popupOrder__button_prev"
+						>
+							<img decoding="async" src="imgs/arrowPrev.svg" alt="" />
+							<span>Назад</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Вкладка: Bootcamp by Asus Rog 2 -->
+			<div
+				x-show.transition.in.opacity.duration.350ms="$store.modalOrderTab.tab === 'zone2'"
+				class="popupOrder__zone"
+			>
+				<!-- Вкладка: Bootcamp by Asus Rog 2 / Wrapper для окон -->
+				<div
+					x-data="{ zoneSubTab: 'windowOne', date: 'none' }"
+					class="popupOrder__zone_inner"
+				>
+					<!-- Вкладка: Bootcamp by Asus Rog 2 / Суб-вкладка: Окно 1 -->
+					<div
+						x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowOne'"
+						class="popupOrder__zone_item"
+					>
+						<div class="popupOrder__zone_wrap">
+							<div>
+								<h3 class="zones__hard_title popupOrder__zone_title">
+									Bootcamp by Asus Rog 2
+								</h3>
+								<p class="popupOrder__zone_desc">
+									20xRTX2070Super + RAM 16Гб
+								</p>
+							</div>
+							<h3 class="zones__hard_title popupOrder__zone_price">
+								<span>1500 тг/ч</span>
+							</h3>
+						</div>
+
+						<p class="popupOrder__zone_desc-large">
+							Выберите дату и время посещения:
+						</p>
+						<div class="popupOrder__zone_date-wrap">
+							<div>
+								<button
+									@click="date = 'today'; $refs.selectedDate.value = $event.target.innerText"
+									:class="{ 'active': date === 'today' }"
+								>
+									04.08.2020
+								</button>
+							</div>
+							<div>
+								<button
+									@click="date = 'tomorrow'; $refs.selectedDate.value = $event.target.innerText"
+									:class="{ 'active': date === 'tomorrow' }"
+								>
+									05.08.2020
+								</button>
+							</div>
+						</div>
+						<div class="popupOrder__zone_time-wrap">
+							<div class="popupOrder__zone_time">
+								<span>с</span>
+								<div class="popupOrder__zone_time-select">
+									<button id="startMinus">-</button>
+									<input
+										id="startTime"
+										type="text"
+										autocomplete="off"
+										class="form-control js-time-picker startTime"
+										value="09:00"
+										readonly
+									/>
+									<button id="startPlus">+</button>
+								</div>
+							</div>
+
+							<div class="popupOrder__zone_time">
+								<span>до</span>
+								<div class="popupOrder__zone_time-select">
+									<button id="endMinus">-</button>
+									<input
+										id="endTime"
+										type="text"
+										autocomplete="off"
+										class="form-control js-time-picker endTime"
+										value="10:00"
+										readonly
+									/>
+									<button id="endPlus">+</button>
+								</div>
+							</div>
+						</div>
+
+						<div
+							@click="zoneSubTab = 'windowTwo'"
+							class="popupOrder__button popupOrder__button_next popupOrder__next"
+						>
+							<span>Дальше</span>
+							<img decoding="async" src="imgs/arrowNext.svg" alt="" />
+						</div>
+					</div>
+
+					<!-- Вкладка: Bootcamp by Asus Rog 2 / Суб-вкладка: Окно 2 -->
+					<div
+						x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowTwo'"
+						class="popupOrder__zone_item"
+					>
+						<div class="popupOrder__zone_wrap">
+							<div>
+								<h3 class="zones__hard_title popupOrder__zone_title">
+									Bootcamp by Asus Rog 2
+								</h3>
+								<p class="popupOrder__zone_desc">
+									20xRTX2070Super + RAM 16Гб
+								</p>
+							</div>
+							<h3 class="zones__hard_title popupOrder__zone_price">
+								<span>1500 тг/ч</span>
+							</h3>
+						</div>
+
+						<p class="popupOrder__zone_desc-large">
+							Выберите свободные места
+						</p>
+						<div class="popupOrder__places popupOrder__places_bootcamp2">
+							<div class="popupOrder__legend">
+								<div class="popupOrder__legend_free">
+									<span></span>
+									<span>свободно</span>
+								</div>
+								<div class="popupOrder__legend_busy">
+									<span></span>
+									<span>забронировано</span>
+								</div>
+								<div class="popupOrder__legend_active">
+									<span></span>
+									<span>ваш выбор</span>
+								</div>
+							</div>
+
+							<div
+								class="popupOrder__places_inner popupOrder__places_bootcamp2_inner"
+							>
+								<div class="popupOrder__places_bootcamp2_wrapper">
+									<div class="popupOrder__up">
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item busy"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="popupOrder__places_item busy"
+											src="imgs/upPlace.svg"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							@click="zoneSubTab = 'windowThree'"
+							class="popupOrder__button popupOrder__button_next popupOrder__next"
+						>
+							<span>Дальше</span>
+							<img decoding="async" src="imgs/arrowNext.svg" alt="" />
+						</div>
+
+						<div
+							@click="zoneSubTab = 'windowOne'"
+							class="popupOrder__button popupOrder__button_prev"
+						>
+							<img decoding="async" src="imgs/arrowPrev.svg" alt="" />
+							<span>Назад</span>
+						</div>
+					</div>
+
+					<!-- Вкладка: Bootcamp by Asus Rog 2 / Суб-вкладка: Окно 3 -->
+					<div
+						x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowThree'"
+						class="popupOrder__zone_item"
+					>
+						<div class="popupOrder__zone_wrap">
+							<div>
+								<h3 class="zones__hard_title popupOrder__zone_title">
+									Bootcamp by Asus Rog 2
+								</h3>
+								<p class="popupOrder__zone_desc">
+									20xRTX2070Super + RAM 16Гб
+								</p>
+							</div>
+							<h3 class="zones__hard_title popupOrder__zone_price">
+								<span>1500 тг/ч</span>
+							</h3>
+						</div>
+
+						<p class="popupOrder__zone_desc-large">
+							Введите контактные данные
+						</p>
+
+						<!-- Форма передачи данных -->
+						<form
+							action="test.php"
+							method="POST"
+							data-success="orderThanks"
+							class="popupOrder__zone_info"
+						>
+							<p>
+								Ваше посещение:
+								<input
+									class="zone-info"
+									type="text"
+									autocomplete="off"
+									value="Bootcamp by Asus Rog 2"
+									required
+									readonly
+								/>
+							</p>
+
+							<div class="zone-info-block">
+								<p>
+									Дата:
+									<input
+										class="zone-info"
+										type="text"
+										x-ref="selectedDate"
+										autocomplete="off"
+										minlength="6"
+										placeholder="не выбрана"
+										value="не выбрана"
+										required
+										readonly
+									/>
+								</p>
+
+								<p>
+									Время:
+									<input
+										class="zone-info selectedTime"
+										type="text"
+										autocomplete="off"
+										minlength="4"
+										placeholder="не выбрано"
+										value="не выбрано"
+										required
+										readonly
+									/>
+								</p>
+
+								<p>
+									Количество компьютеров:
+									<input
+										class="zone-info selectedPlaces"
+										type="text"
+										autocomplete="off"
+										placeholder="не выбрано"
+										value="не выбрано"
+										required
+										readonly
+									/>
+								</p>
+							</div>
+
+							<div class="register__form settings__form popupOrder__contact">
+								<div
+									class="subscribe__inputs register__inputs settings__inputs"
+								>
+									<input type="text" autocomplete="off" placeholder="Имя" />
+									<input
+										type="text"
+										autocomplete="off"
+										placeholder="Телефон*"
+										required
+									/>
+								</div>
+
+								<div
+									class="subscribe__inputs settings__save_pass popupOrder__submit"
+								>
+									<button type="submit">Забронировать</button>
+								</div>
+							</div>
+						</form>
+
+						<div
+							@click="zoneSubTab = 'windowTwo'"
+							class="popupOrder__button popupOrder__button_prev"
+						>
+							<img decoding="async" src="imgs/arrowPrev.svg" alt="" />
+							<span>Назад</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Вкладка: PS4 Room -->
+			<div
+				x-show.transition.in.opacity.duration.350ms="$store.modalOrderTab.tab === 'ps4'"
+				class="popupOrder__zone"
+			>
+				<!-- Вкладка: PS4 Room / Wrapper для окон -->
+				<div
+					x-data="{ zoneSubTab: 'windowOne', date: 'none' }"
+					class="popupOrder__zone_inner"
+				>
+					<!-- Вкладка: PS4 Room / Суб-вкладка: Окно 1 -->
+					<div
+						x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowOne'"
+						class="popupOrder__zone_item"
+					>
+						<div class="popupOrder__zone_wrap">
+							<div>
+								<h3 class="zones__hard_title popupOrder__zone_title">
+									PS4 Room
+								</h3>
+							</div>
+							<h3 class="zones__hard_title popupOrder__zone_price">
+								<span>1500 тг/ч</span>
+							</h3>
+						</div>
+
+						<p class="popupOrder__zone_desc-large">
+							Выберите дату посещения:
+						</p>
+						<div class="popupOrder__zone_date-wrap popupOrder__ps4_date">
+							<div>
+								<button
+									@click="date = 'today'; $refs.selectedDate.value = $event.target.innerText"
+									:class="{ 'active': date === 'today' }"
+								>
+									04.08.2020
+								</button>
+							</div>
+							<div>
+								<button
+									@click="date = 'tomorrow'; $refs.selectedDate.value = $event.target.innerText"
+									:class="{ 'active': date === 'tomorrow' }"
+								>
+									05.08.2020
+								</button>
+							</div>
+						</div>
+
+						<p class="popupOrder__zone_desc-large">
+							Выберите время посещения:
+						</p>
+						<div class="popupOrder__places popupOrder__ps4_time">
+							<div class="popupOrder__legend">
+								<div class="popupOrder__legend_free">
+									<span></span>
+									<span>свободно</span>
+								</div>
+								<div class="popupOrder__legend_busy">
+									<span></span>
+									<span>забронировано</span>
+								</div>
+								<div class="popupOrder__legend_active">
+									<span></span>
+									<span>ваш выбор</span>
+								</div>
+							</div>
+
+							<div class="popupOrder__ps4_time-block">
+								<div class="popupOrder__ps4_time-wrap">
+									<p class="popupOrder__ps4_time-item">09:00 - 10:00</p>
+									<p class="popupOrder__ps4_time-item">10:00 - 11:00</p>
+									<p class="popupOrder__ps4_time-item">11:00 - 12:00</p>
+									<p class="popupOrder__ps4_time-item">12:00 - 13:00</p>
+									<p class="popupOrder__ps4_time-item busy">
+										13:00 - 14:00
+									</p>
+									<p class="popupOrder__ps4_time-item">14:00 - 15:00</p>
+									<p class="popupOrder__ps4_time-item">15:00 - 16:00</p>
+									<p class="popupOrder__ps4_time-item busy">
+										16:00 - 17:00
+									</p>
+								</div>
+
+								<div class="popupOrder__ps4_time-wrap">
+									<p class="popupOrder__ps4_time-item">17:00 - 18:00</p>
+									<p class="popupOrder__ps4_time-item">18:00 - 19:00</p>
+									<p class="popupOrder__ps4_time-item">19:00 - 20:00</p>
+									<p class="popupOrder__ps4_time-item">20:00 - 21:00</p>
+									<p class="popupOrder__ps4_time-item">21:00 - 22:00</p>
+									<p class="popupOrder__ps4_time-item">22:00 - 23:00</p>
+									<p class="popupOrder__ps4_time-item">23:00 - 00:00</p>
+									<p class="popupOrder__ps4_time-item busy">
+										00:00 - 01:00
+									</p>
+								</div>
+
+								<div class="popupOrder__ps4_time-wrap">
+									<p class="popupOrder__ps4_time-item">01:00 - 02:00</p>
+									<p class="popupOrder__ps4_time-item busy">
+										02:00 - 03:00
+									</p>
+									<p class="popupOrder__ps4_time-item">03:00 - 04:00</p>
+									<p class="popupOrder__ps4_time-item">04:00 - 05:00</p>
+									<p class="popupOrder__ps4_time-item">05:00 - 06:00</p>
+									<p class="popupOrder__ps4_time-item">06:00 - 07:00</p>
+									<p class="popupOrder__ps4_time-item">07:00 - 08:00</p>
+									<p class="popupOrder__ps4_time-item busy">
+										08:00 - 09:00
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div
+							@click="zoneSubTab = 'windowTwo'"
+							class="popupOrder__button popupOrder__button_next popupOrder__ps4_next"
+						>
+							<span>Дальше</span>
+							<img decoding="async" src="imgs/arrowNext.svg" alt="" />
+						</div>
+					</div>
+
+					<!-- Вкладка: PS4 Room / Суб-вкладка: Окно 2 -->
+					<div
+						x-show.transition.in.opacity.duration.350ms="zoneSubTab === 'windowTwo'"
+						class="popupOrder__zone_item"
+					>
+						<div class="popupOrder__zone_wrap">
+							<div>
+								<h3 class="zones__hard_title popupOrder__zone_title">
+									PS4 Room
+								</h3>
+							</div>
+							<h3 class="zones__hard_title popupOrder__zone_price">
+								<span>1500 тг/ч</span>
+							</h3>
+						</div>
+
+						<p class="popupOrder__zone_desc-large">
+							Введите контактные данные
+						</p>
+
+						<!-- Форма передачи данных -->
+						<form
+							action="test.php"
+							method="POST"
+							data-success="orderThanks"
+							class="popupOrder__zone_info"
+						>
+							<p>
+								Ваше посещение:
+								<input
+									class="zone-info"
+									type="text"
+									autocomplete="off"
+									value="PS4 Room"
+									required
+									readonly
+								/>
+							</p>
+
+							<div class="zone-info-block">
+								<p>
+									Дата:
+									<input
+										class="zone-info"
+										type="text"
+										x-ref="selectedDate"
+										autocomplete="off"
+										minlength="6"
+										placeholder="не выбрана"
+										value="не выбрана"
+										required
+										readonly
+									/>
+								</p>
+
+								<p>
+									Время:
+									<textarea
+										rows="1"
+										class="zone-info zone-info__textarea selectedTimes"
+										type="text"
+										autocomplete="off"
+										minlength="4"
+										placeholder="не выбрано"
+										required
+										readonly
+									></textarea>
+								</p>
+							</div>
+
+							<div class="register__form settings__form popupOrder__contact">
+								<div
+									class="subscribe__inputs register__inputs settings__inputs"
+								>
+									<input
+										type="text"
+										autocomplete="off"
+										name="name"
+										placeholder="Имя"
+									/>
+									<input
+										type="text"
+										autocomplete="off"
+										name="phone"
+										placeholder="Телефон*"
+										required
+									/>
+								</div>
+
+								<div
+									class="subscribe__inputs settings__save_pass popupOrder__submit"
+								>
+									<button type="submit">Забронировать</button>
+								</div>
+							</div>
+						</form>
+
+						<div
+							@click="zoneSubTab = 'windowOne'"
+							class="popupOrder__button popupOrder__button_prev popupOrder__ps4_prev"
+						>
+							<img decoding="async" src="imgs/arrowPrev.svg" alt="" />
+							<span>Назад</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
