@@ -457,7 +457,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		) {
 			initOrderBtns();
 			orderFetched = true;
-			clearTimeout(init);
+			clearInterval(init);
 		} else {
 			return;
 		}
@@ -517,7 +517,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	// Ждем загрузку виджета инстаграм и удаляем лейбл
-	setTimeout(() => {
+	var inst = setTimeout(() => {
 		if (
 			document.querySelector(
 				".instagram__content #eapps-instagram-feed-1 > a"
@@ -527,6 +527,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				".instagram__content #eapps-instagram-feed-1 > a"
 			);
 			getLabel.remove();
+			clearTimeout(inst);
 		}
 	}, 4000);
 });
