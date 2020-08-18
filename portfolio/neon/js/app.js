@@ -307,77 +307,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 
-	// Обработчик форм
-	function submitHandler(e) {
-		e.preventDefault();
-
-		var request = new XMLHttpRequest();
-		request.onreadystatechange = function () {
-			// Если все нужные данные введены и форма успешно отправлена
-			if (
-				this.readyState === XMLHttpRequest.DONE &&
-				this.status === 200 &&
-				e.target.hasAttribute("data-success")
-			) {
-				// Атрибут data-success устанавливается для формы и должен соответствовать id попапа
-				var getAttr = e.target.getAttribute("data-success");
-				var getPopup = document.querySelector("#" + getAttr);
-				getPopup.classList.add("active");
-				closeAllPopups();
-			}
-		};
-
-		request.open(this.method, this.action, true);
-
-		var data = new FormData(this);
-		request.send(data);
-	}
-
-	// Собираем все формы и вешаем listener на отправку
-	document
-		.querySelectorAll("form")
-		.forEach((form) => form.addEventListener("submit", submitHandler));
-
-	// Функция для закрытия всех существующих попапов
-	function closeAllPopups() {
-		Spruce.store("modalRegister").open = "false";
-		Spruce.store("modalPacketDay").open = "false";
-		Spruce.store("modalPacketNight").open = "false";
-		Spruce.store("modalCoop").open = "false";
-		Spruce.store("modalVac").open = "false";
-		Spruce.store("modalOrder").open = "false";
-		Spruce.store("modalOrderTab").tab = "tuf";
-		Spruce.store("modalPrivacy").open = "false";
-	}
-
-	// Кнопка X (закрыть) в попапе благодарности
-	var closeBtn = document.querySelectorAll("#closeThanks");
-	[].forEach.call(closeBtn, function (e) {
-		e.addEventListener("click", function (e) {
-			var getPopup = this.closest(".popup").querySelector(".popupThanks");
-			getPopup.classList.remove("active");
-			document.documentElement.classList.remove("open");
-		});
-	});
-
-	// Ждем загрузку виджета инстаграм и удаляем лейбл
-	setTimeout(() => {
-		if (
-			document.querySelector(
-				".instagram__content #eapps-instagram-feed-1 > a"
-			) !== null
-		) {
-			var getLabel = document.querySelector(
-				".instagram__content #eapps-instagram-feed-1 > a"
-			);
-			getLabel.remove();
+	var timePicker = [];
+	setInterval(() => {
+		if (document.querySelector(".popupOrder") !== null) {
+			timePicker = document.querySelectorAll(".js-time-picker");
+			console.log(1);
 		}
-	}, 4000);
-});
+	}, 1000);
 
-setTimeout(() => {
 	// Инициализация попапа для выбора времени в попапе с бронированием
-	var timePicker = document.querySelectorAll(".js-time-picker");
 	for (var i = 0; i < timePicker.length; i++) {
 		var picker = new Picker(timePicker[i], {
 			format: "HH:mm",
@@ -513,4 +451,71 @@ setTimeout(() => {
 			}
 		});
 	});
-}, 3000);
+
+	// Обработчик форм
+	function submitHandler(e) {
+		e.preventDefault();
+
+		var request = new XMLHttpRequest();
+		request.onreadystatechange = function () {
+			// Если все нужные данные введены и форма успешно отправлена
+			if (
+				this.readyState === XMLHttpRequest.DONE &&
+				this.status === 200 &&
+				e.target.hasAttribute("data-success")
+			) {
+				// Атрибут data-success устанавливается для формы и должен соответствовать id попапа
+				var getAttr = e.target.getAttribute("data-success");
+				var getPopup = document.querySelector("#" + getAttr);
+				getPopup.classList.add("active");
+				closeAllPopups();
+			}
+		};
+
+		request.open(this.method, this.action, true);
+
+		var data = new FormData(this);
+		request.send(data);
+	}
+
+	// Собираем все формы и вешаем listener на отправку
+	document
+		.querySelectorAll("form")
+		.forEach((form) => form.addEventListener("submit", submitHandler));
+
+	// Функция для закрытия всех существующих попапов
+	function closeAllPopups() {
+		Spruce.store("modalRegister").open = "false";
+		Spruce.store("modalPacketDay").open = "false";
+		Spruce.store("modalPacketNight").open = "false";
+		Spruce.store("modalCoop").open = "false";
+		Spruce.store("modalVac").open = "false";
+		Spruce.store("modalOrder").open = "false";
+		Spruce.store("modalOrderTab").tab = "tuf";
+		Spruce.store("modalPrivacy").open = "false";
+	}
+
+	// Кнопка X (закрыть) в попапе благодарности
+	var closeBtn = document.querySelectorAll("#closeThanks");
+	[].forEach.call(closeBtn, function (e) {
+		e.addEventListener("click", function (e) {
+			var getPopup = this.closest(".popup").querySelector(".popupThanks");
+			getPopup.classList.remove("active");
+			document.documentElement.classList.remove("open");
+		});
+	});
+
+	// Ждем загрузку виджета инстаграм и удаляем лейбл
+	setTimeout(() => {
+		if (
+			document.querySelector(
+				".instagram__content #eapps-instagram-feed-1 > a"
+			) !== null
+		) {
+			var getLabel = document.querySelector(
+				".instagram__content #eapps-instagram-feed-1 > a"
+			);
+			getLabel.remove();
+		}
+	}, 4000);
+});
