@@ -485,8 +485,8 @@ document.addEventListener("DOMContentLoaded", function () {
 				closeAllPopups();
 
 				var closestInputs = e.target.querySelectorAll("input:not(.zone-info)");
-				for (i = 0; i < closestInputs.length; i++) {
-					closestInputs.value = "";
+				for (var i = 0; i < closestInputs.length; i++) {
+					closestInputs[i].value = "";
 				}
 			}
 		};
