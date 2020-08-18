@@ -307,7 +307,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 
-
+	window.addEventListener("onload", function () {
 		setTimeout(() => {
 
 		// Инициализация попапа для выбора времени в попапе с бронированием
@@ -448,7 +448,8 @@ document.addEventListener("DOMContentLoaded", function () {
 					selectTimeInput.value = "00:" + endHour[1];
 				}
 			});
-		});			
+		});
+	});			
 }, 500);
 
 	// Обработчик форм
