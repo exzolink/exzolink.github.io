@@ -307,150 +307,147 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 
-	var timePicker = [];
-	setInterval(() => {
-		if (document.querySelector(".popupOrder") !== null) {
-			timePicker = document.querySelectorAll(".js-time-picker");
-			console.log(1);
+	setTimeout(() => {
+		// Инициализация попапа для выбора времени в попапе с бронированием
+		var timePicker = document.querySelectorAll(".js-time-picker");
+		for (var i = 0; i < timePicker.length; i++) {
+			var picker = new Picker(timePicker[i], {
+				format: "HH:mm",
+				headers: false,
+				controls: true,
+			});
 		}
-	}, 1000);
 
-	// Инициализация попапа для выбора времени в попапе с бронированием
-	for (var i = 0; i < timePicker.length; i++) {
-		var picker = new Picker(timePicker[i], {
-			format: "HH:mm",
-			headers: false,
-			controls: true,
+		// Обработка данных при клике на кнопку "Дальше" во всех
+		// вкладках попапа с бронированием (кроме PS4)
+		var nextButton = document.querySelectorAll(".popupOrder__next");
+		[].forEach.call(nextButton, function (e) {
+			e.addEventListener("click", function (e) {
+				var startTime = this.closest(".popupOrder__zone_inner").querySelector(
+					".startTime"
+				).value;
+				var endTime = this.closest(".popupOrder__zone_inner").querySelector(
+					".endTime"
+				).value;
+				var selectedPlaces = this.closest(
+					".popupOrder__zone_inner"
+				).querySelectorAll(".popupOrder__places_item.active").length;
+				var selectedTime = (this.closest(
+					".popupOrder__zone_inner"
+				).querySelector(".selectedTime").value = startTime + " - " + endTime);
+				var countPlaces = (this.closest(
+					".popupOrder__zone_inner"
+				).querySelector(".selectedPlaces").value = selectedPlaces);
+			});
 		});
-	}
 
-	// Обработка данных при клике на кнопку "Дальше" во всех
-	// вкладках попапа с бронированием (кроме PS4)
-	var nextButton = document.querySelectorAll(".popupOrder__next");
-	[].forEach.call(nextButton, function (e) {
-		e.addEventListener("click", function (e) {
-			var startTime = this.closest(".popupOrder__zone_inner").querySelector(
-				".startTime"
-			).value;
-			var endTime = this.closest(".popupOrder__zone_inner").querySelector(
-				".endTime"
-			).value;
-			var selectedPlaces = this.closest(
-				".popupOrder__zone_inner"
-			).querySelectorAll(".popupOrder__places_item.active").length;
-			var selectedTime = (this.closest(".popupOrder__zone_inner").querySelector(
-				".selectedTime"
-			).value = startTime + " - " + endTime);
-			var countPlaces = (this.closest(".popupOrder__zone_inner").querySelector(
-				".selectedPlaces"
-			).value = selectedPlaces);
+		// Выбор компьютеров во всех вкладках попапа с бронированием (кроме PS4)
+		var place = document.querySelectorAll(
+			".popupOrder__places_item:not(.busy)"
+		);
+		[].forEach.call(place, function (e) {
+			e.addEventListener("click", function (e) {
+				var selectPlace = this.classList.toggle("active");
+			});
 		});
-	});
 
-	// Выбор компьютеров во всех вкладках попапа с бронированием (кроме PS4)
-	var place = document.querySelectorAll(".popupOrder__places_item:not(.busy)");
-	[].forEach.call(place, function (e) {
-		e.addEventListener("click", function (e) {
-			var selectPlace = this.classList.toggle("active");
+		// Выбор времени PS4 Room (попап)
+		var timePS4 = document.querySelectorAll(
+			".popupOrder__ps4_time-item:not(.busy)"
+		);
+		[].forEach.call(timePS4, function (e) {
+			e.addEventListener("click", function (e) {
+				var selectTime = this.classList.toggle("active");
+			});
 		});
-	});
 
-	// Выбор времени PS4 Room (попап)
-	var timePS4 = document.querySelectorAll(
-		".popupOrder__ps4_time-item:not(.busy)"
-	);
-	[].forEach.call(timePS4, function (e) {
-		e.addEventListener("click", function (e) {
-			var selectTime = this.classList.toggle("active");
-		});
-	});
+		// Обработка данных при клике на кнопку "Дальше" в PS4 Room (попап)
+		var nextPS4 = document.querySelectorAll(".popupOrder__ps4_next");
+		var prevPS4 = document.querySelectorAll(".popupOrder__ps4_prev");
+		[].forEach.call(nextPS4, function (e) {
+			e.addEventListener("click", function (e) {
+				var selectedTimes = this.closest(
+					".popupOrder__zone_inner"
+				).querySelectorAll(".popupOrder__ps4_time-item.active");
+				var getTimesInput = this.closest(
+					".popupOrder__zone_inner"
+				).querySelector(".selectedTimes");
 
-	// Обработка данных при клике на кнопку "Дальше" в PS4 Room (попап)
-	var nextPS4 = document.querySelectorAll(".popupOrder__ps4_next");
-	var prevPS4 = document.querySelectorAll(".popupOrder__ps4_prev");
-	[].forEach.call(nextPS4, function (e) {
-		e.addEventListener("click", function (e) {
-			var selectedTimes = this.closest(
-				".popupOrder__zone_inner"
-			).querySelectorAll(".popupOrder__ps4_time-item.active");
-			var getTimesInput = this.closest(".popupOrder__zone_inner").querySelector(
-				".selectedTimes"
-			);
-
-			for (var i = 0; i < selectedTimes.length; i++) {
-				getTimesInput.value += selectedTimes[i].innerHTML + "\n";
-			}
-
-			if (window.innerWidth > 1200) {
-				if (selectedTimes.length > 0) {
-					getTimesInput.style.height = selectedTimes.length * 27 + "px";
-				} else {
-					getTimesInput.style.height = 27 + "px";
+				for (var i = 0; i < selectedTimes.length; i++) {
+					getTimesInput.value += selectedTimes[i].innerHTML + "\n";
 				}
-			} else {
-				if (selectedTimes.length > 0) {
-					getTimesInput.style.height = selectedTimes.length * 19 + "px";
+
+				if (window.innerWidth > 1200) {
+					if (selectedTimes.length > 0) {
+						getTimesInput.style.height = selectedTimes.length * 27 + "px";
+					} else {
+						getTimesInput.style.height = 27 + "px";
+					}
 				} else {
-					getTimesInput.style.height = 19 + "px";
+					if (selectedTimes.length > 0) {
+						getTimesInput.style.height = selectedTimes.length * 19 + "px";
+					} else {
+						getTimesInput.style.height = 19 + "px";
+					}
 				}
-			}
+			});
 		});
-	});
 
-	[].forEach.call(prevPS4, function (e) {
-		e.addEventListener("click", function (e) {
-			var getTimesInput = (this.closest(
-				".popupOrder__zone_inner"
-			).querySelector(".selectedTimes").value = "");
+		[].forEach.call(prevPS4, function (e) {
+			e.addEventListener("click", function (e) {
+				var getTimesInput = (this.closest(
+					".popupOrder__zone_inner"
+				).querySelector(".selectedTimes").value = "");
+			});
 		});
-	});
 
-	// Кнопки + / - в попапе с бронированием
-	var minusBtn = document.querySelectorAll("#startMinus, #endMinus");
-	var plusBtn = document.querySelectorAll("#startPlus, #endPlus");
+		// Кнопки + / - в попапе с бронированием
+		var minusBtn = document.querySelectorAll("#startMinus, #endMinus");
+		var plusBtn = document.querySelectorAll("#startPlus, #endPlus");
 
-	// Обработка минуса
-	[].forEach.call(minusBtn, function (e) {
-		e.addEventListener("click", function (e) {
-			var selectTimeInput = this.closest(
-				".popupOrder__zone_time-select"
-			).querySelector("input");
-			var startHour = selectTimeInput.value.split(":");
-			if (startHour[0] >= 10 && startHour[0] <= 23) {
-				selectTimeInput.value = startHour[0] - 1 + ":" + startHour[1];
-			}
-			if (startHour[0] !== "00" && startHour[0] <= 10) {
-				selectTimeInput.value = "0" + (startHour[0] - 1) + ":" + startHour[1];
-			}
-			if (startHour[0] === "00") {
-				selectTimeInput.value = "23:" + startHour[1];
-			}
+		// Обработка минуса
+		[].forEach.call(minusBtn, function (e) {
+			e.addEventListener("click", function (e) {
+				var selectTimeInput = this.closest(
+					".popupOrder__zone_time-select"
+				).querySelector("input");
+				var startHour = selectTimeInput.value.split(":");
+				if (startHour[0] >= 10 && startHour[0] <= 23) {
+					selectTimeInput.value = startHour[0] - 1 + ":" + startHour[1];
+				}
+				if (startHour[0] !== "00" && startHour[0] <= 10) {
+					selectTimeInput.value = "0" + (startHour[0] - 1) + ":" + startHour[1];
+				}
+				if (startHour[0] === "00") {
+					selectTimeInput.value = "23:" + startHour[1];
+				}
+			});
 		});
-	});
-	// Обработка плюса
-	[].forEach.call(plusBtn, function (e) {
-		e.addEventListener("click", function (e) {
-			var selectTimeInput = this.closest(
-				".popupOrder__zone_time-select"
-			).querySelector("input");
-			var endHour = selectTimeInput.value.split(":");
-			if (endHour[0] >= 10 && endHour[0] < 23) {
-				selectTimeInput.value = +endHour[0] + 1 + ":" + endHour[1];
-			}
-			if (endHour[0] !== "00" && endHour[0] < 10) {
-				selectTimeInput.value = "0" + (+endHour[0] + 1) + ":" + endHour[1];
-			}
-			if (endHour[0] === "00") {
-				selectTimeInput.value = "0" + (+endHour[0] + 1) + ":" + endHour[1];
-			}
-			if (endHour[0] === "09") {
-				selectTimeInput.value = 10 + ":" + endHour[1];
-			}
-			if (endHour[0] === "23") {
-				selectTimeInput.value = "00:" + endHour[1];
-			}
+		// Обработка плюса
+		[].forEach.call(plusBtn, function (e) {
+			e.addEventListener("click", function (e) {
+				var selectTimeInput = this.closest(
+					".popupOrder__zone_time-select"
+				).querySelector("input");
+				var endHour = selectTimeInput.value.split(":");
+				if (endHour[0] >= 10 && endHour[0] < 23) {
+					selectTimeInput.value = +endHour[0] + 1 + ":" + endHour[1];
+				}
+				if (endHour[0] !== "00" && endHour[0] < 10) {
+					selectTimeInput.value = "0" + (+endHour[0] + 1) + ":" + endHour[1];
+				}
+				if (endHour[0] === "00") {
+					selectTimeInput.value = "0" + (+endHour[0] + 1) + ":" + endHour[1];
+				}
+				if (endHour[0] === "09") {
+					selectTimeInput.value = 10 + ":" + endHour[1];
+				}
+				if (endHour[0] === "23") {
+					selectTimeInput.value = "00:" + endHour[1];
+				}
+			});
 		});
-	});
+	}, 3500);
 
 	// Обработчик форм
 	function submitHandler(e) {
