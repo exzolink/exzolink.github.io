@@ -92,7 +92,12 @@
 								<a href="contacts.html" class="nav__link">Контакты</a>
 							</div>
 							<div class="flex">
-								<a href="" @click.prevent="$store.modalOrder.open = 'true'; scrollbarToggle()" class="nav__btn_order">Забронировать место</a>
+								<a
+									href=""
+									@click.prevent="$store.modalOrder.open = 'true'; scrollbarToggle()"
+									class="nav__btn_order"
+									>Забронировать место</a
+								>
 								<button @click="BurgerOpen = true" class="nav__btn_menu">
 									<img decoding="async" src="imgs/menu.svg" alt="" />
 								</button>
@@ -400,7 +405,12 @@
 									<span class="zones__price_text">Стоимость:</span>
 									<span class="zones__price_number">1000 тг/ч</span>
 								</div>
-								<button @click.prevent="$store.modalOrder.open = 'true'; scrollbarToggle()" class="order-button">Забронировать место</button>
+								<button
+									@click.prevent="$store.modalOrder.open = 'true'; scrollbarToggle()"
+									class="order-button"
+								>
+									Забронировать место
+								</button>
 							</div>
 						</div>
 
@@ -695,7 +705,12 @@
 						</div>
 					</div>
 					<div class="container">
-						<button @click.prevent="$store.modalOrder.open = 'true'; scrollbarToggle()" class="order-button mx-auto">Забронировать место</button>
+						<button
+							@click.prevent="$store.modalOrder.open = 'true'; scrollbarToggle()"
+							class="order-button mx-auto"
+						>
+							Забронировать место
+						</button>
 					</div>
 				</div>
 			</section>
@@ -845,7 +860,12 @@
 							<div class="swiper-button-next"></div>
 							<div class="swiper-button-prev"></div>
 						</div>
-						<button @click.prevent="$store.modalOrder.open = 'true'; scrollbarToggle()" class="order-button mx-auto">Забронировать место</button>
+						<button
+							@click.prevent="$store.modalOrder.open = 'true'; scrollbarToggle()"
+							class="order-button mx-auto"
+						>
+							Забронировать место
+						</button>
 					</div>
 				</div>
 			</section>
@@ -1067,9 +1087,9 @@
 						</div>
 					</div>
 				</div>
-      </section>
-      
-      <!-- Модальное окно: Спасибо за заявку (бронирование) -->
+			</section>
+
+			<!-- Модальное окно: Спасибо за заявку (бронирование) -->
 			<section class="popup">
 				<div id="orderThanks" class="popupRegister popupCoop popupThanks">
 					<button>
@@ -1129,7 +1149,7 @@
 		<script src="js/fslightbox.js" async></script>
 		<script src="js/swiper.min.js"></script>
 		<script src="js/lazyload.js" async></script>
-		<!--<script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>-->
+		<script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
 		<script src="js/typed.js"></script>
 		<script src="js/picker.min.js"></script>
 		<script src="https://apps.elfsight.com/p/platform.js" async></script>
