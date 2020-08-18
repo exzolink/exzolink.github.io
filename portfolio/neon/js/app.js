@@ -449,6 +449,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 
+	// Проверка на наличие попапа (для брони) на странице и если true, то активация кнопок
 	var orderFetched = false;
 	var init = setInterval(() => {
 		if (
