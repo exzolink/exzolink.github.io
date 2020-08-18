@@ -307,7 +307,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 
-	setTimeout(() => {
+	function initOrderBtns() {
 		// Инициализация попапа для выбора времени в попапе с бронированием
 		var timePicker = document.querySelectorAll(".js-time-picker");
 		for (var i = 0; i < timePicker.length; i++) {
@@ -447,7 +447,20 @@ document.addEventListener("DOMContentLoaded", function () {
 				}
 			});
 		});
-	}, 3500);
+	}
+
+	var orderFetched = false;
+	setInterval(() => {
+		if (
+			orderFetched === false &&
+			document.querySelector(".popupOrder") !== null
+		) {
+			initOrderBtns();
+			orderFetched = true;
+		} else {
+			return;
+		}
+	}, 1000);
 
 	// Обработчик форм
 	function submitHandler(e) {
