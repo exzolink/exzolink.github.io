@@ -375,7 +375,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	}, 4000);
 });
 
-window.addEventListener("onload", function () {
+setTimeout(() => {
+	
+
 	// Инициализация попапа для выбора времени в попапе с бронированием
 	var timePicker = document.querySelectorAll(".js-time-picker");
 	for (var i = 0; i < timePicker.length; i++) {
@@ -513,4 +515,4 @@ window.addEventListener("onload", function () {
 			}
 		});
 	});
-});
+}, 1500);
