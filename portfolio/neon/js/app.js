@@ -450,7 +450,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			});
 		});
 	});			
-}, 500);
+}, 1500);
 
 	// Обработчик форм
 	function submitHandler(e) {
