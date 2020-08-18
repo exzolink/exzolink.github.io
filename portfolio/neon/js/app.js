@@ -461,7 +461,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		} else {
 			return;
 		}
-	}, 1000);
+	}, 1500);
 
 	// Обработчик форм
 	function submitHandler(e) {
