@@ -449,7 +449,8 @@ document.addEventListener("DOMContentLoaded", function () {
 				}
 			});
 		});
-	});			
+	});	
+			
 }, 1500);
 
 	// Обработчик форм
