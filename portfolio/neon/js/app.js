@@ -196,10 +196,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	};
 
-	games.on("slideChange", function () {
-		games.update();
-	});
-
 	// Декоратор
 	function debounce(func, wait, immediate) {
 		var timeout;
@@ -532,7 +528,6 @@ document.addEventListener("DOMContentLoaded", function () {
 				getLabels[i].remove();
 			}
 			clearInterval(inst);
-			console.log("1");
 		} else {
 			return;
 		}
