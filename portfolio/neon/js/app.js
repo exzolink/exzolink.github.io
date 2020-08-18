@@ -519,17 +519,22 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	// Ждем загрузку виджета инстаграм и удаляем лейбл
-	var inst = setTimeout(() => {
+	var inst = setInterval(() => {
 		if (
 			document.querySelector(
 				".instagram__content #eapps-instagram-feed-1 > a"
 			) !== null
 		) {
-			var getLabel = document.querySelector(
+			var getLabels = document.querySelectorAll(
 				".instagram__content #eapps-instagram-feed-1 > a"
 			);
-			getLabel.remove();
-			clearTimeout(inst);
+			for (var i = 0; i < getLabels.length; i++) {
+				getLabels[i].remove();
+			}
+			clearInterval(inst);
+			console.log("1");
+		} else {
+			return;
 		}
-	}, 4000);
+	}, 1000);
 });
