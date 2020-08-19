@@ -87,7 +87,7 @@
         }
 
         &__wrapper {
-            max-height: calc(100% - 250px);
+            max-height: calc(100vh - 200px);
         }
     }
 }
@@ -102,14 +102,14 @@
         }
 
         &__wrapper {
-            max-height: calc(100% - 210px);
+            max-height: calc(100vh - 180px);
         }
     }
 }
 
 @media screen and (max-width: 1368px) {
     .page12__wrapper {
-        max-height: calc(100% - 150px);
+        max-height: calc(100vh - 160px);
     }
 }
 
@@ -147,6 +147,7 @@
         &__wrapper {
             height: 100%;
             padding: 0;
+            max-height: none;
         }
 
         &__info {

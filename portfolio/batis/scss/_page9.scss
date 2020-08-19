@@ -12,6 +12,18 @@
             background: linear-gradient(to bottom, #486DB2, #69C6A1);
         }
     }
+    &__title {
+        position: relative;
+        &:after {
+            position: absolute;
+            content: '';
+            bottom: -20px;
+            left: 0;
+            width: 150px;
+            height: 8px;
+            background: linear-gradient(to right, #486DB2, #69C6A1);
+        }
+    }
 }
 
 @media screen and (max-width: 1600px) {
@@ -30,6 +42,11 @@
         &__section {
             &:before {
                content: none;
+            }
+        }
+        &__title {
+            &:after {
+                content: none;
             }
         }
         &__wrapper {

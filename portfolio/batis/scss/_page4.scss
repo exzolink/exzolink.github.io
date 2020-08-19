@@ -75,6 +75,12 @@
         &__bg {
             display: none;
         }
+        &__desc {
+            font-size: 22px;
+        }
+        &__quote img {
+            max-width: 26px;
+        }
 
         &__img {
             flex-basis: 65%;
@@ -94,17 +100,17 @@
         &__section {
             &:before {
                 left: auto;
-                right: 15%;
-                height: 90px;
+                right: 10%;
+                height: 80px;
             }
         }
     }
 }
 
-@media screen and (max-width: 1368zpx) {
+@media screen and (max-width: 1368px) {
     .page4 {
         &__desc {
-            font-size: 28px;
+            font-size: 22px;
         }
 
         &__info {
@@ -116,20 +122,13 @@
 
 @media screen and (max-height: 700px) {
     .page4 {
-        &__desc {
-            font-size: 25px;
-        }
         &__img img {
-            max-width: 500px;
+            max-width: 550px;
         }
         &__img {
-            flex-basis: 45%;
+            flex-basis: 50%;
         }
-        &__section {
-            &:before {
-                content: none;
-            }
-        }
+
     }
 }
 

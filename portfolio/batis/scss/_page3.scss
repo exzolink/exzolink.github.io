@@ -72,17 +72,7 @@
     .page3 {
         &__wrapper {
             &:after {
-                height: 100px;
-            }
-        }
-    }
-}
-
-@media screen and (max-height: 700px) {
-    .page3 {
-        &__wrapper {
-            &:after {
-                content: none;
+                height: 60px;
             }
         }
     }
@@ -96,12 +86,6 @@
     .page3 {
         &__desc {
             font-size: 20px;
-        }
-
-        &__wrapper {
-            &:after {
-                content: none;
-            }
         }
 
         &__img {
@@ -131,6 +115,9 @@
     .page3 {
         &__wrapper {
             padding-bottom: 60px;
+            &:after {
+                content: none;
+            }
         }
 
         &__desc {

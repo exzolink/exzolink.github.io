@@ -116,10 +116,10 @@
     }
 }
 
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1800px) {
     .page7 {
         &__info {
-            font-size: 28px;
+            font-size: 22px;
         }
     }
 }
@@ -127,7 +127,7 @@
 @media screen and (max-height: 770px) {
     .page7 {
         &__info {
-            font-size: 26px;
+            font-size: 22px;
         }
         &__img img {
             max-width: 275px;

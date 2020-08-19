@@ -62,6 +62,20 @@
     background-image: url('../imgs/page2.jpg');
 }
 
+@media screen and (max-width: 1800px) {
+    .page2 {
+        &__title {
+            font-size: 28px;
+        }
+        &__cards {
+            margin-top: 50px;
+        }
+        &__card p {
+            font-size: 20px;
+        }
+    }
+}
+
 @media screen and (max-width: 1366px) {
     .page2 {
         &__img {

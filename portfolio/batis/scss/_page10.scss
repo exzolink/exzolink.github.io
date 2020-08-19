@@ -101,10 +101,18 @@
     }
 }
 
+@media screen and (max-width: 1800px) {
+    .page10 {
+        &__desc {
+            font-size: 22px;
+        }
+    }
+}
+
 @media screen and (max-height: 700px) {
     .page10 {
         &__desc {
-            font-size: 26px;
+            font-size: 22px;
         }
 
         &__right {
@@ -112,7 +120,7 @@
             justify-content: flex-end;
 
             & img {
-                max-width: 600px;
+                max-width: 550px;
             }
         }
     }
@@ -213,7 +221,7 @@
         }
 
         &__desc {
-            font-size: 22px;
+            font-size: 20px;
             width: auto;
         }
     }

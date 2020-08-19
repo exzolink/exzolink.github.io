@@ -43,10 +43,14 @@
     }
 }
 
-@media screen and (max-width: 1800px) {
+@media screen and (max-width: 1700px) {
     .page14 {
         &__bg {
             max-width: 600px;
+        }
+        &__desc {
+            font-size: 24px;
+            max-width: 415px;
         }
     }
 }
