@@ -67,10 +67,17 @@
         &__info {
             flex-basis: 50%;
         }
+        &__img {
+            flex-basis: 45%;
+            & img {
+                max-width: 600px;
+            }
+    
+        }
     }
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 750px) {
     .page11 {
         &__desc {
             max-width: 900px;
@@ -104,6 +111,7 @@
         &__wrapper {
             width: auto;
             bottom: auto;
+            background: none;
             left: auto;
             position: initial;
         }

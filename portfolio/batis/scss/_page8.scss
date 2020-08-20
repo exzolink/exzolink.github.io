@@ -37,8 +37,8 @@
             background-repeat: no-repeat;
             background-size: contain;
             background-position: 100%;
-            width: 90%;
-            height: 100%;
+            width: 95%;
+            height: calc(100vh + 170px);
             margin-top: 100px;
             z-index: 10;
         }
@@ -96,7 +96,7 @@
                 content: none;
             }
             &:after {
-                height: 100vh;
+                height: calc(100vh + 10%);
             }
         }
         &__section {
