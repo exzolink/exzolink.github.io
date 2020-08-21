@@ -1,0 +1,56 @@
+$gray: #5c5c5c;
+$blue: #488cb4;
+$green: #66B007;
+
+*,
+*:after,
+*:before {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: "Comfortaa", cursive;
+	font-weight: bold;
+	font-size: 42px;
+	color: $blue;
+}
+
+p {
+    font-size: 18px;
+    color: $gray;
+}
+
+a {
+	text-decoration: none;
+	color: $gray;
+}
+
+body {
+	overflow-x: hidden;
+    box-sizing: border-box;
+    background-color: #fff;
+	font-weight: 400;
+	font-family: "Roboto", sans-serif;
+}
+
+.container {
+	max-width: 1230px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+}
+
+.green {
+    color: $green;
+    font-size: 24px;
+}
