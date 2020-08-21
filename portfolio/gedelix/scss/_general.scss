@@ -30,9 +30,19 @@ p {
     color: $gray;
 }
 
+img {
+	user-select: none;
+	pointer-events: none;
+}
+
+button {
+	user-select: none;
+}
+
 a {
 	text-decoration: none;
 	color: $gray;
+	user-select: none;
 }
 
 body {
