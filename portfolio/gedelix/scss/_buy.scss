@@ -1,0 +1,138 @@
+.buy {
+	&__top {
+		background-color: #f9f9f9;
+		padding-top: 100px;
+		padding-bottom: 120px;
+		position: relative;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		& img {
+			position: absolute;
+			right: 170px;
+			bottom: -65px;
+			max-width: 330px;
+			width: 100%;
+		}
+	}
+
+	&__selector {
+		margin-top: 85px;
+
+		&_item {
+			font-weight: 700;
+			font-size: 24px;
+			transition: border .3s ease, color .3s ease;
+			background-color: transparent;
+            color: $darkgray;
+            border-bottom: 3px solid transparent;
+
+			&:last-child {
+				margin-left: 180px;
+			}
+
+			&:hover {
+				cursor: pointer;
+				color: $darkblue;
+			}
+
+			&.active {
+				cursor: default;
+				color: $darkblue;
+				padding-bottom: 10px;
+				border-bottom: 3px solid $darkblue;
+			}
+		}
+    }
+    
+    &__body {
+        margin: 0 auto;
+        max-width: 900px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        margin-left: 125px;
+        display: none;
+
+        &.active {
+            display: flex;
+        }
+    }
+
+    &__label {
+        &_wrapper {
+            display: flex;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        display: flex;
+        font-size: 18px;
+        color: $darkgray;
+        font-weight: 700;
+        align-items: center;
+
+        & span {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+
+    &__pharms {
+        margin-top: 35px;
+        &_item {
+            align-items: center;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+            display: none;
+            border-bottom: 3px solid #E5E5E5;
+
+            &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                display: flex;
+            }
+
+            & a {
+                padding: 12px 16px;
+                display: block;
+                font-size: 18px;
+                max-width: 180px;
+            }
+
+            & img {
+                max-width: 215px;
+            }
+
+            & span {
+                color: $darkgray;
+                font-size: 18px;
+                margin-left: 65px;
+                margin-right: 50px;
+            }
+        }
+
+        &_img {
+            max-width: 215px;
+            width: 100%;
+        }
+    }
+
+    &__wrapper {
+        margin-top: -65px;
+        position: relative;
+        padding-bottom: 150px;
+    }
+
+    &__link {
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+}
+
+.mar-0 {
+    margin: 0;
+}

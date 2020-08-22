@@ -1,6 +1,8 @@
 $gray: #5c5c5c;
 $blue: #488cb4;
-$green: #66B007;
+$darkblue: #1590d8;
+$green: #66b007;
+$darkgray: #3f3f3f;
 
 *,
 *:after,
@@ -26,8 +28,8 @@ h4 {
 }
 
 p {
-    font-size: 18px;
-    color: $gray;
+	font-size: 18px;
+	color: $gray;
 }
 
 img {
@@ -36,6 +38,7 @@ img {
 }
 
 button {
+	font-family: "Roboto", sans-serif;
 	user-select: none;
 }
 
@@ -47,8 +50,8 @@ a {
 
 body {
 	overflow-x: hidden;
-    box-sizing: border-box;
-    background-color: #fff;
+	box-sizing: border-box;
+	background-color: #fff;
 	font-weight: 400;
 	font-family: "Roboto", sans-serif;
 }
@@ -61,6 +64,54 @@ body {
 }
 
 .green {
-    color: $green;
-    font-size: 24px;
+	color: $green;
+	font-size: 24px;
+}
+
+.subtitle {
+	font-family: "Roboto", sans-serif;
+	text-align: left;
+	margin-bottom: 22px;
+}
+
+.btn {
+	border-radius: 40px;
+	color: #fff;
+	font-size: 24px;
+	width: 230px;
+	padding: 14px 0;
+	transition: color 0.3s ease, background 0.3s ease, border 0.3s ease;
+	padding-bottom: 18px;
+	line-height: 1;
+	border: 3px solid $darkblue;
+	background-color: $darkblue;
+
+	&:hover {
+		color: $darkblue;
+		cursor: pointer;
+		background-color: transparent;
+	}
+
+	&.transparent {
+		background-color: transparent;
+		color: $darkblue;
+
+		&:hover {
+			background-color: $darkblue;
+			color: #fff;
+		}
+	}
+}
+
+.link_sm {
+	color: $darkblue;
+	text-decoration: underline;
+	margin-top: 115px;
+	display: block;
+	font-size: 18px;
+	margin-bottom: 20px;
+
+	&:hover {
+		text-decoration: none;
+	}
 }

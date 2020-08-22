@@ -1,8 +1,12 @@
 .features {
 	background-color: #f9f9f9;
 	padding-top: 65px;
+	background-repeat: no-repeat;
+	background-image: url('../imgs/vector.svg');
 	padding-bottom: 65px;
 	text-align: center;
+	background-size: 100%;
+	background-position-y: bottom;
 
 	&__inner {
 		margin-top: 65px;
@@ -18,7 +22,6 @@
         counter-reset: features;
 	}
 	&__item {
-		flex-basis: fill;
 		padding-left: 90px;
 		margin-left: 45px;
 		margin-bottom: 60px;
@@ -50,12 +53,6 @@
                 left: 5px;
             }
         }
-
-		& h3 {
-			font-family: "Roboto", sans-serif;
-			text-align: left;
-			margin-bottom: 22px;
-		}
 
 		& p {
 			text-align: left;
