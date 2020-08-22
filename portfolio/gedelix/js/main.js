@@ -20,7 +20,7 @@ var feedbackText = new Readmore(".feedback__excerpt", {
 
 var tabs = document.querySelectorAll(".buy__selector_item");
 var content = document.querySelectorAll(".buy__content");
-[].forEach.call(tabs, function (e) {
+tabs.forEach(function (e) {
 	e.addEventListener("click", function () {
 		if (this.classList.contains("active") === false) {
 			for (var i = 0; i < tabs.length; i++) {
@@ -38,7 +38,7 @@ var content = document.querySelectorAll(".buy__content");
 });
 
 var morePharms = document.querySelectorAll(".buy__link");
-[].forEach.call(morePharms, function (e) {
+morePharms.forEach(function (e) {
 	e.addEventListener("click", function (e) {
 		e.preventDefault();
 		var pharms = this.closest(".buy__content").querySelectorAll(".buy__pharms_item");
