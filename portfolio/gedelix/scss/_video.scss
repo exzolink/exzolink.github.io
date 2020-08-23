@@ -1,0 +1,30 @@
+.video {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    background-color: #f9f9f9;
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        height: 50%;
+        bottom: 0;
+    }
+
+    &__title {
+        text-align: center;
+        max-width: 880px;
+        margin: 0 auto;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 110px;
+
+        & video, & iframe {
+            border: 5px solid #fff;
+            flex-basis: 48.5%;
+        }
+    }
+}
