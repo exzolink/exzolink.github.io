@@ -25,6 +25,7 @@
         & video, & iframe {
             border: 5px solid #fff;
             flex-basis: 48.5%;
+            min-height: 350px;
         }
     }
 }

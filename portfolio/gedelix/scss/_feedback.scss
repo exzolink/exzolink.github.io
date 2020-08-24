@@ -2,57 +2,109 @@
 	padding-top: 80px;
 	background-color: #f9f9f9;
 	padding-bottom: 100px;
-    text-align: center;
-    
-    &__inner {
-        margin: 0 auto;
-        max-width: 950px;
-        margin-top: 70px;
-    }
+	text-align: center;
+
+	&__inner {
+		margin: 0 auto;
+		max-width: 950px;
+		margin-top: 70px;
+	}
 
 	&__desc {
 		max-width: 315px;
 		margin: 0 auto;
 		margin-top: 40px;
-    }
-    
-    &__link {
-        display: block;
-        text-decoration: underline;
-        color: $darkblue;
-        margin-top: 25px;
+	}
 
-        &:hover {
-            text-decoration: none;
-        }
-    }
+	&__link {
+		display: block;
+		text-decoration: underline;
+		color: $darkblue;
+		margin-top: 25px;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
 
 	&__item {
 		display: flex;
-        align-items: flex-start;
-        text-align: left;
-        justify-content: center;
+		align-items: flex-start;
+		text-align: left;
+		justify-content: center;
 
-        & img {
-            max-width: 220px;
-            border-radius: 100%;
-        }
+		& img {
+			max-width: 220px;
+			border-radius: 100%;
+		}
 	}
 
 	&__info {
 		display: flex;
-        flex-direction: column;
-        max-width: 470px;
-        margin-left: 55px;
+		flex-direction: column;
+		max-width: 470px;
+		margin-left: 55px;
 	}
 	&__name {
-        margin-bottom: 45px;
-        font-size: 24px;
+		margin-bottom: 45px;
+		font-size: 24px;
 		color: $gray;
 		font-family: "Roboto", sans-serif;
-    }
-    
-    &__excerpt {
-        font-size: 14px;
-    }
+	}
+
+	&__excerpt {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.feedback {
+		padding: 45px 0;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.feedback {
+		&__item {
+			& img {
+				min-width: 120px;
+			}
+		}
+		&__info {
+			margin-left: 30px;
+		}
+		&__name {
+			margin-bottom: 15px;
+		}
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		display: none !important;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.feedback {
+		&__desc {
+			margin-top: 25px;
+		}
+		&__link {
+			font-size: 14px;
+		}
+		&__inner {
+			margin-top: 40px;
+		}
+		&__item {
+			flex-direction: column;
+
+			& img {
+				max-width: 120px;
+			}
+		}
+		&__info {
+			margin-top: 20px;
+			margin-left: 0;
+		}
+	}
 }

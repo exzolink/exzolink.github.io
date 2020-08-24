@@ -1,3 +1,5 @@
+"use strict";
+
 var feedback = new Swiper(".feedback__container", {
 	slidesPerView: 1,
 	loop: true,
@@ -41,7 +43,9 @@ var morePharms = document.querySelectorAll(".buy__link");
 morePharms.forEach(function (e) {
 	e.addEventListener("click", function (e) {
 		e.preventDefault();
-		var pharms = this.closest(".buy__content").querySelectorAll(".buy__pharms_item");
+		var pharms = this.closest(".buy__content").querySelectorAll(
+			".buy__pharms_item"
+		);
 		for (var i = 0; i < pharms.length; i++) {
 			pharms[i].style.display = "flex";
 		}

@@ -17,9 +17,10 @@
 	</head>
 	<body>
 		<header class="header">
-			<div class="container">
+			<img src="imgs/bg_sm.jpg" alt="" class="header__bg" />
+			<div class="container relative">
 				<nav class="nav">
-					<a href=""><img src="imgs/logo.svg" alt="" /></a>
+					<a href=""><img class="nav__logo" src="imgs/logo.svg" alt="" /></a>
 					<div class="nav__links">
 						<a href="" class="nav__link">Формы Геделикс</a>
 						<a href="" class="nav__link">Отзывы</a>
@@ -31,20 +32,21 @@
 						<img src="imgs/burger.svg" alt="" />
 					</button>
 				</nav>
-
-				<div class="header__info">
-					<h1 class="header__title">
-						Природная защита от кашля по немецким стандартам качества
-					</h1>
-					<p class="header__desc">
-						Можно применять с 2-х лет.
-						<br />
-						Не содержит красителей, сахара и алкоголя.
-					</p>
-				</div>
-				<div class="header__imgs">
-					<img loading="lazy" decoding="async" src="imgs/bottles.png" alt="" />
-					<img loading="lazy" decoding="async" src="imgs/fairy.png" alt="" />
+				<div class="header__wrap">
+					<div class="header__info">
+						<h1 class="header__title">
+							Природная защита от кашля по немецким стандартам качества
+						</h1>
+						<p class="header__desc">
+							Можно применять с 2-х лет.
+							<br />
+							Не содержит красителей, сахара и алкоголя.
+						</p>
+					</div>
+					<div class="header__imgs">
+						<img src="imgs/bottles.png" alt="" />
+						<img src="imgs/fairy.png" alt="" />
+					</div>
 				</div>
 			</div>
 		</header>
@@ -176,8 +178,11 @@
 					</h2>
 					<div class="vars__inner">
 						<div class="vars__item">
-							<img class="vars__img_first" src="imgs/img.png" alt="" />
-
+							<picture>
+								<source srcset="imgs/img_sm.png" media="(max-width: 1200px)" />
+								<source srcset="imgs/img.png" media="(min-width: 1200px)" />
+								<img class="vars__img_first" src="imgs/img.png" alt="" />
+							</picture>
 							<div class="vars__info">
 								<h3 class="green subtitle">Геделикс сироп 100 мл</h3>
 								<p>
@@ -197,7 +202,11 @@
 						</div>
 
 						<div class="vars__item">
-							<img class="vars__img_last" src="imgs/img2.png" alt="" />
+							<picture>
+								<source srcset="imgs/img2_sm.png" media="(max-width: 1200px)" />
+								<source srcset="imgs/img2.png" media="(min-width: 1200px)" />
+								<img class="vars__img_last" src="imgs/img2.png" alt="" />
+							</picture>
 
 							<div class="vars__info">
 								<h3 class="green subtitle">Геделикс капли 50 мл</h3>
@@ -356,7 +365,7 @@
 				<div class="buy__wrapper">
 					<div class="container">
 						<div class="buy__body">
-							<img src="imgs/bottle.png" alt="" />
+							<img class="buy__img" src="imgs/bottle.png" alt="" />
 							<div id="syrup" class="buy__content active">
 								<div class="buy__label_wrapper">
 									<div class="buy__label">
@@ -500,17 +509,163 @@
 			</section>
 
 			<section class="video">
-				<img class="video__bg" src="imgs/videoBg.png" alt="">
-				<div class="container">
-					<h2 class="video__title">Рекомендации врачей о лечении кашля у детей и взрослых</h2>
+				<img class="video__bg" src="imgs/videoBg.png" alt="" />
+				<div class="container container_sm">
+					<h2 class="video__title">
+						Рекомендации врачей о лечении кашля у детей и взрослых
+					</h2>
 
 					<div class="video__inner">
-						<video src="imgs/test.mp4" controls></video>
-						<video src="imgs/test.mp4" controls></video>
+						<iframe
+							src="https://www.youtube.com/embed/HV7mLcsUp5U"
+							frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						></iframe>
+						<iframe
+							src="https://www.youtube.com/embed/HV7mLcsUp5U"
+							frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						></iframe>
+					</div>
+				</div>
+			</section>
+
+			<section class="posts">
+				<div class="container container_sm">
+					<h2 class="posts__title">Мифы о здоровье</h2>
+					<div class="posts__inner">
+						<a href="" class="posts__item">
+							<img src="imgs/post.jpg" alt="" />
+							<div class="posts__item_info">
+								<span>01.02</span>
+								<h4>Здоровая семья – здоровое общество</h4>
+							</div>
+						</a>
+						<a href="" class="posts__item">
+							<img src="imgs/post.jpg" alt="" />
+							<div class="posts__item_info">
+								<span>01.02</span>
+								<h4>
+									Растительный состав препарата – безопасное лечение кашля у
+									пациентов от 2 лет
+								</h4>
+							</div>
+						</a>
+						<a href="" class="posts__item">
+							<img src="imgs/post.jpg" alt="" />
+							<div class="posts__item_info">
+								<span>01.02</span>
+								<h4>Здоровая семья – здоровое общество</h4>
+							</div>
+						</a>
+					</div>
+					<a href="" class="btn transparent posts__btn">Читать все</a>
+				</div>
+			</section>
+
+			<section class="partners">
+				<div class="container container_sm">
+					<div class="partners__inner">
+						<div class="partners__item">
+							<h4 class="partners__name">Производитель</h4>
+							<img src="imgs/partner.png" alt="" />
+							<p class="partners__desc">
+								Немецкая фармацевтическая компания, выпускает высококачественные
+								и недорогие лекарственные препараты. Производство базируется в
+								Айторфе (Северный Рейн-Вестфалия) и Герене (Тюрингия) в
+								Германии. За основу в производстве взяты современные технологии
+								систематического процесса оценки качества. Только так можно
+								поддерживать ответственный контроль, который гарантирован на
+								всех этапах разработки - от сырья до конечного продукта.
+							</p>
+						</div>
+
+						<div class="partners__item">
+							<h4 class="partners__name">Поставщик в Казахстане</h4>
+							<img src="imgs/partner2.png" alt="" />
+							<p class="partners__desc">
+								Основным видом деятельности компании является дистрибьюция
+								медикаментов и изделий медицинского назначения. На сегодняшний
+								день компания работает с продукцией более чем 300 производителей
+								и может предложить широкий спектр медицинских фармацевтических
+								продуктов, имея в постоянном ассортименте свыше 4000
+								наименований различных товаров. Персонал компании состоит более
+								чем из 1200 человек, включая Алматы и филиалы.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="contacts">
+				<div class="container">
+					<h2 class="contacts__title">Контакты</h2>
+					<p class="contacts__desc">
+						Наименование, адрес и контактные данные организации на территории
+						Республики Казахстан, принимающей претензии (предложения) по
+						качеству лекарственных средств от потребителей и ответственной за
+						пострегистрационное наблюдение за безопасностью лекарственного
+						средства:
+					</p>
+				</div>
+			</section>
+
+			<section class="map">
+				<div class="container">
+					<div class="map__inner">
+						<div class="map__label">
+							<div class="map__info">
+								<p class="map__desc">
+									<strong>Адрес:</strong> 050004, Республика Казахстан, г.
+									Алматы, ул. Маметовой, 54
+								</p>
+								<p class="map__desc">
+									<strong>Телефон/Факс:</strong>
+									<a href="tel:+77272799821">+7 (727) 279 98 21</a>
+								</p>
+								<p class="map__desc">
+									<strong>E-mail:</strong>
+									<a
+										href="mailto:pharmanadzor@medservice.kz
+									"
+										>pharmanadzor@medservice.kz
+									</a>
+								</p>
+							</div>
+						</div>
+						<div id="map" class="map__canvas">
+							<iframe
+								src="https://yandex.ru/map-widget/v1/?um=constructor%3A79f16e6093c9276a2c95795219418b17278605d0f9e56dc31bc694c39cb318cb&amp;source=constructor"
+								width="100%"
+								height="100%"
+								frameborder="0"
+							></iframe>
+						</div>
 					</div>
 				</div>
 			</section>
 		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<img class="footer__logo" src="imgs/logoGray.svg" alt="" />
+					<div class="footer__warning">
+						<img src="imgs/msgGray.svg" alt="" />
+						<p>
+							Лекарственное средство. Перед применением необходимо ознакомится с
+							инструкцией. Самолечение  может быть вредным для вашего здоровья.
+						</p>
+					</div>
+					<div class="footer__dev">
+						<span>Разработано командой</span>
+						<img src="imgs/grad.svg" alt="" />
+					</div>
+				</div>
+			</div>
+		</footer>
 
 		<script src="js/readmore.js"></script>
 		<script src="js/swiper.min.js"></script>

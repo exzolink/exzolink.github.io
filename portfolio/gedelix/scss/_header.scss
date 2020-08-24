@@ -1,14 +1,18 @@
 .header {
 	background-image: url("../imgs/bg.jpg");
 	background-size: cover;
-    background-color: #fff;
-    background-position-x: 50%;
+	background-color: #fff;
+	background-position-x: 50%;
 	height: 750px;
 
 	&__info {
 		margin-top: 36px;
 		display: flex;
 		flex-direction: column;
+	}
+
+	&__bg {
+		display: none;
 	}
 
 	&__title {
@@ -62,10 +66,134 @@
 
 	&__menu {
 		display: none;
+		background-color: transparent;
 		transition: opacity 0.3s ease;
 		&:hover {
 			opacity: 0.8;
 			cursor: pointer;
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.header {
+		height: 600px;
+
+		&__imgs {
+			& img {
+				&:first-child {
+					margin-left: -100px;
+					max-width: 370px;
+				}
+				&:last-child {
+					max-width: 150px;
+				}
+			}
+		}
+	}
+
+	.nav {
+		&__logo {
+			max-width: 200px;
+		}
+
+		&__link {
+			margin-right: 40px;
+			font-size: 14px;
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.nav {
+		&__links {
+			display: none;
+		}
+		&__menu {
+			display: block;
+		}
+	}
+
+	.header {
+		background-position-x: 35%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.nav {
+		&__logo {
+			max-width: 150px;
+		}
+	}
+	.header {
+		position: relative;
+		background-image: none;
+		z-index: 50;
+		height: auto;
+
+		&__wrap {
+			margin-top: 280px;
+			display: flex;
+			flex-direction: column-reverse;
+		}
+
+		&__bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+			display: block;
+		}
+
+		&__imgs {
+			& img {
+				&:first-child {
+					margin-left: -80px;
+					max-width: 450px;
+					margin-right: 0;
+				}
+				&:last-child {
+					max-width: none;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.header {
+		&__wrap {
+			margin-top: 210px;
+		}
+		&__info {
+			margin-top: 10px;
+		}
+		&__desc {
+			margin-top: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: 415px) {
+	.header {
+		&__wrap {
+			margin-top: 160px;
+		}
+		&__imgs {
+			& img {
+				&:first-child {
+					margin-left: -50px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 359px) {
+	.header {
+		&__wrap {
+			margin-top: 130px;
 		}
 	}
 }

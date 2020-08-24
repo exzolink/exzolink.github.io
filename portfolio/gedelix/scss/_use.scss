@@ -90,3 +90,71 @@
         font-weight: 400;
     }
 }
+
+@media screen and (max-width: 1200px) {
+	.use {
+		padding: 45px 0;
+		&__img_first {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.use {
+		&__inner {
+			margin-top: 45px;
+			flex-direction: column;
+		}
+		&__item {
+			align-items: center;
+
+			&:first-child {
+				.use__info {
+					border-right: none;
+				}
+			}
+
+			&:last-child {
+				margin-top: 50px;
+			}
+		}
+		&__img_last {
+			align-self: unset;
+		}
+	}
+}
+
+
+@media screen and (max-width: 600px) {
+	.use {
+		&__desc {
+			font-size: 18px;
+			margin-top: 30px;
+			padding-bottom: 20px;
+			margin-bottom: 25px;
+		}
+		&__info {
+			padding: 0;
+		}
+		&__img_last {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.use {
+		padding-top: 30px;
+		&__desc {
+			font-size: 16px;
+		}
+		&__lasts, &__tip {
+			font-size: 16px;
+			margin-top: 45px;
+		}
+		&__info ul {
+			font-size: 16px;
+		}
+	}
+}

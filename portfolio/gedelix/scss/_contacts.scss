@@ -1,0 +1,18 @@
+.contacts {
+    background-color: #F4F4F4;
+    padding: 60px 0;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__desc {
+        margin: 0 auto;
+        margin-top: 50px;
+        font-size: 18px;
+        text-align: center;
+        max-width: 1000px;
+        color: $darkgray;
+    }
+
+}

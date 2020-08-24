@@ -1,0 +1,35 @@
+.partners {
+    padding: 55px 0;
+    
+    &__inner {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        &:first-child {
+            padding-right: 85px;
+            border-right: 3px solid #E5E5E5;
+            margin-right: 85px;
+        }
+
+        & img {
+           margin: 45px 0;
+           width: max-content;
+        }
+    }
+
+    &__name {
+        font-size: 48px;
+        font-family: 'Roboto', sans-serif;
+        color: $gray;
+        font-weight: 400;
+    }
+
+    &__desc {
+        font-size: 14px;
+    }
+
+}
