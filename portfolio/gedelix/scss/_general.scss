@@ -111,6 +111,25 @@ body {
 	}
 }
 
+.lazyload,
+.lazyloading {
+  opacity: 0;
+  min-height: 200px;
+  transition: border 0.3s ease, opacity 0.3s, transform 0.3s, filter 0.3s !important;
+}
+
+@media screen and (max-width: 800px) {
+  .lazyload,
+  .lazyloading {
+    min-height: 100px;
+  }
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: border 0.3s ease, opacity 0.3s, transform 0.3s, filter 0.3s !important;
+}
+
 .link_sm {
 	color: $darkblue;
 	text-decoration: underline;
