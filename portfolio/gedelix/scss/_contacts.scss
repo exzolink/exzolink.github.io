@@ -16,3 +16,22 @@
     }
 
 }
+
+
+@media screen and (max-width: 1200px) {
+    .contacts {
+        padding: 45px 0;
+        &__desc {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .contacts {
+        &__desc {
+            margin-top: 30px;
+            font-size: 14px;
+        }
+    }
+}

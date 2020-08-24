@@ -33,3 +33,43 @@
     }
 
 }
+
+@media screen and (max-width: 1200px) {
+    .partners {
+        padding: 45px 0;
+        &__img_first {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 915px) {
+    .partners {
+        &__name {
+            font-size: 28px;
+        }
+        &__inner {
+            flex-direction: column;
+        }
+        &__item {
+            & img {
+                margin: 20px 0;
+            }
+            &:first-child {
+               margin-right: 0;
+               padding-right: 0;
+               border-right: 0;
+               margin-bottom: 40px;
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .partners {
+        &__img_first {
+            width: auto !important;
+        }
+    }
+}

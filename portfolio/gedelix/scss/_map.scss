@@ -50,3 +50,32 @@
         background-color: #fff;
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .map {
+        &__label {
+            max-width: 43%;
+        }
+
+        &__info {
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 45px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .map {
+        &__label {
+            max-width: none;
+            width: 100%;
+            height: auto;
+        }
+        &__info {
+            margin-left: 0;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+}

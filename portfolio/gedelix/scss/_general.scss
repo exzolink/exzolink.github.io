@@ -48,6 +48,10 @@ a {
 	user-select: none;
 }
 
+html {
+	overflow-x: hidden;
+}
+
 body {
 	overflow-x: hidden;
 	box-sizing: border-box;

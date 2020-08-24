@@ -39,3 +39,28 @@
         width: 100%;
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .footer {
+        &__warning {
+            & p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .footer {
+        &__inner {
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__logo {
+            margin-bottom: 40px;
+        }
+        &__dev {
+            margin-top: 40px;
+        }
+    }
+}

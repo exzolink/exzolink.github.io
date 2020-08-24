@@ -52,3 +52,27 @@ morePharms.forEach(function (e) {
 		this.remove();
 	});
 });
+
+var mobileMenu = document.querySelector(".header__menu");
+var burgerBtns = document.querySelectorAll("#openBurger, #closeBurger");
+burgerBtns.forEach(function (e) {
+	e.addEventListener("click", function (e) {
+		e.preventDefault();
+		mobileMenu.classList.toggle("active");
+	});
+});
+
+document.querySelectorAll('a[href^="#"]').forEach((e) => {
+	e.addEventListener("click", function (e) {
+		e.preventDefault();
+		mobileMenu.classList.remove("active");
+		var element = document.querySelector(this.getAttribute("href"));
+		var bodyRect = document.body.getBoundingClientRect().top;
+		var elementRect = element.getBoundingClientRect().top;
+		var elementPosition = elementRect - bodyRect;
+		window.scrollTo({
+			top: elementPosition,
+			behavior: "smooth",
+		});
+	});
+});
