@@ -110,9 +110,20 @@
         }
         &__section {
             margin-bottom: 60px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('../imgs/page2.jpg');
+            padding-bottom: 35px;
+            background-position: bottom;
         }
         &__cards {
+            flex-wrap: wrap;
             justify-content: space-between;
+        }
+        &__card p {
+            color: #fff;
+ 
+            text-shadow: 1px 1px 5px #303030;
         }
         &__container {
             border: 0;
@@ -144,13 +155,14 @@
 
 @media screen and (max-width: 575px) {
     .page2 {
-        &__cards {
-            flex-direction: column;
-        }
         &__title {
             font-size: 22px;
         }
+        &__cards {
+            justify-content: center;
+        }
         &__card {
+            flex-basis: 50%;
             margin-bottom: 30px;
             &:last-child {
                 margin-bottom: 0;

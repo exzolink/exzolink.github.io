@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,700&display=swap"
+			rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/swiper.min.css">
+		<title>Геделикс</title>
+	</head>
+	<body>
+		<header class="header-sm">
+			<div class="container relative">
+				<nav class="nav nav-sm align-center">
+					<a href="./"><img class="nav__logo" src="imgs/logo.svg" alt="" /></a>
+					<div class="nav__links">
+						<a href="forms.html" class="nav__link">Формы Геделикс</a>
+						<a href="feedback.html" class="nav__link">Отзывы</a>
+						<a href="use.html" class="nav__link">Применение</a>
+					</div>
+					<a href="" class="btn btn-hide">Купить</a>
+					<button id="openBurger" class="nav__menu">
+						<img src="imgs/burger.svg" alt="" />
+					</button>
+					<div class="header__menu">
+						<div class="header__menu_inner">
+							<div class="header__menu_top">
+								<img src="imgs/logo.svg" alt="" />
+								<img id="closeBurger" src="imgs/close.svg" alt="" />
+							</div>
+							<div class="header__menu_nav">
+								<a href="forms.html" class="nav__link">Формы Геделикс</a>
+								<a href="feedback.html" class="nav__link">Отзывы</a>
+								<a href="use.html" class="nav__link">Применение</a>
+								<button class="btn">Купить</button>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<main class="main">
+			<section id="feedback" class="feedback">
+				<div class="container">
+					<h2 class="feedback__title">Отзывы</h2>
+					<p class="feedback__desc">
+						Ознакомьтесь с народными обзорами Геделикс
+					</p>
+
+					<div class="feedback__inner">
+						<div class="swiper-container feedback__container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide feedback__item">
+									<img src="imgs/woman.png" alt="" />
+									<div class="feedback__info">
+										<h4 class="feedback__name">
+											Екатерина
+										</h4>
+										<p class="feedback__excerpt">
+											“Сыну понравилось, даже облизал ложечку”
+											<br /><br /><br />
+											Сам сироп достаточно приятный на вкус, сыну понравилось,
+											даже облизал ложечку. После приёма, минут через 15 малыш
+											начал откашливаться, в горле перестало бурлить. Вылечились
+											мы за 3 дня. lorem ipsum dolor sit amet
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+        </main>
+        
+        <footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<img class="footer__logo" src="imgs/logoGray.svg" alt="" />
+					<div class="footer__warning">
+						<img src="imgs/msgGray.svg" alt="" />
+						<p>
+							Лекарственное средство. Перед применением необходимо ознакомится с
+							инструкцией. Самолечение  может быть вредным для вашего здоровья.
+						</p>
+					</div>
+					<div class="footer__dev">
+						<span>Разработано командой</span>
+						<img src="imgs/grad.svg" alt="" />
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/lazyload.js" async></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/readmore.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

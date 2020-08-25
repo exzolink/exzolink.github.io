@@ -155,9 +155,13 @@
 		}
 
 		&__desc {
+			padding-left: 15px;
 			margin-bottom: 0;
 			margin-top: 100px;
 			font-size: 28px;
+		}
+		&__title_hidden {
+			margin-bottom: 15px;
 		}
 	}
 }
@@ -190,7 +194,7 @@
 
 		&__desc {
 			max-width: none;
-			margin-top: 40px;
+			margin-top: 20px;
 		}
 
 		&__title {
@@ -198,7 +202,6 @@
 
 			&_hidden {
 				display: block;
-				margin-bottom: 40px;
 			}
 		}
 

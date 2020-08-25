@@ -119,7 +119,11 @@
             padding-top: 120px;
             padding-bottom: 100px;
         }
-        
+        &__section {
+            &:after {
+                width: 100%;
+            }
+        }
     }
     .page6__section::after {
         height: 86%;

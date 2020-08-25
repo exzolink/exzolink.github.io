@@ -103,13 +103,16 @@
     .page11 {
         &__desc {
             font-size: 28px;
+            padding-left: 15px;
             margin-bottom: 0;
         }
         &__info {
             padding-right: 0;
         }
         &__wrapper {
+            margin-top: 45px;
             width: auto;
+            padding: 0 !important;
             bottom: auto;
             background: none;
             left: auto;
@@ -127,7 +130,6 @@
 @media screen and (max-width: 840px) {
     .page11 {
         &__wrapper {
-            margin-top: 70px;
             flex-direction: column;
         }
         &__title {
@@ -135,7 +137,7 @@
         }
         &__info {
             width: 80%;
-            margin-top: 40px;
+            margin-top: 20px;
             padding-left: 0;
         }
         &__desc {

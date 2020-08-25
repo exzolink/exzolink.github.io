@@ -121,15 +121,26 @@
 @media screen and (max-width: 1100px) {
     .page8 {
         &__wrapper {
+            margin-top: 20px;
+            background: linear-gradient(to right,#486DB2,#69C6A1);
             &:after {
-               height: 100%;
+               content: none !important;
             }
+        }
+        &__info {
+            border-left: 0;
+            color: #fff;
+            padding-left: 0;
         }
     }
 }
 
 @media screen and (max-width: 870px) {
     .page8 {
+        &__wrapper {
+            padding: 25px;
+            width: auto;
+        }
         &__info {
             flex-basis: 100%;
         }

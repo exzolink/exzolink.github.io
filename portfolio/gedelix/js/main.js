@@ -12,13 +12,15 @@ var feedback = new Swiper(".feedback__container", {
 	},
 });
 
-var feedbackText = new Readmore(".feedback__excerpt", {
-	speed: 150,
-	lessLink: '<a class="feedback__link" href="#">Скрыть</a>',
-	moreLink: '<a class="feedback__link" href="#">Читать полный отзыв</a>',
-	collapsedHeight: 102,
-	heightMargin: 0,
-});
+if (document.querySelector(".feedback__excerpt") !== null) {
+	var feedbackText = new Readmore(".feedback__excerpt", {
+		speed: 150,
+		lessLink: '<a class="feedback__link" href="#">Скрыть</a>',
+		moreLink: '<a class="feedback__link" href="#">Читать полный отзыв</a>',
+		collapsedHeight: 102,
+		heightMargin: 0,
+	});
+};
 
 var tabs = document.querySelectorAll(".buy__selector_item");
 var content = document.querySelectorAll(".buy__content");
