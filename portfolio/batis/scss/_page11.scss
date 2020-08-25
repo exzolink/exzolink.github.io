@@ -77,6 +77,14 @@
     }
 }
 
+@media screen and (max-width: 1400px) {
+    .page11 {
+        &__info {
+            padding-left: 80px;
+        }
+    }
+}
+
 @media screen and (max-height: 750px) {
     .page11 {
         &__desc {
@@ -90,11 +98,24 @@
             left: 0;
         }
         &__img {
-            flex-basis: 34%;
+            flex-basis: 40%;
+            & img {
+                max-width: 420px;
+            }
+           
+        }
+    }
+}
+
+@media screen and (min-width: 1340px) and (max-width: 1370px) {
+    .page11 {
+        &__img {
             & img {
                 max-width: 380px;
             }
-           
+        }
+        &__info {
+            padding-left: 45px;
         }
     }
 }

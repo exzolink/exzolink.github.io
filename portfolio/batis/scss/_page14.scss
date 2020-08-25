@@ -52,14 +52,14 @@
             font-size: 24px;
             max-width: 415px;
         }
+        &__logo {
+            max-width: 350px;
+        }
     }
 }
 
 @media screen and (max-width: 1280px) {
     .page14 {
-        &__logo {
-            max-width: 400px;
-        }
         &__bg {
             max-width: 600px;
         }

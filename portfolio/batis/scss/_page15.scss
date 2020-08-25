@@ -62,7 +62,7 @@
 @media screen and (max-width: 1800px) {
 	.page15 {
 		&__bg {
-			right: 10%;
+			right: 0;
 			transform: none;
 			max-width: 600px;
 		}
@@ -81,7 +81,7 @@
 @media screen and (max-height: 900px) {
 	.page15 {
 		&__bg {
-			max-width: 640px;
+			max-width: 700px;
 		}
 	}
 }
