@@ -27,11 +27,23 @@
 	&__img_last {
 		min-width: 780px;
 		margin-right: -370px;
+		transform: translateX(60px);
+		transition: transform 4s ease !important;
+
+		&.active {
+			transform: translateX(0);
+		}
 	}
 
 	&__img_first {
 		min-width: 680px;
 		margin-left: -70px;
+		transform: translateX(-60px);
+		transition: transform 4s ease !important;
+
+		&.active {
+			transform: translateX(0);
+		}
 	}
 
 	&__info {

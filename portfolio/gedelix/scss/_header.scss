@@ -12,6 +12,39 @@
 		flex-direction: column;
 	}
 
+	&__buy {
+		position: absolute;
+		bottom: 30px;
+		left: 55%;
+		background-color: transparent;
+
+		& img {
+			transition: transform 3s linear;
+		}
+
+		&:hover {
+			cursor: pointer;
+			& img {
+				transform: scale(1.05) rotate(20deg);
+			}
+		}
+
+		&_inner {
+			position: relative;
+			&:after {
+				position: absolute;
+				content: "Купить";
+				font-family: inherit;
+				font-weight: 700;
+				font-size: 24px;
+				color: #fff;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+
 	&__bg {
 		display: none;
 	}
@@ -42,9 +75,9 @@
 
 	&__menu {
 		opacity: 0;
-		transform: scale(.75);
+		transform: scale(0.75);
 		visibility: collapse;
-		transition: opacity .25s ease, visibility .25s ease, transform .25s ease;
+		transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -130,6 +163,35 @@
 	padding-bottom: 30px;
 }
 
+.header-sm {
+	& .header-vines {
+		position: absolute;
+		top: 0;
+		&:first-child {
+			left: 0;
+		}
+		&:nth-child(2) {
+			right: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 1800px) {
+	.header-sm {
+		& .header-vines {
+			max-width: 150px;
+		}
+	}
+}
+
+@media screen and (max-width: 1450px) {
+	.header-sm {
+		& .header-vines {
+			display: none;
+		}
+	}
+}
+
 .align-center {
 	align-items: center;
 }
@@ -179,6 +241,14 @@
 
 	.header {
 		background-position-x: 35%;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.header {
+		&__buy {
+			display: none;
+		}
 	}
 }
 
@@ -275,5 +345,23 @@
 		&__wrap {
 			margin-top: 130px;
 		}
+	}
+}
+
+.fairy {
+	transform: translate(60px, -60px);
+	transition: transform 4s linear, opacity .2s ease !important;
+
+	&.active {
+		transform: translate(0, 0);
+	}
+}
+
+.bottles {
+	transform: translate(-20px, 0);
+	transition: transform 3s linear, opacity .2s ease !important;
+
+	&.active {
+		transform: translate(0, 0);
 	}
 }

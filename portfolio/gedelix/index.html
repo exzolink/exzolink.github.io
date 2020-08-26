@@ -59,10 +59,15 @@
 						</p>
 					</div>
 					<div class="header__imgs">
-						<img class="lazyload" data-src="imgs/bottles.png" alt="" />
-						<img class="lazyload" data-src="imgs/fairy.png" alt="" />
+						<img class="lazyload bottles anim-onload" data-src="imgs/bottles.png" alt="" />
+						<img class="lazyload fairy anim-onload" data-src="imgs/fairy.png" alt="" />
 					</div>
 				</div>
+				<button class="header__buy js-buy-btn">
+					<div class="header__buy_inner">
+						<img src="imgs/list.png" alt="" />
+					</div>
+				</button>
 			</div>
 		</header>
 
@@ -116,7 +121,11 @@
 				<div class="container">
 					<h2 class="help__title">Преимущества Геделикс</h2>
 					<div class="features__inner">
-						<img class="features__img lazyload" data-src="imgs/features.png" alt="" />
+						<div class="features__img">
+							<img class="features__img_first" src="imgs/features-vine.png" alt="">
+							<img class="features__img_second anim-onscroll" src="imgs/features-circle.png" alt="">
+							<img class="features__img_third anim-onscroll" src="imgs/features-drop.png" alt="">
+						</div>
 
 						<div class="features__items">
 							<div class="features__item">
@@ -170,7 +179,11 @@
 							<picture>
 								<source srcset="imgs/img_sm.png" media="(max-width: 1200px)" />
 								<source srcset="imgs/img.png" media="(min-width: 1200px)" />
-								<img class="vars__img_first lazyload" data-src="imgs/img.png" alt="" />
+								<img
+									class="vars__img_first lazyload anim-onscroll"
+									data-src="imgs/img.png"
+									alt=""
+								/>
 							</picture>
 							<div class="vars__info">
 								<h3 class="green subtitle">Геделикс сироп 100 мл</h3>
@@ -184,7 +197,9 @@
 									Удобная мягкая мерная ложечка - дети легко облизывают, мамам
 									просто соблюдать правильную дозировку.
 								</p>
-								<a href="" class="link_sm">Скачать инструкцию</a>
+								<a href="gedelix-syrup.pdf" class="link_sm"
+									>Скачать инструкцию</a
+								>
 
 								<button class="btn js-buy-btn">Купить</button>
 							</div>
@@ -194,7 +209,11 @@
 							<picture>
 								<source srcset="imgs/img2_sm.png" media="(max-width: 1200px)" />
 								<source srcset="imgs/img2.png" media="(min-width: 1200px)" />
-								<img class="vars__img_last lazyload" data-src="imgs/img2.png" alt="" />
+								<img
+									class="vars__img_last lazyload anim-onscroll"
+									data-src="imgs/img2.png"
+									alt=""
+								/>
 							</picture>
 
 							<div class="vars__info">
@@ -209,7 +228,9 @@
 									В качестве вспомогательных веществ содержатся мятное масло,
 									эвкалиптовое масло, анисовое масло и левоментол.
 								</p>
-								<a href="" class="link_sm">Скачать инструкцию</a>
+								<a href="gedelix-drops.pdf" class="link_sm"
+									>Скачать инструкцию</a
+								>
 
 								<button class="btn transparent js-buy-btn">Купить</button>
 							</div>
@@ -231,9 +252,7 @@
 								<div class="swiper-slide feedback__item">
 									<img src="imgs/woman.png" alt="" />
 									<div class="feedback__info">
-										<h4 class="feedback__name">
-											Екатерина
-										</h4>
+										<h4 class="feedback__name">Екатерина</h4>
 										<p class="feedback__excerpt">
 											“Сыну понравилось, даже облизал ложечку”
 											<br /><br /><br />
@@ -258,7 +277,11 @@
 					<h2 class="use__title">Применение Геделикс</h2>
 					<div class="use__inner">
 						<div class="use__item">
-							<img class="use__img_first lazyload" data-src="imgs/imgUse.png" alt="" />
+							<img
+								class="use__img_first lazyload"
+								data-src="imgs/imgUse.png"
+								alt=""
+							/>
 
 							<div class="use__info">
 								<h3 class="green subtitle">Геделикс сироп 100 мл</h3>
@@ -288,7 +311,11 @@
 						</div>
 
 						<div class="use__item">
-							<img class="use__img_last lazyload" data-src="imgs/imgUse2.png" alt="" />
+							<img
+								class="use__img_last lazyload"
+								data-src="imgs/imgUse2.png"
+								alt=""
+							/>
 
 							<div class="use__info">
 								<h3 class="green subtitle">Геделикс капли 50 мл</h3>
@@ -337,12 +364,15 @@
 			<section class="buy">
 				<div class="buy__top">
 					<div class="container">
-						<img data-src="imgs/fairy2.png" alt="" class="buy__bg lazyload" />
+						<video src="imgs/test.mp4" class="buy__video anim-onscroll" muted></video>
 
 						<h2 class="buy__title">Где купить Геделикс</h2>
 
 						<div class="buy__selector">
-							<button data-tab="syrup" class="buy__selector_item js-selector active">
+							<button
+								data-tab="syrup"
+								class="buy__selector_item js-selector active"
+							>
 								Геделикс сироп 100 мл
 							</button>
 							<button data-tab="drops" class="buy__selector_item js-selector">
@@ -354,9 +384,12 @@
 
 				<div class="buy__wrapper">
 					<div class="container">
-
 						<div id="syrup" class="buy__body js-body active">
-							<img class="buy__img lazyload" data-src="imgs/bottle.png" alt="" />
+							<img
+								class="buy__img lazyload"
+								data-src="imgs/bottle.png"
+								alt=""
+							/>
 							<div class="buy__content">
 								<div class="buy__label_wrapper">
 									<div class="buy__label">
@@ -426,9 +459,12 @@
 							</div>
 						</div>
 
-
 						<div id="drops" class="buy__body js-body">
-							<img class="buy__img lazyload" data-src="imgs/bottle2.png" alt="" />
+							<img
+								class="buy__img lazyload"
+								data-src="imgs/bottle2.png"
+								alt=""
+							/>
 							<div class="buy__content">
 								<div class="buy__label_wrapper">
 									<div class="buy__label">
@@ -531,14 +567,14 @@
 					<h2 class="posts__title">Мифы о здоровье</h2>
 					<div class="posts__inner">
 						<a href="" class="posts__item">
-							<img class="lazyload" data-src="imgs/post.jpg" alt="" />
+							<div class="posts__img lazyload" data-bg="imgs/post.jpg"></div>
 							<div class="posts__item_info">
 								<span>01.02</span>
 								<h4>Здоровая семья – здоровое общество</h4>
 							</div>
 						</a>
 						<a href="" class="posts__item">
-							<img class="lazyload" data-src="imgs/post.jpg" alt="" />
+							<div class="posts__img lazyload" data-bg="imgs/post.jpg"></div>
 							<div class="posts__item_info">
 								<span>01.02</span>
 								<h4>
@@ -548,7 +584,7 @@
 							</div>
 						</a>
 						<a href="" class="posts__item">
-							<img class="lazyload" data-src="imgs/post.jpg" alt="" />
+							<div class="posts__img lazyload" data-bg="imgs/post.jpg"></div>
 							<div class="posts__item_info">
 								<span>01.02</span>
 								<h4>Здоровая семья – здоровое общество</h4>
@@ -564,7 +600,11 @@
 					<div class="partners__inner">
 						<div class="partners__item">
 							<h4 class="partners__name">Производитель</h4>
-							<img class="partners__img_first lazyload" data-src="imgs/partner.png" alt="" />
+							<img
+								class="partners__img_first lazyload"
+								data-src="imgs/partner.png"
+								alt=""
+							/>
 							<p class="partners__desc">
 								Немецкая фармацевтическая компания, выпускает высококачественные
 								и недорогие лекарственные препараты. Производство базируется в
@@ -641,32 +681,40 @@
 				</div>
 			</section>
 
-
 			<section class="popup">
-				<img src="imgs/close.svg" alt="" class="popup__close">
+				<img src="imgs/close.svg" alt="" class="popup__close" />
 				<div class="buy">
 					<div class="buy__top">
 						<div class="container">
-							<img data-src="imgs/fairy2.png" alt="" class="buy__bg lazyload" />
-	
+							<img data-src="imgs/fairy2.png" alt="" class="buy__bg lazyloaded" src="imgs/fairy2.png">
+
 							<h2 class="buy__title">Где купить Геделикс</h2>
-	
+
 							<div class="buy__selector">
-								<button data-tab="syrup" class="buy__selector_item js-selector-popup active">
+								<button
+									data-tab="syrup"
+									class="buy__selector_item js-selector-popup active"
+								>
 									Геделикс сироп 100 мл
 								</button>
-								<button data-tab="drops" class="buy__selector_item js-selector-popup">
+								<button
+									data-tab="drops"
+									class="buy__selector_item js-selector-popup"
+								>
 									Геделикс капли 50 мл
 								</button>
 							</div>
 						</div>
 					</div>
-	
+
 					<div class="buy__wrapper">
 						<div class="container">
-	
 							<div id="syrup" class="buy__body js-body-popup active">
-								<img class="buy__img lazyload" data-src="imgs/bottle.png" alt="" />
+								<img
+									class="buy__img lazyload"
+									data-src="imgs/bottle.png"
+									alt=""
+								/>
 								<div class="buy__content">
 									<div class="buy__label_wrapper">
 										<div class="buy__label">
@@ -675,58 +723,86 @@
 										</div>
 										<a href="" class="link_sm mar-0">Смотреть на карте</a>
 									</div>
-	
+
 									<div class="buy__label">
 										<img src="imgs/plus.svg" alt="" />
 										<span>В онлайн аптеках</span>
 									</div>
-	
+
 									<div class="buy__pharms">
 										<div class="buy__pharms_item">
 											<div class="buy__pharms_img">
-												<img class="lazyload" data-src="imgs/pharm1.png" alt="" />
+												<img
+													class="lazyload"
+													data-src="imgs/pharm1.png"
+													alt=""
+												/>
 											</div>
 											<span>1 707 ₸</span>
 											<a href="" class="btn transparent">Перейти на сайт</a>
 										</div>
 										<div class="buy__pharms_item">
 											<div class="buy__pharms_img">
-												<img class="lazyload" data-src="imgs/pharm2.png" alt="" />
+												<img
+													class="lazyload"
+													data-src="imgs/pharm2.png"
+													alt=""
+												/>
 											</div>
 											<span>1 707 ₸</span>
 											<a href="" class="btn transparent">Перейти на сайт</a>
 										</div>
 										<div class="buy__pharms_item">
 											<div class="buy__pharms_img">
-												<img class="lazyload" data-src="imgs/pharm3.png" alt="" />
+												<img
+													class="lazyload"
+													data-src="imgs/pharm3.png"
+													alt=""
+												/>
 											</div>
 											<span>1 707 ₸</span>
 											<a href="" class="btn transparent">Перейти на сайт</a>
 										</div>
 										<div class="buy__pharms_item">
 											<div class="buy__pharms_img">
-												<img class="lazyload" data-src="imgs/pharm4.png" alt="" />
+												<img
+													class="lazyload"
+													data-src="imgs/pharm4.png"
+													alt=""
+												/>
 											</div>
 											<span>1 707 ₸</span>
 											<a href="" class="btn transparent">Перейти на сайт</a>
 										</div>
 										<div class="buy__pharms_item">
 											<div class="buy__pharms_img">
-												<img class="lazyload" data-src="imgs/pharm5.png" alt="" />
+												<img
+													class="lazyload"
+													data-src="imgs/pharm5.png"
+													alt=""
+												/>
 											</div>
 											<span>1 707 ₸</span>
 											<a href="" class="btn transparent">Перейти на сайт</a>
 										</div>
 										<div class="buy__pharms_item">
 											<div class="buy__pharms_img">
-												<img class="lazyload" data-src="imgs/pharm6.png" alt="" />
+												<img
+													class="lazyload"
+													data-src="imgs/pharm6.png"
+													alt=""
+												/>
 											</div>
 											<span>1 707 ₸</span>
 											<a href="" class="btn transparent">Перейти на сайт</a>
 										</div>
 										<div class="buy__pharms_item">
 											<div class="buy__pharms_img">
-												<img class="lazyload" data-src="imgs/pharm7.png" alt="" />
+												<img
+													class="lazyload"
+													data-src="imgs/pharm7.png"
+													alt=""
+												/>
 											</div>
 											<span>1 707 ₸</span>
 											<a href="" class="btn transparent">Перейти на сайт</a>
@@ -735,10 +811,13 @@
 									<a href="" class="link_sm buy__link">Показать все аптеки</a>
 								</div>
 							</div>
-	
-	
+
 							<div id="drops" class="buy__body js-body-popup">
-								<img class="buy__img lazyload" data-src="imgs/bottle2.png" alt="" />
+								<img
+									class="buy__img lazyload"
+									data-src="imgs/bottle2.png"
+									alt=""
+								/>
 								<div class="buy__content">
 									<div class="buy__label_wrapper">
 										<div class="buy__label">
@@ -747,58 +826,86 @@
 										</div>
 										<a href="" class="link_sm mar-0">Смотреть на карте</a>
 									</div>
-	
+
 									<div class="buy__label">
 										<img src="imgs/plus.svg" alt="" />
 										<span>В онлайн аптеках</span>
 									</div>
-	
+
 									<div class="buy__pharms">
 										<div class="buy__pharms_item">
 											<div class="buy__pharms_img">
-												<img class="lazyload" data-src="imgs/pharm1.png" alt="" />
+												<img
+													class="lazyload"
+													data-src="imgs/pharm1.png"
+													alt=""
+												/>
 											</div>
 											<span>1 707 ₸</span>
 											<a href="" class="btn transparent">Перейти на сайт</a>
 										</div>
 										<div class="buy__pharms_item">
 											<div class="buy__pharms_img">
-												<img class="lazyload" data-src="imgs/pharm2.png" alt="" />
+												<img
+													class="lazyload"
+													data-src="imgs/pharm2.png"
+													alt=""
+												/>
 											</div>
 											<span>1 707 ₸</span>
 											<a href="" class="btn transparent">Перейти на сайт</a>
 										</div>
 										<div class="buy__pharms_item">
 											<div class="buy__pharms_img">
-												<img class="lazyload" data-src="imgs/pharm3.png" alt="" />
+												<img
+													class="lazyload"
+													data-src="imgs/pharm3.png"
+													alt=""
+												/>
 											</div>
 											<span>1 707 ₸</span>
 											<a href="" class="btn transparent">Перейти на сайт</a>
 										</div>
 										<div class="buy__pharms_item">
 											<div class="buy__pharms_img">
-												<img class="lazyload" data-src="imgs/pharm4.png" alt="" />
+												<img
+													class="lazyload"
+													data-src="imgs/pharm4.png"
+													alt=""
+												/>
 											</div>
 											<span>1 707 ₸</span>
 											<a href="" class="btn transparent">Перейти на сайт</a>
 										</div>
 										<div class="buy__pharms_item">
 											<div class="buy__pharms_img">
-												<img class="lazyload" data-src="imgs/pharm5.png" alt="" />
+												<img
+													class="lazyload"
+													data-src="imgs/pharm5.png"
+													alt=""
+												/>
 											</div>
 											<span>1 707 ₸</span>
 											<a href="" class="btn transparent">Перейти на сайт</a>
 										</div>
 										<div class="buy__pharms_item">
 											<div class="buy__pharms_img">
-												<img class="lazyload" data-src="imgs/pharm6.png" alt="" />
+												<img
+													class="lazyload"
+													data-src="imgs/pharm6.png"
+													alt=""
+												/>
 											</div>
 											<span>1 707 ₸</span>
 											<a href="" class="btn transparent">Перейти на сайт</a>
 										</div>
 										<div class="buy__pharms_item">
 											<div class="buy__pharms_img">
-												<img class="lazyload" data-src="imgs/pharm7.png" alt="" />
+												<img
+													class="lazyload"
+													data-src="imgs/pharm7.png"
+													alt=""
+												/>
 											</div>
 											<span>1 707 ₸</span>
 											<a href="" class="btn transparent">Перейти на сайт</a>
@@ -826,7 +933,12 @@
 					</div>
 					<div class="footer__dev">
 						<span>Разработано командой</span>
-						<img src="imgs/grad.svg" alt="" />
+						<a
+							href="https://promo.gradmedia.kz/digital"
+							target="_blank"
+							rel="noopener noreferrer"
+							><img src="imgs/grad.svg" alt=""
+						/></a>
 					</div>
 				</div>
 			</div>

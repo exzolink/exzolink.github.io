@@ -1,6 +1,6 @@
 .buy {
 	&__top {
-		background-color: #f9f9f9;
+		background-color: #E1E1E1;
 		padding-top: 100px;
 		padding-bottom: 120px;
 		position: relative;
@@ -16,6 +16,13 @@
 			max-width: 330px;
 			width: 100%;
 		}
+	}
+
+	&__video {
+		position: absolute;
+		height: 100%;
+		right: 0;
+		top: 0;
 	}
 
 	&__selector {
@@ -145,7 +152,7 @@
 
 @media screen and (max-width: 1600px) {
 	.buy {
-		&__top img {
+		&__video {
 			display: none;
 		}
 	}
@@ -217,7 +224,10 @@
         }
         &__label_wrapper {
             margin-bottom: 45px;
-        }
+		}
+		&__img {
+			max-width: 135px;
+		}
 	}
 }
 

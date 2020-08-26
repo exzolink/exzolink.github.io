@@ -76,6 +76,13 @@ morePharms.forEach(function (e) {
 	});
 });
 
+var animOnload = document.querySelectorAll(".anim-onload");
+window.onload = function () {
+	for (var i = 0; i < animOnload.length; i++) {
+		animOnload[i].classList.add("active");
+	}
+};
+
 var mobileMenu = document.querySelector(".header__menu");
 var burgerBtns = document.querySelectorAll("#openBurger, #closeBurger");
 burgerBtns.forEach(function (e) {
@@ -99,3 +106,48 @@ document.querySelectorAll('a[href^="#"]').forEach((e) => {
 		});
 	});
 });
+
+var animOnscroll = document.querySelectorAll(".anim-onscroll");
+if (animOnscroll.length > 0) {
+	window.addEventListener("scroll", animOnScroll);
+	function animOnScroll() {
+		for (var i = 0; i < animOnscroll.length; i++) {
+			var animItem = animOnscroll[i];
+			var animItemHeight = animItem.offsetHeight;
+			var animItemOffset = offset(animItem).top;
+			var animStart = 4;
+
+			var animItemPoint = window.innerHeight - animItemHeight / animStart;
+			if (animItemHeight > window.innerHeight) {
+				animItemPoint = window.innerHeight - window.innerHeight / animStart;
+			}
+
+			if (
+				pageYOffset > animItemOffset - animItemPoint &&
+				pageYOffset < animItemOffset + animItemHeight
+			) {
+				animItem.classList.add("active");
+			} else {
+				animItem.classList.remove("active");
+			}
+		}
+	}
+
+	function offset(e) {
+		var rect = e.getBoundingClientRect(),
+			scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+			scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+	}
+}
+
+setInterval(() => {
+	if (document.querySelector(".buy__video").classList.contains("active")) {
+		var video = document.querySelector('.buy__video');
+		video.play();
+	}
+	else {
+		var video = document.querySelector('.buy__video');
+		video.pause();
+	}
+}, 1000);

@@ -76,6 +76,37 @@
 	&__img {
 		min-width: 660px;
 		margin-left: -360px;
+		position: relative;
+
+		&_first {
+			position: absolute;
+			left: 0;
+			top: -50px;
+			z-index: 10;
+		}
+		&_second {
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 15;
+			transition: transform 5s ease;
+
+			&.active {
+				transform: rotate(45deg);
+			}
+		}
+		&_third {
+			position: absolute;
+			right: 88px;
+			top: 130px;
+			z-index: 20;
+
+			transition: transform 5s ease;
+
+			&.active {
+				transform: translateY(-50px);
+			}
+		}
 	}
 }
 
