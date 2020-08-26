@@ -11,8 +11,8 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,700&display=swap"
 			rel="stylesheet"
-        />
-        <link rel="stylesheet" href="css/swiper.min.css">
+		/>
+		<link rel="stylesheet" href="css/swiper.min.css" />
 		<title>Геделикс</title>
 	</head>
 	<body>
@@ -24,8 +24,9 @@
 						<a href="forms.html" class="nav__link">Формы Геделикс</a>
 						<a href="feedback.html" class="nav__link">Отзывы</a>
 						<a href="use.html" class="nav__link">Применение</a>
+						<a href="recoms.html" class="nav__link">Рекомендации врачей</a>
+						<a href="posts.html" class="nav__link">Мифы о здоровье</a>
 					</div>
-					<a href="" class="btn btn-hide">Купить</a>
 					<button id="openBurger" class="nav__menu">
 						<img src="imgs/burger.svg" alt="" />
 					</button>
@@ -39,7 +40,8 @@
 								<a href="forms.html" class="nav__link">Формы Геделикс</a>
 								<a href="feedback.html" class="nav__link">Отзывы</a>
 								<a href="use.html" class="nav__link">Применение</a>
-								<button class="btn">Купить</button>
+								<a href="recoms.html" class="nav__link">Рекомендации врачей</a>
+								<a href="posts.html" class="nav__link">Мифы о здоровье</a>
 							</div>
 						</div>
 					</div>
@@ -48,7 +50,7 @@
 		</header>
 
 		<main class="main">
-			<section id="feedback" class="feedback">
+			<section id="feedback" class="feedback feedback-self">
 				<div class="container">
 					<h2 class="feedback__title">Отзывы</h2>
 					<p class="feedback__desc">
@@ -56,14 +58,12 @@
 					</p>
 
 					<div class="feedback__inner">
-						<div class="swiper-container feedback__container">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide feedback__item">
+						<div>
+							<div>
+								<div class="feedback__item">
 									<img src="imgs/woman.png" alt="" />
 									<div class="feedback__info">
-										<h4 class="feedback__name">
-											Екатерина
-										</h4>
+										<h4 class="feedback__name">Екатерина</h4>
 										<p class="feedback__excerpt">
 											“Сыну понравилось, даже облизал ложечку”
 											<br /><br /><br />
@@ -72,18 +72,32 @@
 											начал откашливаться, в горле перестало бурлить. Вылечились
 											мы за 3 дня. lorem ipsum dolor sit amet
 										</p>
+										<a href="" class="feedback__link">Читать полный отзыв</a>
+									</div>
+								</div>
+								<div class="feedback__item">
+									<img src="imgs/woman.png" alt="" />
+									<div class="feedback__info">
+										<h4 class="feedback__name">Екатерина</h4>
+										<p class="feedback__excerpt">
+											“Сыну понравилось, даже облизал ложечку”
+											<br /><br /><br />
+											Сам сироп достаточно приятный на вкус, сыну понравилось,
+											даже облизал ложечку. После приёма, минут через 15 малыш
+											начал откашливаться, в горле перестало бурлить. Вылечились
+											мы за 3 дня. lorem ipsum dolor sit amet
+										</p>
+										<a href="" class="feedback__link">Читать полный отзыв</a>
 									</div>
 								</div>
 							</div>
-							<div class="swiper-button-prev"></div>
-							<div class="swiper-button-next"></div>
 						</div>
 					</div>
 				</div>
 			</section>
-        </main>
-        
-        <footer class="footer">
+		</main>
+
+		<footer class="footer">
 			<div class="container">
 				<div class="footer__inner">
 					<img class="footer__logo" src="imgs/logoGray.svg" alt="" />
@@ -103,8 +117,6 @@
 		</footer>
 
 		<script src="js/lazyload.js" async></script>
-		<script src="js/swiper.min.js"></script>
-		<script src="js/readmore.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

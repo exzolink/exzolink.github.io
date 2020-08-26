@@ -55,6 +55,16 @@
 	&__excerpt {
 		font-size: 14px;
 	}
+
+	&__link {
+		margin-top: 20px;
+		display: block;
+		text-decoration: underline;
+		color: $blue;
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
 
 @media screen and (max-width: 1200px) {
@@ -95,16 +105,32 @@
 		&__inner {
 			margin-top: 40px;
 		}
+		&__name {
+			text-align: center;
+			margin-bottom: 20px;
+		}
 		&__item {
 			flex-direction: column;
 
 			& img {
+				margin: 0 auto;
 				max-width: 120px;
 			}
 		}
 		&__info {
+			max-width: none;
 			margin-top: 20px;
 			margin-left: 0;
+		}
+	}
+}
+
+.feedback-self {
+	& .feedback__item {
+		margin-bottom: 75px;
+
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
 }

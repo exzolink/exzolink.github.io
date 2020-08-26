@@ -1,29 +1,21 @@
 "use strict";
 
-var feedback = new Swiper(".feedback__container", {
-	slidesPerView: 1,
-	loop: true,
-	autoplay: {
-		delay: 5000,
-	},
-	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev",
-	},
-});
-
-if (document.querySelector(".feedback__excerpt") !== null) {
-	var feedbackText = new Readmore(".feedback__excerpt", {
-		speed: 150,
-		lessLink: '<a class="feedback__link" href="#">Скрыть</a>',
-		moreLink: '<a class="feedback__link" href="#">Читать полный отзыв</a>',
-		collapsedHeight: 102,
-		heightMargin: 0,
+if (document.querySelector(".feedback__container") !== null) {
+	var feedback = new Swiper(".feedback__container", {
+		slidesPerView: 1,
+		loop: true,
+		autoplay: {
+			delay: 5000,
+		},
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
 	});
-};
+}
 
-var tabs = document.querySelectorAll(".buy__selector_item");
-var content = document.querySelectorAll(".buy__content");
+var tabs = document.querySelectorAll(".js-selector");
+var content = document.querySelectorAll(".js-body");
 tabs.forEach(function (e) {
 	e.addEventListener("click", function () {
 		if (this.classList.contains("active") === false) {
@@ -35,9 +27,38 @@ tabs.forEach(function (e) {
 			}
 			this.classList.add("active");
 			var getID = this.getAttribute("data-tab");
-			var getContent = document.querySelector("#" + getID);
+			var getContent = this.closest(".buy").querySelector("#" + getID);
 			getContent.classList.add("active");
 		}
+	});
+});
+
+var tabsPopup = document.querySelectorAll(".js-selector-popup");
+var contentPopup = document.querySelectorAll(".js-body-popup");
+tabsPopup.forEach(function (e) {
+	e.addEventListener("click", function () {
+		if (this.classList.contains("active") === false) {
+			for (var i = 0; i < tabsPopup.length; i++) {
+				tabsPopup[i].classList.remove("active");
+			}
+			for (var i = 0; i < contentPopup.length; i++) {
+				contentPopup[i].classList.remove("active");
+			}
+			this.classList.add("active");
+			var getID = this.getAttribute("data-tab");
+			var getContent = this.closest(".buy").querySelector("#" + getID);
+			getContent.classList.add("active");
+		}
+	});
+});
+
+var popupBtn = document.querySelectorAll(".js-buy-btn, .popup__close");
+var popup = document.querySelector(".popup");
+popupBtn.forEach(function (e) {
+	e.addEventListener("click", function (e) {
+		e.preventDefault();
+		popup.classList.toggle("active");
+		document.documentElement.classList.toggle("open");
 	});
 });
 

@@ -50,6 +50,10 @@ a {
 
 html {
 	overflow-x: hidden;
+
+	&.open {
+		overflow-y: hidden;
+	}
 }
 
 body {
@@ -206,7 +210,7 @@ body {
 	h2,
 	h3,
 	h4 {
-		font-size: 20px;
+		font-size: 25px;
 	}
 	.green {
 		font-size: 18px;

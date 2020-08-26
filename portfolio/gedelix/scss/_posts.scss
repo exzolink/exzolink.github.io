@@ -137,3 +137,9 @@
         }
     }
 }
+
+.posts-self {
+    & .posts__item {
+        margin-bottom: 45px;
+    }
+}
