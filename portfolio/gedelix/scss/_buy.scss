@@ -1,6 +1,6 @@
 .buy {
 	&__top {
-		background-color: #E1E1E1;
+		background-color: #e1e1e1;
 		padding-top: 100px;
 		padding-bottom: 120px;
 		position: relative;
@@ -69,7 +69,6 @@
 		display: flex;
 		flex-direction: column;
 		margin-left: 125px;
-
 	}
 
 	&__label {
@@ -150,14 +149,6 @@
 	margin: 0;
 }
 
-@media screen and (max-width: 1600px) {
-	.buy {
-		&__video {
-			display: none;
-		}
-	}
-}
-
 @media screen and (max-width: 1200px) {
 	.buy {
 		&__top {
@@ -180,6 +171,9 @@
 		}
 		&__content {
 			margin: 0 auto;
+		}
+		&__video {
+			display: none;
 		}
 	}
 }
@@ -218,12 +212,12 @@
 		}
 		&__content {
 			width: 100%;
-        }
-        &__selector {
-            margin-top: 40px;
-        }
-        &__label_wrapper {
-            margin-bottom: 45px;
+		}
+		&__selector {
+			margin-top: 40px;
+		}
+		&__label_wrapper {
+			margin-bottom: 45px;
 		}
 		&__img {
 			max-width: 135px;
@@ -236,10 +230,10 @@
 		&__label_wrapper {
 			flex-direction: column;
 			align-self: flex-start;
-        }
-        &__label span {
-            font-size: 16px;
-        }
+		}
+		&__label span {
+			font-size: 16px;
+		}
 		&__selector {
 			display: flex;
 			align-items: flex-start;
