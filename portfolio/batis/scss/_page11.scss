@@ -120,6 +120,13 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .page11__img img {
+        max-width: 450px;
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 1100px) {
     .page11 {
         &__desc {
@@ -143,6 +150,7 @@
             min-height: auto !important;
         }
         &__img img {
+            width: auto;
             max-width: none;
         }
     }

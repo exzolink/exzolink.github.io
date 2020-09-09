@@ -74,6 +74,7 @@
 			transform: none;
 			max-width: 820px;
 			width: 100%;
+			z-index: 1000;
 		}
 		&__desc {
 			font-size: 24px;
@@ -83,6 +84,14 @@
 			&:after {
 				height: 200px;
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 1250px) {
+	.page15 {
+		&__bg {
+			max-width: 780px;
 		}
 	}
 }
