@@ -59,29 +59,30 @@
 	}
 }
 
+@media screen and (max-height: 900px) {
+	.page15 {
+		&__bg {
+			max-width: 700px;
+		}
+	}
+}
+
 @media screen and (max-width: 1800px) {
 	.page15 {
 		&__bg {
-			right: 0;
+			right: 70px;
 			transform: none;
-			max-width: 600px;
+			max-width: 820px;
+			width: 100%;
 		}
 		&__desc {
 			font-size: 24px;
-			max-width: 433px;
+			max-width: 300px;
 		}
 		&__section {
 			&:after {
 				height: 200px;
 			}
-		}
-	}
-}
-
-@media screen and (max-height: 900px) {
-	.page15 {
-		&__bg {
-			max-width: 700px;
 		}
 	}
 }
@@ -106,6 +107,7 @@
 			padding-left: 0;
 			border-left: 0;
 			margin-top: 20px;
+			max-width: none;
 		}
 	}
 }

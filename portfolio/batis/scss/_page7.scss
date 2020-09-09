@@ -130,11 +130,19 @@
             font-size: 22px;
         }
         &__img img {
-            max-width: 275px;
+            max-width: 330px;
         }
     }
 }
 
+
+@media screen and (max-width: 1370px) {
+    .page7 {
+        &__img img {
+            max-width: 320px;
+        }
+    }
+}
 
 
 @media screen and (max-width: 1100px) {

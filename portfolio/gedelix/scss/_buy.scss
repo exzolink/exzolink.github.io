@@ -12,17 +12,19 @@
 		& img {
 			position: absolute;
 			right: 170px;
-			bottom: -65px;
-			max-width: 330px;
+			bottom: 0;
+			z-index: 1;
+			max-width: 240px;
 			width: 100%;
 		}
 	}
 
 	&__video {
 		position: absolute;
-		height: 100%;
 		right: 0;
-		top: 0;
+		z-index: 1;
+		max-width: 600px;
+		top: 30px;
 	}
 
 	&__selector {
@@ -133,6 +135,7 @@
 		margin-top: -65px;
 		position: relative;
 		padding-bottom: 150px;
+		background-color: #e1e1e1;
 	}
 
 	&__link {
@@ -147,6 +150,14 @@
 
 .mar-0 {
 	margin: 0;
+}
+
+@media screen and (max-width: 1450px) {
+	.buy {
+		&__top img {
+			display: none;
+		}
+	}
 }
 
 @media screen and (max-width: 1200px) {

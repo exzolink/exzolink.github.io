@@ -102,14 +102,15 @@
         }
 
         &__wrapper {
-            max-height: calc(100vh - 180px);
+            margin-top: 20px;
+            max-height: calc(100vh - 135px);
         }
     }
 }
 
 @media screen and (max-width: 1368px) {
     .page12__wrapper {
-        max-height: calc(100vh - 160px);
+        max-height: calc(100vh - 130px);
     }
 }
 

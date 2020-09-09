@@ -141,13 +141,16 @@ if (animOnscroll.length > 0) {
 	}
 }
 
-setInterval(() => {
-	if (document.querySelector(".buy__video").classList.contains("active")) {
-		var video = document.querySelector('.buy__video');
-		video.play();
-	}
-	else {
-		var video = document.querySelector('.buy__video');
+if (document.querySelector(".buy__video") !== null) {
+	var video = document.querySelector(".buy__video");
+	var videoInt = setInterval(() => {
+		if (document.querySelector(".buy__video").classList.contains("active")) {
+			video.play();
+		}
+	}, 1000);
+
+	video.addEventListener("ended", function () {
 		video.pause();
-	}
-}, 1000);
+		clearInterval(videoInt);
+	});
+}

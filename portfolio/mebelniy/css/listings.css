@@ -1,0 +1,29 @@
+@media screen and (max-width: 500px) {
+
+.ax-pagination .ax-pagination-container ul li.ax-pag-next {
+    margin-left: 0;
+}
+
+.ax-pagination .ax-pagination-container ul li.ax-pag-prev {
+    margin-right: 0;
+}
+
+.ax-pagination .ax-pagination-container ul {
+    display: flex;
+	justify-content: center;
+    align-items: flex-start;
+}
+
+.ax-pagination .ax-pagination-container ul li.ax-pag-prev span {
+    line-height: 1;
+}
+
+.ax-pagination .ax-pagination-container ul li.ax-pag-next span {
+    line-height: 1;
+}
+
+.categ__menu {
+    z-index: 10001;
+}
+
+}

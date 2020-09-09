@@ -100,14 +100,25 @@
   font-size: 24px;
 }
 .delivery__subdesc {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+}
+.delivery__subdesc p {
   line-height: 32px;
+  font-size: 20px;
+  margin-bottom: 32px;
+}
+.delivery__subdesc p:last-child {
+  margin-bottom: 0;
 }
 .delivery__subdesc span {
   color: #4a5160;
+  display: block;
   font-size: 22px;
+  margin-bottom: 32px;
   font-weight: 700;
 }
-
 .delivery__content {
   display: none;
 }
@@ -118,6 +129,7 @@
   color: #68788e;
   font-size: 20px;
   font-weight: 400;
+  display: block;
 }
 .delivery__desc_large {
   font-size: 22px !important;
@@ -142,9 +154,22 @@
         justify-content: flex-start;
         margin-bottom: 32px;
     }
+    .delivery__desc_small {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
     .delivery__desc {
         margin-bottom: 60px;
     }
+    .delivery__subdesc {
+      margin-bottom: 0;
+    }
+    .delivery__subdesc p {
+      margin-bottom: 24px;
+    }
+    .delivery__desc p {
+      font-size: 16px;
+  }
     .delivery__item p {
         padding-right: 0;
     }
@@ -156,6 +181,9 @@
     }
     .delivery__desc {
         font-size: 16px;
+    }
+    .delivery__subdesc span {
+      margin-bottom: 24px;
     }
     .delivery__selector {
         flex-direction: column;
@@ -193,11 +221,11 @@
         line-height: 1.8;
     }
     .delivery__item:not(:first-child) {
-        margin-top: 80px;
+        margin-top: 70px;
     }
     .delivery__item_fixed {
         padding-top: 45px;
-        margin-top: 30px !important;
+        margin-top: 50px !important;
     }
     .delivery__subdesc span {
         font-size: 18px;
