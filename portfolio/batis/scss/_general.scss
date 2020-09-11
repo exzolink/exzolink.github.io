@@ -27,6 +27,7 @@
 *:before {
 	padding: 0;
 	margin: 0;
+	box-sizing: border-box;
 }
 
 html {
@@ -161,17 +162,31 @@ body {
 	}
 }
 
+.title__hidden {
+	display: none;
+}
+
 @media screen and (max-width: 1100px) {
 	body,
 	html {
 		overflow-y: scroll !important;
 	}
 
+	.title__hidden {
+		display: block;
+	}
+
 	.section {
+		margin: 0 !important;
+		margin-bottom: 100px !important;
+
 		&:first-child {
 			min-height: 100vh;
+			margin-bottom: 0 !important;
 		}
 
 		min-height: auto;
 	}
 }
+
+

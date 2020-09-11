@@ -155,8 +155,13 @@
         &__wrapper {
             width: auto;
             margin-top: 20px;
-            border: 1px solid #50AC9C;
-            padding: 10px !important;
+            border: 0;
+            padding: 0 !important;
+        }
+        &__info {
+            padding-left: 20px;
+            margin-left: 35px;
+            border-left: 3px solid #69C6A1;
         }
     }
 }
@@ -194,6 +199,8 @@
         &__info {
             margin-top: 15px;
             padding: 0;
+            padding-left: 15px;
+            margin-left: 0;
         }
     }
 }

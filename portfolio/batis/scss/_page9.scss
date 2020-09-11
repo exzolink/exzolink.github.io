@@ -45,9 +45,7 @@
             }
         }
         &__title {
-            &:after {
-                content: none;
-            }
+           margin-bottom: 45px;
         }
         &__wrapper {
             &::after {

@@ -20,6 +20,9 @@
         top: 0;
         height: 100vh;
     }
+    &__img-mob {
+        display: none;
+    }
     &__wrapper {
         height: 100%;
         display: flex;
@@ -122,15 +125,19 @@
     .page8 {
         &__wrapper {
             margin-top: 20px;
-            background: linear-gradient(to right,#486DB2,#69C6A1);
+            padding-top: 15px;
+            padding-bottom: 15px;
             &:after {
                content: none !important;
             }
         }
         &__info {
             border-left: 0;
-            color: #fff;
             padding-left: 0;
+        }
+        &__img-mob {
+            display: block;
+            max-width: 550px;
         }
     }
 }
@@ -143,6 +150,29 @@
         }
         &__info {
             flex-basis: 100%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    .page8 {
+        &__wrapper {
+            padding: 0;
+            flex-direction: column;
+        }
+        &__info {
+            margin-top: 10px !important;
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .page8 {
+        &__img-mob {
+            max-width: 350px;
+            width: 100%;
         }
     }
 }

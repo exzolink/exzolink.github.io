@@ -158,10 +158,12 @@
             }
         }
         &__inner {
-            padding-top: 80px;
+            padding-top: 15px;
         }
         &__info {
-            padding-left: 15px;
+            margin-left: 15px;
+            padding-left: 15px !important;
+            border-left: 3px solid #69C6A1 !important;
         }
     }
 }
@@ -178,11 +180,19 @@
 @media screen and (max-width: 870px) {
     .page7 {
         &__info {
-            margin-top: 30px;
+            margin-top: 10px;
         }
         &__inner {
-            padding-top: 25px;
+            padding-top: 0;
            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .page7 {
+        &__info {
+            margin-left: 0;
         }
     }
 }
@@ -190,7 +200,7 @@
 @media screen and (max-width: 450px) {
     .page7 {
         &__info {
-            font-size: 22px;
+            font-size: 20px;
         }
         &__img {
             & img {

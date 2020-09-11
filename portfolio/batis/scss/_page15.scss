@@ -109,14 +109,15 @@
 		}
 		&__wrapper {
 			margin-left: 0;
-			padding: 15px;
-			border: 1px solid #69c6a1;
+			padding: 0;
+			margin-top: 25px;
+			border: 0;
 		}
 		&__desc {
-			padding-left: 0;
-			border-left: 0;
+			padding-left: 15px;
 			margin-top: 20px;
 			max-width: none;
+			border-left: 3px solid #69C6A1 !important;
 		}
 	}
 }

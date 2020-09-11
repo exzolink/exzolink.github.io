@@ -161,7 +161,17 @@
 			font-size: 28px;
 		}
 		&__title_hidden {
-			margin-bottom: 15px;
+			margin-bottom: 45px;
+			position: relative;
+			&:after {
+				position: absolute;
+				content: "";
+				bottom: -20px;
+				left: 0;
+				width: 150px;
+				height: 8px;
+				background: linear-gradient(to right, #486db2, #69c6a1);
+			}
 		}
 	}
 }
@@ -177,7 +187,6 @@
 @media screen and (max-width: 840px) {
 	.page10 {
 		&__left {
-			width: 80%;
 			padding: 0;
 			margin: 0 auto;
 		}
@@ -187,7 +196,7 @@
 			flex-direction: column;
 
 			& img {
-				width: 80%;
+				width: 100%;
 				align-self: center;
 			}
 		}

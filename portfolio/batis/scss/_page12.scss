@@ -152,7 +152,9 @@
         }
 
         &__info {
-            padding: 30px;
+            padding: 0;
+            align-self: center;
+            padding-left: 15px;
         }
 
         &__section {
@@ -175,6 +177,10 @@
             flex-direction: column;
             padding-top: 15px;
         }
+        &__info {
+            margin-left: 0;
+            margin-top: 30px;
+        }
     }
 }
 
@@ -183,9 +189,16 @@
         &__img {
             width: auto;
         }
+    }
+}
 
-        &__info {
-            padding: 0;
+@media screen and (max-width: 768px) {
+    .page12 {
+        &__img {
+            & img {
+                max-height: none;
+                width: 100%;
+            }
         }
     }
 }

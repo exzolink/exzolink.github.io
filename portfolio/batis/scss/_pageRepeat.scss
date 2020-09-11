@@ -72,13 +72,14 @@
 		&__last {
 			margin-top: 0;
 			font-size: 20px;
+			margin-left: 15px;
 		}
 		&__desc {
 			padding-right: 0;
 			margin-left: 0;
 		}
 		&__wrapper {
-			margin-top: 60px;
+			margin-top: 25px;
 		}
 	}
 }
@@ -109,6 +110,14 @@
 	.pageRepeat {
 		&__desc {
 			margin-bottom: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.pageRepeat {
+		&__last {
+			margin-left: 0;
 		}
 	}
 }

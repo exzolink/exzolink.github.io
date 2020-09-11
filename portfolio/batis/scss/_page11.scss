@@ -133,9 +133,12 @@
             font-size: 28px;
             padding-left: 15px;
             margin-bottom: 0;
+            padding-left: 0;
+            border: 0;
         }
         &__info {
             padding-right: 0;
+            padding-left: 15px !important;
         }
         &__wrapper {
             margin-top: 45px;
@@ -165,7 +168,6 @@
             display: block !important;
         }
         &__info {
-            width: 80%;
             margin-top: 20px;
             padding-left: 0;
         }
@@ -183,7 +185,7 @@
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 768px) {
     .page11 {
         &__img {
             width: 100%;
@@ -191,6 +193,11 @@
                 width: 100%;
             }
         }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .page11 {
         &__info {
             width: 100%;
         }

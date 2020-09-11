@@ -33,6 +33,7 @@
         margin-top: 55px;
         font-weight: 300;
         line-height: 1.3;
+        box-sizing: content-box;
         height: 100%;
         max-height: calc(100% - 400px);
         padding: 60px;
@@ -88,14 +89,18 @@
         }
         &__desc {
             margin-top: 20px;
+            padding-left: 15px;
+            max-width: none;
+            border-left: 3px solid #69C6A1 !important;
         }
         &__logo {
             display: none;
         }
         &__wrapper {
-            margin-top: 75px;
-            padding: 15px;
+            margin-top: 15px;
+            padding: 0;
             width: auto;
+            border: 0;
 
         }
         &__section {

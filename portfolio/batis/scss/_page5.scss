@@ -134,8 +134,14 @@
             margin-top: 20px !important;
 			margin-bottom: 50px;
 			margin-left: 0;
-			border: 1px solid #50ac9c;
-			padding: 10px !important;
+			border: 0;
+			padding: 0 !important;
+		}
+		&__desc {
+			margin-top: 30px;
+			padding-left: 15px;
+			padding-bottom: 0 !important;
+			border-left: 3px solid #69C6A1;
 		}
 		&__info {
 			margin-left: 0 !important;

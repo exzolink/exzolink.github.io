@@ -35,9 +35,6 @@
 
 	&__content {
         margin-bottom: 65px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
 		& p {
             color: $darkgray;
             font-size: 16px;
@@ -54,6 +51,11 @@
 			&:last-child {
 				margin-bottom: 0;
 			}
+		}
+
+		& figure {
+			display: flex;
+			justify-content: center;
 		}
 	}
 }
@@ -100,7 +102,8 @@
     .article {
         &__content {
             & img {
-                width: 80%;
+				width: 85%;
+				height: auto;
             }
 		}
 		&__img {
