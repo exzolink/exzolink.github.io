@@ -22,8 +22,29 @@
         width: 60%;
         margin-right: 35px;
     }
+
+    &__scrolldown {
+        position: absolute;
+        bottom: 40px;
+        width: 40px;
+        transform: translateX(-50%) translateY(-15px);
+        animation: scrolldown 4s infinite;
+        left: 50%;
+        margin-left: -20px;
+    }
 }
 
+@keyframes scrolldown {
+    0% {
+        transform: translateY(-15px);
+    }
+    50% {
+        transform: translateY(15px);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}
 
 @media screen and (max-width: 1440px) {
     .header {
