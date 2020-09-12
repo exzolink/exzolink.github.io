@@ -186,7 +186,31 @@ body {
 		}
 
 		min-height: auto;
+
+		&__title {
+			position: relative;
+			width: max-content;
+			max-width: 100%;
+			margin-bottom: 45px;
+
+			&:after {
+				position: absolute;
+				content: "";
+				bottom: -20px;
+				z-index: 100;
+				left: 0;
+				width: 90%;
+				max-width: 200px;
+				height: 8px;
+				background: -webkit-gradient(
+					linear,
+					left top,
+					right top,
+					from(#486db2),
+					to(#69c6a1)
+				);
+				background: linear-gradient(to right, #486db2, #69c6a1);
+			}
+		}
 	}
 }
-
-

@@ -25,9 +25,9 @@
 
     &__scrolldown {
         position: absolute;
-        bottom: 40px;
+        bottom: 35px;
         width: 40px;
-        transform: translateX(-50%) translateY(-15px);
+        transform: translateY(-15px);
         animation: scrolldown 4s infinite;
         left: 50%;
         margin-left: -20px;

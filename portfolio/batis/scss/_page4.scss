@@ -135,7 +135,6 @@
 @media screen and (max-width: 1100px) {
     .page4 {
         &__section {
-            min-height: 60vh;
             margin-bottom: 45px;
 
             &:before {
@@ -151,6 +150,7 @@
 
         &__quote img {
             max-height: 50px;
+            transform: rotate(90deg);
         }
         &__wrapper {
             width: auto;
