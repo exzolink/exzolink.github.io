@@ -2,13 +2,14 @@
 	background-color: #e4c8c9;
 	background: linear-gradient(to bottom, #e4c8c9, #e4c8c9, #e4c8c9, #fff);
 	height: 100vh;
+	overflow-x: hidden;
 	position: relative;
 
 	&__header {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-top: 35px;
+		padding-top: 35px;
 		color: $gray;
 		z-index: 50;
 		position: relative;
@@ -50,7 +51,7 @@
 		position: absolute;
 		width: 100%;
 		left: 0;
-		bottom: 90px;
+		bottom: 55px;
 	}
 	&__item {
 		flex-basis: 32%;
@@ -133,6 +134,7 @@
 	.main {
 		&__header {
 			padding: 0 15px;
+			padding-top: 25px;
 		}
 		&__body {
 			padding: 0 15px;
@@ -228,16 +230,16 @@
 				&.right {
 					right: 15px;
 				}
-            }
-            
-            &_img {
-                &.left {
-                    left: -105px;
-                }
-                &.right {
-                    right: -150px;
-                }
-            }
+			}
+
+			&_img {
+				&.left {
+					left: -105px;
+				}
+				&.right {
+					right: -150px;
+				}
+			}
 
 			&_subimg {
 				margin-bottom: 80px;
@@ -255,104 +257,105 @@
 }
 
 @media screen and (max-width: 700px) {
-    .main {
-        &__header {
-            margin-top: 15px;
-            text-align: center;
-            justify-content: center;
-        }
+	.main {
+		&__header {
+			padding-top: 15px;
+			text-align: center;
+			justify-content: center;
+		}
 
-        &__item {
-            width: 32%;
-            flex-basis: auto;
-            &_subimg {
-                max-width: 150px;
-                &.center {
-                    max-width: 115px;
-                }
-            }
-        }
-    }
+		&__item {
+			width: 32%;
+			flex-basis: auto;
+			&_subimg {
+				max-width: 150px;
+				&.center {
+					max-width: 115px;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 640px) {
-    .main {
-        &__item {
-            &_subimg {
-                position: absolute;
+	.main {
+		&__item {
+			&_subimg {
+				position: absolute;
 
-                &.left {
-                    left: 50%;
-                    margin-left: -75px;
-                    bottom: 100px;
-                }
-                &.right {
-                    right: 50%;
-                    bottom: 100px;
-                    margin-right: -75px;
-                }
-            }
-        }
-    }
+				&.left {
+					left: 50%;
+					margin-left: -75px;
+					bottom: 100px;
+				}
+				&.right {
+					right: 50%;
+					bottom: 100px;
+					margin-right: -75px;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 510px) {
-    .main {
-        &__title {
-            font-size: 24px;
-        }
-        &__text {
-            font-size: 16px;
-        }
-        &__item {
-            &_img {
-                bottom: 0;
-                &.right {
-                    right: -155px;
-                    max-width: 460px;
-                }
-                &.left {
-                    left: -120px;
-                    max-width: 300px;
-                }
-                &.center {
-                    max-width: 300px;
-                }
-            }
-            &_btn {
-                font-size: 14px;
-                padding: 8px 15px;
-            }
-            &_block {
-                &.center {
-                    margin-bottom: 60px;
-                }
-            }
-        }
-    }
+	.main {
+		&__title {
+			font-size: 24px;
+		}
+		&__text {
+			font-size: 16px;
+		}
+		&__item {
+			&_img {
+				bottom: 0;
+				&.right {
+					right: -155px;
+					max-width: 460px;
+				}
+				&.left {
+					left: -120px;
+					max-width: 300px;
+				}
+				&.center {
+					max-width: 300px;
+				}
+			}
+			&_btn {
+				font-size: 14px;
+				padding: 8px 15px;
+			}
+			&_block {
+				&.center {
+					margin-bottom: 60px;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 415px) {
-    .main {
-        &__text {
-            font-size: 12px;
-        }
-        &__header {
-            padding: 0 10px;
-        }
-        &__body {
-            padding: 0 10px;
-            padding-bottom: 30px;
-        }
-    }
+	.main {
+		&__text {
+			font-size: 12px;
+		}
+		&__header {
+			padding: 0 10px;
+			padding-top: 15px;
+		}
+		&__body {
+			padding: 0 10px;
+			padding-bottom: 30px;
+		}
+	}
 }
 
 @media screen and (max-width: 359px) {
-    .main {
-        &__item {
-            &_btn {
-                font-size: 12px;
-            }
-        }
-    }
+	.main {
+		&__item {
+			&_btn {
+				font-size: 12px;
+			}
+		}
+	}
 }
