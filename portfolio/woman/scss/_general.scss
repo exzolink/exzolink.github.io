@@ -1,0 +1,39 @@
+$gray: #4F4F4F;
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	overflow-x: hidden;
+    outline: none;
+    font-size: 16px;
+}
+
+img, a, button {
+    user-select: none;
+    text-decoration: none;
+    color: $gray;
+}
+
+img {
+    pointer-events: none;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+}
+
+.lazyload, .lazyloading {
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.lazyloaded {
+    transition: opacity .3s ease;
+    opacity: 1;
+}
