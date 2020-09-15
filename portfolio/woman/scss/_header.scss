@@ -1,0 +1,109 @@
+.header {
+	background-color: #e4c8c9;
+	background: linear-gradient(to bottom, #e4c8c9, #e4c8c9, #e4c8c9, #e4c8c9, #e4c8c9, #fff);
+	min-height: 100vh;
+	position: relative;
+
+	&__body {
+		padding-top: 80px;
+        padding-left: 100px;
+        padding-bottom: 80px;
+        position: relative;
+
+        &_img {
+            position: absolute;
+            right: 300px;
+            bottom: 100px;
+        }
+	}
+
+	&__text {
+		color: #fefefe;
+		font-weight: 300;
+		font-family: "Gotham", sans-serif;
+		font-size: 48px;
+		margin-bottom: 40px;
+	}
+
+	&__title {
+		color: $gray;
+		font-weight: 900;
+        font-family: "Gotham", sans-serif;
+        font-size: 48px;
+        max-width: 700px;
+    }
+    
+    &__bg {
+        position: absolute;
+        bottom: 0;
+        &.climax {
+            right: 0;
+        }
+    }
+
+    &__info {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &_item {
+            position: relative;
+
+            &:nth-child(2) {
+                margin-left: 120px;
+            }
+
+            & span {
+                color: $gray;
+                position: absolute;
+                top: 30px;
+                left: 30px;
+            }
+        }
+    }
+}
+
+.nav {
+	&__top {
+		display: flex;
+		padding-top: 30px;
+		align-items: center;
+		justify-content: space-between;
+
+		& img {
+			max-width: 50px;
+		}
+	}
+
+	&__links {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__link {
+		margin-right: 55px;
+		position: relative;
+
+		&:after {
+			position: absolute;
+			content: "";
+			width: 0%;
+			height: 3px;
+			left: 0;
+			background-color: $gray;
+			bottom: -8px;
+			transition: width 0.3s ease;
+		}
+
+		&:hover {
+			&:after {
+				width: 100%;
+			}
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

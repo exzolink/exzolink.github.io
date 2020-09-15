@@ -1,5 +1,6 @@
-$gray: #4F4F4F;
-
+$gray: #4f4f4f;
+$blue: #9ef2ff;
+$darkblue: #53C9DA;
 *,
 *:after,
 *:before {
@@ -10,31 +11,78 @@ $gray: #4F4F4F;
 
 html {
 	overflow-x: hidden;
-    outline: none;
-    background: #fff;
-    font-size: 16px;
+	outline: none;
+	background: #fff;
+	font-size: 16px;
 }
 
-img, a, button {
-    user-select: none;
-    text-decoration: none;
-    color: $gray;
+img,
+a,
+button {
+	user-select: none;
+	text-decoration: none;
+	color: $gray;
 }
 
 img {
-    pointer-events: none;
+	pointer-events: none;
 }
 
 body {
 	font-family: "Roboto", sans-serif;
 }
 
-.lazyload, .lazyloading {
-    opacity: 0;
-    transition: opacity .3s ease;
+.lazyload,
+.lazyloading {
+	opacity: 0;
+	transition: opacity 0.3s ease;
 }
 
 .lazyloaded {
-    transition: opacity .3s ease;
-    opacity: 1;
+	transition: opacity 0.3s ease;
+	opacity: 1;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1170px;
+	padding: 0 15px;
+}
+
+.btn {
+	background-color: $blue;
+	padding: 10px 48px;
+	font-family: inherit;
+	color: $gray;
+	font-size: 18px;
+	border: 3px solid $blue;
+	border-radius: 60px;
+	transition: background 0.3s ease;
+
+	&:hover {
+		cursor: pointer;
+		background-color: #fff;
+	}
+}
+
+.relative {
+	position: relative;
+}
+
+.title-thin {
+    color: $gray;
+    max-width: 840px;
+	font-weight: 300;
+    font-family: "Gotham", sans-serif;
+    font-size: 48px;
+}
+
+.link {
+    text-decoration: underline;
+    color: $darkblue;
+    font-size: 18px;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
