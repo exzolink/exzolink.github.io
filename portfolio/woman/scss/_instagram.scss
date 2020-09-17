@@ -23,3 +23,110 @@
         }
     }
 }
+
+@media screen and (max-width: 850px) {
+    .instagram {
+        &__bg {
+            width: auto;
+            display: none;
+        }
+        &__inner {
+            position: relative;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            & img {
+                margin-top: 25px;
+            }
+
+            & p {
+                position: absolute;
+                right: -15px;
+                max-width: 320px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .instagram {
+        height: auto;
+        &__inner {
+            padding-bottom: 0;
+            & p {
+                font-size: 22px;
+                max-width: 240px;
+            }
+            & img {
+                max-width: 500px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .instagram {
+        &__inner {
+            & p {
+                font-size: 18px;
+                max-width: 200px;
+            }
+            & img {
+                max-width: 450px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .instagram {
+        &__inner {
+            & p {
+                font-size: 18px;
+                max-width: 200px;
+            }
+            & img {
+                max-width: 385px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .instagram {
+        &__inner {
+            & p {
+                font-size: 16px;
+                max-width: 170px;
+            }
+            & img {
+                max-width: 340px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 415px) {
+    .instagram {
+        &__inner {
+            & p {
+                font-size: 12px;
+                max-width: 160px;
+            }
+            & img {
+                max-width: 270px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 359px) {
+    .instagram {
+        &__inner {
+            & img {
+                max-width: 240px;
+            }
+        }
+    }
+}

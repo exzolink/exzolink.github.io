@@ -55,6 +55,10 @@
 		font-family: "Gotham", sans-serif;
 		font-size: 48px;
 		max-width: 700px;
+
+		&.menstruation {
+			max-width: 600px;
+		}
 	}
 
 	&__bg {
@@ -63,6 +67,9 @@
 		&.climax {
 			right: 0;
 		}
+		&.menstruation {
+			right: 240px;
+		}
 	}
 
 	&__info {
@@ -70,6 +77,7 @@
 		display: flex;
 		flex-direction: column;
 		position: relative;
+		justify-content: center;
 
 		&_item {
 			position: relative;
@@ -81,9 +89,98 @@
 			& span {
 				color: $gray;
 				position: absolute;
-				top: 30px;
+				top: 45%;
+				transform: translateY(-50%);
 				left: 30px;
 			}
+
+			&.menstruation span {
+				left: 45px;
+			}
+		}
+	}
+
+	&__menu {
+		position: fixed;
+		height: 100vh;
+		width: 100%;
+		z-index: 999;
+		opacity: 0;
+		visibility: collapse;
+		transform: scale(.75);
+		left: 0;
+		top: 0;
+		transition: opacity .3s ease, transform .3s ease, visibility .3s ease;
+		background: linear-gradient(
+			to bottom,
+			#e4c8c9,
+			#e4c8c9,
+			#e4c8c9,
+			#e4c8c9,
+			#e4c8c9,
+			#fff
+		);
+
+		&.active {
+			opacity: 1;
+			transform: scale(1);
+			visibility: visible;
+		}
+
+
+		&_inner {
+			padding: 15px;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+
+		&_top {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 35px;
+
+			& img {
+				&:first-child {
+					max-width: 100px;
+				}
+				&:last-child {
+					width: 40px;
+					height: 40px;
+					pointer-events: all;
+					transition: opacity .3s ease;
+
+					&:hover {
+						cursor: pointer;
+						opacity: .8;
+					}
+				}
+			}
+		}
+
+		&_nav {
+			display: flex;
+			flex-direction: column;
+
+			& .nav__link {
+				font-size: 20px;
+				margin-right: 0;
+				margin-bottom: 20px;
+				transition: color .3s ease;
+
+				&:hover {
+					&:after {
+						content: none;
+					}
+					color: $darkblue;
+				}
+			}
+		}
+
+		&_btn {
+			max-width: 180px;
+			padding-left: 30px;
+			padding-right: 30px;
 		}
 	}
 }
@@ -132,6 +229,14 @@
 	}
 }
 
+@media screen and (max-width: 1500px) {
+	.header {
+		&__bg.menstruation {
+			right: -50px;
+		}
+	}
+}
+
 @media screen and (max-width: 1100px) {
 	.header {
 		&__burger {
@@ -158,6 +263,11 @@
 		}
 		&__bg {
 			max-width: 900px;
+
+			&.menstruation {
+				right: -50px;
+				height: 100%;
+			}
 
 			&.climax {
 				right: -125px;
@@ -195,7 +305,6 @@
 		}
 		&__info_item {
 			& span {
-				top: 30px;
 				left: 20px;
 				font-size: 12px;
 			}
@@ -212,13 +321,20 @@
 
 				& span {
 					left: 18px;
-					top: 18px;
+				}
+
+				&.menstruation span {
+					left: 13px;
 				}
 
 				& img {
 					max-width: 145px;
 					transform: scaleX(1);
 				}
+			}
+
+			&.menstruation span {
+				left: 30px;
 			}
 		}
 	}
@@ -234,6 +350,10 @@
 			max-width: 350px;
 			line-height: 30px;
 
+			&.menstruation {
+				max-width: 225px;
+			}
+
 			&_wrap {
 				display: flex;
 				flex-direction: column;
@@ -243,6 +363,9 @@
 		&__bg {
 			&.climax {
 				right: -300px;
+			}
+			&.menstruation {
+				right: -130px;
 			}
 		}
 

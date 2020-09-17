@@ -1,34 +1,87 @@
 .partners {
 	padding: 120px 0;
-    background-color: #fff;
-    
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-    }
+	background-color: #fff;
 
-    &__title {
-        font-size: 42px;
-    }
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
 
-    &__item {
-        flex-basis: 48%;
+	&__title {
+		font-size: 42px;
+	}
 
-        & img {
-            margin-top: 80px;
-            margin-bottom: 50px;
+	&__item {
+		flex-basis: 48%;
+
+		& img {
+			margin-top: 80px;
+			margin-bottom: 50px;
+		}
+	}
+
+	&__subtitle {
+		font-weight: 700;
+		color: $gray;
+		font-size: 24px;
+		margin-bottom: 40px;
+	}
+
+	&__desc {
+		font-size: $fz-regular;
+		color: $gray;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.partners {
+		padding: 80px 0;
+
+		&__title {
+			font-size: 36px;
+		}
+		&__subtitle {
+			font-size: 20px;
+		}
+		&__desc {
+			font-size: 16px;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.partners {
+		padding: 60px 0;
+
+		&__title {
+			font-size: 30px;
+		}
+		&__subtitle {
+			margin-bottom: 25px;
+		}
+		&__inner {
+			flex-direction: column;
+		}
+		&__item {
+			& img {
+				margin-top: 40px;
+				margin-bottom: 30px;
+			}
+
+			&:last-child {
+				margin-top: 50px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 415px) {
+    .partners {
+        &__desc {
+            font-size: 14px;
         }
-    }
-
-    &__subtitle {
-        font-weight: 700;
-        color: $gray;
-        font-size: 24px;
-        margin-bottom: 40px;
-    }
-
-    &__desc {
-        font-size: $fz-regular;
-        color: $gray;
+        &__subtitle {
+            font-size: 16px;
+        }
     }
 }

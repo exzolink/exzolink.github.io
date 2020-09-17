@@ -29,6 +29,13 @@
                 top: 45px;
                 content: url('../imgs/leftUnderline.svg');
             }
+
+            &.menstruation {
+
+                &:after {
+                    top: 133px;
+                }
+            }
         }
 
         &:nth-child(3) {
@@ -40,6 +47,13 @@
                 right: 0;
                 top: 65px;
                 content: url('../imgs/rightUnderline.svg');
+            }
+
+            &.menstruation {
+
+                &:after {
+                    top: 155px;
+                }
             }
         }
 
@@ -54,6 +68,16 @@
                 left: 0;
                 content: url('../imgs/leftUnderline.svg');
             }
+
+            &.menstruation {
+                bottom: 55px;
+
+                &:after {
+                    bottom: -15px;
+                    transform: scaleY(1) rotate(180deg);
+                    content: url('../imgs/rightUnderline.svg');
+                }
+            }
         }
 
         &:nth-child(5) {
@@ -66,6 +90,14 @@
                 bottom: -20px;
                 position: absolute;
                 content: url('../imgs/rightUnderline.svg');
+            }
+
+            &.menstruation {
+                bottom: 55px;
+
+                &:after {
+                    bottom: -15px;
+                }
             }
         }
     }
@@ -111,9 +143,17 @@
     .grass {
         &__bg {
             width: 100%;
-            opacity: .65;
+            opacity: .6;
             right: -70px;
             bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .grass {
+        &__desc {
+            font-size: 14px;
         }
     }
 }

@@ -32,7 +32,13 @@
 			&:last-child {
 				margin-left: 50px;
 				flex-wrap: wrap;
+
+				&.menstruation {
+					margin-left: 0;
+					display: flex !important;
+				}
 			}
+		
 		}
 	}
 
@@ -220,6 +226,25 @@
 		}
 	}
 }
+
+
+@media screen and (max-width: 600px) {
+	.drug {
+
+		&__item.menstruation {
+			flex-direction: column;
+
+			& img {
+				width: 100%;
+			}
+
+			&_info {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
 
 @media screen and (max-width: 550px) {
 	.drug {
