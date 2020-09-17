@@ -1,12 +1,16 @@
 .drug {
 	position: relative;
-    padding-top: 150px;
+	padding-top: 150px;
 
 	&__bg {
 		position: absolute;
 		left: 0;
-        top: 0;
-        width: 100%;
+		top: 0;
+		width: 100%;
+
+		&.blue_sm {
+			top: 1300px;
+		}
 	}
 
 	&__item {
@@ -52,8 +56,8 @@
 
 			&:last-child {
 				margin-left: 15px;
-            }
-            
+			}
+
 			&:nth-child(2) {
 				margin-left: 15px;
 			}
@@ -66,7 +70,7 @@
 	}
 
 	&__tabs {
-		font-size: 18px;
+		font-size: $fz-regular;
 		color: $gray;
 	}
 
@@ -78,19 +82,24 @@
 	}
 
 	&__help {
-        display: flex;
-        margin-top: 100px;
+		display: flex;
+		margin-top: 100px;
 		justify-content: space-between;
 
 		&_item {
 			display: flex;
 			flex-direction: column;
-            color: $gray;
-            flex-basis: 32%;
-            
-            & img {
-                max-height: 99px;
-            }
+			color: $gray;
+			flex-basis: 32%;
+
+			& img {
+				max-height: 99px;
+			}
+		}
+
+		&_wrap {
+			display: flex;
+			flex-direction: column;
 		}
 
 		&_title {
@@ -98,15 +107,189 @@
 			margin-top: 70px;
 			font-size: 24px;
 			margin-bottom: 30px;
-        }
-        
-        &_desc {
-            font-size: 18px;
-        }
+		}
+
+		&_desc {
+			font-size: $fz-regular;
+		}
 	}
 }
 
 .flex {
 	flex-direction: row;
 	display: flex;
+}
+
+@media screen and (max-width: 950px) {
+	.drug {
+		margin-top: 45px;
+		padding-top: 90px;
+
+		&__bg {
+			&.blue_sm {
+				top: 1450px;
+			}
+		}
+		&__item {
+			margin-top: 60px;
+
+			&:first-child {
+				margin-top: 45px;
+			}
+
+			&:last-child {
+				margin-top: 100px;
+			}
+
+			&_block {
+				flex-basis: 100%;
+
+				&:last-child {
+					display: none;
+				}
+			}
+		}
+
+		&__block {
+			&_wrapper {
+				margin-top: 45px;
+			}
+		}
+
+		&__btn {
+			margin: 25px 0;
+		}
+
+		&__help {
+			margin-top: 45px;
+		}
+
+		&__title {
+			font-size: 42px;
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.drug {
+		&__title {
+			font-size: 32px;
+		}
+		&__bg.blue_sm {
+			top: 1270px;
+		}
+		&__bg {
+			width: auto;
+		}
+		&__help {
+			&_title {
+				font-size: 18px;
+				margin-top: 45px;
+			}
+			&_desc {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.drug {
+		&__item {
+			&_info {
+				margin-left: 20px;
+			}
+		}
+		&__bg {
+			&.blue_sm {
+				top: 1450px;
+				width: 100% !important;
+			}
+		}
+		&__help {
+			flex-wrap: wrap;
+			justify-content: space-around;
+
+			&_item {
+				flex-basis: 48%;
+
+				&:last-child {
+					margin-top: 45px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.drug {
+		padding-top: 30px; 
+
+		&__bg.blue_sm {
+			top: 1250px;
+		}
+
+		&__help {
+			flex-wrap: wrap;
+			justify-content: flex-start;
+
+			&_wrap {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				margin-bottom: 30px;
+
+				& img {
+					margin-right: 25px;
+				}
+			}
+
+			&_title {
+				margin-top: 0;
+				font-size: 16px;
+				margin-bottom: 0;
+			}
+
+			&_item {
+				flex-basis: 100%;
+				margin-bottom: 45px;
+
+				&:last-child {
+					margin-top: 0;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 500px) {
+	.drug {
+		&__bg.blue_sm {
+			top: 1600px;
+		}
+
+		&__item {
+			flex-direction: column;
+
+			& img {
+				width: 100%;
+			}
+
+			&_info {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 415px) {
+	.drug {
+		&__help {
+			&_title {
+				font-size: 14px;
+			}
+		}
+	}
 }

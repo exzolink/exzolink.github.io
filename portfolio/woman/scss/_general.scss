@@ -1,6 +1,8 @@
 $gray: #4f4f4f;
 $blue: #9ef2ff;
 $darkblue: #53C9DA;
+$fz-regular: 18px;
+
 *,
 *:after,
 *:before {
@@ -36,6 +38,7 @@ body {
 .lazyloading {
 	opacity: 0;
 	transition: opacity 0.3s ease;
+	min-height: 200px;
 }
 
 .lazyloaded {
@@ -54,7 +57,7 @@ body {
 	padding: 10px 48px;
 	font-family: inherit;
 	color: $gray;
-	font-size: 18px;
+	font-size: $fz-regular;
 	border: 3px solid $blue;
 	border-radius: 60px;
 	transition: background 0.3s ease;
@@ -69,20 +72,42 @@ body {
 	position: relative;
 }
 
-.title-thin {
-    color: $gray;
-    max-width: 840px;
-	font-weight: 300;
-    font-family: "Gotham", sans-serif;
-    font-size: 48px;
-}
-
 .link {
     text-decoration: underline;
     color: $darkblue;
-    font-size: 18px;
+    font-size: $fz-regular;
 
     &:hover {
         text-decoration: none;
     }
+}
+
+.title-thin {
+    color: $gray;
+    max-width: 860px;
+	font-weight: 400;
+    font-family: "Gotham", sans-serif;
+    font-size: 48px;
+}
+
+@media screen and (max-width: 950px) {
+	.title-thin {
+		font-size: 36px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.link {
+		font-size: 14px;
+	}
+}
+
+
+@media screen and (max-width: 500px) {
+	.title-thin {
+		font-size: 24px;
+	}
+	.link {
+		font-size: 12px;
+	}
 }

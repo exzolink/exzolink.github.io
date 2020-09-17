@@ -1,0 +1,58 @@
+.news {
+	background-color: #f1f1f1;
+	padding: 75px 0;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		flex-basis: 29%;
+
+		&:hover {
+			& .news__subtitle {
+				color: $darkblue;
+			}
+		}
+
+		& img {
+			max-width: 360px;
+			width: 100%;
+		}
+
+		&:last-child {
+			flex-basis: 40%;
+
+			& img {
+				max-width: 500px;
+			}
+		}
+	}
+
+	&__date {
+		font-size: $fz-regular;
+		margin-top: 10px;
+		margin-bottom: 15px;
+	}
+	&__tag {
+		font-size: $fz-regular;
+		margin-bottom: 10px;
+	}
+	&__subtitle {
+		font-size: 22px;
+		font-weight: 400;
+		transition: color 0.3s ease;
+	}
+
+	&__title {
+        font-family: "Gotham", sans-serif;
+        font-weight: 400;
+		font-size: 44px;
+		margin-bottom: -90px;
+	}
+}

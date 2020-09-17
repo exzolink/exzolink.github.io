@@ -1,0 +1,25 @@
+.instagram {
+    position: relative;
+    height: 560px;
+
+    &__bg {
+        width: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+    }
+
+    &__inner {
+        padding: 100px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        & p {
+            max-width: 480px;
+            color: #717171;
+            font-size: 24px;
+            font-style: italic;
+        }
+    }
+}

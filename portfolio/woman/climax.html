@@ -5,7 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/styles.css" />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="preload" id="font">
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+			rel="preload"
+			id="font"
+		/>
+		<link rel="preload" href="https://youtube.com" />
 		<title>Женское здоровье</title>
 	</head>
 	<body>
@@ -35,7 +39,10 @@
 						<a href="" class="nav__link">Мнение врачей</a>
 						<a href="" class="nav__link">Блог</a>
 					</nav>
-					<button class="buy-btn btn">Где купить</button>
+					<button class="buy-btn header__btn btn">Где купить</button>
+					<button class="header__burger">
+						<img src="imgs/burger.svg" alt="" />
+					</button>
 				</div>
 
 				<div class="header__body">
@@ -45,11 +52,16 @@
 						alt=""
 					/>
 
-					<h3 class="header__text">Симидона</h3>
-					<h1 class="header__title">
-						На страже здоровья в период менопаузы. <br />
-						Не надо бояться климакса!
-					</h1>
+					<div class="header__title_wrap">
+						<p class="header__slogan">
+							Женское здоровье - источник здорового будущего!
+						</p>
+						<h3 class="header__text">Симидона</h3>
+						<h1 class="header__title">
+							На страже здоровья в период менопаузы. <br />
+							Не надо бояться климакса!
+						</h1>
+					</div>
 
 					<div class="header__info">
 						<div class="header__info_item">
@@ -120,6 +132,7 @@
 
 			<section class="drug">
 				<img class="drug__bg pink" src="imgs/pinkBg.svg" alt="" />
+				<img src="imgs/blueBg_sm.svg" alt="" class="drug__bg blue_sm" />
 				<div class="container relative">
 					<h2 class="title-thin">
 						Симидона - уникальный препарат на основе экстракта цимицифуги
@@ -157,8 +170,10 @@
 
 					<div class="drug__help">
 						<div class="drug__help_item">
-							<img src="imgs/drug_use.svg" alt="" />
-							<span class="drug__help_title">Показания к применению</span>
+							<div class="drug__help_wrap">
+								<img src="imgs/drug_use.svg" alt="" />
+								<span class="drug__help_title">Показания к применению</span>
+							</div>
 							<p class="drug__help_desc">
 								Лекарственное средство растительного происхождения для
 								облегчения климактерических жалоб, таких как приливы и обильное
@@ -167,8 +182,10 @@
 						</div>
 
 						<div class="drug__help_item">
-							<img src="imgs/drug_tabs.svg" alt="" />
-							<span class="drug__help_title">Способ применения и дозы </span>
+							<div class="drug__help_wrap">
+								<img src="imgs/drug_tabs.svg" alt="" />
+								<span class="drug__help_title">Способ применения и дозы </span>
+							</div>
 							<p class="drug__help_desc">
 								Взрослые женщины в период менопаузы: 1 раз в день по 1 таблетке
 								(утром или вечером), целиком, запивая небольшим количеством
@@ -179,10 +196,12 @@
 						</div>
 
 						<div class="drug__help_item">
-							<img src="imgs/drug_lasts.svg" alt="" />
-							<span class="drug__help_title"
-								>Продолжительность применения
-							</span>
+							<div class="drug__help_wrap">
+								<img src="imgs/drug_lasts.svg" alt="" />
+								<span class="drug__help_title"
+									>Продолжительность применения
+								</span>
+							</div>
 							<p class="drug__help_desc">
 								Эффект не наступает мгновенно.
 								<br /><br />
@@ -242,8 +261,10 @@
 
 					<div class="drug__help">
 						<div class="drug__help_item">
-							<img src="imgs/drug_use.svg" alt="" />
-							<span class="drug__help_title">Показания к применению</span>
+							<div class="drug__help_wrap">
+								<img src="imgs/drug_use.svg" alt="" />
+								<span class="drug__help_title">Показания к применению</span>
+							</div>
 							<p class="drug__help_desc">
 								Лекарственное средство растительного происхождения для
 								облегчения симптомов при климактерических расстройствах, таких
@@ -253,8 +274,10 @@
 						</div>
 
 						<div class="drug__help_item">
-							<img src="imgs/drug_tabs.svg" alt="" />
-							<span class="drug__help_title">Способ применения и дозы </span>
+							<div class="drug__help_wrap">
+								<img src="imgs/drug_tabs.svg" alt="" />
+								<span class="drug__help_title">Способ применения и дозы </span>
+							</div>
 							<p class="drug__help_desc">
 								Взрослые женщины в период менопаузы: 1 раз в день по 1 таблетке
 								(утром или вечером), целиком, запивая небольшим количеством
@@ -264,10 +287,12 @@
 						</div>
 
 						<div class="drug__help_item">
-							<img src="imgs/drug_lasts.svg" alt="" />
-							<span class="drug__help_title"
-								>Продолжительность применения
-							</span>
+							<div class="drug__help_wrap">
+								<img src="imgs/drug_lasts.svg" alt="" />
+								<span class="drug__help_title"
+									>Продолжительность применения
+								</span>
+							</div>
 							<p class="drug__help_desc">
 								Эффект не наступает мгновенно. Рекомендуется принимать Симидона
 								форте в течение минимум 6 недель.
@@ -290,11 +315,181 @@
 					<h2 class="title-thin">
 						Действующее вещество - экстракт корневищ цимицифуги
 					</h2>
+
+					<div class="grass__inner">
+						<img class="grass__bg lazyload" data-src="imgs/flower.png" alt="" />
+
+						<p class="grass__desc">
+							Это трава, произрастающая в Северной Америке.
+						</p>
+
+						<p class="grass__desc">
+							Цимифуга является природным регулятором эстрогена - главного
+							женского гормона.
+						</p>
+
+						<p class="grass__desc">
+							Цимицифуга с давних лет использовалось для снятия симптомов
+							менопаузы, в том числе приливов и ночной потливости.
+						</p>
+
+						<p class="grass__desc">
+							Эстракт корневищ цифицифуги для препаратов Симидона производится
+							компанией Max Zeller Sohne AG в Романсхорн, Швейцария.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="videos">
+				<div class="container relative">
+					<h2 class="title-thin">
+						Актуальные рекомендации врачей и методы лечения
+					</h2>
+
+					<div class="videos__inner">
+						<div class="videos__item_wrap">
+							<div class="videos__item">
+								<iframe
+									width="100%"
+									src="https://www.youtube.com/embed/BTYAsjAVa3I"
+									frameborder="0"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen
+								></iframe>
+								<span>Врач-гинеколог</span>
+							</div>
+							<h3 class="videos__item_title">Как остановить менопаузу?</h3>
+						</div>
+
+						<div class="videos__item_wrap">
+							<div class="videos__item">
+								<iframe
+									width="100%"
+									src="https://www.youtube.com/embed/BTYAsjAVa3I"
+									frameborder="0"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen
+								></iframe>
+								<span>Врач-гинеколог</span>
+							</div>
+							<h3 class="videos__item_title">
+								Какие главные составляющие женского здоровья?
+							</h3>
+						</div>
+					</div>
+
+					<div class="videos__more">
+						<a href="" class="link">Смотреть все</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="instagram">
+				<img class="instagram__bg" src="imgs/pinkBg_sm.svg" alt="" />
+				<div class="container relative">
+					<div class="instagram__inner">
+						<p>
+							Подписывайтесь на наш инстаграм и получайте каждый день полезную
+							информацию на тему женского здоровья
+						</p>
+
+						<a href=""><img class="lazyload" data-src="imgs/instagram.png" alt="" /></a>
+					</div>
+				</div>
+			</section>
+
+			<section class="news">
+				<div class="container">
+					<h2 class="title-thin news__title">
+						Полезные статьи о женском здоровье
+					</h2>
+					<div class="news__inner">
+						<a href="" class="news__item">
+							<img class="lazyload" data-src="imgs/post.png" alt="" />
+							<span class="news__date">15.09.20</span>
+							<span class="news__tag">Климакс</span>
+							<h4 class="news__subtitle">Советы будущим мамам</h4>
+						</a>
+
+						<a href="" class="news__item">
+							<img class="lazyload" data-src="imgs/post.png" alt="" />
+							<span class="news__date">15.09.20</span>
+							<span class="news__tag">Климакс</span>
+							<h4 class="news__subtitle">
+								Советы будущим мамам Советы будущим мамам
+							</h4>
+						</a>
+
+						<a href="" class="news__item">
+							<img class="lazyload" data-src="imgs/post.png" alt="" />
+							<span class="news__date">15.09.20</span>
+							<span class="news__tag">Климакс</span>
+							<h4 class="news__subtitle">
+								Советы будущим мамам Советы будущим мамам Советы будущим мамам
+							</h4>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="partners">
+				<div class="container">
+					<div class="partners__inner">
+						<div class="partners__item">
+							<h4 class="title-thin partners__title">Производитель</h4>
+							<img class="lazyload" data-src="imgs/partnerAmaxa.png" alt="" />
+							<p class="partners__subtitle">Amaxa Pharma</p>
+							<p class="partners__desc">
+								Амакса — фармацевтическая компания, специализирующаяся на
+								продукции для онкологии, гематологии, неонатологии и широком
+								круге безрецептурных препаратов. Команда Амакса состоит из
+								опытных профессионалов с обширными знаниями в области разработки
+								лекарственных препаратов и фармацевтической промышленности. Мы
+								поддерживаем тесные связи с ведущими специалистами на протяжении
+								всего процесса исследований и разработок для каждого из наших
+								продуктов и услуг.
+							</p>
+						</div>
+
+						<div class="partners__item">
+							<h4 class="title-thin partners__title">Поставщик в Казахстане</h4>
+							<img class="lazyload" data-src="imgs/partnerMSP.png" alt="" />
+							<p class="partners__subtitle">
+								ТОО «Казахская фармацевтическая компания «МЕДСЕРВИС ПЛЮС»
+							</p>
+							<p class="partners__desc">
+								Основным видом деятельности компании является дистрибьюция
+								медикаментов и изделий медицинского назначения. На сегодняшний
+								день компания работает с продукцией более чем 300 производителей
+								и может предложить широкий спектр медицинских фармацевтических
+								продуктов, имея в постоянном ассортименте свыше 4000
+								наименований различных товаров. Персонал компании состоит более
+								чем из 1200 человек, включая Алматы и филиалы.
+							</p>
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>
 
-		<script src="js//lazyload.js" async></script>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<a href=""><img src="imgs/footerLogo.svg" alt="" /></a>
+					<p>
+						ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ. ПЕРЕД ПРИМЕНЕНИЕМ НЕОБХОДИМО
+						ПРОКОНСУЛЬТИРОВАТЬСЯ СО СПЕЦИАЛИСТОМ
+					</p>
+					<div class="footer__dev">
+						<span>Разработано командой</span>
+						<a href=""><img src="imgs/devLogo.svg" alt="" /></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/lazyload.js" async></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
