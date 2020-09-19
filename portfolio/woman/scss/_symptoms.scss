@@ -44,6 +44,11 @@
         &__items {
             margin-top: 45px;
         }
+        &__item {
+            & span {
+                font-size: 18px;
+            }
+        }
     }
 }
 
@@ -51,11 +56,15 @@
     .symptoms {
         &__item {
             flex-basis: 50%;
+
+            & span {
+                font-size: 16px;
+            }
         }
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
     .symptoms {
         &__item {
             & img {
@@ -64,7 +73,7 @@
             }
 
             & span {
-                font-size: 16px;
+                font-size: 14px;
             }
         }
         &__tip {

@@ -1,0 +1,126 @@
+.recoms {
+	&__header {
+		height: 730px;
+		min-height: auto;
+
+		&_body {
+			text-align: center;
+			margin-top: 110px;
+			display: flex;
+			justify-content: center;
+		}
+		&_title {
+			max-width: 750px;
+        }
+    }
+
+    &__inner {
+        margin-top: -280px;
+    }
+    
+    &__item {
+        color: $gray;
+        margin-bottom: 130px;
+
+        &:last-child {
+            margin-bottom: 60px;
+        }
+
+        & iframe {
+            height: 570px;
+        }
+        &_doctor {
+            margin-top: 25px;
+            margin-bottom: 15px;
+            display: block;
+            font-size: 18px;
+            font-style: italic;
+        }
+        &_title {
+            font-weight: 400;
+            font-size: 36px;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .recoms {
+        &__item {
+            & iframe {
+                height: 400px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .recoms {
+        &__item {
+            margin-bottom: 75px;
+
+            & iframe {
+                height: 320px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .recoms {
+        &__item {
+            & iframe {
+                height: 260px;
+            }
+            &_title {
+                font-size: 28px;
+            }
+            &_doctor {
+                margin-top: 15px;
+                margin-bottom: 10px;
+                font-size: 14px;
+            }
+        }
+        &__header {
+            &_body {
+                margin-top: 70px;
+            }
+        }
+        &__inner {
+            margin-top: -335px;
+        }
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .recoms {
+        &__item {
+            & iframe {
+                height: 220px;
+            }
+            &_title {
+                font-size: 22px;
+            }
+        }
+        &__header {
+            &_title {
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 415px) {
+    .recoms {
+        &__item {
+            & iframe {
+                height: 180px;
+            }
+        }
+        &__header {
+            &_title {
+                font-size: 24px;
+            }
+        }
+    }
+}

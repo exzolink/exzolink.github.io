@@ -2,11 +2,23 @@
 	position: relative;
 	padding-top: 150px;
 
+	&.pregnancy {
+		padding-top: 50px;
+		padding-bottom: 200px;
+	}
+
 	&__bg {
 		position: absolute;
 		left: 0;
 		top: 0;
 		width: 100%;
+
+		&_img {
+			position: absolute;
+			right: -150px;
+			bottom: 0;
+			opacity: .7;
+		}
 
 		&.blue_sm {
 			top: 1300px;
@@ -36,6 +48,9 @@
 				&.menstruation {
 					margin-left: 0;
 					display: flex !important;
+				}
+				&.pregnancy {
+					flex-basis: 100%;
 				}
 			}
 		
@@ -117,6 +132,10 @@
 
 		&_desc {
 			font-size: $fz-regular;
+			
+			&.pregnancy {
+				list-style-position: inside;
+			}
 		}
 	}
 }
@@ -134,6 +153,10 @@
 		&__bg {
 			&.blue_sm {
 				top: 1450px;
+			}
+
+			&_img {
+				display: none;
 			}
 		}
 		&__item {
@@ -172,6 +195,19 @@
 
 		&__title {
 			font-size: 42px;
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.drug {
+		&__img {
+			max-width: 300px;
+		}
+		&__item {
+			&_info.pregnancy {
+				margin-left: 45px;
+			}
 		}
 	}
 }
@@ -242,6 +278,19 @@
 				margin-left: 0;
 			}
 		}
+
+		&__img {
+			max-width: 240px;
+		}
+
+		&__item {
+			&_info.pregnancy {
+				margin-left: 25px;
+				& span {
+					font-size: 16px;
+				}
+			}
+		}
 	}
 }
 
@@ -305,6 +354,16 @@
 			&_info {
 				margin-left: 0;
 			}
+		}
+		&__item {
+			&_info.pregnancy {
+				margin-left: 0;
+				margin-top: 30px;
+			}
+		}
+		&__img {
+			max-width: none;
+			width: 100%;
 		}
 	}
 }

@@ -29,6 +29,44 @@ Spruce.store("modalPrivacy", {
 	open: "false",
 });
 
+// Декоратор (позволяет задать интервал вызова функции)
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function () {
+		var context = this,
+			args = arguments;
+		clearTimeout(timeout);
+		timeout = setTimeout(function () {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		}, wait);
+		if (immediate && timeout !== true) func.apply(context, args);
+	};
+}
+
+// Асинхронная загрузка линков
+var linksToPreload = document.querySelectorAll(".js-preload");
+window.addEventListener("load", function () {
+	for (var i = 0; i < linksToPreload.length; i++) {
+		linksToPreload[i].rel = "stylesheet";
+	}
+});
+
+// Скрытие верхней панели при скролле вниз
+var header = document.querySelector(".header");
+var scrollPrev = 0;
+var togglePanel = debounce(function () {
+	var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+	if (scrolled > 115 && scrolled > scrollPrev) {
+		header.classList.add("scrolled");
+	} else {
+		header.classList.remove("scrolled");
+	}
+	scrollPrev = scrolled;
+
+}, 500, true);
+window.addEventListener("scroll", togglePanel);
+
 // Инициализация слайдеров
 var photos = new Swiper(".zones__gallery_container", {
 	slidesPerView: 4,
@@ -195,21 +233,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			return slideUp(target, duration);
 		}
 	};
-
-	// Декоратор
-	function debounce(func, wait, immediate) {
-		var timeout;
-		return function () {
-			var context = this,
-				args = arguments;
-			clearTimeout(timeout);
-			timeout = setTimeout(function () {
-				timeout = null;
-				if (!immediate) func.apply(context, args);
-			}, wait);
-			if (immediate && !timeout) func.apply(context, args);
-		};
-	}
 
 	// Инициализация карты на всех страницах (кроме контакты)
 	var mapOn = false;
