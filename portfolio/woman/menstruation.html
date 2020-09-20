@@ -16,16 +16,19 @@
 	<body>
 		<header x-data="{ isMenuOpen: false }" class="header">
 			<img
+			decoding="async"
 				class="main__bg main__bg_left lazyload"
 				data-src="imgs/cloudsBg.png"
 				alt=""
 			/>
 			<img
+			decoding="async"
 				class="main__bg main__bg_right lazyload"
 				data-src="imgs/cloudsBg.png"
 				alt=""
 			/>
 			<img
+			decoding="async"
 				id="animated-bg"
 				data-speed="8"
 				data-velocity="8"
@@ -35,7 +38,7 @@
 			/>
 			<div class="container relative">
 				<div class="nav__top">
-					<a href=""><img src="imgs/logo.svg" alt="" /></a>
+					<a href=""><img decoding="async" src="imgs/logo.svg" alt="" /></a>
 					<nav class="nav__links">
 						<a href="" class="nav__link">При климаксе</a>
 						<a href="" class="nav__link">При ПМС</a>
@@ -50,7 +53,7 @@
 						Где купить
 					</button>
 					<button @click="isMenuOpen = !isMenuOpen" class="header__burger">
-						<img src="imgs/burger.svg" alt="" />
+						<img decoding="async" src="imgs/burger.svg" alt="" />
 					</button>
 				</div>
 
@@ -74,15 +77,15 @@
 
 					<div class="header__info">
 						<div class="header__info_item menstruation">
-							<img src="imgs/leaf1.png" alt="" />
+							<img decoding="async" src="imgs/leaf1.png" alt="" />
 							<span>без болей</span>
 						</div>
 						<div class="header__info_item menstruation">
-							<img src="imgs/leaf2.png" alt="" />
+							<img decoding="async" src="imgs/leaf2.png" alt="" />
 							<span>стабильный цикл</span>
 						</div>
 						<div class="header__info_item menstruation">
-							<img src="imgs/leaf1.png" alt="" />
+							<img decoding="async" src="imgs/leaf1.png" alt="" />
 							<span>без ПМС</span>
 						</div>
 					</div>
@@ -96,7 +99,7 @@
 			>
 				<div class="header__menu_inner">
 					<div class="header__menu_top">
-						<img src="imgs/logo.svg" alt="" />
+						<img decoding="async" src="imgs/logo.svg" alt="" />
 						<img
 							@click="isMenuOpen = !isMenuOpen"
 							src="imgs/close.svg"
@@ -128,33 +131,33 @@
 
 					<div class="symptoms__items">
 						<div class="symptoms__item">
-							<img src="imgs/prizn_pain.svg" alt="" />
+							<img decoding="async" src="imgs/prizn_pain.svg" alt="" />
 							<span
 								>Тянущие боли <br />
 								внизу живота</span
 							>
 						</div>
 						<div class="symptoms__item">
-							<img src="imgs/prizn_napr.svg" alt="" />
+							<img decoding="async" src="imgs/prizn_napr.svg" alt="" />
 							<span>Напряжение в груди</span>
 						</div>
 						<div class="symptoms__item">
-							<img src="imgs/sympt__razdr.svg" alt="" />
+							<img decoding="async" src="imgs/sympt__razdr.svg" alt="" />
 							<span>Раздражительность</span>
 						</div>
 						<div class="symptoms__item">
-							<img src="imgs/sympt__pot.svg" alt="" />
+							<img decoding="async" src="imgs/sympt__pot.svg" alt="" />
 							<span>Обильные выделения</span>
 						</div>
 						<div class="symptoms__item">
-							<img src="imgs/prizn_blood.svg" alt="" />
+							<img decoding="async" src="imgs/prizn_blood.svg" alt="" />
 							<span
 								>Скудные кровянистые <br />
 								выделения</span
 							>
 						</div>
 						<div class="symptoms__item">
-							<img src="imgs/prizn_cycle.svg" alt="" />
+							<img decoding="async" src="imgs/prizn_cycle.svg" alt="" />
 							<span>Нестабильный цикл</span>
 						</div>
 					</div>
@@ -167,11 +170,11 @@
 			</section>
 
 			<section class="drug">
-				<img class="drug__bg pink" src="imgs/pinkBg.svg" alt="" />
+				<img decoding="async" class="drug__bg pink" src="imgs/pinkBg.svg" alt="" />
 				<div class="container relative">
 					<h2 class="title-thin">Тебе поможет Префемин</h2>
 					<div class="drug__item menstruation">
-						<img class="lazyload" data-src="imgs/text-prefemin.png" alt="" />
+						<img decoding="async" class="lazyload" data-src="imgs/text-prefemin.png" alt="" />
 						<div class="drug__item_info">
 							<h3 class="drug__title">Префемин</h3>
 							<div class="drug__block_wrapper">
@@ -194,7 +197,7 @@
 					<div class="drug__help">
 						<div class="drug__help_item">
 							<div class="drug__help_wrap">
-								<img src="imgs/drug_use.svg" alt="" />
+								<img decoding="async" src="imgs/drug_use.svg" alt="" />
 								<span class="drug__help_title">Показания к применению</span>
 							</div>
 							<p class="drug__help_desc">
@@ -207,7 +210,7 @@
 
 						<div class="drug__help_item">
 							<div class="drug__help_wrap">
-								<img src="imgs/drug_tabs.svg" alt="" />
+								<img decoding="async" src="imgs/drug_tabs.svg" alt="" />
 								<span class="drug__help_title">Способ применения и дозы </span>
 							</div>
 							<p class="drug__help_desc">
@@ -222,7 +225,7 @@
 
 						<div class="drug__help_item">
 							<div class="drug__help_wrap">
-								<img src="imgs/drug_lasts.svg" alt="" />
+								<img decoding="async" src="imgs/drug_lasts.svg" alt="" />
 								<span class="drug__help_title"
 									>Продолжительность применения
 								</span>
@@ -243,7 +246,7 @@
 			</section>
 
 			<section class="grass">
-				<img class="drug__bg blue" src="imgs/blueBg.svg" alt="" />
+				<img decoding="async" class="drug__bg blue" src="imgs/blueBg.svg" alt="" />
 				<div class="container relative">
 					<h2 class="title-thin">
 						Действующее вещество - экстракт корневищ цимицифуги
@@ -326,7 +329,7 @@
 			</section>
 
 			<section class="instagram">
-				<img class="instagram__bg" src="imgs/pinkBg_sm.svg" alt="" />
+				<img decoding="async" class="instagram__bg" src="imgs/pinkBg_sm.svg" alt="" />
 				<div class="container relative">
 					<div class="instagram__inner">
 						<p>
@@ -335,7 +338,7 @@
 						</p>
 
 						<a href=""
-							><img class="lazyload" data-src="imgs/instagram.png" alt=""
+							><img decoding="async" class="lazyload" data-src="imgs/instagram.png" alt=""
 						/></a>
 					</div>
 				</div>
@@ -349,14 +352,14 @@
 					<div class="swiper-container news__container">
 						<div class="swiper-wrapper news__inner">
 							<a href="" class="swiper-slide news__item">
-								<img class="lazyload" data-src="imgs/post.png" alt="" />
+								<img decoding="async" class="lazyload" data-src="imgs/post.png" alt="" />
 								<span class="news__date">15.09.20</span>
 								<span class="news__tag">Климакс</span>
 								<h4 class="news__subtitle">Советы будущим мамам</h4>
 							</a>
 
 							<a href="" class="swiper-slide news__item">
-								<img class="lazyload" data-src="imgs/post.png" alt="" />
+								<img decoding="async" class="lazyload" data-src="imgs/post.png" alt="" />
 								<span class="news__date">15.09.20</span>
 								<span class="news__tag">Климакс</span>
 								<h4 class="news__subtitle">
@@ -365,7 +368,7 @@
 							</a>
 
 							<a href="" class="swiper-slide news__item">
-								<img class="lazyload" data-src="imgs/post.png" alt="" />
+								<img decoding="async" class="lazyload" data-src="imgs/post.png" alt="" />
 								<span class="news__date">15.09.20</span>
 								<span class="news__tag">Климакс</span>
 								<h4 class="news__subtitle">
@@ -382,7 +385,7 @@
 					<div class="partners__inner">
 						<div class="partners__item">
 							<h4 class="title-thin partners__title">Производитель</h4>
-							<img class="lazyload" data-src="imgs/partnerAmaxa.png" alt="" />
+							<img decoding="async" class="lazyload" data-src="imgs/partnerAmaxa.png" alt="" />
 							<p class="partners__subtitle">Amaxa Pharma</p>
 							<p class="partners__desc">
 								Амакса — фармацевтическая компания, специализирующаяся на
@@ -398,7 +401,7 @@
 
 						<div class="partners__item">
 							<h4 class="title-thin partners__title">Поставщик в Казахстане</h4>
-							<img class="lazyload" data-src="imgs/partnerMSP.png" alt="" />
+							<img decoding="async" class="lazyload" data-src="imgs/partnerMSP.png" alt="" />
 							<p class="partners__subtitle">
 								ТОО «Казахская фармацевтическая компания «МЕДСЕРВИС ПЛЮС»
 							</p>
@@ -494,7 +497,7 @@
 							<div class="modal__pharms">
 								<div class="modal__pharms_item">
 									<div class="modal__pharms_img">
-										<img src="imgs/biosfera.png" alt="" />
+										<img decoding="async" src="imgs/biosfera.png" alt="" />
 									</div>
 									<span>1 990 ₸</span>
 									<a href="" class="btn modal__btn">Перейти на сайт аптеки</a>
@@ -502,7 +505,7 @@
 
 								<div class="modal__pharms_item">
 									<div class="modal__pharms_img">
-										<img src="imgs/likitoria.png" alt="" />
+										<img decoding="async" src="imgs/likitoria.png" alt="" />
 									</div>
 									<span>1 990 ₸</span>
 									<a href="" class="btn modal__btn">Перейти на сайт аптеки</a>
@@ -534,7 +537,7 @@
 							<div class="modal__pharms">
 								<div class="modal__pharms_item">
 									<div class="modal__pharms_img">
-										<img src="imgs/biosfera.png" alt="" />
+										<img decoding="async" src="imgs/biosfera.png" alt="" />
 									</div>
 									<span>1 990 ₸</span>
 									<a href="" class="btn modal__btn">Перейти на сайт аптеки</a>
@@ -542,7 +545,7 @@
 
 								<div class="modal__pharms_item">
 									<div class="modal__pharms_img">
-										<img src="imgs/likitoria.png" alt="" />
+										<img decoding="async" src="imgs/likitoria.png" alt="" />
 									</div>
 									<span>1 990 ₸</span>
 									<a href="" class="btn modal__btn">Перейти на сайт аптеки</a>
@@ -574,7 +577,7 @@
 							<div class="modal__pharms">
 								<div class="modal__pharms_item">
 									<div class="modal__pharms_img">
-										<img src="imgs/biosfera.png" alt="" />
+										<img decoding="async" src="imgs/biosfera.png" alt="" />
 									</div>
 									<span>1 990 ₸</span>
 									<a href="" class="btn modal__btn">Перейти на сайт аптеки</a>
@@ -582,7 +585,7 @@
 
 								<div class="modal__pharms_item">
 									<div class="modal__pharms_img">
-										<img src="imgs/likitoria.png" alt="" />
+										<img decoding="async" src="imgs/likitoria.png" alt="" />
 									</div>
 									<span>1 990 ₸</span>
 									<a href="" class="btn modal__btn">Перейти на сайт аптеки</a>
@@ -617,7 +620,7 @@
 							<div class="modal__pharms">
 								<div class="modal__pharms_item">
 									<div class="modal__pharms_img">
-										<img src="imgs/biosfera.png" alt="" />
+										<img decoding="async" src="imgs/biosfera.png" alt="" />
 									</div>
 									<span>1 990 ₸</span>
 									<a href="" class="btn modal__btn">Перейти на сайт аптеки</a>
@@ -625,7 +628,7 @@
 
 								<div class="modal__pharms_item">
 									<div class="modal__pharms_img">
-										<img src="imgs/likitoria.png" alt="" />
+										<img decoding="async" src="imgs/likitoria.png" alt="" />
 									</div>
 									<span>1 990 ₸</span>
 									<a href="" class="btn modal__btn">Перейти на сайт аптеки</a>
@@ -641,7 +644,7 @@
 			<div class="container">
 				<div class="footer__inner">
 					<a href=""
-						><img class="footer__logo" src="imgs/footerLogo.svg" alt=""
+						><img decoding="async" class="footer__logo" src="imgs/footerLogo.svg" alt=""
 					/></a>
 					<p>
 						ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ. ПЕРЕД ПРИМЕНЕНИЕМ НЕОБХОДИМО
@@ -649,7 +652,7 @@
 					</p>
 					<div class="footer__dev">
 						<span>Разработано командой</span>
-						<a href=""><img src="imgs/devLogo.svg" alt="" /></a>
+						<a href=""><img decoding="async" src="imgs/devLogo.svg" alt="" /></a>
 					</div>
 				</div>
 			</div>
