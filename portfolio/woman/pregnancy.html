@@ -26,6 +26,9 @@
 				alt=""
 			/>
 			<img
+				id="animated-bg"
+				data-speed="11"
+				data-velocity="8"
 				class="header__bg pregnancy lazyload"
 				data-src="imgs/wPregnant_header.png"
 				alt=""
@@ -40,7 +43,12 @@
 						<a href="" class="nav__link">Мнение врачей</a>
 						<a href="" class="nav__link">Блог</a>
 					</nav>
-					<button @click="$store.modal.open = true; $store.modalTab.tab = 'miofolik'; scrollbarToggle()" class="buy-btn header__btn btn">Где купить</button>
+					<button
+						@click="$store.modal.open = true; $store.modalTab.tab = 'miofolik'; scrollbarToggle()"
+						class="buy-btn header__btn btn"
+					>
+						Где купить
+					</button>
 					<button @click="isMenuOpen = !isMenuOpen" class="header__burger">
 						<img src="imgs/burger.svg" alt="" />
 					</button>
@@ -119,12 +127,17 @@
 						<a href="" class="nav__link">Для будущих мам</a>
 						<a href="" class="nav__link">Мнение врачей</a>
 						<a href="" class="nav__link">Блог</a>
-						<button @click="$store.modal.open = true; $store.modalTab.tab = 'forte'; scrollbarToggle(); isMenuOpen = !isMenuOpen" class="btn buy-btn header__menu_btn">Где купить</button>
+						<button
+							@click="$store.modal.open = true; $store.modalTab.tab = 'forte'; scrollbarToggle(); isMenuOpen = !isMenuOpen"
+							class="btn buy-btn header__menu_btn"
+						>
+							Где купить
+						</button>
 					</div>
 				</div>
 			</div>
 		</header>
-		<main x-subscribe x-data={}>
+		<main x-subscribe x-data="{}">
 			<section class="symptoms">
 				<div class="container">
 					<h2 class="title-thin">
@@ -207,7 +220,12 @@
 										женщины и нормализации гормонов на всех этапах планирования
 										беременности.</span
 									>
-									<button @click="$store.modal.open = true; $store.modalTab.tab = 'miofolik'; scrollbarToggle()" class="btn js-buy-btn drug__btn">купить</button>
+									<button
+										@click="$store.modal.open = true; $store.modalTab.tab = 'miofolik'; scrollbarToggle()"
+										class="btn js-buy-btn drug__btn"
+									>
+										купить
+									</button>
 									<a href="" class="link">Ознакомиться с инструкцией</a>
 								</div>
 							</div>
