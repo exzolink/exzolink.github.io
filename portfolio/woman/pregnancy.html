@@ -14,7 +14,7 @@
 		<title>Женское здоровье</title>
 	</head>
 	<body>
-		<header class="header">
+		<header x-data="{ isMenuOpen: false }" class="header">
 			<img
 				class="main__bg main__bg_left lazyload"
 				data-src="imgs/cloudsBg.png"
@@ -40,14 +40,15 @@
 						<a href="" class="nav__link">Мнение врачей</a>
 						<a href="" class="nav__link">Блог</a>
 					</nav>
-					<button class="buy-btn header__btn btn">Где купить</button>
-					<button class="js-toggleBurger header__burger">
+					<button @click="$store.modal.open = true; $store.modalTab.tab = 'miofolik'; scrollbarToggle()" class="buy-btn header__btn btn">Где купить</button>
+					<button @click="isMenuOpen = !isMenuOpen" class="header__burger">
 						<img src="imgs/burger.svg" alt="" />
 					</button>
 				</div>
 
 				<div class="header__body">
 					<img
+						id="animated"
 						class="header__body_img pregnancy lazyload"
 						data-src="imgs/miofolik.png"
 						alt=""
@@ -98,11 +99,19 @@
 				</div>
 			</div>
 
-			<div class="header__menu">
+			<div
+				x-show.transition.in.duration.350ms.out.scale.50.duration.350ms.opacity.duration.350ms="isMenuOpen"
+				x-cloak
+				class="header__menu"
+			>
 				<div class="header__menu_inner">
 					<div class="header__menu_top">
 						<img src="imgs/logo.svg" alt="" />
-						<img class="js-toggleBurger" src="imgs/close.svg" alt="" />
+						<img
+							@click="isMenuOpen = !isMenuOpen"
+							src="imgs/close.svg"
+							alt=""
+						/>
 					</div>
 					<div class="header__menu_nav">
 						<a href="" class="nav__link">При климаксе</a>
@@ -110,12 +119,12 @@
 						<a href="" class="nav__link">Для будущих мам</a>
 						<a href="" class="nav__link">Мнение врачей</a>
 						<a href="" class="nav__link">Блог</a>
-						<button class="btn buy-btn header__menu_btn">Где купить</button>
+						<button @click="$store.modal.open = true; $store.modalTab.tab = 'forte'; scrollbarToggle(); isMenuOpen = !isMenuOpen" class="btn buy-btn header__menu_btn">Где купить</button>
 					</div>
 				</div>
 			</div>
 		</header>
-		<main>
+		<main x-subscribe x-data={}>
 			<section class="symptoms">
 				<div class="container">
 					<h2 class="title-thin">
@@ -198,7 +207,7 @@
 										женщины и нормализации гормонов на всех этапах планирования
 										беременности.</span
 									>
-									<button class="btn js-buy-btn drug__btn">купить</button>
+									<button @click="$store.modal.open = true; $store.modalTab.tab = 'miofolik'; scrollbarToggle()" class="btn js-buy-btn drug__btn">купить</button>
 									<a href="" class="link">Ознакомиться с инструкцией</a>
 								</div>
 							</div>
@@ -514,6 +523,226 @@
 					</div>
 				</div>
 			</section>
+
+			<section
+				x-cloak
+				x-show.transition.in.duration.350ms.out.scale.50.duration.350ms.opacity.duration.350ms="$store.modal.open === true"
+				class="modal"
+			>
+				<img
+					@click="$store.modal.open = false; scrollbarToggle();"
+					class="modal__close"
+					src="imgs/cancel.svg"
+					alt=""
+				/>
+				<div class="modal__inner">
+					<h3 class="modal__title">
+						Покупайте препараты для женского здоровья в онлайн-аптеках не выходя
+						из дома
+					</h3>
+
+					<div class="modal__selector_wrapper">
+						<div class="modal__selector">
+							<div
+								@click="$store.modalTab.tab = 'uno'"
+								:class="{ 'active': $store.modalTab.tab === 'uno' }"
+								class="modal__selector_item"
+							>
+								Симидона уно
+							</div>
+							<div
+								@click="$store.modalTab.tab = 'forte'"
+								:class="{ 'active': $store.modalTab.tab === 'forte' }"
+								class="modal__selector_item"
+							>
+								Симидона форте
+							</div>
+							<div
+								@click="$store.modalTab.tab = 'miofolik'"
+								:class="{ 'active': $store.modalTab.tab === 'miofolik' }"
+								class="modal__selector_item"
+							>
+								Миофолик
+							</div>
+							<div
+								@click="$store.modalTab.tab = 'prefemin'"
+								:class="{ 'active': $store.modalTab.tab === 'prefemin' }"
+								class="modal__selector_item"
+							>
+								Префемин
+							</div>
+						</div>
+					</div>
+
+					<div class="modal__content_wrapper">
+						<!-- Вкладка: Симидона Уно -->
+						<div
+							x-cloak
+							x-show="$store.modalTab.tab === 'uno'"
+							class="modal__content"
+						>
+							<div class="drug__item modal__item">
+								<img
+									class="lazyload simidonaU"
+									data-src="imgs/simidonaUno.png"
+									alt=""
+								/>
+								<div class="drug__item_info">
+									<div class="drug__block_wrapper">
+										<div class="drug__item_block modal__block">
+											<span class="drug__tabs modal__text"
+												>Таблетки 6.5 мг</span
+											>
+											<a href="" class="link">Ознакомиться с инструкцией</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="modal__pharms">
+								<div class="modal__pharms_item">
+									<div class="modal__pharms_img">
+										<img src="imgs/biosfera.png" alt="" />
+									</div>
+									<span>1 990 ₸</span>
+									<a href="" class="btn modal__btn">Перейти на сайт аптеки</a>
+								</div>
+
+								<div class="modal__pharms_item">
+									<div class="modal__pharms_img">
+										<img src="imgs/likitoria.png" alt="" />
+									</div>
+									<span>1 990 ₸</span>
+									<a href="" class="btn modal__btn">Перейти на сайт аптеки</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Вкладка: Симидона Форте -->
+						<div
+							x-show="$store.modalTab.tab === 'forte'"
+							class="modal__content"
+						>
+							<div class="drug__item modal__item">
+								<img
+									class="lazyload simidonaF"
+									data-src="imgs/simidonaForte.png"
+									alt=""
+								/>
+								<div class="drug__item_info">
+									<div class="drug__block_wrapper">
+										<div class="drug__item_block modal__block">
+											<span class="drug__tabs modal__text">Таблетки 13 мг</span>
+											<a href="" class="link">Ознакомиться с инструкцией</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="modal__pharms">
+								<div class="modal__pharms_item">
+									<div class="modal__pharms_img">
+										<img src="imgs/biosfera.png" alt="" />
+									</div>
+									<span>1 990 ₸</span>
+									<a href="" class="btn modal__btn">Перейти на сайт аптеки</a>
+								</div>
+
+								<div class="modal__pharms_item">
+									<div class="modal__pharms_img">
+										<img src="imgs/likitoria.png" alt="" />
+									</div>
+									<span>1 990 ₸</span>
+									<a href="" class="btn modal__btn">Перейти на сайт аптеки</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Вкладка: Миофолик -->
+						<div
+							x-show="$store.modalTab.tab === 'miofolik'"
+							class="modal__content"
+						>
+							<div class="drug__item modal__item">
+								<img
+									class="lazyload miofolik"
+									data-src="imgs/miofolik.png"
+									alt=""
+								/>
+								<div class="drug__item_info">
+									<div class="drug__block_wrapper">
+										<div class="drug__item_block modal__block">
+											<span class="drug__tabs modal__text">Саше №30</span>
+											<a href="" class="link">Ознакомиться с инструкцией</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="modal__pharms">
+								<div class="modal__pharms_item">
+									<div class="modal__pharms_img">
+										<img src="imgs/biosfera.png" alt="" />
+									</div>
+									<span>1 990 ₸</span>
+									<a href="" class="btn modal__btn">Перейти на сайт аптеки</a>
+								</div>
+
+								<div class="modal__pharms_item">
+									<div class="modal__pharms_img">
+										<img src="imgs/likitoria.png" alt="" />
+									</div>
+									<span>1 990 ₸</span>
+									<a href="" class="btn modal__btn">Перейти на сайт аптеки</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Вкладка: Префемин -->
+						<div
+							x-show="$store.modalTab.tab === 'prefemin'"
+							class="modal__content"
+						>
+							<div class="drug__item modal__item">
+								<img
+									class="lazyload prefemin"
+									data-src="imgs/prefemin_modal.png"
+									alt=""
+								/>
+								<div class="drug__item_info">
+									<div class="drug__block_wrapper">
+										<div class="drug__item_block modal__block">
+											<span class="drug__tabs modal__text"
+												>30 таблеток, покрытых пленочной оболочкой, по 20
+												мг.</span
+											>
+											<a href="" class="link">Ознакомиться с инструкцией</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="modal__pharms">
+								<div class="modal__pharms_item">
+									<div class="modal__pharms_img">
+										<img src="imgs/biosfera.png" alt="" />
+									</div>
+									<span>1 990 ₸</span>
+									<a href="" class="btn modal__btn">Перейти на сайт аптеки</a>
+								</div>
+
+								<div class="modal__pharms_item">
+									<div class="modal__pharms_img">
+										<img src="imgs/likitoria.png" alt="" />
+									</div>
+									<span>1 990 ₸</span>
+									<a href="" class="btn modal__btn">Перейти на сайт аптеки</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 
 		<footer class="footer">
@@ -534,8 +763,15 @@
 			</div>
 		</footer>
 
+		<script src="js/spruce.js"></script>
+		<script src="js/alpine.js"></script>
 		<script src="js/lazyload.js" async></script>
 		<script src="js/swiper.min.js"></script>
 		<script src="js/main.js"></script>
+		<script>
+			function scrollbarToggle() {
+				document.documentElement.classList.toggle("no-overflow");
+			}
+		</script>
 	</body>
 </html>

@@ -7,6 +7,36 @@ window.addEventListener("load", function () {
 	}
 });
 
+Spruce.store("modal", {
+	open: false,
+});
+Spruce.store("modalTab", {
+	tab: "uno",
+});
+
+if (document.getElementById("animated") !== null) {
+	function anim() {
+		let animItem = document.getElementById("animated");
+
+		let yPos = window.pageYOffset / 6;
+
+		let coords = "translateY(" + yPos + "%)";
+		let opacity = 1;
+
+		animItem.style.transform = coords;
+		animItem.style.opacity = opacity - (yPos / 110);
+	}
+
+	window.addEventListener("scroll", function () {
+		if (window.pageYOffset < 700) {
+			anim();
+		} else {
+			return;
+		}
+	});
+	anim();
+}
+
 let posts = new Swiper(".news__container", {
 	slidesPerView: 3,
 	centeredSlides: true,
@@ -44,7 +74,6 @@ let posts = new Swiper(".news__container", {
 	},
 });
 
-
 let readmorePosts = new Swiper(".readmore__container", {
 	slidesPerView: 3,
 	centeredSlides: true,
@@ -81,13 +110,4 @@ let readmorePosts = new Swiper(".readmore__container", {
 			simulateTouch: false,
 		},
 	},
-});
-
-const burgerBtn = document.querySelectorAll(".js-toggleBurger");
-const mobileMenu = document.querySelector(".header__menu");
-burgerBtn.forEach(function (e) {
-	e.addEventListener("click", function () {
-		mobileMenu.classList.toggle("active");
-		document.documentElement.classList.toggle("no-overflow");
-	});
 });

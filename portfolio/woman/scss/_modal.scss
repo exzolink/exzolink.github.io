@@ -1,0 +1,272 @@
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	overflow-y: auto;
+
+	&__inner {
+		padding: 40px 15px;
+		max-width: 1000px;
+        margin: 0 auto;
+        position: relative;
+	}
+
+	&__title {
+		font-size: 36px;
+		font-weight: 900;
+		color: $gray;
+		text-align: center;
+
+		font-family: "Gotham", sans-serif;
+    }
+    
+    &__close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        width: 36px;
+        height: 36px;
+        pointer-events: all;
+        transition: opacity .2s ease;
+
+        &:hover {
+            cursor: pointer;
+            opacity: .8;
+        }
+    }
+
+	&__selector {
+		display: flex;
+		margin-top: 50px;
+		color: $gray;
+		font-size: 22px;
+		justify-content: space-between;
+
+		&_item {
+			border-radius: 60px;
+			line-height: 1;
+			font-weight: 400;
+			border: 2px solid transparent;
+			padding: 16px 35px;
+			transition: border 0.2s ease, font-weight 0.2s linear;
+
+			&:hover {
+				cursor: pointer;
+				font-weight: 700;
+			}
+
+			&.active {
+				font-weight: 700;
+				border-color: $darkblue;
+			}
+		}
+	}
+
+	&__text {
+		margin-bottom: 50px;
+	}
+	&__block {
+		flex-basis: 100%;
+		display: flex !important;
+	}
+	&__item {
+		margin-top: 55px;
+
+		& img {
+			width: 100%;
+		}
+
+		& .simidonaU {
+			max-width: 420px;
+		}
+
+		& .simidonaF {
+			max-width: 400px;
+		}
+
+		& .miofolik {
+			max-height: 350px;
+			width: auto;
+			margin-bottom: 45px;
+			margin-left: auto;
+		}
+
+		& .prefemin {
+			max-width: 400px;
+		}
+	}
+	&__btn {
+		background-color: $darkblue;
+		border-color: $darkblue;
+		color: #fff;
+		padding: 14px 26px;
+		transition: color 0.3s ease, background 0.3s ease, border 0.3s ease;
+
+		&:hover {
+			color: $gray;
+		}
+	}
+
+	&__pharms {
+		&_item {
+			justify-content: space-between;
+			align-items: center;
+			padding-bottom: 30px;
+			padding-left: 40px;
+			padding-right: 40px;
+			margin-bottom: 20px;
+			display: flex;
+			border-bottom: 3px solid #e5e5e5;
+
+			& span {
+				font-size: 24px;
+				color: $gray;
+			}
+
+			&:last-child {
+				border-bottom: 0;
+				padding-bottom: 0;
+				margin-bottom: 0;
+			}
+		}
+		&_img {
+			max-width: 245px;
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 1150px) {
+    .modal {
+        &__close {
+            top: 10px;
+            width: 24px;
+            height: 24px;
+            z-index: 100;
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+	.modal {
+		&__block {
+			margin-left: 0 !important;
+		}
+		&__selector {
+			&_item {
+				padding: 14px 28px;
+				font-size: 18px;
+			}
+		}
+
+		&__item {
+			& .drug__item_info {
+				margin-left: 35px;
+			}
+		}
+
+		&__title {
+			font-size: 30px;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.modal {
+		&__selector {
+			&_item {
+				font-size: 14px;
+				padding: 12px 21px;
+			}
+		}
+		&__pharms {
+			&_item {
+				flex-wrap: wrap;
+			}
+			&_img {
+				max-width: none;
+				margin-bottom: 15px;
+			}
+		}
+
+		&__title {
+			font-size: 28px;
+		}
+
+		&__btn {
+			padding: 11px 21px;
+			font-size: 16px;
+		}
+	}
+}
+
+@media screen and (max-width: 570px) {
+	.modal {
+		&__pharms {
+			&_item {
+				padding-left: 0;
+				padding-right: 0;
+			}
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+        
+        &__selector {
+            min-width: 100vw;
+            width: 100%;
+
+            &_wrapper {
+                width: 100%;
+                overflow-x: scroll;
+            }
+
+            &_item {
+                min-width: max-content;
+            }
+            
+        }
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.modal {
+		&__item {
+			& img {
+				margin: 0 auto;
+            }
+            & .drug__block_wrapper {
+                margin-top: 0;
+            }
+            & .drug__item_info {
+                margin-left: 0;
+                margin-bottom: 55px;
+            }
+        }
+        
+        &__text {
+            margin-bottom: 15px;
+        }
+
+        &__pharms {
+            &_item {
+                & span {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &__btn {
+            padding: 8px 18px;
+            font-size: 14px;
+        }
+
+        &__title {
+            font-size: 22px;
+        }
+	}
+}
