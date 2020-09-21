@@ -14,6 +14,21 @@ if (document.querySelector(".feedback__container") !== null) {
 	});
 }
 
+let toPreload = document.querySelectorAll(".preload");
+window.addEventListener("load", function () {
+	for (let i = 0; i < toPreload.length; i++) {
+		toPreload[i].rel = "stylesheet";
+	}
+});
+
+if (document.querySelector(".map__canvas") !== null) {
+	const getMap = document.querySelector(".map__canvas");
+	window.addEventListener("load", function () {
+		getMap.innerHTML =
+			'<iframe loading="lazy" src="https://yandex.ru/map-widget/v1/?um=constructor%3A79f16e6093c9276a2c95795219418b17278605d0f9e56dc31bc694c39cb318cb&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>';
+	});
+}
+
 var tabs = document.querySelectorAll(".js-selector");
 var content = document.querySelectorAll(".js-body");
 tabs.forEach(function (e) {

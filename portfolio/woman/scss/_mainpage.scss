@@ -130,6 +130,24 @@
 	overflow-y: hidden;
 }
 
+@media screen and (max-width: 1800px) {
+	.main {
+		&__item {
+			&_img {
+				&.center {
+					max-width: 360px;
+				}
+				&.left {
+					max-width: 360px;
+				}
+				&.right {
+					max-width: 640px;
+				}
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 1600px) {
 	.main {
 		&__header {
@@ -143,17 +161,17 @@
 		&__item {
 			&_img {
 				&.left {
-					max-width: 340px;
+					max-width: 320px;
 					z-index: 2;
 				}
 
 				&.center {
-					max-width: 360px;
+					max-width: 310px;
 					z-index: 3;
 				}
 
 				&.right {
-					max-width: 615px;
+					max-width: 570px;
 					z-index: 1;
 				}
 			}
@@ -169,6 +187,10 @@
 					max-width: 150px;
 				}
 			}
+		}
+
+		&__title {
+			font-size: 42px;
 		}
 	}
 }
@@ -355,6 +377,18 @@
 		&__item {
 			&_btn {
 				font-size: 12px;
+			}
+
+			&_img {
+				&.left {
+					max-width: 280px;
+				}
+				&.center {
+					max-width: 280px;
+				}
+				&.right {
+					max-width: 425px;
+				}
 			}
 		}
 	}

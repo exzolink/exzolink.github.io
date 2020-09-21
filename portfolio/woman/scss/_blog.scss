@@ -20,6 +20,7 @@
 		display: flex;
         justify-content: center;
         margin-bottom: 13%;
+        align-items: unset;
 	}
 
 	&__title {
@@ -49,7 +50,7 @@
         & img {
             width: 100%;
             max-width: 360px;
-            height: max-content;
+            max-height: max-content;
         }
     }
 

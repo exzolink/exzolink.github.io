@@ -61,6 +61,7 @@
 		max-width: 900px;
 		align-items: flex-start;
 		display: none;
+		position: relative;
 
 		&.active {
 			display: flex;
@@ -70,7 +71,7 @@
 	&__content {
 		display: flex;
 		flex-direction: column;
-		margin-left: 125px;
+		margin-left: auto;
 	}
 
 	&__label {
@@ -144,7 +145,10 @@
 	}
 
 	&__img {
-		max-width: 198px;
+		top: 100px;
+		max-width: 300px;
+		position: absolute;
+		left: -100px;
 	}
 }
 
@@ -167,6 +171,16 @@
 		}
 		&__wrapper {
 			padding-bottom: 45px;
+		}
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.buy {
+		&__img {
+			position: initial;
+			left: auto;
+			top: auto;
 		}
 	}
 }
@@ -231,7 +245,7 @@
 			margin-bottom: 45px;
 		}
 		&__img {
-			max-width: 135px;
+			max-width: 250px;
 		}
 	}
 }

@@ -16,22 +16,16 @@ Spruce.store("modalTab", {
 
 if (document.getElementById("animated") !== null) {
 	function anim() {
-		let animItem = document.getElementById("animated");
 		let animBgItem = document.getElementById("animated-bg");
 
 		let yPos = window.pageYOffset / 6;
 
-		let bgCoords = "translateX(" + (animBgItem.dataset.velocity - (yPos / animBgItem.dataset.speed)) + "%)";
-		let coords = "translateY(" + yPos + "%)";
-		let opacity = 1;
-
-		animItem.style.transform = coords;
-		animItem.style.opacity = opacity - yPos / 110;
+		let bgCoords = "translate(" + (animBgItem.dataset.velocity - (yPos / animBgItem.dataset.speed)) + "%," + (yPos / animBgItem.dataset.speed * 1.5) + "%)";
 		animBgItem.style.transform = bgCoords;
 	}
 
 	window.addEventListener("scroll", function () {
-		if (window.pageYOffset < 800) {
+		if (window.pageYOffset < 900) {
 			anim();
 		} else {
 			return;
