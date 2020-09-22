@@ -38,6 +38,7 @@ html {
 body {
 	font-family: "Univers", sans-serif;
 	color: #58595b;
+	overflow-x: hidden;
 }
 
 .pp-section {
@@ -212,5 +213,16 @@ body {
 				background: linear-gradient(to right, #486db2, #69c6a1);
 			}
 		}
+	}
+}
+
+
+@media screen and (max-width: 790px) and (orientation: landscape) {
+	img {
+		max-width: 100vh !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		height: auto !important;
+		max-height: none !important;
 	}
 }

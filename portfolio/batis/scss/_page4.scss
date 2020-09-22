@@ -149,7 +149,7 @@
         }
 
         &__quote img {
-            max-height: 50px;
+            width: 60px;
             transform: rotate(90deg);
         }
         &__wrapper {
@@ -178,7 +178,6 @@
     }
 }
 
-
 @media screen and (max-width: 790px) {
     .page4 {
         &__wrapper {
@@ -190,6 +189,13 @@
 
         &__desc {
             font-size: 24px;
+        }
+
+        &__quote {
+            & img {
+                margin-left: 25px !important;
+                width: 35px !important;
+            }
         }
 
         &__img {
