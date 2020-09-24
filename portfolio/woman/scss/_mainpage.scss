@@ -1,6 +1,7 @@
 .main {
 	background-color: #e4c8c9;
 	background: linear-gradient(to bottom, #e4c8c9, #e4c8c9, #e4c8c9, #fff);
+	min-height: -webkit-fill-available;
 	height: 100vh;
 	overflow-x: hidden;
 	position: relative;
