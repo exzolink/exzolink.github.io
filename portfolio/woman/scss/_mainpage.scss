@@ -1,8 +1,9 @@
 .main {
 	background-color: #e4c8c9;
 	background: linear-gradient(to bottom, #e4c8c9, #e4c8c9, #e4c8c9, #fff);
-	min-height: -webkit-fill-available;
 	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);
+	min-height: -webkit-fill-available;
 	overflow-x: hidden;
 	position: relative;
 

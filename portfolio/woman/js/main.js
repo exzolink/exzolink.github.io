@@ -7,6 +7,17 @@ window.addEventListener("load", function () {
 	}
 });
 
+// Фикс попапов на мобильных устройствах
+var vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+if (window.innerWidth < 800) {
+	window.addEventListener("resize", () => {
+		var vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty("--vh", `${vh}px`);
+	});
+}
+
 Spruce.store("modal", {
 	open: false,
 });
