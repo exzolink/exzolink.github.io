@@ -13,15 +13,17 @@
 	</head>
 	<body class="main">
 		<img
+			loading="lazy"
 			decoding="async"
-			class="main__bg main__bg_left lazyload"
-			data-src="imgs/cloudsBg.png"
+			class="main__bg main__bg_left"
+			src="imgs/cloudsBg.png"
 			alt=""
 		/>
 		<img
+			loading="lazy"
 			decoding="async"
-			class="main__bg main__bg_right lazyload"
-			data-src="imgs/cloudsBg.png"
+			class="main__bg main__bg_right"
+			src="imgs/cloudsBg.png"
 			alt=""
 		/>
 
@@ -43,7 +45,7 @@
 					alt=""
 				/>
 				<div class="main__item_block left">
-					<a href="" class="main__item_btn left">При менструации</a>
+					<a href="" data-btn="left" class="main__item_btn left">При менструации</a>
 					<img
 						class="main__item_subimg left lazyload"
 						data-src="imgs/simidona.png"
@@ -59,7 +61,7 @@
 					alt=""
 				/>
 				<div class="main__item_block center">
-					<a href="" class="main__item_btn center">Для будущих мам</a>
+					<a href="" data-btn="center" class="main__item_btn center">Для будущих мам</a>
 					<img
 						class="main__item_subimg center lazyload"
 						data-src="imgs/miofolik.png"
@@ -75,7 +77,7 @@
 					alt=""
 				/>
 				<div class="main__item_block right">
-					<a href="" class="main__item_btn right">При климаксе</a>
+					<a href="" data-btn="right" class="main__item_btn right">При климаксе</a>
 					<img
 						class="main__item_subimg right lazyload"
 						data-src="imgs/prefemin.png"

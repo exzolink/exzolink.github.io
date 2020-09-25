@@ -9,7 +9,9 @@
 		#e4c8c9,
 		#fff
 	);
-	min-height: 100vh;
+	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);
+	min-height: -webkit-fill-available;
 	position: relative;
 
 	&__body {

@@ -4,7 +4,7 @@
 	height: 100vh;
 	height: calc(var(--vh, 1vh) * 100);
 	min-height: -webkit-fill-available;
-	overflow-x: hidden;
+	overflow: hidden;
 	position: relative;
 
 	&__header {
@@ -34,7 +34,9 @@
 	&__bg {
 		position: absolute;
 		bottom: 0;
+		transition: transform 2s ease;
 		mix-blend-mode: screen;
+		transform: translate(0%, 0%);
 
 		&_left {
 			left: 0;
@@ -42,7 +44,6 @@
 
 		&_right {
 			right: 0;
-			transform: scaleX(-1);
 		}
 	}
 
@@ -61,23 +62,28 @@
 		align-items: center;
 		flex-direction: column;
 		position: relative;
+		
 
 		&_img {
 			position: absolute;
-			bottom: -55px;
+			bottom: -70px;
+			transition: transform 1.5s ease;
 
 			&.left {
 				max-width: 410px;
 				left: 0;
+				transform: translateX(10%) scale(1);
 			}
 
 			&.center {
-				max-width: 430px;
+				max-width: 470px;
+				transform: translateY(10%) scale(1);
 			}
 
 			&.right {
 				max-width: 685px;
 				right: 0;
+				transform: translateX(0%) scale(1);
 			}
 		}
 
@@ -93,13 +99,13 @@
 
 		&_subimg {
 			margin-bottom: 50px;
-			max-width: 315px;
+			max-width: 235px;
 			opacity: 0;
 			visibility: collapse;
 			transition: opacity 0.7s ease, visibility 0.7s ease;
 
 			&.center {
-				max-width: 220px;
+				max-width: 140px;
 			}
 		}
 
@@ -221,6 +227,18 @@
 	}
 }
 
+@media screen and (max-width: 1100px) {
+	.main {
+		&__item {
+			&_img {
+				&.left {
+					transform: translate(0%, 0%);
+				}
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 1024px) {
 	.main {
 		display: flex;
@@ -308,14 +326,12 @@
 				position: absolute;
 
 				&.left {
-					left: 50%;
-					margin-left: -75px;
+					left: 15px;
 					bottom: 100px;
 				}
 				&.right {
-					right: 50%;
+					right: 15px;
 					bottom: 100px;
-					margin-right: -75px;
 				}
 			}
 		}
