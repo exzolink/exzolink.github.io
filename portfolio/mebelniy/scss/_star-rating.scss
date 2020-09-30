@@ -1,0 +1,50 @@
+$filled-star-color: #FECB2F;
+$unfilled-star-color: #C7CAD1;
+$star-size: 24px;
+
+.rating {
+    display: none;
+    font-size: $star-size;
+    font-weight: bold;
+    color: $filled-star-color;
+    white-space: nowrap;
+    line-height: normal;
+}
+
+.rating .star {
+    display: inline-block;
+    position: relative;
+    letter-spacing: 0.05em;
+}
+
+.rating .star::before {
+    display: inline-block;
+    color: $unfilled-star-color;
+    content: '★';
+    width: 1em;
+    height: 1em;
+}
+
+.rating .star::after {
+    display: inline-block;
+    position: absolute;
+    content: '★';
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    transition: all 0.1s linear;
+    overflow: hidden;
+}
+
+.rating:not([disabled]) .star:hover::after,
+.rating .star.active::after {
+    opacity: 1;
+    width: 28px;
+    height: 28px;
+}
+
+.rating .star.active.half::after {
+    width: 0.5em;
+}

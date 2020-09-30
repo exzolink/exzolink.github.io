@@ -1,0 +1,348 @@
+$prodblue: #3e85dc;
+$prodgray: #68788e;
+
+img {
+	user-select: none;
+}
+
+::placeholder {
+	opacity: 1;
+}
+::-webkit-input-placeholder {
+	color: inherit;
+	opacity: 1;
+}
+
+.green {
+	color: #7da429;
+}
+
+.red {
+	color: #775443;
+}
+
+.product {
+	font-family: "Open Sans", sans-serif;
+	background-color: #f5f6f9;
+	margin: 0;
+	padding: 16px 0;
+
+	&__item {
+		margin-top: 16px;
+		display: flex;
+	}
+
+	&__arrow {
+		position: relative;
+		z-index: 1;
+
+		&:hover {
+			cursor: pointer;
+			& img {
+				filter: brightness(0) saturate(100%) invert(27%) sepia(0%) saturate(0%)
+					hue-rotate(246deg) brightness(86%) contrast(93%);
+			}
+		}
+
+		& img {
+			transition: filter 0.2s linear;
+			width: 20px;
+			height: 10px;
+		}
+	}
+
+	&__sliders {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-basis: 58%;
+
+		&_main {
+			height: 100%;
+			display: flex;
+			max-width: 620px;
+			background-color: #fff;
+		}
+
+		&_thumbs {
+			width: 68px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__thumbs {
+		margin-right: 0;
+		margin-left: 0;
+		height: 280px;
+		margin-top: 18px;
+		margin-bottom: 12px;
+
+		&_slide {
+			border-radius: 0;
+			transition: opacity 0.2s ease;
+
+			&:hover {
+				cursor: pointer;
+				opacity: 0.85;
+			}
+
+			&.swiper-slide-active {
+				opacity: 1;
+				cursor: default;
+
+				& img {
+					border-bottom: 3px solid $prodblue;
+				}
+			}
+
+			& img {
+				width: 100%;
+			}
+		}
+	}
+
+	&__main {
+		max-width: none;
+
+		&_wrapper {
+			align-items: center;
+		}
+
+		&_slide {
+			display: flex;
+			align-items: center;
+			border-radius: 0;
+
+			& img {
+				width: 100%;
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		flex-basis: 42%;
+		background-color: #fff;
+		padding: 20px;
+
+		&_top {
+			display: flex;
+			justify-content: space-between;
+			border-bottom: 1px solid #f5f6f9;
+			padding-bottom: 6px;
+			margin-bottom: 14px;
+		}
+
+		&_title {
+			color: $prodblue;
+			font-size: 24px;
+			line-height: normal;
+			font-weight: 700;
+		}
+
+		&_text {
+			color: $prodgray;
+			margin-bottom: 0;
+			font-size: 12px;
+		}
+
+		&_store {
+			display: flex;
+			margin-top: 12px;
+
+			& p {
+				&:last-child {
+					margin-left: 16px;
+				}
+			}
+		}
+	}
+
+	&__rating {
+		margin-left: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+
+		&_rate {
+			padding-right: 3px;
+			line-height: normal;
+			font-size: 16px;
+			color: $prodgray;
+		}
+	}
+
+	&__findcheap {
+		border: 2px dashed #c7cad1;
+		padding: 20px;
+		border-radius: 8px;
+
+		&_title {
+			line-height: normal;
+			font-size: 20px !important;
+			font-weight: 400;
+			color: #4a5160;
+			margin-bottom: 2px;
+		}
+
+		&_form {
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: 16px;
+			justify-content: space-between;
+
+			& input {
+				width: 46%;
+				padding: 11px 16px;
+				color: #4a5160;
+				border: 1px solid #4a5160;
+				font-family: "Open Sans", sans-serif;
+				font-size: 12px;
+
+				&:focus {
+					color: $prodblue;
+					border: 1px solid $prodblue;
+				}
+			}
+		}
+	}
+
+	&__btn_wrap {
+		margin-top: 12px;
+		flex-basis: 100%;
+		& button {
+			color: $prodblue;
+			border: 0;
+			font-size: 12px;
+			font-family: "Open Sans", sans-serif;
+			background-color: transparent;
+			transition: opacity 0.2s ease;
+
+			&:hover {
+				cursor: pointer;
+				opacity: 0.8;
+			}
+		}
+	}
+
+	&__btns {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-around;
+		margin-top: 20px;
+		border-bottom: 1px solid #c7cad1;
+		padding-bottom: 8px;
+
+		&_price {
+			height: 40px;
+			background-color: #fecb2f;
+			border: 0;
+			padding-left: 20px;
+			padding-right: 20px;
+			justify-content: center;
+			display: inline-flex;
+			font-size: 16px;
+			color: #4a5160;
+			font-family: inherit;
+			align-items: center;
+			margin-bottom: 14px;
+			flex: 0.12 auto;
+			border-radius: 2px;
+		}
+		&_cart {
+			height: 40px;
+			background-color: $prodblue;
+			border: 1px solid $prodblue;
+			padding-left: 20px;
+			padding-right: 20px;
+			font-family: inherit;
+			color: #fff;
+			flex: 0.12 auto;
+			font-size: 16px;
+			margin-bottom: 14px;
+			border-radius: 2px;
+			transition: background 0.2s ease, color 0.2s ease;
+
+			&:hover {
+				cursor: pointer;
+				background-color: transparent;
+				color: $prodblue;
+			}
+		}
+		&_oneclick {
+			height: 40px;
+			padding-left: 20px;
+			padding-right: 20px;
+			font-family: inherit;
+			font-size: 16px;
+			color: $prodblue;
+			flex: 0.25 auto;
+			border-radius: 2px;
+			background-color: transparent;
+			border: 1px solid $prodblue;
+			margin-bottom: 14px;
+
+			transition: background 0.2s ease, color 0.2s ease;
+
+			&:hover {
+				cursor: pointer;
+				background-color: $prodblue;
+				color: #fff;
+			}
+		}
+    }
+    
+    &__add {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 12px;
+
+        &_block {
+            margin-left: 16px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &_cart {
+            display: flex;
+            align-items: center;
+
+            & img.active {
+                filter: brightness(0) saturate(100%) invert(33%) sepia(15%) saturate(1800%) hue-rotate(297deg) brightness(98%) contrast(90%);
+            }
+            
+            &:hover {
+                cursor: pointer;
+            }
+
+            &-btn {
+                color: #4A5160;
+                font-size: 16px;
+                line-height: normal;
+                margin-bottom: 3px;
+            }
+            &-text {
+                color: $prodgray;
+                font-size: 12px;
+                line-height: normal;
+            }
+        }
+
+        &_compare {
+            display: flex;
+            align-items: center;
+
+            & img.active {
+                filter: brightness(0) saturate(100%) invert(60%) sepia(39%) saturate(5192%) hue-rotate(21deg) brightness(93%) contrast(76%)
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

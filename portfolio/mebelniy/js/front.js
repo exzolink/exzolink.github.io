@@ -1,7 +1,7 @@
 "use strict";
 
 const _mainSwiperInit = () => {
-  let swiperMain = new Swiper(".swiper-container", {
+  let swiperMain = new Swiper(".mainpage-container", {
     // Optional parameters
     autoplay: {
       delay: 3000,
