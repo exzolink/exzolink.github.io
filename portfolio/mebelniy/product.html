@@ -654,115 +654,778 @@
 			</div>
 		</header>
 
-		<main class="product">
-			<div class="container">
-				<div class="product__item">
-					<div class="product__sliders">
-						<div class="product__sliders_thumbs">
-							<div class="product__arrow product__thumbs_prev">
-								<img src="imgs/product/arrow-top.svg" alt="" />
+		<main class="products">
+			<div class="container products-container">
+				<!-- Основная информация о товаре (мобильная версия) -->
+				<div class="products__info_top mobile">
+					<div class="products__info_wrap">
+						<h1 class="products__info_title">Стенка в гостиную Twin</h1>
+						<div class="products__info_wrap products__rating mobile">
+							<!-- Рейтинг (data-default-rating для вывода текущего рейтинга) -->
+							<span
+								class="rating"
+								data-stars="5"
+								data-default-rating="4.5"
+								disabled
+							></span>
+							<!-- Текстовый вывод рейтинга -->
+							<span class="products__rating_rate">4.8</span>
+						</div>
+
+						<div class="products__info_text-wrapper">
+							<span class="products__info_text articul"
+								>Артикул:
+								<span style="color: #4a5160; margin-top: 3px"
+									>BRW-0210805</span
+								></span
+							>
+
+							<div class="products__info_store">
+								<p class="products__info_text">
+									В наличии <span class="green">33</span>
+								</p>
+								<p class="products__info_text">
+									Под заказ <span class="red">3-5 дней</span>
+								</p>
 							</div>
-							<div class="swiper-container product__thumbs">
-								<div class="swiper-wrapper product__thumbs_wrapper">
-									<div class="swiper-slide product__thumbs_slide">
+						</div>
+					</div>
+				</div>
+
+				<div class="products__item">
+					<div class="products__sliders">
+						<div class="products__sliders_thumbs">
+							<div class="products__arrow products__thumbs_prev">
+								<img src="imgs/products/arrow-top.svg" alt="" />
+							</div>
+							<!-- Слайды для управления главной картинкой -->
+							<div class="swiper-container products__thumbs">
+								<div class="swiper-wrapper products__thumbs_wrapper">
+									<div class="swiper-slide products__thumbs_slide">
 										<img src="imgs/ms-shkaf.jpg" alt="" />
 									</div>
-									<div class="swiper-slide product__thumbs_slide">
+									<div class="swiper-slide products__thumbs_slide">
 										<img src="imgs/ms-gostinaya.jpg" alt="" />
 									</div>
-									<div class="swiper-slide product__thumbs_slide">
+									<div class="swiper-slide products__thumbs_slide">
 										<img src="imgs/ms-divani.jpg" alt="" />
 									</div>
-									<div class="swiper-slide product__thumbs_slide">
+									<div class="swiper-slide products__thumbs_slide">
 										<img src="imgs/ms-shkaf.jpg" alt="" />
 									</div>
-									<div class="swiper-slide product__thumbs_slide">
+									<div class="swiper-slide products__thumbs_slide">
 										<img src="imgs/ms-shkaf.jpg" alt="" />
 									</div>
 								</div>
 							</div>
-							<div class="product__arrow product__thumbs_next">
-								<img src="imgs/product/arrow-bottom.svg" alt="" />
+							<div class="products__arrow products__thumbs_next">
+								<img src="imgs/products/arrow-bottom.svg" alt="" />
 							</div>
 						</div>
 
-
-						<div class="product__sliders_main">
-							<div class="swiper-container product__main">
-								<div class="swiper-wrapper product__main_wrapper">
-									<div class="swiper-slide product__main_slide">
-										<img src="imgs/ms-shkaf.jpg" alt="">
+						<!-- Главный слайдер -->
+						<div class="products__sliders_main">
+							<div class="swiper-container products__main">
+								<div class="swiper-wrapper products__main_wrapper">
+									<div class="swiper-slide products__main_slide">
+										<img src="imgs/ms-shkaf.jpg" alt="" />
 									</div>
-									<div class="swiper-slide product__main_slide">
-										<img src="imgs/ms-gostinaya.jpg" alt="">
+									<div class="swiper-slide products__main_slide">
+										<img src="imgs/ms-gostinaya.jpg" alt="" />
 									</div>
-									<div class="swiper-slide product__main_slide">
-										<img src="imgs/ms-divani.jpg" alt="">
+									<div class="swiper-slide products__main_slide">
+										<img src="imgs/ms-divani.jpg" alt="" />
 									</div>
-									<div class="swiper-slide product__main_slide">
-										<img src="imgs/ms-shkaf.jpg" alt="">
+									<div class="swiper-slide products__main_slide">
+										<img src="imgs/ms-shkaf.jpg" alt="" />
 									</div>
-									<div class="swiper-slide product__main_slide">
-										<img src="imgs/ms-shkaf.jpg" alt="">
+									<div class="swiper-slide products__main_slide">
+										<img src="imgs/ms-shkaf.jpg" alt="" />
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="product__info">
-						<div class="product__info_top">
-							<div class="product__info_wrap">
-								<h1 class="product__info_title">
-									Стенка в гостиную Twin
-								</h1>
-								<span class="product__info_text">Артикул: BRW-0210805</span>
+					<!-- Основная информация о товаре (большие экраны) -->
+					<div class="products__info">
+						<div class="products__info_top desktop">
+							<div class="products__info_wrap">
+								<h1 class="products__info_title">Стенка в гостиную Twin</h1>
+								<span class="products__info_text">Артикул: BRW-0210805</span>
 
-								<div class="product__info_store">
-									<p class="product__info_text">В наличии <span class="green">33</span></p>
-									<p class="product__info_text">Под заказ <span class="red">3-5 дней</span></p>
+								<div class="products__info_store">
+									<p class="products__info_text">
+										В наличии <span class="green">33</span>
+									</p>
+									<p class="products__info_text">
+										Под заказ <span class="red">3-5 дней</span>
+									</p>
 								</div>
 							</div>
 
-							<div class="product__info_wrap product__rating">
-								<span class="rating" data-stars="5" data-default-rating="4.5" disabled></span>
-								<span class="product__rating_rate">4.8</span>
+							<div class="products__info_wrap products__rating">
+								<!-- Рейтинг (data-default-rating для вывода текущего рейтинга) -->
+								<span
+									class="rating"
+									data-stars="5"
+									data-default-rating="4.5"
+									disabled
+								></span>
+								<span class="products__rating_rate">4.8</span>
 							</div>
 						</div>
 
-						<div class="product__findcheap">
-							<h4 class="product__findcheap_title">Нашли дешевле?</h4>
-							<p class="product__info_text">пришлите нам ссылку и мы сделаем для Вас скидку!</p>
+						<div class="products__findcheap">
+							<h4 class="products__findcheap_title">Нашли дешевле?</h4>
+							<p class="products__info_text">
+								пришлите нам ссылку и мы сделаем для Вас скидку!
+							</p>
 
-							<form class="product__findcheap_form" action="">
-								<input type="text" autocomplete="off" required placeholder="Ссылка на товар">
-								<input type="tel" autocomplete="off" required minlength="11" placeholder="Ваш телефон">
-								<div class="product__btn_wrap">
+							<!-- Форма для отправки товара дешевле -->
+							<form class="products__findcheap_form" action="">
+								<input
+									type="text"
+									autocomplete="off"
+									required
+									placeholder="Ссылка на товар"
+								/>
+								<input
+									type="tel"
+									autocomplete="off"
+									required
+									minlength="11"
+									placeholder="Ваш телефон"
+								/>
+								<div class="products__btn_wrap">
 									<button type="submit">Отправить ></button>
 								</div>
 							</form>
 						</div>
 
-						<div class="product__btns">
-							<span class="product__btns_price">14 999 руб.</span>
-							<button class="product__btns_cart">В корзину</button>
-							<button class="product__btns_oneclick">Купить в 1 клик</button>
+						<!-- Кнопки для покупки / ценник -->
+						<div class="products__btns">
+							<span class="products__btns_price">14 999 руб.</span>
+							<button class="products__btns_cart">В корзину</button>
+							<button class="products__btns_oneclick">Купить в 1 клик</button>
 						</div>
 
-						<div class="product__add">
-							<div id="addToCart" class="product__add_cart">
-								<img src="imgs/product/heart.svg" width="24" height="24" alt="">
-								<div class="product__add_block">
-									<span class="product__add_cart-btn">Добавить в избранное</span>
-									<span class="product__add_cart-text">Товаров (нет)</span>
+						<div class="products__add">
+							<!-- Добавить в корзину (добавляется класс active к блоку с ID, 
+									при загрузке страницы также проверяется на active) -->
+							<div id="addToCart" class="products__add_cart">
+								<img
+									src="imgs/products/heart.svg"
+									width="24"
+									height="24"
+									alt=""
+								/>
+								<div class="products__add_block">
+									<span class="products__add_cart-btn"
+										>Добавить в избранное</span
+									>
+									<span class="products__add_cart-text">Товаров (нет)</span>
 								</div>
 							</div>
 
-							<div id="addToCompare" class="product__add_compare">
-								<img src="imgs/product/weight.svg" width="24" height="24" alt="">
-								<div class="product__add_block">
-									<span class="product__add_cart-btn">Добавить в сравнение</span>
-									<span class="product__add_cart-text">Товаров (нет)</span>
+							<!-- Добавить в сравнение (добавляется класс active к блоку с ID, 
+									при загрузке страницы также проверяется на active) -->
+							<div id="addToCompare" class="products__add_compare">
+								<img
+									src="imgs/products/weight.svg"
+									width="24"
+									height="24"
+									alt=""
+								/>
+								<div class="products__add_block">
+									<span class="products__add_cart-btn"
+										>Добавить в сравнение</span
+									>
+									<span class="products__add_cart-text">Товаров (нет)</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Табы (data-tab кнопки должен соответствовать ID контента) -->
+				<div class="products__tabs">
+					<div class="products__tabs_inner">
+						<div class="products__selector_wrapper">
+							<div class="products__selector">
+								<div data-tab="chars" class="products__selector_item active">
+									<img
+										src="imgs/products/chars.svg"
+										width="24"
+										height="24"
+										alt=""
+									/>
+									<span>Характеристики</span>
+								</div>
+
+								<div data-tab="colors" class="products__selector_item">
+									<img
+										src="imgs/products/colors.svg"
+										width="24"
+										height="24"
+										alt=""
+									/>
+									<span>Цвета</span>
+								</div>
+
+								<div data-tab="obivka" class="products__selector_item">
+									<img
+										src="imgs/products/material.svg"
+										width="24"
+										height="24"
+										alt=""
+									/>
+									<span>Обивка</span>
+								</div>
+
+								<div data-tab="desc" class="products__selector_item">
+									<img
+										src="imgs/products/docs.svg"
+										width="24"
+										height="24"
+										alt=""
+									/>
+									<span>Описание</span>
+								</div>
+
+								<div data-tab="feedback" class="products__selector_item">
+									<img
+										src="imgs/products/feedback.svg"
+										width="24"
+										height="24"
+										alt=""
+									/>
+									<span>Отзывы (100)</span>
+								</div>
+
+								<div data-tab="delivery" class="products__selector_item">
+									<img
+										src="imgs/products/delivery.svg"
+										width="24"
+										height="24"
+										alt=""
+									/>
+									<span>Доставка</span>
+								</div>
+
+								<div data-tab="collection" class="products__selector_item">
+									<img
+										src="imgs/products/collection.svg"
+										width="24"
+										height="24"
+										alt=""
+									/>
+									<span>Вся коллекция</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="products__content">
+							<!-- Вкладка: Характеристики -->
+							<div id="chars" class="products__content_item active">
+								<table class="products__table">
+									<tbody>
+										<tr>
+											<td>Длина (см)</td>
+											<td>100</td>
+										</tr>
+										<tr>
+											<td>Глубина (см)</td>
+											<td>50</td>
+										</tr>
+										<tr>
+											<td>Высота (см)</td>
+											<td>200</td>
+										</tr>
+										<tr>
+											<td>Производитель</td>
+											<td><a href="">BlackRedWhite</a></td>
+										</tr>
+										<tr>
+											<td>Материал</td>
+											<td>МДФ</td>
+										</tr>
+										<tr>
+											<td>Цвет</td>
+											<td>Светлый</td>
+										</tr>
+										<tr>
+											<td>Стиль</td>
+											<td>Современный</td>
+										</tr>
+										<tr>
+											<td>Крашение</td>
+											<td>белый альпийский</td>
+										</tr>
+										<tr>
+											<td>Вид поставки</td>
+											<td>В разобранном виде</td>
+										</tr>
+										<tr>
+											<td>Материал каркаса</td>
+											<td>ламинированное ДСтП</td>
+										</tr>
+										<tr>
+											<td>Страна изготовитель</td>
+											<td>Беларусь</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<!-- Вкладка: Цвета -->
+							<div id="colors" class="products__content_item">
+								<div class="products__color_inner">
+									<div class="products__color_item">
+										<img src="imgs/products/squareColor.svg" alt="" />
+										<span>Зеленый</span>
+									</div>
+
+									<div class="products__color_item">
+										<img src="imgs/products/squareColor.svg" alt="" />
+										<span>Зеленый</span>
+									</div>
+
+									<div class="products__color_item">
+										<img src="imgs/products/squareColor.svg" alt="" />
+										<span>Зеленый</span>
+									</div>
+
+									<div class="products__color_item">
+										<img src="imgs/products/squareColor.svg" alt="" />
+										<span>Зеленый</span>
+									</div>
+								</div>
+							</div>
+
+							<!-- Вкладка: Обивка -->
+							<div id="obivka" class="products__content_item">
+								<div class="products__obivka_inner">
+									<div class="products__obivka_item">
+										<span>Экокожа Батлер</span>
+										<div class="products__obivka_imgs">
+											<img src="imgs/products/squareColor.svg" alt="" />
+											<img src="imgs/products/squareColor.svg" alt="" />
+											<img src="imgs/products/squareColor.svg" alt="" />
+											<img src="imgs/products/squareColor.svg" alt="" />
+										</div>
+									</div>
+									<div class="products__obivka_item">
+										<span>Экокожа Батлер</span>
+										<div class="products__obivka_imgs">
+											<img src="imgs/products/squareColor.svg" alt="" />
+											<img src="imgs/products/squareColor.svg" alt="" />
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Вкладка: Описание -->
+							<div id="desc" class="products__content_item">
+								<div class="products__description">
+									<p>
+										Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+										Hic tenetur laboriosam adipisci aut ipsum, nemo magni
+										excepturi obcaecati aliquid? Deleniti, dolore in. Suscipit,
+										ipsa. Aliquid aut laborum maxime quibusdam impedit.
+									</p>
+								</div>
+							</div>
+
+							<!-- Вкладка: Отзывы -->
+							<div id="feedback" class="products__content_item">
+								<div class="products__feedback_inner">
+									<div class="products__feedback_general">
+										<span>Общий рейтинг</span>
+										<div class="products__info_wrap products__rating">
+											<!-- Рейтинг (data-default-rating для вывода текущего рейтинга) -->
+											<span
+												class="rating"
+												data-stars="5"
+												data-default-rating="4.5"
+												disabled
+											></span>
+											<!-- Текстовый вывод рейтинга -->
+											<span class="products__rating_rate">4.8</span>
+										</div>
+										<span class="products__feedback_reviews-count"
+											>302 отзыва</span
+										>
+
+										<button class="products__feedback_btn">
+											Оставить отзыв
+										</button>
+									</div>
+
+									<div class="products__feedback_body">
+										<div class="products__feedback_item">
+											<div class="products__feedback_item-top">
+												<span class="products__feedback_item-name">Алла</span>
+												<span class="products__feedback_item-date"
+													>13.02.2020</span
+												>
+												<span
+													class="rating"
+													data-stars="5"
+													data-default-rating="4.5"
+													disabled
+												></span>
+											</div>
+
+											<div class="products__feedback_item-marks">
+												<p class="green">
+													Достоинства
+													<span style="padding-left: 16px">цвет, качество</span>
+												</p>
+												<p class="red">
+													Недостатки
+													<span style="padding-left: 23px">не заметила</span>
+												</p>
+											</div>
+
+											<div class="products__feedback_item-desc">
+												На серебряную свадьбу родителям решили сделать подарок
+												для их кухни – гостиной. Им нужен был в первую очередь
+												обеденный стол, но когда увидели на сайте вариант Riva –
+												2 с комодом, сразу решили подарить именно этот комплект,
+												так как и цвет и дизайн идеально подходят для дома
+												родителей. Доставка при цене нашей гостиной оказалась
+												бесплатной, комплектация вся в порядке.
+											</div>
+										</div>
+
+										<div class="products__feedback_item">
+											<div class="products__feedback_item-top">
+												<span class="products__feedback_item-name">Алла</span>
+												<span class="products__feedback_item-date"
+													>13.02.2020</span
+												>
+												<span
+													class="rating"
+													data-stars="5"
+													data-default-rating="4.5"
+													disabled
+												></span>
+											</div>
+
+											<div class="products__feedback_item-marks">
+												<p class="green">
+													Достоинства
+													<span style="padding-left: 16px">цвет, качество</span>
+												</p>
+												<p class="red">
+													Недостатки
+													<span style="padding-left: 23px">не заметила</span>
+												</p>
+											</div>
+
+											<div class="products__feedback_item-desc">
+												На серебряную свадьбу родителям решили сделать подарок
+												для их кухни – гостиной. Им нужен был в первую очередь
+												обеденный стол, но когда увидели на сайте вариант Riva –
+												2 с комодом, сразу решили подарить именно этот комплект,
+												так как и цвет и дизайн идеально подходят для дома
+												родителей. Доставка при цене нашей гостиной оказалась
+												бесплатной, комплектация вся в порядке.
+											</div>
+										</div>
+
+										<div class="products__feedback_item">
+											<div class="products__feedback_item-top">
+												<span class="products__feedback_item-name">Алла</span>
+												<span class="products__feedback_item-date"
+													>13.02.2020</span
+												>
+												<span
+													class="rating"
+													data-stars="5"
+													data-default-rating="4.5"
+													disabled
+												></span>
+											</div>
+
+											<div class="products__feedback_item-marks">
+												<p class="green">
+													Достоинства
+													<span style="padding-left: 16px">цвет, качество</span>
+												</p>
+												<p class="red">
+													Недостатки
+													<span style="padding: 23px">не заметила</span>
+												</p>
+											</div>
+
+											<div class="products__feedback_item-desc">
+												На серебряную свадьбу родителям решили сделать подарок
+												для их кухни – гостиной. Им нужен был в первую очередь
+												обеденный стол, но когда увидели на сайте вариант Riva –
+												2 с комодом, сразу решили подарить именно этот комплект,
+												так как и цвет и дизайн идеально подходят для дома
+												родителей. Доставка при цене нашей гостиной оказалась
+												бесплатной, комплектация вся в порядке.
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Вкладка: Доставка -->
+							<div id="delivery" class="products__content_item">
+								<div class="products__delivery_inner">
+									<div class="products__delivery_btn">
+										<button class="products__feedback_btn">Поделиться</button>
+									</div>
+
+									<div class="products__delivery_cards">
+										<div class="products__delivery_card">
+											<img src="imgs/products/Bdelivery.svg" alt="" />
+											<span class="products__delivery_text-title"
+												>Доставка по Москве</span
+											>
+											<span class="products__delivery_text-subtitle"
+												>0 руб.</span
+											>
+
+											<span class="products__delivery_text-title"
+												>Доставка по МО</span
+											>
+											<span class="products__delivery_text-subtitle"
+												>+30 руб/км</span
+											>
+
+											<span class="products__delivery_text-title"
+												>Доставка по России</span
+											>
+											<span class="products__delivery_text-subtitle"
+												>от 1000 руб.</span
+											>
+										</div>
+
+										<div class="products__delivery_card">
+											<img src="imgs/products/Bupload.svg" alt="" />
+											<span class="products__delivery_text-title"
+												>Подъем мебели</span
+											>
+											<span class="products__delivery_text-subtitle"
+												>от 50 руб.</span
+											>
+											<span class="products__delivery_text-subtitle"
+												>(за единицу товара)</span
+											>
+										</div>
+
+										<div class="products__delivery_card">
+											<img src="imgs/products/Brules.svg" alt="" />
+											<span class="products__delivery_text-title"
+												>Сборка мебели</span
+											>
+											<span class="products__delivery_text-subtitle"
+												>от 1000 руб.</span
+											>
+											<span class="products__delivery_text-subtitle"
+												>(5-10% от стоимости)</span
+											>
+										</div>
+
+										<div class="products__delivery_card">
+											<img src="imgs/products/Bcard.svg" alt="" />
+											<span class="products__delivery_text-title"
+												>Наличными курьеру</span
+											>
+											<span class="products__delivery_text-title"
+												>Банковскими картами</span
+											>
+											<span class="products__delivery_text-title"
+												>Безналичным платежом</span
+											>
+										</div>
+
+										<div class="products__delivery_card">
+											<img src="imgs/products/Bsticker.svg" alt="" />
+											<span class="products__delivery_text-title"
+												>Сертификаты качества</span
+											>
+											<span class="products__delivery_text-title"
+												>Гарантия замены и возврата</span
+											>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Вкладка: Коллекция -->
+							<div id="collection" class="products__content_item">
+								<div class="products__collection_inner">
+									<div class="swiper-button-prev"></div>
+									<div class="swiper-container products__collection">
+										<div class="swiper-wrapper products__collection_wrapper">
+											<!-- слайд -->
+											<div class="swiper-slide products__collection_slide">
+												<a href="" class="products__collection_img">
+													<img src="imgs/ms-matrasi.jpg" alt="" />
+												</a>
+
+												<div class="products__collection_slide-content">
+													<div class="products__collection_info">
+														<h3>Название товара</h3>
+
+														<div class="products__collection_btns">
+															<img
+																title="Добавить в сравнение"
+																src="imgs/products/weight.svg"
+																width="16"
+																height="16"
+																alt=""
+															/>
+															<img
+																title="Добавить в избранное"
+																src="imgs/products/heart.svg"
+																width="16"
+																height="16"
+																alt=""
+															/>
+														</div>
+													</div>
+
+													<div class="products__collection_price">
+														<span class="products__currPrice">51 000 руб.</span>
+													</div>
+
+													<button
+														class="products__feedback_btn products__collection_add"
+													>
+														Добавить в набор
+													</button>
+												</div>
+											</div>
+
+											<!-- слайд -->
+											<div class="swiper-slide products__collection_slide">
+												<a href="" class="products__collection_img">
+													<img src="imgs/ms-matrasi.jpg" alt="" />
+												</a>
+
+												<div class="products__collection_slide-content">
+													<div class="products__collection_info">
+														<h3>Название товара</h3>
+
+														<div class="products__collection_btns">
+															<img
+																title="Добавить в сравнение"
+																src="imgs/products/weight.svg"
+																width="16"
+																height="16"
+																alt=""
+															/>
+															<img
+																title="Добавить в избранное"
+																src="imgs/products/heart.svg"
+																width="16"
+																height="16"
+																alt=""
+															/>
+														</div>
+													</div>
+
+													<div class="products__collection_price">
+														<span class="products__currPrice">51 000 руб.</span>
+														<span class="products__prevPrice">60 000 руб.</span>
+													</div>
+
+													<button
+														class="products__feedback_btn products__collection_add"
+													>
+														Добавить в набор
+													</button>
+												</div>
+											</div>
+
+											<!-- слайд -->
+											<div class="swiper-slide products__collection_slide">
+												<a href="" class="products__collection_img">
+													<img src="imgs/ms-matrasi.jpg" alt="" />
+												</a>
+
+												<div class="products__collection_slide-content">
+													<div class="products__collection_info">
+														<h3>Название товара</h3>
+
+														<div class="products__collection_btns">
+															<img
+																title="Добавить в сравнение"
+																src="imgs/products/weight.svg"
+																width="16"
+																height="16"
+																alt=""
+															/>
+															<img
+																title="Добавить в избранное"
+																src="imgs/products/heart.svg"
+																width="16"
+																height="16"
+																alt=""
+															/>
+														</div>
+													</div>
+
+													<div class="products__collection_price">
+														<span class="products__currPrice">51 000 руб.</span>
+													</div>
+
+													<button
+														class="products__feedback_btn products__collection_add"
+													>
+														Добавить в набор
+													</button>
+												</div>
+											</div>
+
+											<div class="swiper-slide products__collection_slide">
+												<a href="" class="products__collection_img">
+													<img src="imgs/ms-matrasi.jpg" alt="" />
+												</a>
+
+												<div class="products__collection_slide-content">
+													<div class="products__collection_info">
+														<h3>Название товара</h3>
+
+														<div class="products__collection_btns">
+															<img
+																title="Добавить в сравнение"
+																src="imgs/products/weight.svg"
+																width="16"
+																height="16"
+																alt=""
+															/>
+															<img
+																title="Добавить в избранное"
+																src="imgs/products/heart.svg"
+																width="16"
+																height="16"
+																alt=""
+															/>
+														</div>
+													</div>
+
+													<div class="products__collection_price">
+														<span class="products__currPrice">51 000 руб.</span>
+													</div>
+
+													<button
+														class="products__feedback_btn products__collection_add"
+													>
+														Добавить в набор
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-button-next"></div>
 								</div>
 							</div>
 						</div>

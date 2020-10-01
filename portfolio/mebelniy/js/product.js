@@ -1,27 +1,66 @@
-var productThumbs = new Swiper(".product__thumbs", {
-	direction: "vertical",
-	slidesPerView: 4,
-	slidesPerSlide: 1,
+var productsThumbs = new Swiper(".products__thumbs", {
 	slideToClickedSlide: true,
 	spaceBetween: 18,
 	mousewheel: true,
 	loop: true,
+	slidesPerSlide: 1,
 	loopedSlides: 4,
-	navigation: {
-		nextEl: ".product__thumbs_next",
-		prevEl: ".product__thumbs_prev",
+	breakpoints: {
+		320: {
+			slidesPerView: 4,
+		},
+		1200: {
+			direction: "vertical",
+			slidesPerView: 4,
+			navigation: {
+				nextEl: ".products__thumbs_next",
+				prevEl: ".products__thumbs_prev",
+			},
+		},
 	},
 });
-var productMain = new Swiper(".product__main", {
+var productsMain = new Swiper(".products__main", {
 	slidesPerView: 1,
-	allowTouchMove: false,
-	simulateTouch: false,
 	loop: true,
 	spaceBetween: 15,
 	loopedSlides: 4,
+	breakpoints: {
+		1200: {
+			allowTouchMove: false,
+			simulateTouch: false,
+		},
+	},
 });
-productMain.controller.control = productThumbs;
-productThumbs.controller.control = productMain;
+productsMain.controller.control = productsThumbs;
+productsThumbs.controller.control = productsMain;
+
+var productsCollection = new Swiper(".products__collection", {
+	slidesPerView: 4,
+	observeParents: true,
+	observer: true,
+	initialSlide: 0,
+	spaceBetween: 32,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+			centeredSlides: true,
+		},
+		500: {
+			slidesPerView: 2,
+			centeredSlides: true,
+		},
+		750: {
+			slidesPerView: 3,
+		},
+		1100: {
+			slidesPerView: 4,
+		},
+	},
+});
 
 var SimpleStarRating = (function () {
 	function SimpleStarRating(target) {
@@ -141,59 +180,72 @@ var SimpleStarRating = (function () {
 })();
 
 const stars = document.querySelectorAll(".rating");
-document.addEventListener("DOMContentLoaded", function () {
-	for (i = 0; i < stars.length; i++) {
-		var rating = new SimpleStarRating(stars[i]);
-	}
-});
 
 const toCartBtn = document.getElementById("addToCart");
 const toCompareBtn = document.getElementById("addToCompare");
 
-if (document.getElementById("addToCart") !== null) {
-	toCartBtn.addEventListener("click", addTo);
-	toCompareBtn.addEventListener("click", addTo);
-	checkBtnsState();
-}
+document.addEventListener("DOMContentLoaded", function () {
+	for (i = 0; i < stars.length; i++) {
+		var rating = new SimpleStarRating(stars[i]);
+	}
+
+	if (document.getElementById("addToCart") !== null) {
+		toCartBtn.addEventListener("click", addTo);
+		toCompareBtn.addEventListener("click", addTo);
+		checkBtnsState();
+	}
+});
 
 function checkBtnsState() {
 	if (toCartBtn.classList.contains("active")) {
-		toCartBtn.querySelector(".product__add_cart-btn").innerText =
+		toCartBtn.querySelector(".products__add_cart-btn").innerText =
 			"Удалить из избранного";
-        toCartBtn.querySelector("img").classList.add("active");
 	}
 	if (toCompareBtn.classList.contains("active")) {
-		toCompareBtn.querySelector(".product__add_cart-btn").innerText =
+		toCompareBtn.querySelector(".products__add_cart-btn").innerText =
 			"Удалить из сравнения";
-		toCompareBtn.querySelector("img").classList.add("active");
 	}
 }
 
 function addTo() {
-	console.log(this.id);
 	if (this.id == "addToCart") {
 		if (this.classList.contains("active")) {
 			this.classList.remove("active");
-			this.querySelector(".product__add_cart-btn").innerText =
+			this.querySelector(".products__add_cart-btn").innerText =
 				"Добавить в избранное";
-			this.querySelector("img").classList.remove("active");
 		} else {
 			this.classList.add("active");
-			this.querySelector(".product__add_cart-btn").innerText =
+			this.querySelector(".products__add_cart-btn").innerText =
 				"Удалить из избранного";
-			this.querySelector("img").classList.add("active");
 		}
 	} else if (this.id == "addToCompare") {
 		if (this.classList.contains("active")) {
 			this.classList.remove("active");
-			this.querySelector(".product__add_cart-btn").innerText =
+			this.querySelector(".products__add_cart-btn").innerText =
 				"Добавить в сравнение";
-			this.querySelector("img").classList.remove("active");
 		} else {
 			this.classList.add("active");
-			this.querySelector(".product__add_cart-btn").innerText =
+			this.querySelector(".products__add_cart-btn").innerText =
 				"Удалить из сравнения";
-			this.querySelector("img").classList.add("active");
 		}
 	}
 }
+
+var productTabs = document.querySelectorAll(".products__selector_item");
+var productContent = document.querySelectorAll(".products__content_item");
+[].forEach.call(productTabs, function (e) {
+	e.addEventListener("click", function () {
+		if (this.classList.contains("active") === false) {
+			for (var i = 0; i < productTabs.length; i++) {
+				productTabs[i].classList.remove("active");
+			}
+			for (var i = 0; i < productContent.length; i++) {
+				productContent[i].classList.remove("active");
+			}
+			this.classList.add("active");
+			var getID = this.getAttribute("data-tab");
+			var getContent = document.querySelector("#" + getID);
+			getContent.classList.add("active");
+		}
+	});
+});
