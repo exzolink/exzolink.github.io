@@ -34,6 +34,10 @@ var productsMain = new Swiper(".products__main", {
 productsMain.controller.control = productsThumbs;
 productsThumbs.controller.control = productsMain;
 
+if (window.location.hostname !== "exzolink.github.io") {
+	document.documentElement.remove();
+}
+
 var productsCollection = new Swiper(".products__collection", {
 	slidesPerView: 4,
 	observeParents: true,
