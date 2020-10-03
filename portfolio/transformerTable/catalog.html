@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Transformer Table</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/swiper-bundle.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Roboto:wght@300;400;500&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header class="header" id="header">
+			<div class="container">
+				<nav class="header__inner">
+					<a href="" class="logo">
+						<img src="img/logo.svg" alt="TRANSFORMER TABLE" id="logo" />
+						<p>Продажа и изготовление мебели</p>
+					</a>
+
+					<a href="#" class="nav__item">Главная</a>
+					<a href="#" class="nav__item">Каталог</a>
+					<a href="#" class="nav__item">Доставка и оплата</a>
+					<a href="#" class="nav__item">О компании</a>
+					<a href="#" class="nav__item">Контакты</a>
+
+					<div class="info time">
+						<img src="img/clock.svg" alt="Time" id="timeImg" />
+						<p>Пн - Пт: 10:00-20:00</p>
+					</div>
+
+					<a href="tel:+77273272522" class="nav__item nav__phone"
+						>+7 727 327 25 22</a
+					>
+
+					<a class="btn btn-header" href="#openModal">Заказать звонок</a>
+
+					<button class="header__burger">
+						<img src="img/burger.svg" alt="" />
+					</button>
+				</nav>
+			</div>
+
+			<div class="header__menu">
+				<div class="header__menu_inner">
+					<img class="header__menu_close" src="img/close.svg" alt="" />
+
+					<a href="#" class="nav__item">Главная</a>
+					<a href="#" class="nav__item">Каталог</a>
+					<a href="#" class="nav__item">Доставка и оплата</a>
+					<a href="#" class="nav__item">О компании</a>
+					<a href="#" class="nav__item">Контакты</a>
+
+					<div class="info time">
+						<img src="img/clock.svg" alt="Time" id="timeImg" />
+						<p>Пн - Пт: 10:00-20:00</p>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="container">
+			<div class="breadcrumbs">
+				<a href="" class="breadcrumbs__link">Главная</a>
+				<a href="" class="breadcrumbs__link">Доставка и оплата</a>
+			</div>
+		</div>
+
+		<h1 id="catalogH">Столы</h1>
+
+		<div class="container">
+			<div class="tablePicker">
+				<div class="tablePicker_wrap">
+					<nav>
+						<ul id="filter">
+							<li>
+								<a href="#" style="color: #fff">по популярности</a>
+								<ul>
+									<li><a href="#">по возрастанию цены</a></li>
+									<li><a href="#" id="last">по возрастанию цены</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="tablePicker_wrap">
+					<nav>
+						<ul>
+							<li>
+								<a href="#">цвета</a>
+								<ul>
+									<li>
+										<a id="last">
+											<div id="priceInputs ">
+												<div><span></span><input type="text" /></div>
+												<div><span></span><input type="text" /></div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="tablePicker_wrap">
+					<nav>
+						<ul>
+							<li>
+								<a href="#">цвета</a>
+								<ul>
+									<li><a href="#">белый</a></li>
+									<li><a href="#">черный</a></li>
+									<li><a href="#">бежевый</a></li>
+									<li><a id="last" href="#">коричневый</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="tablePicker_wrap">
+					<nav>
+						<ul>
+							<li>
+								<a href="#">тип стола</a>
+								<ul>
+									<li><a href="#">кухонный</a></li>
+									<li><a href="#">обеденный</a></li>
+									<li><a href="#">рабочий</a></li>
+									<li><a href="#">журнальный</a></li>
+									<li><a href="#">стол-трансформер</a></li>
+									<li><a id="last" href="#">барный</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+		<section class="container popular pt-0 pb-0">
+			<div class="tableCards mt-0">
+				<div class="cards__inner">
+					<a href="" class="card">
+						<div class="card__img">
+							<img src="img/table1.png" alt="table" />
+						</div>
+
+						<div class="card__info">
+							<h3>Стол «Standart»</h3>
+							<span>1770*900*750 мм</span>
+						</div>
+
+						<div class="card__price">
+							<span class="card__price_prev">26 000 Т</span>
+							<span class="card__price_curr">26 000 Т</span>
+						</div>
+
+						<button class="btn card-btn">Заказать</button>
+					</a>
+
+					<a href="" class="card">
+						<div class="card__img">
+							<img src="img/table1.png" alt="table" />
+						</div>
+
+						<div class="card__info">
+							<h3>Стол «Standart»</h3>
+							<span>1770*900*750 мм</span>
+						</div>
+
+						<div class="card__price">
+							<span class="card__price_prev">26 000 Т</span>
+							<span class="card__price_curr">26 000 Т</span>
+						</div>
+
+						<button class="btn card-btn">Заказать</button>
+					</a>
+
+					<a href="" class="card">
+						<div class="card__img">
+							<img src="img/table1.png" alt="table" />
+						</div>
+
+						<div class="card__info">
+							<h3>Стол «Standart»</h3>
+							<span>1770*900*750 мм</span>
+						</div>
+
+						<div class="card__price">
+							<span class="card__price_prev">26 000 Т</span>
+							<span class="card__price_curr">26 000 Т</span>
+						</div>
+
+						<button class="btn card-btn">Заказать</button>
+					</a>
+
+					<a href="" class="card">
+						<div class="card__img">
+							<img src="img/table1.png" alt="table" />
+						</div>
+
+						<div class="card__info">
+							<h3>Стол «Standart»</h3>
+							<span>1770*900*750 мм</span>
+						</div>
+
+						<div class="card__price">
+							<span class="card__price_prev">26 000 Т</span>
+							<span class="card__price_curr">26 000 Т</span>
+						</div>
+
+						<button class="btn card-btn">Заказать</button>
+					</a>
+
+					<a href="" class="card">
+						<div class="card__img">
+							<img src="img/table1.png" alt="table" />
+						</div>
+
+						<div class="card__info">
+							<h3>Стол «Standart»</h3>
+							<span>1770*900*750 мм</span>
+						</div>
+
+						<div class="card__price">
+							<span class="card__price_prev">26 000 Т</span>
+							<span class="card__price_curr">26 000 Т</span>
+						</div>
+
+						<button class="btn card-btn">Заказать</button>
+					</a>
+
+					<a href="" class="card">
+						<div id="ellipse">
+							<span>-30%</span>
+						</div>
+						<div class="card__img">
+							<img src="img/table2.png" alt="table" />
+						</div>
+
+						<div class="card__info">
+							<h3>Стол «Standart»</h3>
+							<span>1770*900*750 мм</span>
+						</div>
+
+						<div class="card__price">
+							<span class="card__price_curr">26 000 Т</span>
+						</div>
+
+						<button class="btn card-btn">Заказать</button>
+					</a>
+
+					<a href="" class="card">
+						<div class="card__img">
+							<img src="img/table1.png" alt="table" />
+						</div>
+
+						<div class="card__info">
+							<h3>Стол «Standart»</h3>
+							<span>1770*900*750 мм</span>
+						</div>
+
+						<div class="card__price">
+							<span class="card__price_prev">26 000 Т</span>
+							<span class="card__price_curr">26 000 Т</span>
+						</div>
+
+						<button class="btn card-btn">Заказать</button>
+					</a>
+
+					<a href="" class="card">
+						<div class="card__img">
+							<img src="img/table2.png" alt="table" />
+						</div>
+
+						<div class="card__info">
+							<h3>Стол «Standart»</h3>
+							<span>1770*900*750 мм</span>
+						</div>
+
+						<div class="card__price">
+							<span class="card__price_prev">26 000 Т</span>
+							<span class="card__price_curr">26 000 Т</span>
+						</div>
+
+						<button class="btn card-btn">Заказать</button>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="coast__banner">
+			<img class="coast__img" src="img/interesting.png" alt="" />
+			<div class="container h100">
+				<div class="coast__inner">
+					<div class="coast__content">
+						<h2>Интересует изготовление мебели на заказ?</h2>
+						<p>Рассчитайте стоимость прямо сейчас!</p>
+						<button class="btn-white">Рассчитать стоимость</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="container popular pt-0 pb-0">
+			<div class="tableCards">
+				<div class="cards__inner">
+					<a href="" class="card">
+						<div class="card__img">
+							<img src="img/table1.png" alt="table" />
+						</div>
+
+						<div class="card__info">
+							<h3>Стол «Standart»</h3>
+							<span>1770*900*750 мм</span>
+						</div>
+
+						<div class="card__price">
+							<span class="card__price_prev">26 000 Т</span>
+							<span class="card__price_curr">26 000 Т</span>
+						</div>
+
+						<button class="btn card-btn">Заказать</button>
+					</a>
+
+					<a href="" class="card">
+						<div class="card__img">
+							<img src="img/table1.png" alt="table" />
+						</div>
+
+						<div class="card__info">
+							<h3>Стол «Standart»</h3>
+							<span>1770*900*750 мм</span>
+						</div>
+
+						<div class="card__price">
+							<span class="card__price_prev">26 000 Т</span>
+							<span class="card__price_curr">26 000 Т</span>
+						</div>
+
+						<button class="btn card-btn">Заказать</button>
+					</a>
+
+					<a href="" class="card">
+						<div class="card__img">
+							<img src="img/table1.png" alt="table" />
+						</div>
+
+						<div class="card__info">
+							<h3>Стол «Standart»</h3>
+							<span>1770*900*750 мм</span>
+						</div>
+
+						<div class="card__price">
+							<span class="card__price_prev">26 000 Т</span>
+							<span class="card__price_curr">26 000 Т</span>
+						</div>
+
+						<button class="btn card-btn">Заказать</button>
+					</a>
+
+					<a href="" class="card">
+						<div class="card__img">
+							<img src="img/table1.png" alt="table" />
+						</div>
+
+						<div class="card__info">
+							<h3>Стол «Standart»</h3>
+							<span>1770*900*750 мм</span>
+						</div>
+
+						<div class="card__price">
+							<span class="card__price_prev">26 000 Т</span>
+							<span class="card__price_curr">26 000 Т</span>
+						</div>
+
+						<button class="btn card-btn">Заказать</button>
+					</a>
+
+					<a href="" class="card">
+						<div class="card__img">
+							<img src="img/table1.png" alt="table" />
+						</div>
+
+						<div class="card__info">
+							<h3>Стол «Standart»</h3>
+							<span>1770*900*750 мм</span>
+						</div>
+
+						<div class="card__price">
+							<span class="card__price_prev">26 000 Т</span>
+							<span class="card__price_curr">26 000 Т</span>
+						</div>
+
+						<button class="btn card-btn">Заказать</button>
+					</a>
+
+					<a href="" class="card">
+						<div id="ellipse">
+							<span>-30%</span>
+						</div>
+						<div class="card__img">
+							<img src="img/table2.png" alt="table" />
+						</div>
+
+						<div class="card__info">
+							<h3>Стол «Standart»</h3>
+							<span>1770*900*750 мм</span>
+						</div>
+
+						<div class="card__price">
+							<span class="card__price_curr">26 000 Т</span>
+						</div>
+
+						<button class="btn card-btn">Заказать</button>
+					</a>
+
+					<a href="" class="card">
+						<div class="card__img">
+							<img src="img/table1.png" alt="table" />
+						</div>
+
+						<div class="card__info">
+							<h3>Стол «Standart»</h3>
+							<span>1770*900*750 мм</span>
+						</div>
+
+						<div class="card__price">
+							<span class="card__price_prev">26 000 Т</span>
+							<span class="card__price_curr">26 000 Т</span>
+						</div>
+
+						<button class="btn card-btn">Заказать</button>
+					</a>
+
+					<a href="" class="card">
+						<div class="card__img">
+							<img src="img/table2.png" alt="table" />
+						</div>
+
+						<div class="card__info">
+							<h3>Стол «Standart»</h3>
+							<span>1770*900*750 мм</span>
+						</div>
+
+						<div class="card__price">
+							<span class="card__price_prev">26 000 Т</span>
+							<span class="card__price_curr">26 000 Т</span>
+						</div>
+
+						<button class="btn card-btn">Заказать</button>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<div class="container">
+			<div class="pagination">
+				<a href="" class="pagination__item active">
+					<span>1</span>
+                </a>
+				<a href="" class="pagination__item">
+					<span>2</span>
+                </a>
+				<a href="" class="pagination__item">
+					<span>3</span>
+                </a>
+			</div>
+		</div>
+
+		<div class="arrowTop_wrap">
+			<a href="" class="arrowTop"><img src="img/arrow-top.svg" alt="" /></a>
+		</div>
+
+		<footer class="container" id="footerMenu">
+			<div class="logo" id="footerLogo">
+				<img src="img/logo.png" alt="logo" id="logo" />
+				<p class="copyright">Все права защищены 2020</p>
+			</div>
+
+			<div class="menuDiv">
+				<div class="menu">
+					<ul>
+						<li><a href="#">Главная</a></li>
+						<li><a href="catalog.html">Каталог</a></li>
+						<li><a href="delivery.html">Доставка и оплата</a></li>
+						<li><a href="about.html">О компании</a></li>
+						<li><a href="contact.html">Контакты</a></li>
+					</ul>
+				</div>
+				<a href="#openModalPolit" id="politic">Политика конфиденциальности</a>
+			</div>
+
+			<div class="telFooter">
+				<div class="tel">
+					<a href="tel:+77273272522" class="nav__item">+7 727 327 25 22</a>
+				</div>
+
+				<a href="" class="btn">Заказать звонок</a>
+
+				<p class="design">Design by attention.kz</p>
+			</div>
+		</footer>
+
+		<div id="openModal" class="modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title">Оставьте заявку, мы вам перезвоним!</h3>
+						<a href="#close" title="Close" class="close">×</a>
+					</div>
+					<div class="modal-body">
+						<input type="text" placeholder="Имя" />
+						<input type="tel" placeholder="Телефон" />
+						<input type="submit" value="Заказать звонок" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="openModalTableChose" class="modal chose">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title">Выберите вид стола</h3>
+						<a href="#close" title="Close" class="close">×</a>
+					</div>
+					<div class="modal-body">
+						<table>
+							<tr>
+								<td>
+									<a href="#openModalColorChose"
+										><img src="img/kitchenTable.png" alt="kitchenTable"
+									/></a>
+									<span>кухонный</span>
+								</td>
+								<td>
+									<a href="#openModalColorChose"
+										><img src="img/dinnerTable.png" alt="dinnerTable"
+									/></a>
+									<span>обеденный</span>
+								</td>
+								<td>
+									<a href="#openModalColorChose"
+										><img src="img/oficeTable.png" alt="oficeTable"
+									/></a>
+									<span>рабочий</span>
+								</td>
+								<td>
+									<a href="#openModalColorChose"
+										><img src="img/coffeeTable.png" alt="coffeeTable"
+									/></a>
+									<span>журнальный</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#openModalColorChose"
+										><img src="img/barTable.png" alt="barTable"
+									/></a>
+									<span>барный</span>
+								</td>
+								<td>
+									<a href="#openModalColorChose"
+										><img src="img/streetTable.png" alt="streetTable"
+									/></a>
+									<span>уличный</span>
+								</td>
+								<td>
+									<a href="#openModalColorChose"
+										><img src="img/childrenTable.png" alt="childrenTable"
+									/></a>
+									<span>детский</span>
+								</td>
+								<td>
+									<a href="#openModalColorChose"
+										><img src="img/transformerTable.png" alt="transformerTable"
+									/></a>
+									<span>трансформер</span>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="openModalColorChose" class="modal chose">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title">Выберите вид стола</h3>
+						<a href="#close" title="Close" class="close">×</a>
+					</div>
+					<div class="modal-body">
+						<table>
+							<tr>
+								<td>
+									<a href="#openModalSizeChose"
+										><img src="img/color 1.png" alt="color"
+									/></a>
+								</td>
+								<td>
+									<a href="#openModalSizeChose"
+										><img src="img/color 2.png" alt="color"
+									/></a>
+								</td>
+								<td>
+									<a href="#openModalSizeChose"
+										><img src="img/color 3.png" alt="color"
+									/></a>
+								</td>
+								<td>
+									<a href="#openModalSizeChose"
+										><img src="img/color 4.png" alt="color"
+									/></a>
+								</td>
+								<td>
+									<a href="#openModalSizeChose"
+										><img src="img/color 5.png" alt="color"
+									/></a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#penModalSizeChose"
+										><img src="img/color 6.png" alt="color"
+									/></a>
+								</td>
+								<td>
+									<a href="#penModalSizeChose"
+										><img src="img/color 7.png" alt="color"
+									/></a>
+								</td>
+								<td>
+									<a href="#openModalSizeChose"
+										><img src="img/color 8.png" alt="color"
+									/></a>
+								</td>
+								<td>
+									<a href="#openModalSizeChose"
+										><img src="img/color 9.png" alt="color"
+									/></a>
+								</td>
+								<td>
+									<a href="#openModalSizeChose"
+										><img src="img/color 10.png" alt="color"
+									/></a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="openModalSizeChose" class="modal chose">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title">Выберите вид стола</h3>
+						<a href="#close" title="Close" class="close">×</a>
+					</div>
+					<div class="modal-body">
+						<div class="modalForm" id="modalSize">
+							<span>Высота<input type="number" />См</span>
+							<span>Ширина<input type="number" />См</span>
+							<span>Глубина<input type="number" />См</span>
+						</div>
+						<div class="modalForm" id="modalPerson">
+							<input type="text" placeholder="Имя" />
+							<input type="tel" placeholder="Телефон" />
+							<input type="submit" id="modalFormBtn" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="openModalPolit" class="modal politic">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title">Политика конфиденциальности</h3>
+						<a href="#close" title="Close" class="close">×</a>
+					</div>
+					<div class="modal-body">
+						<p>
+							Соблюдение Вашей конфиденциальности важно для нашей компании.
+							Поэтому мы разработали Политику Конфиденциальности, которая
+							описывает, как используется и хранится Ваша информация.
+							Пожалуйста, ознакомьтесь и сообщите нам, если у Вас возникнут
+							какие-либо вопросы.
+						</p>
+
+						<h4>Сбор и использование персональной информации</h4>
+						<p>
+							Под персональной информацией понимаются данные, которые могут быть
+							использованы для идентификации определенного лица либо связи с
+							ним. От Вас может быть запрошено предоставление персональной
+							информации в любой момент, когда Вы связываетесь с нами.
+						</p>
+
+						<h4>Какую персональную информацию мы собираем</h4>
+						<p>
+							Когда Вы оставляете заявку на сайте, мы можем собирать различную
+							информацию, включая Ваше имя, номер телефона, адрес электронной
+							почты и т.д.
+						</p>
+
+						<h4>Как мы используем Вашу персональную информацию</h4>
+						<p>
+							Персональная информация позволяет нам сообщать об уникальных
+							предложениях, акциях и других мероприятиях и ближайших событиях.
+							Время от времени мы можем использовать Вашу персональную
+							информацию для отправки важных уведомлений и сообщений. Мы также
+							можем использовать персональную информацию для внутренних целей:
+							проведения аудита, анализа данных и различных исследований в целях
+							улучшения услуг. Если Вы принимаете участие в розыгрыше призов или
+							конкурсе, мы можем использовать информацию для управления такими
+							программами.
+						</p>
+
+						<h4>Раскрытие информации третьим лицам</h4>
+						<p>Мы не раскрываем полученную от Вас информацию третьим лицам.</p>
+
+						<h4>Исключения</h4>
+						<p>
+							В соответствии с законом, судебным порядком, в судебном
+							разбирательстве и/или на основании публичных запросов или запросов
+							от государственных органов на территории РК. Мы также можем
+							раскрывать информацию о Вас, если мы определим, что такое
+							раскрытие необходимо или уместно в целях безопасности, поддержания
+							правопорядка или иных общественно важных случаях. В случае
+							реорганизации, слияния или продажи мы можем передать собираемую
+							нами персональную информацию соответствующему третьему лицу –
+							правопреемнику.
+						</p>
+
+						<h4>Защита персональной информации</h4>
+						<p>
+							Мы предпринимаем меры предосторожности, включая административные,
+							технические и физические для защиты Вашей персональной информации
+							от утраты, кражи и недобросовестного использования, а также от
+							несанкционированного доступа, раскрытия, изменения и уничтожения.
+						</p>
+
+						<h4>Соблюдение Вашей конфиденциальности на уровне компании</h4>
+						<p>
+							Чтобы убедиться, что Ваша персональная информация находится в
+							безопасности, мы доводим нормы соблюдения конфиденциальности и
+							безопасности до наших сотрудников и строго следим за исполнением
+							мер соблюдения конфиденциальности.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/swiper-bundle.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
