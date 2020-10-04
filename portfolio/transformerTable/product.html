@@ -13,6 +13,10 @@
 		/>
 	</head>
 	<body>
+		<div class="preloader">
+			<video preload="auto" muted="" autoplay="" src="img/video.mp4"></video>
+		</div>
+
 		<header class="header" id="header">
 			<div class="container">
 				<nav class="header__inner">
@@ -82,7 +86,7 @@
 
 					<p class="product__desc">Обеденный стол с раскладной столешницей</p>
 
-					<button class="btn">Заказать</button>
+					<button class="btn order-call-btn">Заказать</button>
 				</div>
 			</div>
 
@@ -491,10 +495,7 @@
 			<div class="popup__inner">
 				<img src="img/close.svg" alt="" class="popup__close" />
 
-				<div
-					id="selectTable"
-					class="popup__content_wrapper active"
-				>
+				<div id="selectTable" class="popup__content_wrapper active">
 					<div class="popup__title">Выберите вид стола</div>
 					<div class="popup__content">
 						<div class="popup__view_item">
@@ -548,10 +549,7 @@
 					</div>
 				</div>
 
-				<div
-					id="selectColor"
-					class="popup__content_wrapper"
-				>
+				<div id="selectColor" class="popup__content_wrapper">
 					<div class="popup__title">Выберите цвет</div>
 					<div class="popup__content">
 						<div class="popup__colors_wrapper">
@@ -593,8 +591,8 @@
 					<div class="popup__title">Введите финальные данные</div>
 					<div class="popup__content">
 						<form action="" class="popup__sizes_wrapper">
-							<input id="choosenTable" autocomplete="off" type="hidden">
-							<input id="choosenColor" autocomplete="off" type="hidden">
+							<input id="choosenTable" autocomplete="off" type="hidden" />
+							<input id="choosenColor" autocomplete="off" type="hidden" />
 
 							<div class="popup__sizes">
 								<div class="popup__sizes_item">

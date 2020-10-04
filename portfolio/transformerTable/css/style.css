@@ -126,12 +126,48 @@ a {
 #containerBanner {
 	position: relative;
 	width: 100%;
-	margin-top: 60px;
-	background: url(../img/banner.svg) no-repeat;
+	background-repeat: no-repeat;
 	background-color: #f6efea;
 	height: 965px;
 }
-
+.alt-container {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+.banner-section {
+	position: relative;
+	margin-top: 60px;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+	top: 30px;
+	bottom: auto;
+	left: 0;
+	height: 40px;
+	width: 100%;
+	right: 0;
+	color: #fff;
+	padding-right: 32px;
+	font-size: 18px;
+}
+.swiper-pagination {
+	text-align: right !important;
+}
+@media screen and (max-width: 750px) {
+	.swiper-container-horizontal > .swiper-pagination-bullets,
+	.swiper-pagination-custom,
+	.swiper-pagination-fraction {
+		top: 2.5%;
+		padding-right: 18px;
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 700px) {
+	.banner-section {
+		margin-top: 0;
+	}
+}
 .filters__by {
 	margin-bottom: 15px;
 	transition: color 0.2s ease;
@@ -171,6 +207,7 @@ input::-webkit-inner-spin-button {
 
 .logo img {
 	margin-bottom: 6px;
+	max-width: 237px;
 }
 
 .filters__inputs_wrap {
@@ -837,12 +874,29 @@ h2 {
 }
 
 .feedback__arrows img {
-	transition: opacity 0.2s ease;
+	transition: opacity 0.2s ease, transform 0.3s linear;
 }
 
 .feedback__arrows img:hover {
 	cursor: pointer;
 	opacity: 0.85;
+	transform: scale(1.1);
+}
+
+@keyframes arrowTopAnim {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.arrowTop {
+	animation: arrowTopAnim 6s infinite;
 }
 
 .client span {
@@ -872,22 +926,21 @@ h2 {
 }
 
 .popup__sizes_item input {
-	background: #FFFFFF;
-border-radius: 5px;
-width: 96px;
-height: 56px;
-margin-left: 10px;
-margin-right: 10px;
-font-size: 16px;
-font-family: 'Oswald', sans-serif;
-box-shadow: none;
-font-weight: 300;
-border: 0;
-text-align: center;
-padding-left: 15px;
-padding-right: 15px;
+	background: #ffffff;
+	border-radius: 5px;
+	width: 96px;
+	height: 56px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 16px;
+	font-family: "Oswald", sans-serif;
+	box-shadow: none;
+	font-weight: 300;
+	border: 0;
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
 }
-
 
 .popup__sizes_item {
 	display: flex;
@@ -896,7 +949,7 @@ padding-right: 15px;
 
 .popup__sizes_item span {
 	font-size: 18px;
-	font-family: 'Oswald', sans-serif;
+	font-family: "Oswald", sans-serif;
 	font-weight: 300;
 }
 
@@ -1246,14 +1299,16 @@ padding-right: 15px;
 		margin-left: 0 !important;
 		margin-right: 0 !important;
 	}
-	.popup__sizes_data input, .popup__sizes_data button {
+	.popup__sizes_data input,
+	.popup__sizes_data button {
 		flex-basis: 47% !important;
 		margin-bottom: 30px !important;
 	}
 }
 
 @media screen and (max-width: 570px) {
-	.popup__sizes_data input, .popup__sizes_data button {
+	.popup__sizes_data input,
+	.popup__sizes_data button {
 		flex-basis: 100% !important;
 	}
 }
@@ -1312,7 +1367,7 @@ padding-right: 15px;
 	display: flex;
 	flex-direction: column;
 	/*! position: relative; */
-	/*! left: 200px; */;
+	/*! left: 200px; */
 }
 
 #up {
@@ -1510,7 +1565,7 @@ padding-right: 15px;
 	font-size: 16px;
 	line-height: 19px;
 	color: #303030;
-	/*! width: 80%; */;
+	/*! width: 80%; */
 }
 
 footer {
@@ -1911,9 +1966,38 @@ footer {
 	opacity: 1;
 	visibility: visible;
 }
+#ellipse {
+	transition: transform 1s linear;
+}
+.card:hover #ellipse {
+	transform: scale(1.08);
+}
 
 #buy a {
 	color: #ffffff;
+}
+
+.preloader {
+	background: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999;
+	height: 100%;
+	transition: opacity .3s ease, visibility .3s ease;
+}
+
+.preloader.active {
+	opacity: 0;
+	visibility: collapse;
+}
+
+.preloader video {
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
 }
 
 #buy {
@@ -3673,6 +3757,37 @@ nav ul li:hover ul {
 	justify-content: space-around;
 }
 
+@media screen and (max-width: 1650px) {
+	#advantageBanner {
+		background-position: 40%;
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	#advantageBanner {
+		background-position: 60%;
+	}
+}
+
+@media screen and (max-width: 1600px) {
+	.banner__tables img {
+		max-width: 1000px;
+	}
+	.coast__img {
+		max-width: 450px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.gratitude404 p {
+		max-width: 250px;
+	}
+}
+@media screen and (max-width: 550px) {
+	.gratitude404 p {
+		max-width: 180px;
+	}
+}
 .popup__view_item {
 	display: flex;
 	flex-direction: column;
@@ -4296,7 +4411,8 @@ h4 {
 	margin-top: 120px;
 }
 
-.popup__sizes_data input, .popup__sizes_data button {
+.popup__sizes_data input,
+.popup__sizes_data button {
 	margin: 0;
 	flex-basis: 32%;
 	max-width: 400px;

@@ -1,3 +1,10 @@
+const preloader = document.querySelector(".preloader");
+window.onload = function () {
+	setTimeout(() => {
+		preloader.classList.add("active");
+	}, 1000);
+};
+
 const feedbackSlider = new Swiper(".feedback-container", {
 	slidesPerView: 3,
 	spaceBetween: 60,
@@ -15,6 +22,19 @@ const feedbackSlider = new Swiper(".feedback-container", {
 		1000: {
 			slidesPerView: 3,
 		},
+	},
+});
+
+const bannerSlider = new Swiper(".banner-container", {
+	slidesPerView: 1,
+	grabCursor: true,
+	loop: true,
+	autoplay: {
+		delay: 4000,
+	},
+	pagination: {
+		el: ".swiper-pagination",
+		type: "fraction",
 	},
 });
 
@@ -211,16 +231,14 @@ popupColors.forEach(function (item) {
 	});
 });
 
-
-const calcBtns = document.querySelectorAll('.calc-btn');
-const calcPopup = document.querySelector('.popup__calc');
+const calcBtns = document.querySelectorAll(".calc-btn");
+const calcPopup = document.querySelector(".popup__calc");
 
 calcBtns.forEach(function (item) {
 	item.addEventListener("click", function (e) {
-        e.preventDefault();
-        calcPopup.classList.add('active');
-        subpopupTable.classList.add("active");
-        subpopupSizes.classList.remove("active");
-
+		e.preventDefault();
+		calcPopup.classList.add("active");
+		subpopupTable.classList.add("active");
+		subpopupSizes.classList.remove("active");
 	});
 });

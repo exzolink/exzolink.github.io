@@ -13,6 +13,10 @@
 		/>
 	</head>
 	<body>
+		<div class="preloader">
+			<video preload="auto" muted="" autoplay="" src="img/video.mp4"></video>
+		</div>
+
 		<header class="header" id="header">
 			<div class="container">
 				<nav class="header__inner">
@@ -62,68 +66,138 @@
 			</div>
 		</header>
 
-		<section class="container" id="containerBanner">
-			<div class="order">
-				<h1>Столы-трансформеры 3 в 1</h1>
-				<p>
-					Отличное решение для маленьких квартир и людей, которые ценят
-					функциональность!
-				</p>
-				<div id="iconBtn">
-					<div class="orderIcon">
-						<div class="order__icon">
-							<div class="order__icon_wrap">
-								<img src="img/car.svg" alt="delivery" />
-							</div>
-							<span
-								>Бесплатная <br />
-								доставка по <br />
-								г.Алматы</span
-							>
-						</div>
+		<div class="container alt-container banner-section">
+			<div class="swiper-container banner-container">
+				<div class="swiper-wrapper banner-wrapper">
+					<section class="container swiper-slide" id="containerBanner" style="background-image: url('./img/banner.svg');">
+						<div class="order">
+							<h1>Столы-трансформеры 3 в 1</h1>
+							<p>
+								Отличное решение для маленьких квартир и людей, которые ценят
+								функциональность!
+							</p>
+							<div id="iconBtn">
+								<div class="orderIcon">
+									<div class="order__icon">
+										<div class="order__icon_wrap">
+											<img src="img/car.svg" alt="delivery" />
+										</div>
+										<span
+											>Бесплатная <br />
+											доставка по <br />
+											г.Алматы</span
+										>
+									</div>
 
-						<div class="order__icon">
-							<div class="order__icon_wrap">
-								<img src="img/guarantee.svg" alt="warranty" />
-							</div>
-							<span
-								>Гарантия <br />
-								1 год</span
-							>
-						</div>
+									<div class="order__icon">
+										<div class="order__icon_wrap">
+											<img src="img/guarantee.svg" alt="warranty" />
+										</div>
+										<span
+											>Гарантия <br />
+											1 год</span
+										>
+									</div>
 
-						<div class="order__icon">
-							<div class="order__icon_wrap">
-								<img src="img/table.svg" alt="table" />
-							</div>
-							<span
-								>В наличии <br />
-								и на заказ</span
-							>
-						</div>
+									<div class="order__icon">
+										<div class="order__icon_wrap">
+											<img src="img/table.svg" alt="table" />
+										</div>
+										<span
+											>В наличии <br />
+											и на заказ</span
+										>
+									</div>
 
-						<div>
-							<div class="order__icon">
-								<div class="order__icon_wrap">
-									<img src="img/buddy.svg" alt="master" />
+									<div>
+										<div class="order__icon">
+											<div class="order__icon_wrap">
+												<img src="img/buddy.svg" alt="master" />
+											</div>
+											<span
+												>Бесплатный <br />
+												выезд мастера <br />
+												на замеры</span
+											>
+										</div>
+									</div>
 								</div>
-								<span
-									>Бесплатный <br />
-									выезд мастера <br />
-									на замеры</span
-								>
+
+								<button class="btn order-call-btn">Оставить заявку</button>
 							</div>
 						</div>
-					</div>
 
-					<button class="btn order-call-btn">Оставить заявку</button>
+						<div class="banner__tables">
+							<img src="img/bannerTables.png" alt="" />
+						</div>
+					</section>
+
+					<section class="container swiper-slide" id="containerBanner" style="background-image: url('./img/banner.svg');">
+						<div class="order">
+							<h1>Столы-трансформеры 3 в 1</h1>
+							<p>
+								Отличное решение для маленьких квартир и людей, которые ценят
+								функциональность!
+							</p>
+							<div id="iconBtn">
+								<div class="orderIcon">
+									<div class="order__icon">
+										<div class="order__icon_wrap">
+											<img src="img/car.svg" alt="delivery" />
+										</div>
+										<span
+											>Бесплатная <br />
+											доставка по <br />
+											г.Алматы</span
+										>
+									</div>
+
+									<div class="order__icon">
+										<div class="order__icon_wrap">
+											<img src="img/guarantee.svg" alt="warranty" />
+										</div>
+										<span
+											>Гарантия <br />
+											1 год</span
+										>
+									</div>
+
+									<div class="order__icon">
+										<div class="order__icon_wrap">
+											<img src="img/table.svg" alt="table" />
+										</div>
+										<span
+											>В наличии <br />
+											и на заказ</span
+										>
+									</div>
+
+									<div>
+										<div class="order__icon">
+											<div class="order__icon_wrap">
+												<img src="img/buddy.svg" alt="master" />
+											</div>
+											<span
+												>Бесплатный <br />
+												выезд мастера <br />
+												на замеры</span
+											>
+										</div>
+									</div>
+								</div>
+
+								<button class="btn order-call-btn">Оставить заявку</button>
+							</div>
+						</div>
+
+						<div class="banner__tables">
+							<img src="img/bannerTables.png" alt="" />
+						</div>
+					</section>
 				</div>
+				<div class="swiper-pagination"></div>
 			</div>
-
-			<div class="banner__tables">
-				<img src="img/bannerTables.png" alt="" />
-			</div>
-		</section>
+		</div>
 
 		<div class="orderIcon orderIcon__mob">
 			<div class="order__icon">
@@ -764,10 +838,7 @@
 			<div class="popup__inner">
 				<img src="img/close.svg" alt="" class="popup__close" />
 
-				<div
-					id="selectTable"
-					class="popup__content_wrapper active"
-				>
+				<div id="selectTable" class="popup__content_wrapper active">
 					<div class="popup__title">Выберите вид стола</div>
 					<div class="popup__content">
 						<div class="popup__view_item">
@@ -821,10 +892,7 @@
 					</div>
 				</div>
 
-				<div
-					id="selectColor"
-					class="popup__content_wrapper"
-				>
+				<div id="selectColor" class="popup__content_wrapper">
 					<div class="popup__title">Выберите цвет</div>
 					<div class="popup__content">
 						<div class="popup__colors_wrapper">
@@ -866,8 +934,8 @@
 					<div class="popup__title">Введите финальные данные</div>
 					<div class="popup__content">
 						<form action="" class="popup__sizes_wrapper">
-							<input id="choosenTable" autocomplete="off" type="hidden">
-							<input id="choosenColor" autocomplete="off" type="hidden">
+							<input id="choosenTable" autocomplete="off" type="hidden" />
+							<input id="choosenColor" autocomplete="off" type="hidden" />
 
 							<div class="popup__sizes">
 								<div class="popup__sizes_item">
