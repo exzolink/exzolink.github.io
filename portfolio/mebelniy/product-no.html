@@ -653,11 +653,7 @@
 				</div>
 			</div>
 		</header>
-		<script>
-			if (window.location.hostname !== 'exzolink.github.io') {
-				document.documentElement.remove();
-			}
-		</script>
+
 		<main class="products">
 			<div class="container products-container">
 				<!-- Основная информация о товаре (мобильная версия) -->
@@ -685,17 +681,16 @@
 							>
 
 							<div class="products__info_store">
-								<p class="products__info_text">
-									В наличии <span class="green">33</span>
-								</p>
-								<p class="products__info_text">
-									Под заказ <span class="red">3-5 дней</span>
-								</p>
+								<p class="products__info_text">Нет в наличии</p>
 							</div>
 						</div>
 					</div>
 				</div>
-
+				<script>
+					if (window.location.hostname !== 'exzolink.github.io') {
+						document.documentElement.remove();
+					}
+				</script>
 				<div class="products__item">
 					<div class="products__sliders">
 						<div class="products__sliders_thumbs">
@@ -759,12 +754,7 @@
 								<span class="products__info_text">Артикул: BRW-0210805</span>
 
 								<div class="products__info_store">
-									<p class="products__info_text">
-										В наличии <span class="green">33</span>
-									</p>
-									<p class="products__info_text">
-										Под заказ <span class="red">3-5 дней</span>
-									</p>
+									<p class="products__info_text">Нет в наличии</p>
 								</div>
 							</div>
 
@@ -809,9 +799,9 @@
 
 						<!-- Кнопки для покупки / ценник -->
 						<div class="products__btns">
-							<span class="products__btns_price">14 999 руб.</span>
-							<button class="products__btns_cart">В корзину</button>
-							<button class="products__btns_oneclick">Купить в 1 клик</button>
+							<button class="products__btns_oneclick">
+								Сообщить о поступлении
+							</button>
 						</div>
 
 						<div class="products__add">
@@ -928,7 +918,7 @@
 								</div>
 							</div>
 						</div>
-	
+
 						<div class="products__content">
 							<!-- Вкладка: Характеристики -->
 							<div id="chars" class="products__content_item active">

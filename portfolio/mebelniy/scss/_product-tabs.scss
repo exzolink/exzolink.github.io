@@ -590,6 +590,28 @@ $square-imgs-size: 120px;
 				width: auto;
 			}
 		}
+
+		&__collection {
+			&_inner {
+				width: 80%;
+				margin: 0 auto;
+
+				& .swiper-button-next,
+				.swiper-button-prev,
+				.swiper-button-review-next,
+				.swiper-button-review-prev {
+					display: block;
+				}
+
+				& .swiper-button-next, .swiper-button-review-next {
+					right: -45px;
+				}
+
+				& .swiper-button-prev, .swiper-button-review-prev {
+					left: -45px;
+				}
+			}
+		}
 	}
 }
 
