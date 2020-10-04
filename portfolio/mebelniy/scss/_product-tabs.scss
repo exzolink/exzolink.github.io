@@ -603,11 +603,13 @@ $square-imgs-size: 120px;
 					display: block;
 				}
 
-				& .swiper-button-next, .swiper-button-review-next {
+				& .swiper-button-next,
+				.swiper-button-review-next {
 					right: -45px;
 				}
 
-				& .swiper-button-prev, .swiper-button-review-prev {
+				& .swiper-button-prev,
+				.swiper-button-review-prev {
 					left: -45px;
 				}
 			}
