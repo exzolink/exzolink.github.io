@@ -216,7 +216,8 @@ const calcBtns = document.querySelectorAll('.calc-btn');
 const calcPopup = document.querySelector('.popup__calc');
 
 calcBtns.forEach(function (item) {
-	item.addEventListener("click", function () {
+	item.addEventListener("click", function (e) {
+        e.preventDefault();
         calcPopup.classList.add('active');
         subpopupTable.classList.add("active");
         subpopupSizes.classList.remove("active");

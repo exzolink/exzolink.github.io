@@ -1960,6 +1960,7 @@ footer {
 
 .cardContent img {
 	margin-bottom: 40px;
+	max-width: 100%;
 }
 
 .cardContent {
@@ -3656,7 +3657,9 @@ nav ul li:hover ul {
 	padding-top: 60px;
 	display: none;
 }
-
+.popup__sizes_data button {
+	font-size: 20px;
+}
 .popup__content_wrapper.active {
 	display: flex;
 }
