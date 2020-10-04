@@ -5,10 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Transformer Table</title>
+		<link rel="stylesheet" href="css/nouislider.min.css" />
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/swiper-bundle.css" />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Roboto:wght@300;400;500&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Roboto:wght@300;400;500;700&display=swap"
 			rel="stylesheet"
 		/>
 	</head>
@@ -36,7 +37,7 @@
 						>+7 727 327 25 22</a
 					>
 
-					<a class="btn btn-header" href="#openModal">Заказать звонок</a>
+					<a class="btn btn-header order-call-btn">Заказать звонок</a>
 
 					<button class="header__burger">
 						<img src="img/burger.svg" alt="" />
@@ -72,73 +73,103 @@
 		<h1 id="catalogH">Столы</h1>
 
 		<div class="container">
-			<div class="tablePicker">
-				<div class="tablePicker_wrap">
-					<nav>
-						<ul id="filter">
-							<li>
-								<a href="#" style="color: #fff">по популярности</a>
-								<ul>
-									<li><a href="#">по возрастанию цены</a></li>
-									<li><a href="#" id="last">по возрастанию цены</a></li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-				</div>
+			<div class="filters">
+				<div class="filters__inner">
+					<div class="filters__item">
+						<div class="filters__main">
+							<span id="currentFilter">по популярности</span>
+							<img class="filters__arrow" src="img/spoilerArrow.svg" alt="" />
+						</div>
 
-				<div class="tablePicker_wrap">
-					<nav>
-						<ul>
-							<li>
-								<a href="#">цвета</a>
-								<ul>
-									<li>
-										<a id="last">
-											<div id="priceInputs ">
-												<div><span></span><input type="text" /></div>
-												<div><span></span><input type="text" /></div>
-											</div>
-										</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-				</div>
+						<div class="filters__content">
+							<a href="" class="filters__by">по популярности</a>
+							<a href="" class="filters__by">по возрастанию цены</a>
+							<a href="" class="filters__by">по убыванию цены</a>
+						</div>
+					</div>
 
-				<div class="tablePicker_wrap">
-					<nav>
-						<ul>
-							<li>
-								<a href="#">цвета</a>
-								<ul>
-									<li><a href="#">белый</a></li>
-									<li><a href="#">черный</a></li>
-									<li><a href="#">бежевый</a></li>
-									<li><a id="last" href="#">коричневый</a></li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-				</div>
+					<div class="filters__item">
+						<div class="filters__main">
+							<span>диапазон цен</span>
+							<img class="filters__arrow" src="img/spoilerArrow.svg" alt="" />
+						</div>
 
-				<div class="tablePicker_wrap">
-					<nav>
-						<ul>
-							<li>
-								<a href="#">тип стола</a>
-								<ul>
-									<li><a href="#">кухонный</a></li>
-									<li><a href="#">обеденный</a></li>
-									<li><a href="#">рабочий</a></li>
-									<li><a href="#">журнальный</a></li>
-									<li><a href="#">стол-трансформер</a></li>
-									<li><a id="last" href="#">барный</a></li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
+						<div class="filters__content">
+							<div class="filters__inputs">
+								<div class="filters__inputs_wrap">
+									<span>от</span>
+									<input id="minValue" autocomplete="off" type="number" />
+									<span>₸</span>
+								</div>
+
+								<div class="filters__inputs_wrap">
+									<span>до</span>
+									<input id="maxValue" autocomplete="off" type="number" />
+									<span>₸</span>
+								</div>
+							</div>
+
+							<div class="filters__slider_wrapper">
+								<div class="filters__slider"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="filters__item">
+						<div class="filters__main">
+							<span>цвет</span>
+							<img class="filters__arrow" src="img/spoilerArrow.svg" alt="" />
+						</div>
+
+						<div class="filters__content">
+							<label for="INSERT_COLOR" class="filters__label">
+								<input
+									type="checkbox"
+									class="filters__checkbox"
+									name=""
+									id="INSERT_COLOR"
+								/>
+								<span>белый</span>
+							</label>
+							<label for="INSERT_COLOR" class="filters__label">
+								<input
+									type="checkbox"
+									class="filters__checkbox"
+									name=""
+									id="INSERT_COLOR"
+								/>
+								<span>белый</span>
+							</label>
+						</div>
+					</div>
+
+					<div class="filters__item">
+						<div class="filters__main">
+							<span>тип стола</span>
+							<img class="filters__arrow" src="img/spoilerArrow.svg" alt="" />
+						</div>
+
+						<div class="filters__content">
+							<label for="INSERT_COLOR" class="filters__label">
+								<input
+									type="checkbox"
+									class="filters__checkbox"
+									name=""
+									id="INSERT_COLOR"
+								/>
+								<span>кухонный</span>
+							</label>
+							<label for="INSERT_COLOR" class="filters__label">
+								<input
+									type="checkbox"
+									class="filters__checkbox"
+									name=""
+									id="INSERT_COLOR"
+								/>
+								<span>обеденный</span>
+							</label>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -302,7 +333,7 @@
 					<div class="coast__content">
 						<h2>Интересует изготовление мебели на заказ?</h2>
 						<p>Рассчитайте стоимость прямо сейчас!</p>
-						<button class="btn-white">Рассчитать стоимость</button>
+						<button class="btn-white calc-btn">Рассчитать стоимость</button>
 					</div>
 				</div>
 			</div>
@@ -464,13 +495,13 @@
 			<div class="pagination">
 				<a href="" class="pagination__item active">
 					<span>1</span>
-                </a>
+				</a>
 				<a href="" class="pagination__item">
 					<span>2</span>
-                </a>
+				</a>
 				<a href="" class="pagination__item">
 					<span>3</span>
-                </a>
+				</a>
 			</div>
 		</div>
 
@@ -502,192 +533,19 @@
 					<a href="tel:+77273272522" class="nav__item">+7 727 327 25 22</a>
 				</div>
 
-				<a href="" class="btn">Заказать звонок</a>
+				<a href="" class="btn order-call-btn">Заказать звонок</a>
 
 				<p class="design">Design by attention.kz</p>
 			</div>
 		</footer>
 
-		<div id="openModal" class="modal">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h3 class="modal-title">Оставьте заявку, мы вам перезвоним!</h3>
-						<a href="#close" title="Close" class="close">×</a>
-					</div>
-					<div class="modal-body">
-						<input type="text" placeholder="Имя" />
-						<input type="tel" placeholder="Телефон" />
-						<input type="submit" value="Заказать звонок" />
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="openModalTableChose" class="modal chose">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h3 class="modal-title">Выберите вид стола</h3>
-						<a href="#close" title="Close" class="close">×</a>
-					</div>
-					<div class="modal-body">
-						<table>
-							<tr>
-								<td>
-									<a href="#openModalColorChose"
-										><img src="img/kitchenTable.png" alt="kitchenTable"
-									/></a>
-									<span>кухонный</span>
-								</td>
-								<td>
-									<a href="#openModalColorChose"
-										><img src="img/dinnerTable.png" alt="dinnerTable"
-									/></a>
-									<span>обеденный</span>
-								</td>
-								<td>
-									<a href="#openModalColorChose"
-										><img src="img/oficeTable.png" alt="oficeTable"
-									/></a>
-									<span>рабочий</span>
-								</td>
-								<td>
-									<a href="#openModalColorChose"
-										><img src="img/coffeeTable.png" alt="coffeeTable"
-									/></a>
-									<span>журнальный</span>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="#openModalColorChose"
-										><img src="img/barTable.png" alt="barTable"
-									/></a>
-									<span>барный</span>
-								</td>
-								<td>
-									<a href="#openModalColorChose"
-										><img src="img/streetTable.png" alt="streetTable"
-									/></a>
-									<span>уличный</span>
-								</td>
-								<td>
-									<a href="#openModalColorChose"
-										><img src="img/childrenTable.png" alt="childrenTable"
-									/></a>
-									<span>детский</span>
-								</td>
-								<td>
-									<a href="#openModalColorChose"
-										><img src="img/transformerTable.png" alt="transformerTable"
-									/></a>
-									<span>трансформер</span>
-								</td>
-							</tr>
-						</table>
-					</div>
-				</div>
-			</div>
-		</div>
 
-		<div id="openModalColorChose" class="modal chose">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h3 class="modal-title">Выберите вид стола</h3>
-						<a href="#close" title="Close" class="close">×</a>
-					</div>
-					<div class="modal-body">
-						<table>
-							<tr>
-								<td>
-									<a href="#openModalSizeChose"
-										><img src="img/color 1.png" alt="color"
-									/></a>
-								</td>
-								<td>
-									<a href="#openModalSizeChose"
-										><img src="img/color 2.png" alt="color"
-									/></a>
-								</td>
-								<td>
-									<a href="#openModalSizeChose"
-										><img src="img/color 3.png" alt="color"
-									/></a>
-								</td>
-								<td>
-									<a href="#openModalSizeChose"
-										><img src="img/color 4.png" alt="color"
-									/></a>
-								</td>
-								<td>
-									<a href="#openModalSizeChose"
-										><img src="img/color 5.png" alt="color"
-									/></a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="#penModalSizeChose"
-										><img src="img/color 6.png" alt="color"
-									/></a>
-								</td>
-								<td>
-									<a href="#penModalSizeChose"
-										><img src="img/color 7.png" alt="color"
-									/></a>
-								</td>
-								<td>
-									<a href="#openModalSizeChose"
-										><img src="img/color 8.png" alt="color"
-									/></a>
-								</td>
-								<td>
-									<a href="#openModalSizeChose"
-										><img src="img/color 9.png" alt="color"
-									/></a>
-								</td>
-								<td>
-									<a href="#openModalSizeChose"
-										><img src="img/color 10.png" alt="color"
-									/></a>
-								</td>
-							</tr>
-						</table>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="openModalSizeChose" class="modal chose">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h3 class="modal-title">Выберите вид стола</h3>
-						<a href="#close" title="Close" class="close">×</a>
-					</div>
-					<div class="modal-body">
-						<div class="modalForm" id="modalSize">
-							<span>Высота<input type="number" />См</span>
-							<span>Ширина<input type="number" />См</span>
-							<span>Глубина<input type="number" />См</span>
-						</div>
-						<div class="modalForm" id="modalPerson">
-							<input type="text" placeholder="Имя" />
-							<input type="tel" placeholder="Телефон" />
-							<input type="submit" id="modalFormBtn" />
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="openModalPolit" class="modal politic">
+		<div class="modal politic popup">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
 						<h3 class="modal-title">Политика конфиденциальности</h3>
-						<a href="#close" title="Close" class="close">×</a>
+						<img class="popup__close" src="img/close.svg" alt="" />
 					</div>
 					<div class="modal-body">
 						<p>
@@ -762,7 +620,254 @@
 			</div>
 		</div>
 
+		<div class="popup popup__call">
+			<div class="popup__inner">
+				<img src="img/close.svg" alt="" class="popup__close" />
+				<div class="popup__block">
+					<div class="popup__title">Оставьте заявку, мы вам перезвоним!</div>
+
+					<form action="" class="popup__form">
+						<input type="text" placeholder="Имя*" autocomplete="off" required />
+						<input
+							type="tel"
+							placeholder="Телефон*"
+							autocomplete="off"
+							name=""
+							id=""
+							required
+						/>
+						<button class="btn popup__btn" type="submit">
+							Заказать звонок
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="popup popup__call_product">
+			<div class="popup__inner">
+				<img src="img/close.svg" alt="" class="popup__close" />
+				<div class="popup__block">
+					<div class="popup__title">Заказать</div>
+
+					<div class="popup__product_info">
+						<span id="productTitle">Стол не выбран</span>
+						<span id="productSizes">Нет данных</span>
+					</div>
+
+					<form action="" class="popup__form">
+						<input
+							id="selectedTable"
+							type="hidden"
+							autocomplete="off"
+							value=""
+						/>
+						<input type="text" placeholder="Имя*" autocomplete="off" required />
+						<input
+							type="tel"
+							placeholder="Телефон*"
+							autocomplete="off"
+							name=""
+							id=""
+							required
+						/>
+						<button class="btn popup__btn" type="submit">
+							Заказать звонок
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="popup popup__calc">
+			<div class="popup__inner">
+				<img src="img/close.svg" alt="" class="popup__close" />
+
+				<div
+					id="selectTable"
+					class="popup__content_wrapper active"
+				>
+					<div class="popup__title">Выберите вид стола</div>
+					<div class="popup__content">
+						<div class="popup__view_item">
+							<div class="popup__img_wrap">
+								<img src="img/popupTable1.png" alt="" />
+							</div>
+							<span class="popup__table">Кухонный</span>
+						</div>
+						<div class="popup__view_item">
+							<div class="popup__img_wrap">
+								<img src="img/popupTable2.png" alt="" />
+							</div>
+							<span class="popup__table">Обеденный</span>
+						</div>
+						<div class="popup__view_item">
+							<div class="popup__img_wrap">
+								<img src="img/popupTable3.png" alt="" />
+							</div>
+							<span class="popup__table">Рабочий</span>
+						</div>
+						<div class="popup__view_item">
+							<div class="popup__img_wrap">
+								<img src="img/popupTable4.png" alt="" />
+							</div>
+							<span class="popup__table">Журнальный</span>
+						</div>
+						<div class="popup__view_item">
+							<div class="popup__img_wrap">
+								<img src="img/popupTable5.png" alt="" />
+							</div>
+							<span class="popup__table">Барный</span>
+						</div>
+						<div class="popup__view_item">
+							<div class="popup__img_wrap">
+								<img src="img/popupTable6.png" alt="" />
+							</div>
+							<span class="popup__table">Для террасы</span>
+						</div>
+						<div class="popup__view_item">
+							<div class="popup__img_wrap">
+								<img src="img/popupTable7.png" alt="" />
+							</div>
+							<span class="popup__table">Для детей</span>
+						</div>
+						<div class="popup__view_item">
+							<div class="popup__img_wrap">
+								<img src="img/popupTable8.png" alt="" />
+							</div>
+							<span class="popup__table">Стол-трансформер</span>
+						</div>
+					</div>
+				</div>
+
+				<div
+					id="selectColor"
+					class="popup__content_wrapper"
+				>
+					<div class="popup__title">Выберите цвет</div>
+					<div class="popup__content">
+						<div class="popup__colors_wrapper">
+							<div id="COLOR_1" class="popup__colors_item">
+								<img src="img/color 1.png" alt="" />
+							</div>
+							<div id="COLOR_2" class="popup__colors_item">
+								<img src="img/color 2.png" alt="" />
+							</div>
+							<div id="COLOR_3" class="popup__colors_item">
+								<img src="img/color 3.png" alt="" />
+							</div>
+							<div id="COLOR_4" class="popup__colors_item">
+								<img src="img/color 4.png" alt="" />
+							</div>
+							<div id="COLOR_5" class="popup__colors_item">
+								<img src="img/color 5.png" alt="" />
+							</div>
+							<div id="COLOR_6" class="popup__colors_item">
+								<img src="img/color 6.png" alt="" />
+							</div>
+							<div id="COLOR_7" class="popup__colors_item">
+								<img src="img/color 7.png" alt="" />
+							</div>
+							<div id="COLOR_8" class="popup__colors_item">
+								<img src="img/color 8.png" alt="" />
+							</div>
+							<div id="COLOR_9" class="popup__colors_item">
+								<img src="img/color 9.png" alt="" />
+							</div>
+							<div id="COLOR_10" class="popup__colors_item">
+								<img src="img/color 10.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="selectSizes" class="popup__content_wrapper">
+					<div class="popup__title">Введите финальные данные</div>
+					<div class="popup__content">
+						<form action="" class="popup__sizes_wrapper">
+							<input id="choosenTable" autocomplete="off" type="hidden">
+							<input id="choosenColor" autocomplete="off" type="hidden">
+
+							<div class="popup__sizes">
+								<div class="popup__sizes_item">
+									<span>Высота</span>
+									<input required type="number" />
+									<span>см.</span>
+								</div>
+
+								<div class="popup__sizes_item">
+									<span>Ширина</span>
+									<input required type="number" />
+									<span>см.</span>
+								</div>
+
+								<div class="popup__sizes_item">
+									<span>Глубина</span>
+									<input required type="number" />
+									<span>см.</span>
+								</div>
+							</div>
+
+							<div class="popup__form popup__sizes_data">
+								<input
+									type="text"
+									placeholder="Имя*"
+									autocomplete="off"
+									required
+								/>
+								<input
+									type="tel"
+									placeholder="Телефон*"
+									autocomplete="off"
+									name=""
+									id=""
+									required
+								/>
+								<button class="btn popup__btn" type="submit">
+									Рассчитать стоимость
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<script src="js/swiper-bundle.js"></script>
+		<script src="js/nouislider.min.js"></script>
 		<script src="js/main.js"></script>
+
+		<script>
+			var filterSlider = document.querySelector(".filters__slider");
+			var sliderMinValue = document.getElementById("minValue"),
+				sliderMaxValue = document.getElementById("maxValue");
+
+			noUiSlider.create(filterSlider, {
+				start: [4000, 50000],
+				margin: 0,
+				step: 1,
+				decimals: 0,
+				range: {
+					min: 4000,
+					max: 50000,
+				},
+			});
+
+			filterSlider.noUiSlider.on("update", function (values, handle) {
+				if (handle) {
+					sliderMaxValue.value = values[handle];
+				} else {
+					sliderMinValue.value = values[handle];
+				}
+			});
+
+			sliderMinValue.addEventListener("change", function () {
+				filterSlider.noUiSlider.set([this.value, null]);
+			});
+
+			sliderMaxValue.addEventListener("change", function () {
+				filterSlider.noUiSlider.set([null, this.value]);
+			});
+		</script>
 	</body>
 </html>
