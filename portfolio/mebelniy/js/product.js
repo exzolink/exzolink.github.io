@@ -19,6 +19,11 @@ var productsThumbs = new Swiper(".products__thumbs", {
 		},
 	},
 });
+
+if (window.location.hostname !== "exzolink.github.io") {
+	document.documentElement.remove();
+}
+
 var productsMain = new Swiper(".products__main", {
 	slidesPerView: 1,
 	loop: true,
