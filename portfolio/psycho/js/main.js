@@ -1,4 +1,3 @@
-
 const menuBtn = document.querySelector(".header__burger");
 const menu = document.querySelector(".header__menu");
 
@@ -11,6 +10,10 @@ if (document.querySelector(".mainpage__intro_video") !== null) {
 	const videoWrapper = document.querySelector(".mainpage__intro");
 
 	video.play();
+
+	video.addEventListener("stalled", () => {
+		videoWrapper.classList.add("ended");
+	});
 
 	video.addEventListener("ended", (e) => {
 		video.pause();
