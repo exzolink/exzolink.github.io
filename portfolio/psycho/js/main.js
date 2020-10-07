@@ -11,7 +11,7 @@ if (document.querySelector(".mainpage__intro_video") !== null) {
 
 	video.play();
 
-	video.addEventListener("stalled", () => {
+	video.addEventListener("abort", () => {
 		videoWrapper.classList.add("ended");
 	});
 
