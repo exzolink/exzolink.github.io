@@ -71,3 +71,15 @@
   .custom-select-container.is-open .custom-select-panel {
     scrollbar-width: none;
   }
+
+  @media screen and (max-width: 550px) {
+    .custom-select-option {
+      padding: 5px;
+    }
+    .custom-select-opener {
+      padding: 7px 5px;
+      display: flex;
+      align-items: center;
+      line-height: 1;
+    }
+  }
