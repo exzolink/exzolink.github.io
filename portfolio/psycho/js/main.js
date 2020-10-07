@@ -9,23 +9,21 @@ if (document.querySelector(".mainpage__intro_video") !== null) {
 	const video = document.querySelector(".mainpage__intro_video");
 	const videoWrapper = document.querySelector(".mainpage__intro");
 
-	video.play();
+	window.addEventListener("load", () => {
+		video.play();
 
-	video.addEventListener("abort", () => {
-		videoWrapper.classList.add("ended");
-	});
-
-	setTimeout(() => {
-		if (video.currentTime == 0) {
-			videoWrapper.classList.add("ended");
-		}
-	}, 1000);
-
-	video.addEventListener("ended", (e) => {
-		video.pause();
 		setTimeout(() => {
-			videoWrapper.classList.add("ended");
-		}, 500);
+			if (video.currentTime == 0) {
+				videoWrapper.classList.add("ended");
+			}
+		}, 1000);
+
+		video.addEventListener("ended", (e) => {
+			video.pause();
+			setTimeout(() => {
+				videoWrapper.classList.add("ended");
+			}, 500);
+		});
 	});
 }
 
