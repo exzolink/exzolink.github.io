@@ -15,6 +15,12 @@ if (document.querySelector(".mainpage__intro_video") !== null) {
 		videoWrapper.classList.add("ended");
 	});
 
+	setTimeout(() => {
+		if (video.currentTime == 0) {
+			videoWrapper.classList.add("ended");
+		}
+	}, 1000);
+
 	video.addEventListener("ended", (e) => {
 		video.pause();
 		setTimeout(() => {
