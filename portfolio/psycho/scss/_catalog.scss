@@ -1,5 +1,5 @@
 .catalog {
-    background-image: url('../imgs/bg.jpg');
+    background-image: url('../imgs/bg.gif');
     background-repeat: repeat;
     background-color: #aaa;
 
@@ -12,8 +12,6 @@
         background-color: rgba(255,255,255,.7);
         flex-direction: column;
         padding-bottom: 5px;
-        border-bottom: 3px solid transparent;
-        transition: border .2s ease;
 
         &.soldout {
             & img {
@@ -23,7 +21,6 @@
 
         &:hover {
             cursor: pointer;
-            border-color: #660000;
 
             & .catalog__item_img img {
                 transform: scale(1.1);
