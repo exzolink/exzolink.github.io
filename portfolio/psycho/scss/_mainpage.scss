@@ -39,3 +39,15 @@
         }
     }
 }
+
+@media screen and (max-width: 800px) {
+    .mainpage {
+        &__intro {
+
+            &_video {
+                margin-top: -5%;
+                transform: scale(2);
+            }
+        }
+    }
+}
