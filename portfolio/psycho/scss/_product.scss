@@ -1,5 +1,5 @@
 .product {
-	background-image: url("../imgs/bg.jpg");
+	background-image: url("../imgs/bg.gif");
 	background-repeat: repeat;
 	background-color: #aaa;
 
@@ -32,11 +32,12 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			justify-content: space-between;
 		}
 	}
 
 	&__thumbs {
-		height: 430px;
+		height: 450px;
 
 		&_slide {
 			display: flex;
@@ -186,6 +187,10 @@
 	}
 }
 
+.pt-50 {
+	padding-top: 60px;
+}
+
 @media screen and (max-width: 1500px) {
 	.product {
 		&__sliders {
@@ -287,13 +292,13 @@
 		}
 
 		&__buy {
-			justify-content: center;
-			align-items: flex-start;
-			flex-direction: column-reverse;
 
 			&-price {
-				margin-left: 0;
-				margin-bottom: 15px;
+				font-size: 28px;
+			}
+
+			&-btn {
+			max-width: 160px;
 			}
 		}
 	}
@@ -307,44 +312,55 @@
 	.product {
 		&__wrapper {
 			flex-direction: column;
-			padding: 15px;
-			background-color: rgba(255, 255, 255, 0.75);
 		}
 
 		&__info {
 			margin-left: 0;
-			padding-top: 20px;
-			background-color: transparent;
+			margin-top: 30px;
 		}
 
 		&__sliders {
 			width: 100%;
 		}
 
-		&__mobile {
-            display: flex;
-
-			&_title {
-				font-weight: 700;
-				font-size: 28px;
-                letter-spacing: 0.06em;
-                margin-bottom: 15px;
-                margin-top: 3px;
-			}
-        }
-        
-        &__name {
-            display: none;
-        }
+		&__name {
+			margin-bottom: 15px;
+		}
 
         &__desc {
             margin-top: 0;
-        }
+		}
+		
+		&__thumbs {
+			&_arrow {
+				display: flex;
+			}
+
+			&_next {
+				transform: rotate(-90deg);
+				margin-left: 20px;
+			}
+
+			&_prev {
+				transform: rotate(-90deg);
+				margin-right: 20px;
+			}
+		}
+
+		&__sliders {
+			&_thumbs {
+				flex-direction: row;
+			}
+		}
 	}
 }
 
 
 @media screen and (max-width: 550px) {
+	.pt-50 {
+		padding-top: 30px;
+	}
+
     .product {
         &__mobile {
             &_title {
@@ -353,7 +369,7 @@
         }
 
         &__sliders_main {
-            margin-bottom: 10px;
+            margin-bottom: 24px;
         }
 
         &__thumbs {
@@ -364,13 +380,25 @@
                     border-bottom: 3px solid #660000;
                 }
             }
-        }
+		}
 
-        &__info {
-            &_inner {
-                padding: 0;
-                padding-top: 10px;
-            }
-        }
+		&__selectors {
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+
+		&__info_copies {
+			display: none;
+		}
+
+		&__buy-price {
+			font-size: 22px;
+		}
+		
+		&__inner {
+			padding-top: 20px;
+		}
+
     }
 }
+

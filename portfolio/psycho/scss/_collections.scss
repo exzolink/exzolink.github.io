@@ -1,5 +1,5 @@
 .collections {
-    background-image: url('../imgs/bg.jpg');
+    background-image: url('../imgs/bg.gif');
     background-repeat: repeat;
     background-color: #aaa;
 
@@ -108,6 +108,14 @@
             &_name {
                 font-size: 18px;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .collections {
+        &__item {
+            margin-bottom: 30px;
         }
     }
 }

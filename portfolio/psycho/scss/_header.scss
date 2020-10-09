@@ -57,7 +57,7 @@
 				&:after {
 					position: absolute;
 					content: "";
-					width: 50%;
+					width: 5px;
 					pointer-events: none;
 					left: 50%;
 					transform: translateX(-50%);
@@ -72,9 +72,9 @@
 	&__menu {
 		position: absolute;
 		background-color: #000;
-		top: 93px;
+		top: 94px;
 		left: 0;
-		max-width: 200px;
+		height: calc(100vh - 94px);
 		width: 100%;
 		transform: translateX(-100%);
 		visibility: collapse;
@@ -91,6 +91,12 @@
 
 		&_inner {
 			padding: 20px 15px;
+			padding-bottom: 60px;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
 		}
 
 		& .header__search_form {
@@ -98,13 +104,23 @@
 			margin-bottom: 30px;
 		}
 
+		& .header__lang {
+			display: flex;
+			margin-right: 0;
+			font-size: 20px;
+		}
+
 		& .nav__wrapper {
 			display: flex;
 			flex-direction: column;
+			align-items: center;
+			margin-top: auto;
+			margin-bottom: auto;
 
 			& .nav__link {
 				margin-right: 0;
-				margin-bottom: 20px;
+				margin-bottom: 40px;
+				font-size: 20px;
 
 				&:last-child {
 					margin-bottom: 0;
@@ -112,7 +128,11 @@
 
 				&.active {
 					&:before {
-						content: none;
+						background: url("../imgs/navActive_mob.png");
+						background-repeat: no-repeat;
+						background-size: cover;
+						background-position: 50%;
+						bottom: -25px;
 					}
 				}
 			}
@@ -251,17 +271,16 @@
 			opacity: 0.8;
 		}
 
-		&__inner {
-			justify-content: flex-start;
+		&__search_form {
+			display: none;
 		}
 
-		&__block {
-			margin-left: auto;
+		&__lang {
+			display: none;
 		}
 
-		&__logo {
-			margin-right: 20px;
-			order: -1;
+		&__basket {
+			padding-bottom: 0;
 		}
 	}
 
@@ -277,37 +296,14 @@
 		&__search_form {
 			display: none;
 		}
+	}
+}
 
-		&__logo img {
-			max-height: 50px;
-		}
-
-		&__burger img {
-			width: 32px;
-			height: 32px;
-		}
-
+@media screen and (max-width: 359px) {
+	.header {
 		&__menu {
-			max-width: 250px;
-			top: 81px;
-
-			& .header__search_form {
-				display: flex;
-				margin-right: 0;
-			}
-
-			& .header__search {
-				width: 100%;
-			}
-		}
-
-		&__lang {
-			& a {
-				&.active {
-					&:after {
-						bottom: -10px;
-					}
-				}
+			&_inner {
+				padding-bottom: 30px;
 			}
 		}
 	}

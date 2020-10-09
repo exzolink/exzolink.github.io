@@ -152,6 +152,14 @@
     }
 }
 
+@media screen and (max-width: 550px) {
+    .catalog {
+        &__item {
+            margin-bottom: 30px;
+        }
+    }
+}
+
 @media screen and (max-width: 430px) {
     .catalog {
         &__item {

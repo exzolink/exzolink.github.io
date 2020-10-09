@@ -40,7 +40,7 @@
         letter-spacing: 0.09em;
         text-transform: initial;
 
-        & span {
+        & a {
             font-weight: 700;
         }
     }
@@ -55,6 +55,8 @@
         }
 
         &__copyright {
+            margin-top: 20px;
+            margin-bottom: 20px;
             font-size: 16px;
         }
 
@@ -63,8 +65,7 @@
         }
 
         &__socials {
-            margin-top: 20px;
-            margin-bottom: 20px;
+           order: -1;
 
 
             & a {

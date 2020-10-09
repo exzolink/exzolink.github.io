@@ -7,21 +7,10 @@
 		<link rel="stylesheet" href="css/styles.css" />
 		<link rel="stylesheet" href="css/swiper.css" />
 	</head>
-	<body class="no-scroll">
+	<body>
 		<header class="header">
 			<div class="header__menu">
 				<div class="header__menu_inner">
-					<form class="header__search_form" action="">
-						<input
-							class="header__search"
-							type="text"
-							required
-							placeholder="ПОИСК"
-						/>
-						<button type="submit">
-							<img src="imgs/search.svg" alt="" />
-						</button>
-					</form>
 
 					<nav class="nav__wrapper">
 						<a href="" class="nav__link active">Главная</a>
@@ -31,13 +20,19 @@
 						<a href="" class="nav__link">Инстаграм</a>
 						<a href="" class="nav__link">ВК</a>
 					</nav>
+
+					<div class="header__lang">
+						<a href="">ENGLISH</a>
+						<span>|</span>
+						<a href="" class="active">RUSSIAN</a>
+					</div>
 				</div>
 			</div>
 
 			<div class="container">
 				<div class="header__inner">
 					<button class="header__burger">
-						<img src="imgs/burger.svg" width="40" height="40" alt="" />
+						<img src="imgs/burger.svg" width="22" height="22" alt="" />
 					</button>
 
 					<div class="header__block nav__block">
@@ -87,13 +82,6 @@
 			<div class="container">
 				<section class="product__inner">
 					<div class="product__wrapper">
-						<!--noindex-->
-						<div class="product__mobile">
-							<div class="product__mobile_title">
-								Лонгслив «TOY» | Коллекция «ERR0R»
-							</div>
-						</div>
-						<!--/noindex-->
 						<div class="product__sliders">
 							<div class="product__sliders_thumbs">
 								<div class="product__thumbs_arrow product__thumbs_prev">
@@ -202,7 +190,7 @@
 						</div>
 					</div>
 
-					<div class="title__wrapper">
+					<div class="title__wrapper pt-50">
 						<h1 class="title__label">Из этой коллекции</h1>
 					</div>
 
@@ -289,7 +277,7 @@
 						<a href="" target="_blank"><img src="imgs/yt.svg" alt="" /></a>
 					</div>
 
-					<p class="footer__designer">Design by <span>Daniil Begma</span></p>
+					<p class="footer__designer">Design by <a href="">Daniil Begma</a></p>
 				</div>
 			</div>
 		</footer>
