@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Psycho — интернет-магазин одежды</title>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="css/swiper.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__menu">
+				<div class="header__menu_inner">
+
+					<nav class="nav__wrapper">
+						<a href="" class="nav__link active">Главная</a>
+						<a href="" class="nav__link">Каталог</a>
+						<a href="" class="nav__link">Коллекции</a>
+						<a href="" class="nav__link">О нас</a>
+						<a href="" class="nav__link">Инстаграм</a>
+						<a href="" class="nav__link">ВК</a>
+					</nav>
+
+					<div class="header__lang">
+						<a href="">ENGLISH</a>
+						<span>|</span>
+						<a href="" class="active">RUSSIAN</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="header__inner">
+					<button class="header__burger">
+						<img src="imgs/burger.svg" width="22" height="22" alt="" />
+					</button>
+
+					<div class="header__block nav__block">
+						<nav class="nav__wrapper">
+							<a href="" class="nav__link active">Главная</a>
+							<a href="" class="nav__link">Каталог</a>
+							<a href="" class="nav__link">Коллекции</a>
+							<a href="" class="nav__link">О нас</a>
+							<a href="" class="nav__link">Инстаграм</a>
+							<a href="" class="nav__link">ВК</a>
+						</nav>
+					</div>
+
+					<a href="" class="header__logo"
+						><img width="35" height="62" src="imgs/lovo.svg" alt=""
+					/></a>
+
+					<div class="header__block">
+						<div class="header__lang">
+							<a href="">ENG</a>
+							<span>|</span>
+							<a href="" class="active">RU</a>
+						</div>
+
+						<form class="header__search_form" action="">
+							<input
+								class="header__search"
+								type="text"
+								required
+								placeholder="ПОИСК"
+							/>
+							<button type="submit">
+								<img src="imgs/search.svg" alt="" />
+							</button>
+						</form>
+
+						<button class="header__basket">
+							<img src="imgs/basket.svg" alt="" />
+							<span>0</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+		<article id="post-8" class="post-8 page type-page status-publish hentry">
+			<header class="entry-header">
+				<h1 class="entry-title">Оформление заказа</h1>
+			</header>
+			<!-- .entry-header -->
+			<div class="entry-content">
+				<div class="woocommerce">
+					<div class="woocommerce-notices-wrapper"></div>
+					<div class="woocommerce-notices-wrapper"></div>
+					<form
+						name="checkout"
+						method="post"
+						class="checkout woocommerce-checkout"
+						action="http://psycho.loc/checkout/"
+						enctype="multipart/form-data"
+					>
+						<div class="col2-set" id="customer_details">
+							<div class="col-1">
+								<div class="woocommerce-billing-fields">
+									<div class="woocommerce-billing-fields__field-wrapper">
+										<div
+											class="form-row modal-basket__inputs_item form-row-wide thwcfd-field-wrapper thwcfd-field-text validate-required"
+											id="billing_fio_field"
+											data-priority="10"
+										>
+											<span class="modal-basket__inputs_text">ФИО</span
+											><input
+												required=""
+												type="text"
+												class="modal-basket__inputs_input input-text"
+												name="billing_fio"
+												id="billing_fio"
+												placeholder="Фамилия Имя Отчество"
+												value="ФИО"
+											/>
+										</div>
+										<div
+											class="form-row modal-basket__inputs_item thwcfd-required thwcfd-field-wrapper thwcfd-field-tel validate-required validate-phone"
+											id="billing_phone_field"
+											data-priority="20"
+										>
+											<span class="modal-basket__inputs_text">Телефон</span
+											><input
+												required=""
+												type="tel"
+												class="modal-basket__inputs_input input-text"
+												name="billing_phone"
+												id="billing_phone"
+												placeholder="+7"
+												value="gffgf"
+												autocomplete="tel"
+											/>
+										</div>
+										<div
+											class="form-row modal-basket__inputs_item form-row-wide thwcfd-required thwcfd-field-wrapper thwcfd-field-email validate-required validate-email"
+											id="billing_email_field"
+											data-priority="30"
+										>
+											<span class="modal-basket__inputs_text">Почта</span
+											><input
+												required=""
+												type="email"
+												class="modal-basket__inputs_input input-text"
+												name="billing_email"
+												id="billing_email"
+												placeholder="example@mail.ru"
+												value="exzolink@gmail.com"
+												autocomplete="email username"
+											/>
+										</div>
+										<div
+											class="form-row modal-basket__inputs_item form-row-wide thwcfd-field-wrapper thwcfd-field-text validate-required validate-state"
+											id="billing_oblast_field"
+											data-priority="40"
+										>
+											<span class="modal-basket__inputs_text">Область</span
+											><input
+												required=""
+												type="text"
+												class="modal-basket__inputs_input input-text"
+												name="billing_oblast"
+												id="billing_oblast"
+												placeholder="Название области"
+												value=""
+											/>
+										</div>
+										<div
+											class="form-row modal-basket__inputs_item form-row-wide thwcfd-field-wrapper thwcfd-field-text validate-required"
+											id="billing_town_field"
+											data-priority="50"
+										>
+											<span class="modal-basket__inputs_text">Город</span
+											><input
+												required=""
+												type="text"
+												class="modal-basket__inputs_input input-text"
+												name="billing_town"
+												id="billing_town"
+												placeholder="Название города"
+												value=""
+											/>
+										</div>
+										<div
+											class="form-row modal-basket__inputs_item form-row-wide thwcfd-field-wrapper thwcfd-field-text validate-required"
+											id="billing_street_field"
+											data-priority="60"
+										>
+											<span class="modal-basket__inputs_text">Улица</span
+											><input
+												required=""
+												type="text"
+												class="modal-basket__inputs_input input-text"
+												name="billing_street"
+												id="billing_street"
+												placeholder="Название улицы"
+												value=""
+											/>
+										</div>
+										<div
+											class="form-row modal-basket__inputs_item form-row-wide thwcfd-field-wrapper thwcfd-field-text validate-required"
+											id="billing_flat_field"
+											data-priority="70"
+										>
+											<span class="modal-basket__inputs_text"
+												>Квартира / Дом</span
+											><input
+												required=""
+												type="text"
+												class="modal-basket__inputs_input input-text"
+												name="billing_flat"
+												id="billing_flat"
+												placeholder="Номер квартиры / дома"
+												value=""
+											/>
+										</div>
+										<div
+											class="form-row modal-basket__inputs_item form-row-wide thwcfd-field-wrapper thwcfd-field-text validate-required validate-postcode"
+											id="billing_index_field"
+											data-priority="80"
+										>
+											<span class="modal-basket__inputs_text"
+												>Почтовый индекс</span
+											><input
+												required=""
+												type="text"
+												class="modal-basket__inputs_input input-text"
+												name="billing_index"
+												id="billing_index"
+												placeholder="XXXXXX"
+												value=""
+											/>
+										</div>
+										<div
+											class="form-row modal-basket__inputs_item form-row-wide modal-textarea thwcfd-field-wrapper thwcfd-field-textarea"
+											id="billing_comment_field"
+											data-priority="90"
+										>
+											<span class="modal-basket__inputs_text"
+												>Комментарий к заказу</span
+											><textarea
+												name="billing_comment"
+												class="input-text"
+												id="billing_comment"
+												placeholder="Введите сообщение"
+												rows="2"
+												cols="5"
+											></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-2">
+								<div class="woocommerce-shipping-fields">
+									<h3 id="ship-to-different-address">
+										<label
+											class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox"
+										>
+											<input
+												id="ship-to-different-address-checkbox"
+												class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox"
+												type="checkbox"
+												name="ship_to_different_address"
+												value="1"
+											/>
+											<span>Доставка по другому адресу?</span>
+										</label>
+									</h3>
+
+									<div class="shipping_address">
+										<div
+											class="woocommerce-shipping-fields__field-wrapper"
+										></div>
+									</div>
+								</div>
+								<div class="woocommerce-additional-fields"></div>
+							</div>
+						</div>
+
+						<h3 id="order_review_heading">Ваш заказ</h3>
+
+						<div id="order_review" class="woocommerce-checkout-review-order">
+							<table class="shop_table woocommerce-checkout-review-order-table">
+								<thead>
+									<tr>
+										<th class="product-name">Товар</th>
+										<th class="product-total">Подытог</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="cart_item">
+										<td class="product-name">
+											test&nbsp;
+											<strong class="product-quantity">×&nbsp;1</strong>
+										</td>
+										<td class="product-total">
+											<span class="woocommerce-Price-amount amount"
+												><bdi
+													>1<span class="woocommerce-Price-currencySymbol">
+														P</span
+													></bdi
+												></span
+											>
+										</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr class="cart-subtotal">
+										<th>Подытог</th>
+										<td>
+											<span class="woocommerce-Price-amount amount"
+												><bdi
+													>1<span class="woocommerce-Price-currencySymbol">
+														P</span
+													></bdi
+												></span
+											>
+										</td>
+									</tr>
+
+									<tr class="woocommerce-shipping-totals shipping">
+										<th>Доставка</th>
+										<td data-title="Доставка">
+											<ul
+												id="shipping_method"
+												class="woocommerce-shipping-methods"
+											>
+												<li>
+													<input
+														type="hidden"
+														name="shipping_method[0]"
+														data-index="0"
+														id="shipping_method_0_flat_rate1"
+														value="flat_rate:1"
+														class="shipping_method"
+													/><label for="shipping_method_0_flat_rate1"
+														>Единая ставка:
+														<span class="woocommerce-Price-amount amount"
+															><bdi
+																>350<span
+																	class="woocommerce-Price-currencySymbol"
+																>
+																	P</span
+																></bdi
+															></span
+														></label
+													>
+												</li>
+											</ul>
+										</td>
+									</tr>
+
+									<tr class="order-total">
+										<th>Итого</th>
+										<td>
+											<strong
+												><span class="woocommerce-Price-amount amount"
+													><bdi
+														>351<span class="woocommerce-Price-currencySymbol">
+															P</span
+														></bdi
+													></span
+												></strong
+											>
+										</td>
+									</tr>
+								</tfoot>
+							</table>
+							<div id="payment" class="woocommerce-checkout-payment">
+								<ul class="wc_payment_methods payment_methods methods">
+									<li class="wc_payment_method payment_method_fondy">
+										<input
+											id="payment_method_fondy"
+											type="radio"
+											class="input-radio"
+											name="payment_method"
+											value="fondy"
+											checked="checked"
+											data-order_button_text=""
+										/>
+
+										<label for="payment_method_fondy">
+											Онлайн-оплата
+											<img
+												style="
+													width: 100%;
+													max-width: 170px;
+													min-width: 120px;
+													float: right;
+												"
+												src="http://psycho.loc/wp-content/plugins/fondy-woocommerce-payment-gateway/assets/img/master_visa_fondy.svg"
+												alt="Fondy Logo"
+											/>
+										</label>
+										<div class="payment_box payment_method_fondy">
+											<p>Оплата товара на сайте psycho</p>
+										</div>
+									</li>
+								</ul>
+								<div class="form-row place-order">
+									<noscript>
+										Поскольку ваш браузер не поддерживает JavaScript или в нем
+										он отключен, просим убедиться в том, что вы нажали кнопку
+										<em>Обновить итог</em> перед регистрацией заказа. Иначе,
+										есть риск неправильного подсчета стоимости. <br /><button
+											type="submit"
+											class="button alt"
+											name="woocommerce_checkout_update_totals"
+											value="Обновить итог"
+										>
+											Обновить итог
+										</button>
+									</noscript>
+
+									<div class="woocommerce-terms-and-conditions-wrapper">
+										<div class="woocommerce-privacy-policy-text">
+											<p>
+												Ваши личные данные будут использоваться для обработки
+												ваших заказов, упрощения вашей работы с сайтом и для
+												других целей, описанных в нашей
+												<a
+													href="http://psycho.loc/privacy-policy__trashed/"
+													class="woocommerce-privacy-policy-link"
+													target="_blank"
+													>политика конфиденциальности</a
+												>.
+											</p>
+										</div>
+									</div>
+
+									<button
+										type="submit"
+										class="button alt"
+										name="woocommerce_checkout_place_order"
+										id="place_order"
+										value="Подтвердить заказ"
+										data-value="Подтвердить заказ"
+									>
+										Подтвердить заказ
+									</button>
+
+									<input
+										type="hidden"
+										id="woocommerce-process-checkout-nonce"
+										name="woocommerce-process-checkout-nonce"
+										value="6384be6b57"
+									/><input
+										type="hidden"
+										name="_wp_http_referer"
+										value="/checkout/"
+									/>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- .entry-content -->
+			<div class="edit-link">
+				<a
+					class="post-edit-link"
+					href="http://psycho.loc/wp-admin/post.php?post=8&amp;action=edit"
+					>Изменить <span class="screen-reader-text">Оформление заказа</span></a
+				>
+			</div>
+		</article>
+		<!-- #post-## -->
+	</main>
+	<!-- #main -->
+</div>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <p class="footer__copyright">© Copyright «Psycho» 2020</p>
+
+            <div class="footer__socials">
+                <a href="" target="_blank"><img src="imgs/vk.svg" alt="" /></a>
+                <a href="" target="_blank"><img src="imgs/inst.svg" alt="" /></a>
+                <a href="" target="_blank"><img src="imgs/yt.svg" alt="" /></a>
+            </div>
+
+            <p class="footer__designer">Design by <a href="">Daniil Begma</a></p>
+        </div>
+    </div>
+</footer>
+
+<div class="modal-basket">
+    <div class="modal-basket__inner">
+        <form action="" class="modal-basket__block">
+            <img
+                class="modal-basket__close"
+                src="imgs/delete.svg"
+                width="20"
+                height="20"
+                alt=""
+            />
+
+            <div class="modal-basket__block_inner">
+                <div class="px-35">
+                    <span class="modal-basket__text modal-basket-title">Корзина</span>
+                </div>
+
+                <div class="modal-basket__items">
+                    <div class="modal-basket__item">
+                        <img class="deleteModal" src="imgs/delete.svg" alt="" />
+
+                        <a class="flex-start" href=""
+                            ><img
+                                class="modal-basket__item_img"
+                                src="imgs/productZagl.jpg"
+                                alt=""
+                            />
+                        </a>
+                        <div class="modal-basket__item_block">
+                            <span class="modal-basket__text">«The wolf inside you»</span>
+                            <span class="modal-basket__desc">XL, Кол-во: 5</span>
+                            <span class="modal-basket__price">4500 ₽</span>
+                        </div>
+                    </div>
+
+                    <div class="modal-basket__item">
+                        <img class="deleteModal" src="imgs/delete.svg" alt="" />
+                        <a class="flex-start" href=""
+                            ><img
+                                class="modal-basket__item_img"
+                                src="imgs/productZagl.jpg"
+                                alt=""
+                        /></a>
+                        <div class="modal-basket__item_block">
+                            <span class="modal-basket__text">«The wolf inside you»</span>
+                            <span class="modal-basket__desc">XL, Кол-во: 5</span>
+                            <span class="modal-basket__price">4500 ₽</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-basket__total">
+                    <span class="modal-basket__text">Итого:</span>
+
+                    <div class="modal-basket__total_block">
+                        <span class="modal-basket__total_price">4500 ₽</span>
+                        <span class="modal-basket__total_delivery"
+                            >+350 (Доставка)</span
+                        >
+                    </div>
+                </div>
+
+                <div class="modal-basket__inputs px-35">
+                    <span class="modal-basket__text">Информация о доставке</span>
+
+                    <div class="modal-basket__inputs_item">
+                        <span class="modal-basket__inputs_text">ФИО</span>
+
+                        <input
+                            type="text"
+                            required
+                            placeholder="Фамилия Имя Отчество*"
+                            class="modal-basket__inputs_input"
+                        />
+                    </div>
+
+                    <div class="modal-basket__inputs_item">
+                        <span class="modal-basket__inputs_text">Номер телефона</span>
+
+                        <input
+                            type="tel"
+                            required
+                            minlength="11"
+                            placeholder="+7"
+                            class="modal-basket__inputs_input"
+                        />
+                    </div>
+
+                    <div class="modal-basket__inputs_item">
+                        <span class="modal-basket__inputs_text">Почта</span>
+
+                        <input
+                            type="email"
+                            minlength="5"
+                            required
+                            placeholder="example@mail.ru"
+                            class="modal-basket__inputs_input"
+                        />
+                    </div>
+
+                    <div class="modal-basket__inputs_item">
+                        <span class="modal-basket__inputs_text">Адрес</span>
+
+                        <div class="modal-basket__inputs_multiple">
+                            <input
+                                type="text"
+                                required
+                                placeholder="Область*"
+                                class="modal-basket__inputs_input"
+                            />
+                            <input
+                                type="text"
+                                required
+                                placeholder="Город*"
+                                class="modal-basket__inputs_input"
+                            />
+                            <input
+                                type="text"
+                                required
+                                placeholder="Улица*"
+                                class="modal-basket__inputs_input"
+                            />
+                            <input
+                                type="text"
+                                required
+                                placeholder="Квартира / Дом*"
+                                class="modal-basket__inputs_input"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="modal-basket__inputs_item">
+                        <span class="modal-basket__inputs_text">Индекс</span>
+
+                        <input
+                            type="text"
+                            required
+                            minlength="6"
+                            placeholder="XXXXXX*"
+                            class="modal-basket__inputs_input"
+                        />
+
+                        <span class="modal-basket__inputs_alert"
+                            >*Доставка осуществляется Почтой России, ~350 ₽</span
+                        >
+                    </div>
+
+                    <div class="modal-basket__inputs_item">
+                        <span class="modal-basket__inputs_text"
+                            >Комментарий к заказу</span
+                        >
+                        <textarea
+                            rows="5"
+                            type="text"
+                            placeholder="Введите сообщение"
+                            class="modal-basket__inputs_input"
+                        ></textarea>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="product__buy-btn modal-basket__submit"
+                    >
+                        Оформить заказ
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -33,7 +33,7 @@
 	&__lang {
 		display: flex;
 		align-items: flex-start;
-		margin-right: 45px;
+		margin-right: 35px;
 
 		& span {
 			margin-left: 4px;
@@ -224,8 +224,8 @@
 				background: url("../imgs/navActive.png");
 				background-repeat: no-repeat;
 				height: 100%;
-				background-size: contain;
-				display: block;
+				background-size: 100%;
+				display: inline-block;
 				bottom: -20px;
 				width: 100%;
 			}

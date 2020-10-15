@@ -1,0 +1,77 @@
+.site-main {
+	background-image: url("../imgs/bg.gif");
+	background-repeat: repeat;
+	background-color: #aaa;
+	min-height: calc(100vh - 94px - 134px);
+}
+
+.checkout-page {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+@media screen and (max-width: 550px) {
+	.checkout-page {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+}
+
+.post-8 {
+	max-width: 450px;
+	margin: 0 auto;
+	padding: 35px;
+	background-color: #fff;
+
+	& .order_details {
+		margin-top: 45px;
+		list-style: none;
+		font-size: 16px;
+	}
+}
+
+.edit-link {
+	display: none;
+}
+
+#submit_fondy_payment_form {
+	margin-top: 15px;
+	color: #000;
+	display: block;
+	font-size: 18px;
+}
+
+
+.wc-variation-is-unavailable {
+    pointer-events: none;
+    cursor: not-allowed;
+    background-color: #303030;
+}
+
+.product__buy-price {
+
+    & .woocommerce-variation-price .price {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    & .woocommerce-variation-availability {
+        display: none;
+    }
+
+    & del {
+        color: #000;
+        text-decoration: line-through;
+    }
+
+    & ins {
+        text-decoration: none;
+        color: #660000;
+    }
+}
+
+.product__info_copies {
+    & .woocommerce-variation-price {
+        display: none;
+    }
+}

@@ -2,6 +2,7 @@
     background-image: url('../imgs/bg.gif');
     background-repeat: repeat;
     background-color: #aaa;
+    min-height: calc(100vh - 94px - 134px);
 
     &__wrapper {
         display: flex;
