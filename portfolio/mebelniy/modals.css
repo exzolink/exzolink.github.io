@@ -9,9 +9,12 @@
 
 #RecallPopup {
 	border-radius: 10px;
-	min-height: auto;
     padding: 30px 45px;
     max-width: 90%;
+}
+
+#bx_recall_popup_form {
+    min-height: auto;
 }
 
 .submit-def-arr {
@@ -22,8 +25,10 @@
 	top: 5px;
 }
 
-/* Оставить отзыв */
 
+
+
+/* Оставить отзыв */
 #SendReview {
 	background: #fff;
 	width: 502px;
@@ -68,10 +73,28 @@
 	line-height: 20px;
 }
 
+#modal_review form textarea {
+	font: 14px SegoeUISemiBold;
+	letter-spacing: 0.02em;
+	color: #b1bfd0 !important;
+	border: 1px solid #eceff5;
+	padding-left: 24px;
+	padding-right: 10px;
+	height: 90px;
+	width: 100%;
+	margin-bottom: 16px;
+	text-align: left;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border-radius: 4px;
+	line-height: 20px;
+}
+
 #modal_review form button {
 	padding: 8px 10px;
 	margin-top: 16px;
-	height: auto;
+    height: auto;
+    cursor: pointer;
 	background: #3983df;
 	border-radius: 2px;
 	font-size: 14px;
@@ -87,4 +110,27 @@
 #modal_review form button:hover {
 	background: transparent;
 	color: #3983df !important;
+}
+
+
+
+
+/* Слайдеры товаров */
+.recomend__product .h2 {
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.product-block .price {
+    display: block;
+    padding-bottom: 12px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #775443;
+}
+
+.product-block .desc-product a {
+    font: 16px "SegoeUIRegular" !important;
+    font-weight: 400;
 }
