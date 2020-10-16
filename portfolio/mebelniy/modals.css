@@ -1,0 +1,90 @@
+/* Перезвоните мне */
+#popup-window-overlay-RecallPopup {
+	background-color: #3983df;
+	opacity: 1;
+	background: #3983df
+		url(/local/templates/mebelnydom_main/static/css/../img/bg-modal.png) 50% 50%
+		no-repeat;
+}
+
+#RecallPopup {
+	border-radius: 10px;
+	min-height: auto;
+    padding: 30px 45px;
+    max-width: 90%;
+}
+
+.submit-def-arr {
+	margin-top: 20px;
+}
+
+.submit-def-arr:after {
+	top: 5px;
+}
+
+/* Оставить отзыв */
+
+#SendReview {
+	background: #fff;
+	width: 502px;
+	border-radius: 16px;
+	padding: 32px;
+    max-width: 90%;
+    min-height: auto;
+}
+
+#modal_review {
+	font-family: SegoeUISemiBold;
+	min-height: auto;
+}
+
+#modal_review form {
+	text-align: center;
+	font: 14px SegoeUISemiBold;
+	line-height: 20px;
+	letter-spacing: 0.02em;
+	color: #929eb0;
+	margin-bottom: 8px;
+}
+
+#modal_review form input:first-child {
+	margin-top: 20px;
+}
+
+#modal_review form input {
+	font: 14px SegoeUISemiBold;
+	letter-spacing: 0.02em;
+	color: #b1bfd0 !important;
+	border: 1px solid #eceff5;
+	padding-left: 24px;
+	padding-right: 10px;
+	height: 48px;
+	width: 100%;
+	margin-bottom: 16px;
+	text-align: left;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border-radius: 4px;
+	line-height: 20px;
+}
+
+#modal_review form button {
+	padding: 8px 10px;
+	margin-top: 16px;
+	height: auto;
+	background: #3983df;
+	border-radius: 2px;
+	font-size: 14px;
+	border: 1px solid #3983df;
+	line-height: 20px;
+	color: #fff !important;
+	display: inline-block;
+	width: 139px;
+	margin-bottom: 0;
+	transition: color 0.2s ease, background 0.2s ease;
+}
+
+#modal_review form button:hover {
+	background: transparent;
+	color: #3983df !important;
+}
