@@ -14,7 +14,7 @@
 }
 
 #bx_recall_popup_form {
-    min-height: auto;
+    min-height: auto !important;
 }
 
 .submit-def-arr {
@@ -63,7 +63,7 @@
 	border: 1px solid #eceff5;
 	padding-left: 24px;
 	padding-right: 10px;
-	height: 48px;
+	height: 90px;
 	width: 100%;
 	margin-bottom: 16px;
 	text-align: left;
