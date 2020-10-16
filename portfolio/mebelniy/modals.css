@@ -119,6 +119,7 @@
 .recomend__product .h2 {
     padding-left: 0;
     margin-bottom: 20px;
+    font-family: SegoeUISemiBold !important;
 }
 
 .product-block .price {
@@ -127,10 +128,18 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 32px;
-    color: #775443;
+    color: #775443 !important;
+}
+
+.product-block {
+    height: auto !important;
 }
 
 .product-block .desc-product a {
-    font: 16px "SegoeUIRegular" !important;
+    font: 14px "SegoeUIRegular" !important;
     font-weight: 400;
+}
+
+div.price .old-price, .no-price {
+    color: #775443 !important;
 }
