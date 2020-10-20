@@ -33,7 +33,7 @@ const bannerSlider = new Swiper(".banner-container", {
 		delay: 4000,
 	},
 	pagination: {
-		el: ".swiper-pagination",
+		el: ".slider-pagination",
 		type: "fraction",
 	},
 });

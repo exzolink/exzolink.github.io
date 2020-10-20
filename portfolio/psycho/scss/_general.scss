@@ -198,7 +198,8 @@ a {
 }
 
 .trp-ls-shortcode-language {
-	display: block !important;
+	display: flex !important;
+	width: auto !important;
 
 	& a:first-child {
 		margin-right: 20px;
@@ -207,7 +208,7 @@ a {
 		&:before {
 			position: absolute;
 			content: "|";
-			right: -12px;
+			right: -15px;
 			top: 0;
 		}
 	}
@@ -236,5 +237,17 @@ a {
 		background-color: #fff;
 		height: 2px;
 		bottom: -10px;
+	}
+}
+
+
+@media screen and (max-width: 550px) {
+	.alerts__block {
+		left: 0;
+		top: 0;
+		width: 100%;
+	}
+	.title__label {
+		line-height: 1;
 	}
 }

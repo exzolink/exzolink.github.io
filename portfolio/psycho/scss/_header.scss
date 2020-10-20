@@ -3,6 +3,7 @@
 	color: #fff;
 	font-family: "Bebas", sans-serif;
 	position: relative;
+	z-index: 3;
 
 	&__inner {
 		width: 100%;
@@ -74,7 +75,7 @@
 		background-color: #000;
 		top: 94px;
 		left: 0;
-		height: calc(100vh - 94px);
+		height: calc((var(--vh, 1vh) * 100) - 94px);
 		width: 100%;
 		transform: translateX(-100%);
 		visibility: collapse;

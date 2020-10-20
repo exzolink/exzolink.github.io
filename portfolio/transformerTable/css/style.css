@@ -7,7 +7,6 @@
 }
 
 html {
-	overflow-x: hidden;
 	font-size: 16px;
 }
 
@@ -21,7 +20,6 @@ body {
 	font-family: "Roboto", sans-serif;
 	color: #303030;
 	font-weight: 400;
-	overflow-x: hidden;
 }
 
 header {
@@ -46,6 +44,17 @@ a {
 	padding-right: 15px;
 }
 
+.sticky {
+	position: sticky;
+	top: 10px;
+	padding-bottom: 85px;
+}
+
+.product__info_wrapper {
+	width: 100%;
+	padding-right: 15px;
+}
+
 .filters__inner {
 	display: flex;
 	justify-content: space-between;
@@ -55,7 +64,9 @@ a {
 .filters__item {
 	flex-basis: 24%;
 }
-
+.main-slide__img {
+	width: 100%;
+}
 .filters__main {
 	width: 100%;
 	position: relative;
@@ -148,21 +159,15 @@ a {
 	width: 100%;
 	right: 0;
 	color: #fff;
-	padding-right: 32px;
 	font-size: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 }
 .swiper-pagination {
 	text-align: right !important;
 }
-@media screen and (max-width: 750px) {
-	.swiper-container-horizontal > .swiper-pagination-bullets,
-	.swiper-pagination-custom,
-	.swiper-pagination-fraction {
-		top: 2.5%;
-		padding-right: 18px;
-		font-size: 14px;
-	}
-}
+
 @media screen and (max-width: 700px) {
 	.banner-section {
 		margin-top: 0;
@@ -1985,7 +1990,7 @@ footer {
 	width: 100%;
 	z-index: 9999;
 	height: 100%;
-	transition: opacity .3s ease, visibility .3s ease;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .preloader.active {
@@ -1998,6 +2003,38 @@ footer {
 	top: 50%;
 	position: absolute;
 	transform: translate(-50%, -50%);
+}
+
+.slider__current {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding-right: 30px;
+	height: 7%;
+	z-index: 1;
+	text-align: right;
+	max-height: 67px;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	border-bottom: 1px solid #fff;
+}
+
+.slider__divider {
+	height: 100%;
+	position: absolute;
+	right: 87px;
+	background-color: #fff;
+	width: 1px;
+}
+
+@media screen and (max-width: 550px) {
+	.slider__divider {
+		right: 62px;
+	}
+	.slider__current {
+		padding-right: 18px;
+	}
 }
 
 #buy {
@@ -3027,6 +3064,18 @@ nav ul li:hover ul {
 		position: absolute;
 		width: 48px;
 		height: 48px;
+	}
+
+	.product__desc {
+		text-align: center;
+	}
+
+	.sticky {
+		position: initial;
+	}
+
+	.product__info_wrapper {
+		padding-right: 0;
 	}
 
 	.card {

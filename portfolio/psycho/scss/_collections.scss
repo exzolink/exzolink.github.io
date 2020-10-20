@@ -117,6 +117,10 @@
     .collections {
         &__item {
             margin-bottom: 30px;
+
+            &_img img {
+                max-height: 170px;
+            }
         }
     }
 }

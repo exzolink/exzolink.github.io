@@ -2,7 +2,7 @@
     background-image: url('../imgs/bg.gif');
     background-repeat: repeat;
     background-color: #aaa;
-    min-height: calc(100vh - 94px - 134px);
+    min-height: calc((var(--vh, 1vh) * 100) - 94px - 134px);
 
     &__item {
         margin-bottom: 50px;
@@ -79,7 +79,7 @@
             letter-spacing: 0.06em;
             font-size: 24px;
             margin-bottom: 5px;
-            margin-top: 5px;
+            margin-top: 13px;
             padding-left: 10px;
             text-align: center;
             padding-right: 10px;
@@ -96,9 +96,10 @@
     &__price {
         font-family: 'fuehrer', sans-serif;
         font-size: 24px;
-        color: #000;
+        color: #660000;
         padding-left: 10px;
         padding-right: 10px;
+        margin-bottom: 8px;
 
         &_prev {
             margin-right: 10px;
@@ -216,6 +217,8 @@
 
 @media screen and (max-width: 550px) {
     .catalog {
+        min-height: calc((var(--vh, 1vh) * 100) - 94px - 159px);
+
         &__item {
             margin-bottom: 30px;
         }
@@ -228,12 +231,38 @@
             flex-basis: 100%;
 
             &_name {
-                font-size: 18px;
+                font-size: 20px;
             }
         }
 
         &__price {
-            font-size: 18px;
+            font-size: 20px;
         }
+    }
+}
+
+.catalog__price {
+
+    & .woocommerce-variation-price .price {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    & .woocommerce-variation-availability {
+        display: none;
+    }
+
+    & del {
+        color: #000;
+        text-decoration: line-through;
+    }
+
+    &>span>bdi {
+        color: #660000;
+    }
+
+    & ins {
+        text-decoration: none;
+        color: #660000;
     }
 }

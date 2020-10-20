@@ -69,9 +69,30 @@
 		<div class="container alt-container banner-section">
 			<div class="swiper-container banner-container">
 				<div class="swiper-wrapper banner-wrapper">
-					<div class="swiper-slide"><img src="img/mainBg.jpg" alt=""></div>
+					<div class="swiper-slide">
+
+						<picture>
+							<source srcset="img/mainBg_mob.jpg" media="(max-width: 768px)">
+							<source srcset="img/mainBg.jpg" media="(min-width: 768px)">
+							<img decoding="async" loading="lazy" class="swiper-img main-slide__img" src="img/mainBg.jpg" alt="">
+						  </picture>
+
+					</div>
+
+					<div class="swiper-slide">
+
+						<picture>
+							<source srcset="img/mainBg_mob.jpg" media="(max-width: 768px)">
+							<source srcset="img/mainBg.jpg" media="(min-width: 768px)">
+							<img decoding="async" loading="lazy" class="swiper-img main-slide__img" src="img/mainBg.jpg" alt="">
+						  </picture>
+
+					</div>
 				</div>
-				<div class="swiper-pagination"></div>
+				<div class="slider__current">
+				<div class="slider-pagination"></div>
+				<span class="slider__divider"></span>
+			</div>
 			</div>
 		</div>
 
@@ -127,7 +148,7 @@
 				<div class="cards__inner">
 					<a href="" class="card">
 						<div class="card__img">
-							<img src="img/table1.png" alt="table" />
+							<img class="lazyload" data-src="img/table1.png" alt="table" />
 						</div>
 
 						<div class="card__info">
@@ -145,7 +166,7 @@
 
 					<a href="" class="card">
 						<div class="card__img">
-							<img src="img/table1.png" alt="table" />
+							<img class="lazyload" data-src="img/table1.png" alt="table" />
 						</div>
 
 						<div class="card__info">
@@ -163,7 +184,7 @@
 
 					<a href="" class="card">
 						<div class="card__img">
-							<img src="img/table1.png" alt="table" />
+							<img class="lazyload" data-src="img/table1.png" alt="table" />
 						</div>
 
 						<div class="card__info">
@@ -181,7 +202,7 @@
 
 					<a href="" class="card">
 						<div class="card__img">
-							<img src="img/table1.png" alt="table" />
+							<img class="lazyload" data-src="img/table1.png" alt="table" />
 						</div>
 
 						<div class="card__info">
@@ -199,7 +220,7 @@
 
 					<a href="" class="card">
 						<div class="card__img">
-							<img src="img/table1.png" alt="table" />
+							<img class="lazyload" data-src="img/table1.png" alt="table" />
 						</div>
 
 						<div class="card__info">
@@ -220,7 +241,7 @@
 							<span>-30%</span>
 						</div>
 						<div class="card__img">
-							<img src="img/table2.png" alt="table" />
+							<img class="lazyload" data-src="img/table2.png" alt="table" />
 						</div>
 
 						<div class="card__info">
@@ -237,7 +258,7 @@
 
 					<a href="" class="card">
 						<div class="card__img">
-							<img src="img/table1.png" alt="table" />
+							<img class="lazyload" data-src="img/table1.png" alt="table" />
 						</div>
 
 						<div class="card__info">
@@ -255,7 +276,7 @@
 
 					<a href="" class="card">
 						<div class="card__img">
-							<img src="img/table2.png" alt="table" />
+							<img class="lazyload" data-src="img/table2.png" alt="table" />
 						</div>
 
 						<div class="card__info">
@@ -279,7 +300,7 @@
 		</section>
 
 		<section class="coast__banner">
-			<img class="coast__img" src="img/interesting.png" alt="" />
+			<img class="coast__img lazyload" data-src="img/interesting.png" alt="" />
 			<div class="container h100">
 				<div class="coast__inner">
 					<div class="coast__content">
@@ -336,7 +357,7 @@
 				<div class="cards__inner">
 					<a href="" class="card">
 						<div class="card__img">
-							<img src="img/table1.png" alt="table" />
+							<img class="lazyload" data-src="img/table1.png" alt="table" />
 						</div>
 
 						<div class="card__info">
@@ -354,7 +375,7 @@
 
 					<a href="" class="card">
 						<div class="card__img">
-							<img src="img/table1.png" alt="table" />
+							<img class="lazyload" data-src="img/table1.png" alt="table" />
 						</div>
 
 						<div class="card__info">
@@ -372,7 +393,7 @@
 
 					<a href="" class="card">
 						<div class="card__img">
-							<img src="img/table1.png" alt="table" />
+							<img class="lazyload" data-src="img/table1.png" alt="table" />
 						</div>
 
 						<div class="card__info">
@@ -390,7 +411,7 @@
 
 					<a href="" class="card">
 						<div class="card__img">
-							<img src="img/table1.png" alt="table" />
+							<img class="lazyload" data-src="img/table1.png" alt="table" />
 						</div>
 
 						<div class="card__info">
@@ -414,7 +435,7 @@
 		</section>
 
 		<section id="colorBanner">
-			<img src="img/cardsInterior.png" alt="" class="colorBanner__bg" />
+			<img data-src="img/cardsInterior.png" alt="" class="colorBanner__bg lazyload" />
 			<div class="container h100 relative flex">
 				<div id="colorContent">
 					<h2>Столы Transformer Table идеально впишутся в любой интерьер</h2>
@@ -534,7 +555,7 @@
 				</div>
 			</div>
 
-			<img src="img/aboutBg.png" alt="" class="about__bg" />
+			<img data-src="img/aboutBg.png" alt="" class="about__bg lazyload" />
 		</section>
 
 		<div class="arrowTop_wrap">
@@ -859,6 +880,7 @@
 		</div>
 
 		<script src="js/swiper-bundle.js"></script>
+		<script src="js/lazyload.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

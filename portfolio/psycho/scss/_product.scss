@@ -110,6 +110,7 @@
 		&_block {
 			margin-right: auto;
 			padding-right: 20px;
+			max-width: 570px;
 		}
 
 		&_copies {
@@ -196,8 +197,9 @@
 			font-family: "fuehrer", sans-serif;
 			margin-left: 50px;
 			font-size: 26px;
-			padding-top: 5px;
 			letter-spacing: 0.06em;
+			display: flex;
+			flex-direction: column-reverse;
 		}
 	}
 }
@@ -371,9 +373,17 @@
 }
 
 
+.divider {
+	padding-bottom: 50px;
+}
+
 @media screen and (max-width: 550px) {
 	.pt-50 {
 		padding-top: 30px;
+	}
+
+	.divider {
+		padding-bottom: 20px;
 	}
 
     .product {
@@ -408,6 +418,7 @@
 
 		&__buy-price {
 			font-size: 22px;
+			margin-left: 30px;
 		}
 		
 		&__inner {
@@ -416,4 +427,3 @@
 
     }
 }
-

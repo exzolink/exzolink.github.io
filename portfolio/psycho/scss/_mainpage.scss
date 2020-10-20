@@ -1,5 +1,5 @@
 .mainpage {
-	height: calc(100vh - 94px);
+	height: calc((var(--vh, 1vh) * 100) - 94px);
     width: 100%;
     position: relative;
 
@@ -20,7 +20,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 999;
+        z-index: 1;
         background-color: #000;
         display: flex;
         justify-content: center;
