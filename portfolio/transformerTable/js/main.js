@@ -1,8 +1,10 @@
 const preloader = document.querySelector(".preloader");
+const font = document.getElementById("font");
 window.onload = function () {
 	setTimeout(() => {
 		preloader.classList.add("active");
-	}, 1000);
+	}, 500);
+	font.rel = "stylesheet";
 };
 
 const feedbackSlider = new Swiper(".feedback-container", {
