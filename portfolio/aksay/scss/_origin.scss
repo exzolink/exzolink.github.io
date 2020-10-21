@@ -1,0 +1,47 @@
+.origin {
+    margin-top: 220px;
+    margin-bottom: 190px;
+    position: relative;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__info {
+        max-width: 700px;
+        padding: 35px 30px;
+        padding-right: 70px;
+        padding-bottom: 85px;
+        background-color: #fff;
+        position: relative;
+        z-index: 3;
+        margin-top: 75px;
+    }
+
+    &__bg {
+        position: absolute;
+        z-index: 1;
+        right: 0;
+    }
+
+    &__text {
+        &-title {
+            font-size: 28px;
+            color: #2C7B86;
+            line-height: 1;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 45px;
+            font-family: 'Ropa Sans', sans-serif;
+        }
+        &-desc {
+            color: #4f4f4f;
+        }
+    }
+
+    &__hint {
+        margin-left: 160px;
+        max-width: 380px;
+        color: #2C7B86;
+    }
+}

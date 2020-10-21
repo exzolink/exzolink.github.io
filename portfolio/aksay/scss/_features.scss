@@ -1,0 +1,113 @@
+.features {
+	position: relative;
+
+	&__video {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+
+		&_inner {
+			position: relative;
+
+			& video {
+				opacity: 0.6;
+                filter: blur(5px);
+                height: 900px;
+                transform: translateX(-500px);
+			}
+		}
+
+		&_top {
+			position: absolute;
+			left: 0;
+			top: -200px;
+			z-index: 1;
+		}
+
+		&_bottom {
+			position: absolute;
+			bottom: -245px;
+			left: 0;
+			z-index: 1;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		position: relative;
+        z-index: 3;
+        padding-bottom: 110px;
+    }
+    
+    &__img-bottle {
+        margin: 0 auto;
+        height: 820px;
+    }
+
+	&__numbers {
+		display: flex;
+		flex-direction: column;
+		max-width: 250px;
+		margin-top: 150px;
+		color: #2c7b86;
+
+		&_meters {
+			font-size: 38px;
+		}
+
+		&_sm {
+			font-size: 12px;
+			margin-top: 16px;
+			margin-bottom: 16px;
+		}
+		&_md {
+			font-size: 16px;
+		}
+	}
+
+	&__title {
+		color: #ff4236;
+		text-transform: uppercase;
+		font-size: 38px;
+		font-weight: 400;
+		font-family: "Ropa Sans", sans-serif;
+	}
+
+	&__block {
+        padding: 50px 20px;
+        background-color: #fff;
+		margin-top: 100px;
+	}
+
+	&__item {
+		display: flex;
+        align-items: flex-start;
+        margin-bottom: 45px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+		&_block {
+			display: flex;
+			flex-direction: column;
+			margin-left: 24px;
+
+			& h4 {
+				font-size: 28px;
+                color: #2892a2;
+                line-height: 1;
+                font-weight: 400;
+                font-variant: small-caps;
+				font-family: "Ropa Sans", sans-serif;
+            }
+            
+            & p {
+                font-size: 16px;
+                color: #555555;
+                max-width: 425px;
+            }
+		}
+	}
+}
