@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Аксай Вода</title>
+		<link rel="stylesheet" href="css/swiper.css" />
 		<link rel="stylesheet" href="css/styles.css" />
 	</head>
 	<body>
@@ -15,11 +16,14 @@
 					</div>
 
 					<div class="header__wrapper">
-						<a href=""
+						<a class="header__logo_wrapper" href=""
 							><img class="header__img-logo" src="imgs/logo.svg" alt=""
 						/></a>
 						<img class="header__img-bottle" src="imgs/bottle.png" alt="" />
 						<div class="header__info">
+							<a class="header__logo_hidden" href=""
+							><img class="header__img-logo" src="imgs/logo.svg" alt=""
+						/></a>	
 							<h1 class="header__title">
 								Источник жизни, подаренный природой!
 							</h1>
@@ -27,6 +31,9 @@
 								Минеральная артезианская вода с лечебными свойствами на полке в
 								соседнем магазине
 							</h2>
+							<div class="header__button_hidden">
+								<button class="button">Обсудить сотрудничество</button>
+							</div>
 						</div>
 						<p class="header__hint">
 							*Рекомендовано Республиканским НИИ Кардиологии и Урологии для
@@ -77,7 +84,7 @@
 							src="imgs/videoFilter.svg"
 							alt=""
 						/>
-                        <div id="video" class="video-block"></div>
+						<div id="video" class="video-block"></div>
 						<img
 							class="features__video_bottom"
 							src="imgs/videoFilter.svg"
@@ -178,44 +185,216 @@
 									Способствуют улучшению процесса пищеравания и усвоения белков,
 									жиров и углеводов
 								</p>
-                            </div>
-                            
-                            <div class="content__item">
+							</div>
+
+							<div class="content__item">
 								<div class="content__img">
 									<img src="imgs/content_el_2.svg" alt="" />
 								</div>
-								<span>Ионы натрия
-                                </span>
-								<p>
-                                    Играют важную роль в водно-солевом обмене
-								</p>
-                            </div>
-                            
-                            <div class="content__item">
+								<span>Ионы натрия </span>
+								<p>Играют важную роль в водно-солевом обмене</p>
+							</div>
+
+							<div class="content__item">
 								<div class="content__img">
 									<img src="imgs/content_el_3.svg" alt="" />
 								</div>
 								<span>Бром</span>
 								<p>
-                                    Регулирует процессы возбуждения и торможения в нервной системе
+									Регулирует процессы возбуждения и торможения в нервной системе
 								</p>
-                            </div>
-                            
-                            <div class="content__item">
+							</div>
+
+							<div class="content__item">
 								<div class="content__img">
 									<img src="imgs/content_el_4.svg" alt="" />
 								</div>
 								<span>Фтор</span>
 								<p>
-                                    Способствует нормальному росту зубов и профилактике кариеса
+									Способствует нормальному росту зубов и профилактике кариеса
 								</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
+
+			<section class="techs">
+				<div class="container alt-container">
+					<div class="techs__inner">
+						<h3 class="features__title">Технология производства</h3>
+						<p class="techs__text">
+							Aksay-su производится по технологиям советских разработок на
+							современном европейском оборудовании. Производство включает
+							обязательные этапы:
+						</p>
+
+						<div class="techs__wrapper">
+							<img class="techs__bg" src="imgs/tech.svg" alt="" />
+
+							<div class="techs__item">
+								<img src="imgs/techs_img_1.svg" alt="" />
+								<span>Добыча и подъем воды</span>
+								<p>
+									Вода добывается из скважины погружным насосом и по герметичным
+									трубам поднимается в цех по розливу воды. Все происходит без
+									контакта с окружающей средой и человеком.
+								</p>
+							</div>
+
+							<div class="techs__item">
+								<img src="imgs/techs_img_2.svg" alt="" />
+								<span>Фильтрация</span>
+								<p>
+									Вода попадает в промышленный механической фильтр, в котором
+									происходит удаление возможных органических загрязнений.
+								</p>
+							</div>
+
+							<div class="techs__item">
+								<img src="imgs/techs_img_3.svg" alt="" />
+								<span>Обеззараживание</span>
+								<p>
+									В установке для обеззараживания бактерицидные лучи длиной
+									волны в 205-315 нм эффективно уничтожают большинство вирусов и
+									бактерий, которые могут быть в составе исходной воды.
+								</p>
+							</div>
+
+							<div class="techs__item">
+								<img src="imgs/techs_img_4.svg" alt="" />
+								<span>Накопление и хранение</span>
+								<p>
+									Очищенная и отфильтрованная вода поступает в специальные
+									ёмкости для хранения питевой воды.
+								</p>
+							</div>
+
+							<div class="techs__item">
+								<img src="imgs/techs_img_4.svg" alt="" />
+								<span>Дополнительное обеззараживание</span>
+								<p>
+									После хранения вода проходит дополнительную установку
+									обеззараживания. При этом не меняется химический состав и
+									физические свойства воды. Все природные и вкусовые качества
+									сохраняются!
+								</p>
+							</div>
+
+							<div class="techs__item">
+								<img src="imgs/techs_img_5.svg" alt="" />
+								<span>Розлив воды в бутыли</span>
+								<p>
+									Очищенная питевая вода разливается в автоматической линии
+									розлива в стеклянные бутылки. Каждая бутылка закупоривается
+									одноразовой крышкой для создания дополнительной защиты.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="quote">
+				<div class="container alt-container">
+					<div class="quote__inner">
+						<img class="quote__img" src="imgs/quote-drop.png" alt="" />
+						<blockquote class="quote__block">
+							<img class="quote__img_open" src="imgs/quote-open.svg" alt="" />
+							<p>
+								Вода «Аксай» словно бурная река пронеслась сквозь поколения.
+								Став одинаково любима всем, чью жажду утолила. Нет значения в
+								возрасте твоём, вода покорна всем без исключенья. Пьют ее и
+								взрослые, и дети свежестью окутывает весь мир!
+							</p>
+							<img class="quote__img_close" src="imgs/quote-close.svg" alt="" />
+						</blockquote>
+					</div>
+				</div>
+			</section>
+
+			<section class="slider">
+				<div class="container alt-container">
+					<h3 class="slider__title">В какой ситуации бы вы не находились</h3>
+				</div>
+
+				<div class="slider__wrapper">
+					<div class="swiper-container slider-img__container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide slider-img__item">
+								<img src="imgs/slide.jpg" alt="" />
+							</div>
+							<div class="swiper-slide slider-img__item">
+								<img src="imgs/mainBg.jpg" alt="" />
+							</div>
+						</div>
+					</div>
+
+					<div class="slider-text__wrapper">
+						<div class="swiper-container slider-text__container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide slider-text__item">
+									<span>В компании друзей</span>
+									<p>
+										Цените друзей, с которыми вам достаточно насладиться
+										полезной минеральной водой для того, чтобы утолить жажду.
+									</p>
+								</div>
+								<div class="swiper-slide slider-text__item">
+									<span>В компании друзей1</span>
+									<p>
+										Цените друзей, с которыми вам достаточно насладиться
+										полезной минеральной водой для того, чтобы утолить жажду.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-pagination slider__pagination"></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="label">
+				<div class="container alt-container">
+					<h3 class="label__title">
+						Обогощайте свой организм чистейшей минеральной водой Aksay-su
+					</h3>
+
+					<div id="video" class="label__wrapper">
+						<img src="imgs/label_bg.svg" alt="" />
+					</div>
+				</div>
+			</section>
 		</main>
 
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="footer__wrapper">
+						<a href=""><img class="footer__logo" src="imgs/logo-white.svg" alt="" /></a>
+						<div class="footer__info">
+							<p>По вопросам сотрудничества обращайтесь:</p>
+							<a href="tel:87016299608"
+								><img src="imgs/phone.svg" alt="" /> 87016299608</a
+							>
+							<a href="mailto:info.almadk@gmail.com"
+								><img src="imgs/mail.svg" alt="" /> info.almadk@gmail.com</a
+							>
+						</div>
+						<div class="footer__button">
+							<button class="button footer__btn">
+								Обсудить сотрудничество
+							</button>
+						</div>
+						<img class="footer__additional" src="imgs/additional.svg" alt="" />
+					</div>
+					<p class="footer__copyright">ТОО "Tagam su" 2020. Все права защищены</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/swiper.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

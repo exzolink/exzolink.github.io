@@ -45,3 +45,122 @@
         color: #2C7B86;
     }
 }
+
+@media screen and (max-width: 1850px) {
+	.origin {
+        &__hint {
+            margin-left: 0;
+        }
+        &__info {
+            padding-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    .origin {
+        &__hint {
+            background-color: #fff;
+            max-width: 700px;
+            width: 100%;
+            z-index: 3;
+            position: relative;
+            padding-bottom: 30px;
+            padding-left: 15px;
+        }
+
+        &__info {
+            margin-top: 0;
+            padding-left: 15px;
+        }
+
+        &__inner {
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+    .w100 {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .origin {
+        margin-top: 170px;
+
+        &__bg {
+            width: 100%;
+        }
+        &__info {
+            padding-right: 20px;
+            max-width: none;
+            padding-bottom: 30px;
+        }
+        &__hint {
+            max-width: none;
+            padding-right: 20px;
+        }
+
+        &__wrapper {
+            max-width: 80%;
+            position: relative;
+            z-index: 3;
+            transform: translateY(20%);
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .origin {
+        margin-top: 220px;
+
+        &__bg {
+            width: auto;
+            object-fit: cover;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .origin {
+        margin-top: 190px;
+
+        &__wrapper {
+            transform: translateY(20%);
+            max-width: 85%;
+        }
+
+        &__bg {
+            height: 450px;
+        }
+
+        &__text {
+            &-title {
+                font-size: 18px;
+                font-variant: small-caps;
+                text-transform: none;
+            }
+            &-desc {
+                font-size: 14px;
+            }
+        }
+        &__hint {
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+   .origin {
+    margin-top: 210px;
+    justify-content: flex-start;
+
+    &__bg {
+        height: 360px;
+    }
+    &__wrapper {
+        transform: translateY(18%);
+    }
+   }
+}

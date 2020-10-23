@@ -1,0 +1,59 @@
+.techs {
+	padding-top: 100px;
+	padding-bottom: 60px;
+	background-color: #fff;
+
+	&__text {
+		font-size: 18px;
+		color: #555;
+		margin-top: 60px;
+		margin-bottom: 100px;
+	}
+
+	&__wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        position: relative;
+        padding-left: 85px;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 55px;
+        position: relative;
+        z-index: 3;
+
+        & img {
+            background-color: #fff;
+        }
+
+        &:nth-child(2n) {
+            flex-basis: 50%;
+        }
+
+		& span {
+			margin-top: 10px;
+			font-size: 28px;
+			font-family: "Ropa Sans", sans-serif;
+			font-variant: small-caps;
+			margin-bottom: 5px;
+			color: #ff4236;
+		}
+		& p {
+            color: #4f4f4f;
+            max-width: 290px;
+		}
+    }
+    
+    &__bg {
+        position: absolute;
+        top: -115px;
+        left: 6px;
+        width: 100%;
+        z-index: 1;
+        height: 100%;
+    }
+}
