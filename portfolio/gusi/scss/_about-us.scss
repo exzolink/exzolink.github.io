@@ -1,0 +1,21 @@
+.about-us {
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-top: 15px;
+
+        & p {
+            color: #40414A;
+            font-size: 18px;
+            margin-right: 40px;
+        }
+
+        & img {
+            min-width: 392px;
+        }
+    }
+}

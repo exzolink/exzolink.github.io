@@ -1,0 +1,42 @@
+$blue: #151D56;
+$teal: #16C9E6;
+$filter: brightness(0) saturate(100%) invert(84%) sepia(51%) saturate(4570%) hue-rotate(142deg) brightness(95%) contrast(89%);
+
+*,
+*:after,
+*:before {
+	padding: 0;
+	margin: 0;
+	outline: none;
+	border: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 14px;
+	overflow-x: hidden;
+	font-family: "Nunito", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a, button, img {
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    color: $blue;
+    display: flex;
+    transition: color .3s ease, filter .3s ease;
+}
+
+.container {
+    max-width: 1245px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+

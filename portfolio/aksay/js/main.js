@@ -141,3 +141,10 @@ if (window.innerWidth > 1300 && document.querySelector('.watcher') !== null) {
 		nav: ".watcher",
 	});
 }
+
+
+var phone = document.getElementById('phone');
+var maskOptions = {
+  mask: '+{7} (000) 000-00-00',
+};
+var mask = IMask(phone, maskOptions);
