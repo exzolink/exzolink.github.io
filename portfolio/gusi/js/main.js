@@ -166,7 +166,7 @@ const inFormBtns = document.querySelectorAll(
 
 inFormBtns.forEach((btn) => {
 	btn.addEventListener("click", () => {
-		let btnId = btn.getAttribute("id");
+		let btnId = btn.dataset.btn;
 
 		switch (btnId) {
 			case "register-btn": {
