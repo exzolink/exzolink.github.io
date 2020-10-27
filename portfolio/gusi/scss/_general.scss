@@ -1,6 +1,7 @@
-$blue: #151D56;
-$teal: #16C9E6;
-$filter: brightness(0) saturate(100%) invert(84%) sepia(51%) saturate(4570%) hue-rotate(142deg) brightness(95%) contrast(89%);
+$blue: #151d56;
+$teal: #16c9e6;
+$filter: brightness(0) saturate(100%) invert(84%) sepia(51%) saturate(4570%)
+	hue-rotate(142deg) brightness(95%) contrast(89%);
 
 *,
 *:after,
@@ -19,24 +20,89 @@ html {
 }
 
 body {
-    overflow-x: hidden;
+	overflow-x: hidden;
 }
 
-a, button, img {
-    user-select: none;
+a,
+button,
+img {
+	user-select: none;
 }
 
 a {
-    text-decoration: none;
-    color: $blue;
-    display: flex;
-    transition: color .3s ease, filter .3s ease;
+	text-decoration: none;
+	color: $blue;
+	display: flex;
+	transition: color 0.2s ease, filter 0.2s ease;
 }
 
 .container {
-    max-width: 1245px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
+	max-width: 1245px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
 }
 
+.relative {
+    position: relative;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+
+    & button {
+        border-radius: 50px;
+        background-color: #16c9e6;
+        box-shadow: 4px 6px 0px #d6f9ff;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 10px 0;
+        max-width: 201px;
+        width: 100%;
+        font-family: inherit;
+        transition: background .2s ease, box-shadow .2s ease;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $blue;
+            box-shadow: 4px 6px 0px #B2B5C7;
+        }
+    }
+}
+
+.title {
+	font-weight: 800;
+	font-size: 32px;
+	position: relative;
+	color: $blue;
+    line-height: 1;
+    display: inline-block;
+
+	&:before {
+		position: absolute;
+		content: "";
+		z-index: -1;
+		height: 20px;
+		width: 100%;
+		background-color: #d6f9ff;
+		top: 15px;
+		left: 12px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.title {
+		font-size: 24px;
+
+		&:before {
+            height: 12px;
+            left: 8px;
+		}
+	}
+}

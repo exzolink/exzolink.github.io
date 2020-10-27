@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<header class="header">
-			<div class="container">
+			<div class="container relative">
 				<div class="header__inner">
 					<nav class="header__nav">
 						<a href=""
@@ -46,10 +46,66 @@
 						</div>
 					</nav>
 				</div>
+
+				<div class="basket">
+					<form action="" method="post" class="basket__inner">
+						<div class="basket__item">
+							<div class="basket__item_leftside">
+								<a href=""><img src="imgs/slide2-placeholder.png" alt="" /></a>
+								<span>99 шт.</span>
+							</div>
+
+							<div class="basket__item_info">
+								<a href="" class="basket__item_brand">Plan Toys</a>
+								<a href="" class="basket__item_title"
+									>Сортер “Куриное гнездо” Три курочки и яичко</a
+								>
+								<div class="basket__item_meta">
+									<a href="" class="basket__item_remove">Удалить</a>
+									<div class="basket__item_price">
+										<span class="sliders__slide_price-old">3000 ₽</span>
+										<span class="sliders__slide_price-new">3000 ₽</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="basket__item">
+							<div class="basket__item_leftside">
+								<a href=""><img src="imgs/slide2-placeholder.png" alt="" /></a>
+								<span>9 шт.</span>
+							</div>
+
+							<div class="basket__item_info">
+								<a href="" class="basket__item_brand">Plan Toys</a>
+								<a href="" class="basket__item_title"
+									>Сортер “Куриное гнездо” Три курочки и яичко</a
+								>
+								<div class="basket__item_meta">
+									<a href="" class="basket__item_remove">Удалить</a>
+									<div class="basket__item_price">
+										<span class="sliders__slide_price-old">3000 ₽</span>
+										<span class="sliders__slide_price-new">3000 ₽</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="basket__total">
+							<span class="basket__total_text">Итого</span>
+							<span class="basket__total_count">3 товара</span>
+							<span class="basket__total_price">3000 ₽</span>
+						</div>
+
+						<div class="button">
+							<button type="submit">Оформить заказ</button>
+						</div>
+					</form>
+				</div>
 			</div>
 		</header>
 
-		<main>
+		<main role="main">
 			<section class="main-slider">
 				<div class="container">
 					<div class="swiper-container main-slider__container">
@@ -70,7 +126,7 @@
 				<div class="container">
 					<div class="sliders__item-main">
 						<a href="" class="sliders__link-main">
-							<h2 class="sliders__link-main_title">Скидки</h2>
+							<h2 class="title">Скидки</h2>
 							<span class="sliders__link-main_more">Смотреть все</span>
 						</a>
 
@@ -223,7 +279,7 @@
 
 					<div class="sliders__item-main">
 						<a href="" class="sliders__link-main">
-							<h2 class="sliders__link-main_title">Хиты продаж</h2>
+							<h2 class="title">Хиты продаж</h2>
 							<span class="sliders__link-main_more">Смотреть все</span>
 						</a>
 
@@ -376,7 +432,7 @@
 
 					<div class="sliders__item-main">
 						<a href="" class="sliders__link-main mb-0">
-							<h2 class="sliders__link-main_title">Популярное</h2>
+							<h2 class="title">Популярное</h2>
 							<span class="sliders__link-main_more">Смотреть все</span>
 						</a>
 
@@ -833,132 +889,184 @@
 							<div class="swiper-pagination"></div>
 						</div>
 					</div>
-
-					<!-- Новости -->
+				</div>
+				<!-- Новости -->
+				<div class="container">
 					<div class="sliders__item-main">
 						<a href="" class="sliders__link-main">
-							<h2 class="sliders__link-main_title">Новости</h2>
+							<h2 class="title">Новости</h2>
 							<span class="sliders__link-main_more">Смотреть все</span>
 						</a>
-
-						<div class="swiper-container sliders__container">
-							<div class="swiper-wrapper sliders__wrapper">
-								<a href="" class="swiper-slide sliders__slide">
-									<div class="sliders__news_img">
-										<img src="imgs/news-placeholder.jpg" alt="" />
-									</div>
-									<div class="sliders__slide_info">
-										<h3 class="sliders__news_title">
-											LEGO разработали конструктор, который собирает себя сам
-										</h3>
-
-										<div class="sliders__news_info">
-											<span>11 августа 2020</span>
-											<span><img src="imgs/comments.svg" alt="" /> 99</span>
-										</div>
-									</div>
-								</a>
-
-								<a href="" class="swiper-slide sliders__slide">
-									<div class="sliders__news_img">
-										<img src="imgs/news-placeholder.jpg" alt="" />
-									</div>
-									<div class="sliders__slide_info">
-										<h3 class="sliders__news_title">
-											LEGO разработали конструктор, который собирает себя сам
-										</h3>
-
-										<div class="sliders__news_info">
-											<span>11 августа 2020</span>
-											<span><img src="imgs/comments.svg" alt="" /> 99</span>
-										</div>
-									</div>
-								</a>
-
-								<a href="" class="swiper-slide sliders__slide">
-									<div class="sliders__news_img">
-										<img src="imgs/news-placeholder.jpg" alt="" />
-									</div>
-									<div class="sliders__slide_info">
-										<h3 class="sliders__news_title">
-											LEGO разработали конструктор, который собирает себя сам
-										</h3>
-
-										<div class="sliders__news_info">
-											<span>11 августа 2020</span>
-											<span><img src="imgs/comments.svg" alt="" /> 99</span>
-										</div>
-									</div>
-								</a>
-
-								<a href="" class="swiper-slide sliders__slide">
-									<div class="sliders__news_img">
-										<img src="imgs/news-placeholder.jpg" alt="" />
-									</div>
-									<div class="sliders__slide_info">
-										<h3 class="sliders__news_title">
-											LEGO разработали конструктор, который собирает себя сам
-										</h3>
-
-										<div class="sliders__news_info">
-											<span>11 августа 2020</span>
-											<span><img src="imgs/comments.svg" alt="" /> 99</span>
-										</div>
-									</div>
-								</a>
-								<a href="" class="swiper-slide sliders__slide">
-									<div class="sliders__news_img">
-										<img src="imgs/news-placeholder.jpg" alt="" />
-									</div>
-									<div class="sliders__slide_info">
-										<h3 class="sliders__news_title">
-											LEGO разработали конструктор, который собирает себя сам
-										</h3>
-
-										<div class="sliders__news_info">
-											<span>11 августа 2020</span>
-											<span><img src="imgs/comments.svg" alt="" /> 99</span>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="swiper-pagination"></div>
-						</div>
 					</div>
+				</div>
 
-					<div class="about-us">
-						<div class="container">
-							<div class="sliders__link-main">
-								<h2 class="sliders__link-main_title">О нас</h2>
-							</div>
+				<div class="container news__container">
+					<div class="swiper-container sliders__news_container">
+						<div class="swiper-wrapper sliders__wrapper">
+							<a href="" class="swiper-slide sliders__slide">
+								<div class="sliders__news_img">
+									<img src="imgs/news-placeholder.jpg" alt="" />
+								</div>
+								<div class="sliders__slide_info">
+									<h3 class="sliders__news_title">
+										LEGO разработали конструктор, который собирает себя сам
+									</h3>
 
-							<div class="about-us__inner">
-								<p>
-									В нашем каталоге более 60 000 товаров, вы найдете все
-									необходимое для детей в возрасте от 0 до 16 лет. Подгузники,
-									игрушки, коляски и автокресла, а также одежда и обувь всегда в
-									наличии. Мы постоянно отслеживаем новинки, пополняем
-									ассортимент новыми моделями товаров для детей, а также уделяем
-									особое внимание безопасности вашего ребенка. В нашем
-									интернет-магазине продаются только сертифицированные детские
-									товары от проверенных поставщиков и собственных торговых
-									марок. <br><br> Благодаря собственной службе доставки, мы доставим ваш
-									заказ по Москве на следующий день с 9:00 до 21:00! А в
-									ближайшие к Москве города доставка займет не более 2-х дней.
-									Сроки доставки в Ваш регион вы можете узнать на странице
-									товара или при оформлении заказа. Бесплатно доставим* ваш
-									заказ на сумму от 1 500 руб. (* – подробности смотрите на
-									странице «Доставка»), бесплатно поднимем на этаж и примем
-									возврат без лишних вопросов. Курьер позвонит вам за 1 час до
-									доставки.
-                                </p>
-                                <img src="imgs/aboutus.jpg" alt="">
-							</div>
+									<div class="sliders__news_info">
+										<span>11 августа 2020</span>
+										<span><img src="imgs/comments.svg" alt="" /> 99</span>
+									</div>
+								</div>
+							</a>
+
+							<a href="" class="swiper-slide sliders__slide">
+								<div class="sliders__news_img">
+									<img src="imgs/news-placeholder.jpg" alt="" />
+								</div>
+								<div class="sliders__slide_info">
+									<h3 class="sliders__news_title">
+										LEGO разработали конструктор, который собирает себя сам
+									</h3>
+
+									<div class="sliders__news_info">
+										<span>11 августа 2020</span>
+										<span><img src="imgs/comments.svg" alt="" /> 99</span>
+									</div>
+								</div>
+							</a>
+
+							<a href="" class="swiper-slide sliders__slide">
+								<div class="sliders__news_img">
+									<img src="imgs/news-placeholder.jpg" alt="" />
+								</div>
+								<div class="sliders__slide_info">
+									<h3 class="sliders__news_title">
+										LEGO разработали конструктор, который собирает себя сам
+									</h3>
+
+									<div class="sliders__news_info">
+										<span>11 августа 2020</span>
+										<span><img src="imgs/comments.svg" alt="" /> 99</span>
+									</div>
+								</div>
+							</a>
+
+							<a href="" class="swiper-slide sliders__slide">
+								<div class="sliders__news_img">
+									<img src="imgs/news-placeholder.jpg" alt="" />
+								</div>
+								<div class="sliders__slide_info">
+									<h3 class="sliders__news_title">
+										LEGO разработали конструктор, который собирает себя сам
+									</h3>
+
+									<div class="sliders__news_info">
+										<span>11 августа 2020</span>
+										<span><img src="imgs/comments.svg" alt="" /> 99</span>
+									</div>
+								</div>
+							</a>
+							<a href="" class="swiper-slide sliders__slide">
+								<div class="sliders__news_img">
+									<img src="imgs/news-placeholder.jpg" alt="" />
+								</div>
+								<div class="sliders__slide_info">
+									<h3 class="sliders__news_title">
+										LEGO разработали конструктор, который собирает себя сам
+									</h3>
+
+									<div class="sliders__news_info">
+										<span>11 августа 2020</span>
+										<span><img src="imgs/comments.svg" alt="" /> 99</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+
+				<div class="about-us">
+					<div class="container">
+						<div class="sliders__link-main">
+							<h2 class="title">О нас</h2>
+						</div>
+
+						<div class="about-us__inner">
+							<p>
+								В нашем каталоге более 60 000 товаров, вы найдете все
+								необходимое для детей в возрасте от 0 до 16 лет. Подгузники,
+								игрушки, коляски и автокресла, а также одежда и обувь всегда в
+								наличии. Мы постоянно отслеживаем новинки, пополняем ассортимент
+								новыми моделями товаров для детей, а также уделяем особое
+								внимание безопасности вашего ребенка. В нашем интернет-магазине
+								продаются только сертифицированные детские товары от проверенных
+								поставщиков и собственных торговых марок. <br /><br />
+								Благодаря собственной службе доставки, мы доставим ваш заказ по
+								Москве на следующий день с 9:00 до 21:00! А в ближайшие к Москве
+								города доставка займет не более 2-х дней. Сроки доставки в Ваш
+								регион вы можете узнать на странице товара или при оформлении
+								заказа. Бесплатно доставим* ваш заказ на сумму от 1 500 руб. (*
+								– подробности смотрите на странице «Доставка»), бесплатно
+								поднимем на этаж и примем возврат без лишних вопросов. Курьер
+								позвонит вам за 1 час до доставки.
+							</p>
+							<img src="imgs/aboutus.jpg" alt="" />
 						</div>
 					</div>
 				</div>
 			</section>
 		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="footer__top">
+						<span class="footer__hidden">Мы в соц. сетях</span>
+						<div class="footer__socials">
+							<a href=""><img src="imgs/facebook.svg" alt="" /></a>
+							<a href=""><img src="imgs/inst.svg" alt="" /></a>
+							<a href=""><img src="imgs/facebook.svg" alt="" /></a>
+							<a href=""><img src="imgs/inst.svg" alt="" /></a>
+							<a href=""><img src="imgs/facebook.svg" alt="" /></a>
+						</div>
+
+						<a href="" class="footer__logo"
+							><img src="imgs/logo.svg" alt=""
+						/></a>
+						<span class="footer__hidden">Телефон поддержки</span>
+						<a class="footer__tel" href="tel:88008008080">8 800 800 80 80</a>
+					</div>
+
+					<div class="footer__bottom">
+						<a class="footer__privacy" href="">Политика конфиденциальности</a>
+						<span class="footer__copyright">© 2020 ООО “Гуси-Лебеди”</span>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<div class="popupAuth">
+			<div id="login-form" class="popupAuth__window">
+				<div class="popupAuth__inner">
+					<span class="title">Вход</span>
+
+					<form action="" method="post" class="popupAuth__form">
+						<input type="tel" placeholder="Номер телефона" required />
+						<input type="password" placeholder="Пароль" required />
+
+						<div class="button">
+							<button type="submit">Войти</button>
+						</div>
+					</form>
+
+					<div class="popupAuth__more">
+						<button class="popupAuth__btn-blue">Зарегистрироваться</button>
+						<button class="popupAuth__btn-gray">Забыли пароль?</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<script src="js/swiper.js"></script>
 		<script src="js/main.js"></script>

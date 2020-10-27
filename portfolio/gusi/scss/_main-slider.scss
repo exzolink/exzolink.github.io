@@ -2,12 +2,18 @@
 	&__container {
 		overflow: hidden;
 		border-radius: 25px;
-    }
-    &__slide {
-        & img {
-            width: 100%;
-        }
-    }
+	}
+	&__slide {
+		& img {
+			width: 100%;
+		}
+	}
+
+	& .swiper-container-horizontal > .swiper-pagination-bullets,
+	.swiper-pagination-custom,
+	.swiper-pagination-fraction {
+		bottom: 30px;
+	}
 }
 
 .swiper-pagination-bullet {
@@ -21,8 +27,19 @@
 	}
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
-	bottom: 30px;
+@media screen and (max-width: 600px) {
+	.main-slider {
+		& .swiper-container-horizontal > .swiper-pagination-bullets,
+		.swiper-pagination-custom,
+		.swiper-pagination-fraction {
+			bottom: 16px;
+		}
+
+		&__slide {
+			& img {
+				height: 75vw;
+				object-fit: cover;
+			}
+		}
+	}
 }
