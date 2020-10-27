@@ -30,7 +30,12 @@
 
                 &:hover img{
                     opacity: .75;
-                }
+				}
+				
+				&.active img {
+					filter: grayscale(1);
+					opacity: .35;
+				}
 
 				&:nth-child(-n + 2) {
 					margin-right: 22px;

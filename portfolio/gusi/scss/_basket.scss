@@ -1,16 +1,52 @@
 .basket {
 	position: absolute;
-	right: 0;
+	right: 15px;
 	top: 110px;
 	box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.06);
 	border-radius: 25px;
 	background-color: #fff;
 	z-index: 10;
 	max-width: 385px;
+	transform: scale(.75);
+	opacity: 0;
+	visibility: collapse;
+	transform-origin: top;
+	overflow-y: auto;
+	transition: opacity .2s ease, visibility .2s ease, transform .2s ease;
+
+	&.active {
+		transform: scale(1);
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 32px;
+	}
 
 	&__inner {
 		padding: 30px;
 		padding-top: 40px;
+		padding-bottom: 0;
+		position: relative;
+
+		& .button {
+			margin-bottom: 30px;
+		}
+
+		&:before {
+			position: absolute;
+			content: '';
+			width: 22px;
+			height: 11px;
+			top: -1px;
+			background-color: #fff;
+			right: 165px;
+			transform: rotate(45deg);
+		}
 	}
 
 	&__item {
@@ -116,4 +152,74 @@
 		}
 	}
 
+}
+
+@media screen and (min-width: 601px) {
+	.basket {
+		&__title {
+			display: none;
+
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.basket {
+		z-index: 19;
+		position: fixed;
+		left: 50%;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		transform: translateX(-50%) scale(1) translateY(100%);
+		top: 30px;
+		right: auto;
+		width: calc(100% - 30px);
+		height: calc(100% - 56px - 30px);
+		transition: opacity .4s ease, visibility .4s ease, transform .4s ease;
+
+		&.active {
+			transform: translateX(-50%) scale(1) translateY(0%);
+		}
+
+		&__inner {
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 30px;
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.basket {
+		&__item {
+			&_brand {
+				font-size: 10px;
+				margin-bottom: 3px;
+			}
+			&_title {
+				font-size: 12px;
+				margin-bottom: 6px;
+			}
+			&_remove {
+				font-size: 10px;
+			}
+			&_leftside {
+				margin-right: 8px;
+				& span {
+					margin: 0 auto;
+					margin-top: 7px;
+					font-size: 10px;
+					max-width: 51px;
+					padding: 3px;
+				}
+			}
+
+		}
+
+		&__total {
+			padding-top: 6px;
+			font-size: 14px;
+			margin-bottom: 40px;
+		}
+	}
 }
