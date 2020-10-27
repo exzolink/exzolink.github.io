@@ -11,8 +11,14 @@
 	opacity: 0;
 	visibility: collapse;
 	transform-origin: top;
+	max-height: 568px;
+	scrollbar-width: thin;
 	overflow-y: auto;
 	transition: opacity .2s ease, visibility .2s ease, transform .2s ease;
+
+	&::-webkit-scrollbar {
+		width: 0;
+	}
 
 	&.active {
 		transform: scale(1);
@@ -176,6 +182,7 @@
 		width: calc(100% - 30px);
 		height: calc(100% - 56px - 30px);
 		transition: opacity .4s ease, visibility .4s ease, transform .4s ease;
+		max-height: none;
 
 		&.active {
 			transform: translateX(-50%) scale(1) translateY(0%);
