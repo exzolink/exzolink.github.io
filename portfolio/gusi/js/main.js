@@ -89,9 +89,8 @@ cartBtns.forEach((btn) => {
 			if (window.innerWidth <= 600) {
 				if (cartBtns[i].classList.contains("active")) {
 					popupBg.classList.remove("active");
-				}
-				else {
-					popupBg.classList.add('active');
+				} else {
+					popupBg.classList.add("active");
 				}
 			}
 			cartBtns[i].classList.toggle("active");
@@ -134,7 +133,7 @@ loginBtn.addEventListener("click", (e) => {
 	document.querySelector("#login-form").classList.add("active");
 
 	if (window.innerWidth <= 600) {
-		basket.classList.remove('active');
+		basket.classList.remove("active");
 
 		for (let i = 0; i < cartBtns.length; i++) {
 			cartBtns[i].classList.remove("active");
@@ -151,7 +150,7 @@ test.addEventListener("click", (e) => {
 	document.querySelector("#login-form").classList.add("active");
 
 	if (window.innerWidth <= 600) {
-		basket.classList.remove('active');
+		basket.classList.remove("active");
 
 		for (let i = 0; i < cartBtns.length; i++) {
 			cartBtns[i].classList.remove("active");

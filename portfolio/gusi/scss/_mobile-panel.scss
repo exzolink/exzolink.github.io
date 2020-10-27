@@ -22,7 +22,8 @@
 		flex-direction: column;
 		align-items: center;
         transition: opacity 0.2s ease;
-        position: relative;
+		position: relative;
+		font-family: inherit;
 
 		&_cart-count {
 			position: absolute;
