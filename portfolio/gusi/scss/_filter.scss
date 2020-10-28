@@ -1,0 +1,23 @@
+.filters {
+	width: 100%;
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-between;
+
+	&__button {
+		margin-left: auto;
+		background-color: transparent;
+		transition: filter .2s ease;
+		&:hover {
+			cursor: pointer;
+			filter: $filter;
+
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.filters {
+		margin-top: 32px;
+	}
+}

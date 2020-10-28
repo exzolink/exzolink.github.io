@@ -226,21 +226,20 @@
 		&__news {
 			&_img {
 				height: calc(100vw / 8.3);
-	
+
 				& img {
 					width: 100%;
 				}
 			}
 		}
 	}
-
 }
 
 @media screen and (max-width: 1150px) {
 	.sliders {
 		&__slide {
 			&_img {
-				height: calc(100vw / 4.5)
+				height: calc(100vw / 4.5);
 			}
 		}
 		&__news {
@@ -255,7 +254,7 @@
 	.sliders {
 		&__slide {
 			&_img {
-				height: calc(100vw / 3)
+				height: calc(100vw / 3);
 			}
 		}
 		&__link {
@@ -285,12 +284,15 @@
 				&_more {
 					font-size: 14px;
 				}
+				&_subtitle {
+					font-size: 16px;
+				}
 			}
 			&-sub {
 				margin-top: 30px;
 			}
 		}
-		
+
 		& .swiper-pagination-bullet {
 			width: 6px;
 			height: 6px;
@@ -300,10 +302,8 @@
 			width: 10px;
 			height: 10px;
 		}
-
 	}
 }
-
 
 @media screen and (max-width: 550px) {
 	.sliders {
@@ -345,7 +345,6 @@
 				top: 12px;
 				left: 12px;
 			}
-
 		}
 
 		&__news {

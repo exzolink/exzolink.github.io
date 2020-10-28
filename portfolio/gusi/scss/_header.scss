@@ -27,14 +27,13 @@
 			}
 
 			& a {
-
-                &:hover img{
-                    opacity: .75;
+				&:hover img {
+					opacity: 0.75;
 				}
-				
+
 				&.active img {
 					filter: grayscale(1);
-					opacity: .35;
+					opacity: 0.35;
 				}
 
 				&:nth-child(-n + 2) {
@@ -75,7 +74,6 @@
 				transform: translateX(-50%);
 			}
 		}
-
 	}
 
 	&__catalog {

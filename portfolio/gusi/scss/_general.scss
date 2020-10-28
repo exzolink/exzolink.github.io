@@ -21,6 +21,9 @@ html {
 
 body {
 	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 a,
@@ -90,6 +93,7 @@ a {
 	color: $blue;
 	line-height: 1;
 	display: inline-block;
+	z-index: 1;
 
 	&:before {
 		position: absolute;
@@ -97,7 +101,7 @@ a {
 		z-index: -1;
 		height: 20px;
 		width: 100%;
-		background-color: #d6f9ff;
+		background-color: #D6F9FF;
 		top: 15px;
 		left: 12px;
 	}
@@ -110,6 +114,12 @@ a {
 		&:before {
 			height: 12px;
 			left: 8px;
+		}
+	}
+
+	.no-header-mob {
+		& .header__inner {
+			display: none;
 		}
 	}
 }
