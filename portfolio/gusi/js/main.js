@@ -282,7 +282,7 @@ const slideToggle = (target, duration = 500) => {
 const sorterCurrent = document.querySelector(".sort__current");
 const sorterWrapper = document.querySelector(".sort__wrapper");
 const optionsList = document.querySelector(".sort__options");
-sorterCurrent.addEventListener("click", (e) => {
+sorterCurrent.addEventListener("click", () => {
 	slideToggle(optionsList, 350);
 	sorterWrapper.classList.toggle("active");
 });
@@ -294,5 +294,16 @@ sorterEls.forEach((item) => {
 		sorterCurrent.innerHTML = text;
 		slideToggle(optionsList, 350);
 		sorterWrapper.classList.remove("active");
+	});
+});
+
+const catalogSelectors = document.querySelectorAll(".catalog__selectors_item");
+catalogSelectors.forEach((btn) => {
+	btn.addEventListener("click", (e) => {
+		e.preventDefault();
+		
+		let btnInput = btn.querySelector("input");
+		btnInput.checked = !btnInput.checked;
+		btn.classList.toggle("active");
 	});
 });

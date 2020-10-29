@@ -20,4 +20,26 @@
 	.filters {
 		margin-top: 32px;
 	}
+	.sort {
+		&__wrapper {
+			min-width: 166px;
+		}
+
+		&__current {
+			font-size: 14px;
+			& span {
+				margin-right: 10px;
+			}
+		}
+
+		&__options {
+			margin-top: 30px;
+			&_item {
+				font-size: 14px;
+				& span {
+					margin-right: 10px;
+				}
+			}
+		}
+	}
 }
