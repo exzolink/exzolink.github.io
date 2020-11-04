@@ -71,6 +71,214 @@
 			}
 		}
 	}
+
+	&__user {
+		background: #f5fdff;
+		border-radius: 24px;
+		padding: 30px 100px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 760px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+
+	&__avatar {
+		display: flex;
+		align-items: center;
+
+		& img {
+			border-radius: 100%;
+		}
+
+		& span {
+			color: $blue;
+			font-weight: 600;
+			font-size: 24px;
+			margin-left: 20px;
+		}
+	}
+
+	&__score {
+		background-color: #d6f9ff;
+		padding: 10px 30px;
+		border-radius: 50px;
+		color: $blue;
+		display: flex;
+		align-items: center;
+
+		&_amount {
+			font-weight: 600;
+			font-size: 24px;
+		}
+
+		&_text {
+			font-weight: 600;
+			font-size: 18px;
+			margin-left: 20px;
+		}
+	}
+
+	&__my {
+		display: flex;
+		justify-content: space-between;
+
+		& .sliders__link-main {
+			margin-top: 0;
+		}
+
+		& .sliders__link-sub {
+			margin-bottom: 30px;
+		}
+
+		&-orders {
+			display: flex;
+			flex-direction: column;
+			flex-basis: 49%;
+
+			&_list {
+				font-size: 18px;
+				color: #40414a;
+
+				& dl {
+					padding: 20px 40px;
+					display: flex;
+					justify-content: space-between;
+
+					&:nth-child(2n) {
+						background-color: #f5fdff;
+					}
+				}
+
+				& dd {
+					&:nth-child(2) {
+						width: 95px;
+						margin-left: auto;
+						margin-right: auto;
+					}
+				}
+			}
+		}
+
+		&-reviews {
+			flex-basis: 49%;
+
+			&_item {
+				background: #f5fdff;
+				border-radius: 16px;
+				margin-bottom: 20px;
+				padding: 20px 40px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				& p {
+					color: #40414a;
+					font-size: 18px;
+				}
+			}
+			&_meta {
+				display: flex;
+				margin-bottom: 20px;
+				justify-content: space-between;
+
+				& span {
+					font-weight: 600;
+					font-size: 18px;
+					color: $blue;
+					margin-right: 20px;
+				}
+
+				& time {
+					font-weight: 600;
+					font-size: 18px;
+					color: #d4d4d4;
+				}
+			}
+		}
+	}
+
+	&__settings {
+		margin-bottom: 100px;
+
+		&_input {
+			flex-basis: 24%;
+			display: flex;
+			flex-direction: column;
+			margin-right: 10px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&_text {
+			font-size: 18px;
+			color: #000;
+			margin-bottom: 10px;
+		}
+
+		&_wrapper {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&_avatar {
+			flex-basis: 24%;
+			display: flex;
+			flex-direction: column;
+			min-width: 290px;
+			margin-right: 10px;
+
+			&-block {
+				display: flex;
+				align-items: center;
+
+				& input {
+					display: none;
+				}
+
+				& label {
+					display: flex;
+					align-items: center;
+					cursor: pointer;
+
+					&:hover {
+						& span {
+							color: $blue;
+						}
+					}
+
+					& span {
+						transition: color 0.2s ease;
+						font-size: 18px;
+						font-weight: 700;
+						color: $teal;
+						margin-left: 32px;
+						margin-right: 32px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.profile {
+		&__settings {
+			&_wrapper {
+				flex-wrap: wrap;
+			}
+			&_input {
+				flex-basis: 32%;
+			}
+			&_avatar {
+				flex-basis: 100%;
+				margin-bottom: 24px;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 1100px) {
@@ -108,6 +316,31 @@
 				margin-left: 24px;
 			}
 		}
+
+		&__my {
+			flex-direction: column;
+
+			&-orders {
+				flex-basis: 100%;
+				margin-bottom: 32px;
+			}
+			&-reviews {
+				flex-basis: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 910px) {
+	.profile {
+		&__settings {
+			&_input {
+				&:nth-child(2) {
+					flex-basis: 100%;
+				}
+				flex-basis: 49%;
+			}
+		}
 	}
 }
 
@@ -130,6 +363,19 @@
 				margin-left: 0;
 			}
 		}
+
+		&__user {
+			padding: 30px;
+		}
+	}
+}
+
+@media screen and (max-width: 615px) {
+	.profile {
+		&__settings_input {
+			flex-basis: 100%;
+			margin-right: 0;
+		}
 	}
 }
 
@@ -141,6 +387,7 @@
 
 	.profile {
 		&__top {
+			order: -2;
 			padding-left: 15px;
 			padding-right: 15px;
 			background-color: #f5fdff;
@@ -175,6 +422,119 @@
 				}
 			}
 		}
+
+		& .sliders__link-main {
+			margin-bottom: 16px;
+		}
+
+		&__my {
+			padding-left: 15px;
+			padding-right: 15px;
+			margin-bottom: 32px;
+
+			&-orders {
+				&_time {
+					display: none;
+				}
+
+				margin-bottom: 24px;
+				&_list {
+					& dl {
+						padding: 10px;
+					}
+					& dd {
+						font-size: 14px;
+						color: $blue;
+					}
+				}
+			}
+
+			&-reviews {
+				&_item {
+					background-color: #f3f6f7;
+					padding: 8px;
+
+					& p {
+						font-size: 14px;
+					}
+				}
+				&_meta {
+					& span {
+						font-size: 14px;
+					}
+					& time {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
+		&__settings {
+			order: -1;
+			padding-left: 15px;
+			padding-right: 15px;
+			margin-bottom: 24px;
+
+			&_input {
+				& input {
+					color: $blue;
+					font-size: 14px;
+					padding: 12px 16px;
+				}
+			}
+
+			&_text {
+				display: none;
+			}
+
+			&_avatar {
+				&-block {
+					width: 100%;
+					& label {
+						margin-right: auto;
+
+						& span {
+							font-size: 14px;
+						}
+
+						& img {
+							width: 48px;
+							height: 48px;
+						}
+					}
+				}
+			}
+		}
+
+		&-logged {
+			& .sliders__link-main {
+				display: none;
+			}
+			& .sliders__link-sub {
+				display: flex;
+			}
+			& .profile__top {
+				padding: 24px 16px;
+			}
+			& .profile__more {
+				display: none;
+			}
+			& .profile__settings .sliders__link-sub {
+				display: none;
+			}
+		}
+
+		&__user {
+			display: none;
+
+			&-mob {
+				& span {
+					font-weight: 600;
+					font-size: 20px;
+					margin-left: 30px;
+				}
+			}
+		}
 	}
 }
 
@@ -192,4 +552,17 @@
 			}
 		}
 	}
+}
+
+@media screen and (min-width: 601px) {
+	.profile {
+		&__user-mob {
+			display: none;
+		}
+	}
+}
+
+.flex {
+	display: flex;
+	flex-direction: column;
 }

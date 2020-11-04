@@ -55,11 +55,33 @@ a {
 	margin-bottom: 0 !important;
 }
 
+.general-input {
+	padding: 15px 30px;
+	color: #a9a9a9;
+	margin-bottom: 20px;
+	font-family: inherit;
+	font-size: 18px;
+	box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+	border-radius: 10px;
+	transition: box-shadow 0.2s ease;
+
+	&:focus {
+		box-shadow: 0 0 0px 1px #16c9e6;
+	}
+}
+
+input[disabled] {
+	box-shadow: none;
+	color: #40414A;
+	background-color: #F3F3F3;
+	cursor: not-allowed;
+}
+
 .button {
 	display: flex;
 	justify-content: center;
 
-	& button {
+	& button, & a {
 		border-radius: 50px;
 		background-color: #16c9e6;
 		box-shadow: 4px 6px 0px #d6f9ff;
@@ -81,7 +103,7 @@ a {
 }
 
 @media screen and (max-width: 550px) {
-	.button button {
+	.button button, .button a {
 		font-size: 14px;
 		padding: 12px 0;
 	}
@@ -102,7 +124,7 @@ a {
 		z-index: -1;
 		height: 20px;
 		width: 100%;
-		background-color: #D6F9FF;
+		background-color: #d6f9ff;
 		top: 15px;
 		left: 12px;
 	}

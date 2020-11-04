@@ -152,49 +152,266 @@
 		</header>
 
 		<main>
-			<section class="brands">
+			<section class="brands-page catalog">
 				<div class="container">
-					<div class="sliders__link-main">
-						<h1 class="title">Бренды</h1>
+					<div class="sliders__link-main catalog__title">
+						<form class="categories__search" action="#" method="post">
+							<input type="text" placeholder="Поиск" />
+						</form>
+
+						<h1 class="sliders__link-main_subtitle">Бренд "Play Toys"</h1>
 					</div>
 
-					<div class="brands__wrapper">
-						<a href="" class="brands__item">
-							<img src="imgs/LEGO.jpg" alt="">
-							<span>LEGO</span>
-						</a>
-
-						<a href="" class="brands__item">
-							<img src="imgs/LEGO.jpg" alt="">
-							<span>LEGO</span>
-						</a>
-
-						<a href="" class="brands__item">
-							<img src="imgs/LEGO.jpg" alt="">
-							<span>LEGO</span>
-						</a>
-
-						<a href="" class="brands__item">
-							<img src="imgs/LEGO.jpg" alt="">
-							<span>LEGO</span>
-						</a>
-
-						<a href="" class="brands__item">
-							<img src="imgs/LEGO.jpg" alt="">
-							<span>LEGO</span>
-						</a>
-
-						<a href="" class="brands__item">
-							<img src="imgs/LEGO.jpg" alt="">
-							<span>LEGO</span>
-						</a>
-
-						<a href="" class="brands__item">
-							<img src="imgs/LEGO.jpg" alt="">
-							<span>LEGO</span>
-						</a>
+					<div class="brands__details">
+						<img width="168" height="168" src="imgs/LEGO.jpg" alt="" />
+						<div class="brands__details_info">
+							<p>
+								Каучуковые деревья, из которых делают игрушки, через 25 лет
+								жизни перестают выделять латекс, поэтому фермеры выкорчевывают
+								их и обновляют плантации.
+							</p>
+							<p>
+								Традиционно старые деревья сжигали; полученный древесный уголь
+								давал незначительную прибыль, но одновременно наносился вред
+								экологии. Стремясь сохранить экологический баланс, PlanToys
+								пошла по другому пути - решила делать из старых деревьев игрушки
+								для детей.
+							</p>
+							<p>
+								Такие деревья аккуратно просушивают, пока они не достигнут
+								определенной температуры и влажности. Из них по специально
+								разработанной технологии производят игрушки с закругленными
+								углами, а затем красят деревянные изделия безопасными,
+								нетоксичными, яркими красками.
+							</p>
+						</div>
 					</div>
-			
+				</div>
+
+				<div class="container no-pd-mob">
+					<div class="catalog__selectors_wrapper">
+						<div class="catalog__selectors">
+							<label for="motorika" class="catalog__selectors_item">
+								Мелкая моторика
+								<input
+									id="motorika"
+									type="checkbox"
+									name="motorika"
+									value="motorika"
+									autocomplete="off"
+								/>
+							</label>
+
+							<label for="balancer" class="catalog__selectors_item">
+								Балансеры
+								<input
+									id="balancer"
+									type="checkbox"
+									name="balancer"
+									value="balancer"
+									autocomplete="off"
+								/>
+							</label>
+
+							<label for="clever" class="catalog__selectors_item">
+								Шоб быстрый ловкий был
+								<input
+									id="clever"
+									type="checkbox"
+									name="clever"
+									value="clever"
+									autocomplete="off"
+								/>
+							</label>
+
+							<label for="smtelse" class="catalog__selectors_item">
+								Шоб умный был
+								<input
+									id="smtelse"
+									type="checkbox"
+									name="smtelse"
+									value="smtelse"
+									autocomplete="off"
+								/>
+							</label>
+
+							<label for="anotherone" class="catalog__selectors_item">
+								Мелкая моторика
+								<input
+									id="anotherone"
+									type="checkbox"
+									name="anotherone"
+									value="anotherone"
+									autocomplete="off"
+								/>
+							</label>
+							<label for="anotherone" class="catalog__selectors_item">
+								Мелкая моторика
+								<input
+									id="anotherone"
+									type="checkbox"
+									name="anotherone"
+									value="anotherone"
+									autocomplete="off"
+								/>
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="filters relative">
+						<div class="sort">
+							<div class="sort__wrapper">
+								<span class="sort__current"
+									><span>По популярности</span>
+									<img src="imgs/arrow-des.svg" alt=""
+								/></span>
+
+								<div class="sort__options">
+									<a href="#" class="sort__options_item"
+										><span>По популярности</span>
+										<img src="imgs/arrow-des.svg" alt=""
+									/></a>
+									<a href="#" class="sort__options_item"
+										><span>По популярности</span>
+										<img src="imgs/arrow-asc.svg" alt=""
+									/></a>
+									<a href="#" class="sort__options_item"
+										><span>По стоимости</span>
+										<img src="imgs/arrow-des.svg" alt=""
+									/></a>
+									<a href="#" class="sort__options_item"
+										><span>По стоимости</span>
+										<img src="imgs/arrow-asc.svg" alt=""
+									/></a>
+								</div>
+							</div>
+						</div>
+
+						<button class="filters__button">
+							<img src="imgs/filter.svg" alt="" />
+						</button>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="favorites__wrapper">
+						<div class="swiper-slide sliders__slide">
+							<a href="" class="sliders__slide_img">
+								<img src="imgs/slide-placeholder.jpg" alt="" />
+							</a>
+							<div class="sliders__slide_info">
+								<a href="" class="sliders__slide_title">
+									Сортер “Куриное гнездо” Три курочки и яичко
+								</a>
+								<div class="sliders__slide_price">
+									<span class="sliders__slide_price-default">3000 ₽</span>
+								</div>
+
+								<a href="#" class="sliders__slide_brand">Plan Toys</a>
+							</div>
+
+							<button
+								class="sliders__slide_favorite"
+								title="Добавить в избранное"
+							>
+								<img src="imgs/hearth-empty.svg" alt="" />
+							</button>
+						</div>
+
+						<div class="swiper-slide sliders__slide">
+							<a href="" class="sliders__slide_img">
+								<img src="imgs/slide-placeholder.jpg" alt="" />
+							</a>
+							<div class="sliders__slide_info">
+								<a href="" class="sliders__slide_title">
+									Сортер “Куриное гнездо” Три курочки и яичко
+								</a>
+								<div class="sliders__slide_price">
+									<span class="sliders__slide_price-default">3000 ₽</span>
+								</div>
+
+								<a href="#" class="sliders__slide_brand">Plan Toys</a>
+							</div>
+
+							<button
+								class="sliders__slide_favorite"
+								title="Добавить в избранное"
+							>
+								<img src="imgs/hearth-empty.svg" alt="" />
+							</button>
+						</div>
+
+						<div class="swiper-slide sliders__slide">
+							<a href="" class="sliders__slide_img">
+								<img src="imgs/slide-placeholder.jpg" alt="" />
+							</a>
+							<div class="sliders__slide_info">
+								<a href="" class="sliders__slide_title">
+									Сортер “Куриное гнездо” Три курочки и яичко
+								</a>
+								<div class="sliders__slide_price">
+									<span class="sliders__slide_price-default">3000 ₽</span>
+								</div>
+
+								<a href="#" class="sliders__slide_brand">Plan Toys</a>
+							</div>
+
+							<button
+								class="sliders__slide_favorite"
+								title="Добавить в избранное"
+							>
+								<img src="imgs/hearth-empty.svg" alt="" />
+							</button>
+						</div>
+
+						<div class="swiper-slide sliders__slide">
+							<a href="" class="sliders__slide_img">
+								<img src="imgs/slide-placeholder.jpg" alt="" />
+							</a>
+							<div class="sliders__slide_info">
+								<a href="" class="sliders__slide_title">
+									Сортер “Куриное гнездо” Три курочки и яичко
+								</a>
+								<div class="sliders__slide_price">
+									<span class="sliders__slide_price-default">3000 ₽</span>
+								</div>
+
+								<a href="#" class="sliders__slide_brand">Plan Toys</a>
+							</div>
+
+							<button
+								class="sliders__slide_favorite"
+								title="Добавить в избранное"
+							>
+								<img src="imgs/hearth-empty.svg" alt="" />
+							</button>
+						</div>
+
+						<div class="swiper-slide sliders__slide">
+							<a href="" class="sliders__slide_img">
+								<img src="imgs/slide-placeholder.jpg" alt="" />
+							</a>
+							<div class="sliders__slide_info">
+								<a href="" class="sliders__slide_title">
+									Сортер “Куриное гнездо” Три курочки и яичко
+								</a>
+								<div class="sliders__slide_price">
+									<span class="sliders__slide_price-default">3000 ₽</span>
+								</div>
+
+								<a href="#" class="sliders__slide_brand">Plan Toys</a>
+							</div>
+
+							<button
+								class="sliders__slide_favorite"
+								title="Добавить в избранное"
+							>
+								<img src="imgs/hearth-empty.svg" alt="" />
+							</button>
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>

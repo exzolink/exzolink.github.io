@@ -152,49 +152,132 @@
 		</header>
 
 		<main>
-			<section class="brands">
-				<div class="container">
-					<div class="sliders__link-main">
-						<h1 class="title">Бренды</h1>
+			<section class="profile profile-logged">
+				<div class="container no-pd-mob flex">
+					<div class="profile__top">
+						<div class="sliders__link-main categories__title">
+							<h1 class="title">Ваш профиль</h1>
+						</div>
+
+						<a href="" class="profile__user-mob">
+							<img src="imgs/arrow-back.svg" alt="">
+							<span>Эдуард Маг.</span>
+						</a>
+
+						<div class="profile__user">
+						
+							<div class="profile__avatar">
+								<img width="68" height="68" src="imgs/avatar.jpg" alt="">
+								<span>Эдуард Маг.</span>
+							</div>
+
+							<div class="profile__score">
+								<span class="profile__score_amount">20354</span>
+								<span class="profile__score_text">Гусе-баллов</span>
+							</div>
+
+						</div>
 					</div>
 
-					<div class="brands__wrapper">
-						<a href="" class="brands__item">
-							<img src="imgs/LEGO.jpg" alt="">
-							<span>LEGO</span>
-						</a>
-
-						<a href="" class="brands__item">
-							<img src="imgs/LEGO.jpg" alt="">
-							<span>LEGO</span>
-						</a>
-
-						<a href="" class="brands__item">
-							<img src="imgs/LEGO.jpg" alt="">
-							<span>LEGO</span>
-						</a>
-
-						<a href="" class="brands__item">
-							<img src="imgs/LEGO.jpg" alt="">
-							<span>LEGO</span>
-						</a>
-
-						<a href="" class="brands__item">
-							<img src="imgs/LEGO.jpg" alt="">
-							<span>LEGO</span>
-						</a>
-
-						<a href="" class="brands__item">
-							<img src="imgs/LEGO.jpg" alt="">
-							<span>LEGO</span>
-						</a>
-
-						<a href="" class="brands__item">
-							<img src="imgs/LEGO.jpg" alt="">
-							<span>LEGO</span>
-						</a>
+					<div class="profile__more">
+						<a href="" class="profile__more_link">Акции <img src="imgs/arrow-go.svg" alt=""></a>
+						<a href="" class="profile__more_link">Доставка и оплата <img src="imgs/arrow-go.svg" alt=""></a>
+						<a href="" class="profile__more_link">Бренды <img src="imgs/arrow-go.svg" alt=""></a>
+						<a href="" class="profile__more_link">Контакты <img src="imgs/arrow-go.svg" alt=""></a>
 					</div>
-			
+
+					<div class="profile__my">
+						<div class="profile__my-orders">
+							<div class="sliders__link-main sliders__link-sub">
+								<h2 class="sliders__link-main_subtitle">Мои заказы</h2>
+							</div>
+							<div class="profile__my-orders_list">
+								<dl>
+									<dd><time datetime="2020-09-01">01.09.2020</time>  <time class="profile__my-orders_time" datetime="11:37">11:37</time></dd>
+									<dd>15 товаров</dd>
+									<dd>61 282 ₽</dd>
+								</dl>
+								<dl>
+									<dd><time datetime="2020-09-01">01.09.2020</time>  <time class="profile__my-orders_time" datetime="11:37">11:37</time></dd>
+									<dd>15 товаров</dd>
+									<dd>61 282 ₽</dd>
+								</dl>
+								<dl>
+									<dd><time datetime="2020-09-01">01.09.2020</time>  <time class="profile__my-orders_time" datetime="11:37">11:37</time></dd>
+									<dd>15 товаров</dd>
+									<dd>61 282 ₽</dd>
+								</dl>
+								<dl>
+									<dd><time datetime="2020-09-01">01.09.2020</time>  <time class="profile__my-orders_time" datetime="11:37">11:37</time></dd>
+									<dd>15 товаров</dd>
+									<dd>61 282 ₽</dd>
+								</dl>
+								<dl>
+									<dd><time datetime="2020-09-01">01.09.2020</time>  <time class="profile__my-orders_time" datetime="11:37">11:37</time></dd>
+									<dd>15 товаров</dd>
+									<dd>61 282 ₽</dd>
+								</dl>
+							</div>
+						</div>
+
+						<div class="profile__my-reviews">
+							<div class="sliders__link-main sliders__link-sub">
+								<h2 class="sliders__link-main_subtitle">Мои отзывы</h2>
+							</div>
+
+							<div class="profile__my-reviews_list">
+								<div class="profile__my-reviews_item">
+									<div class="profile__my-reviews_meta">
+										<span>Сортер “Куриное гнездо”</span>
+										<time datetime="2020-09-18">18.09.2020</time>
+									</div>
+									<p>Яйцо полный восторг играл бы в него днями и ночами!!!!!!!!!!!!!</p>
+								</div>
+
+								<div class="profile__my-reviews_item">
+									<div class="profile__my-reviews_meta">
+										<span>Сортер “Куриное гнездо”</span>
+										<time datetime="2020-09-18">18.09.2020</time>
+									</div>
+									<p>Яйцо полный восторг играл бы в него днями и ночами!!!!!!!!!!!!!</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				<div class="profile__settings">
+					<div class="sliders__link-main sliders__link-sub">
+						<h2 class="sliders__link-main_subtitle">Настройки</h2>
+					</div>
+
+					<form action="" method="post" enctype="multipart/form-data" class="profile__settings_wrapper">
+							<div class="profile__settings_avatar">
+								<span class="profile__settings_text">Аватар</span>
+								<div class="profile__settings_avatar-block">
+									<label for="avatar">
+										<input id="avatar" name="avatar" type="file">
+										<img src="imgs/avatar.jpg" width="54" height="54" alt="">
+										<span>Изменить аватар</span>
+									</label>
+									<img src="imgs/questionMark.svg" alt="">
+								</div>
+							</div>
+
+							<label for="name" class="profile__settings_input">
+								<span class="profile__settings_text">Имя</span>
+								<input type="text" value="Эдуард Маг." value="Введите имя" name="name" id="name" disabled class="general-input">
+							</label>
+							<label for="tel" class="profile__settings_input">
+								<span class="profile__settings_text">Номер телефона</span>
+								<input type="tel" value="+7 999 999 99 99" placeholder="+7 999 999 99 99" name="tel" id="tel" disabled class="general-input">
+							</label>
+							<label for="email" class="profile__settings_input">
+								<span class="profile__settings_text">Email</span>
+								<input type="email" value="eduard.mage@gmail.com" placeholder="example@gmail.com" name="email" id="email" disabled class="general-input">
+							</label>
+					</form>
+				</div>
 				</div>
 			</section>
 		</main>

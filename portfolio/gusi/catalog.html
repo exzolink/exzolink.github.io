@@ -122,15 +122,15 @@
 
 			<div class="panel">
 				<div class="panel__inner">
-					<button class="panel__item">
+					<a href="" class="panel__item">
 						<img width="22" height="22" src="imgs/mob__home.svg" alt="" />
 						<span class="panel__item_name">Главная</span>
-					</button>
+					</a>
 
-					<button class="panel__item">
+					<a href="" class="panel__item">
 						<img width="22" height="22" src="imgs/mob__catalog.svg" alt="" />
 						<span class="panel__item_name">Каталог</span>
-					</button>
+					</a>
 
 					<button id="panel-cart-btn" class="panel__item">
 						<img width="22" height="22" src="imgs/cart.svg" alt="" />
@@ -138,15 +138,15 @@
 						<span class="panel__item_cart-count">3</span>
 					</button>
 
-					<button class="panel__item">
+					<a href="" class="panel__item">
 						<img width="22" height="22" src="imgs/heart.svg" alt="" />
 						<span class="panel__item_name">Избранное</span>
-					</button>
+					</a>
 
-					<button id="FOR-TEST-BUTTON" class="panel__item">
+					<a href="" id="FOR-TEST-BUTTON" class="panel__item">
 						<img width="22" height="22" src="imgs/more.svg" alt="" />
 						<span class="panel__item_name">Еще</span>
-					</button>
+					</a>
 				</div>
 			</div>
 		</header>
@@ -267,6 +267,288 @@
 						<button class="filters__button">
 							<img src="imgs/filter.svg" alt="" />
 						</button>
+
+						<div class="filters__popup">
+							<form action="#" method="post" class="filters__popup_inner">
+								<div class="filters-close-btn"><img src="imgs/close.svg" alt=""></div>
+								<div class="filters__popup_row filters__popup_main">
+									<button class="filters__reset_mobile"><img src="imgs/reset.svg" alt=""></button>
+									<span class="sliders__link-main_subtitle">Фильтры</span>
+									<span class="filters__reset">Очистить все фильтры</span>
+									<button class="filters__close_mobile"><img src="imgs/close.svg" alt=""></button>
+								</div>
+
+								<div class="filters__popup_row">
+									<div class="filters__popup_item">
+										<div class="filters__title">
+											<span>Возраст</span>
+											<img
+												class="filters-arrow"
+												src="imgs/filters.svg"
+												alt=""
+											/>
+										</div>
+										<div class="filters__block">
+											<div class="filters__ranges_wrapper">
+												<div class="filters__ranges">
+													<span>От</span>
+													<input id="minAge" type="number" />
+													<span>лет</span>
+												</div>
+												<div class="filters__ranges">
+													<span>До</span>
+													<input id="maxAge" type="number" />
+													<span>лет</span>
+												</div>
+											</div>
+											<div id="age-slider" class="filters__slider"></div>
+										</div>
+									</div>
+
+									<div class="filters__popup_item">
+										<div class="filters__title">
+											<span>Стоимость</span>
+											<img
+												class="filters-arrow"
+												src="imgs/filters.svg"
+												alt=""
+											/>
+										</div>
+										<div class="filters__block">
+											<div class="filters__ranges_wrapper">
+												<div class="filters__ranges price">
+													<span>От</span>
+													<input id="minPrice" type="number" />
+													<span>₽</span>
+												</div>
+												<div class="filters__ranges price">
+													<span>До</span>
+													<input id="maxPrice" type="number" />
+													<span>₽</span>
+												</div>
+											</div>
+											<div id="price-slider" class="filters__slider"></div>
+										</div>
+									</div>
+
+									<div class="filters__popup_item">
+										<div class="filters__title">
+											<span>Спец. предложения</span>
+											<img
+												class="filters-arrow"
+												src="imgs/filters.svg"
+												alt=""
+											/>
+										</div>
+
+										<div class="filters__block flex-row">
+											<label for="best" class="filters__check">
+												<input
+													class="filters__checkbox"
+													name="best"
+													id="best"
+													autocomplete="off"
+													type="checkbox"
+												/>
+												<span>Хиты продаж</span>
+											</label>
+											<label for="sale" class="filters__check">
+												<input
+													class="filters__checkbox"
+													name="sale"
+													id="sale"
+													autocomplete="off"
+													type="checkbox"
+												/>
+												<span>Скидки</span>
+											</label>
+										</div>
+									</div>
+								</div>
+
+								<div class="filters__popup_row">
+									<div class="filters__popup_wrapper">
+										<div class="filters__title">
+											<span>Производитель</span>
+											<img
+												class="filters-arrow"
+												src="imgs/filters.svg"
+												alt=""
+											/>
+										</div>
+										<div class="filters__block">
+											<div class="catalog__selectors_wrapper">
+												<div class="catalog__selectors">
+													<label for="motorika" class="catalog__selectors_item">
+														Мелкая моторика
+														<input
+															id="motorika"
+															type="checkbox"
+															name="motorika"
+															value="motorika"
+															autocomplete="off"
+														/>
+													</label>
+
+													<label for="balancer" class="catalog__selectors_item">
+														Балансеры
+														<input
+															id="balancer"
+															type="checkbox"
+															name="balancer"
+															value="balancer"
+															autocomplete="off"
+														/>
+													</label>
+
+													<label for="clever" class="catalog__selectors_item">
+														Шоб быстрый ловкий был
+														<input
+															id="clever"
+															type="checkbox"
+															name="clever"
+															value="clever"
+															autocomplete="off"
+														/>
+													</label>
+
+													<label for="smtelse" class="catalog__selectors_item">
+														Шоб умный был
+														<input
+															id="smtelse"
+															type="checkbox"
+															name="smtelse"
+															value="smtelse"
+															autocomplete="off"
+														/>
+													</label>
+
+													<label
+														for="anotherone"
+														class="catalog__selectors_item"
+													>
+														Мелкая моторика
+														<input
+															id="anotherone"
+															type="checkbox"
+															name="anotherone"
+															value="anotherone"
+															autocomplete="off"
+														/>
+													</label>
+													<label
+														for="anotherone"
+														class="catalog__selectors_item"
+													>
+														Мелкая моторика
+														<input
+															id="anotherone"
+															type="checkbox"
+															name="anotherone"
+															value="anotherone"
+															autocomplete="off"
+														/>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="filters__popup_row">
+									<div class="filters__popup_wrapper">
+										<div class="filters__title">
+											<span>Развитие навыков</span>
+											<img
+												class="filters-arrow"
+												src="imgs/filters.svg"
+												alt=""
+											/>
+										</div>
+										<div class="filters__block">
+											<div class="catalog__selectors_wrapper">
+												<div class="catalog__selectors">
+													<label for="motorika" class="catalog__selectors_item">
+														Мелкая моторика
+														<input
+															id="motorika"
+															type="checkbox"
+															name="motorika"
+															value="motorika"
+															autocomplete="off"
+														/>
+													</label>
+
+													<label for="balancer" class="catalog__selectors_item">
+														Балансеры
+														<input
+															id="balancer"
+															type="checkbox"
+															name="balancer"
+															value="balancer"
+															autocomplete="off"
+														/>
+													</label>
+
+													<label for="clever" class="catalog__selectors_item">
+														Шоб быстрый ловкий был
+														<input
+															id="clever"
+															type="checkbox"
+															name="clever"
+															value="clever"
+															autocomplete="off"
+														/>
+													</label>
+
+													<label for="smtelse" class="catalog__selectors_item">
+														Шоб умный был
+														<input
+															id="smtelse"
+															type="checkbox"
+															name="smtelse"
+															value="smtelse"
+															autocomplete="off"
+														/>
+													</label>
+
+													<label
+														for="anotherone"
+														class="catalog__selectors_item"
+													>
+														Мелкая моторика
+														<input
+															id="anotherone"
+															type="checkbox"
+															name="anotherone"
+															value="anotherone"
+															autocomplete="off"
+														/>
+													</label>
+													<label
+														for="anotherone"
+														class="catalog__selectors_item"
+													>
+														Мелкая моторика
+														<input
+															id="anotherone"
+															type="checkbox"
+															name="anotherone"
+															value="anotherone"
+															autocomplete="off"
+														/>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="filters__submit button">
+									<button type="submit">Применить</button>
+								</div>
+							</form>
+						</div>
 					</div>
 				</div>
 
@@ -561,6 +843,8 @@
 		</div>
 
 		<script src="js/swiper.js"></script>
+		<script src="js/wNumb.min.js"></script>
+		<script src="js/nouislider.min.js"></script>
 		<script src="js/main.js" defer></script>
 	</body>
 </html>

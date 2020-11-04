@@ -64,6 +64,8 @@
 			}
 			& img {
 				transition: filter .2s ease;
+				width: 10px;
+				height: 16px;
 			}
 	
 			&:hover {
