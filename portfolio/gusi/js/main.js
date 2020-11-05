@@ -1,5 +1,10 @@
 "use strict";
 
+window.addEventListener("load", () => {
+	const font = document.querySelector("#font");
+	font.rel = "stylesheet";
+});
+
 if (document.querySelector(".main-slider__container") !== null) {
 	const mainSlider = new Swiper(".main-slider__container", {
 		slidesPerView: 1,
@@ -500,7 +505,9 @@ sliderPriceMax.addEventListener("change", function () {
 });
 
 // Сброс фильтра
-const resetFilter = document.querySelectorAll(".filters__reset, .filters__reset_mobile");
+const resetFilter = document.querySelectorAll(
+	".filters__reset, .filters__reset_mobile",
+);
 const filterPopup = document.querySelector(".filters__popup");
 resetFilter.forEach((btn) => {
 	btn.addEventListener("click", (e) => {
