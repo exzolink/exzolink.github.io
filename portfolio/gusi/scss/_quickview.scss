@@ -59,8 +59,12 @@
 	& .sliders__link-sub {
 		margin-top: 0;
 		margin-left: 70px;
-		margin-right: 70px;
+		margin-right: 0;
 		margin-bottom: 22px;
+	}
+
+	& .sliders__link-main_subtitle {
+		margin-right: 24px;
 	}
 
 	& .product__info {

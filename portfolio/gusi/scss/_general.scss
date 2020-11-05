@@ -17,6 +17,7 @@ html {
 	font-size: 14px;
 	overflow-x: hidden;
 	font-family: "Nunito", sans-serif;
+	text-rendering: optimizeLegibility;
 }
 
 body {
@@ -38,6 +39,11 @@ a {
 	color: $blue;
 	display: flex;
 	transition: color 0.2s ease, filter 0.2s ease;
+}
+
+::selection {
+	background-color: $teal;
+	color: #fff;
 }
 
 .container {
