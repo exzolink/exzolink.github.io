@@ -1,4 +1,5 @@
 .quickview {
+	will-change: transform, opacity, visibility;
 	position: fixed;
 	width: 100%;
 	left: 50%;

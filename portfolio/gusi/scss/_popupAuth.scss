@@ -1,5 +1,6 @@
 .popupAuth {
 	&__window {
+		will-change: transform, opacity, visibility;
 		position: fixed;
 		top: 50%;
 		left: 50%;
