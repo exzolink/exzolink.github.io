@@ -1,8 +1,12 @@
 "use strict";
 
 window.addEventListener("load", () => {
-	const font = document.querySelector("#font");
-	font.rel = "stylesheet";
+	try {
+		const font = document.querySelector("#font");
+		font.rel = "stylesheet";
+	} catch (err) {
+		console.log("Шрифт не найден");
+	}
 });
 
 if (document.querySelector(".main-slider__container") !== null) {
