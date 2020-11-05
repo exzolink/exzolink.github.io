@@ -434,127 +434,134 @@ if (window.innerWidth <= 600) {
 	} catch (err) {}
 }
 
-// Слайдер возраста (фильтр)
-const sliderAge = document.getElementById("age-slider");
-let a1 = 0;
-let a2 = 18;
-noUiSlider.create(sliderAge, {
-	start: [a1, a2],
-	connect: true,
-	range: {
-		min: 0,
-		max: 18,
-	},
-	step: 1,
-	format: wNumb({
-		decimals: 0,
-	}),
-});
+try {
+	// Слайдер возраста (фильтр)
+	const sliderAge = document.getElementById("age-slider");
+	let a1 = 0;
+	let a2 = 18;
+	noUiSlider.create(sliderAge, {
+		start: [a1, a2],
+		connect: true,
+		range: {
+			min: 0,
+			max: 18,
+		},
+		step: 1,
+		format: wNumb({
+			decimals: 0,
+		}),
+	});
 
-// Линковка слайдера возраста к инпутам
-const sliderAgeMin = document.getElementById("minAge");
-const sliderAgeMax = document.getElementById("maxAge");
-sliderAge.noUiSlider.on("update", function (values, handle) {
-	let value = values[handle];
+	// Линковка слайдера возраста к инпутам
+	const sliderAgeMin = document.getElementById("minAge");
+	const sliderAgeMax = document.getElementById("maxAge");
+	sliderAge.noUiSlider.on("update", function (values, handle) {
+		let value = values[handle];
 
-	if (handle) {
-		sliderAgeMax.value = values[handle];
-	} else {
-		sliderAgeMin.value = values[handle];
-	}
-});
-
-sliderAgeMin.addEventListener("change", function () {
-	sliderAge.noUiSlider.set([this.value, null]);
-});
-sliderAgeMax.addEventListener("change", function () {
-	sliderAge.noUiSlider.set([null, this.value]);
-});
-
-// Слайдер цены (фильтр)
-const sliderPrice = document.getElementById("price-slider");
-let p1 = 3000;
-let p2 = 10000;
-noUiSlider.create(sliderPrice, {
-	start: [p1, p2],
-	connect: true,
-	range: {
-		min: 3000,
-		max: 10000,
-	},
-	step: 1,
-	format: wNumb({
-		decimals: 0,
-	}),
-});
-
-// Линковка слайдера цены к инпутам
-const sliderPriceMin = document.getElementById("minPrice");
-const sliderPriceMax = document.getElementById("maxPrice");
-sliderPrice.noUiSlider.on("update", function (values, handle) {
-	let value = values[handle];
-
-	if (handle) {
-		sliderPriceMax.value = values[handle];
-	} else {
-		sliderPriceMin.value = values[handle];
-	}
-});
-
-sliderPriceMin.addEventListener("change", function () {
-	sliderPrice.noUiSlider.set([this.value, null]);
-});
-sliderPriceMax.addEventListener("change", function () {
-	sliderPrice.noUiSlider.set([null, this.value]);
-});
-
-// Сброс фильтра
-const resetFilter = document.querySelectorAll(
-	".filters__reset, .filters__reset_mobile",
-);
-const filterPopup = document.querySelector(".filters__popup");
-resetFilter.forEach((btn) => {
-	btn.addEventListener("click", (e) => {
-		e.preventDefault();
-		const filterCheckboxes = filterPopup.querySelectorAll(".filters__checkbox");
-		const filterSelectors = filterPopup.querySelectorAll(
-			".catalog__selectors_item",
-		);
-
-		for (let i = 0; i < filterCheckboxes.length; i++) {
-			filterCheckboxes[i].checked = false;
+		if (handle) {
+			sliderAgeMax.value = values[handle];
+		} else {
+			sliderAgeMin.value = values[handle];
 		}
+	});
 
-		for (let i = 0; i < filterSelectors.length; i++) {
-			filterSelectors[i].classList.remove("active");
-			let filterSelectorsInput = filterSelectors[i].querySelector("input");
-			filterSelectorsInput.checked = false;
+	sliderAgeMin.addEventListener("change", function () {
+		sliderAge.noUiSlider.set([this.value, null]);
+	});
+	sliderAgeMax.addEventListener("change", function () {
+		sliderAge.noUiSlider.set([null, this.value]);
+	});
+
+	// Слайдер цены (фильтр)
+	const sliderPrice = document.getElementById("price-slider");
+	let p1 = 3000;
+	let p2 = 10000;
+	noUiSlider.create(sliderPrice, {
+		start: [p1, p2],
+		connect: true,
+		range: {
+			min: 3000,
+			max: 10000,
+		},
+		step: 1,
+		format: wNumb({
+			decimals: 0,
+		}),
+	});
+
+	// Линковка слайдера цены к инпутам
+	const sliderPriceMin = document.getElementById("minPrice");
+	const sliderPriceMax = document.getElementById("maxPrice");
+	sliderPrice.noUiSlider.on("update", function (values, handle) {
+		let value = values[handle];
+
+		if (handle) {
+			sliderPriceMax.value = values[handle];
+		} else {
+			sliderPriceMin.value = values[handle];
 		}
-
-		sliderPrice.noUiSlider.set([p1, p2]);
-		sliderAge.noUiSlider.set([a1, a2]);
 	});
-});
 
-// Toggle разделы фильтра
-const filterToggleBtns = document.querySelectorAll(".filters__title");
-filterToggleBtns.forEach((btn) => {
-	btn.addEventListener("click", () => {
-		let filterBlock =
-			btn.closest(".filters__popup_item") || btn.closest(".filters__popup_row");
-		let filterBlockEl = filterBlock.querySelector(".filters__block");
-		slideToggle(filterBlockEl, 300);
-		btn.querySelector(".filters-arrow").classList.toggle("active");
+	sliderPriceMin.addEventListener("change", function () {
+		sliderPrice.noUiSlider.set([this.value, null]);
 	});
-});
+	sliderPriceMax.addEventListener("change", function () {
+		sliderPrice.noUiSlider.set([null, this.value]);
+	});
 
-// Открыть/закрыть фильтр
-const filterBtns = document.querySelectorAll(
-	".filters__button, .filters-close-btn, .filters__close_mobile",
-);
-filterBtns.forEach((btn) => {
-	btn.addEventListener("click", (e) => {
-		e.preventDefault();
-		filterPopup.classList.toggle("active");
+	// Сброс фильтра
+	const resetFilter = document.querySelectorAll(
+		".filters__reset, .filters__reset_mobile",
+	);
+	const filterPopup = document.querySelector(".filters__popup");
+	resetFilter.forEach((btn) => {
+		btn.addEventListener("click", (e) => {
+			e.preventDefault();
+			const filterCheckboxes = filterPopup.querySelectorAll(
+				".filters__checkbox",
+			);
+			const filterSelectors = filterPopup.querySelectorAll(
+				".catalog__selectors_item",
+			);
+
+			for (let i = 0; i < filterCheckboxes.length; i++) {
+				filterCheckboxes[i].checked = false;
+			}
+
+			for (let i = 0; i < filterSelectors.length; i++) {
+				filterSelectors[i].classList.remove("active");
+				let filterSelectorsInput = filterSelectors[i].querySelector("input");
+				filterSelectorsInput.checked = false;
+			}
+
+			sliderPrice.noUiSlider.set([p1, p2]);
+			sliderAge.noUiSlider.set([a1, a2]);
+		});
 	});
-});
+
+	// Toggle разделы фильтра
+	const filterToggleBtns = document.querySelectorAll(".filters__title");
+	filterToggleBtns.forEach((btn) => {
+		btn.addEventListener("click", () => {
+			let filterBlock =
+				btn.closest(".filters__popup_item") ||
+				btn.closest(".filters__popup_row");
+			let filterBlockEl = filterBlock.querySelector(".filters__block");
+			slideToggle(filterBlockEl, 300);
+			btn.querySelector(".filters-arrow").classList.toggle("active");
+		});
+	});
+
+	// Открыть/закрыть фильтр
+	const filterBtns = document.querySelectorAll(
+		".filters__button, .filters-close-btn, .filters__close_mobile",
+	);
+	filterBtns.forEach((btn) => {
+		btn.addEventListener("click", (e) => {
+			e.preventDefault();
+			filterPopup.classList.toggle("active");
+		});
+	});
+} catch (err) {
+	// console.log('Слайдеров нет')
+}

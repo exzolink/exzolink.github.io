@@ -31,6 +31,10 @@
 		border-radius: 24px;
 		margin: auto;
 		position: relative;
+		scrollbar-width: none;
+		&::-webkit-scrollbar {
+			width: 0;
+		}
 	}
 
 	&__buttons {
@@ -56,7 +60,7 @@
 		margin-top: 0;
 		margin-left: 70px;
 		margin-right: 70px;
-		margin-bottom: 30px;
+		margin-bottom: 22px;
 	}
 
 	& .product__info {
