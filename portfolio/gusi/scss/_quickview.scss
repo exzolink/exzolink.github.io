@@ -8,13 +8,13 @@
 	height: 100%;
 
 	z-index: 20;
-	transform: translate(-50%, -50%) scale(.75);
+	transform: translate(-50%, -50%) scale(0.75);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	visibility: hidden;
 	opacity: 0;
-	transition: opacity .4s ease, visibility .4s ease, transform .4s ease;
+	transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 
 	&.active {
 		opacity: 1;
@@ -113,4 +113,3 @@
 		display: none !important;
 	}
 }
-
