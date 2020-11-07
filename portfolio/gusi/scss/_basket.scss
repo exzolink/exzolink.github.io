@@ -8,14 +8,14 @@
 	background-color: #fff;
 	z-index: 10;
 	max-width: 385px;
-	transform: scale(.75);
+	transform: scale(0.75);
 	opacity: 0;
 	visibility: collapse;
 	transform-origin: top;
 	max-height: 568px;
 	scrollbar-width: thin;
 	overflow-y: auto;
-	transition: opacity .2s ease, visibility .2s ease, transform .2s ease;
+	transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
 
 	&::-webkit-scrollbar {
 		width: 0;
@@ -46,7 +46,7 @@
 
 		&:before {
 			position: absolute;
-			content: '';
+			content: "";
 			width: 22px;
 			height: 11px;
 			top: -1px;
@@ -96,8 +96,8 @@
 
 		&_info {
 			display: flex;
-            flex-direction: column;
-            width: 100%;
+			flex-direction: column;
+			width: 100%;
 		}
 		&_brand {
 			color: #d4d4d4;
@@ -146,8 +146,8 @@
 		display: flex;
 		justify-content: space-between;
 		font-size: 18px;
-        font-weight: 700;
-        padding-top: 10px;
+		font-weight: 700;
+		padding-top: 10px;
 		margin-bottom: 30px;
 
 		&_text {
@@ -164,14 +164,12 @@
 			color: #40414a;
 		}
 	}
-
 }
 
 @media screen and (min-width: 601px) {
 	.basket {
 		&__title {
 			display: none;
-
 		}
 	}
 }
@@ -188,7 +186,7 @@
 		right: auto;
 		width: calc(100% - 30px);
 		height: calc(100% - 56px - 30px);
-		transition: opacity .4s ease, visibility .4s ease, transform .4s ease;
+		transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
 		max-height: none;
 
 		&.active {
@@ -219,15 +217,15 @@
 			}
 			&_leftside {
 				margin-right: 8px;
-				& span {
+				& input {
 					margin: 0 auto;
 					margin-top: 7px;
-					font-size: 10px;
+					font-size: 16px;
+					font-weight: 400;
 					max-width: 51px;
 					padding: 3px;
 				}
 			}
-
 		}
 
 		&__total {
