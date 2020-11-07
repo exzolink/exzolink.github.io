@@ -68,6 +68,7 @@ a {
 	box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
 	border-radius: 10px;
 	transition: box-shadow 0.2s ease;
+	appearance: textfield;
 
 	&:focus {
 		box-shadow: 0 0 0px 1px #16c9e6;
@@ -145,7 +146,7 @@ input[disabled] {
 	}
 
 	.general-input {
-		font-size: 14px;
+		font-size: 16px;
 	}
 
 	.no-header-mob {
