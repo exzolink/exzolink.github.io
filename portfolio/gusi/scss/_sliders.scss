@@ -72,6 +72,7 @@
 		overflow: hidden;
 		display: flex;
 		position: relative;
+		align-items: flex-start;
 		flex-direction: column;
 
 		&:hover {
@@ -156,6 +157,7 @@
 			justify-content: center;
 			align-items: center;
 			position: relative;
+			min-height: auto;
 
 			& img {
 				max-height: 100%;

@@ -50,6 +50,7 @@
 	}
 
 	&__popup {
+		will-change: transform, opacity, visibility;
 		position: absolute;
 		right: 0;
 		top: 45px;

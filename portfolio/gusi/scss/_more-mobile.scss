@@ -39,6 +39,21 @@
 	}
 }
 
+.more {
+	&__orders {
+		&_last {
+			cursor: pointer;
+			margin-bottom: 0 !important;
+		}
+
+		&_list {
+			display: none;
+			margin-top: 16px;
+			flex-direction: column;
+		}
+	}
+}
+
 @media screen and (min-width: 1000px) {
 	.more {
 		position: relative;
