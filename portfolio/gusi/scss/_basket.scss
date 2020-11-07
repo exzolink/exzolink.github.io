@@ -79,12 +79,14 @@
 				}
 			}
 
-			& span {
+			& input {
 				text-align: center;
+				appearance: textfield;
 				margin-top: 15px;
 				border: 1px solid #f3f3f3;
 				font-weight: 600;
 				color: #40414a;
+				font-family: inherit;
 				font-size: 14px;
 				padding: 5px 5px;
 				width: 100%;
