@@ -20,7 +20,7 @@
 .subcat {
 	&__wrapper {
 		display: grid;
-		grid-template-columns: repeat(6, 1fr);
+		grid-template-columns: repeat(7, 1fr);
 		grid-template-rows: auto;
 		grid-gap: 30px 85px;
 	}
@@ -59,6 +59,14 @@
 			font-size: 18px;
 			text-align: center;
 			transition: color 0.2s ease;
+		}
+	}
+}
+
+@media screen and (max-width: 1250px) {
+	.subcat {
+		&__wrapper {
+			grid-template-columns: repeat(6, 1fr);
 		}
 	}
 }
