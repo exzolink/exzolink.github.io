@@ -68,19 +68,28 @@ a {
 	box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
 	border-radius: 10px;
 	appearance: textfield;
-	transition: box-shadow 0.2s ease;
+	transition: box-shadow 0.2s ease, background-color .2s ease;
 
 	&:focus {
 		box-shadow: 0 0 0px 1px #16c9e6;
+		background-color: #fff;
 	}
+
+	&.filled {
+		box-shadow: none;
+		color: #40414A;
+		background-color: #F3F3F3;
+		border: 1px solid transparent;
+		transition: border .2s ease, background .2s ease;
+
+		&:focus {
+			background-color: #fff;
+			border: 1px solid $teal;
+		}
+	}
+
 }
 
-input[disabled] {
-	box-shadow: none;
-	color: #40414A;
-	background-color: #F3F3F3;
-	cursor: not-allowed;
-}
 
 .button {
 	display: flex;

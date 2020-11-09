@@ -70,7 +70,7 @@
 						<div class="basket__item">
 							<div class="basket__item_leftside">
 								<a href=""><img src="imgs/slide2-placeholder.png" alt="" /></a>
-								<input type="number" value="99" required>
+								<input type="number" value="99" required />
 							</div>
 
 							<div class="basket__item_info">
@@ -91,7 +91,7 @@
 						<div class="basket__item">
 							<div class="basket__item_leftside">
 								<a href=""><img src="imgs/slide2-placeholder.png" alt="" /></a>
-								<input type="number" value="99" required>
+								<input type="number" value="99" required />
 							</div>
 
 							<div class="basket__item_info">
@@ -165,7 +165,9 @@
 					<div class="sliders__link-main sliders__link-sub">
 						<h1 class="sliders__link-main_subtitle">Сортер "Куриное гнездо"</h1>
 					</div>
+				</div>
 
+				<div class="container no-pd-mob">
 					<div class="product__wrapper product__general">
 						<div class="product__sliders">
 							<div class="product__sliders-main">
@@ -213,7 +215,7 @@
 								<span class="sliders__slide_price-old">3000 ₽</span>
 								<span class="sliders__slide_price-new">3000 ₽</span>
 							</div>
-
+	
 							<div class="product__buttons">
 								<form
 									action="#"
@@ -222,11 +224,7 @@
 								>
 									<button type="submit">В корзину</button>
 								</form>
-								<form
-									action="#"
-									method="POST"
-									class="product__buttons_favorite"
-								>
+								<form action="#" method="POST" class="product__buttons_favorite">
 									<button type="submit">
 										<img
 											width="36"
@@ -237,12 +235,12 @@
 									</button>
 								</form>
 							</div>
-
+	
 							<a href="" class="product__brand">
 								<img width="40" height="40" src="imgs/LEGO.jpg" alt="" />
 								<span>Plan Toys</span>
 							</a>
-
+	
 							<div class="product__chars product__general_chars">
 								<dl class="product__chars_item">
 									<dt>Материал</dt>
@@ -267,7 +265,9 @@
 							</div>
 						</div>
 					</div>
+				</div>
 
+				<div class="container">
 					<div class="product__wrapper flex-wrap">
 						<div class="product__delivery">
 							<h2 class="product__subtitle">Наличие и доставка</h2>
@@ -296,7 +296,10 @@
 							<span data-tab="chars">Характеристики</span>
 						</div>
 
-						<div id="chars" class="product__chars product__chars_mobile product__tabs_content">
+						<div
+							id="chars"
+							class="product__chars product__chars_mobile product__tabs_content"
+						>
 							<dl class="product__chars_item">
 								<dt>Материал</dt>
 								<dd>Дерево / Металл</dd>
@@ -544,7 +547,12 @@
 					/>
 				</div>
 
-				<form action="#" method="post" id="restore-pass" class="popupAuth__form">
+				<form
+					action="#"
+					method="post"
+					id="restore-pass"
+					class="popupAuth__form"
+				>
 					<p class="popupAuth__text">
 						Введите свой номер телефона или эл. почту, и мы вышлем ссылку, с
 						помощью которой Вы сможете придумать новый пароль
@@ -597,6 +605,6 @@
 
 		<script src="js/swiper.js"></script>
 		<script src="js/readmore.js"></script>
-		<script src="js/main.js" ></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>

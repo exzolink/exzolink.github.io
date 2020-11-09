@@ -449,13 +449,30 @@
 	.product {
 		&__sliders {
 			margin-bottom: 16px;
+			&-main {
+				margin-top: 0;
+				padding-bottom: 0;
+			}
+		}
+
+		&__main {
+			&_container {
+				padding: 15px;
+				box-shadow: none;
+			}
+			&_slide {
+				padding: 10px 0;
+				box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+				border-radius: 16px;
+				overflow: hidden;
+			}
 		}
 
 		& .sliders__link-main_subtitle {
 			font-size: 24px;
 		}
 		& .sliders__link-sub {
-			margin-bottom: 24px;
+			margin-bottom: 16px;
 			margin-top: 24px;
 		}
 		&__brand {
@@ -524,7 +541,7 @@
 		}
 
 		& .swiper-pagination {
-			bottom: 10px;
+			bottom: 26px;
 		}
 
 		& .swiper-pagination-bullet {
