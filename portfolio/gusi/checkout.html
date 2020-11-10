@@ -165,8 +165,8 @@
 							<div class="checkout__incart_block">
 								<span><strong>В корзине</strong></span>
 								<span
-									><strong>3 товара</strong> на сумму
-									<strong>6 999 ₽</strong></span
+									><strong>33 товара</strong> на сумму
+									<strong>65 999 ₽</strong></span
 								>
 							</div>
 						</div>
@@ -568,7 +568,7 @@
 
 		<div class="popup-dark-bg"></div>
 
-		<div id="login-form" class="popupAuth__window">
+		<div id="login-form" class="popupAuth__window" role="dialog">
 			<div class="popupAuth__inner">
 				<div class="popupAuth__title">
 					<span class="title">Вход</span>
@@ -601,7 +601,7 @@
 			</div>
 		</div>
 
-		<div id="register-form" class="popupAuth__window">
+		<div id="register-form" class="popupAuth__window" role="dialog">
 			<div class="popupAuth__inner">
 				<div class="popupAuth__title">
 					<span class="title">Регистрация</span>
@@ -633,7 +633,7 @@
 			</div>
 		</div>
 
-		<div id="forgot-form" class="popupAuth__window">
+		<div id="forgot-form" class="popupAuth__window" role="dialog">
 			<div class="popupAuth__inner">
 				<div class="popupAuth__title">
 					<span class="title">Забыли пароль?</span>
@@ -671,7 +671,7 @@
 			</div>
 		</div>
 
-		<div id="new-form" class="popupAuth__window">
+		<div id="new-form" class="popupAuth__window" role="dialog">
 			<div class="popupAuth__inner">
 				<div class="popupAuth__title">
 					<span class="title">Новый пароль</span>
@@ -702,8 +702,11 @@
 			</div>
 		</div>
 
-		<div class="map popup">
-			<img src="imgs/map.png" alt="" />
+		<div class="map popup" role="dialog">
+			<div class="map__inner">
+				<img src="imgs/close.svg" class="popup-close-btn" alt="">
+				<img src="imgs/map.png" alt="" />
+			</div>
 		</div>
 
 		<script src="js/swiper.js"></script>

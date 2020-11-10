@@ -11,6 +11,7 @@
 
 	&__incart {
 		max-width: 290px;
+		min-width: 290px;
 		width: 100%;
 		margin-right: 20px;
 		&_block {
@@ -21,7 +22,7 @@
 			justify-content: center;
 			align-items: center;
 			color: #40414a;
-			padding: 27px;
+			padding: 27px 10px;
 			font-size: 18px;
 			position: sticky;
 			top: 24px;
@@ -331,6 +332,20 @@
 		visibility: visible;
 		transform: translate(-50%, -50%) scale(1);
 	}
+
+	&__inner {
+		position: relative;
+		height: 100%;
+		width: 100%;
+	}
+	& .popup-close-btn {
+		position: absolute;
+		right: 24px;
+		top: 24px;
+		z-index: 5;
+		width: 32px;
+		height: 32px;
+	}
 }
 
 @media screen and (max-width: 1250px) {
@@ -442,6 +457,7 @@
 		&__incart {
 			display: flex;
 			max-width: none;
+			min-width: auto;
 			margin-bottom: 32px;
 
 			&_block {
@@ -527,6 +543,12 @@
 		height: calc(100% - 56px - 30px);
 		&.active {
 			transform: translateX(-50%) scale(1) translateY(0%);
+		}
+		& .popup-close-btn {
+			width: 24px;
+			height: 24px;
+			top: 16px;
+			right: 16px;
 		}
 	}
 }

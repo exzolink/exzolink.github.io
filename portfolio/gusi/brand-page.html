@@ -70,7 +70,7 @@
 						<div class="basket__item">
 							<div class="basket__item_leftside">
 								<a href=""><img src="imgs/slide2-placeholder.png" alt="" /></a>
-								<input type="number" value="99" required>
+								<input type="number" value="99" required />
 							</div>
 
 							<div class="basket__item_info">
@@ -91,7 +91,7 @@
 						<div class="basket__item">
 							<div class="basket__item_leftside">
 								<a href=""><img src="imgs/slide2-placeholder.png" alt="" /></a>
-								<input type="number" value="99" required>
+								<input type="number" value="99" required />
 							</div>
 
 							<div class="basket__item_info">
@@ -294,6 +294,294 @@
 						<button class="filters__button">
 							<img src="imgs/filter.svg" alt="" />
 						</button>
+
+						<div class="filters__popup">
+							<form action="#" method="post" class="filters__popup_inner">
+								<div class="filters-close-btn">
+									<img src="imgs/close.svg" alt="" />
+								</div>
+								<div class="filters__popup_row filters__popup_main">
+									<button class="filters__reset_mobile">
+										<img src="imgs/reset.svg" alt="" />
+									</button>
+									<span class="sliders__link-main_subtitle">Фильтры</span>
+									<span class="filters__reset">Очистить все фильтры</span>
+									<button class="filters__close_mobile">
+										<img src="imgs/close.svg" alt="" />
+									</button>
+								</div>
+
+								<div class="filters__popup_row">
+									<div class="filters__popup_item">
+										<div class="filters__title">
+											<span>Возраст</span>
+											<img
+												class="filters-arrow"
+												src="imgs/filters.svg"
+												alt=""
+											/>
+										</div>
+										<div class="filters__block">
+											<div class="filters__ranges_wrapper">
+												<div class="filters__ranges">
+													<span>От</span>
+													<input id="minAge" type="number" />
+													<span>лет</span>
+												</div>
+												<div class="filters__ranges">
+													<span>До</span>
+													<input id="maxAge" type="number" />
+													<span>лет</span>
+												</div>
+											</div>
+											<div id="age-slider" class="filters__slider"></div>
+										</div>
+									</div>
+
+									<div class="filters__popup_item">
+										<div class="filters__title">
+											<span>Стоимость</span>
+											<img
+												class="filters-arrow"
+												src="imgs/filters.svg"
+												alt=""
+											/>
+										</div>
+										<div class="filters__block">
+											<div class="filters__ranges_wrapper">
+												<div class="filters__ranges price">
+													<span>От</span>
+													<input id="minPrice" type="number" />
+													<span>₽</span>
+												</div>
+												<div class="filters__ranges price">
+													<span>До</span>
+													<input id="maxPrice" type="number" />
+													<span>₽</span>
+												</div>
+											</div>
+											<div id="price-slider" class="filters__slider"></div>
+										</div>
+									</div>
+
+									<div class="filters__popup_item">
+										<div class="filters__title">
+											<span>Спец. предложения</span>
+											<img
+												class="filters-arrow"
+												src="imgs/filters.svg"
+												alt=""
+											/>
+										</div>
+
+										<div class="filters__block flex-row">
+											<label for="best" class="filters__check">
+												<input
+													class="filters__checkbox"
+													name="best"
+													id="best"
+													autocomplete="off"
+													type="checkbox"
+												/>
+												<span>Хиты продаж</span>
+											</label>
+											<label for="sale" class="filters__check">
+												<input
+													class="filters__checkbox"
+													name="sale"
+													id="sale"
+													autocomplete="off"
+													type="checkbox"
+												/>
+												<span>Скидки</span>
+											</label>
+										</div>
+									</div>
+								</div>
+
+								<div class="filters__popup_row">
+									<div class="filters__popup_wrapper">
+										<div class="filters__title">
+											<span>Производитель</span>
+											<img
+												class="filters-arrow"
+												src="imgs/filters.svg"
+												alt=""
+											/>
+										</div>
+										<div class="filters__block">
+											<div class="catalog__selectors_wrapper">
+												<div class="catalog__selectors">
+													<label for="motorika" class="catalog__selectors_item">
+														Мелкая моторика
+														<input
+															id="motorika"
+															type="checkbox"
+															name="motorika"
+															value="motorika"
+															autocomplete="off"
+														/>
+													</label>
+
+													<label for="balancer" class="catalog__selectors_item">
+														Балансеры
+														<input
+															id="balancer"
+															type="checkbox"
+															name="balancer"
+															value="balancer"
+															autocomplete="off"
+														/>
+													</label>
+
+													<label for="clever" class="catalog__selectors_item">
+														Шоб быстрый ловкий был
+														<input
+															id="clever"
+															type="checkbox"
+															name="clever"
+															value="clever"
+															autocomplete="off"
+														/>
+													</label>
+
+													<label for="smtelse" class="catalog__selectors_item">
+														Шоб умный был
+														<input
+															id="smtelse"
+															type="checkbox"
+															name="smtelse"
+															value="smtelse"
+															autocomplete="off"
+														/>
+													</label>
+
+													<label
+														for="anotherone"
+														class="catalog__selectors_item"
+													>
+														Мелкая моторика
+														<input
+															id="anotherone"
+															type="checkbox"
+															name="anotherone"
+															value="anotherone"
+															autocomplete="off"
+														/>
+													</label>
+													<label
+														for="anotherone"
+														class="catalog__selectors_item"
+													>
+														Мелкая моторика
+														<input
+															id="anotherone"
+															type="checkbox"
+															name="anotherone"
+															value="anotherone"
+															autocomplete="off"
+														/>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="filters__popup_row">
+									<div class="filters__popup_wrapper">
+										<div class="filters__title">
+											<span>Развитие навыков</span>
+											<img
+												class="filters-arrow"
+												src="imgs/filters.svg"
+												alt=""
+											/>
+										</div>
+										<div class="filters__block">
+											<div class="catalog__selectors_wrapper">
+												<div class="catalog__selectors">
+													<label for="motorika" class="catalog__selectors_item">
+														Мелкая моторика
+														<input
+															id="motorika"
+															type="checkbox"
+															name="motorika"
+															value="motorika"
+															autocomplete="off"
+														/>
+													</label>
+
+													<label for="balancer" class="catalog__selectors_item">
+														Балансеры
+														<input
+															id="balancer"
+															type="checkbox"
+															name="balancer"
+															value="balancer"
+															autocomplete="off"
+														/>
+													</label>
+
+													<label for="clever" class="catalog__selectors_item">
+														Шоб быстрый ловкий был
+														<input
+															id="clever"
+															type="checkbox"
+															name="clever"
+															value="clever"
+															autocomplete="off"
+														/>
+													</label>
+
+													<label for="smtelse" class="catalog__selectors_item">
+														Шоб умный был
+														<input
+															id="smtelse"
+															type="checkbox"
+															name="smtelse"
+															value="smtelse"
+															autocomplete="off"
+														/>
+													</label>
+
+													<label
+														for="anotherone"
+														class="catalog__selectors_item"
+													>
+														Мелкая моторика
+														<input
+															id="anotherone"
+															type="checkbox"
+															name="anotherone"
+															value="anotherone"
+															autocomplete="off"
+														/>
+													</label>
+													<label
+														for="anotherone"
+														class="catalog__selectors_item"
+													>
+														Мелкая моторика
+														<input
+															id="anotherone"
+															type="checkbox"
+															name="anotherone"
+															value="anotherone"
+															autocomplete="off"
+														/>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="filters__submit button">
+									<button type="submit">Применить</button>
+								</div>
+							</form>
+						</div>
 					</div>
 				</div>
 
@@ -541,7 +829,12 @@
 					/>
 				</div>
 
-				<form action="#" method="post" id="restore-pass" class="popupAuth__form">
+				<form
+					action="#"
+					method="post"
+					id="restore-pass"
+					class="popupAuth__form"
+				>
 					<p class="popupAuth__text">
 						Введите свой номер телефона или эл. почту, и мы вышлем ссылку, с
 						помощью которой Вы сможете придумать новый пароль
@@ -593,12 +886,22 @@
 		</div>
 
 		<div class="quickview product popup">
-			<button class="quickview__buttons_left"><img src="imgs/qv-left.svg" alt=""></button>
-			<button class="quickview__buttons_right"><img src="imgs/qv-right.svg" alt=""></button>
+			<button class="quickview__buttons_left">
+				<img src="imgs/qv-left.svg" alt="" />
+			</button>
+			<button class="quickview__buttons_right">
+				<img src="imgs/qv-right.svg" alt="" />
+			</button>
 			<div class="quickview__inner">
 				<div class="sliders__link-main sliders__link-sub">
 					<h1 class="sliders__link-main_subtitle">Сортер "Куриное гнездо"</h1>
-					<img class="popup-close-btn" src="imgs/close.svg" alt="" width="24" height="24">
+					<img
+						class="popup-close-btn"
+						src="imgs/close.svg"
+						alt=""
+						width="24"
+						height="24"
+					/>
 				</div>
 
 				<div class="product__wrapper product__general">
@@ -657,11 +960,7 @@
 							>
 								<button type="submit">В корзину</button>
 							</form>
-							<form
-								action="#"
-								method="POST"
-								class="product__buttons_favorite"
-							>
+							<form action="#" method="POST" class="product__buttons_favorite">
 								<button type="submit">
 									<img
 										width="36"
@@ -731,7 +1030,10 @@
 						<span data-tab="chars">Характеристики</span>
 					</div>
 
-					<div id="chars" class="product__chars product__chars_mobile product__tabs_content">
+					<div
+						id="chars"
+						class="product__chars product__chars_mobile product__tabs_content"
+					>
 						<dl class="product__chars_item">
 							<dt>Материал</dt>
 							<dd>Дерево / Металл</dd>
@@ -759,15 +1061,15 @@
 						<div class="product__desc_text">
 							<p>
 								Пирамидка Куриное гнездо от производителя деревянных игрушек
-								Plan Toys - превосходная развивающая игрушка, которая
-								непременно порадует малышей.
+								Plan Toys - превосходная развивающая игрушка, которая непременно
+								порадует малышей.
 							</p>
 							<p>
 								Пирамидка состоит из трех составных частей, куриного яйца и
 								круглого основания. Составные части в виде полусфер можно
 								вкладывать друг в друга или собирать друг на друга в высоту,
-								даже можно комбинировать по своему усмотрению, получая
-								забавные конструкции.
+								даже можно комбинировать по своему усмотрению, получая забавные
+								конструкции.
 							</p>
 						</div>
 					</div>
@@ -776,6 +1078,8 @@
 		</div>
 
 		<script src="js/swiper.js"></script>
-		<script src="js/main.js" ></script>
+		<script src="js/wNumb.min.js"></script>
+		<script src="js/nouislider.min.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>
