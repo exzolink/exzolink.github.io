@@ -1,53 +1,52 @@
 .mainpage {
 	height: calc((var(--vh, 1vh) * 100) - 94px);
-    width: 100%;
-    position: relative;
+	width: 100%;
+	position: relative;
 
 	&__section {
-        background: url("../imgs/bgMain.jpg") no-repeat;
-        background-color: #4E5359;
-        height: 100%;
-        background-size: cover;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    &__intro {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        background-color: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: opacity 1s ease, visibility 1s ease;
+		background: url("../imgs/bgMain.jpg") no-repeat;
+		background-color: #4e5359;
+		height: 100%;
+		background-size: cover;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
-        &.ended {
-            opacity: 0;
-            visibility: collapse;
-        }
+	&__intro {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		background-color: #000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: opacity 1s ease, visibility 1s ease;
 
-        &_video {
-            height: 100%;
-            width: 100%;
-            max-width: 1600px;
-        }
-    }
+		&.ended {
+			opacity: 0;
+			visibility: collapse;
+		}
+
+		&_video {
+			height: 100%;
+			width: 100%;
+			max-width: 1600px;
+		}
+	}
 }
 
 @media screen and (max-width: 800px) {
-    .mainpage {
-        &__intro {
-
-            &_video {
-                margin-top: -5%;
-                transform: scale(2);
-            }
-        }
-    }
+	.mainpage {
+		&__intro {
+			&_video {
+				margin-top: -5%;
+				transform: scale(2);
+			}
+		}
+	}
 }

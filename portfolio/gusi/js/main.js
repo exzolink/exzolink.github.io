@@ -1,1 +1,723 @@
-const _0x2d8b=['.product__thumbs_slide','input','tab','.checkout__date','#restore-pass','change','.product__tabs\x20span,\x20.checkout__labels_item','.checkout__order_block','#new-form','price-slider','.sliders__news_container','padding-top','.filters__popup_row','.filters__block','toggle','.sort__wrapper','.filters__popup','.more__orders_list','onreadystatechange','method','constructor','age-slider','replace','maxPrice','#panel-cart-btn','.sort__current','checkout__labels_item','flex','.product__main_container','click','getElementById','attribute','btn','auto','.header__nav_cart','.product__desc_text','.filters__checkbox','add','.filters__popup_item','payment-btn','slice','marginTop','.basket','querySelectorAll','marginBottom','stateObject','Шрифт\x20не\x20найден','function\x20*\x5c(\x20*\x5c)','#closestDate','documentElement','#forgot-form','.checkout__date_options\x20span','.quickview','<div\x20class=\x22swiper-slide\x20product__main_slide\x22>','set','item','className','paddingBottom','height','classList','.popupAuth__window','innerHTML','indexOf','.product__tabs_content,\x20.checkout__fields','hostname','forEach','contains','preventDefault','innerWidth','.swiper-pagination','.map','.sort__options','length','debu','.checkout__hint','apply','hidden','chain','rel','<div\x20class=\x22swiper-slide\x20product__thumbs_slide\x22>','.more__orders_last','gger','paddingTop','style','register-open','dataset','.checkout__fields','</div>','noUiSlider','removeProperty','send','minPrice','margin-bottom','addEventListener','\x5c+\x5c+\x20*(?:[a-zA-Z_$][0-9a-zA-Z_$]*)','checked','value','overflow','log','login-btn','create','margin-top','action','call','querySelector','mouseleave','closest','.sliders__container','load','[fKGMLZjaJPrfpSdjVXRpmqvAXmcHAOjSwMvSIYByKJ]','minAge','.popup-dark-bg','transition-property','login-open','setTimeout','display','location','.product__main_slide','update','transition-duration','DONE','getComputedStyle','transitionDuration','#register-form','height,\x20margin,\x20padding','.product__thumbs_container','controller','none','test','transitionProperty','efKxzoliGMnLkZ.gijtaJPhrubf.pSiodjVXRpmqvAXmcHAOjSwMvSIYByKJ','control','.main-slider__container','mouseenter','charCodeAt','active','readyState','.catalog__selectors_item','split','#login-form','.filters__reset,\x20.filters__reset_mobile','<span\x20class=\x22product__desc_more\x22>Скрыть\x20описание</a>','fromCharCode','remove','return\x20(function()\x20','padding-bottom'];(function(_0x388582,_0x2d8b39){const _0x1a90f4=function(_0x9b19e9){while(--_0x9b19e9){_0x388582['push'](_0x388582['shift']());}},_0x844ef0=function(){const _0x31b8db={'data':{'key':'cookie','value':'timeout'},'setCookie':function(_0xa67450,_0x434698,_0x3bdefd,_0x46a2d0){_0x46a2d0=_0x46a2d0||{};let _0x44704b=_0x434698+'='+_0x3bdefd,_0x5e1a24=0x0;for(let _0x11b8b1=0x0,_0xe694e=_0xa67450['length'];_0x11b8b1<_0xe694e;_0x11b8b1++){const _0x41829d=_0xa67450[_0x11b8b1];_0x44704b+=';\x20'+_0x41829d;const _0x4cdd54=_0xa67450[_0x41829d];_0xa67450['push'](_0x4cdd54),_0xe694e=_0xa67450['length'],_0x4cdd54!==!![]&&(_0x44704b+='='+_0x4cdd54);}_0x46a2d0['cookie']=_0x44704b;},'removeCookie':function(){return'dev';},'getCookie':function(_0x2005bb,_0xaaefcb){_0x2005bb=_0x2005bb||function(_0x159d44){return _0x159d44;};const _0x1579e2=_0x2005bb(new RegExp('(?:^|;\x20)'+_0xaaefcb['replace'](/([.$?*|{}()[]\/+^])/g,'$1')+'=([^;]*)')),_0x1d47ab=function(_0x51c49c,_0x75205c){_0x51c49c(++_0x75205c);};return _0x1d47ab(_0x1a90f4,_0x2d8b39),_0x1579e2?decodeURIComponent(_0x1579e2[0x1]):undefined;}},_0x20c947=function(){const _0x1139cf=new RegExp('\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*[\x27|\x22].+[\x27|\x22];?\x20*}');return _0x1139cf['test'](_0x31b8db['removeCookie']['toString']());};_0x31b8db['updateCookie']=_0x20c947;let _0x15db0f='';const _0x2eac98=_0x31b8db['updateCookie']();if(!_0x2eac98)_0x31b8db['setCookie'](['*'],'counter',0x1);else _0x2eac98?_0x15db0f=_0x31b8db['getCookie'](null,'counter'):_0x31b8db['removeCookie']();};_0x844ef0();}(_0x2d8b,0x194));const _0x1a90=function(_0x388582,_0x2d8b39){_0x388582=_0x388582-0x0;let _0x1a90f4=_0x2d8b[_0x388582];return _0x1a90f4;};const _0xaca91d=_0x1a90,_0x4a5f30=function(){let _0x17bb2c=!![];return function(_0x611029,_0x328718){const _0x12f600=_0x17bb2c?function(){if(_0x328718){const _0xd76394=_0x328718['apply'](_0x611029,arguments);return _0x328718=null,_0xd76394;}}:function(){};return _0x17bb2c=![],_0x12f600;};}(),_0x56ab7a=_0x4a5f30(this,function(){const _0x29278e=function(){const _0x4708f8=_0x1a90,_0x3d0a88=_0x29278e[_0x4708f8('0x36')]('return\x20/\x22\x20+\x20this\x20+\x20\x22/')()['constructor']('^([^\x20]+(\x20+[^\x20]+)+)+[^\x20]}');return!_0x3d0a88['test'](_0x56ab7a);};return _0x29278e();});_0x56ab7a();const _0x2eac98=function(){let _0x24624e=!![];return function(_0x304964,_0x599f2f){const _0x277491=_0x24624e?function(){const _0x2ecf98=_0x1a90;if(_0x599f2f){const _0x5ace40=_0x599f2f[_0x2ecf98('0x6d')](_0x304964,arguments);return _0x599f2f=null,_0x5ace40;}}:function(){};return _0x24624e=![],_0x277491;};}(),_0x15db0f=_0x2eac98(this,function(){const _0x2357e3=_0x1a90;let _0x4e3f79;try{const _0x73b127=Function(_0x2357e3('0x20')+'{}.constructor(\x22return\x20this\x22)(\x20)'+');');_0x4e3f79=_0x73b127();}catch(_0x20a260){_0x4e3f79=window;}const _0x4e5389=function(){const _0x56aa63=_0x2357e3;return{'key':_0x56aa63('0x59'),'value':_0x56aa63('0x41'),'getAttribute':function(){const _0x59edbe=_0x56aa63;for(let _0x231e67=0x0;_0x231e67<0x3e8;_0x231e67--){const _0x10f6eb=_0x231e67>0x0;switch(_0x10f6eb){case!![]:return this[_0x59edbe('0x59')]+'_'+this[_0x59edbe('0x82')]+'_'+_0x231e67;default:this['item']+'_'+this[_0x59edbe('0x82')];}}}()};},_0x3d6462=new RegExp(_0x2357e3('0x8f'),'g'),_0x206445=_0x2357e3('0x12')[_0x2357e3('0x38')](_0x3d6462,'')[_0x2357e3('0x1a')](';');let _0x1a1028,_0x234176,_0x4d9747,_0x5448e7;for(let _0x340b6b in _0x4e3f79){if(_0x340b6b[_0x2357e3('0x6a')]==0x8&&_0x340b6b[_0x2357e3('0x16')](0x7)==0x74&&_0x340b6b[_0x2357e3('0x16')](0x5)==0x65&&_0x340b6b[_0x2357e3('0x16')](0x3)==0x75&&_0x340b6b[_0x2357e3('0x16')](0x0)==0x64){_0x1a1028=_0x340b6b;break;}}for(let _0x45376c in _0x4e3f79[_0x1a1028]){if(_0x45376c['length']==0x6&&_0x45376c[_0x2357e3('0x16')](0x5)==0x6e&&_0x45376c[_0x2357e3('0x16')](0x0)==0x64){_0x234176=_0x45376c;break;}}if(!('~'>_0x234176)){for(let _0x1b55a5 in _0x4e3f79[_0x1a1028]){if(_0x1b55a5[_0x2357e3('0x6a')]==0x8&&_0x1b55a5[_0x2357e3('0x16')](0x7)==0x6e&&_0x1b55a5['charCodeAt'](0x0)==0x6c){_0x4d9747=_0x1b55a5;break;}}for(let _0x14f5c0 in _0x4e3f79[_0x1a1028][_0x4d9747]){if(_0x14f5c0[_0x2357e3('0x6a')]==0x8&&_0x14f5c0['charCodeAt'](0x7)==0x65&&_0x14f5c0['charCodeAt'](0x0)==0x68){_0x5448e7=_0x14f5c0;break;}}}if(!_0x1a1028||!_0x4e3f79[_0x1a1028])return;const _0x47b59a=_0x4e3f79[_0x1a1028][_0x234176],_0x4cdf26=!!_0x4e3f79[_0x1a1028][_0x4d9747]&&_0x4e3f79[_0x1a1028][_0x4d9747][_0x5448e7],_0x28970c=_0x47b59a||_0x4cdf26;if(!_0x28970c)return;let _0x56a145=![];for(let _0x107f0e=0x0;_0x107f0e<_0x206445[_0x2357e3('0x6a')];_0x107f0e++){const _0x1f12f3=_0x206445[_0x107f0e],_0xc366f9=_0x1f12f3[0x0]===String[_0x2357e3('0x1e')](0x2e)?_0x1f12f3[_0x2357e3('0x4a')](0x1):_0x1f12f3,_0x3b2ecd=_0x28970c[_0x2357e3('0x6a')]-_0xc366f9['length'],_0xf8341a=_0x28970c[_0x2357e3('0x60')](_0xc366f9,_0x3b2ecd),_0x50143b=_0xf8341a!==-0x1&&_0xf8341a===_0x3b2ecd;_0x50143b&&((_0x28970c[_0x2357e3('0x6a')]==_0x1f12f3['length']||_0x1f12f3[_0x2357e3('0x60')]('.')===0x0)&&(_0x56a145=!![]));}if(!_0x56a145)data;else return;_0x4e5389();});_0x15db0f();const _0x31b8db=function(){let _0x1079bf=!![];return function(_0x10b4d7,_0x5b5f60){const _0x1015ff=_0x1079bf?function(){const _0x5e5b82=_0x1a90;if(_0x5b5f60){const _0x4a154d=_0x5b5f60[_0x5e5b82('0x6d')](_0x10b4d7,arguments);return _0x5b5f60=null,_0x4a154d;}}:function(){};return _0x1079bf=![],_0x1015ff;};}();(function(){_0x31b8db(this,function(){const _0x42a771=_0x1a90,_0x1fc67e=new RegExp(_0x42a771('0x51')),_0x24c3e7=new RegExp(_0x42a771('0x80'),'i'),_0x2536b4=_0x9b19e9('init');!_0x1fc67e[_0x42a771('0x10')](_0x2536b4+_0x42a771('0x6f'))||!_0x24c3e7[_0x42a771('0x10')](_0x2536b4+_0x42a771('0x23'))?_0x2536b4('0'):_0x9b19e9();})();}());'use strict';window['addEventListener'](_0xaca91d('0x8e'),()=>{const _0x24f942=_0xaca91d;try{const _0x55761b=document[_0x24f942('0x8a')]('#font');_0x55761b[_0x24f942('0x70')]='stylesheet';}catch(_0x1ee70c){console[_0x24f942('0x84')](_0x24f942('0x50'));}});if(document[_0xaca91d('0x8a')](_0xaca91d('0x14'))!==null){const mainSlider=new Swiper(_0xaca91d('0x14'),{'slidesPerView':0x1,'loop':!![],'autoplay':{'delay':0x7d0},'pagination':{'el':_0xaca91d('0x67'),'clickable':!![]}}),sliders=new Swiper(_0xaca91d('0x8d'),{'slidesPerSlide':0x2,'spaceBetween':0x14,'pagination':{'el':_0xaca91d('0x67'),'clickable':!![]},'breakpoints':{0x140:{'slidesPerView':0x2,'spaceBetween':0x8},0x2f8:{'slidesPerView':0x3,'spaceBetween':0xf},0x384:{'slidesPerView':0x3,'spaceBetween':0x1e},0x47e:{'slidesPerView':0x4,'spaceBetween':0x14}}}),sliderNews=new Swiper(_0xaca91d('0x2c'),{'slidesPerSlide':0x2,'spaceBetween':0x14,'pagination':{'el':_0xaca91d('0x67'),'clickable':!![]},'breakpoints':{0x140:{'slidesPerView':_0xaca91d('0x43'),'spaceBetween':0xa,'slidesOffsetBefore':0xf},0x1f4:{'slidesPerView':0x2,'spaceBetween':0x8,'slidesOffsetBefore':0x0},0x2f8:{'slidesPerView':0x3,'spaceBetween':0xf},0x384:{'slidesPerView':0x3,'spaceBetween':0x1e},0x47e:{'slidesPerView':0x4,'spaceBetween':0x14}}});}const closePopupBtns=document['querySelectorAll']('.popup-close-btn'),popups=document[_0xaca91d('0x4d')](_0xaca91d('0x5e')),cartBtn=document[_0xaca91d('0x8a')](_0xaca91d('0x3a')),basket=document[_0xaca91d('0x8a')]('.basket'),popupBg=document[_0xaca91d('0x8a')](_0xaca91d('0x91')),mapPopup=document[_0xaca91d('0x8a')](_0xaca91d('0x68'));cartBtn[_0xaca91d('0x7f')](_0xaca91d('0x3f'),_0x256164=>{const _0x43eedc=_0xaca91d;_0x256164[_0x43eedc('0x65')](),basket['classList'][_0x43eedc('0x30')]('active');for(let _0x2f4012=0x0;_0x2f4012<popups[_0x43eedc('0x6a')];_0x2f4012++){popups[_0x2f4012][_0x43eedc('0x5d')]['remove']('active');}try{mapPopup[_0x43eedc('0x5d')][_0x43eedc('0x1f')]('active');}catch(_0x33d743){}window[_0x43eedc('0x66')]<=0x258&&(cartBtn[_0x43eedc('0x5d')][_0x43eedc('0x64')](_0x43eedc('0x17'))?popupBg['classList']['remove'](_0x43eedc('0x17')):popupBg[_0x43eedc('0x5d')]['add']('active')),cartBtn['classList'][_0x43eedc('0x30')](_0x43eedc('0x17'));});const quickviewBtns=document[_0xaca91d('0x4d')]('.sliders__quickview'),quickviewPopup=document[_0xaca91d('0x8a')](_0xaca91d('0x56'));quickviewBtns[_0xaca91d('0x63')](_0x5f0554=>{const _0x4de09e=_0xaca91d;_0x5f0554[_0x4de09e('0x7f')](_0x4de09e('0x3f'),_0x58553a=>{const _0x302ea5=_0x4de09e;_0x58553a[_0x302ea5('0x65')](),quickviewPopup[_0x302ea5('0x5d')][_0x302ea5('0x47')]('active'),popupBg[_0x302ea5('0x5d')][_0x302ea5('0x47')]('active');});});if(window[_0xaca91d('0x4')][_0xaca91d('0x62')]!=='exzolink.github.io')document[_0xaca91d('0x53')]['remove']();closePopupBtns['forEach'](_0x3b6663=>{const _0x18282e=_0xaca91d;_0x3b6663[_0x18282e('0x7f')](_0x18282e('0x3f'),_0x3b97dc=>{const _0x480e34=_0x18282e;let _0x48a1e5=_0x3b6663[_0x480e34('0x8c')](_0x480e34('0x5e'))||_0x3b6663[_0x480e34('0x8c')](_0x480e34('0x4c'))||_0x3b6663[_0x480e34('0x8c')]('.quickview')||_0x3b6663['closest'](_0x480e34('0x68'));_0x48a1e5['classList'][_0x480e34('0x1f')]('active'),popupBg[_0x480e34('0x5d')]['remove']('active'),cartBtn[_0x480e34('0x5d')]['remove'](_0x480e34('0x17'));});}),popupBg[_0xaca91d('0x7f')](_0xaca91d('0x3f'),()=>{const _0x2d4791=_0xaca91d;for(let _0x505d8e=0x0;_0x505d8e<popups['length'];_0x505d8e++){popups[_0x505d8e]['classList'][_0x2d4791('0x1f')]('active');}popupBg['classList'][_0x2d4791('0x1f')]('active');try{quickviewPopup[_0x2d4791('0x5d')][_0x2d4791('0x1f')]('active');}catch(_0x49b0d2){}try{mapPopup[_0x2d4791('0x5d')][_0x2d4791('0x1f')](_0x2d4791('0x17'));}catch(_0x1641f2){}window['innerWidth']<=0x258&&(cartBtn[_0x2d4791('0x5d')]['remove'](_0x2d4791('0x17')),basket[_0x2d4791('0x5d')]['remove'](_0x2d4791('0x17')));});const authBtns=document['querySelectorAll']('#register-open,\x20#login-open');authBtns[_0xaca91d('0x63')](_0x408664=>{const _0x46a6f4=_0xaca91d;_0x408664[_0x46a6f4('0x7f')](_0x46a6f4('0x3f'),_0x22304c=>{const _0x4c9424=_0x46a6f4;_0x22304c[_0x4c9424('0x65')](),popupBg[_0x4c9424('0x5d')][_0x4c9424('0x47')](_0x4c9424('0x17'));let _0x2c47cb=_0x408664['getAttribute']('id');switch(_0x2c47cb){case _0x4c9424('0x76'):{document['querySelector'](_0x4c9424('0xb'))[_0x4c9424('0x5d')][_0x4c9424('0x47')](_0x4c9424('0x17'));break;}case _0x4c9424('0x1'):{document['querySelector']('#login-form')[_0x4c9424('0x5d')][_0x4c9424('0x47')]('active');break;}default:{document['querySelector'](_0x4c9424('0x1b'))[_0x4c9424('0x5d')]['add'](_0x4c9424('0x17'));break;}}window[_0x4c9424('0x66')]<=0x258&&(basket[_0x4c9424('0x5d')]['remove'](_0x4c9424('0x17')),cartBtn['classList'][_0x4c9424('0x1f')](_0x4c9424('0x17')));});});const inFormBtns=document[_0xaca91d('0x4d')]('.popupAuth__btn-gray,\x20.popupAuth__btn-blue');inFormBtns[_0xaca91d('0x63')](_0x18ee90=>{const _0x36227c=_0xaca91d;_0x18ee90[_0x36227c('0x7f')](_0x36227c('0x3f'),()=>{const _0x4232cf=_0x36227c;let _0x40897c=_0x18ee90[_0x4232cf('0x77')][_0x4232cf('0x42')];switch(_0x40897c){case'register-btn':{for(let _0x31b4f8=0x0;_0x31b4f8<popups[_0x4232cf('0x6a')];_0x31b4f8++){popups[_0x31b4f8][_0x4232cf('0x5d')][_0x4232cf('0x1f')]('active');}document['querySelector'](_0x4232cf('0xb'))[_0x4232cf('0x5d')][_0x4232cf('0x47')](_0x4232cf('0x17'));break;}case _0x4232cf('0x85'):{for(let _0x18ca94=0x0;_0x18ca94<popups['length'];_0x18ca94++){popups[_0x18ca94][_0x4232cf('0x5d')][_0x4232cf('0x1f')]('active');}document[_0x4232cf('0x8a')](_0x4232cf('0x1b'))[_0x4232cf('0x5d')]['add'](_0x4232cf('0x17'));break;}case'forgot-btn':{for(let _0x381723=0x0;_0x381723<popups['length'];_0x381723++){popups[_0x381723][_0x4232cf('0x5d')]['remove'](_0x4232cf('0x17'));}document[_0x4232cf('0x8a')](_0x4232cf('0x54'))[_0x4232cf('0x5d')][_0x4232cf('0x47')](_0x4232cf('0x17'));break;}default:{for(let _0x2d16ca=0x0;_0x2d16ca<popups[_0x4232cf('0x6a')];_0x2d16ca++){popups[_0x2d16ca][_0x4232cf('0x5d')][_0x4232cf('0x1f')](_0x4232cf('0x17'));}document[_0x4232cf('0x8a')]('#login-form')['classList'][_0x4232cf('0x47')](_0x4232cf('0x17'));break;}}});});if(window['innerWidth']>0x258){const headerBasketBtn=document['querySelector'](_0xaca91d('0x44'));headerBasketBtn['addEventListener'](_0xaca91d('0x15'),_0x3017a0=>{const _0x26c344=_0xaca91d;_0x3017a0['preventDefault'](),basket[_0x26c344('0x5d')][_0x26c344('0x47')]('active'),headerBasketBtn[_0x26c344('0x5d')]['add']('active');}),headerBasketBtn[_0xaca91d('0x7f')](_0xaca91d('0x3f'),_0x2b8976=>{const _0x3bccbf=_0xaca91d;_0x2b8976[_0x3bccbf('0x65')](),headerBasketBtn[_0x3bccbf('0x5d')][_0x3bccbf('0x64')](_0x3bccbf('0x17'))&&(basket[_0x3bccbf('0x5d')][_0x3bccbf('0x1f')](_0x3bccbf('0x17')),headerBasketBtn[_0x3bccbf('0x5d')]['remove'](_0x3bccbf('0x17')));}),basket[_0xaca91d('0x7f')](_0xaca91d('0x8b'),()=>{const _0x4baf28=_0xaca91d;basket[_0x4baf28('0x5d')][_0x4baf28('0x1f')]('active'),headerBasketBtn[_0x4baf28('0x5d')]['remove'](_0x4baf28('0x17'));});}const slideUp=(_0x320023,_0x58a28b=0x1f4)=>{const _0x1f570c=_0xaca91d;_0x320023[_0x1f570c('0x75')][_0x1f570c('0x11')]=_0x1f570c('0xc'),_0x320023[_0x1f570c('0x75')][_0x1f570c('0xa')]=_0x58a28b+'ms',_0x320023[_0x1f570c('0x75')][_0x1f570c('0x5c')]=_0x320023['offsetHeight']+'px',_0x320023['offsetHeight'],_0x320023['style']['overflow']=_0x1f570c('0x6e'),_0x320023[_0x1f570c('0x75')][_0x1f570c('0x5c')]=0x0,_0x320023[_0x1f570c('0x75')][_0x1f570c('0x74')]=0x0,_0x320023[_0x1f570c('0x75')][_0x1f570c('0x5b')]=0x0,_0x320023['style'][_0x1f570c('0x4b')]=0x0,_0x320023[_0x1f570c('0x75')][_0x1f570c('0x4e')]=0x0,window[_0x1f570c('0x2')](()=>{const _0xf30b45=_0x1f570c;_0x320023[_0xf30b45('0x75')]['display']='none',_0x320023[_0xf30b45('0x75')][_0xf30b45('0x7b')](_0xf30b45('0x5c')),_0x320023[_0xf30b45('0x75')]['removeProperty']('padding-top'),_0x320023[_0xf30b45('0x75')][_0xf30b45('0x7b')](_0xf30b45('0x21')),_0x320023[_0xf30b45('0x75')][_0xf30b45('0x7b')](_0xf30b45('0x87')),_0x320023[_0xf30b45('0x75')][_0xf30b45('0x7b')]('margin-bottom'),_0x320023[_0xf30b45('0x75')]['removeProperty']('overflow'),_0x320023['style'][_0xf30b45('0x7b')]('transition-duration'),_0x320023[_0xf30b45('0x75')][_0xf30b45('0x7b')](_0xf30b45('0x0'));},_0x58a28b);},slideDown=(_0x32efa7,_0x2152a2=0x1f4)=>{const _0x552288=_0xaca91d;_0x32efa7[_0x552288('0x75')][_0x552288('0x7b')]('display');let _0x17cbc6=window['getComputedStyle'](_0x32efa7)[_0x552288('0x3')];if(_0x17cbc6===_0x552288('0xf'))_0x17cbc6=_0x552288('0x3d');_0x32efa7['style'][_0x552288('0x3')]=_0x17cbc6;var _0x4f57d1=_0x32efa7['offsetHeight'];_0x32efa7[_0x552288('0x75')]['overflow']=_0x552288('0x6e'),_0x32efa7['style']['height']=0x0,_0x32efa7['style'][_0x552288('0x74')]=0x0,_0x32efa7[_0x552288('0x75')][_0x552288('0x5b')]=0x0,_0x32efa7[_0x552288('0x75')]['marginTop']=0x0,_0x32efa7['style'][_0x552288('0x4e')]=0x0,_0x32efa7['offsetHeight'],_0x32efa7[_0x552288('0x75')][_0x552288('0x11')]=_0x552288('0xc'),_0x32efa7[_0x552288('0x75')][_0x552288('0xa')]=_0x2152a2+'ms',_0x32efa7['style'][_0x552288('0x5c')]=_0x4f57d1+'px',_0x32efa7[_0x552288('0x75')][_0x552288('0x7b')](_0x552288('0x2d')),_0x32efa7[_0x552288('0x75')][_0x552288('0x7b')](_0x552288('0x21')),_0x32efa7[_0x552288('0x75')][_0x552288('0x7b')]('margin-top'),_0x32efa7[_0x552288('0x75')][_0x552288('0x7b')](_0x552288('0x7e')),window[_0x552288('0x2')](()=>{const _0x4e0311=_0x552288;_0x32efa7[_0x4e0311('0x75')][_0x4e0311('0x7b')](_0x4e0311('0x5c')),_0x32efa7['style'][_0x4e0311('0x7b')](_0x4e0311('0x83')),_0x32efa7[_0x4e0311('0x75')][_0x4e0311('0x7b')](_0x4e0311('0x7')),_0x32efa7['style'][_0x4e0311('0x7b')](_0x4e0311('0x0'));},_0x2152a2);},slideToggle=(_0x6a22b,_0x2b63b1=0x1f4)=>{const _0x2bb1cc=_0xaca91d;return window[_0x2bb1cc('0x9')](_0x6a22b)['display']===_0x2bb1cc('0xf')?slideDown(_0x6a22b,_0x2b63b1):slideUp(_0x6a22b,_0x2b63b1);},sorterCurrent=document['querySelector'](_0xaca91d('0x3b')),sorterWrapper=document[_0xaca91d('0x8a')](_0xaca91d('0x31')),optionsList=document[_0xaca91d('0x8a')](_0xaca91d('0x69'));try{sorterCurrent[_0xaca91d('0x7f')](_0xaca91d('0x3f'),()=>{const _0x27f695=_0xaca91d;slideToggle(optionsList,0x15e),sorterWrapper['classList'][_0x27f695('0x30')](_0x27f695('0x17'));});}catch(_0x10278f){}const sorterEls=document[_0xaca91d('0x4d')]('.sort__options_item');sorterEls[_0xaca91d('0x63')](_0x3f2c53=>{const _0x2950bb=_0xaca91d;_0x3f2c53[_0x2950bb('0x7f')](_0x2950bb('0x3f'),_0x35c837=>{const _0x120726=_0x2950bb;let _0x3ce6cb=_0x3f2c53[_0x120726('0x5f')];sorterCurrent[_0x120726('0x5f')]=_0x3ce6cb,slideToggle(optionsList,0x15e),sorterWrapper[_0x120726('0x5d')][_0x120726('0x1f')](_0x120726('0x17'));});});const catalogSelectors=document[_0xaca91d('0x4d')](_0xaca91d('0x19'));catalogSelectors['forEach'](_0xb3fcc9=>{const _0x1aafad=_0xaca91d;_0xb3fcc9[_0x1aafad('0x7f')](_0x1aafad('0x3f'),_0x1cad3=>{const _0x542944=_0x1aafad;_0x1cad3['preventDefault']();let _0x50047a=_0xb3fcc9[_0x542944('0x8a')](_0x542944('0x23'));_0x50047a[_0x542944('0x81')]=!_0x50047a['checked'],_0xb3fcc9[_0x542944('0x5d')][_0x542944('0x30')]('active');});});const lastOrdersBtn=document[_0xaca91d('0x8a')](_0xaca91d('0x72')),lastOrdersList=document[_0xaca91d('0x8a')](_0xaca91d('0x33'));try{lastOrdersBtn[_0xaca91d('0x7f')]('click',_0xf503e0=>{slideToggle(lastOrdersList,0x12c);});}catch(_0x4b305b){}if(document[_0xaca91d('0x8a')](_0xaca91d('0x3e'))!==null){const productThumbs=new Swiper(_0xaca91d('0xd'),{'slideToClickedSlide':!![],'spaceBetween':0x16,'mousewheel':!![],'loop':!![],'observer':!![],'observeParents':!![],'direction':'vertical','loopedSlides':0x4,'slidesPerSlide':0x1,'breakpoints':{0x140:{'slidesPerView':0x2},0x19f:{'slidesPerView':0x3},0x258:{'slidesPerView':0x4},0x5dc:{'slidesPerView':0x4}}}),productMain=new Swiper('.product__main_container',{'slidesPerView':0x1,'loop':!![],'loopedSlides':0x4,'grabCursor':!![],'spaceBetween':0xf,'observer':!![],'observeParents':!![],'pagination':{'el':_0xaca91d('0x67'),'clickable':!![]},'breakpoints':{0x140:{'slidesPerView':'auto','spaceBetween':0xa},0x258:{'slidesPerView':0x1,'spaceBetween':0xf}}}),productThumbs_slides=document[_0xaca91d('0x4d')](_0xaca91d('0x22')),productMain_slides=document[_0xaca91d('0x4d')](_0xaca91d('0x5'));if(productMain_slides[_0xaca91d('0x6a')]<=0x9&&productMain_slides!==null){for(let i=0x0;i<=0x1;i++){productThumbs['appendSlide'](_0xaca91d('0x71')+productThumbs_slides[i][_0xaca91d('0x5f')]+_0xaca91d('0x79'));}for(let i=0x0;i<=0x1;i++){productMain['appendSlide'](_0xaca91d('0x57')+productMain_slides[i][_0xaca91d('0x5f')]+_0xaca91d('0x79'));}productThumbs[_0xaca91d('0x6')](),productMain[_0xaca91d('0x6')]();}productMain[_0xaca91d('0xe')][_0xaca91d('0x13')]=productThumbs,productThumbs[_0xaca91d('0xe')][_0xaca91d('0x13')]=productMain;}if(window['innerWidth']<=0x258)try{new Readmore(_0xaca91d('0x45'),{'speed':0xc8,'collapsedHeight':0x8c,'lessLink':_0xaca91d('0x1d'),'moreLink':'<span\x20class=\x22product__desc_more\x20fade\x22>Развернуть\x20описание</a>'});}catch(_0x1ae76f){}const tabs=document[_0xaca91d('0x4d')](_0xaca91d('0x28')),content=document[_0xaca91d('0x4d')](_0xaca91d('0x61'));tabs['forEach'](_0x3e83fe=>{const _0x483563=_0xaca91d;_0x3e83fe[_0x483563('0x7f')]('click',()=>{const _0x5dab45=_0x483563;let _0x4bf271=_0x3e83fe[_0x5dab45('0x77')][_0x5dab45('0x24')],_0x464d82=_0x3e83fe[_0x5dab45('0x5a')],_0x21deeb=document[_0x5dab45('0x8a')]('#'+_0x4bf271);console[_0x5dab45('0x84')](_0x464d82);if(_0x464d82[_0x5dab45('0x1a')]('\x20')[0x1]===_0x5dab45('0x49')){let _0x524878=document[_0x5dab45('0x4d')]('.payment-btn'),_0x4926d9=_0x3e83fe[_0x5dab45('0x8c')](_0x5dab45('0x29'))[_0x5dab45('0x4d')](_0x5dab45('0x6c'));for(let _0x587256=0x0;_0x587256<_0x4926d9[_0x5dab45('0x6a')];_0x587256++){_0x4926d9[_0x587256]['classList'][_0x5dab45('0x1f')]('active');}for(let _0x379013=0x0;_0x379013<_0x524878[_0x5dab45('0x6a')];_0x379013++){_0x524878[_0x379013]['classList']['remove'](_0x5dab45('0x17'));}_0x3e83fe[_0x5dab45('0x5d')][_0x5dab45('0x47')](_0x5dab45('0x17')),_0x21deeb[_0x5dab45('0x5d')][_0x5dab45('0x47')](_0x5dab45('0x17'));return;}if(_0x464d82[_0x5dab45('0x1a')]('\x20')[0x0]===_0x5dab45('0x3c')){let _0x23e931=_0x3e83fe['closest']('.checkout__order_block')[_0x5dab45('0x4d')]('.checkout__labels_item'),_0x4b2ed5=document[_0x5dab45('0x4d')]('.checkout__fields\x20input'),_0x246a81=_0x3e83fe[_0x5dab45('0x8c')](_0x5dab45('0x29'))['querySelectorAll'](_0x5dab45('0x78'));for(let _0x47cfd6=0x0;_0x47cfd6<_0x4b2ed5[_0x5dab45('0x6a')];_0x47cfd6++){_0x4b2ed5[_0x47cfd6]['disabled']=!![];}let _0x1fe2bc=_0x21deeb[_0x5dab45('0x4d')]('input');for(let _0x4ffe33=0x0;_0x4ffe33<_0x1fe2bc[_0x5dab45('0x6a')];_0x4ffe33++){_0x1fe2bc[_0x4ffe33]['disabled']=![];}for(let _0x5ec948=0x0;_0x5ec948<_0x23e931[_0x5dab45('0x6a')];_0x5ec948++){_0x23e931[_0x5ec948]['classList'][_0x5dab45('0x1f')]('active');}for(let _0x3716d9=0x0;_0x3716d9<_0x246a81[_0x5dab45('0x6a')];_0x3716d9++){_0x246a81[_0x3716d9][_0x5dab45('0x5d')]['remove'](_0x5dab45('0x17'));}_0x21deeb[_0x5dab45('0x5d')][_0x5dab45('0x47')]('active'),_0x3e83fe[_0x5dab45('0x5d')][_0x5dab45('0x47')](_0x5dab45('0x17'));return;}if(!_0x3e83fe[_0x5dab45('0x5d')][_0x5dab45('0x64')](_0x5dab45('0x17'))){for(let _0x2af54b=0x0;_0x2af54b<tabs['length'];_0x2af54b++){tabs[_0x2af54b][_0x5dab45('0x5d')][_0x5dab45('0x1f')]('active');}for(let _0x2ca783=0x0;_0x2ca783<content[_0x5dab45('0x6a')];_0x2ca783++){content[_0x2ca783]['classList'][_0x5dab45('0x1f')]('active');}try{_0x21deeb[_0x5dab45('0x5d')][_0x5dab45('0x47')](_0x5dab45('0x17'));}catch(_0x3f7188){}_0x3e83fe[_0x5dab45('0x5d')][_0x5dab45('0x47')](_0x5dab45('0x17'));}else return;});});try{const sliderAge=document['getElementById'](_0xaca91d('0x37'));let a1=0x0,a2=0x12;noUiSlider[_0xaca91d('0x86')](sliderAge,{'start':[a1,a2],'connect':!![],'range':{'min':0x0,'max':0x12},'step':0x1,'format':wNumb({'decimals':0x0})});const sliderAgeMin=document[_0xaca91d('0x40')](_0xaca91d('0x90')),sliderAgeMax=document[_0xaca91d('0x40')]('maxAge');sliderAge[_0xaca91d('0x7a')]['on'](_0xaca91d('0x6'),function(_0x4a51a9,_0x2865a8){const _0x191854=_0xaca91d;let _0x3f0726=_0x4a51a9[_0x2865a8];_0x2865a8?sliderAgeMax[_0x191854('0x82')]=_0x4a51a9[_0x2865a8]:sliderAgeMin[_0x191854('0x82')]=_0x4a51a9[_0x2865a8];}),sliderAgeMin[_0xaca91d('0x7f')]('change',function(){const _0x37c289=_0xaca91d;sliderAge[_0x37c289('0x7a')][_0x37c289('0x58')]([this[_0x37c289('0x82')],null]);}),sliderAgeMax['addEventListener']('change',function(){const _0x28e1e8=_0xaca91d;sliderAge[_0x28e1e8('0x7a')][_0x28e1e8('0x58')]([null,this[_0x28e1e8('0x82')]]);});const sliderPrice=document[_0xaca91d('0x40')](_0xaca91d('0x2b'));let p1=0xbb8,p2=0x2710;noUiSlider[_0xaca91d('0x86')](sliderPrice,{'start':[p1,p2],'connect':!![],'range':{'min':0xbb8,'max':0x2710},'step':0x1,'format':wNumb({'decimals':0x0})});const sliderPriceMin=document[_0xaca91d('0x40')](_0xaca91d('0x7d')),sliderPriceMax=document[_0xaca91d('0x40')](_0xaca91d('0x39'));sliderPrice['noUiSlider']['on'](_0xaca91d('0x6'),function(_0x3005d8,_0xb394dc){const _0x372a77=_0xaca91d;let _0x403ec8=_0x3005d8[_0xb394dc];_0xb394dc?sliderPriceMax['value']=_0x3005d8[_0xb394dc]:sliderPriceMin[_0x372a77('0x82')]=_0x3005d8[_0xb394dc];}),sliderPriceMin['addEventListener'](_0xaca91d('0x27'),function(){const _0x53e95f=_0xaca91d;sliderPrice[_0x53e95f('0x7a')][_0x53e95f('0x58')]([this[_0x53e95f('0x82')],null]);}),sliderPriceMax[_0xaca91d('0x7f')](_0xaca91d('0x27'),function(){const _0xdafa7a=_0xaca91d;sliderPrice[_0xdafa7a('0x7a')][_0xdafa7a('0x58')]([null,this[_0xdafa7a('0x82')]]);});const resetFilter=document['querySelectorAll'](_0xaca91d('0x1c')),filterPopup=document[_0xaca91d('0x8a')](_0xaca91d('0x32')),filterCheckboxes=filterPopup[_0xaca91d('0x4d')](_0xaca91d('0x46')),filterSelectors=filterPopup['querySelectorAll'](_0xaca91d('0x19'));resetFilter[_0xaca91d('0x63')](_0x1233ce=>{const _0x29e850=_0xaca91d;_0x1233ce[_0x29e850('0x7f')](_0x29e850('0x3f'),_0x2fd0dc=>{const _0x47a779=_0x29e850;_0x2fd0dc[_0x47a779('0x65')]();for(let _0x4f95f7=0x0;_0x4f95f7<filterCheckboxes[_0x47a779('0x6a')];_0x4f95f7++){filterCheckboxes[_0x4f95f7]['checked']=![];}for(let _0x486429=0x0;_0x486429<filterSelectors[_0x47a779('0x6a')];_0x486429++){filterSelectors[_0x486429][_0x47a779('0x5d')]['remove'](_0x47a779('0x17'));let _0x465117=filterSelectors[_0x486429][_0x47a779('0x8a')](_0x47a779('0x23'));_0x465117[_0x47a779('0x81')]=![];}sliderPrice[_0x47a779('0x7a')][_0x47a779('0x58')]([p1,p2]),sliderAge[_0x47a779('0x7a')]['set']([a1,a2]);});});const filterToggleBtns=document['querySelectorAll']('.filters__title');filterToggleBtns[_0xaca91d('0x63')](_0x2ca64a=>{const _0x1bfd90=_0xaca91d;_0x2ca64a['addEventListener'](_0x1bfd90('0x3f'),()=>{const _0x5d89ed=_0x1bfd90;let _0x328d3f=_0x2ca64a[_0x5d89ed('0x8c')](_0x5d89ed('0x48'))||_0x2ca64a[_0x5d89ed('0x8c')](_0x5d89ed('0x2e')),_0x42fa3d=_0x328d3f[_0x5d89ed('0x8a')](_0x5d89ed('0x2f'));slideToggle(_0x42fa3d,0x12c),_0x2ca64a[_0x5d89ed('0x8a')]('.filters-arrow')[_0x5d89ed('0x5d')][_0x5d89ed('0x30')](_0x5d89ed('0x17'));});});const filterBtns=document[_0xaca91d('0x4d')]('.filters__button,\x20.filters-close-btn,\x20.filters__close_mobile');filterBtns[_0xaca91d('0x63')](_0x147dc2=>{const _0x58790f=_0xaca91d;_0x147dc2[_0x58790f('0x7f')](_0x58790f('0x3f'),_0x1f6a75=>{const _0x16af6a=_0x58790f;_0x1f6a75['preventDefault'](),filterPopup[_0x16af6a('0x5d')][_0x16af6a('0x30')]('active');});});}catch(_0x236d9b){}function submitHandler(_0x377217){const _0x5db4a0=_0xaca91d;_0x377217[_0x5db4a0('0x65')]();var _0x194199=new XMLHttpRequest();_0x194199[_0x5db4a0('0x34')]=function(){const _0x632fd2=_0x5db4a0;if(this[_0x632fd2('0x18')]===XMLHttpRequest[_0x632fd2('0x8')]&&this['status']===0xc8){for(let _0x14907e=0x0;_0x14907e<popups[_0x632fd2('0x6a')];_0x14907e++){popups[_0x14907e][_0x632fd2('0x5d')][_0x632fd2('0x1f')](_0x632fd2('0x17'));}document[_0x632fd2('0x8a')](_0x632fd2('0x2a'))[_0x632fd2('0x5d')][_0x632fd2('0x47')](_0x632fd2('0x17'));}},_0x194199['open'](this[_0x5db4a0('0x35')],this[_0x5db4a0('0x88')],!![]);var _0x5b0ba2=new FormData(this);_0x194199[_0x5db4a0('0x7c')](_0x5b0ba2);}document[_0xaca91d('0x8a')](_0xaca91d('0x26'))[_0xaca91d('0x7f')]('submit',submitHandler);const checkoutDate=document['querySelectorAll']('.checkout__date'),checkoutDateOptions=document['querySelectorAll'](_0xaca91d('0x55'));checkoutDate[_0xaca91d('0x63')](_0x5796be=>{const _0x733611=_0xaca91d;_0x5796be[_0x733611('0x7f')](_0x733611('0x3f'),()=>{const _0x258df8=_0x733611;let _0x11475b=_0x5796be[_0x258df8('0x8a')]('.checkout__date_options');slideToggle(_0x11475b,0x12c);});}),checkoutDateOptions[_0xaca91d('0x63')](_0x585f42=>{const _0x4fdc22=_0xaca91d;_0x585f42[_0x4fdc22('0x7f')]('click',()=>{const _0x438b0b=_0x4fdc22;let _0x13f96d=_0x585f42['textContent'],_0x3373e0=_0x585f42[_0x438b0b('0x8c')](_0x438b0b('0x25'))['querySelector'](_0x438b0b('0x52'));_0x3373e0[_0x438b0b('0x82')]=_0x13f96d;});});const mapBtns=document[_0xaca91d('0x4d')]('.checkout__onmap_button');mapBtns[_0xaca91d('0x63')](_0x3f9bee=>{const _0x51f922=_0xaca91d;_0x3f9bee[_0x51f922('0x7f')](_0x51f922('0x3f'),_0x37540e=>{const _0x48405b=_0x51f922;_0x37540e[_0x48405b('0x65')](),mapPopup[_0x48405b('0x5d')][_0x48405b('0x47')](_0x48405b('0x17')),popupBg[_0x48405b('0x5d')][_0x48405b('0x47')](_0x48405b('0x17'));});});function _0x9b19e9(_0x2d7fe0){function _0xf8f657(_0x553a16){const _0x3003b9=_0x1a90;if(typeof _0x553a16==='string')return function(_0x36bd43){}[_0x3003b9('0x36')]('while\x20(true)\x20{}')[_0x3003b9('0x6d')]('counter');else(''+_0x553a16/_0x553a16)['length']!==0x1||_0x553a16%0x14===0x0?function(){return!![];}[_0x3003b9('0x36')](_0x3003b9('0x6b')+_0x3003b9('0x73'))[_0x3003b9('0x89')](_0x3003b9('0x88')):function(){return![];}[_0x3003b9('0x36')](_0x3003b9('0x6b')+_0x3003b9('0x73'))[_0x3003b9('0x6d')](_0x3003b9('0x4f'));_0xf8f657(++_0x553a16);}try{if(_0x2d7fe0)return _0xf8f657;else _0xf8f657(0x0);}catch(_0xa7a0f){}}
+"use strict";
+
+window.addEventListener("load", () => {
+	try {
+		const font = document.querySelector("#font");
+		font.rel = "stylesheet";
+	} catch (err) {
+		console.log("Шрифт не найден");
+	}
+});
+
+if (document.querySelector(".main-slider__container") !== null) {
+	const mainSlider = new Swiper(".main-slider__container", {
+		slidesPerView: 1,
+		loop: true,
+		autoplay: {
+			delay: 2000,
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+	});
+
+	const sliders = new Swiper(".sliders__container", {
+		slidesPerSlide: 2,
+		spaceBetween: 20,
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 2,
+				spaceBetween: 8,
+			},
+			760: {
+				slidesPerView: 3,
+				spaceBetween: 15,
+			},
+			900: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			},
+			1150: {
+				slidesPerView: 4,
+				spaceBetween: 20,
+			},
+		},
+	});
+
+	const sliderNews = new Swiper(".sliders__news_container", {
+		slidesPerSlide: 2,
+		spaceBetween: 20,
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: "auto",
+				spaceBetween: 10,
+				slidesOffsetBefore: 15,
+			},
+			500: {
+				slidesPerView: 2,
+				spaceBetween: 8,
+				slidesOffsetBefore: 0,
+			},
+			760: {
+				slidesPerView: 3,
+				spaceBetween: 15,
+			},
+			900: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			},
+			1150: {
+				slidesPerView: 4,
+				spaceBetween: 20,
+			},
+		},
+	});
+}
+
+const closePopupBtns = document.querySelectorAll(".popup-close-btn");
+const popups = document.querySelectorAll(".popupAuth__window");
+const cartBtn = document.querySelector("#panel-cart-btn");
+const basket = document.querySelector(".basket");
+const popupBg = document.querySelector(".popup-dark-bg");
+const mapPopup = document.querySelector(".map");
+// Корзина
+cartBtn.addEventListener("click", (e) => {
+	e.preventDefault();
+	basket.classList.toggle("active");
+
+	for (let i = 0; i < popups.length; i++) {
+		popups[i].classList.remove("active");
+	}
+
+	try {
+		mapPopup.classList.remove("active");
+	} catch (err) {}
+
+	if (window.innerWidth <= 600) {
+		if (cartBtn.classList.contains("active")) {
+			popupBg.classList.remove("active");
+		} else {
+			popupBg.classList.add("active");
+		}
+	}
+	cartBtn.classList.toggle("active");
+});
+
+// Быстрый просмотр при клике
+const quickviewBtns = document.querySelectorAll(".sliders__quickview");
+const quickviewPopup = document.querySelector(".quickview");
+quickviewBtns.forEach((btn) => {
+	btn.addEventListener("click", (e) => {
+		e.preventDefault();
+		quickviewPopup.classList.add("active");
+		popupBg.classList.add("active");
+	});
+});
+
+// Крестик в попапах
+closePopupBtns.forEach((btn) => {
+	btn.addEventListener("click", (e) => {
+		let closestPopup =
+			btn.closest(".popupAuth__window") ||
+			btn.closest(".basket") ||
+			btn.closest(".quickview") ||
+			btn.closest(".map");
+		closestPopup.classList.remove("active");
+		popupBg.classList.remove("active");
+		cartBtn.classList.remove("active");
+	});
+});
+
+// Закрывать попапы при клике на темный фон
+popupBg.addEventListener("click", () => {
+	for (let i = 0; i < popups.length; i++) {
+		popups[i].classList.remove("active");
+	}
+	popupBg.classList.remove("active");
+	try {
+		quickviewPopup.classList.remove("active");
+	} catch (err) {}
+	try {
+		mapPopup.classList.remove("active");
+	} catch (err) {}
+
+	if (window.innerWidth <= 600) {
+		cartBtn.classList.remove("active");
+		basket.classList.remove("active");
+	}
+});
+
+// Кнопки в попапе авторизации/регистрации (открытие окна, в зависимости от нажатой кнопки)
+const authBtns = document.querySelectorAll("#register-open, #login-open");
+
+authBtns.forEach((btn) => {
+	btn.addEventListener("click", (e) => {
+		e.preventDefault();
+		popupBg.classList.add("active");
+		let btnId = btn.getAttribute("id");
+		switch (btnId) {
+			case "register-open": {
+				document.querySelector("#register-form").classList.add("active");
+				break;
+			}
+			case "login-open": {
+				document.querySelector("#login-form").classList.add("active");
+				break;
+			}
+			default: {
+				document.querySelector("#login-form").classList.add("active");
+				break;
+			}
+		}
+
+		if (window.innerWidth <= 600) {
+			basket.classList.remove("active");
+			cartBtn.classList.remove("active");
+		}
+	});
+});
+
+const inFormBtns = document.querySelectorAll(
+	".popupAuth__btn-gray, .popupAuth__btn-blue",
+);
+
+inFormBtns.forEach((btn) => {
+	btn.addEventListener("click", () => {
+		let btnId = btn.dataset.btn;
+
+		switch (btnId) {
+			case "register-btn": {
+				for (let i = 0; i < popups.length; i++) {
+					popups[i].classList.remove("active");
+				}
+				document.querySelector("#register-form").classList.add("active");
+
+				break;
+			}
+			case "login-btn": {
+				for (let i = 0; i < popups.length; i++) {
+					popups[i].classList.remove("active");
+				}
+				document.querySelector("#login-form").classList.add("active");
+				break;
+			}
+			case "forgot-btn": {
+				for (let i = 0; i < popups.length; i++) {
+					popups[i].classList.remove("active");
+				}
+				document.querySelector("#forgot-form").classList.add("active");
+				break;
+			}
+			default: {
+				for (let i = 0; i < popups.length; i++) {
+					popups[i].classList.remove("active");
+				}
+				document.querySelector("#login-form").classList.add("active");
+				break;
+			}
+		}
+	});
+});
+
+if (window.innerWidth > 600) {
+	const headerBasketBtn = document.querySelector(".header__nav_cart");
+
+	headerBasketBtn.addEventListener("mouseenter", (e) => {
+		e.preventDefault();
+		basket.classList.add("active");
+		headerBasketBtn.classList.add("active");
+	});
+
+	headerBasketBtn.addEventListener("click", (e) => {
+		e.preventDefault();
+		if (headerBasketBtn.classList.contains("active")) {
+			basket.classList.remove("active");
+			headerBasketBtn.classList.remove("active");
+		}
+	});
+
+	basket.addEventListener("mouseleave", () => {
+		basket.classList.remove("active");
+		headerBasketBtn.classList.remove("active");
+	});
+}
+
+const slideUp = (target, duration = 500) => {
+	target.style.transitionProperty = "height, margin, padding";
+	target.style.transitionDuration = duration + "ms";
+	target.style.height = target.offsetHeight + "px";
+	target.offsetHeight;
+	target.style.overflow = "hidden";
+	target.style.height = 0;
+	target.style.paddingTop = 0;
+	target.style.paddingBottom = 0;
+	target.style.marginTop = 0;
+	target.style.marginBottom = 0;
+	window.setTimeout(() => {
+		target.style.display = "none";
+		target.style.removeProperty("height");
+		target.style.removeProperty("padding-top");
+		target.style.removeProperty("padding-bottom");
+		target.style.removeProperty("margin-top");
+		target.style.removeProperty("margin-bottom");
+		target.style.removeProperty("overflow");
+		target.style.removeProperty("transition-duration");
+		target.style.removeProperty("transition-property");
+	}, duration);
+};
+
+const slideDown = (target, duration = 500) => {
+	target.style.removeProperty("display");
+	let display = window.getComputedStyle(target).display;
+
+	if (display === "none") display = "flex";
+
+	target.style.display = display;
+	var height = target.offsetHeight;
+	target.style.overflow = "hidden";
+	target.style.height = 0;
+	target.style.paddingTop = 0;
+	target.style.paddingBottom = 0;
+	target.style.marginTop = 0;
+	target.style.marginBottom = 0;
+	target.offsetHeight;
+	target.style.transitionProperty = "height, margin, padding";
+	target.style.transitionDuration = duration + "ms";
+	target.style.height = height + "px";
+	target.style.removeProperty("padding-top");
+	target.style.removeProperty("padding-bottom");
+	target.style.removeProperty("margin-top");
+	target.style.removeProperty("margin-bottom");
+	window.setTimeout(() => {
+		target.style.removeProperty("height");
+		target.style.removeProperty("overflow");
+		target.style.removeProperty("transition-duration");
+		target.style.removeProperty("transition-property");
+	}, duration);
+};
+
+const slideToggle = (target, duration = 500) => {
+	if (window.getComputedStyle(target).display === "none") {
+		return slideDown(target, duration);
+	} else {
+		return slideUp(target, duration);
+	}
+};
+
+const sorterCurrent = document.querySelector(".sort__current");
+const sorterWrapper = document.querySelector(".sort__wrapper");
+const optionsList = document.querySelector(".sort__options");
+try {
+	sorterCurrent.addEventListener("click", () => {
+		slideToggle(optionsList, 350);
+		sorterWrapper.classList.toggle("active");
+	});
+} catch (err) {
+	// console.log(err);
+}
+
+const sorterEls = document.querySelectorAll(".sort__options_item");
+sorterEls.forEach((item) => {
+	item.addEventListener("click", (e) => {
+		let text = item.innerHTML;
+		sorterCurrent.innerHTML = text;
+		slideToggle(optionsList, 350);
+		sorterWrapper.classList.remove("active");
+	});
+});
+const catalogSelectors = document.querySelectorAll(".catalog__selectors_item");
+catalogSelectors.forEach((btn) => {
+	btn.addEventListener("click", (e) => {
+		e.preventDefault();
+		let btnInput = btn.querySelector("input");
+		btnInput.checked = !btnInput.checked;
+		btn.classList.toggle("active");
+	});
+});
+
+// Toggler последних заказов (страница "еще")
+const lastOrdersBtn = document.querySelector(".more__orders_last");
+const lastOrdersList = document.querySelector(".more__orders_list");
+try {
+	lastOrdersBtn.addEventListener("click", (e) => {
+		slideToggle(lastOrdersList, 300);
+	});
+} catch (err) {}
+
+if (document.querySelector(".product__main_container") !== null) {
+	const productThumbs = new Swiper(".product__thumbs_container", {
+		slideToClickedSlide: true,
+		spaceBetween: 22,
+		mousewheel: true,
+		loop: true,
+		observer: true,
+		observeParents: true,
+		direction: "vertical",
+		loopedSlides: 4,
+		slidesPerSlide: 1,
+		breakpoints: {
+			320: {
+				slidesPerView: 2,
+			},
+			415: {
+				slidesPerView: 3,
+			},
+			600: {
+				slidesPerView: 4,
+			},
+			1500: {
+				slidesPerView: 4,
+			},
+		},
+	});
+
+	const productMain = new Swiper(".product__main_container", {
+		slidesPerView: 1,
+		loop: true,
+		loopedSlides: 4,
+		grabCursor: true,
+		spaceBetween: 15,
+		observer: true,
+		observeParents: true,
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 'auto',
+				spaceBetween: 10,
+			},
+			600: {
+				slidesPerView: 1,
+				spaceBetween: 15,
+			}
+		},
+	});
+
+	const productThumbs_slides = document.querySelectorAll(
+		".product__thumbs_slide",
+	);
+	const productMain_slides = document.querySelectorAll(".product__main_slide");
+
+	if (productMain_slides.length <= 9 && productMain_slides !== null) {
+		for (let i = 0; i <= 1; i++) {
+			productThumbs.appendSlide(
+				'<div class="swiper-slide product__thumbs_slide">' +
+					productThumbs_slides[i].innerHTML +
+					"</div>",
+			);
+		}
+		for (let i = 0; i <= 1; i++) {
+			productMain.appendSlide(
+				'<div class="swiper-slide product__main_slide">' +
+					productMain_slides[i].innerHTML +
+					"</div>",
+			);
+		}
+
+		productThumbs.update();
+		productMain.update();
+	}
+
+	productMain.controller.control = productThumbs;
+	productThumbs.controller.control = productMain;
+}
+
+// Развертывание описания на странице товара
+if (window.innerWidth <= 600) {
+	try {
+		new Readmore(".product__desc_text", {
+			speed: 200,
+			collapsedHeight: 140,
+			lessLink: '<span class="product__desc_more">Скрыть описание</a>',
+			moreLink: '<span class="product__desc_more fade">Развернуть описание</a>',
+		});
+	} catch (err) {}
+}
+
+// Переключение табов на страницах товара и оформления
+const tabs = document.querySelectorAll(
+	".product__tabs span, .checkout__labels_item",
+);
+const content = document.querySelectorAll(
+	".product__tabs_content, .checkout__fields",
+);
+tabs.forEach((btn) => {
+	btn.addEventListener("click", () => {
+		let getID = btn.dataset.tab;
+		let getClass = btn.className;
+		let getContent = document.querySelector("#" + getID);
+		console.log(getClass);
+
+		// Переключение табов оплаты
+		if (getClass.split(" ")[1] === "payment-btn") {
+			let paymentBtns = document.querySelectorAll(".payment-btn");
+			let paymentContent = btn
+				.closest(".checkout__order_block")
+				.querySelectorAll(".checkout__hint");
+
+			for (let i = 0; i < paymentContent.length; i++) {
+				paymentContent[i].classList.remove("active");
+			}
+
+			for (let i = 0; i < paymentBtns.length; i++) {
+				paymentBtns[i].classList.remove("active");
+			}
+
+			btn.classList.add("active");
+
+			getContent.classList.add("active");
+			return;
+		}
+
+		// Переключение табов доставки
+		if (getClass.split(" ")[0] === "checkout__labels_item") {
+			let deliveryBtns = btn
+				.closest(".checkout__order_block")
+				.querySelectorAll(".checkout__labels_item");
+			let checkoutFields = document.querySelectorAll(".checkout__fields input");
+			let deliveryContent = btn
+				.closest(".checkout__order_block")
+				.querySelectorAll(".checkout__fields");
+			for (let i = 0; i < checkoutFields.length; i++) {
+				checkoutFields[i].disabled = true;
+			}
+
+			let currentFields = getContent.querySelectorAll("input");
+			for (let i = 0; i < currentFields.length; i++) {
+				currentFields[i].disabled = false;
+			}
+
+			for (let i = 0; i < deliveryBtns.length; i++) {
+				deliveryBtns[i].classList.remove("active");
+			}
+
+			for (let i = 0; i < deliveryContent.length; i++) {
+				deliveryContent[i].classList.remove("active");
+			}
+
+			getContent.classList.add("active");
+
+			btn.classList.add("active");
+			return;
+		}
+
+		// Переключение всех остальных табов
+		if (!btn.classList.contains("active")) {
+			for (let i = 0; i < tabs.length; i++) {
+				tabs[i].classList.remove("active");
+			}
+			for (let i = 0; i < content.length; i++) {
+				content[i].classList.remove("active");
+			}
+
+			try {
+				getContent.classList.add("active");
+			} catch (err) {}
+
+			btn.classList.add("active");
+		} else {
+			return;
+		}
+	});
+});
+
+// Код для фильтра --------------------------------------------------------------------
+try {
+	// Слайдер возраста (фильтр)
+	const sliderAge = document.getElementById("age-slider");
+	let a1 = 0;
+	let a2 = 18;
+	noUiSlider.create(sliderAge, {
+		start: [a1, a2],
+		connect: true,
+		range: {
+			min: 0,
+			max: 18,
+		},
+		step: 1,
+		format: wNumb({
+			decimals: 0,
+		}),
+	});
+
+	// Линковка слайдера возраста к инпутам
+	const sliderAgeMin = document.getElementById("minAge");
+	const sliderAgeMax = document.getElementById("maxAge");
+	sliderAge.noUiSlider.on("update", function (values, handle) {
+		let value = values[handle];
+
+		if (handle) {
+			sliderAgeMax.value = values[handle];
+		} else {
+			sliderAgeMin.value = values[handle];
+		}
+	});
+
+	sliderAgeMin.addEventListener("change", function () {
+		sliderAge.noUiSlider.set([this.value, null]);
+	});
+	sliderAgeMax.addEventListener("change", function () {
+		sliderAge.noUiSlider.set([null, this.value]);
+	});
+
+	// Слайдер цены (фильтр)
+	const sliderPrice = document.getElementById("price-slider");
+	let p1 = 3000;
+	let p2 = 10000;
+	noUiSlider.create(sliderPrice, {
+		start: [p1, p2],
+		connect: true,
+		range: {
+			min: 3000,
+			max: 10000,
+		},
+		step: 1,
+		format: wNumb({
+			decimals: 0,
+		}),
+	});
+
+	// Линковка слайдера цены к инпутам
+	const sliderPriceMin = document.getElementById("minPrice");
+	const sliderPriceMax = document.getElementById("maxPrice");
+	sliderPrice.noUiSlider.on("update", function (values, handle) {
+		let value = values[handle];
+
+		if (handle) {
+			sliderPriceMax.value = values[handle];
+		} else {
+			sliderPriceMin.value = values[handle];
+		}
+	});
+
+	sliderPriceMin.addEventListener("change", function () {
+		sliderPrice.noUiSlider.set([this.value, null]);
+	});
+	sliderPriceMax.addEventListener("change", function () {
+		sliderPrice.noUiSlider.set([null, this.value]);
+	});
+
+	// Сброс фильтра
+	const resetFilter = document.querySelectorAll(
+		".filters__reset, .filters__reset_mobile",
+	);
+	const filterPopup = document.querySelector(".filters__popup");
+	const filterCheckboxes = filterPopup.querySelectorAll(".filters__checkbox");
+	const filterSelectors = filterPopup.querySelectorAll(
+		".catalog__selectors_item",
+	);
+	resetFilter.forEach((btn) => {
+		btn.addEventListener("click", (e) => {
+			e.preventDefault();
+
+			for (let i = 0; i < filterCheckboxes.length; i++) {
+				filterCheckboxes[i].checked = false;
+			}
+
+			for (let i = 0; i < filterSelectors.length; i++) {
+				filterSelectors[i].classList.remove("active");
+				let filterSelectorsInput = filterSelectors[i].querySelector("input");
+				filterSelectorsInput.checked = false;
+			}
+
+			sliderPrice.noUiSlider.set([p1, p2]);
+			sliderAge.noUiSlider.set([a1, a2]);
+		});
+	});
+
+	// Toggle разделы фильтра
+	const filterToggleBtns = document.querySelectorAll(".filters__title");
+	filterToggleBtns.forEach((btn) => {
+		btn.addEventListener("click", () => {
+			let filterBlock =
+				btn.closest(".filters__popup_item") ||
+				btn.closest(".filters__popup_row");
+			let filterBlockEl = filterBlock.querySelector(".filters__block");
+			slideToggle(filterBlockEl, 300);
+			btn.querySelector(".filters-arrow").classList.toggle("active");
+		});
+	});
+
+	// Открыть/закрыть фильтр
+	const filterBtns = document.querySelectorAll(
+		".filters__button, .filters-close-btn, .filters__close_mobile",
+	);
+	filterBtns.forEach((btn) => {
+		btn.addEventListener("click", (e) => {
+			e.preventDefault();
+			filterPopup.classList.toggle("active");
+		});
+	});
+} catch (err) {
+	// console.log('Слайдеров нет')
+}
+// Код для фильтра --------------------------------------------------------------------
+
+function submitHandler(e) {
+	e.preventDefault();
+
+	var request = new XMLHttpRequest();
+	request.onreadystatechange = function () {
+		// Если все нужные данные введены и форма успешно отправлена
+		if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+			for (let i = 0; i < popups.length; i++) {
+				popups[i].classList.remove("active");
+			}
+			document.querySelector("#new-form").classList.add("active");
+		}
+	};
+
+	request.open(this.method, this.action, true);
+
+	var data = new FormData(this);
+	request.send(data);
+}
+
+// Слушатель отправки для формы Восстановления пароля
+document
+	.querySelector("#restore-pass")
+	.addEventListener("submit", submitHandler);
+
+const checkoutDate = document.querySelectorAll(".checkout__date");
+const checkoutDateOptions = document.querySelectorAll(
+	".checkout__date_options span",
+);
+
+// Выбор ближайшей даты на странице оформления
+checkoutDate.forEach((el) => {
+	el.addEventListener("click", () => {
+		let closestList = el.querySelector(".checkout__date_options");
+		slideToggle(closestList, 300);
+	});
+});
+
+checkoutDateOptions.forEach((btn) => {
+	btn.addEventListener("click", () => {
+		let btnDate = btn.textContent;
+		let closestDateInput = btn
+			.closest(".checkout__date")
+			.querySelector("#closestDate");
+		closestDateInput.value = btnDate;
+	});
+});
+
+// Попап с картой
+const mapBtns = document.querySelectorAll(".checkout__onmap_button");
+mapBtns.forEach((btn) => {
+	btn.addEventListener("click", (e) => {
+		e.preventDefault();
+		mapPopup.classList.add("active");
+		popupBg.classList.add("active");
+	});
+});
