@@ -1,0 +1,162 @@
+.section {
+	&-4 {
+		background-position: right;
+		background-size: auto 100%;
+
+		&__blocks {
+			margin-top: 40px;
+			counter-reset: features;
+		}
+
+		&__block {
+			display: flex;
+			flex-direction: column;
+			border-top: 2px solid $red;
+			background-color: #fff;
+			padding: 30px;
+			padding-left: 35px;
+			max-width: 750px;
+			margin-bottom: 25px;
+			position: relative;
+
+			&:after {
+				position: absolute;
+				counter-increment: features;
+				content: counter(features);
+				color: rgba(51, 51, 51, 0.26);
+				font-size: 90px;
+				text-transform: uppercase;
+				font-weight: 700;
+				top: -8px;
+				left: -35px;
+			}
+
+			&:first-child {
+				&:after {
+					left: -20px;
+				}
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&__text {
+			color: $gray;
+			font-size: 14px;
+			line-height: 1.5;
+			margin-bottom: 15px;
+
+			&--md {
+				color: $red;
+				font-weight: 700;
+				text-transform: uppercase;
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1700px) {
+	.section {
+		&-4 {
+			&__blocks {
+				margin-top: 35px;
+			}
+			&__block {
+				padding: 20px;
+				padding-left: 30px;
+				transform: scale(0.9);
+				transform-origin: top left;
+				margin-bottom: 10px;
+
+				&:after {
+					font-size: 70px;
+					left: -23px;
+				}
+
+				&:first-child {
+					&:after {
+						left: -15px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.section {
+		&-4 {
+			&__blocks {
+				margin-top: 25px;
+			}
+			&__block {
+				transform: $scale-alt;
+				margin-bottom: 0;
+			}
+			&__text {
+				margin-bottom: 0;
+
+				&--md {
+					margin-top: 15px;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.section {
+		&-4 {
+			background-image: url("../imgs/section4-bg-alt.png") !important;
+			background-size: auto 120%;
+			//	background-position: left bottom !important;
+
+			&__blocks {
+				padding-left: 15px;
+			}
+
+			&__text {
+				&--md {
+					display: block;
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.section {
+		&-4 {
+			padding-bottom: 100px;
+			background-size: auto 100%;
+			&__blocks {
+				padding-left: 0;
+			}
+			&__block {
+				transform: translateX(-20px);
+				width: 100vw;
+				max-width: none;
+				margin-left: 0 !important;
+				margin-bottom: 60px;
+				padding-left: 55px;
+
+				&:after {
+					left: 10px;
+					top: 7px;
+					font-size: 55px;
+				}
+
+				&:first-child {
+					&:after {
+						left: 15px;
+					}
+				}
+			}
+		}
+	}
+}

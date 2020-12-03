@@ -41,37 +41,74 @@
 	font-size: 18px;
 }
 
-
 .wc-variation-is-unavailable {
-    pointer-events: none;
-    cursor: not-allowed;
-    background-color: #303030;
+	pointer-events: none;
+	cursor: not-allowed;
+	background-color: #303030;
 }
 
 .product__buy-price {
+	& .woocommerce-variation-price .price {
+		display: flex;
+		flex-direction: column-reverse;
+	}
 
-    & .woocommerce-variation-price .price {
-        display: flex;
-        flex-direction: column-reverse;
-    }
+	& .woocommerce-variation-availability {
+		display: none;
+	}
 
-    & .woocommerce-variation-availability {
-        display: none;
-    }
+	& del {
+		color: #000;
+		text-decoration: line-through;
+	}
 
-    & del {
-        color: #000;
-        text-decoration: line-through;
-    }
-
-    & ins {
-        text-decoration: none;
-        color: #660000;
-    }
+	& ins {
+		text-decoration: none;
+		color: #660000;
+	}
 }
 
 .product__info_copies {
-    & .woocommerce-variation-price {
-        display: none;
-    }
+	& .woocommerce-variation-price {
+		display: none;
+	}
+}
+
+.checkout-block .woocommerce-checkout-review-order-table {
+	display: none !important;
+}
+
+.woocommerce-checkout-review-order-table thead,
+.woocommerce-checkout-review-order-table tbody,
+.woocommerce-checkout-review-order-table th {
+	display: none !important;
+	list-style: none !important;
+}
+
+.woocommerce-checkout-review-order-table ul {
+	list-style: none !important;
+}
+
+.woocommerce-checkout-review-order-table tfoot {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.woocommerce-checkout-review-order-table .order-total {
+	font-size: 20px;
+	letter-spacing: 0.06em;
+	color: #660000;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.woocommerce-checkout-review-order-table .woocommerce-shipping-totals {
+	text-transform: uppercase;
+	font-size: 14px;
+	letter-spacing: 0.06em;
+	color: #828282;
+}
+
+.cart-subtotal {
+	display: none !important;
 }

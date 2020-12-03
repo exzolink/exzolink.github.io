@@ -1,0 +1,200 @@
+$gray: rgba(51, 51, 51, 0.75);
+$red: #cf2d21;
+$scale: scale(0.7);
+$scale-alt: scale(0.85);
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	text-rendering: optimizeLegibility;
+	font-size: 16px;
+	height: 100%;
+	font-family: "Montserrat", sans-serif;
+}
+
+body {
+	height: 100%;
+	display: flex;
+}
+
+a,
+button {
+	user-select: none;
+	background-color: transparent;
+	color: inherit;
+	box-shadow: none;
+	outline: none;
+	text-decoration: none;
+	border: none;
+}
+
+img {
+	user-select: none;
+}
+
+.main {
+	background-color: #f3f4f6;
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+}
+
+.wpcf7-response-output {
+	display: none !important;
+}
+
+.grecaptcha-badge {
+	display: none !important;
+}
+
+.question .wpcf7-not-valid-tip {
+	font-size: 10px;
+	position: absolute;
+	top: -22px;
+}
+
+.calc .wpcf7-not-valid-tip {
+	color: $red !important;
+	font-size: 10px !important;
+	position: absolute;
+	bottom: -44px;
+	text-transform: initial !important;
+}
+
+.ewd-otp-ajax-results h3 {
+	display: none !important;
+}
+
+.ewd-otp-front-end-update-form, .ewd-otp-bold, .ewd-otp-status-label {
+	display: none !important;
+}
+
+.section {
+	height: 100vh;
+	padding-top: 40px;
+	padding-left: 100px;
+	display: flex;
+	flex-direction: column;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: relative;
+	scrollbar-width: thin;
+	scrollbar-color: #33333366 #00000010;
+
+	&::-webkit-scrollbar {
+		width: 4px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: #33333366;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: #00000010;
+	}
+
+	&__footer {
+		position: absolute;
+		top: 0;
+		right: 0;
+		max-width: 131px;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+
+		&.fixed {
+			position: fixed;
+		}
+
+		&_inner {
+			padding: 20px 16px;
+			display: flex;
+			position: relative;
+			height: 100%;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		&_dev {
+			& span {
+				text-align: center;
+				margin-bottom: 10px;
+				font-size: 12px;
+				color: $gray;
+				display: block;
+				line-height: 1.5;
+			}
+		}
+
+		&_privacy {
+			color: $gray;
+			padding-bottom: 12px;
+			text-transform: uppercase;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: max-content;
+			transform: translate(-50%, -50%) rotate(-90deg);
+			display: block;
+			border-bottom: 1px solid #c4c4c4;
+			transition: color 0.2s ease, border-color 0.2s ease;
+
+			&:hover {
+				color: #333;
+				border-color: #333;
+			}
+		}
+	}
+}
+
+.swiper-scrollbar {
+	&:hover {
+		height: 8px;
+	}
+
+	&-drag {
+		background-color: #33333366;
+		&:hover,
+		&:focus {
+			cursor: pointer;
+			background-color: $gray;
+		}
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.section {
+		&__footer {
+			&_privacy {
+				font-size: 13px;
+			}
+			&_dev {
+				& span {
+					font-size: 11px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	html,
+	body {
+		height: auto;
+		overflow-x: hidden;
+	}
+	body {
+		flex-direction: column;
+	}
+
+	.fancybox-content img {
+		max-width: 100%;
+		height: auto;
+	}
+}

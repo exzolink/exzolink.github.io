@@ -1,0 +1,33 @@
+.section {
+	&-1 {
+		background-position: right;
+		background-size: auto 100%;
+
+		&__info {
+			margin-top: 60px;
+		}
+
+		&__list {
+			margin-bottom: 25px;
+		}
+
+		&__text {
+			&--md {
+				display: block;
+				margin-top: 25px;
+				margin-bottom: 18px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1400px) {
+	.section {
+		&-1 {
+			&__info {
+				margin-top: 30px;
+			}
+		}
+	}
+}

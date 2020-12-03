@@ -485,7 +485,7 @@ tabs.forEach((btn) => {
 			let deliveryBtns = btn
 				.closest(".checkout__order_block")
 				.querySelectorAll(".checkout__labels_item");
-			let checkoutFields = document.querySelectorAll(".checkout__fields input");
+			let checkoutFields = document.querySelectorAll(".checkout__fields input, .checkout__fields select");
 			let deliveryContent = btn
 				.closest(".checkout__order_block")
 				.querySelectorAll(".checkout__fields");
@@ -493,7 +493,7 @@ tabs.forEach((btn) => {
 				checkoutFields[i].disabled = true;
 			}
 
-			let currentFields = getContent.querySelectorAll("input");
+			let currentFields = getContent.querySelectorAll("input, select");
 			for (let i = 0; i < currentFields.length; i++) {
 				currentFields[i].disabled = false;
 			}
@@ -695,22 +695,9 @@ const checkoutDateOptions = document.querySelectorAll(
 );
 
 // Выбор ближайшей даты на странице оформления
-checkoutDate.forEach((el) => {
-	el.addEventListener("click", () => {
-		let closestList = el.querySelector(".checkout__date_options");
-		slideToggle(closestList, 300);
-	});
-});
-
-checkoutDateOptions.forEach((btn) => {
-	btn.addEventListener("click", () => {
-		let btnDate = btn.textContent;
-		let closestDateInput = btn
-			.closest(".checkout__date")
-			.querySelector("#closestDate");
-		closestDateInput.value = btnDate;
-	});
-});
+try {
+	customSelect('.checkout__date')
+} catch(err) {}
 
 // Попап с картой
 const mapBtns = document.querySelectorAll(".checkout__onmap_button");

@@ -382,6 +382,24 @@
 				</form>
 			</div>
 		</div>
+		
+	
+		<div id="ecom-widget" style="height: 500px">
+			<script
+				src="https://widget.pochta.ru/map/widget/widget.js">
+			</script>
+			<script>
+				ecomStartWidget({
+					id: 5693,
+					callbackFunction: postMap,
+					containerId: 'ecom-widget'
+				});
+
+				function postMap(data) {
+					console.log(data)
+				}
+			</script>
+		</div>
 
 		<script src="js/main.js"></script>
 	</body>

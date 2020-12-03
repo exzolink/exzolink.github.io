@@ -101,7 +101,7 @@ if (document.querySelector(".product") !== null) {
 }
 
 const basketBtns = document.querySelectorAll(
-	".header__basket, .modal-basket__close"
+	".header__basket, .modal-basket__close",
 );
 const basketModal = document.querySelector(".modal-basket");
 const basketEl = document.querySelector(".modal-basket__block");
@@ -130,3 +130,31 @@ document.addEventListener("click", (e) => {
 		htmlEl.classList.remove("no-overflow");
 	}
 });
+
+const alertEl = document.querySelector(
+	".alerts__block",
+);
+	alertEl.addEventListener("click", (e) => {
+		alertEl.remove();
+	});
+
+const checkoutAlert = document.getElementsByClassName(
+	"woocommerce-NoticeGroup-checkout",
+);
+
+console.log(checkoutAlert);
+for (let i = 0; i < checkoutAlert.length; i++) {
+	checkoutAlert[i].addEventListener('click', (e) => {
+		e.remove();
+	})
+}
+
+
+document.addEventListener('click', (e) => {
+	let checkoutAlert = document.querySelector('.woocommerce-NoticeGroup-checkout');
+	console.log(e.target);
+	if (e.target === checkoutAlert) {
+		checkoutAlert.remove();
+		return;
+	}
+})

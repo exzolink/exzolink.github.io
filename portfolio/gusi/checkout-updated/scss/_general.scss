@@ -1,0 +1,166 @@
+$blue: #151d56;
+$teal: #16c9e6;
+$filter: brightness(0) saturate(100%) invert(84%) sepia(51%) saturate(4570%)
+	hue-rotate(142deg) brightness(95%) contrast(89%);
+
+*,
+*:after,
+*:before {
+	padding: 0;
+	margin: 0;
+	outline: none;
+	border: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 14px;
+	font-family: "Nunito", sans-serif;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+a,
+button,
+img,
+label {
+	user-select: none;
+}
+
+a {
+	text-decoration: none;
+	color: $blue;
+	display: flex;
+	transition: color 0.2s ease, filter 0.2s ease;
+}
+
+::selection {
+	background-color: $teal;
+	color: #fff;
+}
+
+.container {
+	max-width: 1245px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+}
+
+.relative {
+	position: relative;
+}
+
+.mb-0 {
+	margin-bottom: 0 !important;
+}
+
+.general-input {
+	padding: 15px 30px;
+	color: #a9a9a9;
+	margin-bottom: 20px;
+	font-family: inherit;
+	font-size: 18px;
+	box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+	border-radius: 10px;
+	appearance: textfield;
+	transition: box-shadow 0.2s ease, background-color .2s ease;
+
+	&:focus {
+		box-shadow: 0 0 0px 1px #16c9e6;
+		background-color: #fff;
+	}
+
+	&.filled {
+		box-shadow: none;
+		color: #40414A;
+		background-color: #F3F3F3;
+		border: 1px solid transparent;
+		transition: border .2s ease, background .2s ease;
+
+		&:focus {
+			background-color: #fff;
+			border: 1px solid $teal;
+		}
+	}
+
+}
+
+
+.button {
+	display: flex;
+	justify-content: center;
+
+	& button, & a {
+		border-radius: 50px;
+		background-color: #16c9e6;
+		box-shadow: 4px 6px 0px #d6f9ff;
+		color: #fff;
+		font-size: 18px;
+		font-weight: 700;
+		padding: 10px 0;
+		max-width: 201px;
+		width: 100%;
+		font-family: inherit;
+		transition: background 0.2s ease, box-shadow 0.2s ease;
+
+		&:hover {
+			cursor: pointer;
+			background-color: $blue;
+			box-shadow: 4px 6px 0px #b2b5c7;
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.button button, .button a {
+		font-size: 14px;
+		padding: 12px 0;
+	}
+}
+
+.title {
+	font-weight: 800;
+	font-size: 32px;
+	position: relative;
+	color: $blue;
+	line-height: 1;
+	display: inline-block;
+	z-index: 1;
+
+	&:before {
+		position: absolute;
+		content: "";
+		z-index: -1;
+		height: 20px;
+		width: 100%;
+		background-color: #d6f9ff;
+		top: 15px;
+		left: 12px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.title {
+		font-size: 24px;
+
+		&:before {
+			height: 12px;
+			left: 8px;
+		}
+	}
+
+	.general-input {
+		font-size: 16px;
+	}
+
+	.no-header-mob {
+		& .header__inner {
+			display: none;
+		}
+	}
+}

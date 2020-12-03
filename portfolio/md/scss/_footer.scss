@@ -1,0 +1,47 @@
+.footer {
+	margin-bottom: 75px;
+	&__inner {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 40px 5px;
+		color: $gray;
+	}
+	&__privacy {
+		margin-top: 25px;
+		padding-bottom: 10px;
+		text-transform: uppercase;
+		font-size: 14px;
+		border-bottom: 1px solid $gray;
+		transition: color .2s ease, border-color .2s ease;
+
+		&:hover {
+			color: #333;
+			border-color: #333;
+		}
+	}
+
+	&__dev {
+		margin-top: 37px;
+		display: flex;
+		justify-content: center;
+		& span {
+			font-size: 12px;
+			text-align: right;
+			margin-right: 15px;
+		}
+	}
+}
+
+@media screen and (min-width: 1201px) {
+	.footer {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.footer {
+		margin-bottom: 65px;
+	}
+}

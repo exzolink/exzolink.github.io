@@ -1,0 +1,45 @@
+.main-slider {
+	&__container {
+		overflow: hidden;
+		border-radius: 25px;
+	}
+	&__slide {
+		& img {
+			width: 100%;
+		}
+	}
+
+	& .swiper-container-horizontal > .swiper-pagination-bullets,
+	.swiper-pagination-custom,
+	.swiper-pagination-fraction {
+		bottom: 30px;
+	}
+}
+
+.swiper-pagination-bullet {
+	background-color: #c8c8c8;
+	opacity: 1;
+
+	&-active {
+		background-color: $blue;
+		width: 10px;
+		height: 10px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.main-slider {
+		& .swiper-container-horizontal > .swiper-pagination-bullets,
+		.swiper-pagination-custom,
+		.swiper-pagination-fraction {
+			bottom: 16px;
+		}
+
+		&__slide {
+			& img {
+				height: 75vw;
+				object-fit: cover;
+			}
+		}
+	}
+}

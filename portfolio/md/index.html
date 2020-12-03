@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MD Logistics</title>
+		<link rel="stylesheet" href="css/swiper.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+			rel="preload"
+			as="font"
+			id="font"
+		/>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__inner">
+				<a href=""
+					><img
+						decoding="async"
+						class="header__logo"
+						src="imgs/logo-desk.svg"
+						alt=""
+				/></a>
+
+				<p class="header__slogan">
+					Международные автомобильные и авиагрузоперевозки
+				</p>
+
+				<nav class="nav nav-sections">
+					<a href="" id="link-main" class="nav__link active">Главная</a>
+					<a href="" id="link-services" class="nav__link">Услуги</a>
+					<a href="" id="link-about" class="nav__link">О компании</a>
+					<a href="" id="link-reviews" class="nav__link">Отзывы</a>
+					<a href="" id="link-contacts" class="nav__link">Контакты</a>
+				</nav>
+
+				<div class="header__locate modal-btn" data-open-modal="find">
+					<button class="header__locate_btn header__btn">
+						<img decoding="async" src="imgs/search.svg" alt="" />Отследить груз
+					</button>
+				</div>
+
+				<div class="header__calc modal-btn" data-open-modal="calc">
+					<button class="header__calc_btn header__btn">
+						<img decoding="async" src="imgs/calc.svg" alt="" />Рассчитать
+						отправку
+					</button>
+				</div>
+
+				<div class="header__lang">
+					<span>Выберите язык:</span>
+					<div class="header__lang_flags">
+						<a href=""
+							><img decoding="async" src="imgs/ru-flag.svg" alt=""
+						/></a>
+						<a href=""
+							><img decoding="async" src="imgs/uk-flag.svg" alt=""
+						/></a>
+					</div>
+				</div>
+
+				<div class="header__contact">
+					<a href="tel:+77273467254"
+						><img
+							decoding="async"
+							width="18"
+							height="18"
+							src="imgs/phone.svg"
+							alt=""
+						/><span><strong>+7 727 346 72 54</strong></span></a
+					>
+					<a class="contacts-btn" href=""
+						><img
+							decoding="async"
+							width="21"
+							height="21"
+							src="imgs/geo.svg"
+							alt=""
+						/><span>Алматы, мкр. Сайран, д.14, БЦ Азия-С</span></a
+					>
+				</div>
+			</div>
+
+			<div class="header__fixed">
+				<a href="" class="header__fixed_logo">
+					<img decoding="async" src="imgs/logo-mob.svg" alt="" />
+				</a>
+				<div class="header__fixed_block">
+					<div class="header__fixed_lang">
+						<a href=""
+							><img
+								decoding="async"
+								src="imgs/ru-flag.svg"
+								width="44"
+								height="30"
+								alt=""
+						/></a>
+						<a href=""
+							><img
+								decoding="async"
+								src="imgs/uk-flag.svg"
+								width="44"
+								height="30"
+								alt=""
+						/></a>
+					</div>
+					<button class="header__fixed_burger modal-btn" data-open-modal="menu">
+						<img
+							decoding="async"
+							width="33"
+							height="17"
+							src="imgs/burger.svg"
+							alt=""
+						/>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<main class="swiper-container main" id="pages">
+			<div class="swiper-wrapper main__wrapper">
+				<section class="swiper-slide section section__main">
+					<div class="section__main_info">
+						<h1 class="section__title">Международные грузовые</h1>
+						<h2 class="section__text--lg main-text-lg">
+							Перевозки любой сложности
+						</h2>
+						<p class="section__text--sm main-text-sm">
+							<img decoding="async" src="imgs/line.svg" alt="" />Решение по
+							доставке грузов для всех отраслей промышленности
+						</p>
+
+						<div class="section__hint">
+							<span
+								>Листай, чтобы <br />
+								узнать больше</span
+							>
+							<img
+								decoding="async"
+								width="70"
+								height="23"
+								src="imgs/arrow-right.svg"
+								alt=""
+							/>
+						</div>
+					</div>
+
+					<div class="swiper-container section__main_features">
+						<div class="swiper-wrapper features__wrapper">
+							<div
+								class="swiper-slide features__block features__block--red modal-btn"
+								data-open-modal="question"
+							>
+								<div class="features__text">
+									<span>500 тг. за 1 кг.</span>
+									<p>500 тг. за каждый килограм груза на отправки</p>
+									<p>по направлениям: Казахстан <-> Россия;</p>
+									<p>Казахстан <-> Белоруссия.</p>
+
+									<div class="features__tip">
+										<p>*минимальный объем груза к отправке - 300 кг.</p>
+										<img
+											decoding="async"
+											class="features__arrow"
+											width="58"
+											height="33"
+											src="imgs/main-arrow-w.svg"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
+							<div
+								class="swiper-slide features__block features__block--white modal-btn"
+								data-open-modal="question"
+							>
+								<div class="features__text">
+									<span>Новым клиентам</span>
+									<p>Получите <strong>скидку в 10%</strong></p>
+									<p>на первую отправку груза с MD Logistic</p>
+
+									<div class="features__tip">
+										<img
+											decoding="async"
+											class="features__arrow"
+											width="58"
+											height="33"
+											src="imgs/main-arrow-r.svg"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section
+					class="swiper-slide section section-1 lazyload"
+					data-bg="imgs/section1-bg.png"
+				>
+					<span class="section__text--lg section__number">
+						<img decoding="async" src="imgs/line.svg" alt="" />01
+					</span>
+					<h2 class="section__title">Мы заставляем вас улыбаться</h2>
+
+					<div class="section-1__info">
+						<span class="section__subtitle">Потому что,</span>
+						<p class="section__text--sm">
+							Наша компания – одна из лидеров рынка в области транспортировок. В
+							нашу компетенцию входит перевозка как сложных, так и габаритных
+							грузов различными способами.
+							<strong>Компания предоставляет услуги:</strong>
+						</p>
+						<ul class="section__list section-1__list">
+							<li>Наземной грузоперевозки;</li>
+							<li>Транспортировки по воздуху;</li>
+							<li>Контейнерных перевозок.</li>
+						</ul>
+
+						<p class="section__text--sm">
+							Среди конкурентов нас отличает комплексность подхода к любой
+							задаче. Вам не придётся искать дополнительного подрядчика – мы
+							доставим груз из точки А в точку В в оговоренный заранее срок и по
+							утвержденной стоимости без внезапных доплат.
+						</p>
+					</div>
+
+					<div class="section-1__info">
+						<span class="section__subtitle"
+							>Прямо сейчас мы готовы предложить вам:</span
+						>
+
+						<span class="section__text--md section-1__text--md"
+							>Полный комплекс транспортных услуг</span
+						>
+						<p class="section__text--sm">
+							Компания MD LOGISTIC специализируется на транспортировки грузов,
+							автомобильным и воздушным транспортом, а так же доставки грузов
+							контейнерами. Имея большой опыт в сфере грузоперевозок, мы
+							предлагаем вам безупречный сервис и надежного партнера в лице
+							нашей компании.
+						</p>
+					</div>
+
+					<div class="section__image">
+						<img
+							class="lazyload"
+							decoding="async"
+							data-src="imgs/section1-mob.png"
+							alt=""
+						/>
+					</div>
+				</section>
+
+				<section
+					class="swiper-slide section section-2 lazyload"
+					data-bg="imgs/section2-bg.png"
+				>
+					<span class="section__text--lg section__number">
+						<img decoding="async" src="imgs/line.svg" alt="" />02
+					</span>
+					<h2 class="section__title">На суше, в воздухе и на воде</h2>
+
+					<div class="section-2__tabs">
+						<div data-tab="avto" class="section-2__tab active">
+							<img decoding="async" src="imgs/tab-avto.svg" alt="" />
+							<span>Авто</span>
+						</div>
+						<div data-tab="zhd" class="section-2__tab">
+							<img decoding="async" src="imgs/tab-zhd.svg" alt="" />
+							<span>Ж/Д</span>
+						</div>
+						<div data-tab="avia" class="section-2__tab">
+							<img decoding="async" src="imgs/tab-avia.svg" alt="" />
+							<span>Авиа</span>
+						</div>
+					</div>
+
+					<div id="avto" class="section-2__content active">
+						<span class="section__subtitle">Авто Грузоперевозки</span>
+						<p class="section__text--sm">
+							Мы организуем автомобильную перевозку грузов любой сложности по
+							территории страны и за ее пределами. Наличие налаженных
+							партнерских контактов и огромной базы агентов позволяет снизить
+							себестоимость услуги, а значить – сэкономить ваши деньги.
+							Транспортировка производится по всем стандартам, что обеспечивает
+							сохранность груза при перевозке на любые расстояния.
+						</p>
+					</div>
+
+					<div id="zhd" class="section-2__content">
+						<span class="section__subtitle">Ж/Д Перевозки</span>
+						<p class="section__text--sm">
+							Если возможности доставить груз автомобильным транспортом нет, а
+							объем для авиагрузоперевозки слишком велик, самым верным решением
+							будет доставка контейнером. Контейнерная перевозка – идеальный
+							вариант для транспортировки больших объемов груза на длинное
+							расстояние. Наш опыт, позволяет нам доставить ваш груз
+							контейнерами по ж/д.
+						</p>
+					</div>
+
+					<div id="avia" class="section-2__content">
+						<span class="section__subtitle">Авиа Грузоперевозки</span>
+						<p class="section__text--sm">
+							Организация авиа перевозок проходит на высшем уровне, все детали
+							оговариваются заранее. Наша компания имеет огромную сеть
+							партнерских контактов по всему миру, что позволяет значительно
+							ускорить забор и отправку товаров и грузов. Для торгового бизнеса
+							авиа перевозки товара означают ускоренную процедуру оборота
+							средств, и получение повышенной прибыли.
+						</p>
+					</div>
+
+					<div class="section__button">
+						<button class="section__btn modal-btn" data-open-modal="question">
+							<img decoding="async" src="imgs/zayavka.svg" alt="" />
+							Оставить заявку
+						</button>
+					</div>
+
+					<div class="section__image">
+						<img
+							class="lazyload"
+							decoding="async"
+							data-src="imgs/section2-mob.png"
+							alt=""
+						/>
+					</div>
+				</section>
+
+				<section
+					class="swiper-slide section section-3 lazyload"
+					data-bg="imgs/section3-bg.png"
+				>
+					<span class="section__text--lg section__number">
+						<img decoding="async" src="imgs/line.svg" alt="" />03
+					</span>
+					<h2 class="section__title">
+						Обширная география перевозок в режиме импорт/экспорт
+					</h2>
+
+					<div class="section-3__info">
+						<span class="section-3__subtitle">
+							Предоставляем услуги грузоперевозок по территории Казахстана и по
+							всему миру различными видами транспорта
+						</span>
+
+						<ul class="section__list section-3__list">
+							Специалисты нашей компании помогут вам:
+							<li>в подборе кодов ТНВЭД;</li>
+							<li>в выборе оптимальной таможенной процедуры;</li>
+							<li>в подсчете таможенных пошлин и платежей.</li>
+						</ul>
+
+						<p class="section__text--sm section-3__text">
+							Мы готовы проконсультировать вас по всем вопросам регистрации в
+							качестве участника внешне-экономической деятельности, а так же
+							оплаты пошлин и налогов. Имея широкую партнерскую сеть мы способны
+							оказать помощь в таможенном оформлении не только по территории
+							Казахстана, но и за ее пределами.
+						</p>
+					</div>
+
+					<div class="section-3__buttons">
+						<div class="section__button">
+							<button class="section__btn modal-btn" data-open-modal="question">
+								<img decoding="async" src="imgs/phone-w.svg" alt="" />
+								Заказать консультацию
+							</button>
+						</div>
+
+						<div class="section-3__slider">
+							<div class="section-3__slider_wrapper">
+								<img
+									decoding="async"
+									class="section-3__slider_left"
+									src="imgs/arr-left.svg"
+									alt=""
+								/>
+
+								<div class="swiper-container section-3__slider_container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">Казахстан - Европа</div>
+										<div class="swiper-slide">Европа - Европа</div>
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+
+								<img
+									decoding="async"
+									class="section-3__slider_right"
+									src="imgs/arr-right.svg"
+									alt=""
+								/>
+							</div>
+						</div>
+					</div>
+
+					<div class="section__image">
+						<img
+							class="lazyload"
+							decoding="async"
+							data-src="imgs/section3-mob.png"
+							alt=""
+						/>
+					</div>
+				</section>
+
+				<section
+					class="swiper-slide section section-4 lazyload"
+					data-bg="imgs/section4-bg.png"
+				>
+					<span class="section__text--lg section__number">
+						<img decoding="async" src="imgs/line.svg" alt="" />04
+					</span>
+					<h2 class="section__title">Три шага к вашему успеху</h2>
+
+					<div class="section-4__blocks">
+						<div class="section-4__block">
+							<span class="section__subtitle">Авто Грузоперевозки</span>
+							<p class="section-4__text">
+								Оставьте заявку на расчет стоимости доставки любым удобным для
+								вас способом. мы вышлем ценовое предложение для ознакомления в
+								кратчайшие сроки. и перейдем к этапу согласования перевозки.
+							</p>
+							<span class="section-4__text--md">Это просто и удобно</span>
+						</div>
+
+						<div class="section-4__block">
+							<span class="section__subtitle">Согласовываем детали</span>
+							<p class="section-4__text">
+								Мы с вами оговорим все детали предстоящей перевозки. подготовим
+								всю необходимую документацию вместе с вами. при необходимости
+								поможем с процедурой таможенного оформления и преступим к
+								перевозке.
+							</p>
+							<span class="section-4__text--md">Это очень быстро</span>
+						</div>
+
+						<div class="section-4__block">
+							<span class="section__subtitle">Мы доставляем детали</span>
+							<p class="section-4__text">
+								Дело остается за малым, доставить вверенный нам груз - это то,
+								что мы делаем лучше всего. вы можете расслабиться и не
+								переживать ваш груз в надежных руках. на протяжении всей
+								перевозки с вами на связи будет персональный менеджер.
+							</p>
+							<span class="section-4__text--md">Это качественно</span>
+						</div>
+					</div>
+				</section>
+
+				<section
+					class="swiper-slide section section-5 lazyload"
+					data-bg="imgs/section5-bg.png"
+				>
+					<span class="section__text--lg section__number">
+						<img decoding="async" src="imgs/line.svg" alt="" />05
+					</span>
+					<h2 class="section__title">Достижения и преимущества</h2>
+
+					<div class="section-5__info">
+						<p class="section__text--sm section-5__text">
+							Компания прошла нелегкий путь развития, чтобы сегодня предложить
+							вам услуги высокого уровня с гарантиями. Мы учились на своих
+							ошибках, и хотим поделиться с вами нашими достижениями.
+						</p>
+
+						<div class="section-5__features">
+							<div class="section-5__features_item">
+								<div class="section-5__features_img">
+									<img decoding="async" src="imgs/features-img1.svg" alt="" />
+								</div>
+								<span
+									><strong>100% ответственность</strong> за груз в пути
+									следования</span
+								>
+							</div>
+
+							<div class="section-5__features_item">
+								<div class="section-5__features_img">
+									<img decoding="async" src="imgs/features-img2.svg" alt="" />
+								</div>
+								<span>Информация о грузе в режиме <strong>24/7</strong></span>
+							</div>
+
+							<div class="section-5__features_item">
+								<div class="section-5__features_img">
+									<img decoding="async" src="imgs/features-img3.svg" alt="" />
+								</div>
+								<span
+									>Возможность <strong>отсрочки платежа</strong> до 20-ти
+									дней</span
+								>
+							</div>
+
+							<div class="section-5__features_item">
+								<div class="section-5__features_img">
+									<img decoding="async" src="imgs/features-img4.svg" alt="" />
+								</div>
+								<span
+									><strong>Помощь со сбором и составлением</strong>
+									документации</span
+								>
+							</div>
+
+							<div class="section-5__features_item">
+								<div class="section-5__features_img">
+									<img decoding="async" src="imgs/features-img5.svg" alt="" />
+								</div>
+								<span>Быстрый <strong>просчет стоимости</strong> отправки</span>
+							</div>
+						</div>
+
+						<span class="section-5__subtitle"> Немного фактов о компании </span>
+
+						<ul class="section__list section-5__list">
+							<li>Год основания - <strong>2018.</strong></li>
+							<li>Ежегодно перевозим - <strong>30 000 тонн груза.</strong></li>
+							<li>
+								В собственности компании -
+								<strong
+									>складские помещения, подвижной состави, а также офис
+									представительство в России.</strong
+								>
+							</li>
+							<li>
+								Ведущие направления перевозок -
+								<strong>страны Европы, Россия и Турция.</strong>
+							</li>
+							<li>
+								Обширная база -
+								<strong
+									>собственных водителей и партнеров на территории Европы,
+									Турции и России</strong
+								>
+							</li>
+						</ul>
+
+						<span class="section__text--md section-5__text--md">
+							С заботой о вас и вашем грузе!
+						</span>
+					</div>
+
+					<div class="section__image">
+						<img
+							class="lazyload"
+							decoding="async"
+							data-src="imgs/section5-mob.png"
+							alt=""
+						/>
+					</div>
+				</section>
+
+				<section
+					class="swiper-slide section section-6 lazyload"
+					data-bg="imgs/section6-bg.png"
+				>
+					<span class="section__text--lg section__number">
+						<img decoding="async" src="imgs/line.svg" alt="" />06
+					</span>
+					<h2 class="section__title">Узнайте стоимость доставки</h2>
+
+					<div class="section-6__info">
+						<span class="section-6__subtitle">Удобней просто не бывает</span>
+
+						<div class="section-6__block">
+							<p class="section__text--sm">
+								Теперь запросить ценовое предложение стало еще проще и удобнее
+								заполните простую форму, и нажмите кнопку отправить.
+							</p>
+
+							<p class="section__text--sm">
+								Все готово, теперь вам придет электронное письмо о принятии
+								вашего запроса в обработку.
+							</p>
+
+							<p class="section__text--sm">
+								В зависимости от сложности заказа, просчет может занять время от
+								одного часа до нескольких дней, надеемся на понимание!
+							</p>
+						</div>
+
+						<span class="section__text--md section-6__text--md">
+							Никаких звонков и долгих объяснений, мы стремимся к простоте
+						</span>
+
+						<div class="section__button">
+							<button class="section__btn modal-btn" data-open-modal="calc">
+								<img decoding="async" src="imgs/zayavka.svg" alt="" />
+								Заполнить форму
+							</button>
+						</div>
+
+						<span class="section__text--sm section-6__text--sm"
+							>* Нажимая на кнопку «Отправить», вы даете согласие на обработку
+							своих персональных данных</span
+						>
+					</div>
+
+					<div class="section__image">
+						<img
+							class="lazyload"
+							decoding="async"
+							data-src="imgs/section6-mob.png"
+							alt=""
+						/>
+					</div>
+				</section>
+
+				<section
+					class="swiper-slide section section-7 lazyload"
+					data-bg="imgs/section7-bg.png"
+				>
+					<span class="section__text--lg section__number">
+						<img decoding="async" src="imgs/line.svg" alt="" />07
+					</span>
+					<h2 class="section__title">Что говорят о нас</h2>
+
+					<div class="section-7__info">
+						<div class="section-7__text">
+							<p class="section__text--sm">
+								Мы гордимся тем, что имеем возможность работать с каждым из вас.
+								Ваши логотипы и фото украшают наш сайт и являются лучшей
+								похвалой для нас. Присоединяйтесь к числу компаний, которые
+								больше не бояться слова «доставка»! ​
+							</p>
+							<p class="section__text--sm">
+								А лучшим показателем уровня работы компании MD LOGISTIC являются
+								отзывы и обратная связь наших клиентов. Если вам есть что
+								сказать нам, обязательно оставьте свой отклик или предложение –
+								это поможет нам идти вперед и развиваться для вас!
+							</p>
+						</div>
+
+						<div class="section-7__slider">
+							<div class="swiper-container section-7__slider_container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide section-7__slide">
+										<img
+											decoding="async"
+											class="section-7__review"
+											src="imgs/review.jpg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="section-7__review-logo"
+											src="imgs/review-logo.png"
+											alt=""
+										/>
+									</div>
+									<div class="swiper-slide section-7__slide">
+										<img
+											decoding="async"
+											class="section-7__review"
+											src="imgs/review.jpg"
+											alt=""
+										/>
+										<img
+											decoding="async"
+											class="section-7__review-logo"
+											src="imgs/review-logo.png"
+											alt=""
+										/>
+									</div>
+								</div>
+								<div class="section-7__arrow">
+									<img decoding="async" src="imgs/arr-right.svg" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section__image">
+						<img
+							class="lazyload"
+							decoding="async"
+							data-src="imgs/section7-mob.png"
+							alt=""
+						/>
+					</div>
+				</section>
+
+				<section
+					class="swiper-slide section section-8 lazyload"
+					data-bg="imgs/section8-bg.png"
+				>
+					<img
+						decoding="async"
+						class="section-8__bg lazyload"
+						data-src="imgs/section8-bg.png"
+						alt=""
+					/>
+
+					<div class="section-8__container">
+						<span class="section__text--lg section__number">
+							<img decoding="async" src="imgs/line.svg" alt="" />08
+						</span>
+						<h2 class="section__title">Новости компании</h2>
+					</div>
+
+					<div class="section-8__container">
+						<p class="section__text--sm section-8__text">
+							Здесь появляются самые свежие и актуальные новости о нас и нашей
+							компании а так же интересные факты из мира логистики
+						</p>
+					</div>
+
+					<a class="section-8__news_linked" href=""
+						><img
+							decoding="async"
+							class="section-8__news_img lazyload"
+							data-src="imgs/news-placeholder.jpg"
+							alt=""
+					/></a>
+
+					<div class="section-8__container">
+						<div class="section-8__news">
+							<div class="section-8__news_meta">
+								<a href="">Заголовок новости</a>
+								<time datetime="2020-08-09">01.11.2020</time>
+							</div>
+
+							<article class="section-8__news_content">
+								<p>
+									"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+									do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									Ut enim ad minim veniam, quis nostrud exercitation ullamco
+									laboris nisi ut aliquip ex ea commodo consequat.
+								</p>
+								<p>
+									"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+									do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									Ut enim ad minim veniam, quis nostrud exercitation ullamco
+									laboris nisi ut aliquip ex ea commodo consequat...
+								</p>
+							</article>
+						</div>
+
+						<div class="section-8__button">
+							<a href="" class="section-8__archive">
+								<img src="imgs/archive.svg" width="23" height="23" alt="" />
+								<span>Перейти в архив новостей</span>
+							</a>
+						</div>
+					</div>
+
+					<div class="section__image">
+						<img
+							class="lazyload"
+							decoding="async"
+							data-src="imgs/section8-mob.png"
+							alt=""
+						/>
+					</div>
+				</section>
+
+				<section class="swiper-slide section section-9">
+					<div class="section__footer">
+						<div class="section__footer_inner">
+							<a href=""
+								><img
+									decoding="async"
+									width="96"
+									height="58"
+									src="imgs/logo-alt.svg"
+									alt=""
+							/></a>
+							<a
+								href=""
+								class="section__footer_privacy modal-btn"
+								data-open-modal="policy"
+							>
+								Политика конфиденциальности
+							</a>
+							<a href="" class="section__footer_dev">
+								<span>Разработано командой</span>
+								<img
+									decoding="async"
+									width="100"
+									height="24"
+									src="imgs/devs.svg"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+
+					<span class="section__text--lg section__number">
+						<img decoding="async" src="imgs/line.svg" alt="" />09
+					</span>
+					<h2 class="section__title">Контакты</h2>
+
+					<div class="section-9__contacts_wrapper">
+						<div class="section-9__contacts_block">
+							<span class="section__text--sm section-9__text"
+								>Всегда рады проконсультировать вас лично в нашем офисе!</span
+							>
+							<div class="section-9__contacts">
+								<div class="section-9__contacts_item">
+									<img src="imgs/contacts-geo.svg" alt="" />
+									<span
+										>Алматы, мкр. Сайран,<br />
+										д.14, БЦ Азия-С</span
+									>
+								</div>
+
+								<div class="section-9__contacts_item">
+									<img src="imgs/contacts-phone.svg" alt="" />
+									<a href="tel:+77273467254">+7 727 346 72 54</a>
+								</div>
+
+								<div class="section-9__contacts_item">
+									<img src="imgs/contacts-email.svg" alt="" />
+									<a href="mailto:e-mail@email.kz">e-mail@email.kz</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="section-9__contacts_block">
+							<div class="section-9__personal_wrapper">
+								<div class="section-9__personal">
+									<div class="section-9__personal_item">
+										<img
+											decoding="async"
+											src="imgs/contact-person1.png"
+											alt=""
+										/>
+										<div class="section-9__personal_item-info">
+											<strong>Директор отдела логистики</strong>
+											<a href="mailto:logistica@mdloglistic.kz"
+												>logistica@mdloglistic.kz</a
+											>
+											<a href="tel:+77000000000">+7 700 000 00 00</a>
+										</div>
+									</div>
+
+									<div class="section-9__personal_item">
+										<img
+											decoding="async"
+											src="imgs/contact-person1.png"
+											alt=""
+										/>
+										<div class="section-9__personal_item-info">
+											<strong>Директор отдела логистики</strong>
+											<a href="mailto:logistica@mdloglistic.kz"
+												>logistica@mdloglistic.kz</a
+											>
+											<a href="tel:+77000000000">+7 700 000 00 00</a>
+										</div>
+									</div>
+
+									<div class="section-9__personal_item">
+										<img
+											decoding="async"
+											src="imgs/contact-person1.png"
+											alt=""
+										/>
+										<div class="section-9__personal_item-info">
+											<strong>Директор отдела логистики</strong>
+											<a href="mailto:logistica@mdloglistic.kz"
+												>logistica@mdloglistic.kz</a
+											>
+											<a href="tel:+77000000000">+7 700 000 00 00</a>
+										</div>
+									</div>
+								</div>
+
+								<a href="" class="section-9__instagram">
+									<img
+										decoding="async"
+										src="imgs/instagram.svg"
+										width="28"
+										height="28"
+										alt=""
+									/>
+									<span>Мы в Instagram</span>
+								</a>
+							</div>
+
+							<div class="section-9__map"></div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="swiper-scrollbar"></div>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__inner">
+				<a href=""
+					><img
+						decoding="async"
+						width="96"
+						height="58"
+						src="imgs/logo-alt.svg"
+						alt=""
+				/></a>
+				<a href="" class="footer__privacy modal-btn" data-open-modal="policy">
+					Политика конфиденциальности
+				</a>
+				<a href="" class="footer__dev">
+					<span
+						>Разработано <br />
+						командой</span
+					>
+					<img
+						decoding="async"
+						width="100"
+						height="24"
+						src="imgs/devs.svg"
+						alt=""
+					/>
+				</a>
+			</div>
+		</footer>
+
+		<div class="popup find" role="dialog">
+			<div class="find__inner">
+				<button class="modal-close-btn">
+					<img src="imgs/close-sm.svg" alt="" />
+				</button>
+				<form action="" method="post" class="find__input">
+					<input
+						type="number"
+						name="loc-number"
+						placeholder="Введите номер отправки"
+						required
+					/>
+					<button type="submit">
+						<img src="imgs/search-red.svg" alt="" />
+					</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="modal location" role="dialog">
+			<div class="modal__inner">
+				<button class="modal-close-btn">
+					<img src="imgs/close.svg" alt="" />
+				</button>
+				<div class="modal__top">
+					<span class="modal__subtitle">Отправка №</span>
+					<span class="modal__title">12312321</span>
+				</div>
+
+				<div class="modal__content">
+					<span class="modal__text">Расположение:</span>
+					<span class="modal__response"
+						>поселок Галицкое, Павлодарская область. Граница Казахстана с
+						Россией</span
+					>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal question" role="dialog">
+			<div class="modal__inner">
+				<button class="modal-close-btn">
+					<img src="imgs/close.svg" alt="" />
+				</button>
+				<div class="modal__top">
+					<span class="modal__title">Оставьте заявку</span>
+				</div>
+
+				<div class="modal__content">
+					<span class="modal__text"
+						>Мы свяжемся с вами и проконсультируем по всем вопросам</span
+					>
+					<form action="" method="POST" class="modal__question_inputs">
+						<input
+							type="text"
+							name="name"
+							placeholder="Введите имя*"
+							required
+						/>
+						<input
+							type="tel"
+							name="phone"
+							placeholder="Введите телефон*"
+							required
+						/>
+						<input
+							type="email"
+							name="email"
+							placeholder="Введите E-mail*"
+							required
+						/>
+						<div class="section__button">
+							<button class="section__btn">
+								<img decoding="async" src="imgs/zayavka.svg" alt="" />
+								Оставить заявку
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal calc" role="dialog">
+			<div class="modal__inner">
+				<button class="modal-close-btn">
+					<img src="imgs/close.svg" alt="" />
+				</button>
+				<div class="modal__top">
+					<span class="modal__title"
+						>Получите просчет <br />
+						стоимости доставки</span
+					>
+				</div>
+
+				<div class="modal__content">
+					<span class="modal__text">Заполните поля в форме ниже</span>
+					<form action="" method="POST" class="modal__calc_inputs">
+						<div class="modal__calc_block">
+							<div class="modal__calc_input">
+								<span>Пункт погрузки</span>
+								<input
+									type="text"
+									name="pogruzka"
+									placeholder="Прим. Россия, г. Москва (в городе)"
+									required
+								/>
+							</div>
+
+							<div class="modal__calc_input">
+								<span>О грузе</span>
+								<input
+									type="text"
+									name="about"
+									placeholder="Прим. Вес 18 000 кг.,Объем 80 м.. ТНП"
+									required
+								/>
+							</div>
+
+							<div class="modal__calc_input">
+								<span>Имя</span>
+								<input
+									type="text"
+									name="name"
+									placeholder="Ваше имя"
+									required
+								/>
+							</div>
+
+							<div class="modal__calc_input">
+								<span>E-mail</span>
+								<input
+									type="email"
+									name="email"
+									placeholder="example@gmail.com"
+									required
+								/>
+							</div>
+						</div>
+
+						<img
+							decoding="async"
+							class="modal__calc_arrow"
+							src="imgs/double-arrow.svg"
+							width="20"
+							height="22"
+							alt=""
+						/>
+
+						<div class="modal__calc_block">
+							<div class="modal__calc_input">
+								<span>Пункт выгрузки</span>
+								<input
+									type="text"
+									name="vigruzka"
+									placeholder="Прим. Казахстан, г. Алматы (область)"
+									required
+								/>
+							</div>
+
+							<div class="modal__calc_input">
+								<span>Планируемая дата погрузки</span>
+								<input
+									type="date"
+									name="date"
+									value="Выберите дату"
+									placeholder="Выберите дату"
+									required
+								/>
+							</div>
+
+							<div class="modal__calc_input">
+								<span>Телефон</span>
+								<input
+									type="tel"
+									name="phone"
+									placeholder="+7 (___) ___ - __ - __"
+									required
+								/>
+							</div>
+
+							<div class="section__button">
+								<button class="section__btn">
+									<img decoding="async" src="imgs/calc-w.svg" alt="" />
+									Рассчитать стоимость
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal policy" role="dialog">
+			<div class="modal__inner">
+				<button class="modal-close-btn">
+					<img src="imgs/close.svg" alt="" />
+				</button>
+				<div class="modal__top">
+					<span class="modal__title"
+						>Политика <br />
+						конфиденциальности</span
+					>
+				</div>
+
+				<div class="modal__content">
+					<p class="modal__privacy_text">
+						Соблюдение Вашей конфиденциальности важно для нашей компании.
+						Поэтому мы разработали Политику Конфиденциальности, которая
+						описывает, как используется и хранится Ваша информация. Пожалуйста,
+						ознакомьтесь и сообщите нам, если у Вас возникнут какие-либо
+						вопросы.
+					</p>
+
+					<span class="modal__privacy_subtitle"
+						>Сбор и использование персональной информации</span
+					>
+
+					<p class="modal__privacy_text">
+						Под персональной информацией понимаются данные, которые могут быть
+						использованы для идентификации определенного лица либо связи с ним.
+						От Вас может быть запрошено предоставление персональной информации в
+						любой момент, когда Вы связываетесь с нами.
+					</p>
+
+					<span class="modal__privacy_subtitle"
+						>Какую персональную информацию мы собираем
+					</span>
+
+					<p class="modal__privacy_text">
+						Когда Вы оставляете заявку на сайте, мы можем собирать различную
+						информацию, включая Ваше имя, номер телефона, адрес электронной
+						почты и т.д.
+					</p>
+
+					<span class="modal__privacy_subtitle"
+						>Как мы используем Вашу персональную информацию
+					</span>
+
+					<p class="modal__privacy_text">
+						Персональная информация позволяет нам сообщать об уникальных
+						предложениях, акциях и других мероприятиях и ближайших событиях.
+						Время от времени мы можем использовать Вашу персональную информацию
+						для отправки важных уведомлений и сообщений. Мы также можем
+						использовать персональную информацию для внутренних целей:
+						проведения аудита, анализа данных и различных исследований в целях
+						улучшения услуг. Если Вы принимаете участие в розыгрыше призов или
+						конкурсе, мы можем использовать информацию для управления такими
+						программами.
+					</p>
+
+					<span class="modal__privacy_subtitle">
+						Раскрытие информации третьим лицам
+					</span>
+
+					<p class="modal__privacy_text">
+						Мы не раскрываем полученную от Вас информацию третьим лицам.
+					</p>
+
+					<span class="modal__privacy_subtitle">Исключения</span>
+
+					<p class="modal__privacy_text">
+						В соответствии с законом, судебным порядком, в судебном
+						разбирательстве и/или на основании публичных запросов или запросов
+						от государственных органов на территории РК. Мы также можем
+						раскрывать информацию о Вас, если мы определим, что такое раскрытие
+						необходимо или уместно в целях безопасности, поддержания
+						правопорядка или иных общественно важных случаях. В случае
+						реорганизации, слияния или продажи мы можем передать собираемую нами
+						персональную информацию соответствующему третьему лицу –
+						правопреемнику.
+					</p>
+
+					<span class="modal__privacy_subtitle"
+						>Защита персональной информации
+					</span>
+
+					<p class="modal__privacy_text">
+						Мы предпринимаем меры предосторожности, включая административные,
+						технические и физические для защиты Вашей персональной информации от
+						утраты, кражи и недобросовестного использования, а также от
+						несанкционированного доступа, раскрытия, изменения и уничтожения.
+					</p>
+
+					<span class="modal__privacy_subtitle"
+						>Соблюдение Вашей конфиденциальности на уровне компании
+					</span>
+
+					<p class="modal__privacy_text">
+						Чтобы убедиться, что Ваша персональная информация находится в
+						безопасности, мы доводим нормы соблюдения конфиденциальности и
+						безопасности до наших сотрудников и строго следим за исполнением мер
+						соблюдения конфиденциальности.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="popup menu" role="dialog">
+			<div class="menu__inner">
+				<div class="menu__top">
+					<div class="menu__langs">
+						<a href=""
+							><img
+								decoding="async"
+								src="imgs/ru-flag.svg"
+								width="44"
+								height="30"
+								alt=""
+						/></a>
+						<a href=""
+							><img
+								decoding="async"
+								src="imgs/uk-flag.svg"
+								width="44"
+								height="30"
+								alt=""
+						/></a>
+					</div>
+					<button class="modal-close-btn">
+						<img src="imgs/close-menu.svg" alt="" />
+					</button>
+				</div>
+				<div class="menu__nav">
+					<a href="" id="section__main" class="nav__link">Главная</a>
+					<a href="" id="section-2" class="nav__link">Услуги</a>
+					<a href="" id="section-5" class="nav__link">О компании</a>
+					<a href="" id="section-7" class="nav__link">Отзывы</a>
+					<a href="" id="section-9" class="nav__link">Контакты</a>
+				</div>
+				<div class="header__contact">
+					<a href="tel:+77273467254"
+						><img
+							decoding="async"
+							width="18"
+							height="18"
+							src="imgs/phone.svg"
+							alt=""
+						/><span><strong>+7 727 346 72 54</strong></span></a
+					>
+					<a href="#"
+						><img
+							decoding="async"
+							width="21"
+							height="21"
+							src="imgs/geo.svg"
+							alt=""
+						/><span>Алматы, мкр. Сайран, д.14, БЦ Азия-С</span></a
+					>
+				</div>
+			</div>
+		</div>
+
+		<div class="panel">
+			<div class="panel__inner">
+				<div class="panel__item modal-btn" data-open-modal="find">
+					<img
+						decoding="async"
+						width="20"
+						height="20"
+						src="imgs/search-red.svg"
+						alt=""
+					/>
+					<span
+						>Отследить <br />
+						груз</span
+					>
+				</div>
+
+				<div class="panel__item modal-btn" data-open-modal="calc">
+					<img
+						decoding="async"
+						width="20"
+						height="20"
+						src="imgs/calc.svg"
+						alt=""
+					/>
+					<span
+						>Рассчитать <br />
+						отправку</span
+					>
+				</div>
+
+				<div class="panel__item modal-btn" data-open-modal="question">
+					<img
+						decoding="async"
+						width="20"
+						height="20"
+						src="imgs/phone-red.svg"
+						alt=""
+					/>
+					<span>Связаться</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal-bg"></div>
+
+		<script src="js/lazyload.js"></script>
+		<script src="js/swiper.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

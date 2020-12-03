@@ -1,0 +1,159 @@
+.section {
+	&-7 {
+		background-position: right;
+		background-size: auto 100%;
+
+		&__info {
+			margin-top: 25px;
+			max-width: 985px;
+		}
+
+		&__text {
+			margin-bottom: 45px;
+			& p {
+				max-width: none;
+				margin-bottom: 30px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		&__slider {
+			max-width: 600px;
+		}
+
+		&__slide {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-left: 60px;
+
+			& figure img {
+				height: 100%;
+			}
+
+			& figure:first-child {
+				max-width: 317px;
+				width: 100%;
+				max-height: 465px;
+				display: block !important;
+			}
+
+			& figure:last-child {
+				max-width: 110px;
+				width: 100%;
+			}
+		}
+
+		&__arrow {
+			position: absolute;
+			top: 50%;
+			z-index: 20;
+			left: 74%;
+			transform: translate(-50%, -50%);
+			transition: filter 0.2s ease;
+
+			&:hover {
+				cursor: pointer;
+				filter: brightness(90%);
+			}
+
+			& img {
+				max-width: 12px;
+			}
+
+			&-prev {
+				left: 0;
+				transform: translateY(-50%);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1700px) {
+	.section {
+		&-7 {
+			&__slider {
+				padding-bottom: 0;
+				&_container {
+					transform: scale(.83);
+					transform-origin: left top;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.section {
+		&-7 {
+			&__info {
+				margin-top: 15px;
+			}
+			&__text {
+				margin-bottom: 25px;
+				& p {
+					margin-bottom: 15px;
+				}
+			}
+
+			&__slider {
+				padding-bottom: 0;
+				&_container {
+					transform: $scale;
+					transform-origin: left top;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.section {
+		&-7 {
+			&__text {
+				max-width: 700px;
+			}
+			&__slide figure:first-child {
+				max-width: 250px;
+			}
+			&__slide {
+				padding-left: 40px;
+			}
+			&__slider {
+				margin-top: 45px;
+				max-width: 485px;
+				&_container {
+					transform: none;
+				}
+			}
+			&__arrow {
+				&-next {
+					left: 70%;
+				}
+			}
+
+			& .section__image {
+				margin-top: -50px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.section {
+		&-7 {
+			&__slide figure:first-child {
+				max-width: 175px;
+			}
+			&__slide {
+				padding-left: 25px;
+			}
+			
+			&__slide figure:last-child {
+				max-width: 65px;
+			}
+		}
+	}
+}

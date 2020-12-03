@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MD Logistics</title>
+		<link rel="stylesheet" href="css/swiper.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+			rel="preload"
+			as="font"
+			id="font"
+		/>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__inner">
+			<a href=""
+				><img
+					decoding="async"
+					class="header__logo"
+					src="imgs/logo-desk.svg"
+					alt=""
+			/></a>
+
+			<p class="header__slogan">
+				Международные автомобильные и авиагрузоперевозки
+			</p>
+
+			<nav class="nav">
+				<a href="" class="nav__link active">Главная</a>
+				<a href="" class="nav__link">Услуги</a>
+				<a href="" class="nav__link">О компании</a>
+				<a href="" class="nav__link">Отзывы</a>
+				<a href="" class="nav__link">Контакты</a>
+			</nav>
+
+			<div class="header__locate modal-btn" data-open-modal="find">
+				<button class="header__locate_btn header__btn">
+					<img decoding="async" src="imgs/search.svg" alt="" />Отследить груз
+				</button>
+			</div>
+
+			<div class="header__calc modal-btn" data-open-modal="calc">
+				<button class="header__calc_btn header__btn">
+					<img decoding="async" src="imgs/calc.svg" alt="" />Рассчитать отправку
+				</button>
+			</div>
+
+			<div class="header__lang">
+				<span>Выберите язык:</span>
+				<div class="header__lang_flags">
+					<a href=""><img decoding="async" src="imgs/ru-flag.svg" alt="" /></a>
+					<a href=""><img decoding="async" src="imgs/uk-flag.svg" alt="" /></a>
+				</div>
+			</div>
+
+			<div class="header__contact">
+				<a href="tel:+77273467254"
+					><img
+						decoding="async"
+						width="18"
+						height="18"
+						src="imgs/phone.svg"
+						alt=""
+					/><span><strong>+7 727 346 72 54</strong></span></a
+				>
+				<a href=""
+					><img
+						decoding="async"
+						width="21"
+						height="21"
+						src="imgs/geo.svg"
+						alt=""
+					/><span>Алматы, мкр. Сайран, д.14, БЦ Азия-С</span></a
+				>
+			</div>
+		</div>
+
+		<div class="header__fixed">
+			<a href="" class="header__fixed_logo">
+				<img src="imgs/logo-mob.svg" alt="">
+			</a>
+			<div class="header__fixed_block">
+				<div class="header__fixed_lang">
+					<a href=""><img src="imgs/ru-flag.svg" width="44" height="30" alt=""></a>
+					<a href=""><img src="imgs/uk-flag.svg" width="44" height="30" alt=""></a>
+				</div>
+				<button class="header__fixed_burger modal-btn" data-open-modal="menu"><img width="33" height="17" src="imgs/burger.svg" alt=""></button>
+			</div>
+		</div>
+		</header>
+
+		<main class="swiper-container main" id="pages">
+			<div class="swiper-wrapper main__wrapper">
+				<section class="swiper-slide section article">
+					<article class="archive__wrapper">
+						<a href="" class="section__text--sm article-text-sm">
+							<img src="imgs/arrow-left.svg" alt="" /> Вернуться к архиву
+							новостей
+						</a>
+						<h1 class="section__title article__title">Заголовок новости</h1>
+
+						<time class="article__date">11.11.2020</time>
+
+						<img class="article__img" src="imgs/news-placeholder.jpg" alt="" />
+
+						<div class="article__content">
+							<p>
+								"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation ullamco laboris
+								nisi ut aliquip ex ea commodo consequat...
+							</p>
+							<p>
+								"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation ullamco laboris
+								nisi ut aliquip ex ea commodo consequat...
+							</p>
+							<p>
+								"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation ullamco laboris
+								nisi ut aliquip ex ea commodo consequat...
+							</p>
+						</div>
+
+						<div class="archive__blocks">
+							<span class="article__more">Другие новости</span>
+
+							<a href="" class="archive__item">
+								<img src="imgs/news-placeholder.jpg" alt="" />
+
+								<div class="archive__item_info">
+									<h2>Заголовок новости</h2>
+									<p>
+										"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+										sed do eiusmod tempor incididunt ut labore et dolore magna
+										aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+										ullamco laboris nisi ut aliquip ex ea commodo consequat...
+									</p>
+									<time datetime="01.11.2020">01.11.2020</time>
+								</div>
+							</a>
+
+							<a href="" class="archive__item">
+								<img src="imgs/news-placeholder.jpg" alt="" />
+
+								<div class="archive__item_info">
+									<h2>Заголовок новости</h2>
+									<p>
+										"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+										sed do eiusmod tempor incididunt ut labore et dolore magna
+										aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+										ullamco laboris nisi ut aliquip ex ea commodo consequat...
+									</p>
+									<time datetime="01.11.2020">01.11.2020</time>
+								</div>
+							</a>
+						</div>
+					</article>
+
+					<div class="section__footer fixed">
+						<div class="section__footer_inner">
+							<a href=""
+								><img
+									decoding="async"
+									width="96"
+									height="58"
+									src="imgs/logo-alt.svg"
+									alt=""
+							/></a>
+							<a href="" class="section__footer_privacy">
+								Политика конфиденциальности
+							</a>
+							<a href="" class="section__footer_dev">
+								<span>Разработано командой</span>
+								<img
+									decoding="async"
+									width="100"
+									height="24"
+									src="imgs/devs.svg"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="swiper-scrollbar"></div>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__inner">
+				<a href=""
+					><img
+						decoding="async"
+						width="96"
+						height="58"
+						src="imgs/logo-alt.svg"
+						alt=""
+				/></a>
+				<a
+					href=""
+					class="footer__privacy modal-btn"
+					data-open-modal="policy"
+				>
+					Политика конфиденциальности
+				</a>
+				<a href="" class="footer__dev">
+					<span>Разработано <br> командой</span>
+					<img
+						decoding="async"
+						width="100"
+						height="24"
+						src="imgs/devs.svg"
+						alt=""
+					/>
+				</a>
+			</div>
+		</footer>
+
+		<div class="popup find" role="dialog">
+			<div class="find__inner">
+				<button class="modal-close-btn">
+					<img src="imgs/close-sm.svg" alt="" />
+				</button>
+				<form action="" method="post" class="find__input">
+					<input
+						type="number"
+						name="loc-number"
+						placeholder="Введите номер отправки"
+						required
+					/>
+					<button type="submit">
+						<img src="imgs/search-red.svg" alt="" />
+					</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="modal location" role="dialog">
+			<div class="modal__inner">
+				<button class="modal-close-btn">
+					<img src="imgs/close.svg" alt="" />
+				</button>
+				<div class="modal__top">
+					<span class="modal__subtitle">Отправка №</span>
+					<span class="modal__title">12312321</span>
+				</div>
+
+				<div class="modal__content">
+					<span class="modal__text">Расположение:</span>
+					<span class="modal__response"
+						>поселок Галицкое, Павлодарская область. Граница Казахстана с
+						Россией</span
+					>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal question" role="dialog">
+			<div class="modal__inner">
+				<button class="modal-close-btn">
+					<img src="imgs/close.svg" alt="" />
+				</button>
+				<div class="modal__top">
+					<span class="modal__title">Оставьте заявку</span>
+				</div>
+
+				<div class="modal__content">
+					<span class="modal__text"
+						>Мы свяжемся с вами и проконсультируем по всем вопросам</span
+					>
+					<form action="" method="POST" class="modal__question_inputs">
+						<input
+							type="text"
+							name="name"
+							placeholder="Введите имя*"
+							required
+						/>
+						<input
+							type="tel"
+							name="phone"
+							placeholder="Введите телефон*"
+							required
+						/>
+						<input
+							type="email"
+							name="email"
+							placeholder="Введите E-mail*"
+							required
+						/>
+						<div class="section__button">
+							<button class="section__btn">
+								<img decoding="async" src="imgs/zayavka.svg" alt="" />
+								Оставить заявку
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal calc" role="dialog">
+			<div class="modal__inner">
+				<button class="modal-close-btn">
+					<img src="imgs/close.svg" alt="" />
+				</button>
+				<div class="modal__top">
+					<span class="modal__title"
+						>Получите просчет <br />
+						стоимости доставки</span
+					>
+				</div>
+
+				<div class="modal__content">
+					<span class="modal__text">Заполните поля в форме ниже</span>
+					<form action="" method="POST" class="modal__calc_inputs">
+						<div class="modal__calc_block">
+							<div class="modal__calc_input">
+								<span>Пункт погрузки</span>
+								<input
+									type="text"
+									name="pogruzka"
+									placeholder="Прим. Россия, г. Москва (в городе)"
+									required
+								/>
+							</div>
+
+							<div class="modal__calc_input">
+								<span>О грузе</span>
+								<input
+									type="text"
+									name="about"
+									placeholder="Прим. Вес 18 000 кг.,Объем 80 м.. ТНП"
+									required
+								/>
+							</div>
+
+							<div class="modal__calc_input">
+								<span>Имя</span>
+								<input
+									type="text"
+									name="name"
+									placeholder="Ваше имя"
+									required
+								/>
+							</div>
+
+							<div class="modal__calc_input">
+								<span>E-mail</span>
+								<input
+									type="email"
+									name="email"
+									placeholder="example@gmail.com"
+									required
+								/>
+							</div>
+						</div>
+
+						<img
+							class="modal__calc_arrow"
+							src="imgs/double-arrow.svg"
+							width="20"
+							height="22"
+							alt=""
+						/>
+
+						<div class="modal__calc_block">
+							<div class="modal__calc_input">
+								<span>Пункт выгрузки</span>
+								<input
+									type="text"
+									name="vigruzka"
+									placeholder="Прим. Казахстан, г. Алматы (область)"
+									required
+								/>
+							</div>
+
+							<div class="modal__calc_input">
+								<span>Планируемая дата погрузки</span>
+								<input
+									type="date"
+									name="date"
+									value="Выберите дату"
+									placeholder="Выберите дату"
+									required
+								/>
+							</div>
+
+							<div class="modal__calc_input">
+								<span>Телефон</span>
+								<input
+									type="tel"
+									name="phone"
+									placeholder="+7 (___) ___ - __ - __"
+									required
+								/>
+							</div>
+
+							<div class="section__button">
+								<button class="section__btn">
+									<img decoding="async" src="imgs/calc-w.svg" alt="" />
+									Рассчитать стоимость
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal policy" role="dialog">
+			<div class="modal__inner">
+				<button class="modal-close-btn">
+					<img src="imgs/close.svg" alt="" />
+				</button>
+				<div class="modal__top">
+					<span class="modal__title"
+						>Политика <br />
+						конфиденциальности</span
+					>
+				</div>
+
+				<div class="modal__content">
+					<p class="modal__privacy_text">
+						Соблюдение Вашей конфиденциальности важно для нашей компании.
+						Поэтому мы разработали Политику Конфиденциальности, которая
+						описывает, как используется и хранится Ваша информация. Пожалуйста,
+						ознакомьтесь и сообщите нам, если у Вас возникнут какие-либо
+						вопросы.
+					</p>
+
+					<span class="modal__privacy_subtitle"
+						>Сбор и использование персональной информации</span
+					>
+
+					<p class="modal__privacy_text">
+						Под персональной информацией понимаются данные, которые могут быть
+						использованы для идентификации определенного лица либо связи с ним.
+						От Вас может быть запрошено предоставление персональной информации в
+						любой момент, когда Вы связываетесь с нами.
+					</p>
+
+					<span class="modal__privacy_subtitle"
+						>Какую персональную информацию мы собираем
+					</span>
+
+					<p class="modal__privacy_text">
+						Когда Вы оставляете заявку на сайте, мы можем собирать различную
+						информацию, включая Ваше имя, номер телефона, адрес электронной
+						почты и т.д.
+					</p>
+
+					<span class="modal__privacy_subtitle"
+						>Как мы используем Вашу персональную информацию
+					</span>
+
+					<p class="modal__privacy_text">
+						Персональная информация позволяет нам сообщать об уникальных
+						предложениях, акциях и других мероприятиях и ближайших событиях.
+						Время от времени мы можем использовать Вашу персональную информацию
+						для отправки важных уведомлений и сообщений. Мы также можем
+						использовать персональную информацию для внутренних целей:
+						проведения аудита, анализа данных и различных исследований в целях
+						улучшения услуг. Если Вы принимаете участие в розыгрыше призов или
+						конкурсе, мы можем использовать информацию для управления такими
+						программами.
+					</p>
+
+					<span class="modal__privacy_subtitle">
+						Раскрытие информации третьим лицам
+					</span>
+
+					<p class="modal__privacy_text">
+						Мы не раскрываем полученную от Вас информацию третьим лицам.
+					</p>
+
+					<span class="modal__privacy_subtitle">Исключения</span>
+
+					<p class="modal__privacy_text">
+						В соответствии с законом, судебным порядком, в судебном
+						разбирательстве и/или на основании публичных запросов или запросов
+						от государственных органов на территории РК. Мы также можем
+						раскрывать информацию о Вас, если мы определим, что такое раскрытие
+						необходимо или уместно в целях безопасности, поддержания
+						правопорядка или иных общественно важных случаях. В случае
+						реорганизации, слияния или продажи мы можем передать собираемую нами
+						персональную информацию соответствующему третьему лицу –
+						правопреемнику.
+					</p>
+
+					<span class="modal__privacy_subtitle"
+						>Защита персональной информации
+					</span>
+
+					<p class="modal__privacy_text">
+						Мы предпринимаем меры предосторожности, включая административные,
+						технические и физические для защиты Вашей персональной информации от
+						утраты, кражи и недобросовестного использования, а также от
+						несанкционированного доступа, раскрытия, изменения и уничтожения.
+					</p>
+
+					<span class="modal__privacy_subtitle"
+						>Соблюдение Вашей конфиденциальности на уровне компании
+					</span>
+
+					<p class="modal__privacy_text">
+						Чтобы убедиться, что Ваша персональная информация находится в
+						безопасности, мы доводим нормы соблюдения конфиденциальности и
+						безопасности до наших сотрудников и строго следим за исполнением мер
+						соблюдения конфиденциальности.
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="popup menu" role="dialog">
+			<div class="menu__inner">
+				<div class="menu__top">
+					<div class="menu__langs">
+						<a href=""><img src="imgs/ru-flag.svg" width="44" height="30" alt=""></a>
+						<a href=""><img src="imgs/uk-flag.svg" width="44" height="30" alt=""></a>
+					</div>
+					<button class="modal-close-btn"><img src="imgs/close-menu.svg" alt=""></button>
+				</div>
+				<div class="menu__nav">
+					<a href="" class="nav__link">Главная</a>
+					<a href="" class="nav__link">Услуги</a>
+					<a href="" class="nav__link">О компании</a>
+					<a href="" class="nav__link">Отзывы</a>
+					<a href="" class="nav__link">Контакты</a>
+				</div>
+				<div class="header__contact">
+					<a href="tel:+77273467254"
+						><img
+							decoding="async"
+							width="18"
+							height="18"
+							src="imgs/phone.svg"
+							alt=""
+						/><span><strong>+7 727 346 72 54</strong></span></a
+					>
+					<a href=""
+						><img
+							decoding="async"
+							width="21"
+							height="21"
+							src="imgs/geo.svg"
+							alt=""
+						/><span>Алматы, мкр. Сайран, д.14, БЦ Азия-С</span></a
+					>
+				</div>
+			</div>
+		</div>
+
+		<div class="panel">
+			<div class="panel__inner">
+				<div class="panel__item modal-btn" data-open-modal="find">
+					<img width="20" height="20" src="imgs/search-red.svg" alt="">
+					<span>Отследить <br> груз</span>
+				</div>
+
+				<div class="panel__item modal-btn" data-open-modal="calc">
+					<img width="20" height="20" src="imgs/calc.svg" alt="">
+					<span>Рассчитать <br> отправку</span>
+				</div>
+
+				<div class="panel__item modal-btn" data-open-modal="question">
+					<img width="20" height="20" src="imgs/phone-red.svg" alt="">
+					<span>Связаться</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal-bg"></div>
+
+		<script src="js/lazyload.js"></script>
+		<script src="js/swiper.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

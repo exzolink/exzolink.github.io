@@ -13,6 +13,9 @@ if (document.querySelector(".main-slider__container") !== null) {
 	const mainSlider = new Swiper(".main-slider__container", {
 		slidesPerView: 1,
 		loop: true,
+		autoplay: {
+			delay: 2000,
+		},
 		pagination: {
 			el: ".swiper-pagination",
 			clickable: true,
@@ -85,6 +88,8 @@ const popups = document.querySelectorAll(".popupAuth__window");
 const cartBtn = document.querySelector("#panel-cart-btn");
 const basket = document.querySelector(".basket");
 const popupBg = document.querySelector(".popup-dark-bg");
+const mapPopup = document.querySelector(".map");
+// Корзина
 cartBtn.addEventListener("click", (e) => {
 	e.preventDefault();
 	basket.classList.toggle("active");
@@ -92,6 +97,10 @@ cartBtn.addEventListener("click", (e) => {
 	for (let i = 0; i < popups.length; i++) {
 		popups[i].classList.remove("active");
 	}
+
+	try {
+		mapPopup.classList.remove("active");
+	} catch (err) {}
 
 	if (window.innerWidth <= 600) {
 		if (cartBtn.classList.contains("active")) {
@@ -103,6 +112,7 @@ cartBtn.addEventListener("click", (e) => {
 	cartBtn.classList.toggle("active");
 });
 
+// Быстрый просмотр при клике
 const quickviewBtns = document.querySelectorAll(".sliders__quickview");
 const quickviewPopup = document.querySelector(".quickview");
 quickviewBtns.forEach((btn) => {
@@ -113,18 +123,21 @@ quickviewBtns.forEach((btn) => {
 	});
 });
 
+// Крестик в попапах
 closePopupBtns.forEach((btn) => {
 	btn.addEventListener("click", (e) => {
 		let closestPopup =
 			btn.closest(".popupAuth__window") ||
 			btn.closest(".basket") ||
-			btn.closest(".quickview");
+			btn.closest(".quickview") ||
+			btn.closest(".map");
 		closestPopup.classList.remove("active");
 		popupBg.classList.remove("active");
 		cartBtn.classList.remove("active");
 	});
 });
 
+// Закрывать попапы при клике на темный фон
 popupBg.addEventListener("click", () => {
 	for (let i = 0; i < popups.length; i++) {
 		popups[i].classList.remove("active");
@@ -133,6 +146,9 @@ popupBg.addEventListener("click", () => {
 	try {
 		quickviewPopup.classList.remove("active");
 	} catch (err) {}
+	try {
+		mapPopup.classList.remove("active");
+	} catch (err) {}
 
 	if (window.innerWidth <= 600) {
 		cartBtn.classList.remove("active");
@@ -140,6 +156,7 @@ popupBg.addEventListener("click", () => {
 	}
 });
 
+// Кнопки в попапе авторизации/регистрации (открытие окна, в зависимости от нажатой кнопки)
 const authBtns = document.querySelectorAll("#register-open, #login-open");
 
 authBtns.forEach((btn) => {
@@ -221,8 +238,8 @@ if (window.innerWidth > 600) {
 	});
 
 	headerBasketBtn.addEventListener("click", (e) => {
+		e.preventDefault();
 		if (headerBasketBtn.classList.contains("active")) {
-			e.preventDefault();
 			basket.classList.remove("active");
 			headerBasketBtn.classList.remove("active");
 		}
@@ -321,12 +338,20 @@ const catalogSelectors = document.querySelectorAll(".catalog__selectors_item");
 catalogSelectors.forEach((btn) => {
 	btn.addEventListener("click", (e) => {
 		e.preventDefault();
-
 		let btnInput = btn.querySelector("input");
 		btnInput.checked = !btnInput.checked;
 		btn.classList.toggle("active");
 	});
 });
+
+// Toggler последних заказов (страница "еще")
+const lastOrdersBtn = document.querySelector(".more__orders_last");
+const lastOrdersList = document.querySelector(".more__orders_list");
+try {
+	lastOrdersBtn.addEventListener("click", (e) => {
+		slideToggle(lastOrdersList, 300);
+	});
+} catch (err) {}
 
 if (document.querySelector(".product__main_container") !== null) {
 	const productThumbs = new Swiper(".product__thumbs_container", {
@@ -368,7 +393,14 @@ if (document.querySelector(".product__main_container") !== null) {
 			clickable: true,
 		},
 		breakpoints: {
-			1500: {},
+			320: {
+				slidesPerView: 'auto',
+				spaceBetween: 10,
+			},
+			600: {
+				slidesPerView: 1,
+				spaceBetween: 15,
+			}
 		},
 	});
 
@@ -401,6 +433,7 @@ if (document.querySelector(".product__main_container") !== null) {
 	productThumbs.controller.control = productMain;
 }
 
+// Развертывание описания на странице товара
 if (window.innerWidth <= 600) {
 	try {
 		new Readmore(".product__desc_text", {
@@ -409,31 +442,97 @@ if (window.innerWidth <= 600) {
 			lessLink: '<span class="product__desc_more">Скрыть описание</a>',
 			moreLink: '<span class="product__desc_more fade">Развернуть описание</a>',
 		});
-
-		const tabs = document.querySelectorAll(".product__tabs span");
-		const content = document.querySelectorAll(".product__tabs_content");
-		tabs.forEach((btn) => {
-			btn.addEventListener("click", () => {
-				let getID = btn.getAttribute("data-tab");
-				let getContent = document.querySelector("#" + getID);
-
-				if (!btn.classList.contains("active")) {
-					for (let i = 0; i < tabs.length; i++) {
-						tabs[i].classList.remove("active");
-					}
-					for (let i = 0; i < content.length; i++) {
-						content[i].classList.remove("active");
-					}
-					btn.classList.add("active");
-					getContent.classList.add("active");
-				} else {
-					return;
-				}
-			});
-		});
 	} catch (err) {}
 }
 
+// Переключение табов на страницах товара и оформления
+const tabs = document.querySelectorAll(
+	".product__tabs span, .checkout__labels_item",
+);
+const content = document.querySelectorAll(
+	".product__tabs_content, .checkout__fields",
+);
+tabs.forEach((btn) => {
+	btn.addEventListener("click", () => {
+		let getID = btn.dataset.tab;
+		let getClass = btn.className;
+		let getContent = document.querySelector("#" + getID);
+		console.log(getClass);
+
+		// Переключение табов оплаты
+		if (getClass.split(" ")[1] === "payment-btn") {
+			let paymentBtns = document.querySelectorAll(".payment-btn");
+			let paymentContent = btn
+				.closest(".checkout__order_block")
+				.querySelectorAll(".checkout__hint");
+
+			for (let i = 0; i < paymentContent.length; i++) {
+				paymentContent[i].classList.remove("active");
+			}
+
+			for (let i = 0; i < paymentBtns.length; i++) {
+				paymentBtns[i].classList.remove("active");
+			}
+
+			btn.classList.add("active");
+
+			getContent.classList.add("active");
+			return;
+		}
+
+		// Переключение табов доставки
+		if (getClass.split(" ")[0] === "checkout__labels_item") {
+			let deliveryBtns = btn
+				.closest(".checkout__order_block")
+				.querySelectorAll(".checkout__labels_item");
+			let checkoutFields = document.querySelectorAll(".checkout__fields input, .checkout__fields select");
+			let deliveryContent = btn
+				.closest(".checkout__order_block")
+				.querySelectorAll(".checkout__fields");
+			for (let i = 0; i < checkoutFields.length; i++) {
+				checkoutFields[i].disabled = true;
+			}
+
+			let currentFields = getContent.querySelectorAll("input, select");
+			for (let i = 0; i < currentFields.length; i++) {
+				currentFields[i].disabled = false;
+			}
+
+			for (let i = 0; i < deliveryBtns.length; i++) {
+				deliveryBtns[i].classList.remove("active");
+			}
+
+			for (let i = 0; i < deliveryContent.length; i++) {
+				deliveryContent[i].classList.remove("active");
+			}
+
+			getContent.classList.add("active");
+
+			btn.classList.add("active");
+			return;
+		}
+
+		// Переключение всех остальных табов
+		if (!btn.classList.contains("active")) {
+			for (let i = 0; i < tabs.length; i++) {
+				tabs[i].classList.remove("active");
+			}
+			for (let i = 0; i < content.length; i++) {
+				content[i].classList.remove("active");
+			}
+
+			try {
+				getContent.classList.add("active");
+			} catch (err) {}
+
+			btn.classList.add("active");
+		} else {
+			return;
+		}
+	});
+});
+
+// Код для фильтра --------------------------------------------------------------------
 try {
 	// Слайдер возраста (фильтр)
 	const sliderAge = document.getElementById("age-slider");
@@ -514,15 +613,13 @@ try {
 		".filters__reset, .filters__reset_mobile",
 	);
 	const filterPopup = document.querySelector(".filters__popup");
+	const filterCheckboxes = filterPopup.querySelectorAll(".filters__checkbox");
+	const filterSelectors = filterPopup.querySelectorAll(
+		".catalog__selectors_item",
+	);
 	resetFilter.forEach((btn) => {
 		btn.addEventListener("click", (e) => {
 			e.preventDefault();
-			const filterCheckboxes = filterPopup.querySelectorAll(
-				".filters__checkbox",
-			);
-			const filterSelectors = filterPopup.querySelectorAll(
-				".catalog__selectors_item",
-			);
 
 			for (let i = 0; i < filterCheckboxes.length; i++) {
 				filterCheckboxes[i].checked = false;
@@ -565,3 +662,49 @@ try {
 } catch (err) {
 	// console.log('Слайдеров нет')
 }
+// Код для фильтра --------------------------------------------------------------------
+
+function submitHandler(e) {
+	e.preventDefault();
+
+	var request = new XMLHttpRequest();
+	request.onreadystatechange = function () {
+		// Если все нужные данные введены и форма успешно отправлена
+		if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+			for (let i = 0; i < popups.length; i++) {
+				popups[i].classList.remove("active");
+			}
+			document.querySelector("#new-form").classList.add("active");
+		}
+	};
+
+	request.open(this.method, this.action, true);
+
+	var data = new FormData(this);
+	request.send(data);
+}
+
+// Слушатель отправки для формы Восстановления пароля
+document
+	.querySelector("#restore-pass")
+	.addEventListener("submit", submitHandler);
+
+const checkoutDate = document.querySelectorAll(".checkout__date");
+const checkoutDateOptions = document.querySelectorAll(
+	".checkout__date_options span",
+);
+
+// Выбор ближайшей даты на странице оформления
+try {
+	customSelect('.checkout__date')
+} catch(err) {}
+
+// Попап с картой
+const mapBtns = document.querySelectorAll(".checkout__onmap_button");
+mapBtns.forEach((btn) => {
+	btn.addEventListener("click", (e) => {
+		e.preventDefault();
+		mapPopup.classList.add("active");
+		popupBg.classList.add("active");
+	});
+});
