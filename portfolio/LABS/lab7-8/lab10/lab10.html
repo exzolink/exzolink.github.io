@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ЛР 10</title>
+	</head>
+	<body>
+		<!-- Атрибут required проверяет input на пустоту -->
+		<form id="contact" class="form" action="lab10.php" method="POST">
+			<input
+				id="input-name"
+				name="user_name"
+				type="text"
+				placeholder="Укажите ваше имя"
+				required
+			/>
+			<input
+				id="input-tel"
+				name="user_phone"
+				type="tel"
+				placeholder="Телефон"
+				required
+			/>
+			<textarea
+				input="input-comment"
+				id="user_comment"
+				name="user_comment"
+				placeholder="Оставьте ваш комментарий"
+				required
+			></textarea>
+			<button id="btn_submit" type="submit">
+				Отправить
+			</button>
+
+			<span id="result"></span>
+		</form>
+
+		<script>
+
+			// Получаем все элементы через атрибут id
+			const form = document.getElementById("contact");
+			const inputName = document.getElementById("input-name");
+			const inputTel = document.getElementById("input-name");
+			const textareaComment = document.getElementById("input-name");
+
+
+			// Элемент для вывода ошибки
+			const resultEl = document.getElementById("result");
+
+
+			// Слушаем событие отправки формы
+			form.addEventListener("submit", (e) => {
+
+				// Проверка на пустоту в полях ввода (если условие не выполнено - форма отправляется на сервер)
+				if (
+					inputName.value === "" ||
+					inputTel.value === "" ||
+					textareaComment.value === ""
+				) {
+
+					// Если хоть одно поле пустое - отменяем отправку и выводим ошибку
+					e.preventDefault();
+					resultEl.textContent = "Некоторые поля не заполнены";
+				}
+			});
+		</script>
+	</body>
+</html>

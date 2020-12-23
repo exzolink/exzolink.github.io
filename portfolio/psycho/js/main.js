@@ -2,17 +2,25 @@ const menuBtn = document.querySelector(".header__burger img");
 const menu = document.querySelector(".header__menu");
 let htmlEl = document.documentElement;
 
+const postMapClose = document.querySelector('.postMap__close');
+const postMapEl = document.querySelector('.postMap__wrapper')
+if (postMapClose) {
+postMapClose.addEventListener('click', () => {
+	postMapEl.classList.remove('active');
+})
+}
+
 menuBtn.addEventListener("click", () => {
 	htmlEl.classList.toggle("no-scroll");
-	console.log(htmlEl);
 	menu.classList.toggle("active");
 
 	if (menuBtn.classList.contains("opened")) {
 		menuBtn.classList.remove("opened");
-		menuBtn.src = "imgs/burger.svg";
+		menuBtn.src = "imgs/XB.gif";
 	} else {
 		menuBtn.classList.add("opened");
-		menuBtn.src = "imgs/close.svg";
+		menuBtn.src = "imgs/BX.gif";
+
 	}
 });
 
@@ -49,7 +57,8 @@ if (document.querySelector(".product") !== null) {
 		slidesPerSlide: 1,
 		breakpoints: {
 			320: {
-				slidesPerView: 2,
+				slidesPerView: 3,
+				spaceBetween: 12,
 				navigation: {
 					nextEl: ".product__thumbs_next",
 					prevEl: ".product__thumbs_prev",
@@ -131,30 +140,41 @@ document.addEventListener("click", (e) => {
 	}
 });
 
-const alertEl = document.querySelector(
-	".alerts__block",
-);
+try {
+	const alertEl = document.querySelector(".alerts__block");
 	alertEl.addEventListener("click", (e) => {
 		alertEl.remove();
 	});
+} catch (err) {}
 
 const checkoutAlert = document.getElementsByClassName(
 	"woocommerce-NoticeGroup-checkout",
 );
 
-console.log(checkoutAlert);
 for (let i = 0; i < checkoutAlert.length; i++) {
-	checkoutAlert[i].addEventListener('click', (e) => {
+	checkoutAlert[i].addEventListener("click", (e) => {
 		e.remove();
-	})
+	});
 }
 
-
-document.addEventListener('click', (e) => {
-	let checkoutAlert = document.querySelector('.woocommerce-NoticeGroup-checkout');
+document.addEventListener("click", (e) => {
+	let checkoutAlert = document.querySelector(
+		".woocommerce-NoticeGroup-checkout",
+	);
 	console.log(e.target);
 	if (e.target === checkoutAlert) {
 		checkoutAlert.remove();
 		return;
 	}
-})
+});
+
+const aboutMore = document.querySelector('.about__more');
+if (aboutMore) {
+	aboutMore.addEventListener('click', () => {
+		let aboutHiddenEls = document.querySelectorAll('.about__ul');
+		for (let i = 0; i < aboutHiddenEls.length; i++) {
+			aboutHiddenEls[i].classList.remove('about__ul');
+		}
+		aboutMore.closest('.about__more_wrapper').remove();
+	})
+}

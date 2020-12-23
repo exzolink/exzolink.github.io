@@ -2,6 +2,22 @@
 	width: 0 !important;
 }
 
+.woocommerce-terms-and-conditions-checkbox-text {
+	color: #828282;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	display: block;
+	margin-left: 15px;
+	text-align: left;
+	cursor: pointer;
+}
+
+#payment .woocommerce-form__label {
+	display: flex;
+	margin-top: 21px;
+	cursor: pointer;
+}
+
 .modal-basket {
 	background-color: rgba(25, 25, 25, 0.75);
 	position: fixed;
@@ -16,6 +32,21 @@
 	opacity: 0;
 	visibility: collapse;
 	transition: opacity 0.3s ease, visibility 0.3s ease;
+
+	& select,
+	& input:not([type="checkbox"]) {
+		color: #606060;
+		padding: 20px 30px;
+		width: 100%;
+		font-size: 12px;
+		resize: none;
+		border: 0;
+		max-height: 57px;
+		font-family: "Open Sans", sans-serif;
+		box-shadow: none;
+		background-color: #f2f2f2;
+		transition: background 0.3s ease;
+	}
 
 	&.active {
 		opacity: 1;
@@ -131,6 +162,7 @@
 			flex-direction: column;
 			align-items: flex-end;
 			flex-basis: 50%;
+			margin-top: -2px;
 		}
 
 		&_price {
@@ -153,7 +185,7 @@
 		max-width: 300px;
 		width: 100%;
 		margin: 0 auto;
-		margin-top: 50px;
+		margin-top: 40px;
 	}
 
 	&__inputs {
@@ -181,7 +213,8 @@
 			font-family: "Open Sans", sans-serif;
 			color: #828282;
 			text-align: left;
-			margin-top: 10px;
+			margin-top: 5px;
+			display: block;
 		}
 
 		&_input {
@@ -219,6 +252,44 @@
 	}
 }
 
+#mailpoet_woocommerce_checkout_optin {
+	appearance: none;
+	min-width: 20px;
+	pointer-events: none;
+	max-width: 20px;
+	cursor: pointer;
+	height: 20px;
+	position: relative;
+	border: 2px solid #660000;
+	border-radius: 2px;
+	transition: background-color 0.2s ease;
+
+	&:before {
+		position: absolute;
+		content: "";
+		display: block;
+		top: 0.5px;
+		left: 5px;
+		width: 6.5px;
+		height: 11px;
+		border-style: solid;
+		border-color: #fff;
+		border-width: 0 2px 2px 0;
+		transform: rotate(45deg);
+		opacity: 0;
+		transition: all 0.1s ease;
+	}
+
+	
+	&:checked {
+		background-color: #660000;
+
+		&:before {
+			opacity: 1;
+		}
+	}
+}
+
 .px-35 {
 	padding-left: 35px;
 	padding-right: 35px;
@@ -249,12 +320,7 @@
 			padding-right: 15px;
 		}
 
-		&__price {
-			font-size: 16px;
-		}
-
 		&__desc {
-			font-size: 14px;
 			margin-top: 5px;
 			margin-bottom: 15px;
 		}
@@ -270,10 +336,6 @@
 				width: 100px;
 				height: 100px;
 			}
-		}
-
-		&__text {
-			font-size: 16px;
 		}
 
 		&__total {
@@ -316,5 +378,20 @@
 	& ins {
 		text-decoration: none;
 	}
+}
 
+#billing_city_field,
+#billing_address_1_field,
+#billing_address_2_field {
+	margin-top: 10px;
+
+	& span {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 601px) {
+	.modal-basket__close {
+		display: none;
+	}
 }
