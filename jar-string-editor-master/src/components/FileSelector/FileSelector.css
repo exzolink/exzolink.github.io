@@ -1,0 +1,34 @@
+.file-selector .drag-area {
+  margin: auto;
+
+  width: 50%;
+  height: 200px;
+
+  background: white;
+  box-shadow: 0 1px 6px 0 rgba(13, 13, 14, 0.1);
+
+  text-align: center;
+  padding: 70px;
+  cursor: pointer;
+
+  user-select: none;
+
+  transition: box-shadow 0.3s ease;
+}
+.file-selector .drag-area:hover {
+  box-shadow: 0 1px 6px 0 rgba(13, 13, 14, 0.3);
+}
+.file-selector .drag-area:focus {
+  box-shadow: 0 1px 6px 0 rgba(13, 13, 14, 0.4);
+  outline: none;
+}
+.file-selector .drag-area p {
+  padding-top: 10px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.file-selector p.msg-danger {
+  color: rgb(245, 78, 78);
+}
+.file-selector input[type=file] {
+  display: none;
+}

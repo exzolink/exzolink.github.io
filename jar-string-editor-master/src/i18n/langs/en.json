@@ -1,0 +1,40 @@
+{
+  "file_selector": {
+    "select": "Click to select a JAR file or drag it here.",
+    "failed_to_load": "Failed to load the selected file.",
+    "not_a_jar_file": "The selected file is not a valid jar file.",
+    "loading": "Loading file..."
+  },
+  "settings": {
+    "select_language": "Select language",
+    "hide_empty_strings": "Hide empty strings.",
+    "title": "Settings",
+    "apply": "Apply",
+    "sort_by_context": {
+      "desc": "Order by relevance",
+      "order_desc": "Order of relevance:",
+      "order_item": {
+        "send_message": "SendMessage - The messages sent to a player.",
+        "item_display_name": "ItemDisplayName - The display name of an item."
+      }
+    },
+    "general": "General",
+    "bukkit_specific": "Bukkit-specific",
+    "debounce_rate": "Search refresh rate (ms)"
+  },
+  "app": {
+    "collecting_strings": "Collecting strings... {{progress}}% ({{numDone}}/{{numClasses}} classes)",
+    "created_by": "Created with a lot of {{coffee}} by {{link}}.",
+    "search": "Search",
+    "save": "Save",
+    "strings_info": "{{found}} strings found | {{after_filter}} after filter ({{took}}ms)",
+    "string_info": {
+      "class": "Class: {{className}}",
+      "method": "Method: {{method}}",
+      "line": "Line Number: {{lineNumber}}",
+      "context": "Context: {{context}}"
+    },
+    "load_more": "Load more",
+    "view_class_file": "Open class file on JDec"
+  }
+}

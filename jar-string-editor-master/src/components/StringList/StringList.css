@@ -1,0 +1,16 @@
+.strings-container {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.string-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.load-more-btn-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}

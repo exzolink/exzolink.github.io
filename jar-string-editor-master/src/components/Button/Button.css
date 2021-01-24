@@ -1,0 +1,27 @@
+
+.default-button {
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+
+  border: 1px solid rgb(69, 69, 245);
+  background: rgb(69, 69, 245);
+  border-radius: 4px;
+}
+
+.default-button.btn-large {
+  padding: 10px 35px;
+}
+
+.default-button:disabled {
+  opacity: .5;
+}
+
+.default-button:focus, .default-button:hover:not(:disabled) {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(160, 160, 160, 0.397);
+}
+
+.default-button:active {
+  background: rgba(69, 69, 245, .9);
+}
