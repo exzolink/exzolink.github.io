@@ -1,0 +1,150 @@
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+		Arial, sans-serif;
+	margin: auto;
+	background-color: #222;
+	color: #fff;
+	position: relative;
+	font-size: 14px;
+	user-select: none;
+	cursor: default;
+}
+
+body::-webkit-scrollbar {
+	width: 0;
+}
+
+.wrapper {
+	max-width: 500px;
+	padding: 32px;
+	margin: 0 auto;
+}
+
+.tabs {
+	max-width: 500px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tab {
+	width: 100%;
+	text-align: center;
+	padding: 12px;
+	padding-bottom: 14px;
+	background-color: #444;
+	font-size: 12px;
+	border-bottom: 2px solid transparent;
+}
+
+.tab.active {
+	border-color: #80a3dd;
+}
+
+.tab:hover {
+	background-color: #333;
+}
+
+.window {
+	display: none;
+}
+
+.window.active {
+	display: block;
+}
+
+::selection {
+	color: #fff;
+	background-color: #80a3dd;
+}
+
+label {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15px;
+}
+
+label:last-child {
+	margin-bottom: 0;
+}
+
+label span {
+	font-size: 14px;
+	margin-bottom: 8px;
+	display: block;
+}
+
+.form-control {
+	background-color: #fff;
+	outline: none;
+	box-shadow: none;
+	border: none;
+	font-family: inherit;
+	border-radius: 5px;
+	font-size: 14px;
+	padding: 4px;
+	border: 2px solid transparent;
+	resize: none;
+	height: 25px;
+}
+
+textarea {
+	height: 60px !important;
+}
+
+.form-control:focus {
+	border-color: #80a3dd;
+}
+
+.button__wrapper {
+	display: flex;
+	justify-content: center;
+	margin-top: 25px;
+}
+
+.button__wrapper button {
+	border-radius: 5px;
+	width: 200px;
+	padding: 10px 0;
+	padding-top: 8px;
+	font-family: inherit;
+	background-color: #444;
+	outline: none;
+	box-shadow: none;
+	color: #fff;
+	border: 2px solid transparent;
+}
+
+.button__wrapper button:hover {
+	border-color: #80a3dd;
+}
+
+.button__wrapper button.active {
+	animation: btnActive 8s forwards;
+}
+
+@keyframes btnActive {
+	0% {
+		pointer-events: none;
+		background-color: #555;
+	}
+	100% {
+		pointer-events: all;
+		background-color: #444;
+	}
+}
+
+#alert {
+	display: block;
+	text-align: center;
+	margin-top: 15px;
+}
+
+#alert.orange {
+	color: orange;
+}
+
+#alert.blue {
+	color: #80a3dd;
+}

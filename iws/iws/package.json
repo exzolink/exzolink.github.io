@@ -1,0 +1,72 @@
+{
+	"name": "IWS",
+	"productName": "IWS",
+	"version": "1.0.1",
+	"description": "IWS (exzolink's App)",
+	"main": "src/index.js",
+	"scripts": {
+		"start": "electron-forge start",
+		"package": "electron-forge package",
+		"make": "electron-forge make",
+		"publish": "electron-forge publish",
+		"lint": "echo \"No linting configured\"",
+		"pack": "electron-builder --dir",
+		"dist": "electron-builder"
+	},
+	"build": {
+		"asar": true,
+		"asarUnpack": "node_modules/puppeteer/.local-chromium/**/*",
+		"appId": "IWS",
+		"mac": {
+			"category": "Study"
+		}
+	},
+	"keywords": [],
+	"author": {
+		"name": "exzolink",
+		"email": "exzolink@gmail.com"
+	},
+	"license": "MIT",
+	"config": {
+		"forge": {
+			"packagerConfig": {},
+			"makers": [
+				{
+					"name": "@electron-forge/maker-squirrel",
+					"config": {
+						"name": "IWS"
+					}
+				},
+				{
+					"name": "@electron-forge/maker-zip",
+					"platforms": [
+						"darwin"
+					]
+				},
+				{
+					"name": "@electron-forge/maker-deb",
+					"config": {}
+				},
+				{
+					"name": "@electron-forge/maker-rpm",
+					"config": {}
+				}
+			]
+		}
+	},
+	"dependencies": {
+		"asar": "^3.0.3",
+		"electron-squirrel-startup": "^1.0.0",
+		"node-cron": "^2.0.3",
+		"puppeteer": "^7.1.0"
+	},
+	"devDependencies": {
+		"@electron-forge/cli": "^6.0.0-beta.54",
+		"@electron-forge/maker-deb": "^6.0.0-beta.54",
+		"@electron-forge/maker-rpm": "^6.0.0-beta.54",
+		"@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+		"@electron-forge/maker-zip": "^6.0.0-beta.54",
+		"electron": "^11.2.3",
+		"electron-builder": "^22.9.1"
+	}
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>I Wanna Sleep</title>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+		<div class="tabs">
+			<div class="tab active" data-tab="login">Данные для входа</div>
+			<div class="tab" data-tab="settings">Настройка сообщения</div>
+		</div>
+		<div class="wrapper">
+			<div class="window active login" id="login">
+				<label class="label__wrapper">
+					<span>Номер зачетки:</span>
+					<input type="number" class="form-control" id="input-zachetka" />
+				</label>
+
+				<label class="label__wrapper">
+					<span>Фамилия:</span>
+					<input type="text" class="form-control" id="input-surname" />
+				</label>
+
+				<label class="label__wrapper">
+					<span>Имя:</span>
+					<input type="text" class="form-control" id="input-name" />
+				</label>
+
+				<label class="label__wrapper">
+					<span>Пароль:</span>
+					<input type="text" class="form-control" id="input-pass" />
+				</label>
+			</div>
+
+			<div class="window settings" id="settings">
+				<label class="label__wrapper">
+					<span>Во сколько написать:</span>
+					<input type="time" class="form-control" id="input-time" />
+				</label>
+
+				<label class="label__wrapper">
+					<span>ФИО преподавателя:</span>
+					<input type="text" class="form-control" id="input-fio" />
+				</label>
+
+				<label class="label__wrapper">
+					<span>Сообщение:</span>
+					<textarea
+						type="text"
+						class="form-control"
+						id="input-msg"
+						rows="4"
+					></textarea>
+				</label>
+
+				<div class="button__wrapper">
+					<button>Включить ожидание</button>
+				</div>
+
+				<span id="alert"></span>
+			</div>
+		</div>
+
+		<script src="renderer.js"></script>
+	</body>
+</html>
