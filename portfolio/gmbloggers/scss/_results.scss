@@ -1,0 +1,270 @@
+.container-results {
+	max-width: 1335px;
+}
+
+.results {
+	background-color: #1b1b1b;
+
+	&__inner {
+		padding-top: 70px;
+		padding-bottom: 115px;
+	}
+
+	&__title {
+		width: auto !important;
+	}
+
+	&__tabs {
+		display: flex;
+		align-items: center;
+		margin: 0 60px;
+		overflow-x: auto;
+		scrollbar-width: none;
+
+		&::-webkit-scrollbar {
+			width: 0;
+		}
+	}
+
+	&__tab {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: inline-block;
+		min-width: 310px;
+		padding: 32px;
+		padding-left: 36px;
+		font-size: 32px;
+		line-height: 1;
+		font-weight: 500;
+		color: #8f8f8f;
+		font-family: "Acrom", sans-serif;
+		max-width: 310px;
+		width: 100%;
+		cursor: pointer;
+		transition: color 0.3s ease, background 0.3s ease;
+
+		&:hover {
+			color: #fff;
+		}
+
+		&.active {
+			cursor: default;
+			color: #fff;
+			border-top-left-radius: 4px;
+			border-top-right-radius: 4px;
+			background-color: #1f0f3b;
+		}
+	}
+}
+
+.results {
+	&__slider {
+		&_wrapper {
+			padding: 0 60px;
+			position: relative;
+			display: none;
+
+			&.active {
+				display: flex;
+			}
+
+			& .swiper-button-next,
+			.swiper-button-prev {
+				color: #fff;
+			}
+
+			& .swiper-button-disabled {
+				opacity: 1;
+				pointer-events: all;
+				cursor: pointer;
+			}
+		}
+
+		background-color: #1f0f3b;
+		width: 100%;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+		padding: 40px;
+		padding-bottom: 45px;
+	}
+}
+
+.results {
+	&__slide {
+		&_bloger {
+			display: flex;
+			align-items: center;
+			margin-bottom: 23px;
+
+			& img {
+				width: 80px;
+				height: 80px;
+				object-fit: cover;
+			}
+
+			& span {
+				font-weight: 500;
+				font-size: 14px;
+
+				margin-left: 15px;
+			}
+		}
+
+		& iframe,
+		& blockquote {
+			min-width: auto !important;
+			width: 100% !important;
+			height: 405px !important;
+			margin: 0 !important;
+			margin-bottom: 28px !important;
+		}
+
+		&_btn {
+			display: flex;
+			justify-content: center;
+			padding-bottom: 2px;
+			& button {
+				width: 95%;
+				padding: 11px 18px;
+				padding-bottom: 13px;
+				color: #fff;
+				text-decoration: none;
+				font-family: inherit;
+				font-size: 16px;
+				border: 1px solid #fff;
+				border-radius: 50px;
+				cursor: pointer;
+				background-color: transparent;
+				-webkit-transition: background 0.3s ease, color 0.3s ease;
+				transition: background 0.3s ease, color 0.3s ease;
+
+				&:hover {
+					background-color: #fff;
+					color: #000;
+				}
+			}
+		}
+
+		&_iframe {
+			position: relative;
+
+			&:before {
+				content: "";
+				position: absolute;
+				height: 100%;
+				left: 0;
+				top: 0;
+				width: 10%;
+				z-index: 2;
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				height: 100%;
+				right: 0;
+				top: 0;
+				width: 10%;
+				z-index: 2;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.results {
+		&__slide {
+			& iframe,
+			& blockquote {
+				height: 460px !important;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.results {
+		&__inner {
+			padding-top: 40px;
+			padding-bottom: 80px;
+		}
+
+		&__slider {
+			padding: 24px;
+
+			&_wrapper {
+				padding: 0;
+
+				& .swiper-button-prev,
+				& .swiper-button-next {
+					display: none;
+				}
+			}
+		}
+
+		&__slide {
+			& iframe,
+			& blockquote {
+				height: 520px !important;
+			}
+		}
+
+		&__tabs {
+			margin: 0;
+		}
+
+		&__tab {
+			padding: 24px;
+			font-size: 24px;
+			min-width: 240px;
+			max-width: 240px;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.results {
+		&__tab {
+			font-size: 20px;
+			padding: 20px;
+			min-width: 170px;
+			max-width: 170px;
+		}
+
+		&__slide {
+			& iframe,
+			& blockquote {
+				height: 600px !important;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.results {
+		&__inner {
+			padding-top: 40px;
+			padding-bottom: 50px;
+		}
+		&__tab {
+			font-size: 18px;
+			padding: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: 415px) {
+	.results {
+		&__tab {
+			min-width: calc(100vw / 2 - 15px);
+			max-width: calc(100vw / 2 - 15px);
+		}
+
+		&__slide {
+			& iframe,
+			& blockquote {
+				height: 535px !important;
+			}
+		}
+	}
+}
