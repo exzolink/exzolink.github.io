@@ -193,7 +193,7 @@ resultsTabs.forEach((tab) => {
 });
 
 resultsBlock.addEventListener(
-	"mouseover",
+	"click",
 	async function () {
 		var response = await fetch("./statsPopup.html");
 		const responseText = await response.text();
