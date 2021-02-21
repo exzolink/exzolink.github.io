@@ -22,8 +22,6 @@ var Popup = document.querySelectorAll(".popup");
 var formSource = document.querySelector("#source");
 var resultsBlock = document.querySelector(".results");
 var statsPopup = document.querySelector("#stats-popup");
-var statsSlider = document.querySelectorAll(".stats-popup__block");
-var statsSliderContainer = document.querySelectorAll(".stats-popup__container");
 var statsBtns = document.querySelectorAll(".results__slide_button");
 
 closePrivacy.onclick = function () {
@@ -213,6 +211,8 @@ resultsBlock.addEventListener(
 				prevEl: ".prev",
 			},
 		});
+
+		var statsSlider = document.querySelectorAll(".stats-popup__block");
 
 		statsBtns.forEach(function (btn) {
 			btn.addEventListener("click", function () {
