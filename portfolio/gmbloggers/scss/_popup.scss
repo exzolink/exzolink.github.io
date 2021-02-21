@@ -116,6 +116,55 @@
     }
 }
 
+.stats-popup {
+	&__wrapper {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 90%;
+		max-height: 90%;
+	}
+
+	&__block {
+		position: relative;
+
+		& img {
+			position: initial !important;
+			opacity: 1 !important;
+			cursor: default;
+		}
+	}
+
+	&__block {
+		padding: 0 60px;
+		display: none;
+
+		&.active {
+			display: block;
+		}
+
+		& .swiper-button-next, & .swiper-button-prev {
+			color: #fff;
+		}
+	}
+
+	&__container {
+		max-width: 600px;
+	}
+
+	&__slide {
+		border-radius: 5px;
+		max-width: 600px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+
+		& img {
+			width: 100%;
+		}
+	}
+}
 
 @media screen and (max-width: 950px) {
     .popup {

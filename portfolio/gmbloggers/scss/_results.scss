@@ -3,6 +3,8 @@
 }
 
 .results {
+	position: relative;
+	z-index: 2;
 	background-color: #1b1b1b;
 
 	&__inner {
@@ -15,6 +17,7 @@
 	}
 
 	&__tabs {
+		position: relative;
 		display: flex;
 		align-items: center;
 		margin: 0 60px;
@@ -171,12 +174,46 @@
 	}
 }
 
+.results {
+	& .particle {
+		position: absolute;
+
+		&-1 {
+			top: -150px;
+			left: -60px;
+		}
+
+		&-2 {
+			bottom: 100px;
+			left: 0;
+			transform: rotate(180deg);
+		}
+
+		&-3 {
+			right: 0;
+			bottom: 35%;
+			transform: rotate(180deg);
+		}
+
+		&-4 {
+			left: 270px;
+			top: 290px;
+		}
+	}
+}
+
 @media screen and (max-width: 1300px) {
 	.results {
 		&__slide {
 			& iframe,
 			& blockquote {
 				height: 460px !important;
+			}
+		}
+
+		& .particle {
+			&-1 {
+				display: none;
 			}
 		}
 	}
@@ -235,6 +272,25 @@
 			& iframe,
 			& blockquote {
 				height: 600px !important;
+			}
+		}
+
+		& .particle {
+			&-2 {
+				max-width: 75px;
+				bottom: 20px;
+			}
+
+			&-3 {
+				max-width: 80px;
+				bottom: 50%;
+			}
+
+			&-4 {
+				left: 0;
+				transform: rotate(180deg);
+				top: 100px;
+				max-width: 70px;
 			}
 		}
 	}
