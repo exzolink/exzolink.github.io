@@ -201,9 +201,15 @@
 
 @media screen and (max-width: 600px) {
 	.stats-popup {
+		&__wrapper {
+			display: flex;
+			justify-content: center;
+		}
+
 		&__slide {
 			min-width: 250px;
 		}
+
 		&__block {
 			min-width: 370px;
 
@@ -212,6 +218,7 @@
 				font-size: 32px !important;
 			}
 		}
+
 		&__container {
 			min-width: 250px;
 		}
