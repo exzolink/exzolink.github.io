@@ -183,6 +183,12 @@
             width: 58%;
         }
     }
+
+		.stats-popup__block {
+			& img {
+				max-width: none !important;
+			}
+		}
 }
 
 @media screen and (max-width: 700px) {
