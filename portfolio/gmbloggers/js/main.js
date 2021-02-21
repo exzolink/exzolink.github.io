@@ -12,7 +12,6 @@ var openPrivacy = document.getElementById("privacy");
 var Privacy = document.querySelector(".privacy");
 var closeCall = document.getElementById("close-call");
 var closeConsult = document.getElementById("close-consult");
-var closeStats = document.getElementById("close-stats");
 var openPopup = document.querySelectorAll(
 	".blogers__btn_price, .blogers__btn_call, .nav__order, .footer__button",
 );
@@ -199,7 +198,7 @@ resultsBlock.addEventListener(
 	"mouseover",
 	async function () {
 		await fetch("./statsPopup.html")
-			.then((response) => response.text())
+			.then((response) => await response.text())
 			.then((html) => {
 				statsPopup.innerHTML = html;
 			});
@@ -241,6 +240,7 @@ resultsBlock.addEventListener(
 			});
 		});
 
+		var closeStats = document.getElementById("close-stats");
 		closeStats.onclick = function (e) {
 			e.preventDefault();
 			statsPopup.classList.toggle("open");
