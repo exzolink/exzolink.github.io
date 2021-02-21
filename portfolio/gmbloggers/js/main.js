@@ -231,8 +231,9 @@ async function statsPopupInit() {
 				for (var i = 0; i < statsSliders.length; i++) {
 					statsSliders[i].setTranslate(0);
 					statsSliders[i].slideTo(0);
+					statsSliders[i].update();
 				}
-			}, 50);
+			}, 100);
 		});
 	});
 
