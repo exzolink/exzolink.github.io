@@ -197,11 +197,9 @@ resultsTabs.forEach((tab) => {
 resultsBlock.addEventListener(
 	"mouseover",
 	async function () {
-		await fetch("./statsPopup.html")
-			.then((response) => await response.text())
-			.then((html) => {
-				statsPopup.innerHTML = html;
-			});
+		var response = await fetch("./statsPopup.html");
+		const responseText = await response.text();
+		statsPopup.innerHTML = responseText;
 
 		var statsSliders = new Swiper(".stats-popup__container", {
 			slidesPerView: "auto",
