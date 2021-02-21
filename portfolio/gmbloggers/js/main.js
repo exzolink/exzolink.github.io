@@ -192,57 +192,55 @@ resultsTabs.forEach((tab) => {
 	});
 });
 
-resultsBlock.addEventListener(
-	"mousemove",
-	async function () {
-		var response = await fetch("./statsPopup.html");
-		const responseText = await response.text();
-		statsPopup.innerHTML = responseText;
+async function statsPopupInit() {
+	var response = await fetch("./statsPopup.html");
+	const responseText = await response.text();
+	statsPopup.innerHTML = responseText;
 
-		var statsSliders = new Swiper(".stats-popup__container", {
-			slidesPerView: "auto",
-			centeredSlides: true,
-			autoHeight: true,
-			observer: true,
-			observeParents: true,
-			spaceBetween: 40,
-			navigation: {
-				nextEl: ".next",
-				prevEl: ".prev",
-			},
-		});
+	var statsSliders = new Swiper(".stats-popup__container", {
+		slidesPerView: "auto",
+		centeredSlides: true,
+		autoHeight: true,
+		observer: true,
+		observeParents: true,
+		spaceBetween: 40,
+		navigation: {
+			nextEl: ".next",
+			prevEl: ".prev",
+		},
+	});
 
-		var statsSlider = document.querySelectorAll(".stats-popup__block");
+	var statsSlider = document.querySelectorAll(".stats-popup__block");
 
-		statsBtns.forEach(function (btn) {
-			btn.addEventListener("click", function () {
-				const blogerId = btn.closest(".results__slide").dataset.bloger;
-				if (!blogerId) return;
+	statsBtns.forEach(function (btn) {
+		btn.addEventListener("click", function () {
+			const blogerId = btn.closest(".results__slide").dataset.bloger;
+			if (!blogerId) return;
 
-				statsPopup.classList.add("open");
-				for (var i = 0; i < statsSlider.length; i++) {
-					statsSlider[i].classList.remove("active");
+			statsPopup.classList.add("open");
+			for (var i = 0; i < statsSlider.length; i++) {
+				statsSlider[i].classList.remove("active");
+			}
+			document
+				.querySelector(`.stats-popup__block[data-bloger="${blogerId}"]`)
+				.classList.add("active");
+
+			setTimeout(() => {
+				var event = new Event("resize", { bubbles: true, cancelable: true });
+				document.documentElement.dispatchEvent(event);
+				for (var i = 0; i < statsSliders.length; i++) {
+					statsSliders[i].setTranslate(0);
+					statsSliders[i].slideTo(0);
 				}
-				document
-					.querySelector(`.stats-popup__block[data-bloger="${blogerId}"]`)
-					.classList.add("active");
-
-				setTimeout(() => {
-					var event = new Event("resize", { bubbles: true, cancelable: true });
-					document.documentElement.dispatchEvent(event);
-					for (var i = 0; i < statsSliders.length; i++) {
-						statsSliders[i].setTranslate(0);
-						statsSliders[i].slideTo(0);
-					}
-				}, 50);
-			});
+			}, 50);
 		});
+	});
 
-		var closeStats = document.getElementById("close-stats");
-		closeStats.onclick = function (e) {
-			e.preventDefault();
-			statsPopup.classList.toggle("open");
-		};
-	},
-	{ once: true },
-);
+	var closeStats = document.getElementById("close-stats");
+	closeStats.onclick = function (e) {
+		e.preventDefault();
+		statsPopup.classList.toggle("open");
+	};
+}
+
+resultsBlock.addEventListener('pointermove', statsPopupInit, {once: true})
