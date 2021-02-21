@@ -202,10 +202,9 @@
 @media screen and (max-width: 600px) {
 	.stats-popup {
 		&__slide {
-			min-width: 300px;
+			min-width: 250px;
 		}
 		&__block {
-			padding: 0 30px;
 			& .swiper-button-next::after, .swiper-button-prev::after {
 				font-size: 32px !important;
 			}
