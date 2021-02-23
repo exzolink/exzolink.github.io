@@ -115,6 +115,15 @@
 	}
 }
 
+#stats-popup {
+	overflow-y: auto;
+	scrollbar-width: none;
+
+	&::-webkit-scrollbar {
+		width: 0;
+	}
+}
+
 .stats-popup {
 	&__wrapper {
 		position: absolute;
@@ -150,12 +159,12 @@
 	}
 
 	&__container {
-		max-width: 600px;
+		max-width: 450px;
 	}
 
 	&__slide {
 		border-radius: 5px;
-		max-width: 600px;
+		max-width: 450px;
 		width: 100%;
 		display: flex;
 		justify-content: center;
