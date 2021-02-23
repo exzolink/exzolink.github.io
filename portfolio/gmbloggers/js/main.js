@@ -244,4 +244,4 @@ async function statsPopupInit() {
 	};
 }
 
-resultsBlock.addEventListener('pointermove', statsPopupInit, {once: true})
+resultsBlock.addEventListener("pointermove", statsPopupInit, { once: true });
