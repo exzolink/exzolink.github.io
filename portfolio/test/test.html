@@ -2,11 +2,11 @@
 <html dir="rtl" lang="ar">
   <head>
    <meta charset="utf-8"/>
-   <meta name="viewport" content="min-width=device-min-width, initial-scale=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>مباريات المتنافسين - السعودية 2020-2021</title>
 	<style>
 	html, 
-	body {height:100%; padding:0; margin:0; min-width:100%;}
+	body {height:100%; padding:0; margin:0; width:100%;}
 	body {display:flex; flex-direction:column;}	
 	body {
 		background: url(logo.png) repeat !important;
@@ -24,21 +24,18 @@
 	}
 	
 	#main {
-
 		overflow-x: auto;
-
 	}
 
 	table {
 		position: relative;
-		
 	}
 	
 	table.display {
 		margin: 5px;
 		/*position: relative;*/
 		border: 0;
-		min-width: 520px;
+		width: 520px;
 		border-spacing: 2px;
 		border-collapse: separate;
 		font-size: 0.90em;
@@ -46,7 +43,7 @@
 	}
 
 	table.colors {
-		min-width: 100%;
+		width: 100%;
 		table-layout: fixed;
 		border-spacing: 5px;
 		margin-bottom: 3px;
@@ -64,19 +61,12 @@
 	}
 
 	th.team {
-		min-width: 100px;
-	}
-
-	thead {
-			position: -webkit-sticky;
-		  position: sticky;
-			top: 0;
-			left: 0;
+		width: 100px;
 	}
 
 	thead th {
-		/*	position: -webkit-sticky;
-		position: sticky; */
+		position: -webkit-sticky;
+		position: sticky;
 		top: 0;
 		border: 1px solid #bababa;
 		background: rgba(238, 238, 238);
@@ -85,20 +75,20 @@
 	}
 
 	thead th:first-child {
-		min-width: 60px;
+		width: 60px;
 		right: 0;
 		z-index: 2;
 	}
 
 	thead th:nth-child(2) {
-		min-width: 60px;
+		width: 60px;
 		right: 60px;
 		z-index: 2;
 	}
 
 	tbody th:first-child {
-		/* position: -webkit-sticky;
-		position: sticky; */
+		position: -webkit-sticky;
+		position: sticky;
 		right: 0;
 		z-index: 1;
 		background: #fff;		
@@ -106,8 +96,8 @@
 	}
 
 	tbody th:nth-child(2) {
-	/*	position: -webkit-sticky;
-		position: sticky; */
+		position: -webkit-sticky;
+		position: sticky;
 		right: 60px;
 		z-index: 1;
 		background: #ccc;
