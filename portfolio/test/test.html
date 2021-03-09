@@ -2,11 +2,11 @@
 <html dir="rtl" lang="ar">
   <head>
    <meta charset="utf-8"/>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="min-width=device-min-width, initial-scale=1">
     <title>مباريات المتنافسين - السعودية 2020-2021</title>
 	<style>
 	html, 
-	body {height:100%; padding:0; margin:0; width:100%;}
+	body {height:100%; padding:0; margin:0; min-width:100%;}
 	body {display:flex; flex-direction:column;}	
 	body {
 		background: url(logo.png) repeat !important;
@@ -23,17 +23,13 @@
 		border-top: 1px solid #bbb;
 	}
 	
-	#main {
-		flex-grow:1;
-		overflow: scroll;
 
-	}
 	
 	table.display {
 		margin: 5px;
 		/*position: relative;*/
 		border: 0;
-		width: 520px;
+		min-width: 520px;
 		border-spacing: 2px;
 		border-collapse: separate;
 		font-size: 0.90em;
@@ -41,7 +37,7 @@
 	}
 
 	table.colors {
-		width: 100%;
+		min-width: 100%;
 		table-layout: fixed;
 		border-spacing: 5px;
 		margin-bottom: 3px;
@@ -59,7 +55,7 @@
 	}
 
 	th.team {
-		width: 100px;
+		min-width: 100px;
 	}
 
 	thead {
@@ -80,13 +76,13 @@
 	}
 
 	thead th:first-child {
-		width: 60px;
+		min-width: 60px;
 		right: 0;
 		z-index: 2;
 	}
 
 	thead th:nth-child(2) {
-		width: 60px;
+		min-width: 60px;
 		right: 60px;
 		z-index: 2;
 	}
