@@ -7,14 +7,13 @@
 	<meta name="description" property="description" content="Event Tickets WordPress Theme">
 	<title>TicketBox</title>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link rel="stylesheet" href="content/plugins/revslider/public/assets/css/rs6.css?ver=6.0.9">
-	<link rel="stylesheet" href="content/themes/ticketbox/assets/css/bootstrap.min.css?ver=3.3.5">
-	<link rel="stylesheet" href="content/plugins/dawnthemes/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0">
-	<link rel="stylesheet" href="content/themes/ticketbox/assets/lib/magnific-popup/magnific-popup.css?ver=5.4.1">
-	<link rel="stylesheet" href="content/themes/ticketbox/assets/lib/owlcarousel/owl.carousel.css?ver=2.3.2">
-	<link rel="stylesheet" href="content/themes/ticketbox/assets/css/woocommerce.min.css?ver=1.2.9.7">
-	<link rel="stylesheet" href="content/themes/ticketbox/assets/css/style.min.css?ver=1.2.9.7">
-	<link rel="stylesheet" href="content/plugins/js_composer/assets/css/js_composer.min.css?ver=6.0.3">
+	<link rel="stylesheet" href="content/plugins/revslider/public/assets/css/rs6.css">
+	<link rel="preload" class="lazy-el" as="style" href="content/themes/ticketbox/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="content/plugins/dawnthemes/assets/lib/font-awesome/css/font-awesome.min.css">
+	<link rel="preload" class="lazy-el" as="style" href="content/themes/ticketbox/assets/lib/magnific-popup/magnific-popup.css">
+	<link rel="stylesheet" href="content/themes/ticketbox/assets/lib/owlcarousel/owl.carousel.css">
+	<link rel="stylesheet" href="content/themes/ticketbox/assets/css/style.min.css">
+	<link rel="preload" class="lazy-el" as="style" href="content/plugins/js_composer/assets/css/js_composer.min.css">
 	<link rel="icon" href="content/uploads/2017/03/favicon.png" sizes="32x32">
 	<link rel="icon" href="content/uploads/2017/03/favicon.png" sizes="192x192">
 	<link rel="apple-touch-icon" href="content/uploads/2017/03/favicon.png">
@@ -61,17 +60,6 @@
 									</div>
 								</div>
 							</li>
-							<li>
-								<ul id="ticketbox-header-minicart" class="header-minicart">
-									<li class="minicart"><a class="cart-contents" href="cart/" title="View your shopping cart"><span class="count">0</span></a></li>
-									<li>
-										<div class="widget woocommerce widget_shopping_cart">
-											<div class="widget_shopping_cart_content"></div>
-										</div>
-									</li>
-								</ul>
-							</li>
-							<li></li>
 						</ul>
 					</div>
 				</div>
@@ -199,25 +187,25 @@
 				<rs-module-wrap id="rev_slider_2_1_wrapper" data-source="gallery" style="background:0 0;padding:0">
 					<rs-module id="rev_slider_2_1" style="display:none" data-version="6.0.9">
 						<rs-slides>
-							<rs-slide data-key="rs-7" data-title="Slide" data-thumb="content/uploads/2016/12/ticketbox-100x50.jpg" data-anim="ei:d;eo:d;s:d;r:0;t:cube;sl:d;" data-firstanim="t:fade;s:300;sl:7;" data-mediafilter="perpetua"><img decoding="async" src="content/uploads/2016/12/ticketbox.jpg" title="Home" data-lazyload="content/uploads/2016/12/ticketbox.jpg" data-parallax="3" class="rev-slidebg" data-no-retina>
+							<rs-slide data-key="rs-7" data-title="Slide" data-thumb="content/uploads/2016/12/ticketbox-100x50.jpg" data-anim="ei:d;eo:d;s:d;r:0;t:cube;sl:d;" data-firstanim="t:fade;s:300;sl:7;" data-mediafilter="perpetua"><img decoding="async" data-src="content/uploads/2016/12/ticketbox.jpg" title="Home" data-lazyload="content/uploads/2016/12/ticketbox.jpg" data-parallax="3" class="rev-slidebg lazyload" data-no-retina>
 								<rs-layer id="slider-2-slide-7-layer-1" class="rs-pxl-4" data-type="text" data-color="rgba(255, 255, 255, 1)" data-xy="x:c;y:m;yo:-63px,-70px,-70px,-100px;" data-text="w:normal;s:60,60,40,20;l:70,70,50,30;fw:700;a:center;" data-dim="w:993px,640,480px,300px;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="y:20px;sX:0.9;sY:0.9;tp:600;" data-frame_1="tp:600;e:Power4.easeOut;st:500;sp:1000;sR:500;" data-frame_999="o:0;tp:600;e:nothing;st:w;sR:3500;" style="z-index:5;font-family:Lato;letter-spacing:10px">TICKETBOX
 									<br>EVENTS & TICKETS</rs-layer>
 								<rs-layer id="slider-2-slide-7-layer-2" class="rs-pxl-4" data-type="text" data-color="rgba(255, 255, 255, 1)" data-xy="x:c;y:m;yo:44px,57px,39px,0;" data-text="w:normal;s:17,17,17,15;l:26,26,26,24;a:center;" data-dim="w:720px,480px,480px,300px;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="y:10px;sX:0.9;sY:0.9;tp:600;" data-frame_1="tp:600;e:Power4.easeOut;st:700;sp:1000;sR:700;" data-frame_999="o:0;tp:600;e:nothing;st:w;sR:3300;" style="z-index:6;font-family:Lato">Post-ironic authentic drinking vinegar chambray quinoa. VHS letterpress sriracha, tacos skateboard migas farm-to-table artisan kombucha.</rs-layer>
 								<rs-layer id="slider-2-slide-7-layer-4" class="rev-btn rs-pxl-4" data-type="button" data-color="rgba(0, 0, 0, 1)" data-xy="x:c;y:m;yo:133px,159px,141px,102px;" data-text="s:15;l:40;fw:700;" data-actions="o:click;a:scrollbelow;sp:300;e:Linear.easeNone;" data-rsp_o="off" data-rsp_bd="off" data-padding="r:30;l:30;" data-frame_0="y:20px;sX:0.9;sY:0.9;tp:600;" data-frame_1="tp:600;e:Power4.easeOut;st:900;sp:1000;sR:900;" data-frame_999="o:0;tp:600;e:nothing;st:w;sR:3100;" data-frame_hover="c:#000;bgc:#eee;boc:#000;bor:0px,0px,0px,0px;bos:solid;oX:50;oY:50;sp:0;" style="z-index:7;background-color:rgba(255,255,255,1);font-family:Lato;cursor:pointer;outline:0;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box">READ MORE</rs-layer>
 							</rs-slide>
-							<rs-slide data-key="rs-8" data-title="Slide" data-thumb="content/uploads/2017/03/stage_essence_fest-100x50.jpg" data-anim="ei:d;eo:d;s:d;r:0;t:cube;sl:d;"><img decoding="async" src="content/uploads/2017/03/stage_essence_fest.jpg" title="Home" data-lazyload="content/uploads/2017/03/stage_essence_fest.jpg" data-parallax="3" class="rev-slidebg" data-no-retina>
+							<rs-slide data-key="rs-8" data-title="Slide" data-thumb="content/uploads/2017/03/stage_essence_fest-100x50.jpg" data-anim="ei:d;eo:d;s:d;r:0;t:cube;sl:d;"><img decoding="async" data-src="content/uploads/2017/03/stage_essence_fest.jpg" title="Home" data-lazyload="content/uploads/2017/03/stage_essence_fest.jpg" data-parallax="3" class="rev-slidebg lazyload" data-no-retina>
 								<rs-layer id="slider-2-slide-8-layer-1" class="rs-pxl-4" data-type="text" data-color="rgba(255, 255, 255, 1)" data-xy="x:c;y:m;yo:-70px,-70px,-70px,-100px;" data-text="w:normal;s:60,60,40,20;l:70,70,50,30;fw:700;a:center;" data-dim="w:1085px,640,480px,300px;h:147px,auto,auto,auto;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="y:20px;sX:0.9;sY:0.9;tp:600;" data-frame_1="tp:600;e:Power4.easeOut;st:500;sp:1000;sR:500;" data-frame_999="o:0;tp:600;e:nothing;st:w;sR:3500;" style="z-index:5;font-family:Lato;letter-spacing:10px">SELLING
 									<br>CONCERT TICKETS</rs-layer>
 								<rs-layer id="slider-2-slide-8-layer-2" class="rs-pxl-4" data-type="text" data-color="rgba(255, 255, 255, 1)" data-xy="x:c;y:m;yo:44px,57px,39px,0;" data-text="w:normal;s:17,17,17,15;l:26,26,26,24;a:center;" data-dim="w:720px,480px,480px,300px;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="y:10px;sX:0.9;sY:0.9;tp:600;" data-frame_1="tp:600;e:Power4.easeOut;st:700;sp:1000;sR:700;" data-frame_999="o:0;tp:600;e:nothing;st:w;sR:3300;" style="z-index:6;font-family:Lato">Post-ironic authentic drinking vinegar chambray quinoa. VHS letterpress sriracha, tacos skateboard migas farm-to-table artisan kombucha.</rs-layer>
 								<rs-layer id="slider-2-slide-8-layer-4" class="rev-btn rs-pxl-4" data-type="button" data-color="rgba(0, 0, 0, 1)" data-xy="x:c;y:m;yo:133px,159px,141px,102px;" data-text="s:15;l:40;fw:700;" data-actions="o:click;a:scrollbelow;sp:300;e:Linear.easeNone;" data-rsp_o="off" data-rsp_bd="off" data-padding="r:30;l:30;" data-frame_0="y:20px;sX:0.9;sY:0.9;tp:600;" data-frame_1="tp:600;e:Power4.easeOut;st:900;sp:1000;sR:900;" data-frame_999="o:0;tp:600;e:nothing;st:w;sR:3100;" data-frame_hover="c:#000;bgc:#eee;boc:#000;bor:0px,0px,0px,0px;bos:solid;oX:50;oY:50;sp:0;" style="z-index:7;background-color:rgba(255,255,255,1);font-family:Lato;cursor:pointer;outline:0;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box">READ MORE</rs-layer>
 							</rs-slide>
-							<rs-slide data-key="rs-9" data-title="Slide" data-thumb="content/uploads/2016/12/78459379-100x50.jpg" data-anim="ei:d;eo:d;s:d;r:0;t:cube;sl:d;"><img decoding="async" src="content/uploads/2016/12/78459379.jpg" title="Home" data-lazyload="content/uploads/2016/12/78459379.jpg" data-parallax="3" class="rev-slidebg" data-no-retina>
+							<rs-slide data-key="rs-9" data-title="Slide" data-thumb="content/uploads/2016/12/78459379-100x50.jpg" data-anim="ei:d;eo:d;s:d;r:0;t:cube;sl:d;"><img decoding="async" data-src="content/uploads/2016/12/78459379.jpg" title="Home" data-lazyload="content/uploads/2016/12/78459379.jpg" data-parallax="3" class="rev-slidebg lazyload" data-no-retina>
 								<rs-layer id="slider-2-slide-9-layer-1" class="rs-pxl-4" data-type="text" data-color="rgba(255, 255, 255, 1)" data-xy="x:c;y:m;yo:-70px,-70px,-70px,-100px;" data-text="w:normal;s:60,60,40,20;l:70,70,50,30;fw:700;a:center;" data-dim="w:720px,640,480px,300px;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="y:20px;sX:0.9;sY:0.9;tp:600;" data-frame_1="tp:600;e:Power4.easeOut;st:500;sp:1000;sR:500;" data-frame_999="o:0;tp:600;e:nothing;st:w;sR:3500;" style="z-index:5;font-family:Lato;letter-spacing:10px">EVENT
 									<br>TICKETS</rs-layer>
 								<rs-layer id="slider-2-slide-9-layer-2" class="rs-pxl-4" data-type="text" data-color="rgba(255, 255, 255, 1)" data-xy="x:c;y:m;yo:44px,57px,39px,0;" data-text="w:normal;s:17,17,17,15;l:26,26,26,24;a:center;" data-dim="w:720px,480px,480px,300px;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="y:10px;sX:0.9;sY:0.9;tp:600;" data-frame_1="tp:600;e:Power4.easeOut;st:700;sp:1000;sR:700;" data-frame_999="o:0;tp:600;e:nothing;st:w;sR:3300;" style="z-index:6;font-family:Lato">Post-ironic authentic drinking vinegar chambray quinoa. VHS letterpress sriracha, tacos skateboard migas farm-to-table artisan kombucha.</rs-layer>
 								<rs-layer id="slider-2-slide-9-layer-4" class="rev-btn rs-pxl-4" data-type="button" data-color="rgba(0, 0, 0, 1)" data-xy="x:c;y:m;yo:133px,159px,141px,102px;" data-text="s:15;l:40;fw:700;" data-actions="o:click;a:scrollbelow;sp:300;e:Linear.easeNone;" data-rsp_o="off" data-rsp_bd="off" data-padding="r:30;l:30;" data-frame_0="y:20px;sX:0.9;sY:0.9;tp:600;" data-frame_1="tp:600;e:Power4.easeOut;st:900;sp:1000;sR:900;" data-frame_999="o:0;tp:600;e:nothing;st:w;sR:3100;" data-frame_hover="c:#000;bgc:#eee;boc:#000;bor:0px,0px,0px,0px;bos:solid;oX:50;oY:50;sp:0;" style="z-index:7;background-color:rgba(255,255,255,1);font-family:Open Sans;cursor:pointer;outline:0;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box">READ MORE</rs-layer>
 							</rs-slide>
-							<rs-slide data-key="rs-10" data-title="Slide" data-thumb="content/uploads/2016/12/3358802-low-strictly-come-dancing-2012-100x50.jpg" data-anim="ei:d;eo:d;s:d;r:0;t:cube;sl:d;" data-mediafilter="xpro2"><img decoding="async" src="content/uploads/2016/12/3358802-low-strictly-come-dancing-2012.jpg" title="Home" data-lazyload="content/uploads/2016/12/3358802-low-strictly-come-dancing-2012.jpg" data-parallax="3" class="rev-slidebg" data-no-retina>
+							<rs-slide data-key="rs-10" data-title="Slide" data-thumb="content/uploads/2016/12/3358802-low-strictly-come-dancing-2012-100x50.jpg" data-anim="ei:d;eo:d;s:d;r:0;t:cube;sl:d;" data-mediafilter="xpro2"><img decoding="async" data-src="content/uploads/2016/12/3358802-low-strictly-come-dancing-2012.jpg" title="Home" data-lazyload="content/uploads/2016/12/3358802-low-strictly-come-dancing-2012.jpg" data-parallax="3" class="rev-slidebg lazyload" data-no-retina>
 								<rs-layer id="slider-2-slide-10-layer-1" class="rs-pxl-4" data-type="text" data-color="#ffffff||rgba(255, 255, 255, 1)||rgba(255, 255, 255, 1)||rgba(255, 255, 255, 1)" data-xy="x:c;y:m;yo:-70px,-70px,-70px,-100px;" data-text="w:normal;s:60,60,40,20;l:70,70,50,30;fw:700;a:center;" data-dim="w:720px,640,480px,300px;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="y:20px;sX:0.9;sY:0.9;tp:600;" data-frame_1="tp:600;e:Power4.easeOut;st:500;sp:1000;sR:500;" data-frame_999="o:0;tp:600;e:nothing;st:w;sR:3500;" style="z-index:5;font-family:Lato;letter-spacing:10px">SPORTS
 									<br>TICKETS</rs-layer>
 								<rs-layer id="slider-2-slide-10-layer-2" class="rs-pxl-4" data-type="text" data-color="rgba(255, 255, 255, 1)" data-xy="x:c;xo:-1px,0,0,0;y:m;yo:46px,57px,39px,0;" data-text="w:normal;s:17,17,17,15;l:26,26,26,24;a:center;" data-dim="w:720px,480px,480px,300px;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="y:10px;sX:0.9;sY:0.9;tp:600;" data-frame_1="tp:600;e:Power4.easeOut;st:700;sp:1000;sR:700;" data-frame_999="o:0;tp:600;e:nothing;st:w;sR:3300;" style="z-index:6;font-family:Lato">Post-ironic authentic drinking vinegar chambray quinoa. VHS letterpress sriracha, tacos skateboard migas farm-to-table artisan kombucha.</rs-layer>
@@ -320,7 +308,7 @@
 																						<div class="ticketbox-carousel-slide owl-carousel ticketbox-preload" data-autoplay="true" data-dots="1" data-items="2" data-nav="0" data-rtl="0">
 																							<article class="event-item">
 																								<div class="event-item-feature">
-																									<a href="event/rock-concert/" title="Rock Concert"><img decoding="async" src="content/uploads/2016/12/suspendisse-555x300.jpg" width="555" height="300" title="Rock Concert" alt="Rock Concert" srcset="content/uploads/2016/12/suspendisse-555x300.jpg 1x , content/uploads/2016/12/suspendisse-1110x600.jpg 2x"></a>
+																									<a href="event/rock-concert/" title="Rock Concert"><img decoding="async" class="lazyload" data-src="content/uploads/2016/12/suspendisse-555x300.jpg" width="555" height="300" title="Rock Concert" alt="Rock Concert" srcset="content/uploads/2016/12/suspendisse-555x300.jpg 1x , content/uploads/2016/12/suspendisse-1110x600.jpg 2x"></a>
 																									<div class="event-item-feature-meta clearfix">
 																										<div class="event-item-location"><i class="fa fa-map-marker"></i>
 																											<div class="tribe-events-venue-details"><a href="venue/doug-fir-lounge/" title="Doug Fir Lounge">Doug Fir Lounge</a>, <span class="tribe-address"><span class="tribe-street-address">830 E. Burnside St.</span>
@@ -345,7 +333,7 @@
 																							</article>
 																							<article class="event-item">
 																								<div class="event-item-feature">
-																									<a href="event/revealed-through-dear-abortive-walking/" title="Revealed through dear abortive walking ..."><img decoding="async" src="content/uploads/2017/03/Holi-Festival-555x300.png" width="555" height="300" title="Revealed through dear abortive walking ..." alt="Revealed through dear abortive walking ..." srcset="content/uploads/2017/03/Holi-Festival-555x300.png 1x , content/uploads/2017/03/Holi-Festival.png 2x"></a>
+																									<a href="event/revealed-through-dear-abortive-walking/" title="Revealed through dear abortive walking ..."><img decoding="async" class="lazyload" data-src="content/uploads/2017/03/Holi-Festival-555x300.png" width="555" height="300" title="Revealed through dear abortive walking ..." alt="Revealed through dear abortive walking ..." srcset="content/uploads/2017/03/Holi-Festival-555x300.png 1x , content/uploads/2017/03/Holi-Festival.png 2x"></a>
 																									<div class="event-item-feature-meta clearfix">
 																										<div class="event-item-location"><i class="fa fa-map-marker"></i>
 																											<div class="tribe-events-venue-details"><a href="venue/art-institute-of-chicago/" title="Art Institute of Chicago">Art Institute of Chicago</a>, <span class="tribe-address"><span class="tribe-street-address">111 S Michigan Ave</span>
@@ -370,7 +358,7 @@
 																							</article>
 																							<article class="event-item">
 																								<div class="event-item-feature">
-																									<a href="event/bombastic-fuzzy-numbly-precise-ape/" title="Bombastic fuzzy numbly precise ape ..."><img decoding="async" src="content/uploads/2017/03/pexels-photo-29021-555x300.jpg" width="555" height="300" title="Bombastic fuzzy numbly precise ape ..." alt="Bombastic fuzzy numbly precise ape ..." srcset="content/uploads/2017/03/pexels-photo-29021-555x300.jpg 1x , content/uploads/2017/03/pexels-photo-29021-1110x600.jpg 2x"></a>
+																									<a href="event/bombastic-fuzzy-numbly-precise-ape/" title="Bombastic fuzzy numbly precise ape ..."><img decoding="async" class="lazyload" data-src="content/uploads/2017/03/pexels-photo-29021-555x300.jpg" width="555" height="300" title="Bombastic fuzzy numbly precise ape ..." alt="Bombastic fuzzy numbly precise ape ..." srcset="content/uploads/2017/03/pexels-photo-29021-555x300.jpg 1x , content/uploads/2017/03/pexels-photo-29021-1110x600.jpg 2x"></a>
 																									<div class="event-item-feature-meta clearfix">
 																										<div class="event-item-location"><i class="fa fa-map-marker"></i>
 																											<div class="tribe-events-venue-details"><a href="venue/san-diego-zoo/" title="San Diego Zoo">San Diego Zoo</a>, <span class="tribe-address"><span class="tribe-street-address">2920 Zoo Drive</span>
@@ -395,7 +383,7 @@
 																							</article>
 																							<article class="event-item">
 																								<div class="event-item-feature">
-																									<a href="event/unlike-swore-found-along-some-according/" title="Unlike swore found along some according..."><img decoding="async" src="content/uploads/2017/03/ticketbox-unlike-dummy-555x300.jpg" width="555" height="300" title="Unlike swore found along some according..." alt="Unlike swore found along some according..." srcset="content/uploads/2017/03/ticketbox-unlike-dummy-555x300.jpg 1x , content/uploads/2017/03/ticketbox-unlike-dummy-1110x600.jpg 2x"></a>
+																									<a href="event/unlike-swore-found-along-some-according/" title="Unlike swore found along some according..."><img decoding="async" class="lazyload" data-src="content/uploads/2017/03/ticketbox-unlike-dummy-555x300.jpg" width="555" height="300" title="Unlike swore found along some according..." alt="Unlike swore found along some according..." srcset="content/uploads/2017/03/ticketbox-unlike-dummy-555x300.jpg 1x , content/uploads/2017/03/ticketbox-unlike-dummy-1110x600.jpg 2x"></a>
 																									<div class="event-item-feature-meta clearfix">
 																										<div class="event-item-location"><i class="fa fa-map-marker"></i>
 																											<div class="tribe-events-venue-details"><a href="venue/krispy-kreme/" title="Krispy Kreme">Krispy Kreme</a>, <span class="tribe-address"><span class="tribe-street-address">6935 South Lindbergh</span>
@@ -420,7 +408,7 @@
 																							</article>
 																							<article class="event-item">
 																								<div class="event-item-feature">
-																									<a href="event/linkin-park-live-at-the-small-of-asia-arena/" title="Linkin park Live at the small of asia arena"><img decoding="async" src="content/uploads/2016/10/Linkin-Park-Info-Linkin-Park-555x300.jpg" width="555" height="300" title="Linkin park Live at the small of asia arena" alt="Linkin park Live at the small of asia arena" srcset="content/uploads/2016/10/Linkin-Park-Info-Linkin-Park-555x300.jpg 1x , content/uploads/2016/10/Linkin-Park-Info-Linkin-Park-1110x600.jpg 2x"></a>
+																									<a href="event/linkin-park-live-at-the-small-of-asia-arena/" title="Linkin park Live at the small of asia arena"><img decoding="async" class="lazyload" data-src="content/uploads/2016/10/Linkin-Park-Info-Linkin-Park-555x300.jpg" width="555" height="300" title="Linkin park Live at the small of asia arena" alt="Linkin park Live at the small of asia arena" srcset="content/uploads/2016/10/Linkin-Park-Info-Linkin-Park-555x300.jpg 1x , content/uploads/2016/10/Linkin-Park-Info-Linkin-Park-1110x600.jpg 2x"></a>
 																									<div class="event-item-feature-meta clearfix">
 																										<div class="event-item-location"><i class="fa fa-map-marker"></i>
 																											<div class="tribe-events-venue-details"><a href="venue/art-institute-of-chicago/" title="Art Institute of Chicago">Art Institute of Chicago</a>, <span class="tribe-address"><span class="tribe-street-address">111 S Michigan Ave</span>
@@ -446,7 +434,7 @@
 																							</article>
 																							<article class="event-item">
 																								<div class="event-item-feature">
-																									<a href="event/farmers-market/" title="Farmer’s Market"><img decoding="async" src="content/uploads/2016/12/01-disco-music-event-underground--555x300.jpg" width="555" height="300" title="Farmer’s Market" alt="Farmer’s Market" srcset="content/uploads/2016/12/01-disco-music-event-underground--555x300.jpg 1x , content/uploads/2016/12/01-disco-music-event-underground--960x600.jpg 2x"></a>
+																									<a href="event/farmers-market/" title="Farmer’s Market"><img decoding="async" class="lazyload" data-src="content/uploads/2016/12/01-disco-music-event-underground--555x300.jpg" width="555" height="300" title="Farmer’s Market" alt="Farmer’s Market" srcset="content/uploads/2016/12/01-disco-music-event-underground--555x300.jpg 1x , content/uploads/2016/12/01-disco-music-event-underground--960x600.jpg 2x"></a>
 																									<div class="event-item-feature-meta clearfix">
 																										<div class="event-item-location"><i class="fa fa-map-marker"></i>
 																											<div class="tribe-events-venue-details"><a href="venue/bamboo-fresh/" title="Bamboo Fresh">Bamboo Fresh</a>, <span class="tribe-address"><span class="tribe-street-address">655 Front St. #108</span>
@@ -497,7 +485,7 @@
 																						<div class="ticketbox-carousel-slide owl-carousel ticketbox-preload" data-autoplay="true" data-dots="0" data-nav="1" data-items="3" data-rtl="0">
 																							<article class="event-item">
 																								<div class="event-item-feature">
-																									<a href="event/late-night-party/" title="Late Night Party"><img decoding="async" src="content/uploads/2016/12/rock-show-360x200.jpg" width="360" height="200" title="Late Night Party" alt="Late Night Party" srcset="content/uploads/2016/12/rock-show-360x200.jpg 1x , content/uploads/2016/12/rock-show-612x600.jpg 2x">
+																									<a href="event/late-night-party/" title="Late Night Party"><img decoding="async" class="lazyload" data-src="content/uploads/2016/12/rock-show-360x200.jpg" width="360" height="200" title="Late Night Party" alt="Late Night Party" srcset="content/uploads/2016/12/rock-show-360x200.jpg 1x , content/uploads/2016/12/rock-show-612x600.jpg 2x">
 																										<div class="event-date"><span class="date">2</span><span class="month">Aug</span></div>
 																									</a>
 																								</div>
@@ -524,7 +512,7 @@
 																							</article>
 																							<article class="event-item">
 																								<div class="event-item-feature">
-																									<a href="event/revealed-through-dear-abortive-walking/" title="Revealed through dear abortive walking ..."><img decoding="async" src="content/uploads/2017/03/Holi-Festival-360x200.png" width="360" height="200" title="Revealed through dear abortive walking ..." alt="Revealed through dear abortive walking ..." srcset="content/uploads/2017/03/Holi-Festival-360x200.png 1x , content/uploads/2017/03/Holi-Festival.png 2x">
+																									<a href="event/revealed-through-dear-abortive-walking/" title="Revealed through dear abortive walking ..."><img decoding="async" class="lazyload" data-src="content/uploads/2017/03/Holi-Festival-360x200.png" width="360" height="200" title="Revealed through dear abortive walking ..." alt="Revealed through dear abortive walking ..." srcset="content/uploads/2017/03/Holi-Festival-360x200.png 1x , content/uploads/2017/03/Holi-Festival.png 2x">
 																										<div class="event-date"><span class="date">30</span><span class="month">Dec</span></div>
 																									</a>
 																								</div>
@@ -551,7 +539,7 @@
 																							</article>
 																							<article class="event-item">
 																								<div class="event-item-feature">
-																									<a href="event/bombastic-fuzzy-numbly-precise-ape/" title="Bombastic fuzzy numbly precise ape ..."><img decoding="async" src="content/uploads/2017/03/pexels-photo-29021-360x200.jpg" width="360" height="200" title="Bombastic fuzzy numbly precise ape ..." alt="Bombastic fuzzy numbly precise ape ..." srcset="content/uploads/2017/03/pexels-photo-29021-360x200.jpg 1x , content/uploads/2017/03/pexels-photo-29021-1110x600.jpg 2x">
+																									<a href="event/bombastic-fuzzy-numbly-precise-ape/" title="Bombastic fuzzy numbly precise ape ..."><img class="lazyload" data-decoding="async" src="content/uploads/2017/03/pexels-photo-29021-360x200.jpg" width="360" height="200" title="Bombastic fuzzy numbly precise ape ..." alt="Bombastic fuzzy numbly precise ape ..." srcset="content/uploads/2017/03/pexels-photo-29021-360x200.jpg 1x , content/uploads/2017/03/pexels-photo-29021-1110x600.jpg 2x">
 																										<div class="event-date"><span class="date">31</span><span class="month">Dec</span></div>
 																									</a>
 																								</div>
@@ -578,7 +566,7 @@
 																							</article>
 																							<article class="event-item">
 																								<div class="event-item-feature">
-																									<a href="event/unlike-swore-found-along-some-according/" title="Unlike swore found along some according..."><img decoding="async" src="content/uploads/2017/03/ticketbox-unlike-dummy-360x200.jpg" width="360" height="200" title="Unlike swore found along some according..." alt="Unlike swore found along some according..." srcset="content/uploads/2017/03/ticketbox-unlike-dummy-360x200.jpg 1x , content/uploads/2017/03/ticketbox-unlike-dummy-1110x600.jpg 2x">
+																									<a href="event/unlike-swore-found-along-some-according/" title="Unlike swore found along some according..."><img decoding="async" class="lazyload" data-src="content/uploads/2017/03/ticketbox-unlike-dummy-360x200.jpg" width="360" height="200" title="Unlike swore found along some according..." alt="Unlike swore found along some according..." srcset="content/uploads/2017/03/ticketbox-unlike-dummy-360x200.jpg 1x , content/uploads/2017/03/ticketbox-unlike-dummy-1110x600.jpg 2x">
 																										<div class="event-date"><span class="date">31</span><span class="month">Dec</span></div>
 																									</a>
 																								</div>
@@ -605,7 +593,7 @@
 																							</article>
 																							<article class="event-item">
 																								<div class="event-item-feature">
-																									<a href="event/linkin-park-live-at-the-small-of-asia-arena/" title="Linkin park Live at the small of asia arena"><img decoding="async" src="content/uploads/2016/10/Linkin-Park-Info-Linkin-Park-360x200.jpg" width="360" height="200" title="Linkin park Live at the small of asia arena" alt="Linkin park Live at the small of asia arena" srcset="content/uploads/2016/10/Linkin-Park-Info-Linkin-Park-360x200.jpg 1x , content/uploads/2016/10/Linkin-Park-Info-Linkin-Park-1110x600.jpg 2x">
+																									<a href="event/linkin-park-live-at-the-small-of-asia-arena/" title="Linkin park Live at the small of asia arena"><img decoding="async" class="lazyload" data-src="content/uploads/2016/10/Linkin-Park-Info-Linkin-Park-360x200.jpg" width="360" height="200" title="Linkin park Live at the small of asia arena" alt="Linkin park Live at the small of asia arena" srcset="content/uploads/2016/10/Linkin-Park-Info-Linkin-Park-360x200.jpg 1x , content/uploads/2016/10/Linkin-Park-Info-Linkin-Park-1110x600.jpg 2x">
 																										<div class="event-date"><span class="date">31</span><span class="month">Dec</span></div>
 																									</a>
 																								</div>
@@ -783,7 +771,7 @@
 																			<div class="vc_column-inner">
 																				<div class="wpb_wrapper">
 																					<div class="ticketbox-video-embed-shortcode wpb_content_element">
-																						<div class="video-embed-shortcode-bg-wrap"><img decoding="async" class="video-embed-shortcode-bg" src="content/uploads/2016/12/screen-01.jpg" alt=""><a class="video-embed-action" data-video-inline="&lt;div class=&quot;ticketbox-video-embed-shortcode wpb_content_element  mfp-hide &quot;&gt;&lt;div id=&quot;video-featured-6051575626740&quot; class=&quot;embed-wrap&quot;&gt;&lt;iframe width=&quot;1140&quot; height=&quot;641&quot; src=&quot;https://www.youtube.com/embed/JUuszkV9Gis?feature=oembed&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;" href="#video-featured-6051575626740" data-rel="magnific-popup-video"><i class="fa fa-play" style="color:#fff"></i></a></div>
+																						<div class="video-embed-shortcode-bg-wrap"><img decoding="async" class="video-embed-shortcode-bg lazyload" data-src="content/uploads/2016/12/screen-01.jpg" alt=""><a class="video-embed-action" data-video-inline="&lt;div class=&quot;ticketbox-video-embed-shortcode wpb_content_element  mfp-hide &quot;&gt;&lt;div id=&quot;video-featured-6051575626740&quot; class=&quot;embed-wrap&quot;&gt;&lt;iframe width=&quot;1140&quot; height=&quot;641&quot; src=&quot;https://www.youtube.com/embed/JUuszkV9Gis?feature=oembed&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;" href="#video-featured-6051575626740" data-rel="magnific-popup-video"><i class="fa fa-play" style="color:#fff"></i></a></div>
 																						<div class="ticketbox-video-embed-shortcode wpb_content_element mfp-hide">
 																							<div id="video-featured-6051575626740" class="embed-wrap">
 																								<!--	<iframe width="1140" height="641" src="https://www.youtube.com/embed/JUuszkV9Gis?feature=oembed" frameborder="0" allowfullscreen></iframe> -->
@@ -918,7 +906,7 @@
 																					<h3 class="support-item-title"><i class="fa fa-send"></i>Mail</h3><a href="mailto:info@ticketbox.com" class="email-address">info@ticketbox.com</a></div>
 																			</div>
 																			<div class="col-md-4">
-																				<div class="support-item support-image"><img decoding="async" src="content/uploads/2017/03/support-img.png" alt="Support Info" class="img"></div>
+																				<div class="support-item support-image"><img decoding="async" data-src="content/uploads/2017/03/support-img.png" alt="Support Info" class="img lazyload"></div>
 																			</div>
 																		</div>
 																	</div>
@@ -1107,7 +1095,7 @@
 							<aside id="dt_widget_mailchimp-3" class="widget widget-mailchimp">
 								<h3 class="widget-title">Newsletter.</h3>
 								<div class="widget-mailchimp-wrapper">
-									<div class="widget-mailchimp-info">Don&#039;t miss our events...</div>
+									<div class="widget-mailchimp-info">Dont miss our events...</div>
 									<form id="mailchimp-form-6051575646fbe" class="mailchimp-form" action="">
 										<div class="mailchimp-form-content">
 											<div class="mailchimp-form-content-wrap">
@@ -1118,10 +1106,6 @@
 													<button type="submit" class="btn btn-outline mailchimp-submit ticketbox-main-color-bg"><i class="fa fa-paper-plane"></i><span>Subscribe</span></button>
 												</div>
 											</div>
-											<div style="display:none">
-												<input type="hidden" name="_mailchimp_id" value="mailchimp-form-6051575646fbe">
-												<input type="hidden" name="_subscribe_nonce" value="2e228e56cd">
-												<input type="hidden" name="action" value="dawnthemes_mailchimp_subscribe"> </div>
 										</div>
 									</form>
 								</div>
@@ -1139,17 +1123,18 @@
 			</div>
 		</div>
 	</footer> <a href="#" class="go-to-top"><i class="fa fa-angle-up"></i>Top</a>
-	<script src="other/js/jquery/jquery.js?ver=1.12.4-wp"></script>
-	<script src="content/plugins/revslider/public/assets/js/revolution.tools.min.js?ver=6.0"></script>
-	<script src="content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.0.9"></script>
-	<script src="content/themes/ticketbox/assets/lib/waypoints.min.js?ver=2.0.5"></script>
-	<script src="content/themes/ticketbox/assets/lib/jquery.countTo.min.js?ver=2.0.2"></script>
-	<script src="content/themes/ticketbox/assets/lib/magnific-popup/jquery.magnific-popup.min.js?ver=0.9.9"></script>
-	<script src="content/themes/ticketbox/assets/lib/owlcarousel/owl.carousel.min.js?ver=2.3.2"></script>
-	<script src="content/themes/ticketbox/assets/lib/BlockRevealers/js/anime.min.js?ver=5.4.1"></script>
-	<script src="content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=6.0.3"></script>
-	<script src="content/plugins/js_composer/assets/lib/bower/skrollr/dist/skrollr.min.js"></script>
-	<script src="content/themes/ticketbox/assets/js/script.min.js"></script>
+	<script src="other/js/jquery/jquery.js"></script>
+	<script src="content/plugins/revslider/public/assets/js/revolution.tools.min.js"></script>
+	<script src="content/plugins/revslider/public/assets/js/rs6.min.js"></script>
+	<script src="content/themes/ticketbox/assets/lib/waypoints.min.js"></script>
+	<script class="lazy-el" data-src="content/themes/ticketbox/assets/lib/jquery.countTo.min.js"></script>
+	<script src="content/themes/ticketbox/assets/lib/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src="content/themes/ticketbox/assets/lib/owlcarousel/owl.carousel.min.js"></script>
+	<script class="lazy-el" data-src="content/themes/ticketbox/assets/lib/BlockRevealers/js/anime.min.js"></script>
+	<script class="lazy-el" data-src="content/plugins/js_composer/assets/js/dist/js_composer_front.min.js"></script>
+	<script class="lazy-el" data-src="content/plugins/js_composer/assets/lib/bower/skrollr/dist/skrollr.min.js"></script>
+	<script src="content/themes/ticketbox/assets/js/script.min.js" async></script>
+	<script src="content/themes/ticketbox/assets/js/lazyload.js" async></script>
 </body>
 
 </html>
