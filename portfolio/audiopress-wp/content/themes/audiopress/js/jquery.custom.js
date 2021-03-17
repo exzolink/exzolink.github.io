@@ -467,6 +467,12 @@ jQuery(document).ready(function($){
  */
 jQuery(window).on( 'load', function(){
 	
-	jQuery('.site-preloader').delay( 1000 ).addClass('out');
+	jQuery('.site-preloader').delay( 300 ).addClass('out');
+
+	var lazyScripts = document.querySelectorAll('.lazyload-js');
+	lazyScripts.forEach(function (script) {
+		var scriptSrc = script.getAttribute('data-src');
+		script.src = scriptSrc;
+	})
 	
 });
