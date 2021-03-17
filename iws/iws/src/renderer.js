@@ -15,6 +15,10 @@ const inputZachetka = document.querySelector("#input-zachetka");
 const inputSurname = document.querySelector("#input-surname");
 const inputName = document.querySelector("#input-name");
 const inputPass = document.querySelector("#input-pass");
+const inputFile = document.querySelector("#input-file");
+
+const inputFileName = document.querySelector(".file__name");
+let isFile = false;
 
 const allInputs = document.querySelectorAll("input, textarea");
 
@@ -104,6 +108,12 @@ const goSite = async () => {
 			const pageChatMsg = await page.$("#message");
 			await pageChatMsg.focus();
 			await page.keyboard.type(`${inputMsg.value.trim()}`);
+
+			// Выбор файла (если выбран в приложении)
+			if (isFile) {
+				const pageChatFile = await page.$("#message_file");
+				await pageChatFile.uploadFile(inputFile.files[0].path);
+			}
 
 			// Клик по кнопке отправить
 			const pageChatSubmit = await page.$("#submitMessage");
@@ -234,5 +244,22 @@ btn.addEventListener("click", () => {
 		}
 	} catch (err) {
 		console.log(err);
+	}
+});
+
+// Обработка выбранного файла
+inputFile.addEventListener("change", () => {
+	if (inputFile.files[0]) {
+		inputFileName.textContent = inputFile.files[0].name;
+		document
+			.querySelector(".file__label")
+			.setAttribute("title", inputFile.files[0].name);
+		isFile = true;
+	} else {
+		isFile = false;
+		inputFileName.textContent = "";
+		document
+			.querySelector(".file__label")
+			.setAttribute("title", "Прикрепить файл");
 	}
 });

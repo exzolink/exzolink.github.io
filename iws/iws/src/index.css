@@ -1,3 +1,7 @@
+html {
+	background-color: #222;
+}
+
 body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
 		Arial, sans-serif;
@@ -8,6 +12,7 @@ body {
 	font-size: 14px;
 	user-select: none;
 	cursor: default;
+	outline: none;
 }
 
 body::-webkit-scrollbar {
@@ -101,6 +106,7 @@ textarea {
 	display: flex;
 	justify-content: center;
 	margin-top: 25px;
+	position: relative;
 }
 
 .button__wrapper button {
@@ -147,4 +153,34 @@ textarea {
 
 #alert.blue {
 	color: #80a3dd;
+}
+
+.file__label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	left: 9px;
+	top: 54%;
+	transform: translateY(-50%);
+	margin-bottom: 0;
+	width: 45px;
+}
+
+.file__label span {
+	margin-bottom: 0;
+	margin-top: 5px;
+	font-size: 8px;
+	max-width: 45px;
+	overflow: hidden;
+	max-height: 10.43px;
+	text-overflow: ellipsis;
+}
+
+.file__label input {
+	display: none;
+}
+
+.file__label svg:hover * {
+	fill: #80a3dd !important;
 }

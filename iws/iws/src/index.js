@@ -14,14 +14,10 @@ console.log(
 	powerSaveBlocker.isStarted(suspension),
 );
 
-if (require("electron-squirrel-startup")) {
-	app.quit();
-}
-
 const createWindow = () => {
 	const mainWindow = new BrowserWindow({
 		width: 400,
-		height: 520,
+		height: 525,
 		webPreferences: {
 			nodeIntegration: true,
 		},
