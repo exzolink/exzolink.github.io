@@ -73,3 +73,7 @@ body{background-color:#ffffff;}
 		width: 33.3333%;
 	}
 }
+
+#main-content {
+	content-visibility: auto;
+}
