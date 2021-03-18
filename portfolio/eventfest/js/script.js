@@ -502,10 +502,18 @@ $document.ready(function () {
 
 window.addEventListener('load', function () {
 	document.documentElement.classList.add('page-loaded');
+	setTimeout(function () {
 		var getFont = document.querySelectorAll('.lazy-font');
 		getFont.forEach(function (font) {
-			font.rel = "stylesheet";	
+			if (font.rel) {
+				font.rel = "stylesheet";	
+			}
+			else {
+				var getSrc = font.getAttribute('data-src');
+				font.src = getSrc;
+			}
 		})
+	}, 150);
 })
 
 } catch(err) {}
