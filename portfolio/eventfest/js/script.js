@@ -505,7 +505,7 @@ window.addEventListener('load', function () {
 		setTimeout(function () {
 		var getFont = document.querySelector('#lazy-font');
 		getFont.rel = "stylesheet";	
-	}, 100);
+	}, 200);
 })
 
 } catch(err) {}
