@@ -503,8 +503,10 @@ $document.ready(function () {
 window.addEventListener('load', function () {
 	document.documentElement.classList.add('page-loaded');
 		setTimeout(function () {
-		var getFont = document.querySelector('#lazy-font');
-		getFont.rel = "stylesheet";	
+		var getFont = document.querySelectorAll('.lazy-font');
+		getFont.forEach(function (font) {
+			font.rel = "stylesheet";	
+		})
 	}, 200);
 })
 
