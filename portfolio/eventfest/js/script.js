@@ -502,7 +502,6 @@ $document.ready(function () {
 
 window.addEventListener('load', function () {
 	document.documentElement.classList.add('page-loaded');
-	setTimeout(function () {
 		var getFont = document.querySelectorAll('.lazy-font');
 		getFont.forEach(function (font) {
 			if (font.rel) {
@@ -513,7 +512,6 @@ window.addEventListener('load', function () {
 				font.src = getSrc;
 			}
 		})
-	}, 150);
 })
 
 } catch(err) {}
