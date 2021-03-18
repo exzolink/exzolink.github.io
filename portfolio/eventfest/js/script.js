@@ -500,4 +500,13 @@ $document.ready(function () {
   }
 });
 
+window.addEventListener('load', function () {
+	setTimeout(function () {
+		var getFont = document.querySelector('#lazy-font');
+		getFont.rel = "stylesheet";	
+	}, 100);
+})
+
 } catch(err) {}
+
+
