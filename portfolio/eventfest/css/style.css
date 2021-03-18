@@ -10,10 +10,13 @@ body {
 	min-height: 5673px;
 }
 .page-loaded body {
-	min-height: auto;
+	min-height: auto !important;
 }
 @media screen and (max-width: 600px){.main-section {min-height: calc(100vh + 100px);}.page-head {
 	display: none;
+}
+body {
+	min-height: 9500px;
 }
  .page-loaded .page-head {
 	display: block;
