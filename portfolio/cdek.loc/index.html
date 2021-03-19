@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div x-data="fetchData()" class="container">
+			<div class="row" id="href-compare">
+				<div class="col-sm-12">
+					<h1 class="text-primary mb">Стоимость доставки</h1>
+				</div>
+
+				<div
+					class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0"
+				>
+					<div class="panel panel-success">
+						<div class="panel-heading arrow_box_rr">
+							<h4 class="text-white">
+								Стоимость доставки <nobr>с вашими</nobr> параметрами
+							</h4>
+							<div class="arrow-box" style="border-width: 37.5px"></div>
+						</div>
+
+						<div class="panel-body">
+							<form @submit.prevent="sendRequest" id="compare-form">
+								<div class="row">
+									<div class="col-xs-6 col-md-12">
+										<div class="cities">
+											<label>Город отправителя:</label>
+											<div class="form-inline cities">
+												<div class="typeahead-wrap">
+													<span
+														class="twitter-typeahead"
+														style="position: relative; display: inline-block"
+														><input
+															type="text"
+															class="form-control autocomplite tt-input"
+															value="Москва"
+															autocomplete="off"
+															spellcheck="false"
+															dir="auto"
+															style="position: relative; vertical-align: top" />
+														<pre
+															aria-hidden="true"
+															style="
+																position: absolute;
+																visibility: hidden;
+																white-space: pre;
+																font-family: 'Ubuntu', Helvetica, Arial,
+																	sans-serif;
+																font-size: 13px;
+																font-style: normal;
+																font-variant: normal;
+																font-weight: 200;
+																word-spacing: 0px;
+																letter-spacing: 0px;
+																text-indent: 0px;
+																text-rendering: optimizelegibility;
+																text-transform: none;
+															"
+														></pre>
+														<div
+															class="tt-menu"
+															style="
+																position: absolute;
+																top: 100%;
+																left: 0px;
+																z-index: 100;
+																display: none;
+															"
+														>
+															<div
+																class="tt-dataset tt-dataset-city"
+															></div></div
+													></span>
+													<input
+														name="city_from"
+														class="notempty"
+														value="44"
+														hidden=""
+													/>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-6 col-md-12">
+										<div class="cities">
+											<label>Город получателя:</label>
+											<div class="form-inline cities">
+												<div class="typeahead-wrap">
+													<span
+														class="twitter-typeahead"
+														style="position: relative; display: inline-block"
+														><input
+															type="text"
+															class="form-control autocomplite tt-input"
+															value="Санкт-Петербург"
+															autocomplete="off"
+															spellcheck="false"
+															dir="auto"
+															style="position: relative; vertical-align: top" />
+														<pre
+															aria-hidden="true"
+															style="
+																position: absolute;
+																visibility: hidden;
+																white-space: pre;
+																font-family: 'Ubuntu', Helvetica, Arial,
+																	sans-serif;
+																font-size: 13px;
+																font-style: normal;
+																font-variant: normal;
+																font-weight: 200;
+																word-spacing: 0px;
+																letter-spacing: 0px;
+																text-indent: 0px;
+																text-rendering: optimizelegibility;
+																text-transform: none;
+															"
+														></pre>
+														<div
+															class="tt-menu"
+															style="
+																position: absolute;
+																top: 100%;
+																left: 0px;
+																z-index: 100;
+																display: none;
+															"
+														>
+															<div
+																class="tt-dataset tt-dataset-city"
+															></div></div
+													></span>
+													<input
+														name="city_to"
+														class="notempty"
+														value="137"
+														hidden=""
+													/>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-3 col-md-12 col-lg-5">
+										<label>Вес:</label>
+										<div class="input-group">
+											<input
+												name="weight"
+												type="text"
+												class="form-control notempty"
+												value="3"
+											/>
+											<div class="input-group-addon">кг</div>
+										</div>
+									</div>
+									<div class="col-xs-5 col-md-12 col-lg-7">
+										<label>Габариты:</label>
+										<div class="dimensions input-group">
+											<input
+												name="lenght"
+												type="text"
+												class="dimension-control notempty"
+												placeholder="Д"
+												value="30"
+											/>
+											<span>×</span>
+											<input
+												name="width"
+												type="text"
+												class="dimension-control notempty"
+												placeholder="Ш"
+												value="20"
+											/>
+											<span>×</span>
+											<input
+												name="height"
+												type="text"
+												class="dimension-control notempty"
+												placeholder="В"
+												value="5"
+											/>
+											<div class="input-group-addon">см</div>
+										</div>
+									</div>
+									<div class="col-xs-4 col-md-12">
+										<label>Объявленная ценность:</label>
+										<div class="input-group">
+											<input name="cod_cost" type="text" class="form-control" />
+											<div class="input-group-addon">₽</div>
+										</div>
+										<div class="checkbox form-group">
+											<label>
+												<input
+													name="cod_payment_method"
+													type="checkbox"
+													value="1"
+												/>Наложенный платеж
+											</label>
+										</div>
+									</div>
+									<div class="col-xs-12 text-right">
+										<button class="btn btn-primary calc-btn" type="submit">
+											Рассчитать
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-9 col-lg-offset-1 col-lg-8">
+					<div id="compare-table">
+						<table
+							class="table table-striped compare-table table-condensed"
+							width="100%"
+						>
+							<thead>
+								<tr>
+									<th colspan="2" class="compare-shadow-l" width='36%"'>
+										<h6 class="text-success">
+											Москва → Санкт-Петербург,<br />3кг, 0.003м<sup>3</sup>,
+											объемный вес: 0.6 кг
+										</h6>
+									</th>
+									<th class="bg-primary" width="22%">
+										<h4 class="text-center">Договор<br />интернет-магазина</h4>
+									</th>
+									<th class="bg-primary" width="22%">
+										<h4 class="text-center">
+											Договор<br />интернет-магазина<br />с самозанятым
+										</h4>
+									</th>
+									<th class="bg-success compare-shadow-r" width="10%">
+										<h4 class="text-center">Обычный договор</h4>
+									</th>
+									<th width="10%"><h4 class="text-center">Без договора</h4></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="3">
+										<h5>Посылка</h5>
+										<small>1 - 2 дня</small>
+									</td>
+									<td class="compare-shadow-l">
+										<small><nobr>дверь → дверь</nobr></small>
+									</td>
+									<td class="">
+										<h4 class="text-center text-primary">
+											<strong x-text="data.del_d2d">0</strong> <small>₽</small>
+										</h4>
+									</td>
+									<td class="compare-shadow-r">
+										<h4 class="text-center text-primary">
+											<strong>0</strong> <small>₽</small>
+										</h4>
+									</td>
+									<td class="compare-shadow-r">
+										<h4 class="text-center text-danger">
+											<i class="glyphicon glyphicon-remove"></i>
+										</h4>
+									</td>
+									<td class="">
+										<h4 class="text-center text-danger">
+											<i class="glyphicon glyphicon-remove"></i>
+										</h4>
+									</td>
+								</tr>
+								<tr>
+									<td class="compare-shadow-l">
+										<small
+											><nobr
+												>склад → дверь<br />дверь → склад<sup>*</sup></nobr
+											></small
+										>
+									</td>
+									<td class="">
+										<h4 class="text-center text-primary">
+											<strong>0</strong> <small>₽</small>
+										</h4>
+									</td>
+									<td class="compare-shadow-r">
+										<h4 class="text-center text-primary">
+											<strong>0</strong> <small>₽</small>
+										</h4>
+									</td>
+									<td class="compare-shadow-r">
+										<h4 class="text-center text-danger">
+											<i class="glyphicon glyphicon-remove"></i>
+										</h4>
+									</td>
+									<td class="">
+										<h4 class="text-center text-danger">
+											<i class="glyphicon glyphicon-remove"></i>
+										</h4>
+									</td>
+								</tr>
+								<tr>
+									<td class="compare-shadow-l">
+										<small><nobr>склад → склад</nobr></small>
+									</td>
+									<td class="">
+										<h4 class="text-center text-primary">
+											<strong>0</strong> <small>₽</small>
+										</h4>
+									</td>
+									<td class="compare-shadow-r">
+										<h4 class="text-center text-primary">
+											<strong>0</strong> <small>₽</small>
+										</h4>
+									</td>
+									<td class="compare-shadow-r">
+										<h4 class="text-center text-danger">
+											<i class="glyphicon glyphicon-remove"></i>
+										</h4>
+									</td>
+									<td class="">
+										<h4 class="text-center text-danger">
+											<i class="glyphicon glyphicon-remove"></i>
+										</h4>
+									</td>
+								</tr>
+								<tr>
+									<td rowspan="3">
+										<h5>Экспресс-лайт</h5>
+										<small>1 - 2 дня</small>
+									</td>
+									<td class="compare-shadow-l">
+										<small><nobr>дверь → дверь</nobr></small>
+									</td>
+									<td class="">
+										<h4 class="text-center text-primary">
+											<strong>0</strong> <small>₽</small>
+										</h4>
+									</td>
+									<td class="compare-shadow-r">
+										<h4 class="text-center text-primary">
+											<strong>0</strong> <small>₽</small>
+										</h4>
+									</td>
+									<td class="compare-shadow-r">
+										<h4 class="text-center text-primary">
+											<strong>0</strong> <small>₽</small>
+										</h4>
+									</td>
+									<td class="">
+										<h4 class="text-center text-primary">
+											<strong>0</strong> <small>₽</small>
+										</h4>
+									</td>
+								</tr>
+								<tr>
+									<td class="compare-shadow-l">
+										<small
+											><nobr
+												>склад → дверь<br />дверь → склад<sup>*</sup></nobr
+											></small
+										>
+									</td>
+									<td class="">
+										<h4 class="text-center text-primary">
+											<strong>0</strong> <small>₽</small>
+										</h4>
+									</td>
+									<td class="compare-shadow-r">
+										<h4 class="text-center text-primary">
+											<strong>0</strong> <small>₽</small>
+										</h4>
+									</td>
+									<td class="compare-shadow-r">
+										<h4 class="text-center text-primary">
+											<strong>0</strong> <small>₽</small>
+										</h4>
+									</td>
+									<td class="">
+										<h4 class="text-center text-primary">
+											<strong>0</strong> <small>₽</small>
+										</h4>
+									</td>
+								</tr>
+								<tr>
+									<td class="compare-shadow-l">
+										<small><nobr>склад → склад</nobr></small>
+									</td>
+									<td class="">
+										<h4 class="text-center text-primary">
+											<strong>0</strong> <small>₽</small>
+										</h4>
+									</td>
+									<td class="compare-shadow-r">
+										<h4 class="text-center text-primary">
+											<strong>0</strong> <small>₽</small>
+										</h4>
+									</td>
+									<td class="compare-shadow-r">
+										<h4 class="text-center text-primary">
+											<strong>0</strong> <small>₽</small>
+										</h4>
+									</td>
+									<td class="">
+										<h4 class="text-center text-primary">
+											<strong>0</strong> <small>₽</small>
+										</h4>
+									</td>
+								</tr>
+								<tr>
+									<td rowspan="1">
+										<h5>Магистральный<br />экспресс</h5>
+										<small>2 дня</small>
+									</td>
+									<td class="compare-shadow-l">
+										<small
+											><nobr>склад → склад<sup>*</sup></nobr></small
+										>
+									</td>
+									<td class="">
+										<h4 class="text-center text-primary">
+											<strong>0</strong> <small>₽</small>
+										</h4>
+									</td>
+									<td class="compare-shadow-r">
+										<h4 class="text-center text-primary">
+											<strong>0</strong> <small>₽</small>
+										</h4>
+									</td>
+									<td class="compare-shadow-r">
+										<h4 class="text-center text-primary">
+											<strong>0</strong> <small>₽</small>
+										</h4>
+									</td>
+									<td class="">
+										<h4 class="text-center text-primary">
+											<strong>0</strong> <small>₽</small>
+										</h4>
+									</td>
+								</tr>
+								<tr>
+									<td rowspan="1">
+										<h5>Экономичный экспресс</h5>
+										<small>&nbsp;</small>
+									</td>
+									<td class="compare-shadow-l">
+										<small
+											><nobr>склад → склад<sup>*</sup></nobr></small
+										>
+									</td>
+									<td class="">
+										<h4 class="text-center text-danger">
+											<i class="glyphicon glyphicon-remove"></i>
+										</h4>
+									</td>
+									<td class="compare-shadow-r">
+										<h4 class="text-center text-danger">
+											<i class="glyphicon glyphicon-remove"></i>
+										</h4>
+									</td>
+									<td class="compare-shadow-r">
+										<h4 class="text-center text-danger">
+											<i class="glyphicon glyphicon-remove"></i>
+										</h4>
+									</td>
+									<td class="">
+										<h4 class="text-center text-danger">
+											<i class="glyphicon glyphicon-remove"></i>
+										</h4>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2"></td>
+									<td class="text-center">
+										<a
+											href="#"
+											class="btn btn-primary btn-contract"
+											data-contract-type="ecommerce"
+											>Заключить<br />
+											договор</a
+										>
+									</td>
+									<td class="text-center">
+										<a
+											href="#"
+											class="btn btn-primary btn-contract"
+											data-contract-type="ecommerce_self"
+											>Заключить<br />
+											договор</a
+										>
+									</td>
+									<td class="text-center">
+										<a
+											href="#"
+											class="btn btn-success btn-contract"
+											data-contract-type="ordinary"
+											>Заключить<br />
+											договор</a
+										>
+									</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<small>
+						<small>
+							* не во всех городах есть офис СДЭК. В таком случае доставка
+							возможна только "до двери".<br />
+						</small>
+					</small>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="href-contract">
+			<div class="row mt2">
+				<div class="col-xs-12 col-md-10 col-md-offset-1">
+					<h1 class="text-primary mb">Виды договоров СДЭК</h1>
+					<table
+						class="table table-striped table-hover compare-table"
+						width="100%"
+					>
+						<thead>
+							<tr>
+								<th class="bg-default compare-shadow-l" width="25%">
+									<h4 class="text-center"></h4>
+								</th>
+								<th class="bg-primary" width="25%">
+									<h4 class="text-center">Договор<br />Интернет-магазина</h4>
+								</th>
+								<th class="bg-primary" width="25%">
+									<h4 class="text-center">
+										Договор<br />Интернет-магазина с самозанятым
+									</h4>
+								</th>
+								<th class="bg-success compare-shadow-r" width="25%">
+									<h4 class="text-center">
+										Классический договор<br />для организаций
+									</h4>
+								</th>
+								<th class="bg-default" width="25%">
+									<h4 class="text-center">Отправки<br />без договора</h4>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="text-center">
+								<td class="text-left">Отслеживание заказа</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+							</tr>
+							<tr class="text-center">
+								<td class="text-left">Страхование</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+							</tr>
+							<tr class="text-center">
+								<td class="text-left">SMS-оповещение</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+							</tr>
+							<tr class="text-center">
+								<td class="text-left">Личный кабинет</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-remove text-danger"> </i>
+								</td>
+							</tr>
+							<tr class="text-center">
+								<td class="text-left">
+									Безналичная пост-оплата за услуги доставки
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-remove text-danger"> </i>
+								</td>
+							</tr>
+							<tr class="text-center">
+								<td class="text-left">Скидки</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-remove text-danger"> </i>
+								</td>
+							</tr>
+							<tr class="text-center">
+								<td class="text-left">Закрепленный менеджер</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-remove text-danger"> </i>
+								</td>
+							</tr>
+							<tr class="text-center">
+								<td class="text-left">Выгодный тариф "Посылка"</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-remove text-danger"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-remove text-danger"> </i>
+								</td>
+							</tr>
+							<tr class="text-center">
+								<td class="text-left">
+									Опции для ИМ<br />
+									<small
+										>(примерка, осмотр вложения, частичная доставка, возврат
+										невыкупленных товаров, бесплатное хранение 14 дней на ПВЗ и
+										т. д.)</small
+									>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-remove text-danger"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-remove text-danger"> </i>
+								</td>
+							</tr>
+							<tr class="text-center">
+								<td class="text-left">Наложенный платеж</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-remove text-danger"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-remove text-danger"> </i>
+								</td>
+							</tr>
+							<tr class="text-center">
+								<td class="text-left">Комиссия за наложенный платеж</td>
+								<td>
+									<h4 class="text-success">1.5% - 3%</h4>
+								</td>
+								<td>
+									<h4 class="text-success">5%</h4>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-remove text-danger"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-remove text-danger"> </i>
+								</td>
+							</tr>
+							<tr class="text-center">
+								<td class="text-left">
+									Интеграция с базой СДЭК по API-протоколу
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-remove text-danger"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-remove text-danger"> </i>
+								</td>
+							</tr>
+							<tr class="text-center">
+								<td class="text-left">
+									Дополнительный сбор 20% при оплате получателем
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-remove text-danger"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-remove text-danger"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-remove text-danger"> </i>
+								</td>
+								<td>
+									<i class="glyphicon glyphicon-ok text-success"> </i>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td class="text-center">
+									<a
+										href="#"
+										class="btn btn-primary btn-contract"
+										data-contract-type="ecommerce"
+										>Заключить<br />договор</a
+									>
+								</td>
+								<td class="text-center">
+									<a
+										href="#"
+										class="btn btn-primary btn-contract"
+										data-contract-type="ecommerce_self"
+										>Заключить<br />договор</a
+									>
+								</td>
+								<td class="text-center">
+									<a
+										href="#"
+										class="btn btn-success btn-contract"
+										data-contract-type="ordinary"
+										>Заключить<br />договор</a
+									>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/alpine.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
