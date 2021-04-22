@@ -61,13 +61,11 @@
 	"dependencies": {
 		"asar": "^3.0.3",
 		"node-cron": "^2.0.3",
-		"puppeteer": "^7.1.0"
+		"puppeteer": "^7.1.0",
+		"v8-compile-cache": "^2.3.0"
 	},
 	"devDependencies": {
 		"@electron-forge/cli": "^6.0.0-beta.54",
-		"@electron-forge/maker-deb": "^6.0.0-beta.54",
-		"@electron-forge/maker-rpm": "^6.0.0-beta.54",
-		"@electron-forge/maker-zip": "^6.0.0-beta.54",
 		"electron": "^11.2.3",
 		"electron-builder": "^22.9.1"
 	}

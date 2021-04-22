@@ -1,25 +1,21 @@
-const {
-	app,
-	BrowserWindow,
-	powerSaveBlocker,
-	powerMonitor,
-} = require("electron");
+const cache = require('v8-compile-cache');
+const { app, BrowserWindow, powerSaveBlocker } = require("electron");
 const path = require("path");
 
 // const sleep = powerSaveBlocker.start("prevent-display-sleep");
 const suspension = powerSaveBlocker.start("prevent-app-suspension");
 
-console.log(
-	// powerSaveBlocker.isStarted(sleep),
-	powerSaveBlocker.isStarted(suspension),
-);
-
 const createWindow = () => {
 	const mainWindow = new BrowserWindow({
+		show: false,
 		width: 400,
 		height: 525,
+		backgroundColor: "#222",
 		webPreferences: {
 			nodeIntegration: true,
+			enableWebSQL: false,
+			spellcheck: false,
+			webgl: false,
 		},
 	});
 	mainWindow.loadFile(path.join(__dirname, "index.html"));
@@ -28,6 +24,10 @@ const createWindow = () => {
 	mainWindow.setMenu(null);
 	mainWindow.setMaximizable(false);
 	mainWindow.setResizable(false);
+
+	mainWindow.webContents.on("did-finish-load", () => {
+		mainWindow.show();
+	});
 };
 
 app.on("ready", () => {

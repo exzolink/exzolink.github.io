@@ -1,21 +1,22 @@
+const cache = require("v8-compile-cache");
 const puppeteer = require("puppeteer");
 const cron = require("node-cron");
 
 const btn = document.querySelector(".button__wrapper button");
 
-const inputTime = document.querySelector("#input-time");
-const inputFio = document.querySelector("#input-fio");
-const inputMsg = document.querySelector("#input-msg");
+const inputTime = document.getElementById("input-time");
+const inputFio = document.getElementById("input-fio");
+const inputMsg = document.getElementById("input-msg");
 
-const alertText = document.querySelector("#alert");
+const alertText = document.getElementById("alert");
 const tabsEl = document.querySelectorAll(".tab");
 const windows = document.querySelectorAll(".window");
 
-const inputZachetka = document.querySelector("#input-zachetka");
-const inputSurname = document.querySelector("#input-surname");
-const inputName = document.querySelector("#input-name");
-const inputPass = document.querySelector("#input-pass");
-const inputFile = document.querySelector("#input-file");
+const inputZachetka = document.getElementById("input-zachetka");
+const inputSurname = document.getElementById("input-surname");
+const inputName = document.getElementById("input-name");
+const inputPass = document.getElementById("input-pass");
+const inputFile = document.getElementById("input-file");
 
 const inputFileName = document.querySelector(".file__name");
 let isFile = false;
