@@ -1,7 +1,7 @@
 {
 	"name": "IWS",
 	"productName": "IWS",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "IWS (exzolink's App)",
 	"main": "src/index.js",
 	"scripts": {
@@ -22,7 +22,11 @@
 		"asarUnpack": "node_modules/puppeteer/.local-chromium/**/*",
 		"appId": "IWS",
 		"mac": {
-			"category": "Study"
+			"category": "Study",
+			"icon": "favicon.png"
+		},
+		"win": {
+			"icon": "favicon.png"
 		}
 	},
 	"keywords": [],
@@ -66,7 +70,7 @@
 	},
 	"devDependencies": {
 		"@electron-forge/cli": "^6.0.0-beta.54",
-		"electron": "^11.2.3",
-		"electron-builder": "^22.9.1"
+		"electron-builder": "^22.10.5",
+		"electron-nightly": "^14.0.0-nightly.20210430"
 	}
 }

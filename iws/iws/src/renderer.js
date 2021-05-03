@@ -1,3 +1,4 @@
+const { ipcRenderer } = require("electron");
 const cache = require("v8-compile-cache");
 const puppeteer = require("puppeteer");
 const cron = require("node-cron");
@@ -24,6 +25,9 @@ let isFile = false;
 const allInputs = document.querySelectorAll("input, textarea");
 
 let browser, page, task;
+
+const quitBtn = document.getElementById("btn-quit");
+const trayBtn = document.getElementById("btn-tray");
 
 const getChromiumExecPath = () => {
 	return puppeteer.executablePath().replace("app.asar", "app.asar.unpacked");
@@ -263,4 +267,14 @@ inputFile.addEventListener("change", () => {
 			.querySelector(".file__label")
 			.setAttribute("title", "Прикрепить файл");
 	}
+});
+
+// Закрытие приложения
+quitBtn.addEventListener("click", () => {
+	ipcRenderer.send('quit-app');
+});
+
+// Сворачивание приложения
+trayBtn.addEventListener("click", () => {
+	ipcRenderer.send('minimize-app');
 });

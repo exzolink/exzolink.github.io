@@ -1,5 +1,6 @@
 html {
 	background-color: #222;
+	text-rendering: optimizeLegibility;
 }
 
 body {
@@ -21,6 +22,7 @@ body::-webkit-scrollbar {
 .wrapper {
 	max-width: 500px;
 	padding: 32px;
+	padding-bottom: 10px;
 	margin: 0 auto;
 }
 
@@ -182,4 +184,83 @@ textarea {
 
 .file__label svg:hover * {
 	fill: #80a3dd !important;
+}
+
+.manager {
+	background-color: #fff;
+	height: 26px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	-webkit-app-region: drag;
+}
+
+.manager__meta {
+	display: flex;
+	align-items: center;
+	padding: 5px 8px;
+}
+
+.manager__meta svg {
+	height: 16px;
+	width: 16px;
+}
+
+.manager__meta h1 {
+	margin-left: 7px;
+	color: #222;
+	font-size: 12px;
+	margin-bottom: 2px;
+	margin-top: 1px;
+	line-height: 1;
+	font-weight: 500;
+}
+
+.manager__buttons {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	-webkit-app-region: no-drag;
+}
+
+.manager__tray svg {
+	width: 12px;
+	height: 12px;
+	fill: #222;
+	margin-left: 0.5px;
+}
+
+.manager__tray,
+.manager__quit {
+	height: 100%;
+	width: 36px;
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	transition: background-color 0.15s ease;
+}
+
+.manager__tray:hover {
+	background-color: #ddd;
+}
+
+.manager__quit {
+	width: 40px;
+}
+
+.manager__quit svg {
+	width: 10px;
+	height: 10px;
+	fill: #222;
+	transition: fill 0.15s ease;
+}
+
+.manager__quit:hover {
+	background-color: #e81123;
+}
+
+.manager__quit:hover svg {
+	fill: #fff;
 }
