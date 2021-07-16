@@ -271,10 +271,10 @@ inputFile.addEventListener("change", () => {
 
 // Закрытие приложения
 quitBtn.addEventListener("click", () => {
-	ipcRenderer.send('quit-app');
+	ipcRenderer.send("quit-app");
 });
 
 // Сворачивание приложения
 trayBtn.addEventListener("click", () => {
-	ipcRenderer.send('minimize-app');
+	ipcRenderer.send("minimize-app");
 });
