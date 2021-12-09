@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Psycho — интернет-магазин одежды</title>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="css/swiper.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__menu">
+				<div class="header__menu_inner">
+					<nav class="nav__wrapper">
+						<a href="" class="nav__link active">Главная</a>
+						<a href="" class="nav__link">Каталог</a>
+						<a href="" class="nav__link">Коллекции</a>
+						<a href="" class="nav__link">О нас</a>
+						<a href="" class="nav__link">Инстаграм</a>
+						<a href="" class="nav__link">ВК</a>
+					</nav>
+
+					<div class="header__lang">
+						<a href="">ENGLISH</a>
+						<span>|</span>
+						<a href="" class="active">RUSSIAN</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="header__inner">
+					<button class="header__burger">
+						<img src="imgs/burger.svg" width="22" height="22" alt="" />
+					</button>
+
+					<div class="header__block nav__block">
+						<nav class="nav__wrapper">
+							<a href="" class="nav__link active">Главная</a>
+							<a href="" class="nav__link">Каталог</a>
+							<a href="" class="nav__link">Коллекции</a>
+							<a href="" class="nav__link">О нас</a>
+							<a href="" class="nav__link">Инстаграм</a>
+							<a href="" class="nav__link">ВК</a>
+						</nav>
+					</div>
+
+					<a href="" class="header__logo"><img width="35" height="62" src="imgs/lovo.svg" alt="" /></a>
+
+					<div class="header__block">
+						<div class="header__lang">
+							<a href="">ENG</a>
+							<span>|</span>
+							<a href="" class="active">RU</a>
+						</div>
+
+						<form class="header__search_form" action="">
+							<input class="header__search" type="text" required placeholder="ПОИСК" />
+							<button type="submit">
+								<img src="imgs/search.svg" alt="" />
+							</button>
+						</form>
+
+						<div class="auth__form">
+							<div id="auth-btn" class="auth__link">
+								<img src="imgs/profile/skull.svg" width="15" height="19" alt="" />
+							</div>
+
+							<div id="auth-modal" class="auth__modal">
+								<div class="auth__modal_inner">
+									<span class="auth__modal_title"> Вход в личный кабинет </span>
+
+									<form action="" method="POST" class="auth__modal_form">
+										<label for="" class="auth__modal_label">
+											<span class="modal-basket__inputs_text">Логин</span>
+											<input
+												class="modal-basket__inputs_input"
+												type="text"
+												placeholder="Введите е-mail или номер телефона"
+												required
+											/>
+										</label>
+
+										<label for="" class="auth__modal_label">
+											<span class="modal-basket__inputs_text">Пароль</span>
+											<input
+												class="modal-basket__inputs_input"
+												type="password"
+												placeholder="Введите свой пароль"
+												required
+											/>
+										</label>
+									</form>
+
+									<a href="" class="modal-basket__inputs_text auth__modal_link">Забыли пароль?</a>
+
+									<div class="auth__modal_buttons">
+										<a href="" class="profile__order_button">Регистрация</a>
+										<a href="" class="profile__order_button">Войти</a>
+									</div>
+
+									<a href="" class="modal-basket__inputs_text auth__modal_link vk-login"
+										>Или войти через <img src="imgs/profile/vk.svg" width="20" height="12" alt=""
+									/></a>
+								</div>
+							</div>
+						</div>
+
+						<button class="header__basket">
+							<img src="imgs/basket.svg" alt="" />
+							<span>0</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="profile">
+			<div class="container">
+				<div class="profile__inner">
+					<div class="profile__user_info">
+						<label for="avatar" class="profile__avatar">
+							<input type="file" name="user_avatar" id="avatar" />
+							<div class="profile__avatar_overlay">
+								<span>Сменить</span>
+							</div>
+							<img
+								src="imgs/profile/avatar.svg"
+								alt=""
+								class="profile__avatar_image"
+								width="450"
+								height="450"
+							/>
+						</label>
+
+						<div class="profile__info">
+							<div class="profile__info_block">
+								<h3 class="profile__info_name">Андрей Фамельян</h3>
+
+								<div class="profile__bonus">
+									<span class="profile__bonus_text">156 баллов</span>
+
+									<div class="profile__bonus_popup">
+										<span
+											>Свои баллы вы можете использовать в качестве скидки на Ваш заказ.
+											<strong>1 балл = 1 рубль</strong>. Баллы считаются
+											<u>без учёта</u>
+											доставки.
+										</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="profile__meta_block">
+								<div class="profile__meta">
+									<span class="profile__meta_key">Почта:</span>
+									<span class="profile__meta_value">andrey00@inbox.ru</span>
+								</div>
+								<div class="profile__meta">
+									<span class="profile__meta_key">Дата рождения:</span>
+									<span class="profile__meta_value">08.09.2000</span>
+								</div>
+								<div class="profile__meta">
+									<span class="profile__meta_key">Пол:</span>
+									<span class="profile__meta_value">мужской</span>
+								</div>
+
+								<button id="button-info" type="button" class="profile__meta_edit">
+									<span>Изменить</span>
+									<img src="imgs/profile/edit-icon.svg" width="8" height="8" alt="" />
+								</button>
+							</div>
+
+							<div class="profile__meta_block address">
+								<span class="profile__meta_title"> Ваш адрес доставки: </span>
+								<div class="profile__meta">
+									<span class="profile__meta_key">
+										450058, Россия, обл. Оренбургская, г. Оренбург, ул. Донецкая 4, кв. 3
+									</span>
+								</div>
+								<button id="button-address" type="button" class="profile__meta_edit">
+									<span>Изменить</span>
+									<img src="imgs/profile/edit-icon.svg" width="8" height="8" alt="" />
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="title__wrapper">
+						<hr />
+						<h1 class="title__label">Мои заказы</h1>
+						<hr />
+					</div>
+
+					<div class="profile__orders">
+						<div class="profile__order">
+							<div class="profile__order_main">
+								<div class="profile__order_info">
+									<div class="profile__order_meta">
+										<span>Заказ №: <strong class="red">572222585</strong></span>
+									</div>
+
+									<div class="profile__order_meta">
+										<span>Дата заказа: <strong>01.07.2022</strong></span>
+									</div>
+
+									<div class="profile__order_meta">
+										<span>Статус: <strong>Доставлен</strong></span>
+									</div>
+
+									<div class="profile__order_meta">
+										<img src="imgs/profile/avatar.svg" width="70" alt="" />
+										<img src="imgs/profile/avatar.svg" width="70" alt="" />
+										<div class="profile__order_more">+2</div>
+									</div>
+								</div>
+
+								<div class="profile__order_buttons">
+									<button type="button" class="profile__order_button profile__button_more">
+										Смотреть заказ
+									</button>
+									<a href="" class="profile__order_button profile__button_track">Отследить заказ</a>
+								</div>
+							</div>
+
+							<div class="profile__order_list">
+								<div class="profile__list_inner">
+									<hr />
+									<div class="profile__list">
+										<div class="profile__list_row head">
+											<div class="profile__list_main">
+												<span class="profile__list_cell"> № </span>
+												<span class="profile__list_cell"> Фото </span>
+												<span class="profile__list_cell"> Название товара </span>
+											</div>
+											<div class="profile__list_meta">
+												<span class="profile__list_cell"> Коллекция </span>
+												<span class="profile__list_cell"> Размер </span>
+												<span class="profile__list_cell"> Количество </span>
+												<span class="profile__list_cell"> Получено баллов </span>
+												<span class="profile__list_cell"> Цена </span>
+											</div>
+										</div>
+
+										<div class="profile__list_row">
+											<div class="profile__list_main">
+												<span class="profile__list_cell">1</span>
+												<div class="profile__list_cell image">
+													<img
+														src="imgs/profile/avatar.svg"
+														alt=""
+														width="115"
+														height="115"
+													/>
+												</div>
+												<span class="profile__list_cell"> Jersey «SHURIKEN» </span>
+											</div>
+
+											<div class="profile__list_meta">
+												<span class="profile__list_cell"><span>Коллекция: </span> «PINKI»</span>
+												<span class="profile__list_cell"><span>Размер: </span> XL</span>
+												<span class="profile__list_cell"><span>Количество: </span> 1</span>
+												<span class="profile__list_cell">101 Б</span>
+												<span class="profile__list_cell"><span>Цена: </span> 3 759 ₽</span>
+											</div>
+										</div>
+									</div>
+									<div class="profile__order_total">Итого: <span>100 500 ₽</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<p class="footer__copyright">© Copyright «Psycho» 2020</p>
+
+					<div class="footer__socials">
+						<a href="" target="_blank"><img src="imgs/vk.svg" alt="" /></a>
+						<a href="" target="_blank"><img src="imgs/inst.svg" alt="" /></a>
+						<a href="" target="_blank"><img src="imgs/yt.svg" alt="" /></a>
+					</div>
+
+					<p class="footer__designer">Design by <a href="">Daniil Begma</a></p>
+				</div>
+			</div>
+		</footer>
+
+		<div class="modal-basket">
+			<div class="modal-basket__inner">
+				<form action="" class="modal-basket__block">
+					<img class="modal-basket__close" src="imgs/delete.svg" width="20" height="20" alt="" />
+
+					<div class="modal-basket__block_inner">
+						<div class="px-35">
+							<span class="modal-basket__text modal-basket-title">Корзина</span>
+						</div>
+
+						<div class="modal-basket__items">
+							<div class="modal-basket__item">
+								<img class="deleteModal" src="imgs/delete.svg" alt="" />
+
+								<a class="flex-start" href=""
+									><img class="modal-basket__item_img" src="imgs/productZagl.jpg" alt="" />
+								</a>
+								<div class="modal-basket__item_block">
+									<span class="modal-basket__text">«The wolf inside you»</span>
+									<span class="modal-basket__desc">XL, Кол-во: 5</span>
+									<span class="modal-basket__price">4500 ₽</span>
+								</div>
+							</div>
+
+							<div class="modal-basket__item">
+								<img class="deleteModal" src="imgs/delete.svg" alt="" />
+								<a class="flex-start" href=""
+									><img class="modal-basket__item_img" src="imgs/productZagl.jpg" alt=""
+								/></a>
+								<div class="modal-basket__item_block">
+									<span class="modal-basket__text">«The wolf inside you»</span>
+									<span class="modal-basket__desc">XL, Кол-во: 5</span>
+									<span class="modal-basket__price">4500 ₽</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="modal-basket__total">
+							<span class="modal-basket__text">Итого:</span>
+
+							<div class="modal-basket__total_block">
+								<span class="modal-basket__total_price">4500 ₽</span>
+								<span class="modal-basket__total_delivery">+350 (Доставка)</span>
+							</div>
+						</div>
+
+						<div class="modal-basket__inputs px-35">
+							<span class="modal-basket__text">Информация о доставке</span>
+
+							<div class="modal-basket__inputs_item">
+								<span class="modal-basket__inputs_text">ФИО</span>
+
+								<input
+									type="text"
+									required
+									placeholder="Фамилия Имя Отчество*"
+									class="modal-basket__inputs_input"
+								/>
+							</div>
+
+							<div class="modal-basket__inputs_item">
+								<span class="modal-basket__inputs_text">Номер телефона</span>
+
+								<input
+									type="tel"
+									required
+									minlength="11"
+									placeholder="+7"
+									class="modal-basket__inputs_input"
+								/>
+							</div>
+
+							<div class="modal-basket__inputs_item">
+								<span class="modal-basket__inputs_text">Почта</span>
+
+								<input
+									type="email"
+									minlength="5"
+									required
+									placeholder="example@mail.ru"
+									class="modal-basket__inputs_input"
+								/>
+							</div>
+
+							<div class="modal-basket__inputs_item">
+								<span class="modal-basket__inputs_text">Адрес</span>
+
+								<div class="modal-basket__inputs_multiple">
+									<input
+										type="text"
+										required
+										placeholder="Область*"
+										class="modal-basket__inputs_input"
+									/>
+									<input
+										type="text"
+										required
+										placeholder="Город*"
+										class="modal-basket__inputs_input"
+									/>
+									<input
+										type="text"
+										required
+										placeholder="Улица*"
+										class="modal-basket__inputs_input"
+									/>
+									<input
+										type="text"
+										required
+										placeholder="Квартира / Дом*"
+										class="modal-basket__inputs_input"
+									/>
+								</div>
+							</div>
+
+							<div class="modal-basket__inputs_item">
+								<span class="modal-basket__inputs_text">Индекс</span>
+
+								<input
+									type="text"
+									required
+									minlength="6"
+									placeholder="XXXXXX*"
+									class="modal-basket__inputs_input"
+								/>
+
+								<span class="modal-basket__inputs_alert"
+									>*Доставка осуществляется Почтой России, ~350 ₽</span
+								>
+							</div>
+
+							<div class="modal-basket__inputs_item">
+								<span class="modal-basket__inputs_text">Комментарий к заказу</span>
+								<textarea
+									rows="5"
+									type="text"
+									placeholder="Введите сообщение"
+									class="modal-basket__inputs_input"
+								></textarea>
+							</div>
+
+							<button type="submit" class="product__buy-btn modal-basket__submit">Оформить заказ</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="page__overlay"></div>
+
+		<div id="info-modal" class="profile__modal">
+			<div class="profile__modal_inner">
+				<div class="auth__modal">
+					<div class="auth__modal_inner">
+						<span class="auth__modal_title"> Изменение личной информации </span>
+
+						<form action="" method="POST" class="auth__modal_form">
+							<label for="" class="auth__modal_label">
+								<span class="modal-basket__inputs_text">ФИО</span>
+								<input
+									class="modal-basket__inputs_input"
+									type="text"
+									placeholder="Фамилия Имя Отчество*"
+									required
+								/>
+							</label>
+
+							<label for="" class="auth__modal_label">
+								<span class="modal-basket__inputs_text">Номер телефона</span>
+								<input class="modal-basket__inputs_input" type="password" placeholder="+7" required />
+							</label>
+
+							<label for="" class="auth__modal_label">
+								<span class="modal-basket__inputs_text">Почта</span>
+								<input
+									class="modal-basket__inputs_input"
+									type="email"
+									placeholder="Пример@mail.ru"
+									required
+								/>
+							</label>
+
+							<label for="" class="auth__modal_label">
+								<span class="modal-basket__inputs_text">Текущий пароль</span>
+								<input
+									class="modal-basket__inputs_input"
+									type="password"
+									placeholder="Введите текущий пароль"
+									required
+								/>
+							</label>
+
+							<label for="" class="auth__modal_label">
+								<span class="modal-basket__inputs_text">Новый пароль</span>
+								<input
+									class="modal-basket__inputs_input"
+									type="password"
+									placeholder="Введите новый пароль"
+									required
+								/>
+							</label>
+						</form>
+
+						<div class="auth__modal_buttons">
+							<a href="" class="profile__order_button alternative">Подтвердить</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="address-modal" class="profile__modal">
+			<div class="profile__modal_inner">
+				<div class="auth__modal">
+					<div class="auth__modal_inner">
+						<span class="auth__modal_title"> Изменение адреса доставки </span>
+
+						<form action="" method="POST" class="auth__modal_form">
+							<label for="" class="auth__modal_label">
+								<span class="modal-basket__inputs_text">Адрес</span>
+								<input class="modal-basket__inputs_input" type="text" placeholder="Область*" required />
+							</label>
+
+							<label for="" class="auth__modal_label">
+								<input class="modal-basket__inputs_input" type="text" placeholder="Город*" required />
+							</label>
+
+							<label for="" class="auth__modal_label">
+								<input class="modal-basket__inputs_input" type="text" placeholder="Улица*" required />
+							</label>
+
+							<label for="" class="auth__modal_label">
+								<input
+									class="modal-basket__inputs_input"
+									type="text"
+									placeholder="Квартира / дом*"
+									required
+								/>
+							</label>
+
+							<label for="" class="auth__modal_label">
+								<span class="modal-basket__inputs_text">Почтовый индекс</span>
+								<input class="modal-basket__inputs_input" type="text" placeholder="XXXXXX" required />
+							</label>
+						</form>
+
+						<div class="auth__modal_buttons">
+							<a href="" class="profile__order_button alternative">Подтвердить</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/swiper.js"></script>
+		<script src="js/custom-select.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
