@@ -341,11 +341,11 @@
 	}
 
 	&_meta {
-		max-width: 780px;
+		max-width: 700px;
 		width: 100%;
-		display: grid;
+		display: flex;
 		grid-gap: 25px;
-		grid-template-columns: repeat(5, 1fr);
+		justify-content: space-between;
 	}
 
 	&_cell {
@@ -675,6 +675,12 @@
 					width: 80px;
 					height: 80px;
 				}
+			}
+		}
+
+		&__list {
+			&_cell {
+				font-size: 12px;
 			}
 		}
 	}
