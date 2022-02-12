@@ -1,7 +1,7 @@
 {
 	"name": "IWS",
 	"productName": "IWS",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "IWS (exzolink's App)",
 	"main": "src/index.js",
 	"scripts": {
@@ -63,8 +63,8 @@
 	},
 	"dependencies": {
 		"asar": "^3.0.3",
-		"node-cron": "^2.0.3",
-		"puppeteer": "^7.1.0",
+		"node-cron": "^3.0.0",
+		"puppeteer": "^13.2.0",
 		"v8-compile-cache": "^2.3.0"
 	},
 	"devDependencies": {
