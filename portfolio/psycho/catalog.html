@@ -8,10 +8,8 @@
 	</head>
 	<body>
 		<header class="header">
-
 			<div class="header__menu">
 				<div class="header__menu_inner">
-
 					<nav class="nav__wrapper">
 						<a href="" class="nav__link active">Главная</a>
 						<a href="" class="nav__link">Каталог</a>
@@ -35,8 +33,8 @@
 						<img src="imgs/burger.svg" width="30" height="30" alt="" />
 
 						<div class="header__hidden">
-							<img src="imgs/XB.gif" alt="">
-							<img src="imgs/BX.gif" alt="">
+							<img src="imgs/XB.gif" alt="" />
+							<img src="imgs/BX.gif" alt="" />
 						</div>
 					</button>
 
@@ -51,9 +49,7 @@
 						</nav>
 					</div>
 
-					<a href="" class="header__logo"
-						><img width="35" height="62" src="imgs/lovo.svg" alt=""
-					/></a>
+					<a href="" class="header__logo"><img width="35" height="62" src="imgs/lovo.svg" alt="" /></a>
 
 					<div class="header__block">
 						<div class="header__lang">
@@ -63,12 +59,7 @@
 						</div>
 
 						<form class="header__search_form" action="">
-							<input
-								class="header__search"
-								type="text"
-								required
-								placeholder="ПОИСК"
-							/>
+							<input class="header__search" type="text" required placeholder="ПОИСК" />
 							<button type="submit">
 								<img src="imgs/search.svg" alt="" />
 							</button>
@@ -196,8 +187,6 @@
 								<span class="catalog__price_curr">1500 P</span>
 							</div>
 						</a>
-
-
 					</div>
 				</section>
 			</div>
@@ -206,12 +195,12 @@
 		<footer class="footer">
 			<div class="container">
 				<div class="footer__inner">
-					<div class="footer__about" style="display:flex; flex-direction:column;">
-					<p class="footer__copyright">© Copyright «Psycho» 2020</p>
+					<div class="footer__about" style="display: flex; flex-direction: column">
+						<p class="footer__copyright">© Copyright «Psycho» 2020</p>
 
-					<p class="footer__copyright footer__ip">ИП Карпов В.И., ОГРНИП 320435000030462</p>
+						<p class="footer__copyright footer__ip">ИП Карпов В.И., ОГРНИП 320435000030462</p>
 
-					<a href="" class="footer__privacy">Политика конфиденциальности</a>
+						<a href="" class="footer__privacy">Политика конфиденциальности</a>
 					</div>
 
 					<div class="footer__socials">
@@ -228,13 +217,7 @@
 		<div class="modal-basket">
 			<div class="modal-basket__inner">
 				<form action="" class="modal-basket__block">
-					<img
-						class="modal-basket__close"
-						src="imgs/delete.svg"
-						width="20"
-						height="20"
-						alt=""
-					/>
+					<img class="modal-basket__close" src="imgs/delete.svg" width="20" height="20" alt="" />
 
 					<div class="modal-basket__block_inner">
 						<div class="px-35">
@@ -246,11 +229,7 @@
 								<img class="deleteModal" src="imgs/delete.svg" alt="" />
 
 								<a class="flex-start" href=""
-									><img
-										class="modal-basket__item_img"
-										src="imgs/productZagl.jpg"
-										alt=""
-									/>
+									><img class="modal-basket__item_img" src="imgs/productZagl.jpg" alt="" />
 								</a>
 								<div class="modal-basket__item_block">
 									<span class="modal-basket__text">«The wolf inside you»</span>
@@ -262,10 +241,7 @@
 							<div class="modal-basket__item">
 								<img class="deleteModal" src="imgs/delete.svg" alt="" />
 								<a class="flex-start" href=""
-									><img
-										class="modal-basket__item_img"
-										src="imgs/productZagl.jpg"
-										alt=""
+									><img class="modal-basket__item_img" src="imgs/productZagl.jpg" alt=""
 								/></a>
 								<div class="modal-basket__item_block">
 									<span class="modal-basket__text">«The wolf inside you»</span>
@@ -280,9 +256,7 @@
 
 							<div class="modal-basket__total_block">
 								<span class="modal-basket__total_price">4500 ₽</span>
-								<span class="modal-basket__total_delivery"
-									>+350 (Доставка)</span
-								>
+								<span class="modal-basket__total_delivery">+350 (Доставка)</span>
 							</div>
 						</div>
 
@@ -372,9 +346,7 @@
 							</div>
 
 							<div class="modal-basket__inputs_item">
-								<span class="modal-basket__inputs_text"
-									>Комментарий к заказу</span
-								>
+								<span class="modal-basket__inputs_text">Комментарий к заказу</span>
 								<textarea
 									rows="5"
 									type="text"
@@ -383,44 +355,75 @@
 								></textarea>
 							</div>
 
-							<button
-								type="submit"
-								class="product__buy-btn modal-basket__submit"
-							>
-								Оформить заказ
-							</button>
+							<button type="submit" class="product__buy-btn modal-basket__submit">Оформить заказ</button>
 						</div>
 					</div>
 				</form>
 			</div>
 		</div>
-		
 
 		<div class="postMap__wrapper">
-		<div id="ecom-widget" class="postMap">
-			<img
-			class="postMap__close"
-			src="imgs/delete.svg"
-			width="24"
-			height="24"
-			alt=""
-		/>
-			<script
-				src="https://widget.pochta.ru/map/widget/widget.js">
-			</script>
-			<script>
-				ecomStartWidget({
-					id: 5787,
-					callbackFunction: postMap,
-					containerId: 'ecom-widget'
-				});
+			<div id="ecom-widget" class="postMap">
+				<img class="postMap__close" src="imgs/delete.svg" width="24" height="24" alt="" />
+				<script src="https://widget.pochta.ru/map/widget/widget.js"></script>
+				<script>
+					ecomStartWidget({
+						id: 5787,
+						callbackFunction: postMap,
+						containerId: "ecom-widget",
+					});
 
-				function postMap(data) {
-					
-				}
-			</script>
+					function postMap(data) {}
+				</script>
+			</div>
 		</div>
-	</div>
+
+		<div class="notification__wrapper">
+			<div class="notification__wrapper_inner">
+				<div class="notification__button">
+					<button type="button" class="notification-button">
+						<img src="https://psihclothes.com/wp-content/themes/psycho/imgs/logo.png" width="18" alt="" />
+					</button>
+					<span>1</span>
+				</div>
+
+				<div class="notification__content">
+					<div class="notification__content_header">
+						<span>Поддержка ПСИХ’ов</span>
+						<button type="button" class="notification-close">
+							<img src="imgs/notif/close-notif.svg" width="12" height="12" alt="" />
+						</button>
+					</div>
+					<div class="notification__content_body">
+						<div class="notification__message">
+							<span class="notification__message_date">Сегодня</span>
+							<div class="notification__message_wrapper">
+								<div class="notification__message_side">
+									<div class="notification__message_author">
+										<img
+											src="https://psihclothes.com/wp-content/themes/psycho/imgs/logo.png"
+											width="10"
+											alt=""
+										/>
+									</div>
+								</div>
+
+								<div class="notification__message_text">
+									<div class="notification__message_box">
+										Добро пожаловать на сайт! Вас приветствует бот-Псих 👹 <br><br>
+										У меня есть свой телеграм-канал со всей необходимой информацией.
+										<a href="" target="_blank" rel="noopener noreferrer nofollow">переходи →</a>
+				
+									</div>
+									<span class="notification__message_from">Бот</span>
+								</div>
+							</div>
+						</div>
+						<a href="" class="notification__link">Перейти в телеграм канал</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<script src="js/main.js"></script>
 	</body>

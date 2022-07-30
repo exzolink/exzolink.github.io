@@ -186,7 +186,7 @@ if (editInfoBtn && editAddressBtn) {
 		addressModal.classList.toggle("active");
 	});
 }
-
+/*
 document.addEventListener("keydown", (e) => {
 	if (e.keyCode === 27) {
 		basketModal.classList.remove("active");
@@ -210,3 +210,6 @@ document.addEventListener("click", (e) => {
 		addressModal.classList.remove("active");
 	}
 });
+*/
+
+
