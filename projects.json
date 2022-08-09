@@ -6,8 +6,8 @@
     "date": "27 февраля 2011",
     "description": "Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum ... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since",
     "links": {
-      "project": "https",
-      "github": "https"
+      "project": "https://github.com/exzolink/portfolio",
+      "github": "https://github.com/exzolink/portfolio"
     },
     "techs": ["html", "scss", "js"]
   },
@@ -18,8 +18,8 @@
     "date": "27 февраля 2011",
     "description": "Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum ... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since",
     "links": {
-      "project": "https",
-      "github": "https"
+      "project": "https://github.com/exzolink/portfolio",
+      "github": "https://github.com/exzolink/portfolio"
     },
     "techs": ["html", "scss", "js"]
   }
