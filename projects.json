@@ -1,0 +1,26 @@
+{
+  "1": {
+    "id": 1,
+    "title": "Название",
+    "img": "projects-placeholder.jpg",
+    "date": "27 февраля 2011",
+    "description": "Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum ... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since",
+    "links": {
+      "project": "https",
+      "github": "https"
+    },
+    "techs": ["html", "scss", "js"]
+  },
+  "2": {
+    "id": 2,
+    "title": "Название",
+    "img": "projects-placeholder.jpg",
+    "date": "27 февраля 2011",
+    "description": "Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum ... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since",
+    "links": {
+      "project": "https",
+      "github": "https"
+    },
+    "techs": ["html", "scss", "js"]
+  }
+}
