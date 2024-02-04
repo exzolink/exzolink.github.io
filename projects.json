@@ -1,26 +1,222 @@
 {
   "1": {
     "id": 1,
-    "title": "Название",
-    "img": "projects-placeholder.jpg",
-    "date": "27 февраля 2011",
-    "description": "Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum ... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since",
-    "links": {
-      "project": "https://github.com/exzolink/portfolio",
-      "github": "https://github.com/exzolink/portfolio"
+    "title": "Allods Armory",
+    "img": "Allods_Logo.png",
+    "information": {
+      "description": "Приложение для просмотра информации и экипировки персонажей в Аллодах Онлайн",
+      "stack": "Vue 3, Vuetify, Vue Router, Axios, Vite"
     },
-    "techs": ["html", "scss", "js"]
+    "links": {
+      "project": "https://exzolink.github.io/AllodsArmory",
+      "github": "https://github.com/exzolink/AllodsArmory"
+    },
+    "techs": [
+      "html",
+      "scss",
+      "js",
+      "vue",
+      "vite",
+      "vuetify"
+    ]
   },
   "2": {
     "id": 2,
-    "title": "Название",
-    "img": "projects-placeholder.jpg",
-    "date": "27 февраля 2011",
-    "description": "Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum ... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since",
-    "links": {
-      "project": "https://github.com/exzolink/portfolio",
-      "github": "https://github.com/exzolink/portfolio"
+    "title": "Albert Usmanov",
+    "img": "albertusmanov.svg",
+    "information": {
+      "description": "Интернет-магазин и онлайн-запись",
+      "stack": "Alpine, Gulp, WordPress"
     },
-    "techs": ["html", "scss", "js"]
+    "links": {
+      "project": "https://albertusmanov.ru",
+      "github": "https://github.com/exzo-projects/AlbertUsmanov"
+    },
+    "techs": [
+      "html",
+      "scss",
+      "js",
+      "alpine",
+      "gulp",
+      "wordpress"
+    ]
+  },
+  "3": {
+    "id": 3,
+    "title": "Daniil Begma",
+    "img": "daniilbegma.jpg",
+    "information": {
+      "description": "Сайт-портфолио",
+      "stack": "Alpine, Gulp, WordPress"
+    },
+    "links": {
+      "project": "https://daniil-begma.com",
+      "github": "https://github.com/exzo-projects/DaniilBegma"
+    },
+    "techs": [
+      "html",
+      "scss",
+      "js",
+      "alpine",
+      "gulp",
+      "wordpress"
+    ]
+  },
+  "4": {
+    "id": 4,
+    "title": "GrizzlyBoost",
+    "img": "grizzlyboost.svg",
+    "information": {
+      "description": "Зарубежный сайт онлайн-услуг",
+      "stack": "Alpine, Gulp, OpenCart"
+    },
+    "links": {
+      "project": "https://grizzlyboost.com",
+      "github": "https://github.com/exzo-projects/GrizzlyBoost"
+    },
+    "techs": [
+      "html",
+      "scss",
+      "js",
+      "alpine",
+      "gulp"
+    ]
+  },
+  "5": {
+    "id": 5,
+    "title": "Skills Academy",
+    "img": "skillsacademy.png",
+    "information": {
+      "description": "Сайт онлайн-курсов",
+      "stack": "Alpine, Gulp"
+    },
+    "links": {
+      "project": "https://skillsacademy.kz",
+      "github": "https://github.com/exzo-projects/SkillsAcademy"
+    },
+    "techs": [
+      "html",
+      "scss",
+      "js",
+      "alpine",
+      "gulp"
+    ]
+  },
+  "6": {
+    "id": 6,
+    "title": "Psih Clothes",
+    "img": "psihclothes.svg",
+    "information": {
+      "description": "Онлайн-магазин одежды",
+      "stack": "Alpine, Gulp, WordPress"
+    },
+    "links": {
+      "project": "https://psihclothes.com",
+      "github": "https://github.com/exzo-projects/Psihclothes"
+    },
+    "techs": [
+      "html",
+      "scss",
+      "js",
+      "alpine",
+      "gulp",
+      "wordpress"
+    ]
+  },
+  "7": {
+    "id": 7,
+    "title": "Neon Esports",
+    "img": "neon.svg",
+    "information": {
+      "description": "Сайт компьютерного клуба",
+      "stack": "Alpine, Gulp"
+    },
+    "links": {
+      "project": "https://exzo-projects.github.io/NeonEsports",
+      "github": "https://github.com/exzo-projects/NeonEsports"
+    },
+    "techs": [
+      "html",
+      "scss",
+      "js",
+      "alpine",
+      "gulp"
+    ]
+  },
+  "8": {
+    "id": 8,
+    "title": "Cdek Ecommerce",
+    "img": "cdek.png",
+    "information": {
+      "description": "Компонент калькулятора стоимости доставки",
+      "stack": "Alpine, работа со Cdek API"
+    },
+    "links": {
+      "project": "https://cdek-ecomm.ru/#calc",
+      "github": "https://github.com/exzo-projects/Cdek"
+    },
+    "techs": [
+      "html",
+      "scss",
+      "js",
+      "alpine"
+    ]
+  },
+  "9": {
+    "id": 9,
+    "title": "MDLogistics",
+    "img": "mdlogistics.svg",
+    "information": {
+      "description": "Сайт транспортной компании",
+      "stack": "JavaScript, WordPress"
+    },
+    "links": {
+      "project": "https://exzo-projects.github.io/MDLogistics",
+      "github": "https://github.com/exzo-projects/MDLogistics"
+    },
+    "techs": [
+      "html",
+      "scss",
+      "js",
+      "wordpress"
+    ]
+  },
+  "10": {
+    "id": 10,
+    "title": "Buro Finance",
+    "img": "burofinance.svg",
+    "information": {
+      "description": "Сервис подбора кредитов",
+      "stack": "JavaScript, WordPress"
+    },
+    "links": {
+      "project": "https://burofinance.ru/",
+      "github": "https://github.com/exzo-projects/BuroFinance"
+    },
+    "techs": [
+      "html",
+      "scss",
+      "js",
+      "wordpress"
+    ]
+  },
+  "11": {
+    "id": 11,
+    "title": "Qyra",
+    "img": "qyra.png",
+    "information": {
+      "description": "Лендинг",
+      "stack": "Alpine, Gulp, WordPress, работа с Yandex Maps API"
+    },
+    "links": {
+      "project": "https://qyra.ru/",
+      "github": "https://github.com/exzo-projects/Qyra"
+    },
+    "techs": [
+      "html",
+      "scss",
+      "js",
+      "wordpress"
+    ]
   }
 }
